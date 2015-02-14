@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(to top, #A0E0FF, white);
+}
+
+#header {
+    text-align: center;
+}
+
+#container {
+    width: 800px;
+    margin: auto;
+}
+#QuickInfos {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
