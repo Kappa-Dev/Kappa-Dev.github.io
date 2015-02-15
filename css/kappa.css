@@ -2,6 +2,14 @@ body {
     background: linear-gradient(to top, #A0E0FF, white);
 }
 
+h3 {
+    margin-left: 30px;
+}
+
+.section p {
+    text-align: justify;
+}
+
 #header {
     text-align: center;
 }
