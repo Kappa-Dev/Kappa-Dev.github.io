@@ -1,5 +1,9 @@
 body {
-    background: linear-gradient(to top, #A0E0FF, white);
+    background: linear-gradient(to top, #58B0FF, white);
+}
+
+h1 {
+    font-family: chalkduster;
 }
 
 h3 {
