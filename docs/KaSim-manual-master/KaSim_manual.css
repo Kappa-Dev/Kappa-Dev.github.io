@@ -31,21 +31,6 @@
 .ecrm-1000{font-size:90%;}
 .ecrm-1200{font-size:109%;}
 .cmsy-10x-x-120{font-size:109%;}
-.ectt-1200{font-size:109%; font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1200{ font-family: monospace;}
-.ectt-1095{ font-family: monospace;}
 .ectt-1095{ font-family: monospace;}
 .ectt-1095{ font-family: monospace;}
 .ectt-1095{ font-family: monospace;}
@@ -72,8 +57,6 @@
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
-.ecss-1095{ font-family: sans-serif;}
-.ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
@@ -104,8 +87,6 @@
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
@@ -133,7 +114,6 @@
 .ectt-0900{ font-family: monospace;}
 .ectt-0900{ font-family: monospace;}
 .ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
 .tctt-0900{font-size:81%;font-family: monospace;}
 .tctt-0900{font-family: monospace;}
 .ecss-0900{font-size:81%; font-family: sans-serif;}
@@ -149,10 +129,8 @@
 .ecss-0900{ font-family: sans-serif;}
 .ecss-0900{ font-family: sans-serif;}
 .ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
 .cmtt-10x-x-109{font-family: monospace;}
 .ecti-0900{font-size:81%; font-style: italic;}
-.ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
