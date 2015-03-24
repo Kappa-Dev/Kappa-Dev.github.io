@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link href="css/kappa.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <title>Kappa-Dev technical page</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -24,76 +24,72 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <div id="header">
-      <img alt="KaSim Logo"
-	   src="https://rawgithub.com/Kappa-Dev/KaSim/master/man/img/KaSim-Logo.svg"
-	   />
-      <h1>KaSim Development Homepage</h1>
-      <p>A rule-based language for modeling protein interaction
-	networks</p>
-    </div>
-    <div id="container">
-      <div id="QuickInfos">
-	<img alt="Build Status" src="https://travis-ci.org/Kappa-Dev/KaSim.svg?branch=master"/>
-      </div>
-      <div class="section">
-	<h2>Get it</h2>
-	<ul>
-	  <li>The released version <a href="https://github.com/Kappa-Dev/KaSim/releases">binaries</a></li>
-	  <li>The development version <a href="https://github.com/Kappa-Dev/KaSim">source code</a></li>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+	<div class="navbar-header"><a class="navbar-brand" href="https://Kappa-Dev.github.io/">KaSim</a></div>
+	<ul class="nav navbar-nav">
+	  <li><a href="try/">Try it Online</a></li>
 	</ul>
+	<div class="navbar-brand navbar-right">
+	  <img alt="Build Status" src="https://travis-ci.org/Kappa-Dev/KaSim.svg?branch=master"/>
+	</div>
+    </nav>
+    <div class="container">
+      <div class="jumbotron" style="text-align:center;">
+	<h1>KaSim Development Homepage</h1>
+	<p class="lead">A rule-based language for modeling protein interaction
+	  networks</p>
+	<img alt="KaSim Logo"
+	     src="https://rawgithub.com/Kappa-Dev/KaSim/master/man/img/KaSim-Logo.svg"
+	     />
       </div>
-      <div class="section">
-         <h2>Learn it</h2>
-	 <p> The reference manual of the development version is
-	   available <a href="docs/KaSim-manual-master/KaSim_manual.htm">here</a>.
-	   The <a href="https://github.com/Kappa-Dev/KaSim/releases">stable
-	   versions</a> are distributed as PDF with the binaries.</p>
-	 <p><a href="http://www.pps.univ-paris-diderot.fr/~jkrivine/homepage/Teaching.html">Jean
-	 Krivine teaching page</a> provides matierial to start with
-	 KaSim.</p>
-      </div>
-      <div class="section">
-	<h2>Use it</h2>
-	<h3>Build</h3>
-	<p>Maybe the most valuable place to see how to compile KaSim
-	is
+      <h2 class="page-header">Get it</h2>
+      <ul>
+	<li>The released version <a href="https://github.com/Kappa-Dev/KaSim/releases">binaries</a></li>
+	<li>The development version <a href="https://github.com/Kappa-Dev/KaSim">source code</a></li>
+      </ul>
+      <h2 class="page-header">Learn it</h2>
+      <p> The reference manual of the development version is
+	available <a href="docs/KaSim-manual-master/KaSim_manual.htm">here</a>.
+	The <a href="https://github.com/Kappa-Dev/KaSim/releases">stable
+	versions</a> are distributed as PDF with the binaries.</p>
+      <p><a href="http://www.pps.univ-paris-diderot.fr/~jkrivine/homepage/Teaching.html">Jean
+	  Krivine teaching page</a> provides matierial to start with
+	  KaSim.</p>
+      <h2 class="page-header">Use it</h2>
+      <h3>Build</h3>
+      <p>Maybe the most valuable place to see how to compile KaSim is
 	our <a href="https://raw.githubusercontent.com/Kappa-Dev/KaSim/master/.travis.yml">continious
-	integration script</a>.</p>
-	<p>The <i>install</i> section explains how to go from a
-	fresh ubuntu installation to somewhere where KaSim
-	compiles. The build section shows that <i>make</i> should be
-	enough to get the binaries when the dependencies are
-	there.</p>
-	<h3>Participate</h3>
-	<p>A google group
+	  integration script</a>.</p>
+      <p>The <i>install</i> section explains how to go from a fresh
+	ubuntu installation to somewhere where KaSim compiles. The
+	build section shows that <i>make</i> should be enough to get
+	the binaries when the dependencies are there.</p>
+      <h3>Participate</h3>
+      <p>A google group
 	of <a href="https://groups.google.com/forum/#!forum/kappa-users">Kappa
-	users</a> is there to handle communication between us.</p>
-	<h3>Fix</h3>
-	<p>Please report
+	  users</a> is there to handle communication between us.</p>
+      <h3>Fix</h3>
+      <p>Please report
 	any <a href="https://github.com/Kappa-Dev/KaSim/issues">issue</a>.</p>
+      <h2 class="page-header">Misc.</h2>
+      <h3>Old material</h3>
+      <ul>
+	<li><a href="https://github.com/kappamodeler">Source code of former Kappa implementations.</a></li>
+      </ul>
+      <h2 class="page-header">About</h2>
+      <div class="row">
+	<img class="col-xs-2 img-responsive" alt="CNRS" src="img/CNRSfr.jpg"/>
+	<img class="col-xs-2 img-responsive" alt="&Eacute;cole normale sup&eacute;rieure" src="http://www.ens.fr/IMG/image/decoration/ENS_Logo_Cartouche.png"/>
+	<img class="col-xs-2 img-responsive" alt="ENS Lyon" src="img/Logo_ENS_Lyon.png"/>
+	<img class="col-xs-2 img-responsive" alt="Harvard Medical School" src="http://hms.harvard.edu/sites/all/themes/hms/logo.png"/>
+	<img class="col-xs-2 img-responsive" alt="Inria" src="img/logo_inria.png"/>
+	<img class="col-xs-1 img-responsive" alt="Universit&eacute; Paris Diderot" src="img/Logo_UPD.jpg"/>
       </div>
-      <div class="section">
-	<h2>Misc.</h2>
-	<h3>Old material</h3>
-	<ul>
-	  <li><a href="https://github.com/kappamodeler">Source code of former Kappa implementations.</a></li>
-	</ul>
-      </div>
-      <div class="section">
-	<h2>About</h2>
-	<img alt="CNRS" width="98" src="img/CNRSfr.jpg"/>
-	<img alt="&Eacute;cole normale sup&eacute;rieure" width="98" src="http://www.ens.fr/IMG/image/decoration/ENS_Logo_Cartouche.png"/>
-	<img alt="ENS Lyon" width="168" src="img/Logo_ENS_Lyon.png"/>
-	<img alt="Harvard Medical School" width="197" src="http://hms.harvard.edu/sites/all/themes/hms/logo.png"/>
-	<img alt="Inria" width="150" src="img/logo_inria.png"/>
-	<img alt="Universit&eacute; Paris Diderot" width="63" src="img/Logo_UPD.jpg"/>
-
-	<p>Kappa, RuleStudio, and RuleBase (formerly Cellucidate.com)
-	  were developed at Plectix BioSystems and purchased by Harvard
-	  Medical School in the spring of 2010 for use by the academic
-	  community.</p>
-      </div>
+      <p>Kappa, RuleStudio, and RuleBase (formerly Cellucidate.com)
+	were developed at Plectix BioSystems and purchased by Harvard
+	Medical School in the spring of 2010 for use by the academic
+	community.</p>
     </div>
   </body>
 </html>
