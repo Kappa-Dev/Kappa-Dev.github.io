@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Nbr.html">
+<link rel="next" href="Term.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Term" rel="Chapter" href="Term.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html"><title>KaSim API : NamedDecls</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Nbr.html" title="Nbr">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Term.html" title="Term">Next</a>
+</div>
+<h1>Module <a href="type_NamedDecls.html">NamedDecls</a></h1>
+
+<pre><span class="keyword">module</span> NamedDecls: <code class="code"><span class="keyword">sig</span></code> <a href="NamedDecls.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Stores a bunch of stuff the user gave a name to<br>
+</div>
+<hr width="100%">
+<br>
+Stores a bunch of stuff the user gave a name to<br>
+
+<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> = private {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.decls">decls</span>&nbsp;: <code class="type">(string <a href="Term.html#TYPEwith_pos">Term.with_pos</a> * 'a) array</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+the name of the stuff * the stuff<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.finder">finder</span>&nbsp;: <code class="type">int Mods.StringMap.t</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+<code class="code">fst (fst d.decls.(<span class="constructor">StringMap</span>.find s d.finder))</code> MUST be equal to <code class="code">s</code><br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+
+
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">(string <a href="Term.html#TYPEwith_pos">Term.with_pos</a> * 'a) array -> 'a <a href="NamedDecls.html#TYPEt">t</a></code></pre>
+<pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type">'a <a href="NamedDecls.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALelt_name"><span class="keyword">val</span> elt_name</span> : <code class="type">'a <a href="NamedDecls.html#TYPEt">t</a> -> int -> string</code></pre>
+<pre><span id="VALelt_id"><span class="keyword">val</span> elt_id</span> : <code class="type">?kind:string -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> string <a href="Term.html#TYPEwith_pos">Term.with_pos</a> -> int</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> unit</code></pre></body></html>
