@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Connected_component.html">
+<link rel="next" href="Alg_expr.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Instantiation</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Connected_component.html" title="Connected_component">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Alg_expr.html" title="Alg_expr">Next</a>
+</div>
+<h1>Module <a href="type_Instantiation.html">Instantiation</a></h1>
+
+<pre><span class="keyword">module</span> Instantiation: <code class="code"><span class="keyword">sig</span></code> <a href="Instantiation.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Trace of a rule exactly as the user wrote it (before
+compilation)<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEagent_name"><span class="keyword">type</span> <code class="type"></code>agent_name</span> = <code class="type">int</code> </pre>
+
+
+<pre><span id="TYPEsite_name"><span class="keyword">type</span> <code class="type"></code>site_name</span> = <code class="type">int</code> </pre>
+
+
+<pre><span id="TYPEinternal_state"><span class="keyword">type</span> <code class="type"></code>internal_state</span> = <code class="type">int</code> </pre>
+
+
+<pre><span id="TYPEbinding_type"><span class="keyword">type</span> <code class="type"></code>binding_type</span> = <code class="type"><a href="Instantiation.html#TYPEagent_name">agent_name</a> * <a href="Instantiation.html#TYPEsite_name">site_name</a></code> </pre>
+
+
+<pre><span id="TYPEabstract"><span class="keyword">type</span> <code class="type"></code>abstract</span> = <code class="type"><a href="Agent_place.html#TYPEt">Agent_place.t</a></code> </pre>
+
+
+<pre><span id="TYPEconcrete"><span class="keyword">type</span> <code class="type"></code>concrete</span> = <code class="type">int * <a href="Instantiation.html#TYPEagent_name">agent_name</a></code> </pre>
+
+
+<pre><span id="TYPEsite"><span class="keyword">type</span> <code class="type">'a</code> site</span> = <code class="type">'a * <a href="Instantiation.html#TYPEsite_name">site_name</a></code> </pre>
+
+
+<pre><code><span id="TYPEtest"><span class="keyword">type</span> <code class="type">'a</code> test</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtest.Is_Here"><span class="constructor">Is_Here</span></span> <span class="keyword">of</span> <code class="type">'a</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtest.Has_Internal"><span class="constructor">Has_Internal</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a> * <a href="Instantiation.html#TYPEinternal_state">internal_state</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtest.Is_Free"><span class="constructor">Is_Free</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtest.Is_Bound"><span class="constructor">Is_Bound</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtest.Has_Binding_type"><span class="constructor">Has_Binding_type</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a> * <a href="Instantiation.html#TYPEbinding_type">binding_type</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtest.Is_Bound_to"><span class="constructor">Is_Bound_to</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a> * 'a <a href="Instantiation.html#TYPEsite">site</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEaction"><span class="keyword">type</span> <code class="type">'a</code> action</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTaction.Create"><span class="constructor">Create</span></span> <span class="keyword">of</span> <code class="type">'a * (<a href="Instantiation.html#TYPEsite_name">site_name</a> * <a href="Instantiation.html#TYPEinternal_state">internal_state</a> option) list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTaction.Mod_internal"><span class="constructor">Mod_internal</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a> * <a href="Instantiation.html#TYPEinternal_state">internal_state</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTaction.Bind"><span class="constructor">Bind</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a> * 'a <a href="Instantiation.html#TYPEsite">site</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTaction.Bind_to"><span class="constructor">Bind_to</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a> * 'a <a href="Instantiation.html#TYPEsite">site</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTaction.Free"><span class="constructor">Free</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTaction.Remove"><span class="constructor">Remove</span></span> <span class="keyword">of</span> <code class="type">'a</code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEbinding_state"><span class="keyword">type</span> <code class="type">'a</code> binding_state</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_state.ANY"><span class="constructor">ANY</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_state.FREE"><span class="constructor">FREE</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_state.BOUND"><span class="constructor">BOUND</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_state.BOUND_TYPE"><span class="constructor">BOUND_TYPE</span></span> <span class="keyword">of</span> <code class="type"><a href="Instantiation.html#TYPEbinding_type">binding_type</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_state.BOUND_to"><span class="constructor">BOUND_to</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">site</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="TYPEevent"><span class="keyword">type</span> <code class="type">'a</code> event</span> = <code class="type">'a <a href="Instantiation.html#TYPEtest">test</a> list *<br>       ('a <a href="Instantiation.html#TYPEaction">action</a> list *<br>        ('a <a href="Instantiation.html#TYPEsite">site</a> * 'a <a href="Instantiation.html#TYPEbinding_state">binding_state</a>) list *<br>        'a <a href="Instantiation.html#TYPEsite">site</a> list)</code> </pre>
+
+
+<pre><span id="VALrename_abstract_test"><span class="keyword">val</span> rename_abstract_test</span> : <code class="type"><a href="Connected_component.html#TYPEwork">Connected_component.work</a> -><br>       int -><br>       <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -><br>       Renaming.t -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEtest">test</a> -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEtest">test</a></code></pre>
+<pre><span id="VALrename_abstract_action"><span class="keyword">val</span> rename_abstract_action</span> : <code class="type"><a href="Connected_component.html#TYPEwork">Connected_component.work</a> -><br>       int -><br>       <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -><br>       Renaming.t -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEaction">action</a> -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEaction">action</a></code></pre>
+<pre><span id="VALrename_abstract_event"><span class="keyword">val</span> rename_abstract_event</span> : <code class="type"><a href="Connected_component.html#TYPEwork">Connected_component.work</a> -><br>       int -><br>       <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -><br>       Renaming.t -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEevent">event</a> -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEevent">event</a></code></pre>
+<pre><span id="VALconcretize_test"><span class="keyword">val</span> concretize_test</span> : <code class="type">(<a href="Agent_place.html#TYPEt">Agent_place.t</a> -> int) -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEtest">test</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEtest">test</a></code></pre>
+<pre><span id="VALconcretize_action"><span class="keyword">val</span> concretize_action</span> : <code class="type">(<a href="Agent_place.html#TYPEt">Agent_place.t</a> -> int) -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEaction">action</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEaction">action</a></code></pre>
+<pre><span id="VALconcretize_event"><span class="keyword">val</span> concretize_event</span> : <code class="type">(<a href="Agent_place.html#TYPEt">Agent_place.t</a> -> int) -><br>       <a href="Instantiation.html#TYPEabstract">abstract</a> <a href="Instantiation.html#TYPEevent">event</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEevent">event</a></code></pre>
+<pre><span id="VALsubst_map_agent_in_concrete_test"><span class="keyword">val</span> subst_map_agent_in_concrete_test</span> : <code class="type">(int -> int) -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEtest">test</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEtest">test</a></code></pre>
+<pre><span id="VALsubst_agent_in_concrete_test"><span class="keyword">val</span> subst_agent_in_concrete_test</span> : <code class="type">int -><br>       int -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEtest">test</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEtest">test</a></code></pre>
+<pre><span id="VALsubst_map_agent_in_concrete_action"><span class="keyword">val</span> subst_map_agent_in_concrete_action</span> : <code class="type">(int -> int) -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEaction">action</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEaction">action</a></code></pre>
+<pre><span id="VALsubst_agent_in_concrete_action"><span class="keyword">val</span> subst_agent_in_concrete_action</span> : <code class="type">int -><br>       int -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEaction">action</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEaction">action</a></code></pre>
+<pre><span id="VALsubst_map_agent_in_concrete_side_effect"><span class="keyword">val</span> subst_map_agent_in_concrete_side_effect</span> : <code class="type">(int -> int) -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEsite">site</a> *<br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEbinding_state">binding_state</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEsite">site</a> *<br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEbinding_state">binding_state</a></code></pre>
+<pre><span id="VALsubst_agent_in_concrete_side_effect"><span class="keyword">val</span> subst_agent_in_concrete_side_effect</span> : <code class="type">int -><br>       int -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEsite">site</a> *<br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEbinding_state">binding_state</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEsite">site</a> *<br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEbinding_state">binding_state</a></code></pre>
+<pre><span id="VALsubst_map_agent_in_concrete_event"><span class="keyword">val</span> subst_map_agent_in_concrete_event</span> : <code class="type">(int -> int) -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEevent">event</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEevent">event</a></code></pre>
+<pre><span id="VALsubst_agent_in_concrete_event"><span class="keyword">val</span> subst_agent_in_concrete_event</span> : <code class="type">int -><br>       int -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEevent">event</a> -><br>       <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEevent">event</a></code></pre>
+<pre><span id="VALprint_concrete_test"><span class="keyword">val</span> print_concrete_test</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       Format.formatter -> <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEtest">test</a> -> unit</code></pre>
+<pre><span id="VALprint_concrete_action"><span class="keyword">val</span> print_concrete_action</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       Format.formatter -> <a href="Instantiation.html#TYPEconcrete">concrete</a> <a href="Instantiation.html#TYPEaction">action</a> -> unit</code></pre></body></html>

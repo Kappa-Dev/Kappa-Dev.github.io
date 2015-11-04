@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Rule_interpreter.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : State_interpreter</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Rule_interpreter.html" title="Rule_interpreter">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_State_interpreter.html">State_interpreter</a></h1>
+
+<pre><span class="keyword">module</span> State_interpreter: <code class="code"><span class="keyword">sig</span></code> <a href="State_interpreter.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Event loop module<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+<div class="info ">
+Abstract state<br>
+</div>
+
+
+<pre><span id="VALinitial"><span class="keyword">val</span> initial</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       Mods.Counter.t -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">initial env c graph stopping_times</code> builds up the initial state<br>
+</div>
+
+<pre><span id="VALobservables_values"><span class="keyword">val</span> observables_values</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       Mods.Counter.t -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> float * <a href="Nbr.html#TYPEt">Nbr.t</a> array</code></pre><div class="info ">
+Returns (the current biological time, an array of the current
+values of observables)<br>
+</div>
+
+<pre><span id="VALactivity"><span class="keyword">val</span> activity</span> : <code class="type"><a href="State_interpreter.html#TYPEt">t</a> -> float</code></pre><div class="info ">
+Returns the current activity<br>
+</div>
+
+<pre><span id="VALloop_cps"><span class="keyword">val</span> loop_cps</span> : <code class="type">Format.formatter -><br>       ((unit -> 'a) -> 'a) -><br>       (Format.formatter -><br>        <a href="Environment.html#TYPEt">Environment.t</a> -><br>        Mods.Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Mods.Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
+Event loop for javascript<br>
+</div>
+
+<pre><span id="VALloop"><span class="keyword">val</span> loop</span> : <code class="type">Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Mods.Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<code class="code">loop message_formatter env domain counter graph</code> does one event
+loop<br>
+</div>
+</body></html>

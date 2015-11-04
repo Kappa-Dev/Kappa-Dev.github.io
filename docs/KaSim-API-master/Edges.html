@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Snip.html">
+<link rel="next" href="Expr_interpreter.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Edges</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Snip.html" title="Snip">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Expr_interpreter.html" title="Expr_interpreter">Next</a>
+</div>
+<h1>Module <a href="type_Edges.html">Edges</a></h1>
+
+<pre><span class="keyword">module</span> Edges: <code class="code"><span class="keyword">sig</span></code> <a href="Edges.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Concrete graph implementation<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="Edges.html#TYPEt">t</a></code></pre>
+<pre><span id="VALadd_free"><span class="keyword">val</span> add_free</span> : <code class="type">int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">add_free sort_agent agent site graph</code><br>
+</div>
+
+<pre><span id="VALadd_internal"><span class="keyword">val</span> add_internal</span> : <code class="type">int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">add_internal agent site internal_state graph</code><br>
+</div>
+
+<pre><span id="VALadd_link"><span class="keyword">val</span> add_link</span> : <code class="type">int -> int -> int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">add_link sort_ag1 ag1 s1 sort_ag2 ag2 s2 t</code><br>
+</div>
+
+<pre><span id="VALremove_free"><span class="keyword">val</span> remove_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
+<pre><span id="VALremove_internal"><span class="keyword">val</span> remove_internal</span> : <code class="type">int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
+<pre><span id="VALremove_link"><span class="keyword">val</span> remove_link</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
+<pre><span id="VALis_free"><span class="keyword">val</span> is_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<code class="code">is_free agent site graph</code><br>
+</div>
+
+<pre><span id="VALis_internal"><span class="keyword">val</span> is_internal</span> : <code class="type">int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<code class="code">is_internal agent site internal_state graph</code><br>
+</div>
+
+<pre><span id="VALlink_exists"><span class="keyword">val</span> link_exists</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<code class="code">link_exists ag1 site1 ag2 site2 graph</code><br>
+</div>
+
+<pre><span id="VALexists_fresh"><span class="keyword">val</span> exists_fresh</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> int option</code></pre><div class="info ">
+<code class="code">exists_fresh ag1 site1 type_of_ag2 site2 graph</code><br>
+</div>
+
+<pre><span id="TYPEpath"><span class="keyword">type</span> <code class="type"></code>path</span> </pre>
+
+
+<pre><span id="VALempty_path"><span class="keyword">val</span> empty_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a></code></pre>
+<pre><span id="VALrev_path"><span class="keyword">val</span> rev_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a> -> <a href="Edges.html#TYPEpath">path</a></code></pre>
+<pre><span id="VALprint_path"><span class="keyword">val</span> print_path</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> ?graph:<a href="Edges.html#TYPEt">t</a> -> Format.formatter -> <a href="Edges.html#TYPEpath">path</a> -> unit</code></pre>
+<pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?candidate:<a href="Edges.html#TYPEpath">path</a> -> <a href="Edges.html#TYPEt">t</a> -> int -> int -> <a href="Edges.html#TYPEpath">path</a> option</code></pre>
+<pre><span id="VALpathes_of_interrest"><span class="keyword">val</span> pathes_of_interrest</span> : <code class="type">(int -> 'a option) -><br>       <a href="Edges.html#TYPEt">t</a> -> int -> <a href="Edges.html#TYPEpath">path</a> -> (('a * int) * <a href="Edges.html#TYPEpath">path</a>) list</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Edges.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint_dot"><span class="keyword">val</span> print_dot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Edges.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">Format.formatter -> <a href="Edges.html#TYPEt">t</a> -> unit</code></pre></body></html>

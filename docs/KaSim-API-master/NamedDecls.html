@@ -5,21 +5,36 @@
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Nbr.html">
-<link rel="next" href="Term.html">
+<link rel="next" href="Location.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Term" rel="Chapter" href="Term.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Expr" rel="Chapter" href="Expr.html">
-<link title="Primitives" rel="Chapter" href="Primitives.html"><title>KaSim API : NamedDecls</title>
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : NamedDecls</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="Nbr.html" title="Nbr">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Term.html" title="Term">Next</a>
+&nbsp;<a class="post" href="Location.html" title="Location">Next</a>
 </div>
 <h1>Module <a href="type_NamedDecls.html">NamedDecls</a></h1>
 
@@ -35,7 +50,7 @@ Stores a bunch of stuff the user gave a name to<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.decls">decls</span>&nbsp;: <code class="type">(string <a href="Term.html#TYPEwith_pos">Term.with_pos</a> * 'a) array</code>;</code></td>
+<code><span id="TYPEELTt.decls">decls</span>&nbsp;: <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> * 'a) array</code>;</code></td>
 <td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
 the name of the stuff * the stuff<br>
 </div>
@@ -55,8 +70,9 @@ the name of the stuff * the stuff<br>
 
 
 
-<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">(string <a href="Term.html#TYPEwith_pos">Term.with_pos</a> * 'a) array -> 'a <a href="NamedDecls.html#TYPEt">t</a></code></pre>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> * 'a) array -> 'a <a href="NamedDecls.html#TYPEt">t</a></code></pre>
 <pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type">'a <a href="NamedDecls.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALelt_name"><span class="keyword">val</span> elt_name</span> : <code class="type">'a <a href="NamedDecls.html#TYPEt">t</a> -> int -> string</code></pre>
-<pre><span id="VALelt_id"><span class="keyword">val</span> elt_id</span> : <code class="type">?kind:string -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> string <a href="Term.html#TYPEwith_pos">Term.with_pos</a> -> int</code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> unit</code></pre></body></html>
+<pre><span id="VALelt_id"><span class="keyword">val</span> elt_id</span> : <code class="type">?kind:string -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> string <a href="Location.html#TYPEannot">Location.annot</a> -> int</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">sep:(Format.formatter -> unit) -><br>       (int -> string -> Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> unit</code></pre></body></html>

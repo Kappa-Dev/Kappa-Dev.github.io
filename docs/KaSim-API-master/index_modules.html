@@ -6,11 +6,26 @@
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Term" rel="Chapter" href="Term.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Expr" rel="Chapter" href="Expr.html">
-<link title="Primitives" rel="Chapter" href="Primitives.html"><title>KaSim API : Index of modules</title>
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Index of modules</title>
 </head>
 <body>
 <div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
@@ -18,24 +33,74 @@
 <h1>Index of modules</h1>
 <table>
 <tr><td align="left"><br>A</td></tr>
-<tr><td><a href="Primitives.ActionSet.html">ActionSet</a> [<a href="Primitives.html">Primitives</a>]</td>
-<td></td></tr>
+<tr><td><a href="Agent_place.html">Agent_place</a> </td>
+<td><div class="info">
+An agent in a connected component
+</div>
+</td></tr>
+<tr><td><a href="Alg_expr.html">Alg_expr</a> </td>
+<td><div class="info">
+depend in time, depend in event number, depend in given var
+</div>
+</td></tr>
 <tr><td align="left"><br>C</td></tr>
-<tr><td><a href="Primitives.Causality.html">Causality</a> [<a href="Primitives.html">Primitives</a>]</td>
+<tr><td><a href="Connected_component.html">Connected_component</a> </td>
+<td><div class="info">
+Domain to navigate in the graph
+</div>
+</td></tr>
+<tr><td><a href="Connected_component.ContentAgent.html">ContentAgent</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>D</td></tr>
-<tr><td><a href="Term.DepMap.html">DepMap</a> [<a href="Term.html">Term</a>]</td>
-<td></td></tr>
-<tr><td><a href="Term.DepSet.html">DepSet</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Operator.DepSet.html">DepSet</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>E</td></tr>
+<tr><td><a href="Edges.html">Edges</a> </td>
+<td><div class="info">
+Concrete graph implementation
+</div>
+</td></tr>
+<tr><td><a href="Connected_component.Env.html">Env</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html">Environment</a> </td>
+<td><div class="info">
+Compiled representation of a full Kappa model
+</div>
+</td></tr>
 <tr><td><a href="Expr.html">Expr</a> </td>
 <td><div class="info">
-Algebraic and boolean term management
+Algebraic and boolean expression manager
+</div>
+</td></tr>
+<tr><td><a href="Expr_interpreter.html">Expr_interpreter</a> </td>
+<td><div class="info">
+Algebraic expression computation
 </div>
 </td></tr>
 <tr><td align="left"><br>I</td></tr>
-<tr><td><a href="Primitives.IdMap.html">IdMap</a> [<a href="Primitives.html">Primitives</a>]</td>
+<tr><td><a href="Instantiation.html">Instantiation</a> </td>
+<td><div class="info">
+Trace of a rule exactly as the user wrote it (before
+compilation)
+</div>
+</td></tr>
+<tr><td align="left"><br>K</td></tr>
+<tr><td><a href="Kappa_printer.html">Kappa_printer</a> </td>
+<td><div class="info">
+Printers (user readable) of Kappa compiled units
+</div>
+</td></tr>
+<tr><td align="left"><br>L</td></tr>
+<tr><td><a href="Location.html">Location</a> </td>
+<td></td></tr>
+<tr><td align="left"><br>M</td></tr>
+<tr><td><a href="SetMap.Make.html">Make</a> [<a href="SetMap.html">SetMap</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.Map.html">Map</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html">Map</a> [<a href="SetMap.S.html">SetMap.S</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.Matching.html">Matching</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>N</td></tr>
 <tr><td><a href="NamedDecls.html">NamedDecls</a> </td>
@@ -48,18 +113,53 @@ Stores a bunch of stuff the user gave a name to
 Kappa numbers (either float, int or int64) and operations on them
 </div>
 </td></tr>
+<tr><td align="left"><br>O</td></tr>
+<tr><td><a href="Operator.html">Operator</a> </td>
+<td><div class="info">
+Compiled algebraic expression
+</div>
+</td></tr>
 <tr><td align="left"><br>P</td></tr>
-<tr><td><a href="Primitives.PortMap.html">PortMap</a> [<a href="Primitives.html">Primitives</a>]</td>
-<td></td></tr>
 <tr><td><a href="Primitives.html">Primitives</a> </td>
 <td><div class="info">
-binding or modifying a port that has been added or kept from the lhs
+Compiled kappa model unit
+</div>
+</td></tr>
+<tr><td align="left"><br>R</td></tr>
+<tr><td><a href="Rule_interpreter.html">Rule_interpreter</a> </td>
+<td><div class="info">
+Graph rewriting module
+</div>
+</td></tr>
+<tr><td align="left"><br>S</td></tr>
+<tr><td><a href="Connected_component.Set.html">Set</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html">Set</a> [<a href="SetMap.S.html">SetMap.S</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.html">SetMap</a> </td>
+<td><div class="info">
+Our own implementattion of Set and Map
+</div>
+</td></tr>
+<tr><td><a href="Signature.html">Signature</a> </td>
+<td><div class="info">
+Store definitions of agents
+</div>
+</td></tr>
+<tr><td><a href="Snip.html">Snip</a> </td>
+<td><div class="info">
+Kappa pattern compiler
+</div>
+</td></tr>
+<tr><td><a href="State_interpreter.html">State_interpreter</a> </td>
+<td><div class="info">
+Event loop module
 </div>
 </td></tr>
 <tr><td align="left"><br>T</td></tr>
-<tr><td><a href="Term.html">Term</a> </td>
+<tr><td><a href="Primitives.Transformation.html">Transformation</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td><div class="info">
-Compiled representation of Kappa programs
+Elementary rule transformations
 </div>
 </td></tr>
 </table>

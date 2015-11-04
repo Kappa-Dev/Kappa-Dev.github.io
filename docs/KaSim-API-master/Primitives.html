@@ -4,106 +4,107 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Expr.html">
+<link rel="previous" href="Alg_expr.html">
+<link rel="next" href="Environment.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Term" rel="Chapter" href="Term.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Expr" rel="Chapter" href="Expr.html">
-<link title="Primitives" rel="Chapter" href="Primitives.html"><title>KaSim API : Primitives</title>
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Primitives</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Expr.html" title="Expr">Previous</a>
+<div class="navbar"><a class="pre" href="Alg_expr.html" title="Alg_expr">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;</div>
+&nbsp;<a class="post" href="Environment.html" title="Environment">Next</a>
+</div>
 <h1>Module <a href="type_Primitives.html">Primitives</a></h1>
 
 <pre><span class="keyword">module</span> Primitives: <code class="code"><span class="keyword">sig</span></code> <a href="Primitives.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-binding or modifying a port that has been added or kept from the lhs<br>
+Compiled kappa model unit<br>
 </div>
 <hr width="100%">
 
-<pre><code><span id="TYPEid"><span class="keyword">type</span> <code class="type"></code>id</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTid.FRESH"><span class="constructor">FRESH</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTid.KEPT"><span class="constructor">KEPT</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
-
-</tr></table>
-
-
-
-<pre><span id="TYPEport"><span class="keyword">type</span> <code class="type"></code>port</span> = <code class="type"><a href="Primitives.html#TYPEid">id</a> * int</code> </pre>
-
-
-<pre><code><span id="TYPEaction"><span class="keyword">type</span> <code class="type"></code>action</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTaction.BND"><span class="constructor">BND</span></span> <span class="keyword">of</span> <code class="type">(<a href="Primitives.html#TYPEport">port</a> * <a href="Primitives.html#TYPEport">port</a>)</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTaction.FREE"><span class="constructor">FREE</span></span> <span class="keyword">of</span> <code class="type">(<a href="Primitives.html#TYPEport">port</a> * bool)</code></code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-FREE(p,is_side_effect_free)<br>
+<pre><span class="keyword">module</span> <a href="Primitives.Transformation.html">Transformation</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Primitives.Transformation.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info">
+Elementary rule transformations
 </div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTaction.MOD"><span class="constructor">MOD</span></span> <span class="keyword">of</span> <code class="type">(<a href="Primitives.html#TYPEport">port</a> * int)</code></code></td>
 
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTaction.DEL"><span class="constructor">DEL</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTaction.ADD"><span class="constructor">ADD</span></span> <span class="keyword">of</span> <code class="type">(int * int)</code></code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-(id in mixture, name_id)<br>
-</div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
-</tr></table>
-
-
-
-<pre><span class="keyword">module</span> <a href="Primitives.IdMap.html">IdMap</a>: <code class="type">MapExt.S</code><code class="type">  with type key = id</code></pre>
-<pre><span class="keyword">module</span> <a href="Primitives.PortMap.html">PortMap</a>: <code class="type">MapExt.S</code><code class="type">  with type key = port</code></pre>
-<pre><span class="keyword">module</span> <a href="Primitives.ActionSet.html">ActionSet</a>: <code class="type">Set.S</code><code class="type">  with type elt = action</code></pre>
-<pre><span class="keyword">module</span> <a href="Primitives.Causality.html">Causality</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Primitives.Causality.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><code><span id="TYPErule"><span class="keyword">type</span> <code class="type"></code>rule</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEelementary_rule"><span class="keyword">type</span> <code class="type"></code>elementary_rule</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.k_def">k_def</span>&nbsp;: <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a></code>;</code></td>
+<code><span id="TYPEELTelementary_rule.rate">rate</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelementary_rule.unary_rate">unary_rate</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelementary_rule.connected_components">connected_components</span>&nbsp;: <code class="type"><a href="Connected_component.html#TYPEt">Connected_component.t</a> array</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelementary_rule.removed">removed</span>&nbsp;: <code class="type"><a href="Primitives.Transformation.html#TYPEt">Transformation.t</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelementary_rule.inserted">inserted</span>&nbsp;: <code class="type"><a href="Primitives.Transformation.html#TYPEt">Transformation.t</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelementary_rule.consumed_tokens">consumed_tokens</span>&nbsp;: <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * int) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelementary_rule.injected_tokens">injected_tokens</span>&nbsp;: <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * int) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelementary_rule.syntactic_rule">syntactic_rule</span>&nbsp;: <code class="type">int</code>;</code></td>
 <td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-standard kinetic constant<br>
+negative number <code class="code">n</code> means opposite of rule |<code class="code">n</code>|,
+<code class="code">0</code> means generated for perturbation.<br>
 </div>
 </td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
 </tr>
@@ -111,107 +112,7 @@ standard kinetic constant<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.k_alt">k_alt</span>&nbsp;: <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> option * <a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> option</code>;</code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-Possible unary kinetic rate<br>
-</div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.over_sampling">over_sampling</span>&nbsp;: <code class="type">float option</code>;</code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-Boosted kinetic rate for Bologna technique<br>
-</div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.script">script</span>&nbsp;: <code class="type"><a href="Primitives.html#TYPEaction">action</a> list</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.balance">balance</span>&nbsp;: <code class="type">int * int * int</code>;</code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-#deleted,#preserved,#removed<br>
-</div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.lhs">lhs</span>&nbsp;: <code class="type">Mixture.t</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.rhs">rhs</span>&nbsp;: <code class="type">Mixture.t</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_id">r_id</span>&nbsp;: <code class="type">int</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.added">added</span>&nbsp;: <code class="type">Mods.IntSet.t</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.modif_sites">modif_sites</span>&nbsp;: <code class="type">Mods.Int2Set.t IdMap.t</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.pre_causal">pre_causal</span>&nbsp;: <code class="type"><a href="Primitives.Causality.html#TYPEt">Causality.t</a> PortMap.t</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.is_pert">is_pert</span>&nbsp;: <code class="type">bool</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.cc_impact">cc_impact</span>&nbsp;: <code class="type">(Mods.IntSet.t Mods.IntMap.t * Mods.IntSet.t Mods.IntMap.t *<br>        Mods.IntSet.t Mods.IntMap.t)<br>       option</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.add_token">add_token</span>&nbsp;: <code class="type">(<a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> * int) list</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.rm_token">rm_token</span>&nbsp;: <code class="type">(<a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> * int) list</code>;</code></td>
+<code><span id="TYPEELTelementary_rule.instantiations">instantiations</span>&nbsp;: <code class="type"><a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a></code>;</code></td>
 
 </tr></table>
 }
@@ -223,56 +124,56 @@ Boosted kinetic rate for Bologna technique<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.ITER_RULE"><span class="constructor">ITER_RULE</span></span> <span class="keyword">of</span> <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> <a href="Term.html#TYPEwith_pos">Term.with_pos</a> * <a href="Primitives.html#TYPErule">rule</a></code></code></td>
+<code><span id="TYPEELTmodification.ITER_RULE"><span class="constructor">ITER_RULE</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Primitives.html#TYPEelementary_rule">elementary_rule</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.UPDATE"><span class="constructor">UPDATE</span></span> <span class="keyword">of</span> <code class="type"><a href="Term.html#TYPEdep_type">Term.dep_type</a> * <a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> <a href="Term.html#TYPEwith_pos">Term.with_pos</a></code></code></td>
+<code><span id="TYPEELTmodification.UPDATE"><span class="constructor">UPDATE</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> Ast.print_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a> list</code></code></td>
+<code><span id="TYPEELTmodification.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.print_expr <a href="Location.html#TYPEannot">Location.annot</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> Ast.print_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a> list</code></code></td>
+<code><span id="TYPEELTmodification.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.print_expr <a href="Location.html#TYPEannot">Location.annot</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.CFLOW"><span class="constructor">CFLOW</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+<code><span id="TYPEELTmodification.CFLOW"><span class="constructor">CFLOW</span></span> <span class="keyword">of</span> <code class="type">string option * <a href="Connected_component.html#TYPEt">Connected_component.t</a> array<br>        * <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> Ast.print_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a> list</code></code></td>
+<code><span id="TYPEELTmodification.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.print_expr <a href="Location.html#TYPEannot">Location.annot</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> Ast.print_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a> list</code></code></td>
+<code><span id="TYPEELTmodification.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.print_expr <a href="Location.html#TYPEannot">Location.annot</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.CFLOWOFF"><span class="constructor">CFLOWOFF</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+<code><span id="TYPEELTmodification.CFLOWOFF"><span class="constructor">CFLOWOFF</span></span> <span class="keyword">of</span> <code class="type"><a href="Connected_component.html#TYPEt">Connected_component.t</a> array</code></code></td>
 
 </tr>
 <tr>
@@ -286,7 +187,7 @@ Boosted kinetic rate for Bologna technique<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type">(<a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> Ast.print_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a> list *<br>      <a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> Ast.print_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a> list)</code></code></td>
+<code><span id="TYPEELTmodification.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.print_expr <a href="Location.html#TYPEannot">Location.annot</a> list *<br>      <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.print_expr <a href="Location.html#TYPEannot">Location.annot</a> list)</code></code></td>
 
 </tr></table>
 
@@ -297,7 +198,7 @@ Boosted kinetic rate for Bologna technique<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTperturbation.precondition">precondition</span>&nbsp;: <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> Ast.bool_expr</code>;</code></td>
+<code><span id="TYPEELTperturbation.precondition">precondition</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr</code>;</code></td>
 
 </tr>
 <tr>
@@ -311,14 +212,14 @@ Boosted kinetic rate for Bologna technique<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTperturbation.abort">abort</span>&nbsp;: <code class="type"><a href="Expr.html#TYPEalg_expr">Expr.alg_expr</a> Ast.bool_expr option</code>;</code></td>
+<code><span id="TYPEELTperturbation.abort">abort</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr option</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTperturbation.stopping_time">stopping_time</span>&nbsp;: <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a> option</code>;</code></td>
+<code><span id="TYPEELTperturbation.stopping_time">stopping_time</span>&nbsp;: <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a> list</code>;</code></td>
 
 </tr></table>
 }

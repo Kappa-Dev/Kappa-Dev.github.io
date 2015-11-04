@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Edges.html">
+<link rel="next" href="Rule_interpreter.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Expr_interpreter</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Edges.html" title="Edges">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Rule_interpreter.html" title="Rule_interpreter">Next</a>
+</div>
+<h1>Module <a href="type_Expr_interpreter.html">Expr_interpreter</a></h1>
+
+<pre><span class="keyword">module</span> Expr_interpreter: <code class="code"><span class="keyword">sig</span></code> <a href="Expr_interpreter.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Algebraic expression computation<br>
+</div>
+<hr width="100%">
+<br>
+As soon as you've got an graph available, I'll probably prefer use
+<a href="Rule_interpreter.html"><code class="code"><span class="constructor">Rule_interpreter</span></code></a>.value_*<br>
+
+<pre><span id="VALvalue_alg"><span class="keyword">val</span> value_alg</span> : <code class="type">Mods.Counter.t -><br>       ?time:float -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       get_mix:(<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -><br>       get_tok:(int -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a></code></pre><div class="info ">
+<code class="code">value_alg c ?t get_alg get_mix get_tok expr_alg</code> with <code class="code">get_mix [interp1;...;interpn]</code><br>
+</div>
+
+<pre><span id="VALvalue_bool"><span class="keyword">val</span> value_bool</span> : <code class="type">Mods.Counter.t -><br>       ?time:float -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       get_mix:(<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -><br>       get_tok:(int -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr -> bool</code></pre></body></html>

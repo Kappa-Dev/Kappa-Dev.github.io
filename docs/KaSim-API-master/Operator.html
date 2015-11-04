@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Location.html">
+<link rel="next" href="Agent_place.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><link title="Printers" rel="Section" href="#6_Printers">
+<link title="Dependencies management" rel="Section" href="#6_Dependenciesmanagement">
+<title>KaSim API : Operator</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Location.html" title="Location">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Agent_place.html" title="Agent_place">Next</a>
+</div>
+<h1>Module <a href="type_Operator.html">Operator</a></h1>
+
+<pre><span class="keyword">module</span> Operator: <code class="code"><span class="keyword">sig</span></code> <a href="Operator.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Compiled algebraic expression<br>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPEbin_alg_op"><span class="keyword">type</span> <code class="type"></code>bin_alg_op</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbin_alg_op.MULT"><span class="constructor">MULT</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbin_alg_op.SUM"><span class="constructor">SUM</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbin_alg_op.DIV"><span class="constructor">DIV</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbin_alg_op.MINUS"><span class="constructor">MINUS</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbin_alg_op.POW"><span class="constructor">POW</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbin_alg_op.MODULO"><span class="constructor">MODULO</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbin_alg_op.MIN"><span class="constructor">MIN</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbin_alg_op.MAX"><span class="constructor">MAX</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEun_alg_op"><span class="keyword">type</span> <code class="type"></code>un_alg_op</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_alg_op.LOG"><span class="constructor">LOG</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_alg_op.SQRT"><span class="constructor">SQRT</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_alg_op.EXP"><span class="constructor">EXP</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_alg_op.SINUS"><span class="constructor">SINUS</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_alg_op.COSINUS"><span class="constructor">COSINUS</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_alg_op.TAN"><span class="constructor">TAN</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_alg_op.INT"><span class="constructor">INT</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_alg_op.UMINUS"><span class="constructor">UMINUS</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEstate_alg_op"><span class="keyword">type</span> <code class="type"></code>state_alg_op</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_alg_op.CPUTIME"><span class="constructor">CPUTIME</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_alg_op.TIME_VAR"><span class="constructor">TIME_VAR</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_alg_op.EVENT_VAR"><span class="constructor">EVENT_VAR</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_alg_op.NULL_EVENT_VAR"><span class="constructor">NULL_EVENT_VAR</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_alg_op.PROD_EVENT_VAR"><span class="constructor">PROD_EVENT_VAR</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEbool_op"><span class="keyword">type</span> <code class="type"></code>bool_op</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_op.AND"><span class="constructor">AND</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_op.OR"><span class="constructor">OR</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEcompare_op"><span class="keyword">type</span> <code class="type"></code>compare_op</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompare_op.GREATER"><span class="constructor">GREATER</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompare_op.SMALLER"><span class="constructor">SMALLER</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompare_op.EQUAL"><span class="constructor">EQUAL</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompare_op.DIFF"><span class="constructor">DIFF</span></span></code></td>
+
+</tr></table>
+
+
+<br>
+<h6 id="6_Printers">Printers</h6><br>
+
+<pre><span id="VALbin_alg_op_to_string"><span class="keyword">val</span> bin_alg_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> string</code></pre>
+<pre><span id="VALprint_bin_alg_op"><span class="keyword">val</span> print_bin_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> unit</code></pre>
+<pre><span id="VALun_alg_op_to_string"><span class="keyword">val</span> un_alg_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEun_alg_op">un_alg_op</a> -> string</code></pre>
+<pre><span id="VALprint_un_alg_op"><span class="keyword">val</span> print_un_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEun_alg_op">un_alg_op</a> -> unit</code></pre>
+<pre><span id="VALstate_alg_op_to_string"><span class="keyword">val</span> state_alg_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> string</code></pre>
+<pre><span id="VALprint_state_alg_op"><span class="keyword">val</span> print_state_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> unit</code></pre>
+<pre><span id="VALbool_op_to_string"><span class="keyword">val</span> bool_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEbool_op">bool_op</a> -> string</code></pre>
+<pre><span id="VALprint_bool_op"><span class="keyword">val</span> print_bool_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbool_op">bool_op</a> -> unit</code></pre>
+<pre><span id="VALcompare_op_to_string"><span class="keyword">val</span> compare_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEcompare_op">compare_op</a> -> string</code></pre>
+<pre><span id="VALprint_compare_op"><span class="keyword">val</span> print_compare_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEcompare_op">compare_op</a> -> unit</code></pre><br>
+<h6 id="6_Dependenciesmanagement">Dependencies management</h6><br>
+
+<pre><code><span id="TYPErev_dep"><span class="keyword">type</span> <code class="type"></code>rev_dep</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrev_dep.ALG"><span class="constructor">ALG</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrev_dep.RULE"><span class="constructor">RULE</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrev_dep.PERT"><span class="constructor">PERT</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr></table>
+
+
+
+<pre><span class="keyword">module</span> <a href="Operator.DepSet.html">DepSet</a>: <code class="type">Set.S</code><code class="type">  with type elt = rev_dep</code></pre>
+<pre><span id="VALprint_rev_dep"><span class="keyword">val</span> print_rev_dep</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPErev_dep">rev_dep</a> -> unit</code></pre></body></html>

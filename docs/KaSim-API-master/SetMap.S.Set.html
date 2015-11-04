@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="next" href="SetMap.S.Map.html">
+<link rel="Up" href="SetMap.S.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : SetMap.S.Set</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="SetMap.S.html" title="SetMap.S">Up</a>
+&nbsp;<a class="post" href="SetMap.S.Map.html" title="SetMap.S.Map">Next</a>
+</div>
+<h1>Module <a href="type_SetMap.S.Set.html">SetMap.S.Set</a></h1>
+
+<pre><span class="keyword">module</span> Set: <code class="code"><span class="keyword">sig</span></code> <a href="SetMap.S.Set.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALis_empty"><span class="keyword">val</span> is_empty</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALsingleton"><span class="keyword">val</span> singleton</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALis_singleton"><span class="keyword">val</span> is_singleton</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALadd"><span class="keyword">val</span> add</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALremove"><span class="keyword">val</span> remove</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALsplit"><span class="keyword">val</span> split</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> * bool * <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALunion"><span class="keyword">val</span> union</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALinter"><span class="keyword">val</span> inter</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALdiff"><span class="keyword">val</span> diff</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALcardinal"><span class="keyword">val</span> cardinal</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALmem"><span class="keyword">val</span> mem</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALexists"><span class="keyword">val</span> exists</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> bool) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALfilter"><span class="keyword">val</span> filter</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> bool) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALfor_all"><span class="keyword">val</span> for_all</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> bool) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALpartition"><span class="keyword">val</span> partition</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> bool) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> * <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALcompare"><span class="keyword">val</span> compare</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALequal"><span class="keyword">val</span> equal</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALsubset"><span class="keyword">val</span> subset</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALiter"><span class="keyword">val</span> iter</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> unit) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a -> 'a) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> 'a -> 'a</code></pre>
+<pre><span id="VALelements"><span class="keyword">val</span> elements</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> list</code></pre>
+<pre><span id="VALchoose"><span class="keyword">val</span> choose</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> option</code></pre>
+<pre><span id="VALmin_elt"><span class="keyword">val</span> min_elt</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> option</code></pre>
+<pre><span id="VALmax_elt"><span class="keyword">val</span> max_elt</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> option</code></pre></body></html>

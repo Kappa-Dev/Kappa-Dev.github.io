@@ -6,11 +6,26 @@
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Term" rel="Chapter" href="Term.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Expr" rel="Chapter" href="Expr.html">
-<link title="Primitives" rel="Chapter" href="Primitives.html"><title>KaSim API : Index of values</title>
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Index of values</title>
 </head>
 <body>
 <div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
@@ -18,21 +33,91 @@
 <h1>Index of values</h1>
 <table>
 <tr><td align="left"><br>A</td></tr>
+<tr><td><a href="State_interpreter.html#VALactivity">activity</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
+<td><div class="info">
+Returns the current activity
+</div>
+</td></tr>
 <tr><td><a href="Nbr.html#VALadd">add</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALadd_internal_modif">add_internal_modif</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
+<tr><td><a href="SetMap.S.Map.html#VALadd">add</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALadd_link_modif">add_link_modif</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
+<tr><td><a href="SetMap.S.Set.html#VALadd">add</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="Alg_expr.html#VALadd_dep">add_dep</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
+<td><div class="info">
+depend in time, depend in event number, depend in given var
+</div>
+</td></tr>
+<tr><td><a href="Edges.html#VALadd_free">add_free</a> [<a href="Edges.html">Edges</a>]</td>
+<td><div class="info">
+<code class="code">add_free sort_agent agent site graph</code>
+</div>
+</td></tr>
+<tr><td><a href="Edges.html#VALadd_internal">add_internal</a> [<a href="Edges.html">Edges</a>]</td>
+<td><div class="info">
+<code class="code">add_internal agent site internal_state graph</code>
+</div>
+</td></tr>
+<tr><td><a href="Edges.html#VALadd_link">add_link</a> [<a href="Edges.html">Edges</a>]</td>
+<td><div class="info">
+<code class="code">add_link sort_ag1 ag1 s1 sort_ag2 ag2 s2 t</code>
+</div>
+</td></tr>
+<tr><td><a href="Rule_interpreter.html#VALadd_tracked">add_tracked</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="Rule_interpreter.html#VALapply_rule">apply_rule</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td><div class="info">
+Returns the graph obtained by applying the rule.
+</div>
+</td></tr>
+<tr><td><a href="Rule_interpreter.html#VALapply_unary_rule">apply_unary_rule</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td><div class="info">
+Returns the graph obtained by applying the rule.
+</div>
+</td></tr>
+<tr><td><a href="Edges.html#VALare_connected">are_connected</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALarity">arity</a> [<a href="Signature.html">Signature</a>]</td>
+<td><div class="info">
+<code class="code">arity sigs agent_id</code>
+</div>
+</td></tr>
+<tr><td><a href="Expr.html#VALast_alg_has_mix">ast_alg_has_mix</a> [<a href="Expr.html">Expr</a>]</td>
+<td><div class="info">
+Utilities 
+</div>
+</td></tr>
 <tr><td align="left"><br>B</td></tr>
-<tr><td><a href="Term.html#VALbin_alg_op_to_string">bin_alg_op_to_string</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Connected_component.html#VALbegin_new">begin_new</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td><div class="info">
+Starts creation
+</div>
+</td></tr>
+<tr><td><a href="Operator.html#VALbin_alg_op_to_string">bin_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALbool_op_to_string">bool_op_to_string</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="SetMap.S.Map.html#VALbindings">bindings</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALbool_op_to_string">bool_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>C</td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALcardinal">cardinal</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALcardinal">cardinal</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALchoose">choose</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALclose_desc">close_desc</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALcompare">compare</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALcompare_op_to_string">compare_op_to_string</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="SetMap.OrderedType.html#VALcompare">compare</a> [<a href="SetMap.OrderedType.html">SetMap.OrderedType</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALcompare">compare</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALcompare_op_to_string">compare_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Expr.html#VALcompile_alg">compile_alg</a> [<a href="Expr.html">Expr</a>]</td>
 <td><div class="info">
@@ -41,46 +126,191 @@
 </td></tr>
 <tr><td><a href="Expr.html#VALcompile_bool">compile_bool</a> [<a href="Expr.html">Expr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALcreate">create</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
-<td><div class="info">
-<code class="code">create internal_tested link_tested</code>
-</div>
-</td></tr>
+<tr><td><a href="Expr.html#VALcompile_pure_alg">compile_pure_alg</a> [<a href="Expr.html">Expr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALconcretize_action">concretize_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALconcretize_event">concretize_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALconcretize_test">concretize_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALconnected_components_of_unary_rules">connected_components_of_unary_rules</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Snip.html#VALconnected_components_sum_of_ambiguous_mixture">connected_components_sum_of_ambiguous_mixture</a> [<a href="Snip.html">Snip</a>]</td>
+<td></td></tr>
+<tr><td><a href="Snip.html#VALconnected_components_sum_of_ambiguous_rule">connected_components_sum_of_ambiguous_rule</a> [<a href="Snip.html">Snip</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALcreate">create</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
 <tr><td><a href="NamedDecls.html#VALcreate">create</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>D</td></tr>
-<tr><td><a href="Term.html#VALdep_of_state_alg_op">dep_of_state_alg_op</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Rule_interpreter.html#VALdebug_print">debug_print</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALdep_to_string">dep_to_string</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Edges.html#VALdebug_print">debug_print</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
-<tr><td><a href="Expr.html#VALdeps_of_alg_expr">deps_of_alg_expr</a> [<a href="Expr.html">Expr</a>]</td>
+<tr><td><a href="Connected_component.Matching.html#VALdebug_print">debug_print</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
 <td></td></tr>
-<tr><td><a href="Expr.html#VALdeps_of_bool_expr">deps_of_bool_expr</a> [<a href="Expr.html">Expr</a>]</td>
+<tr><td><a href="NamedDecls.html#VALdebug_print">debug_print</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALdefault_internal_state">default_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALdiff">diff</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALdiff">diff</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALdiff_pred">diff_pred</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="Location.html#VALdummy">dummy</a> [<a href="Location.html">Location</a>]</td>
+<td></td></tr>
+<tr><td><a href="Location.html#VALdummy_annot">dummy_annot</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>E</td></tr>
+<tr><td><a href="Kappa_printer.html#VALelementary_rule">elementary_rule</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALelements">elements</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
 <tr><td><a href="NamedDecls.html#VALelt_id">elt_id</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALelt_name">elt_name</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
+<tr><td><a href="Rule_interpreter.html#VALempty">empty</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALempty">empty</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.Matching.html#VALempty">empty</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.Env.html#VALempty">empty</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALempty">empty</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALempty">empty</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALempty_path">empty_path</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_printer.html#VALenv">env</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALequal">equal</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALequal">equal</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALexists">exists</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALexists_fresh">exists_fresh</a> [<a href="Edges.html">Edges</a>]</td>
+<td><div class="info">
+<code class="code">exists_fresh ag1 site1 type_of_ag2 site2 graph</code>
+</div>
+</td></tr>
+<tr><td><a href="Rule_interpreter.html#VALextra_outdated_var">extra_outdated_var</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td align="left"><br>F</td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALfilter">filter</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALfind_default">find_default</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALfind_option">find_option</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.html#VALfinish_new">finish_new</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALfold">fold</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALfold">fold</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALfold">fold</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALfold_rules">fold_rules</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALfor_all">for_all</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALfor_all">for_all</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Rule_interpreter.html#VALforce_rule">force_rule</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td><div class="info">
+Apply the rule for sure if it is possible.
+</div>
+</td></tr>
+<tr><td align="left"><br>G</td></tr>
+<tr><td><a href="Rule_interpreter.html#VALgenerate_stories">generate_stories</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.Matching.html#VALget">get</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALget">get</a> [<a href="Signature.html">Signature</a>]</td>
+<td><div class="info">
+<code class="code">get sigs agent_id</code>
+</div>
+</td></tr>
+<tr><td><a href="Environment.html#VALget_alg">get_alg</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALget_always_outdated">get_always_outdated</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALget_desc">get_desc</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALget_perturbation">get_perturbation</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALget_reverse_dependencies">get_reverse_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALget_rule">get_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.ContentAgent.html#VALget_sort">get_sort</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent_place.html#VALget_type">get_type</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>H</td></tr>
-<tr><td><a href="Term.html#VALhas_dummy_pos">has_dummy_pos</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Location.html#VALhas_dummy_annot">has_dummy_annot</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>I</td></tr>
+<tr><td><a href="Signature.html#VALid_of_internal_state">id_of_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
+<td><div class="info">
+<code class="code">id_of_internal_state agent_type site_name state_name sigs</code>
+</div>
+</td></tr>
+<tr><td><a href="Signature.html#VALid_of_site">id_of_site</a> [<a href="Signature.html">Signature</a>]</td>
+<td><div class="info">
+<code class="code">id_of_site agent_type site_name sigs</code>
+</div>
+</td></tr>
+<tr><td><a href="Environment.html#VALinit">init</a> [<a href="Environment.html">Environment</a>]</td>
+<td><div class="info">
+<code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code>
+</div>
+</td></tr>
+<tr><td><a href="State_interpreter.html#VALinitial">initial</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
+<td><div class="info">
+<code class="code">initial env c graph stopping_times</code> builds up the initial state
+</div>
+</td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALinter">inter</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALinternal_state_of_num">internal_state_of_num</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALinternal_states_number">internal_states_number</a> [<a href="Signature.html">Signature</a>]</td>
+<td><div class="info">
+<code class="code">internal_state_number agent_id site_id sigs</code>
+</div>
+</td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALis_empty">is_empty</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALis_empty">is_empty</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALis_equal">is_equal</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="Connected_component.html#VALis_equal_canonicals">is_equal_canonicals</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALis_free">is_free</a> [<a href="Edges.html">Edges</a>]</td>
+<td><div class="info">
+<code class="code">is_free agent site graph</code>
+</div>
+</td></tr>
 <tr><td><a href="Nbr.html#VALis_greater">is_greater</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALis_internal_modif">is_internal_modif</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
+<tr><td><a href="Edges.html#VALis_internal">is_internal</a> [<a href="Edges.html">Edges</a>]</td>
+<td><div class="info">
+<code class="code">is_internal agent site internal_state graph</code>
+</div>
+</td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALis_singleton">is_singleton</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALis_internal_something">is_internal_something</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
-<td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALis_internal_tested">is_internal_tested</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
-<td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALis_link_modif">is_link_modif</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
-<td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALis_link_something">is_link_something</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
-<td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALis_link_tested">is_link_tested</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
+<tr><td><a href="Agent_place.html#VALis_site_from_fresh">is_site_from_fresh</a> [<a href="Agent_place.html">Agent_place</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALis_smaller">is_smaller</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -88,26 +318,139 @@
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALis_zero">is_zero</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALiter">iter</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALiter">iter</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALiteri">iteri</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td><div class="info">
 <code class="code">iter f x n</code>
-returns f (n - k) (...
+</div>
+</td></tr>
+<tr><td align="left"><br>L</td></tr>
+<tr><td><a href="Edges.html#VALlink_exists">link_exists</a> [<a href="Edges.html">Edges</a>]</td>
+<td><div class="info">
+<code class="code">link_exists ag1 site1 ag2 site2 graph</code>
+</div>
+</td></tr>
+<tr><td><a href="State_interpreter.html#VALloop">loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
+<td><div class="info">
+<code class="code">loop message_formatter env domain counter graph</code> does one event
+loop
+</div>
+</td></tr>
+<tr><td><a href="State_interpreter.html#VALloop_cps">loop_cps</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
+<td><div class="info">
+Event loop for javascript
 </div>
 </td></tr>
 <tr><td align="left"><br>M</td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmap">map</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmap2">map2</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALmap_observables">map_observables</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmapi">mapi</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALmax">max</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALmax_elt">max_elt</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmem">mem</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALmem">mem</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmerge">merge</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALmin">min</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmin_elt">min_elt</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALmin_elt">min_elt</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_printer.html#VALmodification">modification</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmonadic_fold2">monadic_fold2</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmonadic_fold2_sparse">monadic_fold2_sparse</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmonadic_fold_restriction">monadic_fold_restriction</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmonadic_iter2_sparse">monadic_iter2_sparse</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALmult">mult</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>N</td></tr>
+<tr><td><a href="Connected_component.Env.html#VALnb_ag">nb_ag</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnb_algs">nb_algs</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnb_perturbations">nb_perturbations</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnb_rules">nb_rules</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnb_syntactic_rules">nb_syntactic_rules</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnb_tokens">nb_tokens</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALneg">neg</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="Connected_component.html#VALnew_free">new_free</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.html#VALnew_internal_state">new_internal_state</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td><div class="info">
+<code class="code">new_link_type work (node,site) <span class="keyword">type</span></code>
+</div>
+</td></tr>
+<tr><td><a href="Connected_component.html#VALnew_link">new_link</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.html#VALnew_node">new_node</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnum_of_agent">num_of_agent</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALnum_of_agent">num_of_agent</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnum_of_alg">num_of_alg</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALnum_of_internal_state">num_of_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
+<td><div class="info">
+<code class="code">num_of_internal_state site_id state_name sign</code>
+</div>
+</td></tr>
+<tr><td><a href="Environment.html#VALnum_of_rule">num_of_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALnum_of_site">num_of_site</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnum_of_token">num_of_token</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>O</td></tr>
+<tr><td><a href="Connected_component.Matching.html#VALobservables_from_free">observables_from_free</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
+<td><div class="info">
+<code class="code">observables_from_free domain graph sort agent site</code>
+</div>
+</td></tr>
+<tr><td><a href="Connected_component.Matching.html#VALobservables_from_internal">observables_from_internal</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
+<td><div class="info">
+<code class="code">observables_from_internal domain graph sort agent site internal_state</code>
+</div>
+</td></tr>
+<tr><td><a href="Connected_component.Matching.html#VALobservables_from_link">observables_from_link</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
+<td><div class="info">
+<code class="code">observables_from_link domain graph sort ag site sort' ag' site'</code>
+</div>
+</td></tr>
+<tr><td><a href="State_interpreter.html#VALobservables_values">observables_values</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
+<td><div class="info">
+Returns (the current biological time, an array of the current
+values of observables)
+</div>
+</td></tr>
 <tr><td><a href="Nbr.html#VALof_bin_alg_op">of_bin_alg_op</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALof_compare_op">of_compare_op</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Location.html#VALof_pos">of_pos</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALof_string">of_string</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td><div class="info">
@@ -115,12 +458,51 @@ returns f (n - k) (...
 </td></tr>
 <tr><td><a href="Nbr.html#VALof_un_alg_op">of_un_alg_op</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="Nbr.html#VALone">one</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>P</td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALpartition">partition</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALpathes_of_interrest">pathes_of_interrest</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_printer.html#VALperturbation">perturbation</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALpred">pred</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Rule_interpreter.html#VALprint">print</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALprint">print</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALprint">print</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Primitives.Transformation.html#VALprint">print</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.Env.html#VALprint">print</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.ContentAgent.html#VALprint">print</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.html#VALprint">print</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td><div class="info">
+<code class="code">print ~sigs print_id form cc</code>
+</div>
+</td></tr>
+<tr><td><a href="Signature.html#VALprint">print</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent_place.html#VALprint">print</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Location.html#VALprint">print</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALprint">print</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALprint">print</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALprint_agent">print_agent</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALprint_agent">print_agent</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALprint_alg">print_alg</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Location.html#VALprint_annot">print_annot</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
 <tr><td><a href="Expr.html#VALprint_ast_alg">print_ast_alg</a> [<a href="Expr.html">Expr</a>]</td>
 <td></td></tr>
@@ -128,43 +510,175 @@ returns f (n - k) (...
 <td></td></tr>
 <tr><td><a href="Expr.html#VALprint_ast_mix">print_ast_mix</a> [<a href="Expr.html">Expr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALprint_bin_alg_op">print_bin_alg_op</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Expr.html#VALprint_ast_rule">print_ast_rule</a> [<a href="Expr.html">Expr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALprint_ast_rule">print_ast_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Expr.html#VALprint_ast_rule_no_rate">print_ast_rule_no_rate</a> [<a href="Expr.html">Expr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALprint_bin_alg_op">print_bin_alg_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Expr.html#VALprint_bool">print_bool</a> [<a href="Expr.html">Expr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALprint_bool_op">print_bool_op</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Operator.html#VALprint_bool_op">print_bool_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALprint_compare_op">print_compare_op</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Operator.html#VALprint_compare_op">print_compare_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALprint_dep_type">print_dep_type</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Instantiation.html#VALprint_concrete_action">print_concrete_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALprint_state_alg_op">print_state_alg_op</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Instantiation.html#VALprint_concrete_test">print_concrete_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALprint_un_alg_op">print_un_alg_op</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Rule_interpreter.html#VALprint_dot">print_dot</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALprint_dot">print_dot</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.Env.html#VALprint_dot">print_dot</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.html#VALprint_dot">print_dot</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_printer.html#VALprint_expr_val">print_expr_val</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="Rule_interpreter.html#VALprint_injections">print_injections</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.ContentAgent.html#VALprint_internal">print_internal</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent_place.html#VALprint_internal">print_internal</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALprint_internal_state">print_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALprint_path">print_path</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALprint_rev_dep">print_rev_dep</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALprint_rule">print_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.ContentAgent.html#VALprint_site">print_site</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALprint_site">print_site</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent_place.html#VALprint_site">print_site</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALprint_site_internal_state">print_site_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
+<td><div class="info">
+<code class="code">print_site_internal_state sigs agent_type site_id f state_id</code>
+prints both the site and its internal state if it is not <code class="code"><span class="constructor">None</span></code>.
+</div>
+</td></tr>
+<tr><td><a href="Operator.html#VALprint_state_alg_op">print_state_alg_op</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALprint_token">print_token</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALprint_un_alg_op">print_un_alg_op</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td align="left"><br>R</td></tr>
+<tr><td><a href="Connected_component.Matching.html#VALreconstruct">reconstruct</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALremove">remove</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALremove">remove</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALremove_free">remove_free</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALremove_internal">remove_internal</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALremove_link">remove_link</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
+<tr><td><a href="Rule_interpreter.html#VALremove_tracked">remove_tracked</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Primitives.Transformation.html#VALrename">rename</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.ContentAgent.html#VALrename">rename</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent_place.html#VALrename">rename</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALrename_abstract_action">rename_abstract_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALrename_abstract_event">rename_abstract_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALrename_abstract_test">rename_abstract_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALrev_path">rev_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>S</td></tr>
+<tr><td><a href="Agent_place.html#VALsame_connected_component">same_connected_component</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Alg_expr.html#VALsetup_alg_vars_rev_dep">setup_alg_vars_rev_dep</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALsignatures">signatures</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.Env.html#VALsigs">sigs</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALsingleton">singleton</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALsite_of_num">site_of_num</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Signature.html#VALsize">size</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
 <tr><td><a href="NamedDecls.html#VALsize">size</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
-<tr><td><a href="Term.html#VALstate_alg_op_to_string">state_alg_op_to_string</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="SetMap.S.Set.html#VALsplit">split</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALstate_alg_op_to_string">state_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td><a href="Expr.html#VALstops_of_bool_expr">stops_of_bool_expr</a> [<a href="Expr.html">Expr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALsub">sub</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALsubset">subset</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALsubst_agent_in_concrete_action">subst_agent_in_concrete_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALsubst_agent_in_concrete_event">subst_agent_in_concrete_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALsubst_agent_in_concrete_side_effect">subst_agent_in_concrete_side_effect</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALsubst_agent_in_concrete_test">subst_agent_in_concrete_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALsubst_map_agent_in_concrete_action">subst_map_agent_in_concrete_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALsubst_map_agent_in_concrete_event">subst_map_agent_in_concrete_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALsubst_map_agent_in_concrete_side_effect">subst_map_agent_in_concrete_side_effect</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALsubst_map_agent_in_concrete_test">subst_map_agent_in_concrete_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALsucc">succ</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>T</td></tr>
 <tr><td><a href="Nbr.html#VALto_float">to_float</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Primitives.Causality.html#VALto_int">to_int</a> [<a href="Primitives.Causality.html">Primitives.Causality</a>]</td>
-<td></td></tr>
 <tr><td><a href="Nbr.html#VALto_int">to_int</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALto_string">to_string</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>U</td></tr>
-<tr><td><a href="Term.html#VALun_alg_op_to_string">un_alg_op_to_string</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="Operator.html#VALun_alg_op_to_string">un_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
-<tr><td align="left"><br>W</td></tr>
-<tr><td><a href="Term.html#VALwith_dummy_pos">with_dummy_pos</a> [<a href="Term.html">Term</a>]</td>
+<tr><td><a href="SetMap.S.Map.html#VALunion">union</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALunion">union</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALupdate">update</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="Rule_interpreter.html#VALupdate_outdated_activities">update_outdated_activities</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td><div class="info">
+Resynchronize the state after a rule application.
+</div>
+</td></tr>
+<tr><td align="left"><br>V</td></tr>
+<tr><td><a href="Rule_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Expr_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Expr_interpreter.html">Expr_interpreter</a>]</td>
+<td><div class="info">
+<code class="code">value_alg c ?t get_alg get_mix get_tok expr_alg</code> with <code class="code">get_mix [interp1;...;interpn]</code>
+</div>
+</td></tr>
+<tr><td><a href="Rule_interpreter.html#VALvalue_bool">value_bool</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Expr_interpreter.html#VALvalue_bool">value_bool</a> [<a href="Expr_interpreter.html">Expr_interpreter</a>]</td>
+<td></td></tr>
+<tr><td align="left"><br>Z</td></tr>
+<tr><td><a href="Nbr.html#VALzero">zero</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 </table>
 </body>

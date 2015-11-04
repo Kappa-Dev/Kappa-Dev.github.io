@@ -4,29 +4,44 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Term.html">
-<link rel="next" href="Primitives.html">
+<link rel="previous" href="Kappa_printer.html">
+<link rel="next" href="Snip.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Term" rel="Chapter" href="Term.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Expr" rel="Chapter" href="Expr.html">
-<link title="Primitives" rel="Chapter" href="Primitives.html"><link title="Printers" rel="Section" href="#6_Printers">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><link title="Printers" rel="Section" href="#6_Printers">
 <link title="Compilers " rel="Section" href="#6_Compilers">
 <title>KaSim API : Expr</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Term.html" title="Term">Previous</a>
+<div class="navbar"><a class="pre" href="Kappa_printer.html" title="Kappa_printer">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Primitives.html" title="Primitives">Next</a>
+&nbsp;<a class="post" href="Snip.html" title="Snip">Next</a>
 </div>
 <h1>Module <a href="type_Expr.html">Expr</a></h1>
 
 <pre><span class="keyword">module</span> Expr: <code class="code"><span class="keyword">sig</span></code> <a href="Expr.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-Algebraic and boolean term management<br>
+Algebraic and boolean expression manager<br>
 </div>
 <hr width="100%">
 <br>
@@ -34,67 +49,20 @@ Algebraic and boolean term management<br>
 
 <pre><span id="VALprint_ast_mix"><span class="keyword">val</span> print_ast_mix</span> : <code class="type">Format.formatter -> Ast.mixture -> unit</code></pre>
 <pre><span id="VALprint_ast_alg"><span class="keyword">val</span> print_ast_alg</span> : <code class="type">Format.formatter -> Ast.mixture Ast.ast_alg_expr -> unit</code></pre>
+<pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">Format.formatter -> Ast.rule -> unit</code></pre>
+<pre><span id="VALprint_ast_rule_no_rate"><span class="keyword">val</span> print_ast_rule_no_rate</span> : <code class="type">reverse:bool -> Format.formatter -> Ast.rule -> unit</code></pre>
 <pre><span id="VALprint_bool"><span class="keyword">val</span> print_bool</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a Ast.bool_expr -> unit</code></pre>
 <pre><span id="VALprint_ast_bool"><span class="keyword">val</span> print_ast_bool</span> : <code class="type">Format.formatter -> Ast.mixture Ast.ast_alg_expr Ast.bool_expr -> unit</code></pre>
-<pre><code><span id="TYPEalg_expr"><span class="keyword">type</span> <code class="type"></code>alg_expr</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTalg_expr.BIN_ALG_OP"><span class="constructor">BIN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Term.html#TYPEbin_alg_op">Term.bin_alg_op</a> * <a href="Expr.html#TYPEalg_expr">alg_expr</a> <a href="Term.html#TYPEwith_pos">Term.with_pos</a> * <a href="Expr.html#TYPEalg_expr">alg_expr</a> <a href="Term.html#TYPEwith_pos">Term.with_pos</a></code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTalg_expr.UN_ALG_OP"><span class="constructor">UN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Term.html#TYPEun_alg_op">Term.un_alg_op</a> * <a href="Expr.html#TYPEalg_expr">alg_expr</a> <a href="Term.html#TYPEwith_pos">Term.with_pos</a></code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTalg_expr.STATE_ALG_OP"><span class="constructor">STATE_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Term.html#TYPEstate_alg_op">Term.state_alg_op</a></code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTalg_expr.ALG_VAR"><span class="constructor">ALG_VAR</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTalg_expr.KAPPA_INSTANCE"><span class="constructor">KAPPA_INSTANCE</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTalg_expr.TOKEN_ID"><span class="constructor">TOKEN_ID</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTalg_expr.CONST"><span class="constructor">CONST</span></span> <span class="keyword">of</span> <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a></code></code></td>
-
-</tr></table>
-
-
+<pre><span id="VALast_alg_has_mix"><span class="keyword">val</span> ast_alg_has_mix</span> : <code class="type">'a Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> -> bool</code></pre><div class="info ">
+<h6 id="6_Utilities">Utilities </h6><br>
+</div>
 <br>
 <h6 id="6_Compilers">Compilers </h6><br>
 
-<pre><span id="VALcompile_alg"><span class="keyword">val</span> compile_alg</span> : <code class="type">?label:string -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       ?max_allowed_var:int -><br>       int * (string option * 'a) list -><br>       'a Ast.ast_alg_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a> -><br>       (int * (string option * 'a) list) * <a href="Expr.html#TYPEalg_expr">alg_expr</a> <a href="Term.html#TYPEwith_pos">Term.with_pos</a></code></pre><div class="info ">
+<pre><span id="VALcompile_alg"><span class="keyword">val</span> compile_alg</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       ?max_allowed_var:int -><br>       (string list * (string * string) list) Export_to_KaSim.String2Map.t -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Ast.mixture Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre><div class="info ">
 <code class="code">compile_alg variable_map token_map (fresh_mix_id, mix_list) alg_pos</code><br>
 </div>
 
-<pre><span id="VALcompile_bool"><span class="keyword">val</span> compile_bool</span> : <code class="type">int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       int * (string option * 'a) list -><br>       'a Ast.ast_alg_expr Ast.bool_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a> -><br>       (int * (string option * 'a) list) * <a href="Expr.html#TYPEalg_expr">alg_expr</a> Ast.bool_expr <a href="Term.html#TYPEwith_pos">Term.with_pos</a></code></pre>
-<pre><span id="VALdeps_of_alg_expr"><span class="keyword">val</span> deps_of_alg_expr</span> : <code class="type"><a href="Expr.html#TYPEalg_expr">alg_expr</a> -> Term.DepSet.t</code></pre>
-<pre><span id="VALdeps_of_bool_expr"><span class="keyword">val</span> deps_of_bool_expr</span> : <code class="type"><a href="Expr.html#TYPEalg_expr">alg_expr</a> Ast.bool_expr -> Term.DepSet.t * <a href="Nbr.html#TYPEt">Nbr.t</a> option</code></pre></body></html>
+<pre><span id="VALcompile_pure_alg"><span class="keyword">val</span> compile_pure_alg</span> : <code class="type">int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       Ast.mixture Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALcompile_bool"><span class="keyword">val</span> compile_bool</span> : <code class="type">int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (string list * (string * string) list) Export_to_KaSim.String2Map.t -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Ast.mixture Ast.ast_alg_expr Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALstops_of_bool_expr"><span class="keyword">val</span> stops_of_bool_expr</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr -> <a href="Nbr.html#TYPEt">Nbr.t</a> list</code></pre></body></html>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Instantiation.html">
+<link rel="next" href="Primitives.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Alg_expr</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Instantiation.html" title="Instantiation">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Primitives.html" title="Primitives">Next</a>
+</div>
+<h1>Module <a href="type_Alg_expr.html">Alg_expr</a></h1>
+
+<pre><span class="keyword">module</span> Alg_expr: <code class="code"><span class="keyword">sig</span></code> <a href="Alg_expr.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+depend in time, depend in event number, depend in given var<br>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.BIN_ALG_OP"><span class="constructor">BIN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEbin_alg_op">Operator.bin_alg_op</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.UN_ALG_OP"><span class="constructor">UN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEun_alg_op">Operator.un_alg_op</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.STATE_ALG_OP"><span class="constructor">STATE_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEstate_alg_op">Operator.state_alg_op</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.ALG_VAR"><span class="constructor">ALG_VAR</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.KAPPA_INSTANCE"><span class="constructor">KAPPA_INSTANCE</span></span> <span class="keyword">of</span> <code class="type"><a href="Connected_component.html#TYPEcc">Connected_component.cc</a> array list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.TOKEN_ID"><span class="constructor">TOKEN_ID</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.CONST"><span class="constructor">CONST</span></span> <span class="keyword">of</span> <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALadd_dep"><span class="keyword">val</span> add_dep</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array -><br>       <a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array</code></pre><div class="info ">
+depend in time, depend in event number, depend in given var<br>
+</div>
+
+<pre><span id="VALsetup_alg_vars_rev_dep"><span class="keyword">val</span> setup_alg_vars_rev_dep</span> : <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array</code></pre></body></html>
