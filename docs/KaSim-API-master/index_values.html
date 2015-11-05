@@ -103,8 +103,6 @@ Starts creation
 <tr><td><a href="Operator.html#VALbool_op_to_string">bool_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>C</td></tr>
-<tr><td><a href="SetMap.S.Map.html#VALcardinal">cardinal</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
-<td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALcardinal">cardinal</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALchoose">choose</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
@@ -114,6 +112,8 @@ Starts creation
 <tr><td><a href="Nbr.html#VALcompare">compare</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.OrderedType.html#VALcompare">compare</a> [<a href="SetMap.OrderedType.html">SetMap.OrderedType</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALcompare">compare</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALcompare">compare</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
 <td></td></tr>
@@ -158,7 +158,10 @@ Starts creation
 <tr><td><a href="SetMap.S.Map.html#VALdiff">diff</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALdiff">diff</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<code class="code">diff a b</code> = <code class="code">minus (union a b) (inter a b)</code>
+</div>
+</td></tr>
 <tr><td><a href="SetMap.S.Map.html#VALdiff_pred">diff_pred</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALdummy">dummy</a> [<a href="Location.html">Location</a>]</td>
@@ -217,6 +220,8 @@ Starts creation
 <tr><td><a href="SetMap.S.Map.html#VALfold">fold</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALfold">fold</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALfold_inv">fold_inv</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALfold_rules">fold_rules</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
@@ -357,6 +362,8 @@ Event loop for javascript
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALmax_elt">max_elt</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALmax_key">max_key</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
 <tr><td><a href="SetMap.S.Map.html#VALmem">mem</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALmem">mem</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
@@ -369,6 +376,11 @@ Event loop for javascript
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALmin_elt">min_elt</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="SetMap.S.Set.html#VALminus">minus</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
+<td><div class="info">
+<code class="code">minus a b</code> contains elements of <code class="code">a</code> that are not in <code class="code">b</code>
+</div>
+</td></tr>
 <tr><td><a href="Kappa_printer.html#VALmodification">modification</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Map.html#VALmonadic_fold2">monadic_fold2</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
@@ -466,6 +478,8 @@ values of observables)
 <tr><td><a href="Edges.html#VALpathes_of_interrest">pathes_of_interrest</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALperturbation">perturbation</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALpop">pop</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALpred">pred</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -599,6 +613,8 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <td></td></tr>
 <tr><td><a href="Edges.html#VALrev_path">rev_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALroot">root</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>S</td></tr>
 <tr><td><a href="Agent_place.html#VALsame_connected_component">same_connected_component</a> [<a href="Agent_place.html">Agent_place</a>]</td>
 <td></td></tr>
@@ -615,6 +631,8 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <tr><td><a href="Signature.html#VALsize">size</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALsize">size</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.S.Map.html#VALsize">size</a> [<a href="SetMap.S.Map.html">SetMap.S.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html#VALsplit">split</a> [<a href="SetMap.S.Set.html">SetMap.S.Set</a>]</td>
 <td></td></tr>

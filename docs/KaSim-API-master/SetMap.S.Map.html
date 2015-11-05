@@ -38,14 +38,17 @@
 
 <pre><span class="keyword">module</span> Map: <code class="code"><span class="keyword">sig</span></code> <a href="SetMap.S.Map.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
 
-<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> </pre>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">+'a</code> t</span> </pre>
 
 
 <pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">'a <a href="SetMap.S.Map.html#TYPEt">t</a></code></pre>
 <pre><span id="VALis_empty"><span class="keyword">val</span> is_empty</span> : <code class="type">'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> bool</code></pre>
-<pre><span id="VALcardinal"><span class="keyword">val</span> cardinal</span> : <code class="type">'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type">'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALroot"><span class="keyword">val</span> root</span> : <code class="type">'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> (<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> * 'a) option</code></pre>
+<pre><span id="VALmax_key"><span class="keyword">val</span> max_key</span> : <code class="type">'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> option</code></pre>
 <pre><span id="VALadd"><span class="keyword">val</span> add</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a></code></pre>
 <pre><span id="VALremove"><span class="keyword">val</span> remove</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a></code></pre>
+<pre><span id="VALpop"><span class="keyword">val</span> pop</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a option * 'a <a href="SetMap.S.Map.html#TYPEt">t</a></code></pre>
 <pre><span id="VALmerge"><span class="keyword">val</span> merge</span> : <code class="type">'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a></code></pre>
 <pre><span id="VALmin_elt"><span class="keyword">val</span> min_elt</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a -> bool) -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> option</code></pre>
 <pre><span id="VALfind_option"><span class="keyword">val</span> find_option</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a option</code></pre>
@@ -65,5 +68,6 @@
 <pre><span id="VALmap"><span class="keyword">val</span> map</span> : <code class="type">('a -> 'b) -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'b <a href="SetMap.S.Map.html#TYPEt">t</a></code></pre>
 <pre><span id="VALmap2"><span class="keyword">val</span> map2</span> : <code class="type">('a -> 'a -> 'a) -><br>       'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a></code></pre>
 <pre><span id="VALfor_all"><span class="keyword">val</span> for_all</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a -> bool) -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALcompare"><span class="keyword">val</span> compare</span> : <code class="type">('a -> 'a -> int) -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALequal"><span class="keyword">val</span> equal</span> : <code class="type">('a -> 'a -> bool) -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> 'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALbindings"><span class="keyword">val</span> bindings</span> : <code class="type">'a <a href="SetMap.S.Map.html#TYPEt">t</a> -> (<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> * 'a) list</code></pre></body></html>

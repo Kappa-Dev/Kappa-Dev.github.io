@@ -50,7 +50,14 @@
 <pre><span id="VALsplit"><span class="keyword">val</span> split</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> * bool * <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
 <pre><span id="VALunion"><span class="keyword">val</span> union</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
 <pre><span id="VALinter"><span class="keyword">val</span> inter</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
-<pre><span id="VALdiff"><span class="keyword">val</span> diff</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre>
+<pre><span id="VALminus"><span class="keyword">val</span> minus</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">minus a b</code> contains elements of <code class="code">a</code> that are not in <code class="code">b</code><br>
+</div>
+
+<pre><span id="VALdiff"><span class="keyword">val</span> diff</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">diff a b</code> = <code class="code">minus (union a b) (inter a b)</code><br>
+</div>
+
 <pre><span id="VALcardinal"><span class="keyword">val</span> cardinal</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALmem"><span class="keyword">val</span> mem</span> : <code class="type"><a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALexists"><span class="keyword">val</span> exists</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> bool) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
@@ -62,6 +69,7 @@
 <pre><span id="VALsubset"><span class="keyword">val</span> subset</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALiter"><span class="keyword">val</span> iter</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> unit) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a -> 'a) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> 'a -> 'a</code></pre>
+<pre><span id="VALfold_inv"><span class="keyword">val</span> fold_inv</span> : <code class="type">(<a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> -> 'a -> 'a) -> <a href="SetMap.S.Set.html#TYPEt">t</a> -> 'a -> 'a</code></pre>
 <pre><span id="VALelements"><span class="keyword">val</span> elements</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> list</code></pre>
 <pre><span id="VALchoose"><span class="keyword">val</span> choose</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> option</code></pre>
 <pre><span id="VALmin_elt"><span class="keyword">val</span> min_elt</span> : <code class="type"><a href="SetMap.S.Set.html#TYPEt">t</a> -> <a href="SetMap.S.html#TYPEelt">SetMap.S.elt</a> option</code></pre>

@@ -44,7 +44,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?rule_id:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">SetMap</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Causal</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -53,7 +53,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;rule_id:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">SetMap</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Causal</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -61,7 +61,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;force_rule&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">SetMap</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Causal</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -88,6 +88,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_injections&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">ValMap</span>.tree&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">ValMap</span>.tree&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">SetMap</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;debug_print&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 <span class="keyword">end</span></code></body></html>
