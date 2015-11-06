@@ -53,5 +53,5 @@
 <pre><span id="TYPEelt"><span class="keyword">type</span> <code class="type"></code>elt</span> </pre>
 
 
-<pre><span class="keyword">module</span> <a href="SetMap.S.Set.html">Set</a>: <code class="code"><span class="keyword">sig</span></code> <a href="SetMap.S.Set.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><span class="keyword">module</span> <a href="SetMap.S.Map.html">Map</a>: <code class="code"><span class="keyword">sig</span></code> <a href="SetMap.S.Map.html">..</a> <code class="code"><span class="keyword">end</span></code></pre></body></html>
+<pre><span class="keyword">module</span> <a href="SetMap.S.Set.html">Set</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt = elt</code></pre>
+<pre><span class="keyword">module</span> <a href="SetMap.S.Map.html">Map</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt = elt and type set = Set.t</code></pre></body></html>
