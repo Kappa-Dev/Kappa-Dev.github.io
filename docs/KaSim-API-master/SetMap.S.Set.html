@@ -63,6 +63,7 @@
 <code class="code">diff a b</code> = <code class="code">minus (union a b) (inter a b)</code><br>
 </div>
 
+<pre><span id="VALunion_safe"><span class="keyword">val</span> union_safe</span> : <code class="type">('parameters -> 'error -> string -> string option -> exn -> 'error) -><br>       'parameters -><br>       'error -> <a href="SetMap.Set.html#TYPEt">t</a> -> <a href="SetMap.Set.html#TYPEt">t</a> -> 'error * <a href="SetMap.Set.html#TYPEt">t</a></code></pre>
 <pre><span id="VALcardinal"><span class="keyword">val</span> cardinal</span> : <code class="type"><a href="SetMap.Set.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALmem"><span class="keyword">val</span> mem</span> : <code class="type"><a href="SetMap.Set.html#TYPEelt">elt</a> -> <a href="SetMap.Set.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALexists"><span class="keyword">val</span> exists</span> : <code class="type">(<a href="SetMap.Set.html#TYPEelt">elt</a> -> bool) -> <a href="SetMap.Set.html#TYPEt">t</a> -> bool</code></pre>
