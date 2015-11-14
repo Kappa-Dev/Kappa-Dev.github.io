@@ -64,11 +64,11 @@ depend in time, depend in event number, depend in given var
 <code class="code">add_link sort_ag1 ag1 s1 sort_ag2 ag2 s2 t</code>
 </div>
 </td></tr>
-<tr><td><a href="SetMap.Map.html#VALadd_safe">add_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
-<td></td></tr>
-<tr><td><a href="SetMap.Set.html#VALadd_safe">add_safe</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
-<td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALadd_tracked">add_tracked</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.Map.html#VALadd_with_logs">add_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.Set.html#VALadd_with_logs">add_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
@@ -168,7 +168,7 @@ Starts creation
 </td></tr>
 <tr><td><a href="SetMap.Map.html#VALdiff_pred">diff_pred</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Set.html#VALdiff_safe">diff_safe</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<tr><td><a href="SetMap.Set.html#VALdiff_with_logs">diff_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALdummy">dummy</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
@@ -217,11 +217,11 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfind_default">find_default</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Map.html#VALfind_default_safe">find_default_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<tr><td><a href="SetMap.Map.html#VALfind_default_with_logs">find_default_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfind_option">find_option</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Map.html#VALfind_option_safe">find_option_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<tr><td><a href="SetMap.Map.html#VALfind_option_with_logs">find_option_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.html#VALfinish_new">finish_new</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td></td></tr>
@@ -230,6 +230,12 @@ Starts creation
 <tr><td><a href="SetMap.Map.html#VALfold">fold</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALfold">fold</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.Map.html#VALfold2_sparse_with_logs">fold2_sparse_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.Map.html#VALfold2_with_logs">fold2_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.Map.html#VALfold2z_with_logs">fold2z_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALfold_inv">fold_inv</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
@@ -296,7 +302,7 @@ Apply the rule for sure if it is possible.
 </td></tr>
 <tr><td><a href="SetMap.Set.html#VALinter">inter</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Set.html#VALinter_safe">inter_safe</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<tr><td><a href="SetMap.Set.html#VALinter_with_logs">inter_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALinternal_state_of_num">internal_state_of_num</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
@@ -339,13 +345,15 @@ Apply the rule for sure if it is possible.
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALiter">iter</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="SetMap.Map.html#VALiter2_sparse_with_logs">iter2_sparse_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALiteri">iteri</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td><div class="info">
 <code class="code">iter f x n</code>
 </div>
 </td></tr>
 <tr><td align="left"><br>J</td></tr>
-<tr><td><a href="SetMap.Map.html#VALjoin_safe">join_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<tr><td><a href="SetMap.Map.html#VALjoin_with_logs">join_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>L</td></tr>
 <tr><td><a href="Edges.html#VALlink_exists">link_exists</a> [<a href="Edges.html">Edges</a>]</td>
@@ -369,9 +377,9 @@ Event loop for javascript
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmap2">map2</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Map.html#VALmap2_safe">map2_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<tr><td><a href="SetMap.Map.html#VALmap2_with_logs">map2_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Map.html#VALmap2z_safe">map2z_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<tr><td><a href="SetMap.Map.html#VALmap2z_with_logs">map2z_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALmap_observables">map_observables</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
@@ -616,11 +624,11 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <td></td></tr>
 <tr><td><a href="Edges.html#VALremove_link">remove_link</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Map.html#VALremove_safe">remove_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
-<td></td></tr>
-<tr><td><a href="SetMap.Set.html#VALremove_safe">remove_safe</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
-<td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALremove_tracked">remove_tracked</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.Map.html#VALremove_with_logs">remove_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="SetMap.Set.html#VALremove_with_logs">remove_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALrename">rename</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td></td></tr>
@@ -659,7 +667,7 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALsplit">split</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Map.html#VALsplit_safe">split_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<tr><td><a href="SetMap.Map.html#VALsplit_with_logs">split_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#VALstate_alg_op_to_string">state_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
@@ -703,7 +711,7 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALunion">union</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="SetMap.Set.html#VALunion_safe">union_safe</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<tr><td><a href="SetMap.Set.html#VALunion_with_logs">union_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALupdate">update</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -712,7 +720,7 @@ prints both the site and its internal state if it is not <code class="code"><spa
 Resynchronize the state after a rule application.
 </div>
 </td></tr>
-<tr><td><a href="SetMap.Map.html#VALupdate_safe">update_safe</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<tr><td><a href="SetMap.Map.html#VALupdate_with_logs">update_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>V</td></tr>
 <tr><td><a href="Rule_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
