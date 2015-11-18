@@ -68,8 +68,14 @@ type for partial domain<br>
 Starts creation<br>
 </div>
 
-<pre><span id="VALnew_node"><span class="keyword">val</span> new_node</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       int -> <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * <a href="Connected_component.html#TYPEwork">work</a></code></pre>
-<pre><span id="VALnew_link"><span class="keyword">val</span> new_link</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre>
+<pre><span id="VALnew_node"><span class="keyword">val</span> new_node</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       int -> <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
+<code class="code">new_node wk node_type</code><br>
+</div>
+
+<pre><span id="VALnew_link"><span class="keyword">val</span> new_link</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
+<code class="code">new_link wk (node, site_id) (node', site_id')</code><br>
+</div>
+
 <pre><span id="VALnew_free"><span class="keyword">val</span> new_free</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre>
 <pre><span id="VALnew_internal_state"><span class="keyword">val</span> new_internal_state</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -> int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
 <code class="code">new_link_type work (node,site) <span class="keyword">type</span></code><br>
