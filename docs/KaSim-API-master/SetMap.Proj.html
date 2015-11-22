@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="SetMap.Make.html">
+<link rel="Up" href="SetMap.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : SetMap.Proj</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="SetMap.Make.html" title="SetMap.Make">Previous</a>
+&nbsp;<a class="up" href="SetMap.html" title="SetMap">Up</a>
+&nbsp;</div>
+<h1>Functor <a href="type_SetMap.Proj.html">SetMap.Proj</a></h1>
+
+<pre><span class="keyword">module</span> Proj: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">A</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">B</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="SetMap.Projection.html">Projection</a></code><code class="type">  with type elt_a = A.elt and type elt_b = B.elt and type 'a map_a = 'a A.Map.t and type 'a map_b = 'a B.Map.t</code></div></div></pre><table border="0" cellpadding="3" width="100%">
+<tr>
+<td align="left" valign="top" width="1%%"><b>Parameters: </b></td>
+<td>
+<table class="paramstable">
+<tr>
+<td align="center" valign="top" width="15%">
+<code>A</code></td>
+<td align="center" valign="top">:</td>
+<td><code class="type"><a href="SetMap.S.html">S</a></code>
+<tr>
+<td align="center" valign="top" width="15%">
+<code>B</code></td>
+<td align="center" valign="top">:</td>
+<td><code class="type"><a href="SetMap.S.html">S</a></code>
+</table>
+</td>
+</tr>
+</table>
+<hr width="100%">
+
+<pre><span id="TYPEelt_a"><span class="keyword">type</span> <code class="type"></code>elt_a</span> </pre>
+
+
+<pre><span id="TYPEelt_b"><span class="keyword">type</span> <code class="type"></code>elt_b</span> </pre>
+
+
+<pre><span id="TYPEmap_a"><span class="keyword">type</span> <code class="type">'a</code> map_a</span> </pre>
+
+
+<pre><span id="TYPEmap_b"><span class="keyword">type</span> <code class="type">'a</code> map_b</span> </pre>
+
+
+<pre><span id="VALproj"><span class="keyword">val</span> proj</span> : <code class="type">(<a href="SetMap.Projection.html#TYPEelt_a">elt_a</a> -> <a href="SetMap.Projection.html#TYPEelt_b">elt_b</a>) -><br>       'a -><br>       ('a -> 'a -> 'a) -> 'a <a href="SetMap.Projection.html#TYPEmap_a">map_a</a> -> 'a <a href="SetMap.Projection.html#TYPEmap_b">map_b</a></code></pre></body></html>
