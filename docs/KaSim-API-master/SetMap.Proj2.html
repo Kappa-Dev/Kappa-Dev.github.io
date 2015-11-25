@@ -4,8 +4,7 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="SetMap.Make.html">
-<link rel="next" href="SetMap.Proj2.html">
+<link rel="previous" href="SetMap.Proj.html">
 <link rel="Up" href="SetMap.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -29,16 +28,15 @@
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
-<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : SetMap.Proj</title>
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : SetMap.Proj2</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="SetMap.Make.html" title="SetMap.Make">Previous</a>
+<div class="navbar"><a class="pre" href="SetMap.Proj.html" title="SetMap.Proj">Previous</a>
 &nbsp;<a class="up" href="SetMap.html" title="SetMap">Up</a>
-&nbsp;<a class="post" href="SetMap.Proj2.html" title="SetMap.Proj2">Next</a>
-</div>
-<h1>Functor <a href="type_SetMap.Proj.html">SetMap.Proj</a></h1>
+&nbsp;</div>
+<h1>Functor <a href="type_SetMap.Proj2.html">SetMap.Proj2</a></h1>
 
-<pre><span class="keyword">module</span> Proj: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">A</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">B</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="SetMap.Projection.html">Projection</a></code><code class="type">  with type elt_a = A.elt and type elt_b = B.elt and type 'a map_a = 'a A.Map.t and type 'a map_b = 'a B.Map.t</code></div></div></pre><table border="0" cellpadding="3" width="100%">
+<pre><span class="keyword">module</span> Proj2: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">A</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">B</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">C</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="SetMap.Projection2.html">Projection2</a></code><code class="type">  with type elt_a = A.elt and type elt_b = B.elt and type 'a map_a = 'a A.Map.t and type 'a map_b = 'a B.Map.t and type elt_c = C.elt and type 'a map_c = 'a C.Map.t</code></div></div></div></pre><table border="0" cellpadding="3" width="100%">
 <tr>
 <td align="left" valign="top" width="1%%"><b>Parameters: </b></td>
 <td>
@@ -53,6 +51,11 @@
 <code>B</code></td>
 <td align="center" valign="top">:</td>
 <td><code class="type"><a href="SetMap.S.html">S</a></code>
+<tr>
+<td align="center" valign="top" width="15%">
+<code>C</code></td>
+<td align="center" valign="top">:</td>
+<td><code class="type"><a href="SetMap.S.html">S</a></code>
 </table>
 </td>
 </tr>
@@ -65,10 +68,16 @@
 <pre><span id="TYPEelt_b"><span class="keyword">type</span> <code class="type"></code>elt_b</span> </pre>
 
 
+<pre><span id="TYPEelt_c"><span class="keyword">type</span> <code class="type"></code>elt_c</span> </pre>
+
+
 <pre><span id="TYPEmap_a"><span class="keyword">type</span> <code class="type">'a</code> map_a</span> </pre>
 
 
 <pre><span id="TYPEmap_b"><span class="keyword">type</span> <code class="type">'a</code> map_b</span> </pre>
 
 
-<pre><span id="VALproj"><span class="keyword">val</span> proj</span> : <code class="type">(<a href="SetMap.Projection.html#TYPEelt_a">elt_a</a> -> <a href="SetMap.Projection.html#TYPEelt_b">elt_b</a>) -><br>       'a -><br>       ('a -> 'a -> 'a) -> 'a <a href="SetMap.Projection.html#TYPEmap_a">map_a</a> -> 'a <a href="SetMap.Projection.html#TYPEmap_b">map_b</a></code></pre></body></html>
+<pre><span id="TYPEmap_c"><span class="keyword">type</span> <code class="type">'a</code> map_c</span> </pre>
+
+
+<pre><span id="VALproj2"><span class="keyword">val</span> proj2</span> : <code class="type">(<a href="SetMap.Projection2.html#TYPEelt_a">elt_a</a> -> <a href="SetMap.Projection2.html#TYPEelt_b">elt_b</a>) -><br>       (<a href="SetMap.Projection2.html#TYPEelt_a">elt_a</a> -> <a href="SetMap.Projection2.html#TYPEelt_c">elt_c</a>) -><br>       'a -><br>       ('a -> 'a -> 'a) -><br>       'a <a href="SetMap.Projection2.html#TYPEmap_a">map_a</a> -><br>       'a <a href="SetMap.Projection2.html#TYPEmap_c">map_c</a> <a href="SetMap.Projection2.html#TYPEmap_b">map_b</a></code></pre></body></html>
