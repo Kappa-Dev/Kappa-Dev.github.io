@@ -29,8 +29,7 @@
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
-<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><link title="Printers" rel="Section" href="#6_Printers">
-<link title="Compilers " rel="Section" href="#6_Compilers">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><link title="Compilers " rel="Section" href="#6_Compilers">
 <title>KaSim API : Expr</title>
 </head>
 <body>
@@ -44,15 +43,7 @@
 Algebraic and boolean expression manager<br>
 </div>
 <hr width="100%">
-<br>
-<h6 id="6_Printers">Printers</h6><br>
 
-<pre><span id="VALprint_ast_mix"><span class="keyword">val</span> print_ast_mix</span> : <code class="type">Format.formatter -> Ast.mixture -> unit</code></pre>
-<pre><span id="VALprint_ast_alg"><span class="keyword">val</span> print_ast_alg</span> : <code class="type">Format.formatter -> Ast.mixture Ast.ast_alg_expr -> unit</code></pre>
-<pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">Format.formatter -> Ast.rule -> unit</code></pre>
-<pre><span id="VALprint_ast_rule_no_rate"><span class="keyword">val</span> print_ast_rule_no_rate</span> : <code class="type">reverse:bool -> Format.formatter -> Ast.rule -> unit</code></pre>
-<pre><span id="VALprint_bool"><span class="keyword">val</span> print_bool</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a Ast.bool_expr -> unit</code></pre>
-<pre><span id="VALprint_ast_bool"><span class="keyword">val</span> print_ast_bool</span> : <code class="type">Format.formatter -> Ast.mixture Ast.ast_alg_expr Ast.bool_expr -> unit</code></pre>
 <pre><span id="VALast_alg_has_mix"><span class="keyword">val</span> ast_alg_has_mix</span> : <code class="type">'a Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> -> bool</code></pre><div class="info ">
 <h6 id="6_Utilities">Utilities </h6><br>
 </div>
