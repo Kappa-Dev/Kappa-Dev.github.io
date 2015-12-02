@@ -50,47 +50,6 @@ Purely functionnal. Nothing there raises any exception.<br>
 <pre><span class="keyword">module type</span> <a href="SetMap.S.html">S</a> = <code class="code"><span class="keyword">sig</span></code> <a href="SetMap.S.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
 <pre><span class="keyword">module</span> <a href="SetMap.Make.html">Make</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">Ord</span></code><code class="code"> : </code><code class="type"><a href="SetMap.OrderedType.html">OrderedType</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="type">  with type elt = Ord.t</code></div></pre>
 <pre><span class="keyword">module type</span> <a href="SetMap.Projection.html">Projection</a> = <code class="code"><span class="keyword">sig</span></code> <a href="SetMap.Projection.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><span class="keyword">module</span> <a href="SetMap.Proj.html">Proj</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">A</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">B</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="SetMap.Projection.html">Projection</a></code><code class="type">  with type elt_a = A.elt and type elt_b = B.elt and type 'a map_a = 'a A.Map.t and type 'a map_b = 'a B.Map.t</code></div></div></pre><br>
-the following code: 
-<p>
-
-module IntMap = Make(struct type t = int let compare = compare end)
-module P = Proj(IntMap)(IntMap)
-<p>
-
-let f = List.fold_left
-	  (fun map (a,b) -&gt; IntMap.Map.add a b map)
-	  IntMap.Map.empty
-	  <code class="code">1,[2;3];2,[3;4];5,[6;7];8,[12;13]</code> 
-<p>
-
-let g = P.proj (fun i -&gt; i mod 2) [] (List.append) f
-<p>
-
-let dump (s:string) f =
-  let _ = Printf.fprintf stderr "%s: \n" s in 
-  let _ = IntMap.Map.iter
-	    (fun a l -&gt;
-	     let _ = Printf.fprintf stderr "  %i:" a in
-	     let _ = List.iter (Printf.fprintf stderr "%i,") l in
-	     let _ = Printf.fprintf stderr "\n" in ())
-	    f in
-  ()
-let _ = dump "f" f
-let _ = dump "g" g 
-<p>
-
-should dump: 
-<p>
-
-f: 
-  1:2,3,
-  2:3,4,
-  5:6,7,
-  8:12,13,
-g: 
-  0:12,13,3,4,
-  1:6,7,2,3,<br>
-
+<pre><span class="keyword">module</span> <a href="SetMap.Proj.html">Proj</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">A</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">B</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="SetMap.Projection.html">Projection</a></code><code class="type">  with type elt_a = A.elt and type elt_b = B.elt and type 'a map_a = 'a A.Map.t and type 'a map_b = 'a B.Map.t</code></div></div></pre>
 <pre><span class="keyword">module type</span> <a href="SetMap.Projection2.html">Projection2</a> = <code class="code"><span class="keyword">sig</span></code> <a href="SetMap.Projection2.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
 <pre><span class="keyword">module</span> <a href="SetMap.Proj2.html">Proj2</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">A</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">B</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">C</span></code><code class="code"> : </code><code class="type"><a href="SetMap.S.html">S</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="SetMap.Projection2.html">Projection2</a></code><code class="type">  with type elt_a = A.elt and type elt_b = B.elt and type 'a map_a = 'a A.Map.t and type 'a map_b = 'a B.Map.t and type elt_c = C.elt and type 'a map_c = 'a C.Map.t</code></div></div></div></pre></body></html>
