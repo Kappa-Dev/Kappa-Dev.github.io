@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Expr.html">
+<link rel="next" href="Snip.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : LKappa</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Expr.html" title="Expr">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Snip.html" title="Snip">Next</a>
+</div>
+<h1>Module <a href="type_LKappa.html">LKappa</a></h1>
+
+<pre><span class="keyword">module</span> LKappa: <code class="code"><span class="keyword">sig</span></code> <a href="LKappa.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+
+<pre><code><span id="TYPEswitching"><span class="keyword">type</span> <code class="type"></code>switching</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTswitching.Linked"><span class="constructor">Linked</span></span> <span class="keyword">of</span> <code class="type">int <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTswitching.Freed"><span class="constructor">Freed</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTswitching.Maintained"><span class="constructor">Maintained</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTswitching.Erased"><span class="constructor">Erased</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPErule_internal"><span class="keyword">type</span> <code class="type"></code>rule_internal</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_internal.I_ANY"><span class="constructor">I_ANY</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_internal.I_ANY_CHANGED"><span class="constructor">I_ANY_CHANGED</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_internal.I_ANY_ERASED"><span class="constructor">I_ANY_ERASED</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_internal.I_VAL_CHANGED"><span class="constructor">I_VAL_CHANGED</span></span> <span class="keyword">of</span> <code class="type">int * int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_internal.I_VAL_ERASED"><span class="constructor">I_VAL_ERASED</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPErule_agent"><span class="keyword">type</span> <code class="type"></code>rule_agent</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_agent.ra_type">ra_type</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_agent.ra_erased">ra_erased</span>&nbsp;: <code class="type">bool</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_agent.ra_ports">ra_ports</span>&nbsp;: <code class="type">((int, int * int) Ast.link <a href="Location.html#TYPEannot">Location.annot</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_agent.ra_ints">ra_ints</span>&nbsp;: <code class="type"><a href="LKappa.html#TYPErule_internal">rule_internal</a> array</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_agent.ra_syntax">ra_syntax</span>&nbsp;: <code class="type">(((int, int * int) Ast.link <a href="Location.html#TYPEannot">Location.annot</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array *<br>        <a href="LKappa.html#TYPErule_internal">rule_internal</a> array)<br>       option</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="TYPErule_mixture"><span class="keyword">type</span> <code class="type"></code>rule_mixture</span> = <code class="type"><a href="LKappa.html#TYPErule_agent">rule_agent</a> list</code> </pre>
+
+
+<pre><code><span id="TYPErule"><span class="keyword">type</span> <code class="type"></code>rule</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.r_mix">r_mix</span>&nbsp;: <code class="type"><a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.r_created">r_created</span>&nbsp;: <code class="type"><a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.r_rm_tokens">r_rm_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.r_add_tokens">r_add_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.r_rate">r_rate</span>&nbsp;: <code class="type">(<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.r_un_rate">r_un_rate</span>&nbsp;: <code class="type">(<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> option</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALto_erased"><span class="keyword">val</span> to_erased</span> : <code class="type"><a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
+<pre><span id="VALto_maintained"><span class="keyword">val</span> to_maintained</span> : <code class="type"><a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
+<pre><span id="VALto_raw_mixture"><span class="keyword">val</span> to_raw_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></pre>
+<pre><span id="VALcopy_rule_agent"><span class="keyword">val</span> copy_rule_agent</span> : <code class="type"><a href="LKappa.html#TYPErule_agent">rule_agent</a> -> <a href="LKappa.html#TYPErule_agent">rule_agent</a></code></pre>
+<pre><span id="VALprint_rule_mixture"><span class="keyword">val</span> print_rule_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> list -> unit</code></pre>
+<pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">ltypes:bool -><br>       rates:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
+<pre><span id="VALannotate_lhs_with_diff"><span class="keyword">val</span> annotate_lhs_with_diff</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       Ast.mixture -><br>       Ast.mixture -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> list * (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> * <a href="Location.html#TYPEt">Location.t</a>) list</code></pre>
+<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       (Ast.agent, Ast.mixture, Mods.StringMap.elt, Ast.rule) Ast.compil -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> *<br>       (Ast.agent, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>) Ast.compil</code></pre></body></html>

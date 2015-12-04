@@ -17,10 +17,12 @@
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Expr" rel="Chapter" href="Expr.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
@@ -81,6 +83,8 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
+<tr><td><a href="LKappa.html#VALannotate_lhs_with_diff">annotate_lhs_with_diff</a> [<a href="LKappa.html">LKappa</a>]</td>
+<td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALapply_rule">apply_rule</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td><div class="info">
 Returns the graph obtained by applying the rule.
@@ -96,11 +100,6 @@ Returns the graph obtained by applying the rule.
 <tr><td><a href="Signature.html#VALarity">arity</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
 <code class="code">arity sigs agent_id</code>
-</div>
-</td></tr>
-<tr><td><a href="Expr.html#VALast_alg_has_mix">ast_alg_has_mix</a> [<a href="Expr.html">Expr</a>]</td>
-<td><div class="info">
-Utilities 
 </div>
 </td></tr>
 <tr><td align="left"><br>B</td></tr>
@@ -132,6 +131,8 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="Operator.html#VALcompare_op_to_string">compare_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
+<tr><td><a href="LKappa.html#VALcompil_of_ast">compil_of_ast</a> [<a href="LKappa.html">LKappa</a>]</td>
+<td></td></tr>
 <tr><td><a href="Expr.html#VALcompile_alg">compile_alg</a> [<a href="Expr.html">Expr</a>]</td>
 <td><div class="info">
 <code class="code">compile_alg variable_map token_map (fresh_mix_id, mix_list) alg_pos</code>
@@ -152,6 +153,8 @@ Starts creation
 <tr><td><a href="Snip.html#VALconnected_components_sum_of_ambiguous_mixture">connected_components_sum_of_ambiguous_mixture</a> [<a href="Snip.html">Snip</a>]</td>
 <td></td></tr>
 <tr><td><a href="Snip.html#VALconnected_components_sum_of_ambiguous_rule">connected_components_sum_of_ambiguous_rule</a> [<a href="Snip.html">Snip</a>]</td>
+<td></td></tr>
+<tr><td><a href="LKappa.html#VALcopy_rule_agent">copy_rule_agent</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALcreate">create</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
@@ -213,6 +216,8 @@ Starts creation
 <tr><td><a href="Edges.html#VALempty_path">empty_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALenv">env</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="Raw_mixture.html#VALequal">equal</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALequal">equal</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -491,8 +496,6 @@ Event loop for javascript
 <code class="code">num_of_internal_state site_id state_name sign</code>
 </div>
 </td></tr>
-<tr><td><a href="Environment.html#VALnum_of_rule">num_of_rule</a> [<a href="Environment.html">Environment</a>]</td>
-<td></td></tr>
 <tr><td><a href="Signature.html#VALnum_of_site">num_of_site</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALnum_of_token">num_of_token</a> [<a href="Environment.html">Environment</a>]</td>
@@ -557,6 +560,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALprint">print</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td></td></tr>
+<tr><td><a href="Raw_mixture.html#VALprint">print</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
+<td></td></tr>
 <tr><td><a href="Connected_component.Env.html#VALprint">print</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.ContentAgent.html#VALprint">print</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
@@ -600,6 +605,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Edges.html#VALprint_dot">print_dot</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
+<tr><td><a href="Raw_mixture.html#VALprint_dot">print_dot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
+<td></td></tr>
 <tr><td><a href="Connected_component.Env.html#VALprint_dot">print_dot</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.html#VALprint_dot">print_dot</a> [<a href="Connected_component.html">Connected_component</a>]</td>
@@ -618,7 +625,11 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Operator.html#VALprint_rev_dep">print_rev_dep</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
+<tr><td><a href="LKappa.html#VALprint_rule">print_rule</a> [<a href="LKappa.html">LKappa</a>]</td>
+<td></td></tr>
 <tr><td><a href="Environment.html#VALprint_rule">print_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="LKappa.html#VALprint_rule_mixture">print_rule_mixture</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.ContentAgent.html#VALprint_site">print_site</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
 <td></td></tr>
@@ -739,9 +750,15 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <tr><td><a href="Nbr.html#VALsucc">succ</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>T</td></tr>
+<tr><td><a href="LKappa.html#VALto_erased">to_erased</a> [<a href="LKappa.html">LKappa</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALto_float">to_float</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALto_int">to_int</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="LKappa.html#VALto_maintained">to_maintained</a> [<a href="LKappa.html">LKappa</a>]</td>
+<td></td></tr>
+<tr><td><a href="LKappa.html#VALto_raw_mixture">to_raw_mixture</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALto_string">to_string</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>

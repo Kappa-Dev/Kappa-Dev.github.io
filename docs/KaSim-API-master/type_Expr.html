@@ -16,10 +16,12 @@
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Expr" rel="Chapter" href="Expr.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
@@ -28,26 +30,19 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;ast_alg_has_mix&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile_alg&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?origin:<span class="constructor">Operator</span>.rev_dep&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;?max_allowed_var:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;list&nbsp;*&nbsp;(string&nbsp;*&nbsp;string)&nbsp;list)&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">String2Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Location</span>.annot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile_pure_alg&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Location</span>.annot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile_bool&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;list&nbsp;*&nbsp;(string&nbsp;*&nbsp;string)&nbsp;list)&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">String2Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;stops_of_bool_expr&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array&nbsp;*<br>

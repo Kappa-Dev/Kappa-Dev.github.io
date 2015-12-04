@@ -21,10 +21,12 @@
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Expr" rel="Chapter" href="Expr.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
@@ -46,7 +48,7 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
-<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> option * Ast.rule <a href="Location.html#TYPEannot">Location.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * Connected_component.Set.t -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> array -><br>       <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Environment.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> option * <a href="LKappa.html#TYPErule">LKappa.rule</a> <a href="Location.html#TYPEannot">Location.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array * Connected_component.Set.t -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> array -><br>       <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Environment.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code><br>
 </div>
 
@@ -66,12 +68,11 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="VALget_token_reverse_dependencies"><span class="keyword">val</span> get_token_reverse_dependencies</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int -> Operator.DepSet.t</code></pre>
 <pre><span id="VALget_always_outdated"><span class="keyword">val</span> get_always_outdated</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> Operator.DepSet.t</code></pre>
 <pre><span id="VALnum_of_agent"><span class="keyword">val</span> num_of_agent</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Environment.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALnum_of_rule"><span class="keyword">val</span> num_of_rule</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Environment.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnum_of_alg"><span class="keyword">val</span> num_of_alg</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Environment.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnum_of_token"><span class="keyword">val</span> num_of_token</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Environment.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
-<pre><span id="VALprint_agent"><span class="keyword">val</span> print_agent</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
+<pre><span id="VALprint_agent"><span class="keyword">val</span> print_agent</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_alg"><span class="keyword">val</span> print_alg</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_token"><span class="keyword">val</span> print_token</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALget_desc"><span class="keyword">val</span> get_desc</span> : <code class="type">string -> <a href="Environment.html#TYPEt">t</a> -> Format.formatter</code></pre>
