@@ -44,6 +44,7 @@
 .ectt-1095{ font-family: monospace;}
 .ectt-1095{ font-family: monospace;}
 .ectt-1095{ font-family: monospace;}
+.ectt-1095{ font-family: monospace;}
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
@@ -57,6 +58,8 @@
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
+.ecss-1095{ font-family: sans-serif;}
+.ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
@@ -72,8 +75,8 @@
 .ecti-1095{ font-style: italic;}
 .cmti-10x-x-109{ font-style: italic;}
 .cmti-8{font-size:72%; font-style: italic;}
+.ecrm-0600{font-size:54%;}
 .tctt-1095{font-family: monospace;}
-.tctt-1095{font-family: monospace;}
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
@@ -87,6 +90,8 @@
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
@@ -114,9 +119,9 @@
 .ectt-0900{ font-family: monospace;}
 .ectt-0900{ font-family: monospace;}
 .ectt-0900{ font-family: monospace;}
-.tctt-0900{font-size:81%;font-family: monospace;}
-.tctt-0900{font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
 .ecss-0900{font-size:81%; font-family: sans-serif;}
+.ecss-0900{ font-family: sans-serif;}
 .ecss-0900{ font-family: sans-serif;}
 .ecss-0900{ font-family: sans-serif;}
 .ecss-0900{ font-family: sans-serif;}
@@ -131,6 +136,7 @@
 .ecss-0900{ font-family: sans-serif;}
 .cmtt-10x-x-109{font-family: monospace;}
 .ecti-0900{font-size:81%; font-style: italic;}
+.ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
@@ -283,6 +289,10 @@ mtd.align-even{margin-right:2em; text-align:left;}
 .boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
 mo.qopname + mi{margin-left:0.3em}
 mi + mo.qopname{margin-left:0.3em}
+.lstlisting .label{margin-right:0.5em; }
+div.lstlisting{font-family: monospace; white-space: nowrap; margin-top:0.5em; margin-bottom:0.5em; }
+div.lstinputlisting{ font-family: monospace; white-space: nowrap; }
+.lstinputlisting .label{margin-right:0.5em;}
 #textcolor1{color:#0000FF}
 #textcolor2{color:#0000FF}
 #textcolor3{color:#0000FF}
@@ -352,21 +362,5 @@ tr#TBL-8-24- td{border-bottom:0.12193em solid}
 #textcolor59{color:#0000FF}
 #textcolor60{color:#0000FF}
 #textcolor61{color:#0000FF}
-#textcolor62{color:#0000FF}
-#textcolor63{color:#0000FF}
-#textcolor64{color:#0000FF}
-#textcolor65{color:#0000FF}
-#textcolor66{color:#0000FF}
-#textcolor67{color:#0000FF}
-#textcolor68{color:#0000FF}
-#textcolor69{color:#0000FF}
-#textcolor70{color:#0000FF}
-#textcolor71{color:#0000FF}
-#textcolor72{color:#0000FF}
-#textcolor73{color:#0000FF}
-#textcolor74{color:#0000FF}
-#textcolor75{color:#0000FF}
-#textcolor76{color:#0000FF}
-#textcolor77{color:#0000FF}
 /* end css.sty */
 

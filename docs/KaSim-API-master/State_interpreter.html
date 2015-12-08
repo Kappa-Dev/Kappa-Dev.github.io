@@ -49,11 +49,11 @@ Abstract state<br>
 </div>
 
 
-<pre><span id="VALinitial"><span class="keyword">val</span> initial</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       Mods.Counter.t -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALinitial"><span class="keyword">val</span> initial</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       Counter.t -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">initial env c graph stopping_times</code> builds up the initial state<br>
 </div>
 
-<pre><span id="VALobservables_values"><span class="keyword">val</span> observables_values</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       Mods.Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> array</code></pre><div class="info ">
+<pre><span id="VALobservables_values"><span class="keyword">val</span> observables_values</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> array</code></pre><div class="info ">
 Returns (the current biological time, an array of the current
 values of observables)<br>
 </div>
@@ -62,11 +62,11 @@ values of observables)<br>
 Returns the current activity<br>
 </div>
 
-<pre><span id="VALloop_cps"><span class="keyword">val</span> loop_cps</span> : <code class="type">Format.formatter -><br>       ((unit -> 'a) -> 'a) -><br>       (Format.formatter -><br>        <a href="Environment.html#TYPEt">Environment.t</a> -><br>        Mods.Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Mods.Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
+<pre><span id="VALloop_cps"><span class="keyword">val</span> loop_cps</span> : <code class="type">Format.formatter -><br>       ((unit -> 'a) -> 'a) -><br>       (Format.formatter -><br>        <a href="Environment.html#TYPEt">Environment.t</a> -><br>        Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
 Event loop for javascript<br>
 </div>
 
-<pre><span id="VALloop"><span class="keyword">val</span> loop</span> : <code class="type">Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Mods.Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<pre><span id="VALloop"><span class="keyword">val</span> loop</span> : <code class="type">Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Counter.t -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
 <code class="code">loop message_formatter env domain counter graph</code> does one event
 loop<br>
 </div>
