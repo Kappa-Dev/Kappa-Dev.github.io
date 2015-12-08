@@ -25,6 +25,9 @@
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Plot" rel="Chapter" href="Plot.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Index of values</title>
@@ -119,6 +122,8 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALchoose">choose</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="Plot.html#VALclose">close</a> [<a href="Plot.html">Plot</a>]</td>
+<td></td></tr>
 <tr><td><a href="Environment.html#VALclose_desc">close_desc</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALcompare">compare</a> [<a href="Nbr.html">Nbr</a>]</td>
@@ -142,6 +147,8 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="Expr.html#VALcompile_pure_alg">compile_pure_alg</a> [<a href="Expr.html">Expr</a>]</td>
 <td></td></tr>
+<tr><td><a href="Counter.html#VALcomplete_progress_bar">complete_progress_bar</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
 <tr><td><a href="Instantiation.html#VALconcretize_action">concretize_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALconcretize_event">concretize_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
@@ -154,11 +161,27 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="Snip.html#VALconnected_components_sum_of_ambiguous_rule">connected_components_sum_of_ambiguous_rule</a> [<a href="Snip.html">Snip</a>]</td>
 <td></td></tr>
+<tr><td><a href="Counter.html#VALconsecutive_null_event">consecutive_null_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
 <tr><td><a href="LKappa.html#VALcopy_rule_agent">copy_rule_agent</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
+<tr><td><a href="Plot.html#VALcreate">create</a> [<a href="Plot.html">Plot</a>]</td>
+<td><div class="info">
+<code class="code">create filename</code>
+</div>
+</td></tr>
+<tr><td><a href="Counter.html#VALcreate">create</a> [<a href="Counter.html">Counter</a>]</td>
+<td><div class="info">
+<code class="code">create nb_plot_point init_t init_event max_t max_event</code>
+</div>
+</td></tr>
 <tr><td><a href="Signature.html#VALcreate">create</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALcreate">create</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALcurrent_event">current_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALcurrent_time">current_time</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>D</td></tr>
 <tr><td><a href="Rule_interpreter.html#VALdebug_print">debug_print</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
@@ -233,6 +256,8 @@ Starts creation
 <tr><td><a href="Rule_interpreter.html#VALextra_outdated_var">extra_outdated_var</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>F</td></tr>
+<tr><td><a href="Plot.html#VALfill">fill</a> [<a href="Plot.html">Plot</a>]</td>
+<td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALfilter">filter</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfind_default">find_default</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -418,7 +443,11 @@ Event loop for javascript
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALmax_elt">max_elt</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="Counter.html#VALmax_events">max_events</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmax_key">max_key</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALmax_time">max_time</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmem">mem</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -458,6 +487,8 @@ Event loop for javascript
 <td></td></tr>
 <tr><td><a href="Environment.html#VALnb_algs">nb_algs</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
+<tr><td><a href="Counter.html#VALnb_null_event">nb_null_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
 <tr><td><a href="Environment.html#VALnb_perturbations">nb_perturbations</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALnb_rules">nb_rules</a> [<a href="Environment.html">Environment</a>]</td>
@@ -485,6 +516,8 @@ Event loop for javascript
 <code class="code">new_node wk node_type</code>
 </div>
 </td></tr>
+<tr><td><a href="Counter.html#VALnext_story">next_story</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
 <tr><td><a href="Environment.html#VALnum_of_agent">num_of_agent</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALnum_of_agent">num_of_agent</a> [<a href="Signature.html">Signature</a>]</td>
@@ -543,12 +576,28 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALone">one</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="Counter.html#VALone_clashing_instance_event">one_clashing_instance_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALone_constructive_event">one_constructive_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALone_no_more_binary_event">one_no_more_binary_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALone_no_more_unary_event">one_no_more_unary_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALone_time_correction_event">one_time_correction_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Outputs.html#VALoutput_flux">output_flux</a> [<a href="Outputs.html">Outputs</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>P</td></tr>
 <tr><td><a href="SetMap.Set.html#VALpartition">partition</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALpathes_of_interrest">pathes_of_interrest</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALperturbation">perturbation</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="Plot.html#VALplot_now">plot_now</a> [<a href="Plot.html">Plot</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALplot_points">plot_points</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALpop">pop</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -612,6 +661,8 @@ values of observables)
 <tr><td><a href="Connected_component.Env.html#VALprint_dot">print_dot</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.html#VALprint_dot">print_dot</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALprint_efficiency">print_efficiency</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALprint_expr_val">print_expr_val</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
@@ -752,6 +803,8 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <tr><td><a href="Nbr.html#VALsucc">succ</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>T</td></tr>
+<tr><td><a href="Counter.html#VALtick">tick</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
 <tr><td><a href="LKappa.html#VALto_erased">to_erased</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALto_float">to_float</a> [<a href="Nbr.html">Nbr</a>]</td>
@@ -759,6 +812,8 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <tr><td><a href="Nbr.html#VALto_int">to_int</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="LKappa.html#VALto_maintained">to_maintained</a> [<a href="LKappa.html">LKappa</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALto_plot_points">to_plot_points</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="LKappa.html#VALto_raw_mixture">to_raw_mixture</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
@@ -787,6 +842,11 @@ Resynchronize the state after a rule application.
 <tr><td><a href="SetMap.Map.html#VALupdate_with_logs">update_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>V</td></tr>
+<tr><td><a href="Plot.html#VALvalue">value</a> [<a href="Plot.html">Plot</a>]</td>
+<td><div class="info">
+<code class="code">value width</code>
+</div>
+</td></tr>
 <tr><td><a href="Rule_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Expr_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Expr_interpreter.html">Expr_interpreter</a>]</td>

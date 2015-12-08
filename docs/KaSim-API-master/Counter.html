@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Edges.html">
+<link rel="next" href="Plot.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Plot" rel="Chapter" href="Plot.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Counter</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Edges.html" title="Edges">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Plot.html" title="Plot">Next</a>
+</div>
+<h1>Module <a href="type_Counter.html">Counter</a></h1>
+
+<pre><span class="keyword">module</span> Counter: <code class="code"><span class="keyword">sig</span></code> <a href="Counter.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Simulation progress keeper<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+
+
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">int -> float -> int -> float option -> int option -> <a href="Counter.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">create nb_plot_point init_t init_event max_t max_event</code><br>
+</div>
+
+<pre><span id="VALtick"><span class="keyword">val</span> tick</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALto_plot_points"><span class="keyword">val</span> to_plot_points</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float list * <a href="Counter.html#TYPEt">t</a></code></pre>
+<pre><span id="VALcomplete_progress_bar"><span class="keyword">val</span> complete_progress_bar</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALone_constructive_event"><span class="keyword">val</span> one_constructive_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
+<pre><span id="VALone_clashing_instance_event"><span class="keyword">val</span> one_clashing_instance_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
+<pre><span id="VALone_no_more_unary_event"><span class="keyword">val</span> one_no_more_unary_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
+<pre><span id="VALone_no_more_binary_event"><span class="keyword">val</span> one_no_more_binary_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
+<pre><span id="VALone_time_correction_event"><span class="keyword">val</span> one_time_correction_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> -> bool</code></pre>
+<pre><span id="VALmax_time"><span class="keyword">val</span> max_time</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float option</code></pre>
+<pre><span id="VALmax_events"><span class="keyword">val</span> max_events</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int option</code></pre>
+<pre><span id="VALplot_points"><span class="keyword">val</span> plot_points</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALcurrent_time"><span class="keyword">val</span> current_time</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float</code></pre>
+<pre><span id="VALcurrent_event"><span class="keyword">val</span> current_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALnb_null_event"><span class="keyword">val</span> nb_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALconsecutive_null_event"><span class="keyword">val</span> consecutive_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALprint_efficiency"><span class="keyword">val</span> print_efficiency</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALnext_story"><span class="keyword">val</span> next_story</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit Mods.simulation_info</code></pre></body></html>

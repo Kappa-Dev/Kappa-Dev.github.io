@@ -29,6 +29,9 @@
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Plot" rel="Chapter" href="Plot.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><link title="Initialisation" rel="Section" href="#6_Initialisation">
@@ -89,28 +92,28 @@ Abstract graph<br>
 <code class="code">get_alg</code> is by default <code class="code"><span class="constructor">Environment</span>.get_alg</code> but it is not hard
 wired because perturbations can redefined alg_expr.<br>
 
-<pre><span id="VALvalue_alg"><span class="keyword">val</span> value_alg</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       Counter.t -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a></code></pre>
-<pre><span id="VALvalue_bool"><span class="keyword">val</span> value_bool</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       Counter.t -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr -> bool</code></pre><br>
+<pre><span id="VALvalue_alg"><span class="keyword">val</span> value_alg</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a></code></pre>
+<pre><span id="VALvalue_bool"><span class="keyword">val</span> value_bool</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr -> bool</code></pre><br>
 <h6 id="6_Core">Core</h6><br>
 
-<pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">?rule_id:int -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       Counter.t -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
+<pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">?rule_id:int -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
 Returns the graph obtained by applying the rule.
  <code class="code">rule_id</code> is mandatory if the rula has an unary rate.<br>
 </div>
 
-<pre><span id="VALapply_unary_rule"><span class="keyword">val</span> apply_unary_rule</span> : <code class="type">rule_id:int -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       Counter.t -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
+<pre><span id="VALapply_unary_rule"><span class="keyword">val</span> apply_unary_rule</span> : <code class="type">rule_id:int -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
 Returns the graph obtained by applying the rule.
  <code class="code">rule_id</code> is mandatory if the rula has an unary rate.<br>
 </div>
 
-<pre><span id="VALforce_rule"><span class="keyword">val</span> force_rule</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       Counter.t -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -><br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> * <a href="Connected_component.Matching.html#TYPEt">Connected_component.Matching.t</a> list option</code></pre><div class="info ">
+<pre><span id="VALforce_rule"><span class="keyword">val</span> force_rule</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -><br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> * <a href="Connected_component.Matching.html#TYPEt">Connected_component.Matching.t</a> list option</code></pre><div class="info ">
 Apply the rule for sure if it is possible. Try <code class="code">apply_rule</code> but in
 case of null_event, it computes the exact injections of the left hand
 side to do apply the rule and returns the remaining exact injections.<br>
 </div>
 
 <pre><span id="VALextra_outdated_var"><span class="keyword">val</span> extra_outdated_var</span> : <code class="type">int -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
-<pre><span id="VALupdate_outdated_activities"><span class="keyword">val</span> update_outdated_activities</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       (int -> int -> float -> unit) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -> Counter.t -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALupdate_outdated_activities"><span class="keyword">val</span> update_outdated_activities</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       (int -> int -> float -> unit) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -> <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
 Resynchronize the state after a rule application.
 <p>
 
