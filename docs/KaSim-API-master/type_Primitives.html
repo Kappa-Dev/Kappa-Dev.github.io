@@ -53,6 +53,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;elementary_rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rate&nbsp;:&nbsp;<span class="constructor">Alg_expr</span>.t;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rate_absolute&nbsp;:&nbsp;bool;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;unary_rate&nbsp;:&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;connected_components&nbsp;:&nbsp;<span class="constructor">Connected_component</span>.t&nbsp;array;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;removed&nbsp;:&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;list;<br>
