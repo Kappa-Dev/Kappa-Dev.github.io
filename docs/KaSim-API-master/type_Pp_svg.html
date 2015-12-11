@@ -1,5 +1,4 @@
-<html>
-<head>
+<html><head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
@@ -34,29 +33,17 @@
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
-<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Index of module types</title>
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html"><title>KaSim API : Pp_svg</title>
 </head>
 <body>
-<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;</div>
-<h1>Index of module types</h1>
-<table>
-<tr><td align="left"><br>M</td></tr>
-<tr><td><a href="SetMap.Map.html">Map</a> [<a href="SetMap.html">SetMap</a>]</td>
-<td></td></tr>
-<tr><td align="left"><br>O</td></tr>
-<tr><td><a href="SetMap.OrderedType.html">OrderedType</a> [<a href="SetMap.html">SetMap</a>]</td>
-<td></td></tr>
-<tr><td align="left"><br>P</td></tr>
-<tr><td><a href="SetMap.Projection.html">Projection</a> [<a href="SetMap.html">SetMap</a>]</td>
-<td></td></tr>
-<tr><td><a href="SetMap.Projection2.html">Projection2</a> [<a href="SetMap.html">SetMap</a>]</td>
-<td></td></tr>
-<tr><td align="left"><br>S</td></tr>
-<tr><td><a href="SetMap.S.html">S</a> [<a href="SetMap.html">SetMap</a>]</td>
-<td></td></tr>
-<tr><td><a href="SetMap.Set.html">Set</a> [<a href="SetMap.html">SetMap</a>]</td>
-<td></td></tr>
-</table>
-</body>
-</html>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;store&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;descr&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;legend&nbsp;:&nbsp;string&nbsp;array;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">mutable</span>&nbsp;points&nbsp;:&nbsp;(float&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t&nbsp;array)&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_string&nbsp;:&nbsp;?width:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pp_svg</span>.store&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_file&nbsp;:&nbsp;<span class="constructor">Pp_svg</span>.store&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+<span class="keyword">end</span></code></body></html>
