@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="State_interpreter.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Pp" rel="Chapter" href="Pp.html">
+<link title="Pp_svg" rel="Chapter" href="Pp_svg.html">
+<link title="Pp_html" rel="Chapter" href="Pp_html.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Plot" rel="Chapter" href="Plot.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
+<link title="Utilities" rel="Chapter" href="Utilities.html"><title>KaSim API : Utilities</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="State_interpreter.html" title="State_interpreter">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Utilities.html">Utilities</a></h1>
+
+<pre><span class="keyword">module</span> Utilities: <code class="code"><span class="keyword">sig</span></code> <a href="Utilities.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+High-level elementary primitives to generate stories<br>
+</div>
+<hr width="100%">
+
+<pre><span class="keyword">module</span> <a href="Utilities.S.html">S</a>: <code class="type">Generic_branch_and_cut_solver.Solver</code><code class="type"> </code></pre>
+<pre><span id="TYPEerror_log"><span class="keyword">type</span> <code class="type"></code>error_log</span> = <code class="type">Exception.method_handler</code> </pre>
+
+
+<pre><span id="VALerror_init"><span class="keyword">val</span> error_init</span> : <code class="type"><a href="Utilities.html#TYPEerror_log">error_log</a></code></pre><div class="info ">
+error_init is an empty log of errors<br>
+</div>
+
+<pre><span id="TYPEparameter"><span class="keyword">type</span> <code class="type"></code>parameter</span> = <code class="type">S.PH.B.PB.CI.Po.K.H.parameter</code> </pre>
+
+
+<pre><span id="TYPEkappa_handler"><span class="keyword">type</span> <code class="type"></code>kappa_handler</span> = <code class="type">S.PH.B.PB.CI.Po.K.H.handler</code> </pre>
+
+
+<pre><span id="TYPEprofiling_info"><span class="keyword">type</span> <code class="type"></code>profiling_info</span> = <code class="type">S.PH.B.PB.CI.Po.K.P.log_info</code> </pre>
+
+
+<pre><span id="VALfold_left_with_progress_bar"><span class="keyword">val</span> fold_left_with_progress_bar</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> string -> ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a</code></pre>
+<pre><span id="TYPEtrace"><span class="keyword">type</span> <code class="type"></code>trace</span> </pre>
+<div class="info ">
+traces<br>
+</div>
+
+
+<pre><span id="VALsize_of_pretrace"><span class="keyword">val</span> size_of_pretrace</span> : <code class="type"><a href="Utilities.html#TYPEtrace">trace</a> -> int</code></pre>
+<pre><span id="VALprint_trace"><span class="keyword">val</span> print_trace</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -> <a href="Utilities.html#TYPEtrace">trace</a> -> unit</code></pre>
+<pre><span id="VALhas_obs"><span class="keyword">val</span> has_obs</span> : <code class="type"><a href="Utilities.html#TYPEtrace">trace</a> -> bool</code></pre><div class="info ">
+check wether there is an observable in a trace<br>
+</div>
+
+<pre><span id="VALtrace_of_pretrace"><span class="keyword">val</span> trace_of_pretrace</span> : <code class="type">S.PH.B.PB.CI.Po.K.refined_step list -> <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
+convert a list of refined step into a trace<br>
+</div>
+
+<pre><span id="VALremove_events_after_last_obs"><span class="keyword">val</span> remove_events_after_last_obs</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       (<a href="Utilities.html#TYPEparameter">parameter</a> -> bool) -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
+remove the events after the last observable<br>
+</div>
+
+<pre><span id="VALsplit_init"><span class="keyword">val</span> split_init</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       (<a href="Utilities.html#TYPEparameter">parameter</a> -> bool) -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
+split_init split init event agent-wise<br>
+</div>
+
+<pre><span id="VALfill_siphon"><span class="keyword">val</span> fill_siphon</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       (<a href="Utilities.html#TYPEparameter">parameter</a> -> bool) -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
+fill_siphon adds spurious init event, to break causal dependences;
+    Currently, it inserts an init event when an agent return to its initial state;
+    other heuristics may be considered;
+    The output has to be  disanbiguated, otherwise it is useless (compression will remove the ficitious init events)
+    It should work in quasi linear time (I think)<br>
+</div>
+
+<pre><span id="VALcut"><span class="keyword">val</span> cut</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       (<a href="Utilities.html#TYPEparameter">parameter</a> -> bool) -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
+cut performs partial order reduction and remove orthogonal events<br>
+</div>
+
+<pre><span id="VALremove_pseudo_inverse_events"><span class="keyword">val</span> remove_pseudo_inverse_events</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       (<a href="Utilities.html#TYPEparameter">parameter</a> -> bool) -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
+remove_pseudo_inverse_events removes pseudo inverse events<br>
+</div>
+
+<pre><span id="VALcompress"><span class="keyword">val</span> compress</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEtrace">trace</a> list</code></pre><div class="info ">
+compress a trace with the level of abstraction defined in the argument parameter<br>
+</div>
+
+<pre><span id="VALset_compression_mode"><span class="keyword">val</span> set_compression_mode</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       Parameter.current_compression_mode -> <a href="Utilities.html#TYPEparameter">parameter</a></code></pre><div class="info ">
+change the default level of oabstraction for compression (when used with compress)<br>
+</div>
+
+<pre><span id="VALweakly_compress"><span class="keyword">val</span> weakly_compress</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEtrace">trace</a> list</code></pre>
+<pre><span id="VALstrongly_compress"><span class="keyword">val</span> strongly_compress</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEtrace">trace</a> list</code></pre>
+<pre><span id="TYPEstep_id"><span class="keyword">type</span> <code class="type"></code>step_id</span> = <code class="type">S.PH.B.PB.step_id</code> </pre>
+
+
+<pre><span id="TYPEobservable_hit"><span class="keyword">type</span> <code class="type"></code>observable_hit</span> </pre>
+
+
+<pre><span id="VALfold_over_the_causal_past_of_observables_with_progress_bar"><span class="keyword">val</span> fold_over_the_causal_past_of_observables_with_progress_bar</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       (int -> int list -> <a href="Utilities.html#TYPEerror_log">error_log</a> * 'a -> <a href="Utilities.html#TYPEerror_log">error_log</a> * 'a) -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -> 'a -> <a href="Utilities.html#TYPEerror_log">error_log</a> * 'a</code></pre>
+<pre><span id="VALget_event_list_from_observable_hit"><span class="keyword">val</span> get_event_list_from_observable_hit</span> : <code class="type"><a href="Utilities.html#TYPEobservable_hit">observable_hit</a> -> <a href="Utilities.html#TYPEstep_id">step_id</a> list</code></pre>
+<pre><span id="VALget_runtime_info_from_observable_hit"><span class="keyword">val</span> get_runtime_info_from_observable_hit</span> : <code class="type"><a href="Utilities.html#TYPEobservable_hit">observable_hit</a> -> unit Mods.simulation_info option</code></pre>
+<pre><span id="TYPEcflow_grid"><span class="keyword">type</span> <code class="type"></code>cflow_grid</span> = <code class="type">Causal.grid</code> </pre>
+
+
+<pre><span id="TYPEenriched_cflow_grid"><span class="keyword">type</span> <code class="type"></code>enriched_cflow_grid</span> = <code class="type">Causal.enriched_grid</code> </pre>
+
+
+<pre><span id="TYPEmusical_grid"><span class="keyword">type</span> <code class="type"></code>musical_grid</span> </pre>
+<div class="info ">
+Blackboard with debugging utilities<br>
+</div>
+
+
+<pre><span id="VALexport_musical_grid_to_xls"><span class="keyword">val</span> export_musical_grid_to_xls</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       string -> int -> int -> <a href="Utilities.html#TYPEmusical_grid">musical_grid</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a></code></pre><div class="info ">
+Show the current status of the branch and cut assumptions in a libreoffice macro file
+<p>
+Show the current status of the branch and cut assumptions in ASCII<br>
+</div>
+
+<pre><span id="VALprint_musical_grid"><span class="keyword">val</span> print_musical_grid</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -> <a href="Utilities.html#TYPEmusical_grid">musical_grid</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a></code></pre>
+<pre><span id="VALtranslate"><span class="keyword">val</span> translate</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEmusical_grid">musical_grid</a> -><br>       <a href="Utilities.html#TYPEstep_id">step_id</a> list -> <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
+replace event ids with their corresponding events as stores in the blackboard<br>
+</div>
+
+<pre><span id="VALconvert_trace_into_grid"><span class="keyword">val</span> convert_trace_into_grid</span> : <code class="type"><a href="Utilities.html#TYPEtrace">trace</a> -> <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -> <a href="Utilities.html#TYPEcflow_grid">cflow_grid</a></code></pre><div class="info ">
+causal flows<br>
+</div>
+
+<pre><span id="VALenrich_grid_with_transitive_past_of_observables_with_a_progression_bar"><span class="keyword">val</span> enrich_grid_with_transitive_past_of_observables_with_a_progression_bar</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> <a href="Utilities.html#TYPEcflow_grid">cflow_grid</a> -> <a href="Utilities.html#TYPEenriched_cflow_grid">enriched_cflow_grid</a></code></pre><div class="info ">
+compute transitive closure with different parameters (progress_bar, gc)<br>
+</div>
+
+<pre><span id="VALenrich_grid_with_transitive_past_of_observables_without_a_progress_bar"><span class="keyword">val</span> enrich_grid_with_transitive_past_of_observables_without_a_progress_bar</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> <a href="Utilities.html#TYPEcflow_grid">cflow_grid</a> -> <a href="Utilities.html#TYPEenriched_cflow_grid">enriched_cflow_grid</a></code></pre>
+<pre><span id="VALenrich_grid_with_transitive_past_of_each_node_without_a_progress_bar"><span class="keyword">val</span> enrich_grid_with_transitive_past_of_each_node_without_a_progress_bar</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> <a href="Utilities.html#TYPEcflow_grid">cflow_grid</a> -> <a href="Utilities.html#TYPEenriched_cflow_grid">enriched_cflow_grid</a></code></pre>
+<pre><span id="VALconvert_trace_into_musical_notation"><span class="keyword">val</span> convert_trace_into_musical_notation</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * <a href="Utilities.html#TYPEmusical_grid">musical_grid</a></code></pre><div class="info ">
+Musical processing<br>
+</div>
+
+<pre><span id="VALextract_observable_hits_from_musical_notation"><span class="keyword">val</span> extract_observable_hits_from_musical_notation</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEmusical_grid">musical_grid</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEobservable_hit">observable_hit</a> list</code></pre>
+<pre><span id="VALextract_observable_hit_from_musical_notation"><span class="keyword">val</span> extract_observable_hit_from_musical_notation</span> : <code class="type">string -><br>       <a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEmusical_grid">musical_grid</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEobservable_hit">observable_hit</a></code></pre>
+<pre><span id="VALcausal_prefix_of_an_observable_hit"><span class="keyword">val</span> causal_prefix_of_an_observable_hit</span> : <code class="type">string -><br>       <a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEmusical_grid">musical_grid</a> -><br>       <a href="Utilities.html#TYPEenriched_cflow_grid">enriched_cflow_grid</a> -><br>       <a href="Utilities.html#TYPEobservable_hit">observable_hit</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEtrace">trace</a></code></pre>
+<pre><span id="TYPEstory_table"><span class="keyword">type</span> <code class="type"></code>story_table</span> </pre>
+<div class="info ">
+Story table<br>
+</div>
+
+
+<pre><span id="VALfold_story_table_with_progress_bar"><span class="keyword">val</span> fold_story_table_with_progress_bar</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       string -><br>       (<a href="Utilities.html#TYPEparameter">parameter</a> -><br>        <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>        <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>        <a href="Utilities.html#TYPEtrace">trace</a> -><br>        <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> Mods.simulation_info list -><br>        'a -> <a href="Utilities.html#TYPEerror_log">error_log</a> * 'a) -><br>       <a href="Utilities.html#TYPEstory_table">story_table</a> -> 'a -> <a href="Utilities.html#TYPEerror_log">error_log</a> * 'a</code></pre>
+<pre><span id="VALfold_story_table_without_progress_bar"><span class="keyword">val</span> fold_story_table_without_progress_bar</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       string -><br>       (<a href="Utilities.html#TYPEparameter">parameter</a> -><br>        <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>        <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>        <a href="Utilities.html#TYPEtrace">trace</a> -><br>        <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> Mods.simulation_info list -><br>        'a -> <a href="Utilities.html#TYPEerror_log">error_log</a> * 'a) -><br>       <a href="Utilities.html#TYPEstory_table">story_table</a> -> 'a -> <a href="Utilities.html#TYPEerror_log">error_log</a> * 'a</code></pre>
+<pre><span id="VALflatten_story_table"><span class="keyword">val</span> flatten_story_table</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEstory_table">story_table</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEstory_table">story_table</a></code></pre><div class="info ">
+put together the stories having the same canonic form, this has do be done explicitely on the moment, I will improve this soon<br>
+</div>
+
+<pre><span id="VALcreate_story_table"><span class="keyword">val</span> create_story_table</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEstory_table">story_table</a></code></pre>
+<pre><span id="VALget_counter"><span class="keyword">val</span> get_counter</span> : <code class="type"><a href="Utilities.html#TYPEstory_table">story_table</a> -> int</code></pre>
+<pre><span id="VALcount_stories"><span class="keyword">val</span> count_stories</span> : <code class="type"><a href="Utilities.html#TYPEstory_table">story_table</a> -> int</code></pre><br>
+Store trace in story table<br>
+
+<pre><span id="VALstore_trace"><span class="keyword">val</span> store_trace</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> Mods.simulation_info list -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -><br>       <a href="Utilities.html#TYPEtrace">trace</a> -><br>       <a href="Utilities.html#TYPEstory_table">story_table</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEstory_table">story_table</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a></code></pre>
+<pre><span id="VALexport_story_table"><span class="keyword">val</span> export_story_table</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> -><br>       <a href="Utilities.html#TYPEstory_table">story_table</a> -><br>       <a href="Utilities.html#TYPEerror_log">error_log</a> *<br>       (Causal.grid * S.PH.B.PB.CI.Po.K.P.log_info Mods.simulation_info list) list</code></pre></body></html>
