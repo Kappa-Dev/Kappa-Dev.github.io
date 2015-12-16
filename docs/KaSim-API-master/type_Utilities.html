@@ -119,7 +119,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;step_id&nbsp;=&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.step_id<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;observable_hit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_over_the_causal_past_of_observables_with_progress_bar&nbsp;:<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_over_the_causal_past_of_observables_with_a_progress_bar&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_over_the_causal_past_of_observables_through_a_grid_with_a_progress_bar&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -149,7 +165,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.step_id&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;convert_trace_into_grid&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.cflow_grid<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;enrich_grid_with_transitive_past_of_observables_with_a_progression_bar&nbsp;:<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;enrich_grid_with_transitive_past_of_observables_with_a_progress_bar&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.cflow_grid&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;enrich_grid_with_transitive_past_of_observables_without_a_progress_bar&nbsp;:<br>
