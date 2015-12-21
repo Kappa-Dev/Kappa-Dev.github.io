@@ -38,7 +38,7 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;id_upto_alpha&nbsp;=&nbsp;<span class="constructor">Existing</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Fresh</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;id_upto_alpha&nbsp;=&nbsp;<span class="constructor">Existing</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Fresh</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Edges</span>.agent<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;port&nbsp;=&nbsp;<span class="constructor">Navigation</span>.id_upto_alpha&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;arrow&nbsp;=&nbsp;<span class="constructor">ToNode</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Navigation</span>.port&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ToNothing</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ToInternal</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;step&nbsp;=&nbsp;<span class="constructor">Navigation</span>.port&nbsp;*&nbsp;<span class="constructor">Navigation</span>.arrow<br>

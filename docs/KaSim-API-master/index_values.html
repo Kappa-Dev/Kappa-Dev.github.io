@@ -66,17 +66,17 @@ depend in time, depend in event number, depend in given var
 </td></tr>
 <tr><td><a href="Edges.html#VALadd_free">add_free</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">add_free agent site graph</code>
+<code class="code">add_free agent_id site graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Edges.html#VALadd_internal">add_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">add_internal agent site internal_state graph</code>
+<code class="code">add_internal agent_id site internal_state graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Edges.html#VALadd_link">add_link</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">add_link sort_ag1 ag1 s1 sort_ag2 ag2 s2 t</code>
+<code class="code">add_link ag1 s1 ag2 s2 t</code>
 </div>
 </td></tr>
 <tr><td><a href="Rule_interpreter.html#VALadd_tracked">add_tracked</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
@@ -104,7 +104,10 @@ Returns the graph obtained by applying the rule.
 </div>
 </td></tr>
 <tr><td><a href="Edges.html#VALare_connected">are_connected</a> [<a href="Edges.html">Edges</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<code class="code">are_connected ?candidate graph x_name x y</code>
+</div>
+</td></tr>
 <tr><td><a href="Signature.html#VALarity">arity</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
 <code class="code">arity sigs agent_id</code>
@@ -358,6 +361,8 @@ fill_siphon adds spurious init event, to break causal dependences;
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfind_option_with_logs">find_option_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
+<tr><td><a href="Connected_component.html#VALfind_root_type">find_root_type</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
 <tr><td><a href="Connected_component.html#VALfinish_new">finish_new</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALflatten_story_table">flatten_story_table</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -489,7 +494,7 @@ check wether there is an observable in a trace
 </td></tr>
 <tr><td><a href="Edges.html#VALis_agent">is_agent</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">is_free agent_type agent graph</code>
+<code class="code">is_agent agent graph</code>
 </div>
 </td></tr>
 <tr><td><a href="SetMap.Map.html#VALis_empty">is_empty</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -502,14 +507,14 @@ check wether there is an observable in a trace
 <td></td></tr>
 <tr><td><a href="Edges.html#VALis_free">is_free</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">is_free agent site graph</code>
+<code class="code">is_free agent_id site graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Nbr.html#VALis_greater">is_greater</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALis_internal">is_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">is_internal internal_state agent site graph</code>
+<code class="code">is_internal internal_state agent_id site graph</code>
 </div>
 </td></tr>
 <tr><td><a href="SetMap.Set.html#VALis_singleton">is_singleton</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
@@ -539,7 +544,7 @@ check wether there is an observable in a trace
 <tr><td align="left"><br>L</td></tr>
 <tr><td><a href="Edges.html#VALlink_exists">link_exists</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">link_exists ag1 site1 ag2 site2 graph</code>
+<code class="code">link_exists ag1_id site1 ag2_id site2 graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Pp.html#VALlist">list</a> [<a href="Pp.html">Pp</a>]</td>
@@ -684,6 +689,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <tr><td><a href="Connected_component.Matching.html#VALobservables_from_agent">observables_from_agent</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
 <td><div class="info">
 <code class="code">observables_from_free domain graph sort agent</code>
+    the int * int in the return list and the following ones
+    is a Instantiation.concrete
 </div>
 </td></tr>
 <tr><td><a href="Connected_component.Matching.html#VALobservables_from_free">observables_from_free</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
@@ -741,7 +748,10 @@ values of observables)
 <tr><td><a href="SetMap.Set.html#VALpartition_with_logs">partition_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALpathes_of_interrest">pathes_of_interrest</a> [<a href="Edges.html">Edges</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<code class="code">pathes_of_interrest is_interesting graph agent_name agent_id done_path</code>
+</div>
+</td></tr>
 <tr><td><a href="Kappa_printer.html#VALperturbation">perturbation</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALplain_array">plain_array</a> [<a href="Pp.html">Pp</a>]</td>

@@ -57,19 +57,21 @@
 <pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">Format.formatter -> <a href="Connected_component.Matching.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Connected_component.ContentAgent.html#TYPEt">Connected_component.ContentAgent.t</a> * int -><br>       <a href="Connected_component.Matching.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALreconstruct"><span class="keyword">val</span> reconstruct</span> : <code class="type"><a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Connected_component.Matching.html#TYPEt">t</a> -><br>       int -> <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -> int -> <a href="Connected_component.Matching.html#TYPEt">t</a> option</code></pre>
-<pre><span id="VALobservables_from_agent"><span class="keyword">val</span> observables_from_agent</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       int -> int -> (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * int) list * Operator.DepSet.t</code></pre><div class="info ">
-<code class="code">observables_from_free domain graph sort agent</code><br>
+<pre><span id="VALobservables_from_agent"><span class="keyword">val</span> observables_from_agent</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Edges.html#TYPEagent">Edges.agent</a> -><br>       (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * (int * int)) list * Operator.DepSet.t</code></pre><div class="info ">
+<code class="code">observables_from_free domain graph sort agent</code>
+    the int * int in the return list and the following ones
+    is a Instantiation.concrete<br>
 </div>
 
-<pre><span id="VALobservables_from_free"><span class="keyword">val</span> observables_from_free</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       int -> int -> int -> (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * int) list * Operator.DepSet.t</code></pre><div class="info ">
+<pre><span id="VALobservables_from_free"><span class="keyword">val</span> observables_from_free</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Edges.html#TYPEagent">Edges.agent</a> -><br>       int -> (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * (int * int)) list * Operator.DepSet.t</code></pre><div class="info ">
 <code class="code">observables_from_free domain graph sort agent site</code><br>
 </div>
 
-<pre><span id="VALobservables_from_internal"><span class="keyword">val</span> observables_from_internal</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       int -><br>       int -> int -> int -> (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * int) list * Operator.DepSet.t</code></pre><div class="info ">
+<pre><span id="VALobservables_from_internal"><span class="keyword">val</span> observables_from_internal</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Edges.html#TYPEagent">Edges.agent</a> -><br>       int -> int -> (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * (int * int)) list * Operator.DepSet.t</code></pre><div class="info ">
 <code class="code">observables_from_internal domain graph sort agent site internal_state</code><br>
 </div>
 
-<pre><span id="VALobservables_from_link"><span class="keyword">val</span> observables_from_link</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       int -><br>       int -><br>       int -><br>       int -> int -> int -> (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * int) list * Operator.DepSet.t</code></pre><div class="info ">
+<pre><span id="VALobservables_from_link"><span class="keyword">val</span> observables_from_link</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Edges.html#TYPEagent">Edges.agent</a> -><br>       int -><br>       <a href="Edges.html#TYPEagent">Edges.agent</a> -><br>       int -> (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * (int * int)) list * Operator.DepSet.t</code></pre><div class="info ">
 <code class="code">observables_from_link domain graph sort ag site sort' ag' site'</code><br>
 </div>
 </body></html>

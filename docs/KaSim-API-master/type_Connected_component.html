@@ -97,6 +97,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Connected_component</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Connected_component</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;find_root_type&nbsp;:&nbsp;<span class="constructor">Connected_component</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Matching</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t<br>
@@ -115,26 +116,29 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;observables_from_agent&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Connected_component</span>.cc&nbsp;*&nbsp;int)&nbsp;list&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.cc&nbsp;*&nbsp;(int&nbsp;*&nbsp;int))&nbsp;list&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;observables_from_free&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Connected_component</span>.cc&nbsp;*&nbsp;int)&nbsp;list&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.cc&nbsp;*&nbsp;(int&nbsp;*&nbsp;int))&nbsp;list&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;observables_from_internal&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Connected_component</span>.cc&nbsp;*&nbsp;int)&nbsp;list&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.cc&nbsp;*&nbsp;(int&nbsp;*&nbsp;int))&nbsp;list&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;observables_from_link&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Connected_component</span>.cc&nbsp;*&nbsp;int)&nbsp;list&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.cc&nbsp;*&nbsp;(int&nbsp;*&nbsp;int))&nbsp;list&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Set</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
