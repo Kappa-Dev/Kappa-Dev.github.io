@@ -43,10 +43,38 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;error_init&nbsp;:&nbsp;<span class="constructor">Utilities</span>.error_log<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;parameter&nbsp;=&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.<span class="constructor">H</span>.parameter<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;kappa_handler&nbsp;=&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.<span class="constructor">H</span>.handler<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;profiling_info&nbsp;=&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.<span class="constructor">P</span>.log_info<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;profiling_info&nbsp;=&nbsp;<span class="constructor">StoryProfiling</span>.<span class="constructor">StoryStats</span>.log_info<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;shall_we&nbsp;=&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;with_handlers&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?shall_we_compute:<span class="constructor">Utilities</span>.shall_we&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?shall_we_compute_profiling_information:<span class="constructor">Utilities</span>.shall_we&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;unary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>b)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.with_handlers<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c)&nbsp;binary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.with_handlers<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>d)&nbsp;ternary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>c&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>d)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.with_handlers<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>d,&nbsp;<span class="keywordsign">'</span>e)&nbsp;quaternary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>c&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>d&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>e)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.with_handlers<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>d,&nbsp;<span class="keywordsign">'</span>e,&nbsp;<span class="keywordsign">'</span>f)&nbsp;quinternary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>c&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>d&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>e&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>f)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.with_handlers<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_left_with_progress_bar&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.binary,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b&nbsp;list,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace_runtime_info&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;size_of_pretrace&nbsp;:&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_trace&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -54,76 +82,17 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;trace_of_pretrace&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.refined_step&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.trace<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;remove_events_after_last_obs&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;split_init&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fill_siphon&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cut&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;split_init&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fill_siphon&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cut&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;remove_pseudo_inverse_events&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;make_unambiguous&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compress&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_compression_mode&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Parameter</span>.current_compression_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;make_unambiguous&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;weakly_compress&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;strongly_compress&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;story_table<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_story_table&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -132,119 +101,62 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_counter&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;count_stories&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_trace&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info,&nbsp;<span class="constructor">Utilities</span>.story_table,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.story_table)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_over_the_causal_past_of_observables_with_a_progress_bar&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.shall_we,&nbsp;<span class="constructor">Utilities</span>.shall_we,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary,&nbsp;<span class="constructor">Utilities</span>.trace,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quinternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_story_table_with_progress_bar&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(string,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary,&nbsp;<span class="constructor">Utilities</span>.story_table,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_story_table_without_progress_bar&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(string,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary,&nbsp;<span class="constructor">Utilities</span>.story_table,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flatten_story_table&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.story_table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.story_table,&nbsp;<span class="constructor">Utilities</span>.story_table)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export_story_table&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.story_table,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Causal</span>.grid&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info)&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compress&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_compression_mode&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Causal</span>.grid&nbsp;*&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.<span class="constructor">P</span>.log_info&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;list)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Parameter</span>.current_compression_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.parameter<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy_log_info&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">StoryProfiling</span>.<span class="constructor">StoryStats</span>.log_info&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">StoryProfiling</span>.<span class="constructor">StoryStats</span>.log_info<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cflow_grid&nbsp;=&nbsp;<span class="constructor">Causal</span>.grid<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;enriched_cflow_grid&nbsp;=&nbsp;<span class="constructor">Causal</span>.enriched_grid<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;convert_trace_into_grid&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.cflow_grid<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;enrich_grid_with_transitive_past_of_observables_with_a_progress_bar&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.cflow_grid&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.cflow_grid,&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;enrich_grid_with_transitive_past_of_observables_without_a_progress_bar&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.cflow_grid&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.cflow_grid,&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;enrich_grid_with_transitive_past_of_each_node_without_a_progress_bar&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.cflow_grid&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.cflow_grid,&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;musical_grid<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;observable_hit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_runtime_info_from_observable_hit&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.observable_hit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;convert_trace_into_musical_notation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="constructor">Utilities</span>.musical_grid<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.musical_grid)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extract_observable_hits_from_musical_notation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.musical_grid&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.observable_hit&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.musical_grid,&nbsp;<span class="constructor">Utilities</span>.observable_hit&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extract_observable_hit_from_musical_notation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.musical_grid&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.observable_hit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;<span class="constructor">Utilities</span>.musical_grid,&nbsp;<span class="constructor">Utilities</span>.observable_hit)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;causal_prefix_of_an_observable_hit&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.musical_grid&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.observable_hit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;<span class="constructor">Utilities</span>.musical_grid,&nbsp;<span class="constructor">Utilities</span>.enriched_cflow_grid,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.observable_hit,&nbsp;<span class="constructor">Utilities</span>.trace)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export_musical_grid_to_xls&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.musical_grid&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_musical_grid&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.musical_grid&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;int,&nbsp;int,&nbsp;<span class="constructor">Utilities</span>.musical_grid,&nbsp;unit)&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_musical_grid&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.musical_grid,&nbsp;unit)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 <span class="keyword">end</span></code></body></html>
