@@ -206,7 +206,10 @@ Musical processing
 <tr><td><a href="LKappa.html#VALcopy_rule_agent">copy_rule_agent</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALcount_stories">count_stories</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td></td></tr>
+<td><div class="info">
+Give the number of stories (up to isomorphism classes) stored in a table
+</div>
+</td></tr>
 <tr><td><a href="Plot.html#VALcreate">create</a> [<a href="Plot.html">Plot</a>]</td>
 <td><div class="info">
 <code class="code">create filename</code>
@@ -222,7 +225,10 @@ Musical processing
 <tr><td><a href="NamedDecls.html#VALcreate">create</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALcreate_story_table">create_story_table</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td></td></tr>
+<td><div class="info">
+Initialization
+</div>
+</td></tr>
 <tr><td><a href="Counter.html#VALcurrent_event">current_event</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALcurrent_time">current_time</a> [<a href="Counter.html">Counter</a>]</td>
@@ -330,7 +336,10 @@ Show the current status of the branch and cut assumptions in a libreoffice macro
 </div>
 </td></tr>
 <tr><td><a href="Utilities.html#VALexport_story_table">export_story_table</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td></td></tr>
+<td><div class="info">
+convert a table into a list of grid (with runtime information)
+</div>
+</td></tr>
 <tr><td><a href="Rule_interpreter.html#VALextra_outdated_var">extra_outdated_var</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALextract_observable_hit_from_musical_notation">extract_observable_hit_from_musical_notation</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -389,7 +398,12 @@ put together the stories having the same canonic form, this has do be done expli
 <tr><td><a href="Utilities.html#VALfold_left_with_progress_bar">fold_left_with_progress_bar</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALfold_over_the_causal_past_of_observables_with_a_progress_bar">fold_over_the_causal_past_of_observables_with_a_progress_bar</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td></td></tr>
+<td><div class="info">
+fold over the causal past of each observable in a given trace, 
+    the first argument indicates whether we display the current steps on the err output;
+    the second arfument indicated whether the function is launched in debug mode or not
+</div>
+</td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold_restriction_with_logs">fold_restriction_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold_restriction_with_missing_associations_with_logs">fold_restriction_with_missing_associations_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -397,9 +411,17 @@ put together the stories having the same canonic form, this has do be done expli
 <tr><td><a href="Environment.html#VALfold_rules">fold_rules</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALfold_story_table_with_progress_bar">fold_story_table_with_progress_bar</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td></td></tr>
+<td><div class="info">
+Apply a function on each trace (and each list of runtime information associated to this trace), 
+the string contains the message to display in case of faillure of one call of the ternary function
+</div>
+</td></tr>
 <tr><td><a href="Utilities.html#VALfold_story_table_without_progress_bar">fold_story_table_without_progress_bar</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td></td></tr>
+<td><div class="info">
+Apply a function on each trace (and each list of runtime information associated to this trace), 
+the string contains the message to display in case of faillure of one call of the ternary function
+</div>
+</td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold_with_interruption">fold_with_interruption</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfor_all">for_all</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -993,7 +1015,12 @@ Store trace in story table
 </div>
 </td></tr>
 <tr><td><a href="Utilities.html#VALstrongly_compress">strongly_compress</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td></td></tr>
+<td><div class="info">
+compute the strong compression of a given trace, 
+    if parameter.compute_all_stories, then each minimal stories is computed, 
+    otherwise, only the first found one is provided
+</div>
+</td></tr>
 <tr><td><a href="Nbr.html#VALsub">sub</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALsubset">subset</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
@@ -1087,7 +1114,12 @@ Resynchronize the state after a rule application.
 <td></td></tr>
 <tr><td align="left"><br>W</td></tr>
 <tr><td><a href="Utilities.html#VALweakly_compress">weakly_compress</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td></td></tr>
+<td><div class="info">
+compute the weak compression of a given trace, 
+    if parameter.compute_all_stories, then each minimal stories is computed, 
+    otherwise, only the first found one is provided
+</div>
+</td></tr>
 <tr><td align="left"><br>Z</td></tr>
 <tr><td><a href="Nbr.html#VALzero">zero</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>

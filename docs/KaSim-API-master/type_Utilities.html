@@ -76,8 +76,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.binary,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b&nbsp;list,&nbsp;<span class="keywordsign">'</span>a)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace_runtime_info&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace_runtime_info&nbsp;=&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;size_of_pretrace&nbsp;:&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_trace&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -96,34 +95,33 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;strongly_compress&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;story_table<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_story_table&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="constructor">Utilities</span>.zeroary<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_counter&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;count_stories&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_trace&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info,&nbsp;<span class="constructor">Utilities</span>.story_table,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.story_table)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_over_the_causal_past_of_observables_with_a_progress_bar&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.shall_we,&nbsp;<span class="constructor">Utilities</span>.shall_we,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info&nbsp;list,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary,&nbsp;<span class="constructor">Utilities</span>.trace,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quinternary<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;story_table<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_story_table&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="constructor">Utilities</span>.zeroary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;count_stories&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_trace&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info&nbsp;list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.story_table,&nbsp;<span class="constructor">Utilities</span>.story_table)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_story_table_with_progress_bar&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info&nbsp;list,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary,&nbsp;<span class="constructor">Utilities</span>.story_table,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_story_table_without_progress_bar&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info&nbsp;list,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary,&nbsp;<span class="constructor">Utilities</span>.story_table,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flatten_story_table&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.story_table,&nbsp;<span class="constructor">Utilities</span>.story_table)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export_story_table&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.story_table,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Causal</span>.grid&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info)&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Causal</span>.grid&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info&nbsp;list)&nbsp;list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compress&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_compression_mode&nbsp;:<br>
@@ -159,4 +157,5 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export_musical_grid_to_xls&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;int,&nbsp;int,&nbsp;<span class="constructor">Utilities</span>.musical_grid,&nbsp;unit)&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_musical_grid&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.musical_grid,&nbsp;unit)&nbsp;<span class="constructor">Utilities</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_counter&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 <span class="keyword">end</span></code></body></html>
