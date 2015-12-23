@@ -51,6 +51,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?shall_we_compute_profiling_information:<span class="constructor">Utilities</span>.shall_we&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;zeroary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.with_handlers<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;unary&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.with_handlers<br>
@@ -94,10 +97,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;strongly_compress&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;story_table<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_story_table&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.story_table<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_story_table&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="constructor">Utilities</span>.zeroary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_counter&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;count_stories&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_trace&nbsp;:<br>
