@@ -73,8 +73,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>c&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>d&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>e&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.error_log&nbsp;*&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;*&nbsp;<span class="keywordsign">'</span>f)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.with_handlers<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_left_with_progress_bar&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.binary,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b&nbsp;list,&nbsp;<span class="keywordsign">'</span>a)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?event:<span class="constructor">StoryProfiling</span>.step_kind&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;((<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.binary,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b&nbsp;list,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.ternary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace_runtime_info&nbsp;=&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;size_of_pretrace&nbsp;:&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
