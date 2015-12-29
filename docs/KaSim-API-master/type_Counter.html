@@ -40,6 +40,7 @@
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Counter</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;reinitialize&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;tick&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_plot_points&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;list&nbsp;*&nbsp;<span class="constructor">Counter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;complete_progress_bar&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
