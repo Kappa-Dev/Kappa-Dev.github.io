@@ -157,7 +157,7 @@ compute the strong compression of a given trace,
     otherwise, only the first found one is provided<br>
 </div>
 
-<pre><span id="VALfold_over_the_causal_past_of_observables_with_a_progress_bar"><span class="keyword">val</span> fold_over_the_causal_past_of_observables_with_a_progress_bar</span> : <code class="type">(<a href="Utilities.html#TYPEshall_we">shall_we</a>, <a href="Utilities.html#TYPEshall_we">shall_we</a>,<br>        (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, 'a, 'a)<br>        <a href="Utilities.html#TYPEternary">ternary</a>, <a href="Utilities.html#TYPEtrace">trace</a>, 'a, 'a)<br>       <a href="Utilities.html#TYPEquinternary">quinternary</a></code></pre><div class="info ">
+<pre><span id="VALfold_over_the_causal_past_of_observables_with_a_progress_bar"><span class="keyword">val</span> fold_over_the_causal_past_of_observables_with_a_progress_bar</span> : <code class="type">(<a href="Utilities.html#TYPEshall_we">shall_we</a>, <a href="Utilities.html#TYPEshall_we">shall_we</a>,<br>        (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, 'a, ('a, 'b) Stop.stop)<br>        <a href="Utilities.html#TYPEternary">ternary</a>, <a href="Utilities.html#TYPEtrace">trace</a>, 'a, ('a, 'b) Stop.stop)<br>       <a href="Utilities.html#TYPEquinternary">quinternary</a></code></pre><div class="info ">
 fold over the causal past of each observable in a given trace, 
     the first argument indicates whether we display the current steps on the err output;
     the second arfument indicated whether the function is launched in debug mode or not<br>
