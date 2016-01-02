@@ -94,6 +94,9 @@ enriched types for functions:<br>
 <pre><span id="TYPEquinternary"><span class="keyword">type</span> <code class="type">('a, 'b, 'c, 'd, 'e, 'f)</code> quinternary</span> = <code class="type">('a -><br>        'b -> 'c -> 'd -> 'e -> <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * 'f)<br>       <a href="Utilities.html#TYPEwith_handlers">with_handlers</a></code> </pre>
 
 
+<pre><span id="TYPEsexternary"><span class="keyword">type</span> <code class="type">('a, 'b, 'c, 'd, 'e, 'f, 'g)</code> sexternary</span> = <code class="type">('a -><br>        'b -><br>        'c -> 'd -> 'e -> 'f -> <a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * 'g)<br>       <a href="Utilities.html#TYPEwith_handlers">with_handlers</a></code> </pre>
+
+
 <pre><span id="VALfold_left_with_progress_bar"><span class="keyword">val</span> fold_left_with_progress_bar</span> : <code class="type">?event:StoryProfiling.step_kind -><br>       (('a, 'b, 'a) <a href="Utilities.html#TYPEbinary">binary</a>, 'a, 'b list, 'a) <a href="Utilities.html#TYPEternary">ternary</a></code></pre>
 <pre><span id="TYPEtrace"><span class="keyword">type</span> <code class="type"></code>trace</span> </pre>
 <div class="info ">
@@ -141,6 +144,10 @@ cut performs partial order reduction and remove orthogonal events<br>
 remove_pseudo_inverse_events removes pseudo inverse events<br>
 </div>
 
+<pre><span id="VALremove_obs_before"><span class="keyword">val</span> remove_obs_before</span> : <code class="type">(<a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list option, <a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a>)<br>       <a href="Utilities.html#TYPEbinary">binary</a></code></pre><div class="info ">
+remove_obs_before removes the observable_hits before the simulation info prodided as a first argument<br>
+</div>
+
 <pre><span id="VALmake_unambiguous"><span class="keyword">val</span> make_unambiguous</span> : <code class="type">(<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a>) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
 reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)<br>
 </div>
@@ -157,7 +164,7 @@ compute the strong compression of a given trace,
     otherwise, only the first found one is provided<br>
 </div>
 
-<pre><span id="VALfold_over_the_causal_past_of_observables_with_a_progress_bar"><span class="keyword">val</span> fold_over_the_causal_past_of_observables_with_a_progress_bar</span> : <code class="type">(<a href="Utilities.html#TYPEshall_we">shall_we</a>, <a href="Utilities.html#TYPEshall_we">shall_we</a>,<br>        (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, 'a, ('a, 'b) Stop.stop)<br>        <a href="Utilities.html#TYPEternary">ternary</a>, <a href="Utilities.html#TYPEtrace">trace</a>, 'a, ('a, 'b) Stop.stop)<br>       <a href="Utilities.html#TYPEquinternary">quinternary</a></code></pre><div class="info ">
+<pre><span id="VALfold_over_the_causal_past_of_observables_with_a_progress_bar"><span class="keyword">val</span> fold_over_the_causal_past_of_observables_with_a_progress_bar</span> : <code class="type">(<a href="Utilities.html#TYPEshall_we">shall_we</a>, <a href="Utilities.html#TYPEshall_we">shall_we</a>, int,<br>        (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, 'a, ('a, 'b) Stop.stop)<br>        <a href="Utilities.html#TYPEternary">ternary</a>, <a href="Utilities.html#TYPEtrace">trace</a>, 'a, ('a, 'b * int) Stop.stop)<br>       <a href="Utilities.html#TYPEsexternary">sexternary</a></code></pre><div class="info ">
 fold over the causal past of each observable in a given trace, 
     the first argument indicates whether we display the current steps on the err output;
     the second arfument indicated whether the function is launched in debug mode or not<br>
