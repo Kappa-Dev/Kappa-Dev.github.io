@@ -4791,8 +4791,8 @@ class="ectt-1095"> </span><span
 class="ectt-1095">do</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">$SNAPSHOT</span></span> in which case the default preﬁx <span 
-class="ectt-1095">snap </span>will be
-used for naming snapshots. If the name already exists a counter will be appended at the end of
+class="ectt-1095">snap.ka </span>will
+be used for naming snapshots. If the name already exists a counter will be appended at the end of
 the ﬁle to prevent overwriting. Snapshots can be performed multiple times, for instance every
 1000 events, using the declaration<a 
  id="dx1-37004"></a>: <!--l. 836-->
@@ -4820,6 +4820,8 @@ class="ectt-1095">$SNAPSHOT</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">&#x0022;</span><span 
 class="ectt-1095">abc</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">ka</span><span 
 class="ectt-1095">&#x0022;</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">until</span><span 
@@ -4831,15 +4833,33 @@ class="ectt-1095">]</span>
 <!--l. 839--><p class="noindent" >which results in <span 
 class="ecss-1095">KaSim</span> producing a snapshot every 1000 (productive) events until the simulation
 ends. The perturbation <span 
-class="ectt-1095">$STOP &#x0022;final_state&#x0022; </span>will terminate the simulation whenever
-its precondition is satisﬁed and produce a snapshot of the last mixture<a 
- id="dx1-37006"></a>. Note that
-instead of producing kappa ﬁles, one may use snapshot perturbations to produce an
-image of the mixture<a 
- id="dx1-37007"></a> in the dot format using the parameter <span 
-class="ectt-1095">&#x0022;dotSnapshots&#x0022; </span>(see
-Section <a 
-href="#x1-490006.5">6.5<!--tex4ht:ref: sec:param --></a>).
+class="ectt-1095">$STOP &#x0022;final_state.ka&#x0022; </span>will terminate the simulation whenever its
+precondition is satisﬁed and produce a snapshot of the last mixture<a 
+ id="dx1-37006"></a>. Note that instead of
+producing kappa ﬁles, one may use snapshot perturbations to produce an image of the mixture<a 
+ id="dx1-37007"></a> in
+the dot/html format using the parameter by specifying the extention in the name skeleton
+(<span class="lstinline"><span 
+class="ectt-1095">%mod:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[</span><span 
+class="ectt-1095">E-</span><span 
+class="ectt-1095">]/([</span><span 
+class="ectt-1095">E</span><span 
+class="ectt-1095">]+[</span><span 
+class="ectt-1095">E-</span><span 
+class="ectt-1095">])</span><span 
+class="ectt-1095">&#x003E;0</span><span 
+class="ectt-1095">.9</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">do</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">$SNAPSHOT</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">‘‘</span><span 
+class="ectt-1095">snap</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">dot</span></span>).
 <!--l. 841--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">6.1.3   </span> <a 
  id="x1-380006.1.3"></a>Changing the value of a token</h4>
@@ -5948,81 +5968,73 @@ class="ecrm-1000">separation character for plots                </span></td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-10-13-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-13-1"  
 class="td11"> <span 
-class="ectt-1095">&#x0022;dotSnapshots&#x0022;        </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-13-2"  
+class="ectt-1095">&#x0022;colorDot&#x0022;            </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-13-2"  
 class="td11"> <span 
 class="ectt-1095">&#x0022;no&#x0022;, &#x0022;yes&#x0022;              </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-13-3"  
 class="td11"> <span 
-class="ecrm-1000">generate dot snapshots                        </span></td>
+class="ecrm-1000">use colors in dot format ﬁles                 </span></td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-10-14-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-14-1"  
 class="td11"> <span 
-class="ectt-1095">&#x0022;colorDot&#x0022;            </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-14-2"  
+class="ectt-1095">&#x0022;progressBarSymbol&#x0022;   </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-14-2"  
 class="td11"> <span 
-class="ectt-1095">&#x0022;no&#x0022;, &#x0022;yes&#x0022;              </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-14-3"  
-class="td11"> <span 
-class="ecrm-1000">use colors in dot format ﬁles                 </span></td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-10-15-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-15-1"  
-class="td11"> <span 
-class="ectt-1095">&#x0022;progressBarSymbol&#x0022;   </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-15-2"  
-class="td11"> <span 
-class="ectt-1095">&#x0022;#&#x0022; </span>or any character            </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-15-3"  
+class="ectt-1095">&#x0022;#&#x0022; </span>or any character            </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-14-3"  
 class="td11"> <span 
 class="ecrm-1000">symbol for the progress bar                  </span></td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-16-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-16-1"  
+ style="vertical-align:baseline;" id="TBL-10-15-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-15-1"  
 class="td11"> <span 
-class="ectt-1095">&#x0022;progressBarSize&#x0022;     </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-16-2"  
+class="ectt-1095">&#x0022;progressBarSize&#x0022;     </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-15-2"  
 class="td11"> <span 
-class="ectt-1095">&#x0022;60&#x0022; </span>or any integer              </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-16-3"  
+class="ectt-1095">&#x0022;60&#x0022; </span>or any integer              </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-15-3"  
 class="td11"> <span 
 class="ecrm-1000">length of the progress bar                     </span></td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-17-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-17-1"  
-class="td11">                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-17-2"  
-class="td11">                          </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-17-3"  
+ style="vertical-align:baseline;" id="TBL-10-16-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-16-1"  
+class="td11">                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-16-2"  
+class="td11">                          </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-16-3"  
 class="td11">                                 </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-10-17-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-17-1"  
+class="td11"> <span 
+class="ecti-1095">Simulation options         </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-17-2"  
+class="td11">                          </td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-10-18-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-18-1"  
 class="td11"> <span 
-class="ecti-1095">Simulation options         </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-18-2"  
-class="td11">                          </td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-10-19-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-19-1"  
+class="ectt-1095">&#x0022;dumpIfDeadlocked&#x0022;    </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-18-2"  
 class="td11"> <span 
-class="ectt-1095">&#x0022;dumpIfDeadlocked&#x0022;    </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-19-2"  
-class="td11"> <span 
-class="ectt-1095">&#x0022;no&#x0022;,&#x0022;yes&#x0022;               </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-19-3"  
+class="ectt-1095">&#x0022;no&#x0022;,&#x0022;yes&#x0022;               </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-18-3"  
 class="td11"> <span 
 class="ecrm-1000">Snapshot when simulation                    </span></td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-20-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-20-1"  
-class="td11">                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-20-2"  
-class="td11">                          </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-20-3"  
+ style="vertical-align:baseline;" id="TBL-10-19-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-19-1"  
+class="td11">                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-19-2"  
+class="td11">                          </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-19-3"  
 class="td11"> <span 
 class="ecrm-1000">is stalled                                           </span></td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-21-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-21-1"  
+ style="vertical-align:baseline;" id="TBL-10-20-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-20-1"  
 class="td11"> <span 
-class="ectt-1095">&#x0022;maxConsecutiveClash&#x0022; </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-21-2"  
+class="ectt-1095">&#x0022;maxConsecutiveClash&#x0022; </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-20-2"  
 class="td11"> <span 
-class="ectt-1095">&#x0022;2&#x0022; </span>or any integer               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-21-3"  
+class="ectt-1095">&#x0022;2&#x0022; </span>or any integer               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-20-3"  
 class="td11"> <span 
 class="ecrm-1000">number of consecutive clashes               </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-10-21-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-21-1"  
+class="td11">                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-21-2"  
+class="td11">                          </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-21-3"  
+class="td11"> <span 
+class="ecrm-1000">before giving up                                 </span></td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-10-22-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-22-1"  
 class="td11">                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-22-2"  
 class="td11">                          </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-22-3"  
 class="td11"> <span 
-class="ecrm-1000">before giving up                                 </span></td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-10-23-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-23-1"  
-class="td11">                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-23-2"  
-class="td11">                          </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-23-3"  
-class="td11"> <span 
 class="ecrm-1000">square approximation                          </span></td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-24-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-24-1"  
+ style="vertical-align:baseline;" id="TBL-10-23-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-23-1"  
 class="td11">                       </td></tr></table></div>
                                                                                   
 
@@ -6032,7 +6044,7 @@ class="td11">                       </td></tr></table></div>
                                                                                   
 
                                                                                   
-<!--l. 988--><p class="noindent" >
+<!--l. 987--><p class="noindent" >
                                                                                   
 
                                                                                   
@@ -6041,40 +6053,40 @@ class="td11">                       </td></tr></table></div>
 class="ecss-1095">KaSa</span> static analyser</h2>
 <h3 class="sectionHead"><span class="titlemark">7.1   </span> <a 
  id="x1-510007.1"></a>General usage</h3>
-<!--l. 992--><p class="noindent" >From a terminal window, <span 
+<!--l. 991--><p class="noindent" >From a terminal window, <span 
 class="ecss-1095">KaSa</span> can be invoked by typing
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ectt-1095">KaSa file_1 ... file_n [option]</span></li></ul>
-<!--l. 996--><p class="noindent" >where <span 
+<!--l. 995--><p class="noindent" >where <span 
 class="ectt-1095">file_i </span>are the input Kappa ﬁles containing the rules, initial conditions and observables
 (see Chapter <a 
 href="#x1-180004">4<!--tex4ht:ref: chap:kappa --></a>).
-<!--l. 998--><p class="noindent" >All the options are summarised as follows:
+<!--l. 997--><p class="noindent" >All the options are summarised as follows:
                                                                                   
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
 </div>
 <!--l. 2--><p class="nopar" >
-<!--l. 1001--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
+<!--l. 1000--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
-<!--l. 1004--><p class="noindent" >More options are available in the OCaml ﬁle <span 
+<!--l. 1003--><p class="noindent" >More options are available in the OCaml ﬁle <span 
 class="ectt-1095">KaSa_rep/config/config.ml </span>and can be tuned
 before compilation.
-<!--l. 1006--><p class="noindent" >
+<!--l. 1005--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">7.2   </span> <a 
  id="x1-520007.2"></a>Graphical interface</h3>
-<!--l. 1008--><p class="noindent" >
+<!--l. 1007--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
  id="x1-530007.2.1"></a>Launching the interface</h4>
-<!--l. 1010--><p class="noindent" >The graphical interface can be launched by typing
+<!--l. 1009--><p class="noindent" >The graphical interface can be launched by typing
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ectt-1095">KaSa</span></li></ul>
-<!--l. 1013--><p class="noindent" >without any option.
-<!--l. 1015--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1012--><p class="noindent" >without any option.
+<!--l. 1014--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -6085,7 +6097,7 @@ class="ectt-1095">KaSa</span></li></ul>
 
                                                                                   
 
-<!--l. 1017--><p class="noindent" ><img 
+<!--l. 1016--><p class="noindent" ><img 
 src="img/kasa_0.png" alt="PIC"  
 width="341.43306pt" height="215.99379pt" >
 <br /> <div class="caption" 
@@ -6095,10 +6107,10 @@ class="ecss-1095">KaSa</span>  graphical interface - main onglet</span></div><!
                                                                                   
 
                                                                                   
-<!--l. 1020--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1019--><p class="noindent" ></div><hr class="endfigure">
 <h4 class="subsectionHead"><span class="titlemark">7.2.2   </span> <a 
  id="x1-540007.2.2"></a>The areas of interests</h4>
-<!--l. 1024--><p class="noindent" >There are ﬁve diﬀerent areas of importance in the graphical interface:
+<!--l. 1023--><p class="noindent" >There are ﬁve diﬀerent areas of importance in the graphical interface:
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x1-54002x1">On the top left of the window, a button allows for the selection between the Normal
@@ -6117,11 +6129,11 @@ class="ectt-1095">4_debugging_information</span>.
      </li>
      <li 
   class="enumerate" id="x1-54006x3">Center: The options of the selected onglet are displayed and can be tuned.
-     <!--l. 1031--><p class="noindent" >Contextual help is provided when the mouse is hovered over an element.
-     <!--l. 1033--><p class="noindent" >The interface will store the options that are checked or ﬁlled and the order in which
+     <!--l. 1030--><p class="noindent" >Contextual help is provided when the mouse is hovered over an element.
+     <!--l. 1032--><p class="noindent" >The interface will store the options that are checked or ﬁlled and the order in which
      they have been selected. When launched, the analysis interprets these options in the
      order they have been entered.
-     <!--l. 1036--><p class="noindent" >Some options appear in several onglets. They denote the same option and share the
+     <!--l. 1035--><p class="noindent" >Some options appear in several onglets. They denote the same option and share the
      same value.
      </li>
      <li 
@@ -6143,17 +6155,17 @@ class="ectt-1095">Launch</span>
      <span 
 class="ectt-1095">analyze</span>&#x2019; launch <span 
 class="ecss-1095">KaSa</span> with the current options.
-     <!--l. 1041--><p class="noindent" >Importantly, options are saved automatically under various occasions. Thus, it is
+     <!--l. 1040--><p class="noindent" >Importantly, options are saved automatically under various occasions. Thus, it is
      possible to restore the value of the options before the last reset, before the last quit,
      or before the last analysis.</li></ol>
                                                                                   
 
                                                                                   
-<!--l. 1045--><p class="noindent" >
+<!--l. 1044--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">7.2.3   </span> <a 
  id="x1-550007.2.3"></a>The onglet <span 
 class="ectt-1095">0_Actions</span></h4>
-<!--l. 1047--><p class="noindent" >The onglet <span 
+<!--l. 1046--><p class="noindent" >The onglet <span 
 class="ectt-1095">0_Actions </span>(see Fig. <a 
 href="#x1-530011">7.1<!--tex4ht:ref: fig:kasa:0 --></a>) contains the main actions which can be performed.
      <ul class="itemize1">
@@ -6170,11 +6182,11 @@ class="ectt-1095">–compute-contact-map </span>can be used to activate the comp
      <li class="itemize">The option <span 
 class="ectt-1095">–compute-influence-map </span>can be used to activate the computation of the
      inﬂuence map.</li></ul>
-<!--l. 1056--><p class="noindent" >
+<!--l. 1055--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">7.2.4   </span> <a 
  id="x1-560007.2.4"></a>The onglet <span 
 class="ectt-1095">1_Output</span></h4>
-<!--l. 1058--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1057--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -6185,7 +6197,7 @@ class="ectt-1095">1_Output</span></h4>
 
                                                                                   
 
-<!--l. 1060--><p class="noindent" ><img 
+<!--l. 1059--><p class="noindent" ><img 
 src="img/kasa_1.png" alt="PIC"  
 width="341.43306pt" height="215.99379pt" >
 <br /> <div class="caption" 
@@ -6195,8 +6207,8 @@ class="ecss-1095">KaSa</span>  graphical interface - main onglet</span></div><!
                                                                                   
 
                                                                                   
-<!--l. 1063--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1066--><p class="noindent" >The onglet <span 
+<!--l. 1062--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1065--><p class="noindent" >The onglet <span 
 class="ectt-1095">1_Ouput </span>(see Fig. <a 
 href="#x1-560012">7.2<!--tex4ht:ref: fig:kasa:1 --></a>) contains the names of the output ﬁles.
      <ul class="itemize1">
@@ -6210,17 +6222,17 @@ class="ectt-1095">–output-contact-map </span>contains the name of the ﬁle fo
      </li>
      <li class="itemize">The ﬁeld <span 
 class="ectt-1095">–output-influence-map </span>contains the name of the ﬁle for the inﬂuence map.</li></ul>
-<!--l. 1074--><p class="noindent" >When a ﬁle already exists, it is overwritten without any warning.
+<!--l. 1073--><p class="noindent" >When a ﬁle already exists, it is overwritten without any warning.
 <h3 class="sectionHead"><span class="titlemark">7.3   </span> <a 
  id="x1-570007.3"></a>Contact map</h3>
-<!--l. 1078--><p class="noindent" >The contact map of a model is an object that may help modelers checking the consistency of the
+<!--l. 1077--><p class="noindent" >The contact map of a model is an object that may help modelers checking the consistency of the
 rule set they use. The contact map is <span 
 class="ecti-1095">statically </span>computed and does not depend on kinetic rates
 nor initial conditions.
-<!--l. 1081--><p class="noindent" >Typing the following instruction:
-<!--l. 1083--><p class="noindent" ><span 
+<!--l. 1080--><p class="noindent" >Typing the following instruction:
+<!--l. 1082--><p class="noindent" ><span 
 class="ectt-1095">KaSa abc.ka –reset-all –compute-contact-map</span>
-<!--l. 1085--><p class="noindent" >will produce a dot format ﬁle named <span 
+<!--l. 1084--><p class="noindent" >will produce a dot format ﬁle named <span 
 class="ectt-1095">contact.dot</span>. The name of the output ﬁle and the directory
 can be changed to the command line options <span 
 class="ectt-1095">–output-contact-map </span>and <span 
@@ -6230,7 +6242,7 @@ to the computation of the contact map can be accessed on the onglet <span
 class="ectt-1095">2_Reachability_analysis</span>
 of the graphical interface (see Fig. <a 
 href="#x1-570013">7.3<!--tex4ht:ref: fig:kasa:2 --></a>).
-<!--l. 1090--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1089--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -6241,7 +6253,7 @@ href="#x1-570013">7.3<!--tex4ht:ref: fig:kasa:2 --></a>).
 
                                                                                   
 
-<!--l. 1092--><p class="noindent" ><img 
+<!--l. 1091--><p class="noindent" ><img 
 src="img/kasa_2.png" alt="PIC"  
 width="341.43306pt" height="215.99379pt" >
 <br /> <div class="caption" 
@@ -6252,64 +6264,64 @@ class="ectt-1095">2_Reachability_analysis</span></span></div><!--tex4ht:label?: 
                                                                                   
 
                                                                                   
-<!--l. 1095--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1098--><p class="noindent" >The contact map summarises the diﬀerent types of agent, their interface and the potential
+<!--l. 1094--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1097--><p class="noindent" >The contact map summarises the diﬀerent types of agent, their interface and the potential
 binding between sites. It is an over approximation, thus if the contact map indicates a potential
 bond, it does not mean that it is always possible to reach a state in which two sites of these
 kinds are bound, but if the contact map indicates no bond between two sites, it means
 that it is NOT possible to reach a state in which two sites of these kinds are bound
 together.
-<!--l. 1101--><p class="noindent" >The contact map for the <span 
+<!--l. 1100--><p class="noindent" >The contact map for the <span 
 class="ectt-1095">abc.ka </span>model deﬁned in Chapter <a 
 href="#x1-310005">5<!--tex4ht:ref: chap:abc --></a> is given in
 Figure <a 
 href="#x1-570024">7.4<!--tex4ht:ref: fig:abc-contact --></a>. On this map, we notice that there are three kinds of agent, namely
-<!--l. 1101--><math 
+<!--l. 1100--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math>,
-<!--l. 1101--><math 
+<!--l. 1100--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >B</mi></math>, and
-<!--l. 1101--><math 
+<!--l. 1100--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >C</mi></math>. Agents of
-kind <!--l. 1102--><math 
+kind <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> have
-two sites <!--l. 1102--><math 
+two sites <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math>
-and <!--l. 1102--><math 
+and <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >c</mi></math>,
 that bear no internal state (they appear in yellow only), agents of kind
-<!--l. 1102--><math 
+<!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >B</mi></math> have one
-site <!--l. 1102--><math 
+site <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math>,
 that bears no internal state (they appear in yellow only), and agents of kind
-<!--l. 1102--><math 
+<!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >C</mi></math> have two
-sites <!--l. 1102--><math 
+sites <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >x</mi></mrow><mrow 
 ><mn>1</mn></mrow></msub 
 ></math>
-and <!--l. 1102--><math 
+and <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -6319,49 +6331,49 @@ display="inline" ><msub><mrow
 with both a binding state and an internal state (they appear both in yellow and in green). We
 notice that when a site can bear both an internal state and a binding state, they are considered as
 two diﬀerent sites in the contact map. Additionally, the contact map indicates that sites
-<!--l. 1102--><math 
+<!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> of the agents of kind
-<!--l. 1102--><math 
+<!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> can be bound to the
-site <!--l. 1102--><math 
+site <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> of an agent of
-kind <!--l. 1102--><math 
+kind <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >B</mi></math> and that sites
-<!--l. 1102--><math 
+<!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >c</mi></math> of the agents of
-kind <!--l. 1102--><math 
+kind <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> can be bound
-to the agents of kind <!--l. 1102--><math 
+to the agents of kind <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >C</mi></math>
-either on the site <!--l. 1102--><math 
+either on the site <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >x</mi></mrow><mrow 
 ><mn>1</mn></mrow></msub 
 ></math>, or
-on the site <!--l. 1102--><math 
+on the site <!--l. 1101--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >x</mi></mrow><mrow 
 ><mn>2</mn></mrow></msub 
 ></math>.
-<!--l. 1104--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1103--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -6372,7 +6384,7 @@ display="inline" ><msub><mrow
 
                                                                                   
 
-<!--l. 1106--><p class="noindent" ><img 
+<!--l. 1105--><p class="noindent" ><img 
 src="generated_img/abc_contact.png" alt="PIC"  
 width="227.62204pt" height="143.98993pt" >
 <br /> <div class="caption" 
@@ -6383,15 +6395,15 @@ href="#x1-310005">5<!--tex4ht:ref: chap:abc --></a></span></div><!--tex4ht:label
                                                                                   
 
                                                                                   
-<!--l. 1109--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1108--><p class="noindent" ></div><hr class="endfigure">
 <h3 class="sectionHead"><span class="titlemark">7.4   </span> <a 
  id="x1-580007.4"></a>Inﬂuence map</h3>
-<!--l. 1115--><p class="noindent" >The inﬂuence map of a model is an object that may help modelers checking the consistency of the
+<!--l. 1114--><p class="noindent" >The inﬂuence map of a model is an object that may help modelers checking the consistency of the
 rule set they use.
-<!--l. 1117--><p class="noindent" >Typing the following instruction:
-<!--l. 1119--><p class="noindent" ><span 
+<!--l. 1116--><p class="noindent" >Typing the following instruction:
+<!--l. 1118--><p class="noindent" ><span 
 class="ectt-1095">KaSa abc.ka –reset-all –compute-influence-map</span>
-<!--l. 1121--><p class="noindent" >will produce a dot format ﬁle named <span 
+<!--l. 1120--><p class="noindent" >will produce a dot format ﬁle named <span 
 class="ectt-1095">influence.dot</span>. The name of the output ﬁle and the
 directory can be changed to the command line options <span 
 class="ectt-1095">–output-influence-map </span>and
@@ -6401,7 +6413,7 @@ the options related to the computation of the inﬂuence map can be accessed on 
 <span 
 class="ectt-1095">3_Influence_map </span>of the graphical interface (see Fig. <a 
 href="#x1-580015">7.5<!--tex4ht:ref: fig:kasa:3 --></a>).
-<!--l. 1125--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1124--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -6412,7 +6424,7 @@ href="#x1-580015">7.5<!--tex4ht:ref: fig:kasa:3 --></a>).
 
                                                                                   
 
-<!--l. 1127--><p class="noindent" ><img 
+<!--l. 1126--><p class="noindent" ><img 
 src="img/kasa_3.png" alt="PIC"  
 width="341.43306pt" height="215.99379pt" >
 <br /> <div class="caption" 
@@ -6423,8 +6435,8 @@ class="ectt-1095">3_Influence_map</span></span></div><!--tex4ht:label?: x1-58001
                                                                                   
 
                                                                                   
-<!--l. 1130--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1132--><p class="noindent" >Unlike the ﬂux map, the inﬂuence map is <span 
+<!--l. 1129--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1131--><p class="noindent" >Unlike the ﬂux map, the inﬂuence map is <span 
 class="ecti-1095">statically </span>computed and does not depend on kinetic
 rates nor initial conditions. It describes how rules may potentially inﬂuence each other during a
 simulation. <span 
@@ -6442,7 +6454,7 @@ by the kappa deﬁnition of the rule/observable. Edges are decorated with the li
 embeddings (separated by a semi-colon) allowing the identiﬁcation of agents in both rules<span 
 class="tcrm-1095">'</span>s
 right hand sides/left hand sides. More precisely, for positive inﬂuences, the notation
-<!--l. 1134--><math 
+<!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -6450,18 +6462,18 @@ class="MathClass-open">[</mo><mrow><mi
 class="MathClass-rel">&rarr;</mo> <mi 
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math> denotes a pair of embeddings
-from the agent number <!--l. 1134--><math 
+from the agent number <!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of the origin<span 
 class="tcrm-1095">'</span>s right hand side and from the agent number
-<!--l. 1134--><math 
+<!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math> of the target<span 
 class="tcrm-1095">'</span>s left hand
-side and the notation <!--l. 1134--><math 
+side and the notation <!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -6471,19 +6483,19 @@ class="MathClass-rel">&rarr;</mo> <mi
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math>
 denotes a pair of embeddings from an agent attached to the agent number
-<!--l. 1134--><math 
+<!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math> of the
 origin<span 
 class="tcrm-1095">'</span>s left hand side, which have been freed by side eﬀect and from the agent number
-<!--l. 1134--><math 
+<!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math>
 of the target<span 
 class="tcrm-1095">'</span>s left hand side; for negative inﬂuences, the notation
-<!--l. 1134--><math 
+<!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -6491,18 +6503,18 @@ class="MathClass-open">[</mo><mrow><mi
 class="MathClass-rel">&rarr;</mo> <mi 
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math> denotes a pair of embeddings
-from the agent number <!--l. 1134--><math 
+from the agent number <!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of the origin<span 
 class="tcrm-1095">'</span>s left hand side and from the agent number
-<!--l. 1134--><math 
+<!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math> of the target<span 
 class="tcrm-1095">'</span>s left hand
-side and the notation <!--l. 1134--><math 
+side and the notation <!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -6512,20 +6524,20 @@ class="MathClass-rel">&rarr;</mo> <mi
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math>
 denotes a pair of embeddings from an agent attached to the agent number
-<!--l. 1134--><math 
+<!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math> of the
 origin<span 
 class="tcrm-1095">'</span>s left hand side, which have been freed by side eﬀect and from the agent number
-<!--l. 1134--><math 
+<!--l. 1133--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math> of the
 target<span 
 class="tcrm-1095">'</span>s left hand side; Observables have no inﬂuence, but they can be inﬂuenced by rules, if the
 rule can increase or decrease their value.
-<!--l. 1138--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1137--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -6536,7 +6548,7 @@ rule can increase or decrease their value.
 
                                                                                   
 
-<!--l. 1140--><p class="noindent" ><img 
+<!--l. 1139--><p class="noindent" ><img 
 src="generated_img/abc_influence.png" alt="PIC"  
 >
 <br />  <div class="caption" 
@@ -6545,7 +6557,7 @@ class="content">The   inﬂuence   map   of   the   <span
 class="ectt-1095">abc.ka  </span>model   deﬁned   in   Chapter <a 
 href="#x1-310005">5<!--tex4ht:ref: chap:abc --></a>.
 Edge    labels    denote    embeddings    with    the    convention    that    the    notation
-<!--l. 1144--><math 
+<!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -6554,18 +6566,18 @@ class="MathClass-rel">&rarr;</mo> <mi
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math>,
 in   a   positive   inﬂuence,   denotes   a   pair   of   embeddings   from   the   agent   number
-<!--l. 1144--><math 
+<!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of     the     origin<span 
 class="tcrm-1095">'</span>s     right     hand     side     and     from     the     agent     number
-<!--l. 1144--><math 
+<!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math>
 of the target<span 
-class="tcrm-1095">'</span>s left hand side; the notation <!--l. 1144--><math 
+class="tcrm-1095">'</span>s left hand side; the notation <!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -6574,18 +6586,18 @@ class="MathClass-rel">&rarr;</mo> <mi
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math>,
 in   negative   inﬂuence,   denotes   a   pair   of   embeddings   from   the   agent   number
-<!--l. 1144--><math 
+<!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of     the     origin<span 
 class="tcrm-1095">'</span>s     left     hand     side     and     from     the     agent     number
-<!--l. 1144--><math 
+<!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math>
 of the target<span 
-class="tcrm-1095">'</span>s left hand side; the notation <!--l. 1144--><math 
+class="tcrm-1095">'</span>s left hand side; the notation <!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -6596,13 +6608,13 @@ class="MathClass-rel">&rarr;</mo> <mi
 class="MathClass-close">]</mo></mrow></math>,
 whatever     the     inﬂuence     is     positive     of     negative,     denotes     a     pair
 of     embeddings     from     an     agent     attached     to     the     agent     number
-<!--l. 1144--><math 
+<!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of the origin<span 
 class="tcrm-1095">'</span>s left hand side, which have been freed by side eﬀect and from the agent number
-<!--l. 1144--><math 
+<!--l. 1143--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math>
@@ -6611,8 +6623,8 @@ class="tcrm-1095">'</span>s left hand side. </span></div><!--tex4ht:label?: x1-5
                                                                                   
 
                                                                                   
-<!--l. 1146--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1148--><p class="noindent" >More formally, consider the rules <!--l. 1148--><math 
+<!--l. 1145--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1147--><p class="noindent" >More formally, consider the rules <!--l. 1147--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi> <mo 
@@ -6620,7 +6632,7 @@ class="MathClass-punc">:</mo> <mi
 >L</mi> <mo 
 class="MathClass-rel">&rarr;</mo> <mi 
 >R</mi></math>
-and <!--l. 1148--><math 
+and <!--l. 1147--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi> <mo 
@@ -6637,20 +6649,20 @@ class="MathClass-rel">&rarr;</mo> <msup><mrow
 >&prime;</mi></mrow></msup 
 ></math>.
 One wishes to know whether it is possible that the application of rule
-<!--l. 1148--><math 
+<!--l. 1147--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi></math> over a graph
-<!--l. 1148--><math 
+<!--l. 1147--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >G</mi></math> creates a new instance
-of rule <!--l. 1148--><math 
+of rule <!--l. 1147--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi></math> (which is
 called a positive inﬂuence and that is described by green arrows in the inﬂuence map), or destroy a previous
-instance of rule <!--l. 1148--><math 
+instance of rule <!--l. 1147--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi></math>
@@ -6659,7 +6671,7 @@ Fig. <a
 href="#x1-580047">7.7<!--tex4ht:ref: fig:imbis --></a>, we illustrate the construction of positive inﬂuences due to overlap of the left hand side of
 a rule and the right hand side of another rule on some sites that are modiﬁed by the former
 one.
-<!--l. 1151--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1150--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -6670,7 +6682,7 @@ one.
 
                                                                                   
 
-<!--l. 1153--><p class="noindent" ><img 
+<!--l. 1152--><p class="noindent" ><img 
 src="img/im.png" alt="PIC"  
 width="227.62204pt" height="117.69789pt" >
 <br /> <div class="caption" 
@@ -6681,8 +6693,8 @@ It results that the ﬁrst rule has a positive inﬂuence on the second.</span><
                                                                                   
 
                                                                                   
-<!--l. 1156--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1158--><p class="noindent" >The current implementation has the following limitations:
+<!--l. 1155--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1157--><p class="noindent" >The current implementation has the following limitations:
      <ul class="itemize1">
      <li class="itemize">Currently, only observables that are deﬁned as patterns are taken into account.
      </li>
@@ -6696,7 +6708,7 @@ It results that the ﬁrst rule has a positive inﬂuence on the second.</span><
      <li class="itemize">Token are not taken into yet. They are currently ignored.
      </li>
      <li class="itemize">Positive/negative inﬂuence of time is not taken into account either.</li></ul>
-<!--l. 1167--><p class="noindent" >Lastly, KaSa computes an over-approximation of the inﬂuence map. They may show an inﬂuence
+<!--l. 1166--><p class="noindent" >Lastly, KaSa computes an over-approximation of the inﬂuence map. They may show an inﬂuence
 despite the fact that there can be no actual one. But if it shows no inﬂuence it means that either
 there are NO such inﬂuence, or that we are in a case that is not covered yet as itemised
 previously.
@@ -6707,18 +6719,18 @@ previously.
  id="x1-590008"></a>Frequently asked questions</h2>
 <h3 class="likesectionHead"><a 
  id="x1-600008"></a>Simulation hangs after a while</h3>
-<!--l. 1171--><p class="noindent" >If the progress bar seems stalled, it does not necessarily mean that the simulation is blocked. In
+<!--l. 1170--><p class="noindent" >If the progress bar seems stalled, it does not necessarily mean that the simulation is blocked. In
 particular when a simulation is triggered with a <span 
 class="ecti-1095">time </span>limit (<span 
 class="ectt-1095">-t </span>option of the command
 line) it might only indicate that the bio clock is stalled while computation events still
 occur. Recall that the average (bio) time one has to wait in order to apply a rule is
-<!--l. 1171--><math 
+<!--l. 1170--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mn>1</mn><mo 
 class="MathClass-bin">∕</mo><mi 
 >A</mi></math>, where
-<!--l. 1171--><math 
+<!--l. 1170--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> is the
@@ -6729,7 +6741,7 @@ that grows rapidly, the average time increment might tend to 0 and if it remains
 while, it will block the progress bar whose advance is proportional to the bio time
 <span 
 class="ectt-1095">[T]</span>.
-<!--l. 1173--><p class="noindent" >In order to make sure that <span 
+<!--l. 1172--><p class="noindent" >In order to make sure that <span 
 class="ecss-1095">KaSim</span> is not incorrectly blocked you may wish to plot the
 event clock against time clock using the observable <span 
 class="ectt-1095">%obs: </span><span 
@@ -6740,17 +6752,17 @@ class="ectt-1095">[E] </span>or run the
 simulation using an event limit (<span 
 class="ectt-1095">-e </span>option of the command line) instead of a time
 limit.
-<!--l. 1175--><p class="noindent" >
+<!--l. 1174--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-610008"></a>What do null events mean, why do I have any?</h3>
-<!--l. 1177--><p class="noindent" >Null events<a 
+<!--l. 1176--><p class="noindent" >Null events<a 
  id="dx1-61001"></a> is a way for <span 
 class="ecss-1095">KaSim</span> to compensate for some over approximation it is doing, in order
 deal with large simulations more eﬃciently. They usually do not impact signiﬁcantly the
 performances of the simulator, unless the model contains rules using the special notation to deal
 with ambiguous molecularity (see Section <a 
 href="#x1-280004.3.4">4.3.4<!--tex4ht:ref: sec:ambiguous --></a>). With pure Kappa rules, the ratio
-<!--l. 1177--><math 
+<!--l. 1176--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi></math> of null
@@ -6761,128 +6773,128 @@ class="ectt-1095">r</span><span
 class="tctt-1095">' </span><span 
 class="ectt-1095">[E-]/[E]</span>) should
 tend to 0 when models have a lot of agents.
-<!--l. 1179--><p class="noindent" >
+<!--l. 1178--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-620008"></a>No data points are generated</h3>
                                                                                   
 
                                                                                   
-<!--l. 1180--><p class="noindent" >Make sure you have <span 
+<!--l. 1179--><p class="noindent" >Make sure you have <span 
 class="ectt-1095">%obs </span>or <span 
 class="ectt-1095">%plot </span>instructions in your KF<a 
  id="dx1-62001"></a>. Also make sure to use the <span 
 class="ectt-1095">-p</span>
 option in the command line to tell KaSim how many points you wish to have on your
 curves.
-<!--l. 1182--><p class="noindent" >
+<!--l. 1181--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-630008"></a>Too many instances of an observable</h3>
-<!--l. 1183--><p class="noindent" >The value of a kappa expression <!--l. 1183--><math 
+<!--l. 1182--><p class="noindent" >The value of a kappa expression <!--l. 1182--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
 is equal to the number of embeddings<a 
  id="dx1-63001"></a> it has in the current mixture<a 
  id="dx1-63002"></a>
-<!--l. 1183--><math 
+<!--l. 1182--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>. Embeddings are
-maps from agents in <!--l. 1183--><math 
+maps from agents in <!--l. 1182--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
-to agents in <!--l. 1183--><math 
+to agents in <!--l. 1182--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>. If
-<!--l. 1183--><math 
+<!--l. 1182--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> has symmetries then
-every permutation of <!--l. 1183--><math 
+every permutation of <!--l. 1182--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
 will be counted as a new embedding. For instance let
-<!--l. 1183--><math 
+<!--l. 1182--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi> <mo 
 class="MathClass-rel">=</mo></math><span 
 class="ectt-1095">A(x!1),A(x!1) </span>and let
-<!--l. 1183--><math 
+<!--l. 1182--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi> <mo 
 class="MathClass-rel">=</mo></math><span 
 class="ectt-1095">A(x!1,y~p),A(x!1,y~u)</span>.
 <span 
-class="ecss-1095">KaSim</span> will count two instances of <!--l. 1184--><math 
+class="ecss-1095">KaSim</span> will count two instances of <!--l. 1183--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
-in <!--l. 1184--><math 
+in <!--l. 1183--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>: the one mapping
 the ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 1184--><math 
+class="ectt-1095">A </span>of <!--l. 1183--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> to the
 ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 1184--><math 
+class="ectt-1095">A </span>of <!--l. 1183--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math> and the one
 mapping the ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 1184--><math 
+class="ectt-1095">A </span>of <!--l. 1183--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> to
 the second <span 
-class="ectt-1095">A </span>of <!--l. 1184--><math 
+class="ectt-1095">A </span>of <!--l. 1183--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>.
-<!--l. 1186--><p class="noindent" >
+<!--l. 1185--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-640008"></a>The computed inﬂuence map is incorrect, it misses some activation or has too much of
 them</h3>
-<!--l. 1187--><p class="noindent" >The inﬂuence map<a 
+<!--l. 1186--><p class="noindent" >The inﬂuence map<a 
  id="dx1-64001"></a> computed by <span 
 class="ecss-1095">KaSim</span> contains relations that are computed on side
 eﬀect free rules only. It is likely that a missing activation is due to a side eﬀect that
 is not taken into account. If the inﬂuence map shows an activation between rule
-<!--l. 1187--><math 
+<!--l. 1186--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi></math> and
-<!--l. 1187--><math 
+<!--l. 1186--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi></math>
 that is never possible with a given model, just remember that activation
 computation implies that <span 
 class="ecti-1095">there exists </span>a context in which applying rule
-<!--l. 1187--><math 
+<!--l. 1186--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi></math> will create a new
                                                                                   
 
                                                                                   
-instance of rule <!--l. 1187--><math 
+instance of rule <!--l. 1186--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi></math>.
 This context might simply never be realized with the given rules or initial conditions.
-<!--l. 1189--><p class="noindent" >
+<!--l. 1188--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-650008"></a>Value <span 
 class="ectt-1095">nan </span>in the data ﬁle at the end of the simulation</h3>
-<!--l. 1190--><p class="noindent" >The value <span 
+<!--l. 1189--><p class="noindent" >The value <span 
 class="ectt-1095">nan </span>means &#x0022;Not a Number&#x0022;. It is generated when a plotted variable is inﬁnite. Make
 sure this variable is not divided by zero at some point.
                                                                                   
@@ -7048,7 +7060,7 @@ class="ecti-1095">Journal of Physical Chemistry</span>, 81(25):2340–2361, 1977
 <span class="index-item">comments, 19 <br /></span>
 </p><p class="theindex">
 <span class="index-item">data ﬁle, 16, 27, 58 <br /></span>
-<span class="index-item">declaration, 19, 21, 23, 27, 29, 32, 35, 38–40, 42, 44 <br /></span>
+<span class="index-item">declaration, 19, 21, 23, 27, 29, 32, 35, 38, 39, 42, 44 <br /></span>
 <span class="index-item">default state, 22 <br /></span>
 <span class="index-item">don&#x2019;t care don&#x2019;t write, 22, 29 <br /></span>
 </p><p class="theindex">
@@ -7079,7 +7091,7 @@ class="ecti-1095">Journal of Physical Chemistry</span>, 81(25):2340–2361, 1977
 <span class="index-item">link type, 43 <br /></span>
 <span class="index-item">longest preﬁx convention, 22 <br /></span>
 </p><p class="theindex">
-<span class="index-item">mixture, 8, 22, 26, 27, 37, 38, 44, 58 <br /></span>
+<span class="index-item">mixture, 8, 22, 26, 27, 37–39, 44, 58 <br /></span>
 </p><p class="theindex">
 <span class="index-item">null event, 28, 57 <br /></span>
 </p><p class="theindex">
