@@ -63,8 +63,8 @@ agent_id * agent_type<br>
 
 
 <pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="Edges.html#TYPEt">t</a></code></pre>
-<pre><span id="VALadd_agent"><span class="keyword">val</span> add_agent</span> : <code class="type">int -> <a href="Edges.html#TYPEt">t</a> -> int * <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">add_agent agent_type graph</code><br>
+<pre><span id="VALadd_agent"><span class="keyword">val</span> add_agent</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> int * <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">add_agent sigs agent_type graph</code><br>
 </div>
 
 <pre><span id="VALadd_free"><span class="keyword">val</span> add_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
@@ -103,18 +103,23 @@ agent_id * agent_type<br>
 <code class="code">exists_fresh ag1 site1 type_of_ag2 site2 graph</code><br>
 </div>
 
+<pre><span id="VALlink_destination"><span class="keyword">val</span> link_destination</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> (<a href="Edges.html#TYPEagent">agent</a> * int) option</code></pre><div class="info ">
+<code class="code">link_destination ag site graph</code><br>
+</div>
+
 <pre><span id="TYPEpath"><span class="keyword">type</span> <code class="type"></code>path</span> = <code class="type">((<a href="Edges.html#TYPEagent">agent</a> * int) * (<a href="Edges.html#TYPEagent">agent</a> * int)) list</code> </pre>
 
 
 <pre><span id="VALempty_path"><span class="keyword">val</span> empty_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALrev_path"><span class="keyword">val</span> rev_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a> -> <a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALprint_path"><span class="keyword">val</span> print_path</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> ?graph:<a href="Edges.html#TYPEt">t</a> -> Format.formatter -> <a href="Edges.html#TYPEpath">path</a> -> unit</code></pre>
-<pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?candidate:<a href="Edges.html#TYPEpath">path</a> -> <a href="Edges.html#TYPEt">t</a> -> int -> int -> int -> <a href="Edges.html#TYPEpath">path</a> option</code></pre><div class="info ">
-<code class="code">are_connected ?candidate graph x_name x y</code><br>
+<pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?candidate:<a href="Edges.html#TYPEpath">path</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">t</a> -> int -> int -> int -> <a href="Edges.html#TYPEpath">path</a> option</code></pre><div class="info ">
+<code class="code">are_connected ?candidate sigs graph x_name x y</code><br>
 </div>
 
-<pre><span id="VALpathes_of_interrest"><span class="keyword">val</span> pathes_of_interrest</span> : <code class="type">(int -> 'a option) -><br>       <a href="Edges.html#TYPEt">t</a> -> int -> int -> <a href="Edges.html#TYPEpath">path</a> -> (('a * int) * <a href="Edges.html#TYPEpath">path</a>) list</code></pre><div class="info ">
-<code class="code">pathes_of_interrest is_interesting graph agent_name agent_id done_path</code><br>
+<pre><span id="VALpathes_of_interrest"><span class="keyword">val</span> pathes_of_interrest</span> : <code class="type">(int -> 'a option) -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Edges.html#TYPEt">t</a> -> int -> int -> <a href="Edges.html#TYPEpath">path</a> -> (('a * int) * <a href="Edges.html#TYPEpath">path</a>) list</code></pre><div class="info ">
+<code class="code">pathes_of_interrest
+         is_interesting sigs graph agent_name agent_id done_path</code><br>
 </div>
 
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Edges.html#TYPEt">t</a> -> unit</code></pre>

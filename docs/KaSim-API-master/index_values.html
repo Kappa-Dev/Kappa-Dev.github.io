@@ -56,7 +56,7 @@ Returns the current activity
 <td></td></tr>
 <tr><td><a href="Edges.html#VALadd_agent">add_agent</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">add_agent agent_type graph</code>
+<code class="code">add_agent sigs agent_type graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Alg_expr.html#VALadd_dep">add_dep</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -105,7 +105,7 @@ Returns the graph obtained by applying the rule.
 </td></tr>
 <tr><td><a href="Edges.html#VALare_connected">are_connected</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">are_connected ?candidate graph x_name x y</code>
+<code class="code">are_connected ?candidate sigs graph x_name x y</code>
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALarity">arity</a> [<a href="Signature.html">Signature</a>]</td>
@@ -560,6 +560,11 @@ check wether there is an observable in a trace
 <tr><td><a href="SetMap.Map.html#VALjoin_with_logs">join_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>L</td></tr>
+<tr><td><a href="Edges.html#VALlink_destination">link_destination</a> [<a href="Edges.html">Edges</a>]</td>
+<td><div class="info">
+<code class="code">link_destination ag site graph</code>
+</div>
+</td></tr>
 <tr><td><a href="Edges.html#VALlink_exists">link_exists</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
 <code class="code">link_exists ag1_id site1 ag2_id site2 graph</code>
@@ -767,7 +772,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Edges.html#VALpathes_of_interrest">pathes_of_interrest</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">pathes_of_interrest is_interesting graph agent_name agent_id done_path</code>
+<code class="code">pathes_of_interrest
+         is_interesting sigs graph agent_name agent_id done_path</code>
 </div>
 </td></tr>
 <tr><td><a href="Kappa_printer.html#VALperturbation">perturbation</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
