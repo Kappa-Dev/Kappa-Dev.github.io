@@ -35,7 +35,8 @@
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
-<link title="Utilities" rel="Chapter" href="Utilities.html"><title>KaSim API : Index of values</title>
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html"><title>KaSim API : Index of values</title>
 </head>
 <body>
 <div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
@@ -90,8 +91,6 @@ depend in time, depend in event number, depend in given var
 <tr><td><a href="SetMap.Set.html#VALadd_with_logs">add_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
-<td></td></tr>
-<tr><td><a href="LKappa.html#VALannotate_lhs_with_diff">annotate_lhs_with_diff</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALapply_rule">apply_rule</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td><div class="info">
@@ -161,7 +160,10 @@ Retuns all the extension of the given injections so that the second edge
 </div>
 </td></tr>
 <tr><td><a href="LKappa.html#VALcompil_of_ast">compil_of_ast</a> [<a href="LKappa.html">LKappa</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<code class="code">compil_of_ast variable_overwrite ast</code>
+</div>
+</td></tr>
 <tr><td><a href="Expr.html#VALcompile_alg">compile_alg</a> [<a href="Expr.html">Expr</a>]</td>
 <td><div class="info">
 <code class="code">compile_alg variable_map token_map (fresh_mix_id, mix_list) alg_pos</code>
@@ -178,6 +180,8 @@ Retuns all the extension of the given injections so that the second edge
 compress a trace with the level of abstraction defined in the argument parameter
 </div>
 </td></tr>
+<tr><td><a href="Compression_main.html#VALcompress_and_print">compress_and_print</a> [<a href="Compression_main.html">Compression_main</a>]</td>
+<td></td></tr>
 <tr><td><a href="Instantiation.html#VALconcretize_action">concretize_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALconcretize_event">concretize_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
@@ -492,6 +496,8 @@ check wether there is an observable in a trace
 <code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code>
 </div>
 </td></tr>
+<tr><td><a href="Compression_main.html#VALinit_secret_log_info">init_secret_log_info</a> [<a href="Compression_main.html">Compression_main</a>]</td>
+<td></td></tr>
 <tr><td><a href="State_interpreter.html#VALinitial">initial</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
 <code class="code">initial env c graph stopping_times</code> builds up the initial state
@@ -973,6 +979,10 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td align="left"><br>S</td></tr>
 <tr><td><a href="Agent_place.html#VALsame_connected_component">same_connected_component</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Compression_main.html#VALsecret_store_event">secret_store_event</a> [<a href="Compression_main.html">Compression_main</a>]</td>
+<td></td></tr>
+<tr><td><a href="Compression_main.html#VALsecret_store_obs">secret_store_obs</a> [<a href="Compression_main.html">Compression_main</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALset">set</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>

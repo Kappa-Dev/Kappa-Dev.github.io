@@ -34,7 +34,8 @@
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
-<link title="Utilities" rel="Chapter" href="Utilities.html"><title>KaSim API : LKappa</title>
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html"><title>KaSim API : LKappa</title>
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
@@ -57,6 +58,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_mixture&nbsp;=&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_erased&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_maintained&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_raw_mixture&nbsp;:&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy_rule_agent&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_mixture&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_mix&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_created&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t;<br>
@@ -69,12 +76,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;r_un_rate&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_erased&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_maintained&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_raw_mixture&nbsp;:&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy_rule_agent&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_mixture&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;ltypes:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;rates:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -82,14 +83,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;annotate_lhs_with_diff&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list&nbsp;*&nbsp;(<span class="constructor">Raw_mixture</span>.agent&nbsp;*&nbsp;<span class="constructor">Location</span>.t)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compil_of_ast&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.elt,&nbsp;<span class="constructor">Ast</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;*&nbsp;unit&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list,&nbsp;int,&nbsp;<span class="constructor">LKappa</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil<br>
 <span class="keyword">end</span></code></body></html>

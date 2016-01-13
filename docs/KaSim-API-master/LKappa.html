@@ -39,7 +39,8 @@
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
-<link title="Utilities" rel="Chapter" href="Utilities.html"><title>KaSim API : LKappa</title>
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html"><title>KaSim API : LKappa</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="Expr.html" title="Expr">Previous</a>
@@ -48,7 +49,10 @@
 </div>
 <h1>Module <a href="type_LKappa.html">LKappa</a></h1>
 
-<pre><span class="keyword">module</span> LKappa: <code class="code"><span class="keyword">sig</span></code> <a href="LKappa.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+<pre><span class="keyword">module</span> LKappa: <code class="code"><span class="keyword">sig</span></code> <a href="LKappa.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Intermediate representation of model on wich sanity has been checked<br>
+</div>
+<hr width="100%">
 
 <pre><code><span id="TYPEswitching"><span class="keyword">type</span> <code class="type"></code>switching</span> = </code></pre><table class="typetable">
 <tr>
@@ -159,11 +163,28 @@
 </tr></table>
 }
 
+<div class="info ">
+A representation of 'left-hand-side' agent that stores how
+ everything is transformed. In an observable (a mixture in an alg_expr),
+ everything is <code class="code"><span class="constructor">Maintained</span></code> (represented by <code class="code"><span class="constructor">I_VAL_CHANGED</span> (i,i)</code> for
+ internal states).
+<p>
+
+The field ra_syntax represents how the user describe the agent
+before compilation. Therefore, <code class="code">compil_of_ast</code> in this module
+generates rule_agent where ra_syntax is <code class="code"><span class="constructor">Some</span> (<span class="constructor">Array</span>.copy ra_ports,
+<span class="constructor">Array</span>.copy ra_ints)</code>.<br>
+</div>
 
 
 <pre><span id="TYPErule_mixture"><span class="keyword">type</span> <code class="type"></code>rule_mixture</span> = <code class="type"><a href="LKappa.html#TYPErule_agent">rule_agent</a> list</code> </pre>
 
 
+<pre><span id="VALto_erased"><span class="keyword">val</span> to_erased</span> : <code class="type"><a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
+<pre><span id="VALto_maintained"><span class="keyword">val</span> to_maintained</span> : <code class="type"><a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
+<pre><span id="VALto_raw_mixture"><span class="keyword">val</span> to_raw_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></pre>
+<pre><span id="VALcopy_rule_agent"><span class="keyword">val</span> copy_rule_agent</span> : <code class="type"><a href="LKappa.html#TYPErule_agent">rule_agent</a> -> <a href="LKappa.html#TYPErule_agent">rule_agent</a></code></pre>
+<pre><span id="VALprint_rule_mixture"><span class="keyword">val</span> print_rule_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> list -> unit</code></pre>
 <pre><code><span id="TYPErule"><span class="keyword">type</span> <code class="type"></code>rule</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -218,11 +239,23 @@
 
 
 
-<pre><span id="VALto_erased"><span class="keyword">val</span> to_erased</span> : <code class="type"><a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
-<pre><span id="VALto_maintained"><span class="keyword">val</span> to_maintained</span> : <code class="type"><a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
-<pre><span id="VALto_raw_mixture"><span class="keyword">val</span> to_raw_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></pre>
-<pre><span id="VALcopy_rule_agent"><span class="keyword">val</span> copy_rule_agent</span> : <code class="type"><a href="LKappa.html#TYPErule_agent">rule_agent</a> -> <a href="LKappa.html#TYPErule_agent">rule_agent</a></code></pre>
-<pre><span id="VALprint_rule_mixture"><span class="keyword">val</span> print_rule_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> list -> unit</code></pre>
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">ltypes:bool -><br>       rates:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
-<pre><span id="VALannotate_lhs_with_diff"><span class="keyword">val</span> annotate_lhs_with_diff</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       Ast.mixture -><br>       Ast.mixture -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> list * (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> * <a href="Location.html#TYPEt">Location.t</a>) list</code></pre>
-<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       (Ast.agent, Ast.mixture, Mods.StringMap.elt, Ast.rule) Ast.compil -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> *<br>       (Ast.agent, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>) Ast.compil</code></pre></body></html>
+<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       (Ast.agent, Ast.mixture, string, Ast.rule) Ast.compil -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> *<br>       (Ast.agent, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>) Ast.compil</code></pre><div class="info ">
+<code class="code">compil_of_ast variable_overwrite ast</code><br>
+<b>Returns</b> the signature of agent, the signature of tokens and an
+Ast.compil where identifiers are integers and not string, syntactic
+sugar on rules are expansed (syntaxtic sugar on mixture are not)
+<p>
+
+This function sorts out longest prefix convention as well as ensure a
+lot of sanity on mixtures:<ul>
+<li>agent exists</li>
+<li>sites exist</li>
+<li>unique site occurence / agent</li>
+<li>internal_states exist</li>
+<li>unique internal_state / site</li>
+<li>links appear exactly twice</li>
+</ul>
+<br>
+</div>
+</body></html>

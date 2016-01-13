@@ -36,7 +36,8 @@
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
-<link title="Utilities" rel="Chapter" href="Utilities.html"><title>KaSim API</title>
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html"><title>KaSim API</title>
 </head>
 <body>
 <h1>KaSim API</h1>
@@ -49,11 +50,19 @@
 
 <p>
 
+The main entry point of KaSim executable is main/KaSim.ml but let's
+describe the API bottom-up.
+<p>
+
 The folder dataStructures/ has a transparent name. You can find there:
 <br>
 <table class="indextable">
 <tr><td class="module"><a href="SetMap.html">SetMap</a></td><td><div class="info">
 Our own implementattion of Set and Map
+</div>
+</td></tr>
+<tr><td class="module"><a href="Operator.html">Operator</a></td><td><div class="info">
+Compiled algebraic expression
 </div>
 </td></tr>
 <tr><td class="module"><a href="Nbr.html">Nbr</a></td><td><div class="info">
@@ -83,10 +92,6 @@ Some pretty printing utilities are Here too:
 In term/ directory stands all definitions the simulator works on.
 <br>
 <table class="indextable">
-<tr><td class="module"><a href="Operator.html">Operator</a></td><td><div class="info">
-Compiled algebraic expression
-</div>
-</td></tr>
 <tr><td class="module"><a href="Agent_place.html">Agent_place</a></td><td><div class="info">
 An agent in a connected component
 </div>
@@ -128,7 +133,10 @@ Printers (user readable) of Kappa compiled units
 In grammar/ are the parser and the compilers
 <br>
 <table class="indextable">
-<tr><td class="module"><a href="LKappa.html">LKappa</a></td><td></td></tr>
+<tr><td class="module"><a href="LKappa.html">LKappa</a></td><td><div class="info">
+Intermediate representation of model on wich sanity has been checked
+</div>
+</td></tr>
 <tr><td class="module"><a href="Expr.html">Expr</a></td><td><div class="info">
 Algebraic and boolean expression manager
 </div>
@@ -141,6 +149,8 @@ Kappa pattern compiler
 
 <p>
 
+The module to store and manipulate the state of the simulation are in
+siteGraph/
 <br>
 <table class="indextable">
 <tr><td class="module"><a href="Edges.html">Edges</a></td><td><div class="info">
@@ -155,7 +165,7 @@ Pathes to explore a mixture
 
 <p>
 
-Finally, the simulation engine is in simulation/
+The simulation engine is in simulation/
 The core of the interpreter
 <br>
 <table class="indextable">
@@ -192,13 +202,21 @@ Flux map renderer
 
 <p>
 
+The machinary to cook stories from an execution trace is in cflow/
 <br>
 <table class="indextable">
+<tr><td class="module"><a href="Compression_main.html">Compression_main</a></td><td><div class="info">
+Main entry to the story machinery
+</div>
+</td></tr>
 <tr><td class="module"><a href="Utilities.html">Utilities</a></td><td><div class="info">
 High-level elementary primitives to generate stories
 </div>
 </td></tr>
 </table>
-<br>
+
+<p>
+
+The code of the static analyser is in KaSa_rep/<br>
 </body>
 </html>
