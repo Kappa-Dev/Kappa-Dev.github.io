@@ -82,7 +82,7 @@ agent_id * agent_type<br>
 
 <pre><span id="VALremove_agent"><span class="keyword">val</span> remove_agent</span> : <code class="type"><a href="Edges.html#TYPEagent">agent</a> -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
 <pre><span id="VALremove_free"><span class="keyword">val</span> remove_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
-<pre><span id="VALremove_internal"><span class="keyword">val</span> remove_internal</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a> * int</code></pre>
+<pre><span id="VALremove_internal"><span class="keyword">val</span> remove_internal</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
 <pre><span id="VALremove_link"><span class="keyword">val</span> remove_link</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
 <pre><span id="VALis_agent"><span class="keyword">val</span> is_agent</span> : <code class="type"><a href="Edges.html#TYPEagent">agent</a> -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
 <code class="code">is_agent agent graph</code><br>
@@ -106,6 +106,10 @@ agent_id * agent_type<br>
 
 <pre><span id="VALlink_destination"><span class="keyword">val</span> link_destination</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> (<a href="Edges.html#TYPEagent">agent</a> * int) option</code></pre><div class="info ">
 <code class="code">link_destination ag site graph</code><br>
+</div>
+
+<pre><span id="VALget_internal"><span class="keyword">val</span> get_internal</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<code class="code">get_internal ag site graph</code><br>
 </div>
 
 <pre><span id="TYPEpath"><span class="keyword">type</span> <code class="type"></code>path</span> = <code class="type">((<a href="Edges.html#TYPEagent">agent</a> * int) * (<a href="Edges.html#TYPEagent">agent</a> * int)) list</code> </pre>
