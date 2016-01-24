@@ -158,19 +158,19 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 </div>
 
 <pre><span id="VALweakly_compress"><span class="keyword">val</span> weakly_compress</span> : <code class="type">(<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
-compute the weak compression of a given trace, 
-    if parameter.compute_all_stories, then each minimal stories is computed, 
+compute the weak compression of a given trace,
+    if parameter.compute_all_stories, then each minimal stories is computed,
     otherwise, only the first found one is provided<br>
 </div>
 
 <pre><span id="VALstrongly_compress"><span class="keyword">val</span> strongly_compress</span> : <code class="type">(<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
-compute the strong compression of a given trace, 
-    if parameter.compute_all_stories, then each minimal stories is computed, 
+compute the strong compression of a given trace,
+    if parameter.compute_all_stories, then each minimal stories is computed,
     otherwise, only the first found one is provided<br>
 </div>
 
 <pre><span id="VALfold_over_the_causal_past_of_observables_with_a_progress_bar"><span class="keyword">val</span> fold_over_the_causal_past_of_observables_with_a_progress_bar</span> : <code class="type">(<a href="Utilities.html#TYPEshall_we">shall_we</a>, <a href="Utilities.html#TYPEshall_we">shall_we</a>, int,<br>        (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, 'a, ('a, 'b) Stop.stop)<br>        <a href="Utilities.html#TYPEternary">ternary</a>, <a href="Utilities.html#TYPEtrace">trace</a>, 'a, ('a, 'b * int) Stop.stop)<br>       <a href="Utilities.html#TYPEsexternary">sexternary</a></code></pre><div class="info ">
-fold over the causal past of each observable in a given trace, 
+fold over the causal past of each observable in a given trace,
     the first argument indicates whether we display the current steps on the err output;
     the second arfument indicated whether the function is launched in debug mode or not<br>
 </div>
@@ -192,14 +192,13 @@ Give the number of stories (up to isomorphism classes) stored in a table<br>
 <pre><span id="VALstore_trace"><span class="keyword">val</span> store_trace</span> : <code class="type">(<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, <a href="Utilities.html#TYPEstory_table">story_table</a>,<br>        <a href="Utilities.html#TYPEstory_table">story_table</a>)<br>       <a href="Utilities.html#TYPEternary">ternary</a></code></pre><div class="info ">
 Store trace in story table<br>
 </div>
-
-<pre><span id="VALfold_story_table_with_progress_bar"><span class="keyword">val</span> fold_story_table_with_progress_bar</span> : <code class="type">(string,<br>        (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, 'a, 'a)<br>        <a href="Utilities.html#TYPEternary">ternary</a>, <a href="Utilities.html#TYPEstory_table">story_table</a>, 'a, 'a)<br>       <a href="Utilities.html#TYPEquaternary">quaternary</a></code></pre><div class="info ">
-Apply a function on each trace (and each list of runtime information associated to this trace), 
+<br>
+Apply a function on each trace (and each list of runtime information associated to this trace),
 the string contains the message to display in case of faillure of one call of the ternary function<br>
-</div>
 
+<pre><span id="VALfold_story_table_with_progress_bar"><span class="keyword">val</span> fold_story_table_with_progress_bar</span> : <code class="type">(string,<br>        (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, 'a, 'a)<br>        <a href="Utilities.html#TYPEternary">ternary</a>, <a href="Utilities.html#TYPEstory_table">story_table</a>, 'a, 'a)<br>       <a href="Utilities.html#TYPEquaternary">quaternary</a></code></pre>
 <pre><span id="VALfold_story_table_without_progress_bar"><span class="keyword">val</span> fold_story_table_without_progress_bar</span> : <code class="type">(string,<br>        (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list, 'a, 'a)<br>        <a href="Utilities.html#TYPEternary">ternary</a>, <a href="Utilities.html#TYPEstory_table">story_table</a>, 'a, 'a)<br>       <a href="Utilities.html#TYPEquaternary">quaternary</a></code></pre><div class="info ">
-Apply a function on each trace (and each list of runtime information associated to this trace), 
+Apply a function on each trace (and each list of runtime information associated to this trace),
 the string contains the message to display in case of faillure of one call of the ternary function<br>
 </div>
 
@@ -235,6 +234,14 @@ compute transitive closure with different parameters (progress_bar, gc)<br>
 
 <pre><span id="VALenrich_grid_with_transitive_past_of_observables_without_a_progress_bar"><span class="keyword">val</span> enrich_grid_with_transitive_past_of_observables_without_a_progress_bar</span> : <code class="type">(<a href="Utilities.html#TYPEcflow_grid">cflow_grid</a>, <a href="Utilities.html#TYPEenriched_cflow_grid">enriched_cflow_grid</a>) <a href="Utilities.html#TYPEunary">unary</a></code></pre>
 <pre><span id="VALenrich_grid_with_transitive_past_of_each_node_without_a_progress_bar"><span class="keyword">val</span> enrich_grid_with_transitive_past_of_each_node_without_a_progress_bar</span> : <code class="type">(<a href="Utilities.html#TYPEcflow_grid">cflow_grid</a>, <a href="Utilities.html#TYPEenriched_cflow_grid">enriched_cflow_grid</a>) <a href="Utilities.html#TYPEunary">unary</a></code></pre>
+<pre><span id="TYPEcanonical_form"><span class="keyword">type</span> <code class="type"></code>canonical_form</span> </pre>
+<div class="info ">
+Cannonic forms<br>
+</div>
+
+
+<pre><span id="VALcompare_canonical_form"><span class="keyword">val</span> compare_canonical_form</span> : <code class="type"><a href="Utilities.html#TYPEcanonical_form">canonical_form</a> -> <a href="Utilities.html#TYPEcanonical_form">canonical_form</a> -> int</code></pre>
+<pre><span id="VALcompute_canonical_form"><span class="keyword">val</span> compute_canonical_form</span> : <code class="type">(<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEcanonical_form">canonical_form</a>) <a href="Utilities.html#TYPEunary">unary</a></code></pre>
 <pre><span id="TYPEmusical_grid"><span class="keyword">type</span> <code class="type"></code>musical_grid</span> </pre>
 <div class="info ">
 Blackboard with debugging utilities<br>
@@ -244,20 +251,19 @@ Blackboard with debugging utilities<br>
 <pre><span id="TYPEobservable_hit"><span class="keyword">type</span> <code class="type"></code>observable_hit</span> </pre>
 
 
-<pre><span id="VALget_runtime_info_from_observable_hit"><span class="keyword">val</span> get_runtime_info_from_observable_hit</span> : <code class="type"><a href="Utilities.html#TYPEobservable_hit">observable_hit</a> -> unit Mods.simulation_info option</code></pre>
-<pre><span id="VALconvert_trace_into_musical_notation"><span class="keyword">val</span> convert_trace_into_musical_notation</span> : <code class="type">(<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEmusical_grid">musical_grid</a>) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
+<pre><span id="VALget_runtime_info_from_observable_hit"><span class="keyword">val</span> get_runtime_info_from_observable_hit</span> : <code class="type"><a href="Utilities.html#TYPEobservable_hit">observable_hit</a> -> unit Mods.simulation_info option</code></pre><div class="info ">
 Musical processing<br>
 </div>
 
+<pre><span id="VALconvert_trace_into_musical_notation"><span class="keyword">val</span> convert_trace_into_musical_notation</span> : <code class="type">(<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEmusical_grid">musical_grid</a>) <a href="Utilities.html#TYPEunary">unary</a></code></pre>
 <pre><span id="VALextract_observable_hits_from_musical_notation"><span class="keyword">val</span> extract_observable_hits_from_musical_notation</span> : <code class="type">(<a href="Utilities.html#TYPEmusical_grid">musical_grid</a>, <a href="Utilities.html#TYPEobservable_hit">observable_hit</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre>
 <pre><span id="VALextract_observable_hit_from_musical_notation"><span class="keyword">val</span> extract_observable_hit_from_musical_notation</span> : <code class="type">(string, <a href="Utilities.html#TYPEmusical_grid">musical_grid</a>, <a href="Utilities.html#TYPEobservable_hit">observable_hit</a>) <a href="Utilities.html#TYPEbinary">binary</a></code></pre>
 <pre><span id="VALcausal_prefix_of_an_observable_hit"><span class="keyword">val</span> causal_prefix_of_an_observable_hit</span> : <code class="type">(string, <a href="Utilities.html#TYPEmusical_grid">musical_grid</a>, <a href="Utilities.html#TYPEenriched_cflow_grid">enriched_cflow_grid</a>,<br>        <a href="Utilities.html#TYPEobservable_hit">observable_hit</a>, <a href="Utilities.html#TYPEtrace">trace</a>)<br>       <a href="Utilities.html#TYPEquaternary">quaternary</a></code></pre>
 <pre><span id="VALexport_musical_grid_to_xls"><span class="keyword">val</span> export_musical_grid_to_xls</span> : <code class="type">(string, int, int, <a href="Utilities.html#TYPEmusical_grid">musical_grid</a>, unit) <a href="Utilities.html#TYPEquaternary">quaternary</a></code></pre><div class="info ">
-Show the current status of the branch and cut assumptions in a libreoffice macro file<br>
-</div>
-
-<pre><span id="VALprint_musical_grid"><span class="keyword">val</span> print_musical_grid</span> : <code class="type">(<a href="Utilities.html#TYPEmusical_grid">musical_grid</a>, unit) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
+Show the current status of the branch and cut assumptions in a libreoffice macro file
+<p>
 Show the current status of the branch and cut assumptions in ASCII<br>
 </div>
 
+<pre><span id="VALprint_musical_grid"><span class="keyword">val</span> print_musical_grid</span> : <code class="type">(<a href="Utilities.html#TYPEmusical_grid">musical_grid</a>, unit) <a href="Utilities.html#TYPEunary">unary</a></code></pre>
 <pre><span id="VALget_counter"><span class="keyword">val</span> get_counter</span> : <code class="type"><a href="Utilities.html#TYPEstory_table">story_table</a> -> int</code></pre></body></html>
