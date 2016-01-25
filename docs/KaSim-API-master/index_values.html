@@ -13,6 +13,10 @@
 <link title="GenArray" rel="Chapter" href="GenArray.html">
 <link title="LargeArray" rel="Chapter" href="LargeArray.html">
 <link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Buffers" rel="Chapter" href="Buffers.html">
+<link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
+<link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
+<link title="Loggers" rel="Chapter" href="Loggers.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
@@ -52,6 +56,8 @@ Returns the current activity
 </div>
 </td></tr>
 <tr><td><a href="Nbr.html#VALadd">add</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Buffers.Buffers.html#VALadd">add</a> [<a href="Buffers.Buffers.html">Buffers.Buffers</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALadd">add</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -142,6 +148,10 @@ Starts creation
 <tr><td><a href="SetMap.Set.html#VALchoose">choose</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Plot.html#VALclose">close</a> [<a href="Plot.html">Plot</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALclose_logger">close_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALclose_row">close_row</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALcolon">colon</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
@@ -237,6 +247,8 @@ Give the number of stories (up to isomorphism classes) stored in a table
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALcreate">create</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
+<tr><td><a href="Buffers.Buffers.html#VALcreate">create</a> [<a href="Buffers.Buffers.html">Buffers.Buffers</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALcreate">create</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALcreate_story_table">create_story_table</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -286,6 +298,10 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Location.html#VALdummy">dummy</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALdummy_annot">dummy_annot</a> [<a href="Location.html">Location</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALdummy_html_logger">dummy_html_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALdummy_txt_logger">dummy_txt_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>E</td></tr>
 <tr><td><a href="Kappa_printer.html#VALelementary_rule">elementary_rule</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
@@ -454,6 +470,10 @@ the string contains the message to display in case of faillure of one call of th
 Apply the rule for sure if it is possible.
 </div>
 </td></tr>
+<tr><td><a href="Loggers.html#VALformatter_of_logger">formatter_of_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALfprintf">fprintf</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>G</td></tr>
 <tr><td><a href="Rule_interpreter.html#VALgenerate_stories">generate_stories</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
@@ -581,6 +601,8 @@ check wether there is an observable in a trace
 <tr><td><a href="Nbr.html#VALis_strictly_positive">is_strictly_positive</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALis_zero">is_zero</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Buffers.Buffers.html#VALiter">iter</a> [<a href="Buffers.Buffers.html">Buffers.Buffers</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALiter">iter</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -810,6 +832,12 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Counter.html#VALone_time_correction_event">one_time_correction_event</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
+<tr><td><a href="Loggers.html#VALopen_logger_from_channel">open_logger_from_channel</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALopen_logger_from_formatter">open_logger_from_formatter</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALopen_row">open_row</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pp.html#VALoption">option</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
 <tr><td><a href="Outputs.html#VALoutput_flux">output_flux</a> [<a href="Outputs.html">Outputs</a>]</td>
@@ -882,6 +910,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Operator.html#VALprint_bool_op">print_bool_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
+<tr><td><a href="Loggers.html#VALprint_cell">print_cell</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Operator.html#VALprint_compare_op">print_compare_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALprint_concrete_action">print_concrete_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
@@ -911,6 +941,8 @@ values of observables)
 <tr><td><a href="Signature.html#VALprint_internal_state">print_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALprint_musical_grid">print_musical_grid</a> [<a href="Utilities.html">Utilities</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALprint_newline">print_newline</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALprint_path">print_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
@@ -959,6 +991,8 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <tr><td><a href="SetMap.Set.html#VALrandom">random</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.Matching.html#VALreconstruct">reconstruct</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
+<td></td></tr>
+<tr><td><a href="Loggers.html#VALredirect">redirect</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALreinitialize">reinitialize</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
