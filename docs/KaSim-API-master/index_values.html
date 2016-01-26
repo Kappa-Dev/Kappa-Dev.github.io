@@ -114,7 +114,7 @@ Returns the graph obtained by applying the rule.
 </td></tr>
 <tr><td><a href="Edges.html#VALare_connected">are_connected</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">are_connected ?candidate sigs graph x_name x y</code>
+<code class="code">are_connected ?candidate sigs graph x_name x y nodes_x nodes_y dist</code>
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALarity">arity</a> [<a href="Signature.html">Signature</a>]</td>
@@ -490,6 +490,11 @@ Apply the rule for sure if it is possible.
 <td></td></tr>
 <tr><td><a href="Environment.html#VALget_alg_reverse_dependencies">get_alg_reverse_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
+<tr><td><a href="Connected_component.Matching.html#VALget_all">get_all</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
+<td><div class="info">
+<code class="code">get_all graph matching_of_previous_cc cc root </code>
+</div>
+</td></tr>
 <tr><td><a href="Environment.html#VALget_always_outdated">get_always_outdated</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALget_counter">get_counter</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -991,7 +996,10 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <tr><td><a href="SetMap.Set.html#VALrandom">random</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.Matching.html#VALreconstruct">reconstruct</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<code class="code">reconstruct graph matching_of_previous_cc cc_id_in_rule cc root </code>
+</div>
+</td></tr>
 <tr><td><a href="Loggers.html#VALredirect">redirect</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALreinitialize">reinitialize</a> [<a href="Counter.html">Counter</a>]</td>

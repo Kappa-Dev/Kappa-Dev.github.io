@@ -110,12 +110,12 @@ wired because perturbations can redefined alg_expr.<br>
 
 <pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">?rule_id:int -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
 Returns the graph obtained by applying the rule.
- <code class="code">rule_id</code> is mandatory if the rula has an unary rate.<br>
+ <code class="code">rule_id</code> is mandatory if the rule has an unary rate.<br>
 </div>
 
 <pre><span id="VALapply_unary_rule"><span class="keyword">val</span> apply_unary_rule</span> : <code class="type">rule_id:int -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
 Returns the graph obtained by applying the rule.
- <code class="code">rule_id</code> is mandatory if the rula has an unary rate.<br>
+ <code class="code">rule_id</code> is mandatory if the rule has an unary rate.<br>
 </div>
 
 <pre><span id="VALforce_rule"><span class="keyword">val</span> force_rule</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       Causal.event_kind -><br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> * <a href="Connected_component.Matching.html#TYPEt">Connected_component.Matching.t</a> list option</code></pre><div class="info ">

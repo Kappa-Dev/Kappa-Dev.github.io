@@ -63,7 +63,14 @@
 <pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="Connected_component.Matching.html#TYPEt">t</a></code></pre>
 <pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">Format.formatter -> <a href="Connected_component.Matching.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Connected_component.ContentAgent.html#TYPEt">Connected_component.ContentAgent.t</a> * int -><br>       <a href="Connected_component.Matching.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALreconstruct"><span class="keyword">val</span> reconstruct</span> : <code class="type"><a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Connected_component.Matching.html#TYPEt">t</a> -><br>       int -> <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -> int -> <a href="Connected_component.Matching.html#TYPEt">t</a> option</code></pre>
+<pre><span id="VALreconstruct"><span class="keyword">val</span> reconstruct</span> : <code class="type"><a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Connected_component.Matching.html#TYPEt">t</a> -><br>       int -> <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -> int -> <a href="Connected_component.Matching.html#TYPEt">t</a> option</code></pre><div class="info ">
+<code class="code">reconstruct graph matching_of_previous_cc cc_id_in_rule cc root </code><br>
+</div>
+
+<pre><span id="VALget_all"><span class="keyword">val</span> get_all</span> : <code class="type"><a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Connected_component.Matching.html#TYPEt">t</a> -> <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -> int -> int list</code></pre><div class="info ">
+<code class="code">get_all graph matching_of_previous_cc cc root </code><br>
+</div>
+
 <pre><span id="VALobservables_from_agent"><span class="keyword">val</span> observables_from_agent</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Edges.html#TYPEagent">Edges.agent</a> -><br>       (<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> * (int * int)) list * Operator.DepSet.t</code></pre><div class="info ">
 <code class="code">observables_from_free domain graph sort agent</code>
     the int * int in the return list and the following ones
