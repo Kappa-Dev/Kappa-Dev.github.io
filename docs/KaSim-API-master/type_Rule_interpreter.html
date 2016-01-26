@@ -84,9 +84,21 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Causal</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Matching</span>.t&nbsp;list&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Causal</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;adjust_rule_instances&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rule_id:int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;adjust_unary_rule_instances&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rule_id:int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extra_outdated_var&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_outdated_activities&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
