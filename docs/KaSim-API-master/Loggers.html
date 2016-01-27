@@ -103,11 +103,15 @@
 <pre><span id="VALprint_newline"><span class="keyword">val</span> print_newline</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALprint_cell"><span class="keyword">val</span> print_cell</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> unit</code></pre>
 <pre><span id="VALclose_logger"><span class="keyword">val</span> close_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALopen_infinite_buffer"><span class="keyword">val</span> open_infinite_buffer</span> : <code class="type">?mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> unit -> <a href="Loggers.html#TYPEt">t</a></code></pre>
+<pre><span id="VALopen_circular_buffer"><span class="keyword">val</span> open_circular_buffer</span> : <code class="type">?mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> ?size:int -> unit -> <a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALopen_logger_from_formatter"><span class="keyword">val</span> open_logger_from_formatter</span> : <code class="type">?mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> Format.formatter -> <a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALopen_logger_from_channel"><span class="keyword">val</span> open_logger_from_channel</span> : <code class="type">?mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> Pervasives.out_channel -> <a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALopen_row"><span class="keyword">val</span> open_row</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALclose_row"><span class="keyword">val</span> close_row</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint_breakable_space"><span class="keyword">val</span> print_breakable_space</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALdummy_txt_logger"><span class="keyword">val</span> dummy_txt_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALdummy_html_logger"><span class="keyword">val</span> dummy_html_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALredirect"><span class="keyword">val</span> redirect</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> <a href="Loggers.html#TYPEt">t</a></code></pre>
-<pre><span id="VALformatter_of_logger"><span class="keyword">val</span> formatter_of_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter option</code></pre></body></html>
+<pre><span id="VALformatter_of_logger"><span class="keyword">val</span> formatter_of_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter option</code></pre>
+<pre><span id="VALflush_buffer"><span class="keyword">val</span> flush_buffer</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> unit</code></pre></body></html>

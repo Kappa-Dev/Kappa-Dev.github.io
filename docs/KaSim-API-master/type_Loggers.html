@@ -52,14 +52,19 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_newline&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_cell&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;close_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;open_infinite_buffer&nbsp;:&nbsp;?mode:<span class="constructor">Loggers</span>.encoding&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;open_circular_buffer&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?mode:<span class="constructor">Loggers</span>.encoding&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;?size:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;open_logger_from_formatter&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?mode:<span class="constructor">Loggers</span>.encoding&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;open_logger_from_channel&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?mode:<span class="constructor">Loggers</span>.encoding&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pervasives</span>.out_channel&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;open_row&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;close_row&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_breakable_space&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dummy_txt_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dummy_html_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;redirect&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;formatter_of_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flush_buffer&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 <span class="keyword">end</span></code></body></html>
