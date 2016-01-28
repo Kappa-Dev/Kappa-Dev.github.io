@@ -231,13 +231,6 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_rate_absolute">r_rate_absolute</span>&nbsp;: <code class="type">bool</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
 <code><span id="TYPEELTrule.r_un_rate">r_un_rate</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> *<br>        int <a href="Location.html#TYPEannot">Location.annot</a> option)<br>       option</code>;</code></td>
 
 </tr></table>
@@ -262,13 +255,9 @@ lot of sanity on mixtures:<ul>
 <li>unique internal_state / site</li>
 <li>links appear exactly twice</li>
 </ul>
-<br>
+
+The sanity checks on rates consists in ensuring that if the algebraic
+expression of the rate contains a mixture then a new variable is declared
+called rulelabel_un_rate; it is necessary in the update phase.<br>
 </div>
-<br>
-The sanity checks on rates consists in ensuring that<ul>
-<li>either absolute or unary rates are provided;</li>
-<li>if the algebraic expression of the rate contains a mixture then a new variable
- is declared called rulelabel_un_rate; it is necessary in the update phase.</li>
-</ul>
-<br>
 </body></html>
