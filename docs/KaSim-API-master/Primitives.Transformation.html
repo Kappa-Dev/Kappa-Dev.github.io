@@ -56,51 +56,52 @@ Elementary rule transformations<br>
 </div>
 <hr width="100%">
 
-<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.Agent"><span class="constructor">Agent</span></span> <span class="keyword">of</span> <code class="type"><a href="Agent_place.html#TYPEt">Agent_place.t</a></code></code></td>
+<code><span id="TYPEELTt.Agent"><span class="constructor">Agent</span></span> <span class="keyword">of</span> <code class="type">'a</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.Freed"><span class="constructor">Freed</span></span> <span class="keyword">of</span> <code class="type"><a href="Agent_place.html#TYPEt">Agent_place.t</a> * int</code></code></td>
+<code><span id="TYPEELTt.Freed"><span class="constructor">Freed</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">Instantiation.site</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.Linked"><span class="constructor">Linked</span></span> <span class="keyword">of</span> <code class="type">(<a href="Agent_place.html#TYPEt">Agent_place.t</a> * int) * (<a href="Agent_place.html#TYPEt">Agent_place.t</a> * int)</code></code></td>
+<code><span id="TYPEELTt.Linked"><span class="constructor">Linked</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">Instantiation.site</a> * 'a <a href="Instantiation.html#TYPEsite">Instantiation.site</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.NegativeWhatEver"><span class="constructor">NegativeWhatEver</span></span> <span class="keyword">of</span> <code class="type"><a href="Agent_place.html#TYPEt">Agent_place.t</a> * int</code></code></td>
+<code><span id="TYPEELTt.NegativeWhatEver"><span class="constructor">NegativeWhatEver</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">Instantiation.site</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.PositiveInternalized"><span class="constructor">PositiveInternalized</span></span> <span class="keyword">of</span> <code class="type"><a href="Agent_place.html#TYPEt">Agent_place.t</a> * int * int</code></code></td>
+<code><span id="TYPEELTt.PositiveInternalized"><span class="constructor">PositiveInternalized</span></span> <span class="keyword">of</span> <code class="type">'a * <a href="Instantiation.html#TYPEsite_name">Instantiation.site_name</a> * <a href="Instantiation.html#TYPEinternal_state">Instantiation.internal_state</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.NegativeInternalized"><span class="constructor">NegativeInternalized</span></span> <span class="keyword">of</span> <code class="type"><a href="Agent_place.html#TYPEt">Agent_place.t</a> * int</code></code></td>
+<code><span id="TYPEELTt.NegativeInternalized"><span class="constructor">NegativeInternalized</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Instantiation.html#TYPEsite">Instantiation.site</a></code></code></td>
 
 </tr></table>
 
 
 
-<pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type"><a href="Connected_component.html#TYPEwork">Connected_component.work</a> -><br>       int -><br>       <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -><br>       Renaming.t -> <a href="Primitives.Transformation.html#TYPEt">t</a> -> <a href="Primitives.Transformation.html#TYPEt">t</a></code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Primitives.Transformation.html#TYPEt">t</a> -> unit</code></pre></body></html>
+<pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type"><a href="Connected_component.html#TYPEwork">Connected_component.work</a> -><br>       int -><br>       <a href="Connected_component.html#TYPEcc">Connected_component.cc</a> -><br>       Renaming.t -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a> -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a></code></pre>
+<pre><span id="VALconcretize"><span class="keyword">val</span> concretize</span> : <code class="type"><a href="Connected_component.Matching.html#TYPEt">Connected_component.Matching.t</a> * int Mods.IntMap.t -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Primitives.Transformation.html#TYPEt">t</a></code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       Format.formatter -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a> -> unit</code></pre></body></html>
