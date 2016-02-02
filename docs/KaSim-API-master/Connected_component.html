@@ -102,8 +102,8 @@ Starts creation<br>
 <h6 id="6_Useaconnectedcomponent">Use a connected component </h6><br>
 
 <pre><span id="VALis_equal_canonicals"><span class="keyword">val</span> is_equal_canonicals</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> <a href="Connected_component.html#TYPEt">t</a> -> bool</code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       bool -> Format.formatter -> <a href="Connected_component.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
-<code class="code">print ~sigs print_id form cc</code><br>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       ?with_id:unit -> Format.formatter -> <a href="Connected_component.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<code class="code">print ~sigs ?with_id:<span class="constructor">None</span> form cc</code><br>
 </div>
 
 <pre><span id="VALprint_dot"><span class="keyword">val</span> print_dot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Connected_component.html#TYPEt">t</a> -> unit</code></pre>
