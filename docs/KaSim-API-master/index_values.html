@@ -201,7 +201,7 @@ Retuns all the extension of the given injections so that the second edge
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALcompress">compress</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
-compress a trace with the level of abstraction defined in the argument parameter
+compress a trace with the level of abstraction defined in the argument parameter.
 </div>
 </td></tr>
 <tr><td><a href="Compression_main.html#VALcompress_and_print">compress_and_print</a> [<a href="Compression_main.html">Compression_main</a>]</td>
@@ -1147,7 +1147,9 @@ Store trace in story table
 <td><div class="info">
 compute the strong compression of a given trace,
     if parameter.compute_all_stories, then each minimal stories is computed,
-    otherwise, only the first found one is provided
+    otherwise, only the first found one is provided;
+    the optional argument heuristic can be used to redefined the heuristic that
+    select which event to try to discard first.
 </div>
 </td></tr>
 <tr><td><a href="Nbr.html#VALsub">sub</a> [<a href="Nbr.html">Nbr</a>]</td>
@@ -1252,7 +1254,9 @@ Resynchronize the state after a rule application.
 <td><div class="info">
 compute the weak compression of a given trace,
     if parameter.compute_all_stories, then each minimal stories is computed,
-    otherwise, only the first found one is provided
+    otherwise, only the first found one is provided;
+    the optional argument heuristic can be used to redefined the heuristic that
+    select which event to try to discard first.
 </div>
 </td></tr>
 <tr><td align="left"><br>Z</td></tr>

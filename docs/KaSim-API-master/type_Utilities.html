@@ -109,8 +109,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;make_unambiguous&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;weakly_compress&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?heuristic:<span class="constructor">Priority</span>.priorities&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;strongly_compress&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?heuristic:<span class="constructor">Priority</span>.priorities&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_over_the_causal_past_of_observables_with_a_progress_bar&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.shall_we,&nbsp;<span class="constructor">Utilities</span>.shall_we,&nbsp;int,<br>
@@ -141,7 +143,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.story_table,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Causal</span>.grid&nbsp;*&nbsp;<span class="constructor">Utilities</span>.trace_runtime_info&nbsp;list)&nbsp;list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.unary<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compress&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compress&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?heuristic:<span class="constructor">Priority</span>.priorities&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_compression_mode&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Parameter</span>.current_compression_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.parameter<br>
