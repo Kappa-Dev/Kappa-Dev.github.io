@@ -46,7 +46,13 @@
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
 <link title="Utilities" rel="Chapter" href="Utilities.html">
-<link title="Compression_main" rel="Chapter" href="Compression_main.html"><title>KaSim API : Utilities</title>
+<link title="Compression_main" rel="Chapter" href="Compression_main.html">
+<link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Analyzer" rel="Chapter" href="Analyzer.html">
+<link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
+<link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Product" rel="Chapter" href="Product.html">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Utilities</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="State_interpreter.html" title="State_interpreter">Previous</a>
@@ -161,7 +167,7 @@ remove_obs_before removes the observable_hits before the simulation info prodide
 reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)<br>
 </div>
 
-<pre><span id="VALweakly_compress"><span class="keyword">val</span> weakly_compress</span> : <code class="type">?heuristic:Priority.priorities -><br>       (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
+<pre><span id="VALweakly_compress"><span class="keyword">val</span> weakly_compress</span> : <code class="type">?heuristic:<a href="Priority.html#TYPEpriorities">Priority.priorities</a> -><br>       (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
 compute the weak compression of a given trace,
     if parameter.compute_all_stories, then each minimal stories is computed,
     otherwise, only the first found one is provided;
@@ -169,7 +175,7 @@ compute the weak compression of a given trace,
     select which event to try to discard first.<br>
 </div>
 
-<pre><span id="VALstrongly_compress"><span class="keyword">val</span> strongly_compress</span> : <code class="type">?heuristic:Priority.priorities -><br>       (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
+<pre><span id="VALstrongly_compress"><span class="keyword">val</span> strongly_compress</span> : <code class="type">?heuristic:<a href="Priority.html#TYPEpriorities">Priority.priorities</a> -><br>       (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
 compute the strong compression of a given trace,
     if parameter.compute_all_stories, then each minimal stories is computed,
     otherwise, only the first found one is provided;
@@ -220,7 +226,7 @@ convert a table into a list of grid (with runtime information)<br>
 <br>
 The following functions are for expert only<br>
 
-<pre><span id="VALcompress"><span class="keyword">val</span> compress</span> : <code class="type">?heuristic:Priority.priorities -><br>       (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
+<pre><span id="VALcompress"><span class="keyword">val</span> compress</span> : <code class="type">?heuristic:<a href="Priority.html#TYPEpriorities">Priority.priorities</a> -><br>       (<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a> list) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
 compress a trace with the level of abstraction defined in the argument parameter.
     The optional argument heuristic can be used to tune the heuristic that select which
     event will be tried to be discarded first.<br>

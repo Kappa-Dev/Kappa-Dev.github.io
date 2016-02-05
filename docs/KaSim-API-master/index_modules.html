@@ -42,7 +42,13 @@
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
 <link title="Utilities" rel="Chapter" href="Utilities.html">
-<link title="Compression_main" rel="Chapter" href="Compression_main.html"><title>KaSim API : Index of modules</title>
+<link title="Compression_main" rel="Chapter" href="Compression_main.html">
+<link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Analyzer" rel="Chapter" href="Analyzer.html">
+<link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
+<link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Product" rel="Chapter" href="Product.html">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Index of modules</title>
 </head>
 <body>
 <div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
@@ -58,6 +64,51 @@ An agent in a connected component
 <tr><td><a href="Alg_expr.html">Alg_expr</a> </td>
 <td><div class="info">
 depend in time, depend in event number, depend in given var
+</div>
+</td></tr>
+<tr><td><a href="Analyzer.html">Analyzer</a> </td>
+<td><div class="info">
+* analyzer_headers.mli
+  * openkappa
+  * Jérôme Feret &amp; Ly Kim Quyen, projet Abstraction, INRIA Paris-Rocquencourt
+  * 
+  * Creation: 2016, the 30th of January
+  * Last modification: 
+  * 
+  * Compute the relations between sites in the BDU data structures
+  * 
+  * Copyright 2010,2011,2012,2013,2014,2015,2016 Institut National de Recherche 
+  * en Informatique et en Automatique.
+</div>
+</td></tr>
+<tr><td><a href="Analyzer_domain_sig.html">Analyzer_domain_sig</a> </td>
+<td><div class="info">
+* analyzer_sig.mli
+  * openkappa
+  * Jérôme Feret &amp; Ly Kim Quyen, projet Abstraction, INRIA Paris-Rocquencourt
+  * 
+  * Creation: 2016, the 30th of January
+  * Last modification: 
+  * 
+  * Compute the relations between sites in the BDU data structures
+  * 
+  * Copyright 2010,2011,2012,2013,2014,2015,2016 Institut National de Recherche 
+  * en Informatique et en Automatique.
+</div>
+</td></tr>
+<tr><td><a href="Analyzer_headers.html">Analyzer_headers</a> </td>
+<td><div class="info">
+* analyzer_headers.mli
+  * openkappa
+  * Jérôme Feret &amp; Ly Kim Quyen, projet Abstraction, INRIA Paris-Rocquencourt
+  *
+  * Creation: 2016, the 30th of January
+  * Last modification:
+  *
+  * Compute the relations between sites in the BDU data structures
+  *
+  * Copyright 2010,2011,2012,2013,2014,2015,2016 Institut National de Recherche
+  * en Informatique et en Automatique.
 </div>
 </td></tr>
 <tr><td align="left"><br>B</td></tr>
@@ -124,6 +175,8 @@ Trace of a rule exactly as the user wrote it (before
 compilation)
 </div>
 </td></tr>
+<tr><td><a href="Mvbdu_wrapper.IntMvbdu.html">IntMvbdu</a> [<a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>K</td></tr>
 <tr><td><a href="Kappa_printer.html">Kappa_printer</a> </td>
 <td><div class="info">
@@ -141,11 +194,17 @@ Intermediate representation of model on wich sanity has been checked
 Implementation of array only limited by max_int
 </div>
 </td></tr>
+<tr><td><a href="Priority.LevelMap.html">LevelMap</a> [<a href="Priority.html">Priority</a>]</td>
+<td></td></tr>
 <tr><td><a href="Location.html">Location</a> </td>
 <td></td></tr>
 <tr><td><a href="Loggers.html">Loggers</a> </td>
 <td></td></tr>
 <tr><td align="left"><br>M</td></tr>
+<tr><td><a href="Mvbdu_wrapper.Make.html">Make</a> [<a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a>]</td>
+<td></td></tr>
+<tr><td><a href="Analyzer.Make.html">Make</a> [<a href="Analyzer.html">Analyzer</a>]</td>
+<td></td></tr>
 <tr><td><a href="SetMap.Make.html">Make</a> [<a href="SetMap.html">SetMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.Map.html">Map</a> [<a href="Connected_component.html">Connected_component</a>]</td>
@@ -153,6 +212,10 @@ Implementation of array only limited by max_int
 <tr><td><a href="SetMap.S.Map.html">Map</a> [<a href="SetMap.S.html">SetMap.S</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.Matching.html">Matching</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu</a> [<a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a>]</td>
+<td></td></tr>
+<tr><td><a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a> </td>
 <td></td></tr>
 <tr><td align="left"><br>N</td></tr>
 <tr><td><a href="NamedDecls.html">NamedDecls</a> </td>
@@ -176,6 +239,10 @@ Kappa numbers (either float, int or int64) and operations on them
 Compiled algebraic expression
 </div>
 </td></tr>
+<tr><td><a href="Mvbdu_wrapper.Optimized_IntMvbdu.html">Optimized_IntMvbdu</a> [<a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a>]</td>
+<td></td></tr>
+<tr><td><a href="Mvbdu_wrapper.Optimized_Mvbdu.html">Optimized_Mvbdu</a> [<a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a>]</td>
+<td></td></tr>
 <tr><td><a href="Outputs.html">Outputs</a> </td>
 <td><div class="info">
 Flux map
@@ -199,6 +266,38 @@ Plot point storage and rendering
 <tr><td><a href="Primitives.html">Primitives</a> </td>
 <td><div class="info">
 Compiled kappa model unit
+</div>
+</td></tr>
+<tr><td><a href="Priority.html">Priority</a> </td>
+<td><div class="info">
+* priority.mli
+  *
+  * Creation: 03/02/2016
+  * Last modification: Time-stamp: &lt;2016-02-03 20:19:15 feret&gt;
+  *
+  * Causal flow compression: a module for KaSim
+  * Jérôme Feret, projet Abstraction, INRIA Paris-Rocquencourt
+  * Jean Krivine, Université Paris-Diderot, CNRS
+  *
+  * KaSim
+  * Jean Krivine, Université Paris Dederot, CNRS
+  *
+  *
+  * Some parameters references can be tuned thanks to
+  * command-line options other variables has to be set
+  * before compilation
+  *
+  * Copyright 2011 Institut National de Recherche en
+  * Informatique et en Automatique.
+</div>
+</td></tr>
+<tr><td><a href="Product.Product.html">Product</a> </td>
+<td></td></tr>
+<tr><td><a href="Product.html">Product</a> </td>
+<td><div class="info">
+The functor is almost symmetric, but better time performances will be 
+obtained by using New_domain as a single domain and UNderlying_domain as a 
+list of domains (obtained as the result of the product domain.
 </div>
 </td></tr>
 <tr><td><a href="SetMap.Proj.html">Proj</a> [<a href="SetMap.html">SetMap</a>]</td>
