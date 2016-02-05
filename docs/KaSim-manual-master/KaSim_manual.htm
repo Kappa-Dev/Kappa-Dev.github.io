@@ -6528,9 +6528,9 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (4d94354) (without Tk interface)
- <br />Analysis launched at 2016/02/05 15:19:13 (GMT+0) on
- <br />testing-worker-linux-docker-7481d7f1-3382-linux-5
+Kappa Static Analyzer (ce991f0) (without Tk interface)
+ <br />Analysis launched at 2016/02/05 15:25:58 (GMT+0) on
+ <br />testing-worker-linux-docker-61247198-3372-linux-1
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6556,9 +6556,9 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (4d94354) (without Tk interface)
- <br />Analysis launched at 2016/02/05 15:19:13 (GMT+0) on
- <br />testing-worker-linux-docker-7481d7f1-3382-linux-5
+Kappa Static Analyzer (ce991f0) (without Tk interface)
+ <br />Analysis launched at 2016/02/05 15:25:58 (GMT+0) on
+ <br />testing-worker-linux-docker-61247198-3372-linux-1
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6572,18 +6572,15 @@ Kappa Static Analyzer (4d94354) (without Tk interface)
  <br />------------------------------------------------------------
  <br />* Relational properties:
  <br />------------------------------------------------------------
- <br />In agent A, the internal state of site x is p whenever the
- <br />binding state of site y is A@y.
  <br />
  <br />------------------------------------------------------------
  <br />* Non relational properties:
  <br />------------------------------------------------------------
- <br />The binding state of site y in agent A ranges over free and
- <br />A@y.
+ <br />The binding state of site y in agent A is always free.
  <br />The internal state of site y in agent A is always u.
- <br />The internal state of site x in agent A ranges over u and p.
+ <br />The internal state of site x in agent A is always u.
  <br />execution finished without any exception</div>
-<!--l. 29--><p class="nopar" >
+<!--l. 26--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.4: </span><span  
 class="content">Reachability analysis of the model <span 
@@ -6676,10 +6673,9 @@ class="content">Reachability analysis: extensional description of initial states
 <div class="verbatim" id="verbatim-10">
 Applying rule 0: A.p:
  <br />the precondition is satisfied
- <br />Updating the views for A(x~,y!)
  <br />
- <br />A(x~p,y!free)</div>
-<!--l. 8--><p class="nopar" >
+ <br />Applying rule 1: dimer:</div>
+<!--l. 7--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.8: </span><span  
 class="content">Reachability analysis: extensional description of the new views created when
@@ -6701,14 +6697,8 @@ applying a rule.</span></div><!--tex4ht:label?: x1-620158 -->
 <div class="verbatim" id="verbatim-11">
 Applying rule 0: A.p:
  <br />the precondition is satisfied
- <br />Updating the views for A(x~,y!)
- <br />
- <br />A(x~p,y!free)
- <br />(rule 0: A.p) should be investigated
- <br />(rule 1: dimer) should be investigated
- <br />(rule 2: dead) should be investigated
  <br /></div>
-<!--l. 11--><p class="nopar" >
+<!--l. 5--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.9: </span><span  
 class="content">Reachability analysis: discovering new views force the analysis to apply some
