@@ -66,7 +66,23 @@ type of the arguments of the main function<br>
 </div>
 <hr width="100%">
 
-<pre><span id="TYPEcompilation_result"><span class="keyword">type</span> <code class="type"></code>compilation_result</span> </pre>
+<pre><code><span id="TYPEcompilation_result"><span class="keyword">type</span> <code class="type"></code>compilation_result</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompilation_result.cc_code">cc_code</span>&nbsp;: <code class="type">Cckappa_sig.compil</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompilation_result.kappa_handler">kappa_handler</span>&nbsp;: <code class="type">Cckappa_sig.kappa_handler</code>;</code></td>
+
+</tr></table>
+}
+
 
 
 <pre><span id="TYPErule_id"><span class="keyword">type</span> <code class="type"></code>rule_id</span> = <code class="type">int</code> </pre>
@@ -80,10 +96,18 @@ type of the static information to be passed to each domain, let us
     information between what is common, and what is specific to each
     domain.<br>
 
-<pre><span id="TYPEglobal_static_information"><span class="keyword">type</span> <code class="type"></code>global_static_information</span> </pre>
+<pre><span id="TYPEglobal_static_information"><span class="keyword">type</span> <code class="type"></code>global_static_information</span> = <code class="type"><a href="Analyzer_headers.html#TYPEcompilation_result">compilation_result</a> * Remanent_parameters_sig.parameters</code> </pre>
 
 
-<pre><span id="TYPEglobal_dynamic_information"><span class="keyword">type</span> <code class="type"></code>global_dynamic_information</span> </pre>
+<pre><code><span id="TYPEglobal_dynamic_information"><span class="keyword">type</span> <code class="type"></code>global_dynamic_information</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTglobal_dynamic_information.()"><span class="constructor">()</span></span></code></td>
+
+</tr></table>
+
 
 
 <pre><code><span id="TYPEevent"><span class="keyword">type</span> <code class="type"></code>event</span> = </code></pre><table class="typetable">
@@ -109,13 +133,8 @@ This is the type of the encoding of a chemical mixture as a result of
 <pre><span id="TYPEinitial_state"><span class="keyword">type</span> <code class="type"></code>initial_state</span> = <code class="type">Cckappa_sig.enriched_init</code> </pre>
 
 
-<pre><span id="VALinitialize_global_information"><span class="keyword">val</span> initialize_global_information</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Mvbdu_wrapper.Mvbdu.html#TYPEhandler">Mvbdu_wrapper.Mvbdu.handler</a> -><br>       Cckappa_sig.compil -><br>       Cckappa_sig.kappa_handler -><br>       Exception.method_handler * <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> *<br>       <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">global_dynamic_information</a></code></pre>
+<pre><span id="VALinitialize_global_information"><span class="keyword">val</span> initialize_global_information</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Analyzer_headers.html#TYPEcompilation_result">compilation_result</a> -><br>       Exception.method_handler * <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> *<br>       <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">global_dynamic_information</a></code></pre>
 <pre><span id="VALdummy_precondition"><span class="keyword">val</span> dummy_precondition</span> : <code class="type"><a href="Analyzer_headers.html#TYPEprecondition">precondition</a></code></pre>
 <pre><span id="VALget_parameter"><span class="keyword">val</span> get_parameter</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Remanent_parameters_sig.parameters</code></pre>
 <pre><span id="VALget_compilation_information"><span class="keyword">val</span> get_compilation_information</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       <a href="Analyzer_headers.html#TYPEcompilation_result">compilation_result</a></code></pre>
-<pre><span id="VALget_bdu_common_static"><span class="keyword">val</span> get_bdu_common_static</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Bdu_analysis_type.bdu_common_static</code></pre>
-<pre><span id="VALcompute_initial_state"><span class="keyword">val</span> compute_initial_state</span> : <code class="type">Exception.method_handler -><br>       <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Exception.method_handler * <a href="Analyzer_headers.html#TYPEinitial_state">initial_state</a> list</code></pre>
-<pre><span id="VALget_kappa_handler"><span class="keyword">val</span> get_kappa_handler</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -> Cckappa_sig.kappa_handler</code></pre>
-<pre><span id="VALget_cc_code"><span class="keyword">val</span> get_cc_code</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -> Cckappa_sig.compil</code></pre>
-<pre><span id="VALget_mvbdu_handler"><span class="keyword">val</span> get_mvbdu_handler</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_dynamic_information">global_dynamic_information</a> -> <a href="Mvbdu_wrapper.Mvbdu.html#TYPEhandler">Mvbdu_wrapper.Mvbdu.handler</a></code></pre>
-<pre><span id="VALset_mvbdu_handler"><span class="keyword">val</span> set_mvbdu_handler</span> : <code class="type"><a href="Mvbdu_wrapper.Mvbdu.html#TYPEhandler">Mvbdu_wrapper.Mvbdu.handler</a> -><br>       <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">global_dynamic_information</a> -><br>       <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">global_dynamic_information</a></code></pre></body></html>
+<pre><span id="VALget_initial_state"><span class="keyword">val</span> get_initial_state</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       <a href="Analyzer_headers.html#TYPEinitial_state">initial_state</a> list</code></pre></body></html>

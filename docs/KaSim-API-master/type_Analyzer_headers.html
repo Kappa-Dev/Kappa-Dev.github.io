@@ -51,10 +51,15 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;compilation_result<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;compilation_result&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cc_code&nbsp;:&nbsp;<span class="constructor">Cckappa_sig</span>.compil;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;kappa_handler&nbsp;:&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler;<br>
+&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id&nbsp;=&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_static_information<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_dynamic_information<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_static_information&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.compilation_result&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_dynamic_information&nbsp;=&nbsp;()<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;event&nbsp;=&nbsp;<span class="constructor">Check_rule</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Analyzer_headers</span>.rule_id<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;precondition&nbsp;=&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;kasa_state&nbsp;=&nbsp;unit<br>
@@ -62,9 +67,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize_global_information&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.compilation_result&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dummy_precondition&nbsp;:&nbsp;<span class="constructor">Analyzer_headers</span>.precondition<br>
@@ -74,22 +77,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compilation_information&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.compilation_result<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_bdu_common_static&nbsp;:<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_initial_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Bdu_analysis_type</span>.bdu_common_static<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compute_initial_state&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer_headers</span>.initial_state&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_kappa_handler&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_cc_code&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Cckappa_sig</span>.compil<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_mvbdu_handler&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.handler<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_mvbdu_handler&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.initial_state&nbsp;list<br>
 <span class="keyword">end</span></code></body></html>
