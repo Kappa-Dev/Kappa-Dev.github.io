@@ -132,7 +132,21 @@ check wether there is an observable in a trace<br>
 </div>
 
 <pre><span id="VALtrace_of_pretrace"><span class="keyword">val</span> trace_of_pretrace</span> : <code class="type">S.PH.B.PB.CI.Po.K.refined_step list -> <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
-convert a list of refined step into a trace<br>
+convert a list of refined steps into a trace<br>
+</div>
+
+<pre><span id="VALget_pretrace_of_trace"><span class="keyword">val</span> get_pretrace_of_trace</span> : <code class="type"><a href="Utilities.html#TYPEtrace">trace</a> -> S.PH.B.PB.CI.Po.K.refined_step list</code></pre><div class="info ">
+conversely, convert a trace in a list of refined steps<br>
+</div>
+
+<pre><span id="VALget_simulation_time_of_event"><span class="keyword">val</span> get_simulation_time_of_event</span> : <code class="type">S.PH.B.PB.CI.Po.K.refined_step -> float option</code></pre><div class="info ">
+get the date of an event in the simulation 
+    only proper events have a time<br>
+</div>
+
+<pre><span id="VALget_id_of_event"><span class="keyword">val</span> get_id_of_event</span> : <code class="type">S.PH.B.PB.CI.Po.K.refined_step -> int option</code></pre><div class="info ">
+get the id of an event in the simulation
+    only proper events have an id<br>
 </div>
 
 <pre><span id="VALremove_events_after_last_obs"><span class="keyword">val</span> remove_events_after_last_obs</span> : <code class="type">(<a href="Utilities.html#TYPEtrace">trace</a>, <a href="Utilities.html#TYPEtrace">trace</a>) <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">

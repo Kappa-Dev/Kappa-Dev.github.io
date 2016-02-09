@@ -56,7 +56,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init_secret_log_info&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Compression_main</span>.secret_log_info<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;secret_store_event&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Compression_main</span>.secret_log_info&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Causal</span>.event_kind&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.event&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Causal</span>.event_kind&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.event&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Compression_main</span>.secret_step&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Compression_main</span>.secret_log_info&nbsp;*&nbsp;<span class="constructor">Compression_main</span>.secret_step&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;secret_store_obs&nbsp;:<br>
