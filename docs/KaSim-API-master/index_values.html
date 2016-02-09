@@ -88,8 +88,6 @@ depend in time, depend in event number, depend in given var
 </td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALadd_initial_state">add_initial_state</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
 <td></td></tr>
-<tr><td><a href="Analyzer.Analyzer.html#VALadd_initial_state">add_initial_state</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
-<td></td></tr>
 <tr><td><a href="Edges.html#VALadd_internal">add_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
 <code class="code">add_internal agent_id site internal_state graph</code>
@@ -121,8 +119,6 @@ depend in time, depend in event number, depend in given var
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALapply_event_list">apply_event_list</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALapply_rule">apply_rule</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
-<td></td></tr>
-<tr><td><a href="Analyzer.Analyzer.html#VALapply_rule">apply_rule</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALapply_rule">apply_rule</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td><div class="info">
@@ -253,6 +249,8 @@ compress a trace with the level of abstraction defined in the argument parameter
 <tr><td><a href="Compression_main.html#VALcompress_and_print">compress_and_print</a> [<a href="Compression_main.html">Compression_main</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALcompute_canonical_form">compute_canonical_form</a> [<a href="Utilities.html">Utilities</a>]</td>
+<td></td></tr>
+<tr><td><a href="Analyzer_headers.html#VALcompute_initial_state">compute_initial_state</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALconcat">concat</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
@@ -601,6 +599,10 @@ Apply the rule for sure if it is possible.
 <td></td></tr>
 <tr><td><a href="Environment.html#VALget_always_outdated">get_always_outdated</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
+<tr><td><a href="Analyzer_headers.html#VALget_bdu_common_static">get_bdu_common_static</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Analyzer_headers.html#VALget_cc_code">get_cc_code</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_compilation_information">get_compilation_information</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALget_counter">get_counter</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -613,13 +615,15 @@ get the id of an event in the simulation
     (only proper events have an id)
 </div>
 </td></tr>
-<tr><td><a href="Analyzer_headers.html#VALget_initial_state">get_initial_state</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
-<td></td></tr>
 <tr><td><a href="Edges.html#VALget_internal">get_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
 <code class="code">get_internal ag site graph</code>
 </div>
 </td></tr>
+<tr><td><a href="Analyzer_headers.html#VALget_kappa_handler">get_kappa_handler</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Analyzer_headers.html#VALget_mvbdu_handler">get_mvbdu_handler</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_parameter">get_parameter</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALget_perturbation">get_perturbation</a> [<a href="Environment.html">Environment</a>]</td>
@@ -707,8 +711,6 @@ check wether there is an observable in a trace
 </td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALinitialize">initialize</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
 <td></td></tr>
-<tr><td><a href="Analyzer.Analyzer.html#VALinitialize">initialize</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
-<td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALinitialize_global_information">initialize_global_information</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALinjection_for_one_more_edge">injection_for_one_more_edge</a> [<a href="Navigation.html">Navigation</a>]</td>
@@ -734,8 +736,6 @@ check wether there is an observable in a trace
 <tr><td><a href="SetMap.Set.html#VALis_empty">is_empty</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALis_enabled">is_enabled</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
-<td></td></tr>
-<tr><td><a href="Analyzer.Analyzer.html#VALis_enabled">is_enabled</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALis_equal">is_equal</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -826,6 +826,8 @@ Event loop for javascript
 <tr><td><a href="Priority.html#VALlowest">lowest</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>M</td></tr>
+<tr><td><a href="Analyzer.Analyzer.html#VALmain">main</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALmake">make</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALmake_matrix">make_matrix</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
@@ -1055,8 +1057,6 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <code class="code">new_node wk node_type</code>
 </div>
 </td></tr>
-<tr><td><a href="Analyzer.Analyzer.html#VALnext_rule">next_rule</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
-<td></td></tr>
 <tr><td><a href="Counter.html#VALnext_story">next_story</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALnu">nu</a> [<a href="Pp.html">Pp</a>]</td>
@@ -1399,6 +1399,8 @@ remove_pseudo_inverse_events removes pseudo inverse events
 change the default level of oabstraction for compression (when used with compress)
 </div>
 </td></tr>
+<tr><td><a href="Analyzer_headers.html#VALset_mvbdu_handler">set_mvbdu_handler</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pp.html#VALset_to_string">set_to_string</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALsetup_alg_vars_rev_dep">setup_alg_vars_rev_dep</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>

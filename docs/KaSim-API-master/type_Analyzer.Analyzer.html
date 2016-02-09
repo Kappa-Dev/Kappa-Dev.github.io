@@ -53,41 +53,25 @@
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;static_information<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dynamic_information<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;main&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.static_information&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;zeroary&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;*&nbsp;<span class="keywordsign">'</span>a<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;unary&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;*&nbsp;<span class="keywordsign">'</span>b<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c)&nbsp;binary&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;*&nbsp;<span class="keywordsign">'</span>c<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;next_rule&nbsp;:&nbsp;<span class="constructor">Analyzer_headers</span>.rule_id&nbsp;option&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.zeroary<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_initial_state&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.initial_state,&nbsp;unit)&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.unary<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_enabled&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.rule_id,&nbsp;<span class="constructor">Analyzer_headers</span>.precondition&nbsp;option)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.unary<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.rule_id,&nbsp;<span class="constructor">Analyzer_headers</span>.precondition,&nbsp;unit)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.kasa_state,&nbsp;<span class="constructor">Analyzer_headers</span>.kasa_state)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.unary<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;(<span class="constructor">Loggers</span>.t&nbsp;list,&nbsp;unit)&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.kasa_state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.kasa_state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>.dynamic_information<br>
 <span class="keyword">end</span></code></body></html>

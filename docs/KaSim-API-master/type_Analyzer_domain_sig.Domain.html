@@ -52,7 +52,11 @@
 <body>
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;static_information<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dynamic_information<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;local_dynamic_information<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dynamic_information&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;local&nbsp;:&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.local_dynamic_information;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;global&nbsp;:&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information;<br>
+&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
