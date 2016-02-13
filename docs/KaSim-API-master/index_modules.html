@@ -68,17 +68,17 @@ depend in time, depend in event number, depend in given var
 </td></tr>
 <tr><td><a href="Analyzer.html">Analyzer</a> </td>
 <td><div class="info">
-Analyzer domain (without communication channels which have been internalized)
+Analyzer entry point
 </div>
 </td></tr>
 <tr><td><a href="Analyzer_domain_sig.html">Analyzer_domain_sig</a> </td>
 <td><div class="info">
-signature of abstract domains (with communication channels)
+signature of abstract domains (with explicit communication)
 </div>
 </td></tr>
 <tr><td><a href="Analyzer_headers.html">Analyzer_headers</a> </td>
 <td><div class="info">
-type of the arguments of the main function
+type declarations and values shared among the abstract domains
 </div>
 </td></tr>
 <tr><td align="left"><br>B</td></tr>
@@ -186,7 +186,10 @@ Implementation of array only limited by max_int
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu</a> [<a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a> </td>
-<td></td></tr>
+<td><div class="info">
+API of the multi-valued binary decision diagrams library
+</div>
+</td></tr>
 <tr><td align="left"><br>N</td></tr>
 <tr><td><a href="NamedDecls.html">NamedDecls</a> </td>
 <td><div class="info">
@@ -247,7 +250,7 @@ parameters to tune which events is discarded next
 <td></td></tr>
 <tr><td><a href="Product.html">Product</a> </td>
 <td><div class="info">
-Functor to combine several abstract domains
+Functor to combine several abstract domains (with explicit communiaction among them)
 </div>
 </td></tr>
 <tr><td><a href="SetMap.Proj.html">Proj</a> [<a href="SetMap.html">SetMap</a>]</td>

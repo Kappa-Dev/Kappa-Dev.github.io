@@ -244,46 +244,34 @@ parameters to tune which events is discarded next
 <p>
 
 The code of the static analyser is in KaSa_rep/reachability_analysis/
-Functor that convert a domain with internalized communications to a top-level module
 <br>
 <table class="indextable">
 <tr><td class="module"><a href="Analyzer.html">Analyzer</a></td><td><div class="info">
-Analyzer domain (without communication channels which have been internalized)
+Analyzer entry point
 </div>
 </td></tr>
-</table>
-
-Types and values shared among the abstract domains
-<br>
-<table class="indextable">
 <tr><td class="module"><a href="Analyzer_headers.html">Analyzer_headers</a></td><td><div class="info">
-type of the arguments of the main function
+type declarations and values shared among the abstract domains
 </div>
 </td></tr>
-</table>
-
-Functor that internalize the communication of an abstract domain
-<br>
-<table class="indextable">
 <tr><td class="module">Composite_domain</td><td></td></tr>
-</table>
-
-Signature of an abstract domain with explicit communication
-<br>
-<table class="indextable">
 <tr><td class="module"><a href="Analyzer_domain_sig.html">Analyzer_domain_sig</a></td><td><div class="info">
-signature of abstract domains (with communication channels)
+signature of abstract domains (with explicit communication)
+</div>
+</td></tr>
+<tr><td class="module"><a href="Product.html">Product</a></td><td><div class="info">
+Functor to combine several abstract domains (with explicit communiaction among them)
 </div>
 </td></tr>
 </table>
 
-Functor to combine to abstract domains with explicit communication
+Several abstract domains are available:
 <br>
 <table class="indextable">
-<tr><td class="module"><a href="Product.html">Product</a></td><td><div class="info">
-Functor to combine several abstract domains
-</div>
-</td></tr>
+<tr><td class="module">Global_domain</td><td></td></tr>
+<tr><td class="module">Rules_domain</td><td></td></tr>
+<tr><td class="module">Agents_domain</td><td></td></tr>
+<tr><td class="module">Views_domain</td><td></td></tr>
 </table>
 
 <p>
@@ -291,7 +279,10 @@ Functor to combine several abstract domains
 The library to deal with multi-valued decision diagrams is in KaSa_rep/data_structures/mvbdu/
 <br>
 <table class="indextable">
-<tr><td class="module"><a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a></td><td></td></tr>
+<tr><td class="module"><a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a></td><td><div class="info">
+API of the multi-valued binary decision diagrams library
+</div>
+</td></tr>
 </table>
 <br>
 </body>
