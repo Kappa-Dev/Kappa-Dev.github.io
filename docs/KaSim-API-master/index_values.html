@@ -12,6 +12,7 @@
 <link title="Pp_html" rel="Chapter" href="Pp_html.html">
 <link title="GenArray" rel="Chapter" href="GenArray.html">
 <link title="LargeArray" rel="Chapter" href="LargeArray.html">
+<link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
 <link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
@@ -36,14 +37,15 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
-<link title="Plot" rel="Chapter" href="Plot.html">
-<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Data" rel="Chapter" href="Data.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
 <link title="Utilities" rel="Chapter" href="Utilities.html">
 <link title="Compression_main" rel="Chapter" href="Compression_main.html">
 <link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
 <link title="Analyzer" rel="Chapter" href="Analyzer.html">
 <link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
 <link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
@@ -121,6 +123,8 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALappend">append</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALappend">append</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALapply_event_list">apply_event_list</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
@@ -165,6 +169,8 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALbindings">bindings</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALblit">blit</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALblit">blit</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#VALbool_op_to_string">bool_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
@@ -204,7 +210,9 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALchoose">choose</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="Plot.html#VALclose">close</a> [<a href="Plot.html">Plot</a>]</td>
+<tr><td><a href="Outputs.html#VALclose">close</a> [<a href="Outputs.html">Outputs</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALclose_all_out_desc">close_all_out_desc</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALclose_logger">close_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
@@ -261,6 +269,8 @@ compress a trace with the level of abstraction defined in the argument parameter
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALcompute_initial_state">compute_initial_state</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALconcat">concat</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALconcat">concat</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALconcretize">concretize</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
@@ -285,6 +295,8 @@ compress a trace with the level of abstraction defined in the argument parameter
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALconvert_trace_into_musical_notation">convert_trace_into_musical_notation</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALcopy">copy</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALcopy">copy</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALcopy_log_info">copy_log_info</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -296,25 +308,19 @@ compress a trace with the level of abstraction defined in the argument parameter
 Give the number of stories (up to isomorphism classes) stored in a table
 </div>
 </td></tr>
-<tr><td><a href="Plot.html#VALcreate">create</a> [<a href="Plot.html">Plot</a>]</td>
-<td><div class="info">
-<code class="code">create filename</code>
-</div>
-</td></tr>
 <tr><td><a href="Counter.html#VALcreate">create</a> [<a href="Counter.html">Counter</a>]</td>
-<td><div class="info">
-<code class="code">create nb_plot_point init_t init_event max_t max_event</code>
-</div>
-</td></tr>
+<td></td></tr>
 <tr><td><a href="Signature.html#VALcreate">create</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALcreate">create</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
 <tr><td><a href="Buffers.Buffers.html#VALcreate">create</a> [<a href="Buffers.Buffers.html">Buffers.Buffers</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALcreate">create</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALcreate">create</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
-<tr><td><a href="Outputs.html#VALcreate_flux">create_flux</a> [<a href="Outputs.html">Outputs</a>]</td>
+<tr><td><a href="Outputs.html#VALcreate_plot">create_plot</a> [<a href="Outputs.html">Outputs</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALcreate_story_table">create_story_table</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
@@ -452,6 +458,8 @@ error_init is an empty log of errors
 </td></tr>
 <tr><td><a href="Primitives.html#VALexists_modification">exists_modification</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALexpand">expand</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="Composite_domain.Composite_domain.html#VALexport">export</a> [<a href="Composite_domain.Composite_domain.html">Composite_domain.Composite_domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALexport">export</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
@@ -487,7 +495,9 @@ convert a table into a list of grid (with runtime information)
 <tr><td><a href="Utilities.html#VALextract_observable_hits_from_musical_notation">extract_observable_hits_from_musical_notation</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>F</td></tr>
-<tr><td><a href="Plot.html#VALfill">fill</a> [<a href="Plot.html">Plot</a>]</td>
+<tr><td><a href="Counter.html#VALfill">fill</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALfill">fill</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALfill">fill</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
@@ -525,8 +535,6 @@ put together the stories having the same canonic form, this has do be done expli
 </td></tr>
 <tr><td><a href="Loggers.html#VALflush_buffer">flush_buffer</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Outputs.html#VALflux_has_name">flux_has_name</a> [<a href="Outputs.html">Outputs</a>]</td>
-<td></td></tr>
 <tr><td><a href="Signature.html#VALfold">fold</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALfold">fold</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
@@ -545,6 +553,8 @@ put together the stories having the same canonic form, this has do be done expli
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALfold_left_with_progress_bar">fold_left_with_progress_bar</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALfold_lefti">fold_lefti</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALfold_lefti">fold_lefti</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALfold_over_the_causal_past_of_observables_with_a_progress_bar">fold_over_the_causal_past_of_observables_with_a_progress_bar</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -557,6 +567,8 @@ fold over the causal past of each observable in a given trace,
 <tr><td><a href="SetMap.Map.html#VALfold_restriction_with_logs">fold_restriction_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold_restriction_with_missing_associations_with_logs">fold_restriction_with_missing_associations_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALfold_righti">fold_righti</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALfold_righti">fold_righti</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
@@ -595,6 +607,8 @@ Apply the rule for sure if it is possible.
 <code class="code">get sigs agent_id</code>
 </div>
 </td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALget">get</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALget">get</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALget_alg">get_alg</a> [<a href="Environment.html">Environment</a>]</td>
@@ -618,7 +632,7 @@ Apply the rule for sure if it is possible.
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALget_counter">get_counter</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
-<tr><td><a href="Outputs.html#VALget_flux_name">get_flux_name</a> [<a href="Outputs.html">Outputs</a>]</td>
+<tr><td><a href="Kappa_files.html#VALget_data">get_data</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALget_id_of_event">get_id_of_event</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
@@ -663,6 +677,8 @@ get the date of an event in the simulation
 <td></td></tr>
 <tr><td><a href="Agent_place.html#VALget_type">get_type</a> [<a href="Agent_place.html">Agent_place</a>]</td>
 <td></td></tr>
+<tr><td><a href="Outputs.html#VALgo">go</a> [<a href="Outputs.html">Outputs</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pp_html.html#VALgraph_page">graph_page</a> [<a href="Pp_html.html">Pp_html</a>]</td>
 <td><div class="info">
 <code class="code">graph_page title deps header core f</code>
@@ -695,13 +711,6 @@ check wether there is an observable in a trace
 <code class="code">id_of_site agent_type site_name sigs</code>
 </div>
 </td></tr>
-<tr><td><a href="Outputs.html#VALincr_flux_flux">incr_flux_flux</a> [<a href="Outputs.html">Outputs</a>]</td>
-<td><div class="info">
-<code class="code">incr_flux_flux of_rule on_rule <span class="keyword">val</span> flux</code>
-</div>
-</td></tr>
-<tr><td><a href="Outputs.html#VALincr_flux_hit">incr_flux_hit</a> [<a href="Outputs.html">Outputs</a>]</td>
-<td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALinit">init</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALinit">init</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
@@ -711,6 +720,8 @@ check wether there is an observable in a trace
 <code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code>
 </div>
 </td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALinit">init</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALinit">init</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Compression_main.html#VALinit_secret_log_info">init_secret_log_info</a> [<a href="Compression_main.html">Compression_main</a>]</td>
@@ -788,6 +799,8 @@ check wether there is an observable in a trace
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALiter">iter</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALiter">iter</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALiter">iter</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALiter2_sparse_with_logs">iter2_sparse_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -797,6 +810,8 @@ check wether there is an observable in a trace
 <code class="code">iter f x n</code>
 </div>
 </td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALiteri">iteri</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALiteri">iteri</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>J</td></tr>
@@ -804,6 +819,8 @@ check wether there is an observable in a trace
 <td></td></tr>
 <tr><td align="left"><br>L</td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALlast_entry">last_entry</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
+<td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALlength">length</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALlength">length</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
@@ -843,7 +860,11 @@ Event loop for javascript
 <tr><td align="left"><br>M</td></tr>
 <tr><td><a href="Analyzer.Analyzer.html#VALmain">main</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALmake">make</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALmake">make</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
+<td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALmake_matrix">make_matrix</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALmake_matrix">make_matrix</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
@@ -905,6 +926,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 </div>
 </td></tr>
 <tr><td><a href="SetMap.Set.html#VALminus_with_logs">minus_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALmk_dir_r">mk_dir_r</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALmodification">modification</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
@@ -1128,6 +1151,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALof_compare_op">of_compare_op</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALof_list">of_list</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALof_list">of_list</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALof_pos">of_pos</a> [<a href="Location.html">Location</a>]</td>
@@ -1150,6 +1175,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Counter.html#VALone_time_correction_event">one_time_correction_event</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
+<tr><td><a href="Kappa_files.html#VALopen_branch_and_cut_engine_profiling">open_branch_and_cut_engine_profiling</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
 <tr><td><a href="Loggers.html#VALopen_circular_buffer">open_circular_buffer</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALopen_infinite_buffer">open_infinite_buffer</a> [<a href="Loggers.html">Loggers</a>]</td>
@@ -1158,11 +1185,13 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALopen_logger_from_formatter">open_logger_from_formatter</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Kappa_files.html#VALopen_out">open_out</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
 <tr><td><a href="Loggers.html#VALopen_row">open_row</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pp.html#VALoption">option</a> [<a href="Pp.html">Pp</a>]</td>
+<tr><td><a href="Kappa_files.html#VALopen_tasks_profiling">open_tasks_profiling</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
-<tr><td><a href="Outputs.html#VALoutput_flux">output_flux</a> [<a href="Outputs.html">Outputs</a>]</td>
+<tr><td><a href="Pp.html#VALoption">option</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALoverwrite_association_lists">overwrite_association_lists</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
 <td></td></tr>
@@ -1182,8 +1211,6 @@ values of observables)
 <tr><td><a href="Kappa_printer.html#VALperturbation">perturbation</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALplain_array">plain_array</a> [<a href="Pp.html">Pp</a>]</td>
-<td></td></tr>
-<tr><td><a href="Plot.html#VALplot_now">plot_now</a> [<a href="Plot.html">Plot</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALplot_points">plot_points</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
@@ -1229,6 +1256,8 @@ values of observables)
 <tr><td><a href="NamedDecls.html#VALprint">print</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALprint">print</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALprint">print</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALprint">print</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
@@ -1413,18 +1442,38 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Compression_main.html#VALsecret_store_obs">secret_store_obs</a> [<a href="Compression_main.html">Compression_main</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALset">set</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALset">set</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALset">set</a> [<a href="Pp.html">Pp</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALsetCheckFileExists">setCheckFileExists</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALset_ccFile">set_ccFile</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALset_cflow">set_cflow</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALset_compression_mode">set_compression_mode</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
 change the default level of oabstraction for compression (when used with compress)
 </div>
 </td></tr>
+<tr><td><a href="Kappa_files.html#VALset_data">set_data</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALset_dir">set_dir</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALset_flux">set_flux</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALset_influence">set_influence</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALset_marshalized">set_marshalized</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALset_mvbdu_handler">set_mvbdu_handler</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALset_to_string">set_to_string</a> [<a href="Pp.html">Pp</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALset_up_influence">set_up_influence</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALsetup_alg_vars_rev_dep">setup_alg_vars_rev_dep</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
@@ -1485,6 +1534,8 @@ compute the strong compression of a given trace,
 </td></tr>
 <tr><td><a href="Nbr.html#VALsub">sub</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="DynamicArray.DynArray.html#VALsub">sub</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
+<td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALsub">sub</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALsubset">subset</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
@@ -1526,8 +1577,6 @@ compute the strong compression of a given trace,
 <td></td></tr>
 <tr><td><a href="LKappa.html#VALto_maintained">to_maintained</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
-<tr><td><a href="Counter.html#VALto_plot_points">to_plot_points</a> [<a href="Counter.html">Counter</a>]</td>
-<td></td></tr>
 <tr><td><a href="LKappa.html#VALto_raw_mixture">to_raw_mixture</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALto_string">to_string</a> [<a href="Location.html">Location</a>]</td>
@@ -1564,11 +1613,6 @@ Resynchronize the state after a rule application.
 <tr><td><a href="SetMap.Map.html#VALupdate_with_logs">update_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>V</td></tr>
-<tr><td><a href="Plot.html#VALvalue">value</a> [<a href="Plot.html">Plot</a>]</td>
-<td><div class="info">
-<code class="code">value width</code>
-</div>
-</td></tr>
 <tr><td><a href="Rule_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Expr_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Expr_interpreter.html">Expr_interpreter</a>]</td>
@@ -1596,6 +1640,20 @@ compute the weak compression of a given trace,
     select which event to try to discard first.
 </div>
 </td></tr>
+<tr><td><a href="Kappa_files.html#VALwith_ccFile">with_ccFile</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALwith_cflow_file">with_cflow_file</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALwith_flux">with_flux</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALwith_influence">with_influence</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALwith_marshalized">with_marshalized</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALwith_snapshot">with_snapshot</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALwith_unary_dist">with_unary_dist</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>Z</td></tr>
 <tr><td><a href="Nbr.html#VALzero">zero</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>

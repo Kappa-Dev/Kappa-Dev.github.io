@@ -13,6 +13,7 @@
 <link title="Pp_html" rel="Chapter" href="Pp_html.html">
 <link title="GenArray" rel="Chapter" href="GenArray.html">
 <link title="LargeArray" rel="Chapter" href="LargeArray.html">
+<link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
 <link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
@@ -37,14 +38,15 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
-<link title="Plot" rel="Chapter" href="Plot.html">
-<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Data" rel="Chapter" href="Data.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
 <link title="Utilities" rel="Chapter" href="Utilities.html">
 <link title="Compression_main" rel="Chapter" href="Compression_main.html">
 <link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
 <link title="Analyzer" rel="Chapter" href="Analyzer.html">
 <link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
 <link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
@@ -210,21 +212,14 @@ Event loop module
 </td></tr>
 </table>
 
-and some storage and rendering
+and some storage
 <br>
 <table class="indextable">
 <tr><td class="module"><a href="Counter.html">Counter</a></td><td><div class="info">
 Simulation progress keeper
 </div>
 </td></tr>
-<tr><td class="module"><a href="Plot.html">Plot</a></td><td><div class="info">
-Plot point storage and rendering
-</div>
-</td></tr>
-<tr><td class="module"><a href="Outputs.html">Outputs</a></td><td><div class="info">
-Flux map
-</div>
-</td></tr>
+<tr><td class="module"><a href="Data.html">Data</a></td><td></td></tr>
 </table>
 
 <p>
@@ -242,6 +237,18 @@ High-level elementary primitives to generate stories
 </td></tr>
 <tr><td class="module"><a href="Priority.html">Priority</a></td><td><div class="info">
 parameters to tune which event is discarded next
+</div>
+</td></tr>
+</table>
+
+<p>
+
+The code specific to the command line backend is in main/. It consists in file handler and renderers
+<br>
+<table class="indextable">
+<tr><td class="module"><a href="Outputs.html">Outputs</a></td><td></td></tr>
+<tr><td class="module"><a href="Kappa_files.html">Kappa_files</a></td><td><div class="info">
+Utilities on files 
 </div>
 </td></tr>
 </table>

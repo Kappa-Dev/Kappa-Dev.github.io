@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Outputs.html">
+<link rel="next" href="Analyzer.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Pp" rel="Chapter" href="Pp.html">
+<link title="Pp_svg" rel="Chapter" href="Pp_svg.html">
+<link title="Pp_html" rel="Chapter" href="Pp_html.html">
+<link title="GenArray" rel="Chapter" href="GenArray.html">
+<link title="LargeArray" rel="Chapter" href="LargeArray.html">
+<link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Buffers" rel="Chapter" href="Buffers.html">
+<link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
+<link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
+<link title="Loggers" rel="Chapter" href="Loggers.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Data" rel="Chapter" href="Data.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html">
+<link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
+<link title="Analyzer" rel="Chapter" href="Analyzer.html">
+<link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
+<link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Composite_domain" rel="Chapter" href="Composite_domain.html">
+<link title="Product" rel="Chapter" href="Product.html">
+<link title="Global_domain" rel="Chapter" href="Global_domain.html">
+<link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
+<link title="Views_domain" rel="Chapter" href="Views_domain.html">
+<link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Kappa_files</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Outputs.html" title="Outputs">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Analyzer.html" title="Analyzer">Next</a>
+</div>
+<h1>Module <a href="type_Kappa_files.html">Kappa_files</a></h1>
+
+<pre><span class="keyword">module</span> Kappa_files: <code class="code"><span class="keyword">sig</span></code> <a href="Kappa_files.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+<h5 id="5_Utilitiesonfiles">Utilities on files </h5><br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALopen_out"><span class="keyword">val</span> open_out</span> : <code class="type">string -> Pervasives.out_channel</code></pre>
+<pre><span id="VALmk_dir_r"><span class="keyword">val</span> mk_dir_r</span> : <code class="type">string -> unit</code></pre>
+<pre><span id="VALsetCheckFileExists"><span class="keyword">val</span> setCheckFileExists</span> : <code class="type">unit -> unit</code></pre>
+<pre><span id="VALset_dir"><span class="keyword">val</span> set_dir</span> : <code class="type">string -> unit</code></pre>
+<pre><span id="VALset_data"><span class="keyword">val</span> set_data</span> : <code class="type">string -> unit</code></pre>
+<pre><span id="VALget_data"><span class="keyword">val</span> get_data</span> : <code class="type">unit -> string</code></pre>
+<pre><span id="VALset_marshalized"><span class="keyword">val</span> set_marshalized</span> : <code class="type">string -> unit</code></pre>
+<pre><span id="VALwith_marshalized"><span class="keyword">val</span> with_marshalized</span> : <code class="type">(Pervasives.out_channel -> unit) -> unit</code></pre>
+<pre><span id="VALset_cflow"><span class="keyword">val</span> set_cflow</span> : <code class="type">string -> unit</code></pre>
+<pre><span id="VALwith_cflow_file"><span class="keyword">val</span> with_cflow_file</span> : <code class="type">string list -> string -> (Format.formatter -> unit) -> unit</code></pre>
+<pre><span id="VALopen_tasks_profiling"><span class="keyword">val</span> open_tasks_profiling</span> : <code class="type">unit -> Pervasives.out_channel</code></pre>
+<pre><span id="VALopen_branch_and_cut_engine_profiling"><span class="keyword">val</span> open_branch_and_cut_engine_profiling</span> : <code class="type">unit -> Pervasives.out_channel</code></pre>
+<pre><span id="VALset_flux"><span class="keyword">val</span> set_flux</span> : <code class="type">string -> int -> unit</code></pre>
+<pre><span id="VALwith_flux"><span class="keyword">val</span> with_flux</span> : <code class="type">string -> (Format.formatter -> unit) -> unit</code></pre>
+<pre><span id="VALwith_snapshot"><span class="keyword">val</span> with_snapshot</span> : <code class="type">string -> int -> string -> (Format.formatter -> unit) -> unit</code></pre>
+<pre><span id="VALwith_unary_dist"><span class="keyword">val</span> with_unary_dist</span> : <code class="type">int -> (Format.formatter -> unit) -> unit</code></pre>
+<pre><span id="VALset_influence"><span class="keyword">val</span> set_influence</span> : <code class="type">string -> unit</code></pre>
+<pre><span id="VALset_up_influence"><span class="keyword">val</span> set_up_influence</span> : <code class="type">unit -> unit</code></pre>
+<pre><span id="VALwith_influence"><span class="keyword">val</span> with_influence</span> : <code class="type">(Format.formatter -> unit) -> unit</code></pre>
+<pre><span id="VALset_ccFile"><span class="keyword">val</span> set_ccFile</span> : <code class="type">string -> unit</code></pre>
+<pre><span id="VALwith_ccFile"><span class="keyword">val</span> with_ccFile</span> : <code class="type">(Format.formatter -> unit) -> unit</code></pre>
+<pre><span id="VALclose_all_out_desc"><span class="keyword">val</span> close_all_out_desc</span> : <code class="type">unit -> unit</code></pre></body></html>
