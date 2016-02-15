@@ -70,8 +70,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;flux_end&nbsp;:&nbsp;float;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;file_line&nbsp;=&nbsp;{&nbsp;file_name&nbsp;:&nbsp;string;&nbsp;line&nbsp;:&nbsp;string;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snap_file&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snap_event&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;agents&nbsp;:&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Raw_mixture</span>.t)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tokens&nbsp;:&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;array;<br>
+&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Flux</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Plot</span>&nbsp;<span class="keyword">of</span>&nbsp;float&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t&nbsp;array<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Print</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.file_line<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Snapshot</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
 <span class="keyword">end</span></code></body></html>

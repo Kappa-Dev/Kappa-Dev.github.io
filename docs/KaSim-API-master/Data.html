@@ -148,6 +148,39 @@
 
 
 
+<pre><code><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsnapshot.snap_file">snap_file</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsnapshot.snap_event">snap_event</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsnapshot.agents">agents</span>&nbsp;: <code class="type">(int * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsnapshot.tokens">tokens</span>&nbsp;: <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) array</code>;</code></td>
+
+</tr></table>
+}
+
+
+
 <pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -168,6 +201,13 @@
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
 <code><span id="TYPEELTt.Print"><span class="constructor">Print</span></span> <span class="keyword">of</span> <code class="type"><a href="Data.html#TYPEfile_line">file_line</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Snapshot"><span class="constructor">Snapshot</span></span> <span class="keyword">of</span> <code class="type"><a href="Data.html#TYPEsnapshot">snapshot</a></code></code></td>
 
 </tr></table>
 
