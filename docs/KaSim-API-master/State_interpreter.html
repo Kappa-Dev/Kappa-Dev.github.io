@@ -79,8 +79,9 @@ Abstract state<br>
 </div>
 
 
-<pre><span id="VALinitial"><span class="keyword">val</span> initial</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">initial env c graph stopping_times</code> builds up the initial state<br>
+<pre><span id="VALinitial"><span class="keyword">val</span> initial</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> bool -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">initial env c graph stopping_times relative_fluxmaps</code>
+ builds up the initial state<br>
 </div>
 
 <pre><span id="VALobservables_values"><span class="keyword">val</span> observables_values</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> array</code></pre><div class="info ">
