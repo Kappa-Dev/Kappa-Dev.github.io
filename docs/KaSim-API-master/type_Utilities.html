@@ -138,6 +138,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Stop</span>.stop)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.ternary,&nbsp;<span class="constructor">Utilities</span>.trace,&nbsp;<span class="keywordsign">'</span>a,&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b&nbsp;*&nbsp;int)&nbsp;<span class="constructor">Stop</span>.stop)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.sexternary<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;black_list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_black_list&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.black_list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;black_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.black_list,&nbsp;<span class="constructor">Utilities</span>.black_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.binary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;remove_blacklisted_event&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.black_list,&nbsp;<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.binary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;story_table<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_story_table&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="constructor">Utilities</span>.zeroary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;count_stories&nbsp;:&nbsp;<span class="constructor">Utilities</span>.story_table&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
