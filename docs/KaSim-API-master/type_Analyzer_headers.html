@@ -63,7 +63,11 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_static_information<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_dynamic_information<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;event&nbsp;=&nbsp;<span class="constructor">Check_rule</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Analyzer_headers</span>.rule_id<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;precondition&nbsp;=&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;bot_or_not&nbsp;=&nbsp;<span class="constructor">Bot</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Not_bot</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;maybe_bool&nbsp;=&nbsp;<span class="constructor">Sure_value</span>&nbsp;<span class="keyword">of</span>&nbsp;bool&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Maybe</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;precondition&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the_rule_is_applied_for_the_first_time&nbsp;:&nbsp;<span class="constructor">Analyzer_headers</span>.maybe_bool;<br>
+&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;kasa_state&nbsp;=&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;initial_state&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.enriched_init<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize_global_information&nbsp;:<br>
@@ -83,7 +87,27 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.compilation_result<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_bdu_common_static&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Bdu_analysis_type</span>.bdu_common_static<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.bdu_common_static<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_bdu_common_static&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.bdu_common_static&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_side_effects&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.half_break_action&nbsp;*&nbsp;<span class="constructor">Common_static</span>.remove_action<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_side_effects&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.half_break_action&nbsp;*&nbsp;<span class="constructor">Common_static</span>.remove_action&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_potential_side_effects&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.potential_partner_free&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.potential_partner_bind<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_potential_side_effects&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.potential_partner_free&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.potential_partner_bind&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compute_initial_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>

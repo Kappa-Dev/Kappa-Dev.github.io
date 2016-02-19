@@ -104,7 +104,52 @@ type of the static information to be passed to each domain, let us
 
 
 
-<pre><span id="TYPEprecondition"><span class="keyword">type</span> <code class="type"></code>precondition</span> = <code class="type">unit</code> </pre>
+<pre><code><span id="TYPEbot_or_not"><span class="keyword">type</span> <code class="type">'a</code> bot_or_not</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbot_or_not.Bot"><span class="constructor">Bot</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbot_or_not.Not_bot"><span class="constructor">Not_bot</span></span> <span class="keyword">of</span> <code class="type">'a</code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEmaybe_bool"><span class="keyword">type</span> <code class="type"></code>maybe_bool</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmaybe_bool.Sure_value"><span class="constructor">Sure_value</span></span> <span class="keyword">of</span> <code class="type">bool</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmaybe_bool.Maybe"><span class="constructor">Maybe</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEprecondition"><span class="keyword">type</span> <code class="type"></code>precondition</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprecondition.the_rule_is_applied_for_the_first_time">the_rule_is_applied_for_the_first_time</span>&nbsp;: <code class="type"><a href="Analyzer_headers.html#TYPEmaybe_bool">maybe_bool</a></code>;</code></td>
+
+</tr></table>
+}
+
 
 
 <pre><span id="TYPEkasa_state"><span class="keyword">type</span> <code class="type"></code>kasa_state</span> = <code class="type">unit</code> </pre>
@@ -120,7 +165,12 @@ This is the type of the encoding of a chemical mixture as a result of
 <pre><span id="VALdummy_precondition"><span class="keyword">val</span> dummy_precondition</span> : <code class="type"><a href="Analyzer_headers.html#TYPEprecondition">precondition</a></code></pre>
 <pre><span id="VALget_parameter"><span class="keyword">val</span> get_parameter</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Remanent_parameters_sig.parameters</code></pre>
 <pre><span id="VALget_compilation_information"><span class="keyword">val</span> get_compilation_information</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       <a href="Analyzer_headers.html#TYPEcompilation_result">compilation_result</a></code></pre>
-<pre><span id="VALget_bdu_common_static"><span class="keyword">val</span> get_bdu_common_static</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Bdu_analysis_type.bdu_common_static</code></pre>
+<pre><span id="VALget_bdu_common_static"><span class="keyword">val</span> get_bdu_common_static</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -> Common_static.bdu_common_static</code></pre>
+<pre><span id="VALset_bdu_common_static"><span class="keyword">val</span> set_bdu_common_static</span> : <code class="type">Common_static.bdu_common_static -><br>       <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a></code></pre>
+<pre><span id="VALget_side_effects"><span class="keyword">val</span> get_side_effects</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Common_static.half_break_action * Common_static.remove_action</code></pre>
+<pre><span id="VALset_side_effects"><span class="keyword">val</span> set_side_effects</span> : <code class="type">Common_static.half_break_action * Common_static.remove_action -><br>       <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a></code></pre>
+<pre><span id="VALget_potential_side_effects"><span class="keyword">val</span> get_potential_side_effects</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Common_static.potential_partner_free * Common_static.potential_partner_bind</code></pre>
+<pre><span id="VALset_potential_side_effects"><span class="keyword">val</span> set_potential_side_effects</span> : <code class="type">Common_static.potential_partner_free * Common_static.potential_partner_bind -><br>       <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a></code></pre>
 <pre><span id="VALcompute_initial_state"><span class="keyword">val</span> compute_initial_state</span> : <code class="type">Exception.method_handler -><br>       <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Exception.method_handler * <a href="Analyzer_headers.html#TYPEinitial_state">initial_state</a> list</code></pre>
 <pre><span id="VALget_kappa_handler"><span class="keyword">val</span> get_kappa_handler</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -> Cckappa_sig.kappa_handler</code></pre>
 <pre><span id="VALget_cc_code"><span class="keyword">val</span> get_cc_code</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -> Cckappa_sig.compil</code></pre>
