@@ -3534,7 +3534,7 @@
      a_d7_=caml_new_string_i_(str_s_),
      x_nL_=caml_new_string_i_("influence.dot"),
      x_nM_=caml_new_string_i_("contact.dot"),
-     version_string_iR_=caml_new_string_i_("012a16c"),
+     version_string_iR_=caml_new_string_i_("5f07056"),
      match_iW_=caml_new_string_i_(str_profiling_txt_sq_),
      reachability_map_0_nQ_=[0,0,0,0,0,0,0,0,0,0,0],
      error_nX_=[0,0,0,0],
@@ -52640,10 +52640,10 @@
                        t_d_,
                         /*<<js/WebWorker.ml 11 14>>*/ caml_call_gen1_m_(yield_b_,0))
                      :return_unit_eL_ /*<<js/WebWorker.ml 12 32>>*/ } /*<<js/WebWorker.ml 12 32>>*/ }
-         (0.1,yield_Bc_),
+         (0.01,yield_Bc_),
         /*<<js/WebWorker.ml 14 15>>*/ runtime_cf_=
          /*<<js/WebWorker.ml 14 15>>*/ caml_call_gen2_k_(_WV_[1],0,_Xh_),
-        /*<<js/WebWorker.ml 14 65>>*/ request_handler_fj_=
+        /*<<js/WebWorker.ml 14 66>>*/ request_handler_fj_=
         function(id_p_,request_b_,api_call_c_,response_d_)
          { /*<<js/WebWorker.ml 22 11>>*/  /*<<js/WebWorker.ml 22 11>>*/ async_mY_
            (function(param_a_)
