@@ -6528,15 +6528,16 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (c5eaa83) (without Tk interface)
- <br />Analysis launched at 2016/02/22 18:27:26 (GMT+0) on
- <br />testing-worker-linux-docker-0be2148f-3380-linux-8
+Kappa Static Analyzer (1eac3eb) (without Tk interface)
+ <br />Analysis launched at 2016/02/23 10:56:10 (GMT+0) on
+ <br />testing-worker-linux-docker-da87a123-3383-linux-2
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
+ <br />
  <br />Reachability analysis...
  <br />execution finished without any exception</div>
-<!--l. 10--><p class="nopar" >
+<!--l. 11--><p class="nopar" >
 <br /><div class="caption" 
 ><span class="id">Figure 7.3: </span><span  
 class="content">Reachability analysis of the model <span 
@@ -6556,18 +6557,23 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (c5eaa83) (without Tk interface)
- <br />Analysis launched at 2016/02/22 18:27:26 (GMT+0) on
- <br />testing-worker-linux-docker-0be2148f-3380-linux-8
+Kappa Static Analyzer (1eac3eb) (without Tk interface)
+ <br />Analysis launched at 2016/02/23 10:56:10 (GMT+0) on
+ <br />testing-worker-linux-docker-da87a123-3383-linux-2
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
+ <br />
  <br />Reachability analysis...
  <br />
  <br />------------------------------------------------------------
  <br />* Dead rules :
  <br />------------------------------------------------------------
  <br />rule 2: dead will never be applied.
+ <br />
+ <br />------------------------------------------------------------
+ <br />* Dead agents :
+ <br />------------------------------------------------------------
  <br />
  <br />------------------------------------------------------------
  <br />* Relational properties:
@@ -6583,7 +6589,7 @@ Kappa Static Analyzer (c5eaa83) (without Tk interface)
  <br />The internal state of site y in agent A is always u.
  <br />The internal state of site x in agent A ranges over u and p.
  <br />execution finished without any exception</div>
-<!--l. 29--><p class="nopar" >
+<!--l. 34--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.4: </span><span  
 class="content">Reachability analysis of the model <span 
@@ -6603,10 +6609,8 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Low”.</span></
 
                                                                                   
 <div class="verbatim" id="verbatim-7">
-Applying rule 2: dead:
- <br />the predcondition is not satisfied yet
- <br /></div>
-<!--l. 6--><p class="nopar" >
+</div>
+<!--l. 2--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.5: </span><span  
 class="content">Reachability analysis: one rule that cannot be applied yet, according to the
@@ -6627,7 +6631,7 @@ bio-molecular species already constructed.</span></div><!--tex4ht:label?: x1-620
                                                                                   
 <div class="verbatim" id="verbatim-8">
 Applying rule 0: A.p:
- <br />the precondition is satisfied
+ <br />the predcondition is satisfied
  <br /></div>
 <!--l. 6--><p class="nopar" >
 <br /> <div class="caption" 
@@ -6651,11 +6655,8 @@ class="content">Reachability analysis: one rule successfully applied</span></div
 Views in initial state
  <br />
  <br />
- <br />A(x~u,y!free)
- <br />
- <br />A(y~u)
- <br /></div>
-<!--l. 9--><p class="nopar" >
+ <br />A(y~u)</div>
+<!--l. 6--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.7: </span><span  
 class="content">Reachability analysis: extensional description of initial states.</span></div><!--tex4ht:label?: x1-620147 -->
@@ -6675,10 +6676,10 @@ class="content">Reachability analysis: extensional description of initial states
                                                                                   
 <div class="verbatim" id="verbatim-10">
 Applying rule 0: A.p:
- <br />the precondition is satisfied
- <br />Updating the views for A(x~,y!)
+ <br />the predcondition is satisfied
  <br />
- <br />A(x~p,y!free)</div>
+ <br />rule 0: A.p is applied for the first time
+ <br /></div>
 <!--l. 8--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.8: </span><span  
@@ -6700,13 +6701,13 @@ applying a rule.</span></div><!--tex4ht:label?: x1-620158 -->
                                                                                   
 <div class="verbatim" id="verbatim-11">
 Applying rule 0: A.p:
- <br />the precondition is satisfied
+ <br />the predcondition is satisfied
+ <br />
+ <br />rule 0: A.p is applied for the first time
+ <br />
  <br />Updating the views for A(x~,y!)
  <br />
- <br />A(x~p,y!free)
- <br />(rule 0: A.p) should be investigated
- <br />(rule 1: dimer) should be investigated
- <br />(rule 2: dead) should be investigated
+ <br />
  <br /></div>
 <!--l. 11--><p class="nopar" >
 <br /> <div class="caption" 
