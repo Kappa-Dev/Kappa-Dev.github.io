@@ -4088,7 +4088,7 @@
      a_fB_=caml_new_string_i_(str_q_),
      x_uM_=caml_new_string_i_("influence.dot"),
      x_uN_=caml_new_string_i_("contact.dot"),
-     version_string_mw_=caml_new_string_i_("a2b1448"),
+     version_string_mw_=caml_new_string_i_("1eac3eb"),
      match_mB_=caml_new_string_i_(str_profiling_txt_Ay_),
      reachability_map_0_uR_=[0,0,0,0,0,0,0,0,0,0,0],
      error_uY_=[0,0,0,0],
@@ -52675,50 +52675,50 @@
                    env_e_) /*<<simulation/state_interpreter.ml 50 8>>*/ },
        _jz_=
         function(outputs_o_,env_g_,domain_c_,counter_d_,graph_e_,state_f_)
-         { /*<<simulation/state_interpreter.ml 137 49>>*/ var
+         { /*<<simulation/state_interpreter.ml 141 49>>*/ var
            not_done_yet_s_=
-             /*<<simulation/state_interpreter.ml 137 49>>*/ caml_make_vect_D_
-             ( /*<<simulation/state_interpreter.ml 137 15>>*/ _m9_(env_g_),1);
-           /*<<simulation/state_interpreter.ml 138 2>>*/ function get_alg_q_
+             /*<<simulation/state_interpreter.ml 141 49>>*/ caml_make_vect_D_
+             ( /*<<simulation/state_interpreter.ml 141 15>>*/ _m9_(env_g_),1);
+           /*<<simulation/state_interpreter.ml 142 2>>*/ function get_alg_q_
            (i_a_)
-           { /*<<simulation/state_interpreter.ml 138 18>>*/ return  /*<<simulation/state_interpreter.ml 138 18>>*/ _jy_
-                    (env_g_,state_f_,i_a_) /*<<simulation/state_interpreter.ml 138 37>>*/ }
+           { /*<<simulation/state_interpreter.ml 142 18>>*/ return  /*<<simulation/state_interpreter.ml 142 18>>*/ _jy_
+                    (env_g_,state_f_,i_a_) /*<<simulation/state_interpreter.ml 142 37>>*/ }
           var i_a_=0,graph_j_=graph_e_,state_i_=state_f_,stop_b_=0;
-           /*<<simulation/state_interpreter.ml 140 4>>*/ for(;;)
-           { /*<<simulation/state_interpreter.ml 140 4>>*/ if(!stop_b_)
+           /*<<simulation/state_interpreter.ml 144 4>>*/ for(;;)
+           { /*<<simulation/state_interpreter.ml 144 4>>*/ if(!stop_b_)
              if
-              (!( /*<<simulation/state_interpreter.ml 140 20>>*/ _m9_(env_g_)<=
+              (!( /*<<simulation/state_interpreter.ml 144 20>>*/ _m9_(env_g_)<=
                 i_a_))
               { /*<<term/environment.ml 54 29>>*/ var
                 pert_p_=
                   /*<<term/environment.ml 54 29>>*/ caml_check_bound_l_
                    (env_g_[8],i_a_)
                   [i_a_+1];
-                /*<<simulation/state_interpreter.ml 148 38>>*/ if
-                ( /*<<simulation/state_interpreter.ml 148 9>>*/ caml_check_bound_l_
+                /*<<simulation/state_interpreter.ml 152 38>>*/ if
+                ( /*<<simulation/state_interpreter.ml 152 9>>*/ caml_check_bound_l_
                    (state_i_[2],i_a_)
                   [i_a_+1])
                 if
-                 ( /*<<simulation/state_interpreter.ml 148 42>>*/ caml_check_bound_l_
+                 ( /*<<simulation/state_interpreter.ml 152 42>>*/ caml_check_bound_l_
                     (not_done_yet_s_,i_a_)
                    [i_a_+1])
                  if
-                  ( /*<<simulation/state_interpreter.ml 149 4>>*/ _wp_
+                  ( /*<<simulation/state_interpreter.ml 153 4>>*/ _wp_
                     (get_alg_q_,counter_d_,graph_j_,pert_p_[1]))
                   {var
-                     /*<<simulation/state_interpreter.ml 152 1>>*/ _x_=
+                     /*<<simulation/state_interpreter.ml 156 1>>*/ _x_=
                      pert_p_[2],
-                     /*<<simulation/state_interpreter.ml 152 1>>*/ _y_=
+                     /*<<simulation/state_interpreter.ml 156 1>>*/ _y_=
                      [0,stop_b_,graph_j_,state_i_],
-                     /*<<simulation/state_interpreter.ml 153 3>>*/ match_r_=
-                      /*<<simulation/state_interpreter.ml 153 3>>*/ _v_
+                     /*<<simulation/state_interpreter.ml 157 3>>*/ match_r_=
+                      /*<<simulation/state_interpreter.ml 157 3>>*/ _v_
                       (function(acc_a_,effect_b_)
                         {var
-                           /*<<simulation/state_interpreter.ml 153 18>>*/ state_e_=
+                           /*<<simulation/state_interpreter.ml 157 18>>*/ state_e_=
                            acc_a_[3],
-                           /*<<simulation/state_interpreter.ml 153 18>>*/ graph_f_=
+                           /*<<simulation/state_interpreter.ml 157 18>>*/ graph_f_=
                            acc_a_[2];
-                          /*<<simulation/state_interpreter.ml 154 5>>*/ if(acc_a_[1])
+                          /*<<simulation/state_interpreter.ml 158 5>>*/ if(acc_a_[1])
                           return acc_a_;
                           /*<<simulation/state_interpreter.ml 53 2>>*/ function
                           get_alg_j_
@@ -52745,13 +52745,13 @@
                                     e_b_)}
                           /*<<simulation/state_interpreter.ml 57 2>>*/ if
                           (typeof effect_b_==="number")
-                          { /*<<simulation/state_interpreter.ml 90 5>>*/ var
-                            _aa_=
-                              /*<<simulation/state_interpreter.ml 90 5>>*/ _ww_
+                          { /*<<simulation/state_interpreter.ml 94 5>>*/ var
+                            _ab_=
+                              /*<<simulation/state_interpreter.ml 94 5>>*/ _ww_
                               (env_g_,counter_d_,graph_f_,state_e_);
-                            /*<<simulation/state_interpreter.ml 89 14>>*/  /*<<simulation/state_interpreter.ml 89 14>>*/ caml_call_gen1_m_
-                            (outputs_o_,[1,counter_d_[1],_aa_]);
-                            /*<<simulation/state_interpreter.ml 91 5>>*/ return [0,
+                            /*<<simulation/state_interpreter.ml 93 14>>*/  /*<<simulation/state_interpreter.ml 93 14>>*/ caml_call_gen1_m_
+                            (outputs_o_,[1,counter_d_[1],_ab_]);
+                            /*<<simulation/state_interpreter.ml 95 5>>*/ return [0,
                                    0,
                                    graph_f_,
                                    state_e_]}
@@ -52761,7 +52761,7 @@
                            {case 0:
                              var
                               r_s_=effect_b_[2],
-                               /*<<simulation/state_interpreter.ml 59 13>>*/ n_ab_=
+                               /*<<simulation/state_interpreter.ml 59 13>>*/ n_ac_=
                                 /*<<simulation/state_interpreter.ml 59 13>>*/ _eG_
                                 (get_alg_j_,counter_d_,graph_f_,effect_b_[1][1]);
                               /*<<simulation/state_interpreter.ml 67 8>>*/ return [0,
@@ -52803,12 +52803,12 @@
                                           /*<<simulation/rule_interpreter.ml 732 37>>*/ return match_e_
                                                  [1] /*<<simulation/state_interpreter.ml 66 34>>*/ },
                                        graph_f_,
-                                       n_ab_),
+                                       n_ac_),
                                      state_e_];
                             case 1:
                              var
                               i_t_=effect_b_[1],
-                               /*<<simulation/state_interpreter.ml 72 33>>*/ _ac_=
+                               /*<<simulation/state_interpreter.ml 72 33>>*/ _ad_=
                                [0,
                                 [6,
                                   /*<<simulation/state_interpreter.ml 71 23>>*/ _eG_
@@ -52816,48 +52816,48 @@
                               /*<<simulation/state_interpreter.ml 72 33>>*/  /*<<simulation/state_interpreter.ml 72 33>>*/ caml_check_bound_l_
                                (state_e_[4],i_t_)
                               [i_t_+1]=
-                             _ac_;
+                             _ad_;
                              var
                                /*<<simulation/rule_interpreter.ml 440 2>>*/ match_r_=
                                graph_f_[7],
                                /*<<simulation/rule_interpreter.ml 441 2>>*/ newrecord_y_=
                                 /*<<simulation/rule_interpreter.ml 441 2>>*/ graph_f_.slice
                                 (),
-                               /*<<simulation/rule_interpreter.ml 440 2>>*/ no_unary_Q_=
+                               /*<<simulation/rule_interpreter.ml 440 2>>*/ no_unary_R_=
                                match_r_[3],
-                               /*<<simulation/rule_interpreter.ml 440 2>>*/ unary_cands_R_=
+                               /*<<simulation/rule_interpreter.ml 440 2>>*/ unary_cands_T_=
                                match_r_[2];
                               /*<<simulation/rule_interpreter.ml 442 44>>*/ newrecord_y_
                               [7]=
                              [0,
                                /*<<simulation/rule_interpreter.ml 442 3>>*/ caml_call_gen2_n_
                                (_aw_[5],[0,i_t_],match_r_[1]),
-                              unary_cands_R_,
-                              no_unary_Q_];
+                              unary_cands_T_,
+                              no_unary_R_];
                               /*<<simulation/state_interpreter.ml 73 56>>*/ return [0,
                                      0,
                                      newrecord_y_,
                                      state_e_];
                             case 2:
-                             var pexpr_ad_=effect_b_[1];
-                              /*<<simulation/state_interpreter.ml 94 14>>*/  /*<<simulation/state_interpreter.ml 94 14>>*/ caml_call_gen1_m_
+                             var pexpr_ae_=effect_b_[1];
+                              /*<<simulation/state_interpreter.ml 98 14>>*/  /*<<simulation/state_interpreter.ml 98 14>>*/ caml_call_gen1_m_
                               (outputs_o_,
                                [3,
-                                 /*<<simulation/state_interpreter.ml 95 4>>*/ _jw_
+                                 /*<<simulation/state_interpreter.ml 99 4>>*/ _jw_
                                  (env_g_,
                                   counter_d_,
-                                   /*<<simulation/state_interpreter.ml 93 16>>*/ caml_call_gen2_n_
-                                   ( /*<<simulation/state_interpreter.ml 93 16>>*/ asprintf_aN_
+                                   /*<<simulation/state_interpreter.ml 97 16>>*/ caml_call_gen2_n_
+                                   ( /*<<simulation/state_interpreter.ml 97 16>>*/ asprintf_aN_
                                      (_at4_),
                                     print_expr_val_i_,
-                                    pexpr_ad_),
+                                    pexpr_ae_),
                                   graph_f_)]);
-                              /*<<simulation/state_interpreter.ml 96 5>>*/ return [0,
+                              /*<<simulation/state_interpreter.ml 100 5>>*/ return [0,
                                      0,
                                      graph_f_,
                                      state_e_];
                             case 3:
-                             var pexpr_ae_=effect_b_[1];
+                             var pexpr_af_=effect_b_[1];
                               /*<<simulation/state_interpreter.ml 76 14>>*/  /*<<simulation/state_interpreter.ml 76 14>>*/ caml_call_gen1_m_
                               (outputs_o_,
                                [3,
@@ -52868,7 +52868,7 @@
                                    ( /*<<simulation/state_interpreter.ml 75 16>>*/ asprintf_aN_
                                      (_at5_),
                                     print_expr_val_i_,
-                                    pexpr_ae_),
+                                    pexpr_af_),
                                   graph_f_)]);
                               /*<<simulation/state_interpreter.ml 78 5>>*/ return [0,
                                      1,
@@ -52878,61 +52878,61 @@
                              var
                               cc_u_=effect_b_[2],
                               name_G_=effect_b_[1],
-                              tests_af_=effect_b_[3];
-                              /*<<simulation/state_interpreter.ml 98 5>>*/ if(name_G_)
+                              tests_ag_=effect_b_[3];
+                              /*<<simulation/state_interpreter.ml 102 5>>*/ if(name_G_)
                               var name_H_=name_G_[1];
                              else
                               var
-                                /*<<simulation/state_interpreter.ml 101 14>>*/ sigs_ah_=
+                                /*<<simulation/state_interpreter.ml 105 14>>*/ sigs_ai_=
                                 env_g_[1],
-                                /*<<simulation/state_interpreter.ml 102 3>>*/ _ai_=
+                                /*<<simulation/state_interpreter.ml 106 3>>*/ _aj_=
                                 function(param_a_)
                                  {var
-                                    /*<<simulation/state_interpreter.ml 105 18>>*/ _c_=0,
-                                    /*<<simulation/state_interpreter.ml 105 18>>*/ _d_=
-                                    [0,sigs_ah_];
-                                   /*<<simulation/state_interpreter.ml 105 18>>*/ return function
+                                    /*<<simulation/state_interpreter.ml 109 18>>*/ _c_=0,
+                                    /*<<simulation/state_interpreter.ml 109 18>>*/ _d_=
+                                    [0,sigs_ai_];
+                                   /*<<simulation/state_interpreter.ml 109 18>>*/ return function
                                    (_a_,_b_)
-                                   { /*<<?>>*/ return _vH_(_d_,_c_,_a_,_b_)} /*<<simulation/state_interpreter.ml 105 63>>*/ },
-                                /*<<simulation/state_interpreter.ml 102 3>>*/ _aj_=0,
-                                /*<<simulation/state_interpreter.ml 104 5>>*/ _ak_=
+                                   { /*<<?>>*/ return _vH_(_d_,_c_,_a_,_b_)} /*<<simulation/state_interpreter.ml 109 63>>*/ },
+                                /*<<simulation/state_interpreter.ml 106 3>>*/ _ak_=0,
+                                /*<<simulation/state_interpreter.ml 108 5>>*/ _al_=
                                 function(_a_,_b_)
-                                 { /*<<?>>*/ return _iY_(_aj_,_b9_,_ai_,_a_,_b_)},
+                                 { /*<<?>>*/ return _iY_(_ak_,_b9_,_aj_,_a_,_b_)},
                                name_H_=
-                                 /*<<simulation/state_interpreter.ml 102 3>>*/ caml_call_gen2_n_
-                                 ( /*<<simulation/state_interpreter.ml 102 3>>*/ asprintf_aN_
+                                 /*<<simulation/state_interpreter.ml 106 3>>*/ caml_call_gen2_n_
+                                 ( /*<<simulation/state_interpreter.ml 106 3>>*/ asprintf_aN_
                                    (_at6_),
-                                  _ak_,
+                                  _al_,
                                   cc_u_);
                              var
                                /*<<simulation/rule_interpreter.ml 837 2>>*/ _z_=
                                graph_f_[8],
-                               /*<<simulation/state_interpreter.ml 107 5>>*/ event_kind_ag_=
+                               /*<<simulation/state_interpreter.ml 111 5>>*/ event_kind_ah_=
                                [0,name_H_];
                               /*<<simulation/rule_interpreter.ml 837 2>>*/ if(_z_)
                               {var
                                 match_A_=_z_[1],
-                                x_T_=match_A_[2],
-                                tcc_U_=match_A_[1],
-                                 /*<<simulation/rule_interpreter.ml 843 5>>*/ tcc_V_=
+                                x_U_=match_A_[2],
+                                tcc_V_=match_A_[1],
+                                 /*<<simulation/rule_interpreter.ml 843 5>>*/ tcc_W_=
                                   /*<<simulation/rule_interpreter.ml 843 5>>*/ _bH_
                                   (function(tcc_a_,cc_b_)
                                     { /*<<simulation/rule_interpreter.ml 846 1>>*/ var
                                       _c_=
                                        [0,
-                                        [0,event_kind_ag_,cc_u_,tests_af_],
+                                        [0,event_kind_ah_,cc_u_,tests_ag_],
                                          /*<<simulation/rule_interpreter.ml 845 11>>*/ caml_call_gen3_k_
                                          (_bf_[14],0,cc_b_,tcc_a_)];
                                       /*<<simulation/rule_interpreter.ml 846 1>>*/ return  /*<<simulation/rule_interpreter.ml 846 1>>*/ caml_call_gen3_k_
                                              (_bf_[6],cc_b_,_c_,tcc_a_) /*<<simulation/rule_interpreter.ml 846 65>>*/ },
-                                   tcc_U_,
+                                   tcc_V_,
                                    cc_u_),
                                  /*<<simulation/rule_interpreter.ml 848 5>>*/ _B_=
                                   /*<<simulation/rule_interpreter.ml 848 5>>*/ graph_f_.slice
                                   ();
                                 /*<<simulation/rule_interpreter.ml 848 5>>*/ _B_[8]=
-                               [0,[0,tcc_V_,x_T_]];
-                                /*<<simulation/state_interpreter.ml 108 67>>*/ return [0,
+                               [0,[0,tcc_W_,x_U_]];
+                                /*<<simulation/state_interpreter.ml 112 67>>*/ return [0,
                                        0,
                                        _B_,
                                        state_e_]}
@@ -52941,37 +52941,37 @@
                                      /*<<simulation/rule_interpreter.ml 840 7>>*/ ___(_atU_)];
                             case 5:
                              var
-                              s_al_=effect_b_[1],
-                               /*<<simulation/state_interpreter.ml 113 16>>*/ name_v_=
-                                /*<<simulation/state_interpreter.ml 113 16>>*/ caml_call_gen2_n_
-                                ( /*<<simulation/state_interpreter.ml 113 16>>*/ asprintf_aN_
+                              s_am_=effect_b_[1],
+                               /*<<simulation/state_interpreter.ml 117 16>>*/ name_v_=
+                                /*<<simulation/state_interpreter.ml 117 16>>*/ caml_call_gen2_n_
+                                ( /*<<simulation/state_interpreter.ml 117 16>>*/ asprintf_aN_
                                   (_at7_),
                                  print_expr_val_i_,
-                                 s_al_),
-                               /*<<simulation/state_interpreter.ml 114 5>>*/ match_I_=
+                                 s_am_),
+                               /*<<simulation/state_interpreter.ml 118 5>>*/ match_I_=
                                state_e_[5],
-                               /*<<simulation/state_interpreter.ml 114 5>>*/ fluxs_J_=
+                               /*<<simulation/state_interpreter.ml 118 5>>*/ fluxs_J_=
                                match_I_[2],
-                               /*<<simulation/state_interpreter.ml 114 5>>*/ rel_am_=
+                               /*<<simulation/state_interpreter.ml 118 5>>*/ rel_an_=
                                match_I_[1];
-                              /*<<simulation/state_interpreter.ml 116 56>>*/ if
-                              ( /*<<simulation/state_interpreter.ml 116 10>>*/ _ep_
+                              /*<<simulation/state_interpreter.ml 120 56>>*/ if
+                              ( /*<<simulation/state_interpreter.ml 120 10>>*/ _ep_
                                 (function(_a_){ /*<<?>>*/ return _wv_(name_v_,_a_)},
                                  fluxs_J_))
-                               /*<<simulation/state_interpreter.ml 117 12>>*/ _aY_
+                               /*<<simulation/state_interpreter.ml 121 12>>*/ _aY_
                                (0,
                                 function(f_a_)
                                  {var
-                                    /*<<simulation/state_interpreter.ml 122 3>>*/ _b_=
+                                    /*<<simulation/state_interpreter.ml 126 3>>*/ _b_=
                                     counter_d_[2],
-                                    /*<<simulation/state_interpreter.ml 121 3>>*/ _c_=
+                                    /*<<simulation/state_interpreter.ml 125 3>>*/ _c_=
                                     counter_d_[1];
-                                   /*<<simulation/state_interpreter.ml 121 33>>*/ return  /*<<simulation/state_interpreter.ml 121 33>>*/ caml_call_gen3_k_
-                                          ( /*<<simulation/state_interpreter.ml 121 33>>*/ fprintf_h_
+                                   /*<<simulation/state_interpreter.ml 125 33>>*/ return  /*<<simulation/state_interpreter.ml 125 33>>*/ caml_call_gen3_k_
+                                          ( /*<<simulation/state_interpreter.ml 125 33>>*/ fprintf_h_
                                             (f_a_,_at8_),
                                            _c_,
                                            _b_,
-                                           name_v_) /*<<simulation/state_interpreter.ml 122 39>>*/ });
+                                           name_v_) /*<<simulation/state_interpreter.ml 126 39>>*/ });
                              var
                                /*<<simulation/fluxmap.ml 2 47>>*/ sy_q_=
                                 /*<<simulation/fluxmap.ml 2 13>>*/ _m7_(env_g_)+
@@ -52980,17 +52980,17 @@
                                /*<<array.ml 43 2>>*/ res_w_=
                                 /*<<array.ml 43 2>>*/ caml_make_vect_D_(sy_q_,[0]),
                                /*<<array.ml 44 2>>*/ _x_=sy_q_-1|0,
-                               /*<<simulation/fluxmap.ml 2 47>>*/ init_$_=0,
-                               /*<<array.ml 43 2>>*/ _O_=0;
+                               /*<<simulation/fluxmap.ml 2 47>>*/ init_aa_=0,
+                               /*<<array.ml 43 2>>*/ _P_=0;
                               /*<<array.ml 44 2>>*/ if(!(_x_<0))
-                              {var x_p_=_O_;
+                              {var x_p_=_P_;
                                 /*<<array.ml 45 4>>*/ for(;;)
                                 { /*<<array.ml 45 37>>*/ res_w_[x_p_+1]=
-                                  /*<<array.ml 45 21>>*/ caml_make_vect_D_(sy_q_,init_$_);
-                                  /*<<array.ml 45 37>>*/ var _P_=x_p_+1|0;
-                                 if(_x_!==x_p_){var x_p_=_P_;continue}
+                                  /*<<array.ml 45 21>>*/ caml_make_vect_D_(sy_q_,init_aa_);
+                                  /*<<array.ml 45 37>>*/ var _Q_=x_p_+1|0;
+                                 if(_x_!==x_p_){var x_p_=_Q_;continue}
                                  break}}
-                              /*<<simulation/state_interpreter.ml 125 56>>*/ return [0,
+                              /*<<simulation/state_interpreter.ml 129 56>>*/ return [0,
                                      0,
                                      graph_f_,
                                      [0,
@@ -52999,7 +52999,7 @@
                                       state_e_[3],
                                       state_e_[4],
                                       [0,
-                                       rel_am_,
+                                       rel_an_,
                                        [0,
                                         [0,
                                          name_v_,
@@ -53010,28 +53010,28 @@
                                         fluxs_J_]]]];
                             case 6:
                              var
-                              s_an_=effect_b_[1],
-                               /*<<simulation/state_interpreter.ml 127 16>>*/ file_ao_=
-                                /*<<simulation/state_interpreter.ml 127 16>>*/ caml_call_gen2_n_
-                                ( /*<<simulation/state_interpreter.ml 127 16>>*/ asprintf_aN_
+                              s_ao_=effect_b_[1],
+                               /*<<simulation/state_interpreter.ml 131 16>>*/ file_ap_=
+                                /*<<simulation/state_interpreter.ml 131 16>>*/ caml_call_gen2_n_
+                                ( /*<<simulation/state_interpreter.ml 131 16>>*/ asprintf_aN_
                                   (_at9_),
                                  print_expr_val_i_,
-                                 s_an_),
-                               /*<<simulation/state_interpreter.ml 128 5>>*/ match_K_=
+                                 s_ao_),
+                               /*<<simulation/state_interpreter.ml 132 5>>*/ match_K_=
                                state_e_[5],
-                               /*<<simulation/state_interpreter.ml 128 5>>*/ fluxs_ap_=
+                               /*<<simulation/state_interpreter.ml 132 5>>*/ fluxs_aq_=
                                match_K_[2],
-                               /*<<simulation/state_interpreter.ml 128 5>>*/ rel_aq_=
+                               /*<<simulation/state_interpreter.ml 132 5>>*/ rel_ar_=
                                match_K_[1],
-                               /*<<simulation/state_interpreter.ml 129 26>>*/ match_L_=
-                                /*<<simulation/state_interpreter.ml 129 26>>*/ _h5_
-                                (function(_a_){ /*<<?>>*/ return _wv_(file_ao_,_a_)},
-                                 fluxs_ap_),
-                               /*<<simulation/state_interpreter.ml 129 75>>*/ others_ar_=
+                               /*<<simulation/state_interpreter.ml 133 26>>*/ match_L_=
+                                /*<<simulation/state_interpreter.ml 133 26>>*/ _h5_
+                                (function(_a_){ /*<<?>>*/ return _wv_(file_ap_,_a_)},
+                                 fluxs_aq_),
+                               /*<<simulation/state_interpreter.ml 133 75>>*/ others_as_=
                                match_L_[2],
-                               /*<<simulation/state_interpreter.ml 129 75>>*/ these_as_=
+                               /*<<simulation/state_interpreter.ml 133 75>>*/ these_at_=
                                match_L_[1];
-                              /*<<simulation/state_interpreter.ml 130 14>>*/  /*<<simulation/state_interpreter.ml 130 14>>*/ _ay_
+                              /*<<simulation/state_interpreter.ml 134 14>>*/  /*<<simulation/state_interpreter.ml 134 14>>*/ _ay_
                               (function(x_a_)
                                 {var
                                    /*<<simulation/fluxmap.ml 21 47>>*/ size_b_=
@@ -53048,10 +53048,10 @@
                                       /*<<simulation/fluxmap.ml 24 8>>*/ caml_call_gen1_m_
                                       ( /*<<simulation/fluxmap.ml 24 8>>*/ asprintf_aN_(_atX_),
                                        _e_));
-                                  /*<<simulation/state_interpreter.ml 131 64>>*/ return  /*<<simulation/state_interpreter.ml 131 64>>*/ caml_call_gen1_m_
-                                         (outputs_o_,[0,[0,flux_rules_f_,x_a_,counter_d_[1]]]) /*<<simulation/state_interpreter.ml 131 65>>*/ },
-                               these_as_);
-                              /*<<simulation/state_interpreter.ml 133 5>>*/ return [0,
+                                  /*<<simulation/state_interpreter.ml 135 64>>*/ return  /*<<simulation/state_interpreter.ml 135 64>>*/ caml_call_gen1_m_
+                                         (outputs_o_,[0,[0,flux_rules_f_,x_a_,counter_d_[1]]]) /*<<simulation/state_interpreter.ml 135 65>>*/ },
+                               these_at_);
+                              /*<<simulation/state_interpreter.ml 137 5>>*/ return [0,
                                      0,
                                      graph_f_,
                                      [0,
@@ -53059,7 +53059,7 @@
                                       state_e_[2],
                                       state_e_[3],
                                       state_e_[4],
-                                      [0,rel_aq_,others_ar_]]];
+                                      [0,rel_ar_,others_as_]]];
                             case 7:
                              var
                               cc_M_=effect_b_[1],
@@ -53068,9 +53068,9 @@
                               /*<<simulation/rule_interpreter.ml 851 2>>*/ if(_C_)
                               {var
                                 match_E_=_C_[1],
-                                x_W_=match_E_[2],
-                                tcc_X_=match_E_[1],
-                                 /*<<simulation/rule_interpreter.ml 856 5>>*/ tester_Y_=
+                                x_X_=match_E_[2],
+                                tcc_Y_=match_E_[1],
+                                 /*<<simulation/rule_interpreter.ml 856 5>>*/ tester_Z_=
                                  function(param_a_)
                                   {var
                                     el_d_=param_a_[2],
@@ -53087,7 +53087,7 @@
                                                       :b_b_ /*<<simulation/rule_interpreter.ml 859 71>>*/ },
                                             _b_,
                                             cc_M_)},
-                                 /*<<simulation/rule_interpreter.ml 862 5>>*/ tcc_Z_=
+                                 /*<<simulation/rule_interpreter.ml 862 5>>*/ tcc_$_=
                                   /*<<simulation/rule_interpreter.ml 862 5>>*/ _bH_
                                   (function(tcc_a_,cc_b_)
                                     {var
@@ -53097,21 +53097,21 @@
                                        /*<<simulation/rule_interpreter.ml 865 7>>*/ l_c_=
                                         /*<<simulation/rule_interpreter.ml 865 7>>*/ caml_call_gen1_m_
                                         ( /*<<simulation/rule_interpreter.ml 865 7>>*/ _bI_
-                                          (tester_Y_),
+                                          (tester_Z_),
                                          acc_d_);
                                       /*<<simulation/rule_interpreter.ml 865 29>>*/ return l_c_
                                              ? /*<<simulation/rule_interpreter.ml 867 8>>*/ caml_call_gen3_k_
                                                (_bf_[6],cc_b_,l_c_,tcc_a_)
                                              : /*<<simulation/rule_interpreter.ml 866 9>>*/ caml_call_gen2_n_
                                                (_bf_[7],cc_b_,tcc_a_) /*<<simulation/rule_interpreter.ml 867 44>>*/ },
-                                   tcc_X_,
+                                   tcc_Y_,
                                    cc_M_),
                                  /*<<simulation/rule_interpreter.ml 869 5>>*/ _F_=
                                   /*<<simulation/rule_interpreter.ml 869 5>>*/ graph_f_.slice
                                   ();
                                 /*<<simulation/rule_interpreter.ml 869 5>>*/ _F_[8]=
-                               [0,[0,tcc_Z_,x_W_]];
-                                /*<<simulation/state_interpreter.ml 111 53>>*/ return [0,
+                               [0,[0,tcc_$_,x_X_]];
+                                /*<<simulation/state_interpreter.ml 115 53>>*/ return [0,
                                        0,
                                        _F_,
                                        state_e_]}
@@ -53121,47 +53121,50 @@
                             default:
                              var
                               match_N_=effect_b_[1],
-                              pe_expr_at_=match_N_[2],
-                              pe_file_au_=match_N_[1],
-                               /*<<simulation/state_interpreter.ml 84 16>>*/ file_av_=
-                                /*<<simulation/state_interpreter.ml 84 16>>*/ caml_call_gen2_n_
-                                ( /*<<simulation/state_interpreter.ml 84 16>>*/ asprintf_aN_
-                                  (_at__),
-                                 print_expr_val_i_,
-                                 pe_file_au_);
-                              /*<<simulation/state_interpreter.ml 86 14>>*/  /*<<simulation/state_interpreter.ml 86 14>>*/ caml_call_gen1_m_
+                              pe_file_O_=match_N_[1],
+                              pe_expr_au_=match_N_[2],
+                               /*<<simulation/state_interpreter.ml 84 5>>*/ file_opt_av_=
+                               pe_file_O_
+                                ?[0,
+                                   /*<<simulation/state_interpreter.ml 87 19>>*/ caml_call_gen2_n_
+                                   ( /*<<simulation/state_interpreter.ml 87 19>>*/ asprintf_aN_
+                                     (_at__),
+                                    print_expr_val_i_,
+                                    pe_file_O_)]
+                                :0;
+                              /*<<simulation/state_interpreter.ml 90 14>>*/  /*<<simulation/state_interpreter.ml 90 14>>*/ caml_call_gen1_m_
                               (outputs_o_,
                                [2,
                                 [0,
-                                 file_av_,
-                                  /*<<simulation/state_interpreter.ml 85 16>>*/ caml_call_gen2_n_
-                                  ( /*<<simulation/state_interpreter.ml 85 16>>*/ asprintf_aN_
+                                 file_opt_av_,
+                                  /*<<simulation/state_interpreter.ml 89 16>>*/ caml_call_gen2_n_
+                                  ( /*<<simulation/state_interpreter.ml 89 16>>*/ asprintf_aN_
                                     (_at$_),
                                    print_expr_val_i_,
-                                   pe_expr_at_)]]);
-                              /*<<simulation/state_interpreter.ml 87 5>>*/ return [0,
+                                   pe_expr_au_)]]);
+                              /*<<simulation/state_interpreter.ml 91 5>>*/ return [0,
                                      0,
                                      graph_f_,
-                                     state_e_]} /*<<simulation/state_interpreter.ml 155 60>>*/ },
+                                     state_e_]} /*<<simulation/state_interpreter.ml 159 60>>*/ },
                        _y_,
                        _x_),
-                     /*<<simulation/state_interpreter.ml 156 45>>*/ state_t_=
+                     /*<<simulation/state_interpreter.ml 160 45>>*/ state_t_=
                      match_r_[3],
-                     /*<<simulation/state_interpreter.ml 156 45>>*/ graph_u_=
+                     /*<<simulation/state_interpreter.ml 160 45>>*/ graph_u_=
                      match_r_[2],
-                     /*<<simulation/state_interpreter.ml 156 45>>*/ stop_z_=
+                     /*<<simulation/state_interpreter.ml 160 45>>*/ stop_z_=
                      match_r_[1];
-                    /*<<simulation/state_interpreter.ml 157 1>>*/  /*<<simulation/state_interpreter.ml 157 1>>*/ caml_check_bound_l_
+                    /*<<simulation/state_interpreter.ml 161 1>>*/  /*<<simulation/state_interpreter.ml 161 1>>*/ caml_check_bound_l_
                      (not_done_yet_s_,i_a_)
                     [i_a_+1]=
                    0;
                    var
-                     /*<<simulation/state_interpreter.ml 158 1>>*/ _w_=
+                     /*<<simulation/state_interpreter.ml 162 1>>*/ _w_=
                      pert_p_[3],
-                     /*<<simulation/state_interpreter.ml 158 1>>*/ _A_=
+                     /*<<simulation/state_interpreter.ml 162 1>>*/ _A_=
                      _w_
                       ?1-
-                        /*<<simulation/state_interpreter.ml 163 12>>*/ _wp_
+                        /*<<simulation/state_interpreter.ml 167 12>>*/ _wp_
                         (get_alg_q_,counter_d_,graph_u_,_w_[1])
                       :0;
                    caml_check_bound_l_(state_t_[2],i_a_)[i_a_+1]=_A_;
@@ -53173,71 +53176,71 @@
                    continue}
                var i_a_=i_a_+1|0;
                continue}
-             /*<<simulation/state_interpreter.ml 145 6>>*/ return [0,
+             /*<<simulation/state_interpreter.ml 149 6>>*/ return [0,
                     stop_b_,
-                     /*<<simulation/state_interpreter.ml 142 1>>*/ _ju_
+                     /*<<simulation/state_interpreter.ml 146 1>>*/ _ju_
                      (get_alg_q_,
                       function(x_a_,param_b_,y_c_)
-                       { /*<<simulation/state_interpreter.ml 143 26>>*/ return  /*<<simulation/state_interpreter.ml 143 26>>*/ _jx_
-                                (x_a_,y_c_,state_i_[3]) /*<<simulation/state_interpreter.ml 143 62>>*/ },
+                       { /*<<simulation/state_interpreter.ml 147 26>>*/ return  /*<<simulation/state_interpreter.ml 147 26>>*/ _jx_
+                                (x_a_,y_c_,state_i_[3]) /*<<simulation/state_interpreter.ml 147 62>>*/ },
                       env_g_,
                       counter_d_,
                       graph_j_),
-                    state_i_]} /*<<simulation/state_interpreter.ml 167 35>>*/ },
+                    state_i_]} /*<<simulation/state_interpreter.ml 171 35>>*/ },
        _aua_=
         function
          (outputs_a_,form_b_,env_c_,domain_d_,counter_e_,graph_f_,state_g_)
          {var
-            /*<<simulation/state_interpreter.ml 250 2>>*/ activity_J_=
-             /*<<simulation/state_interpreter.ml 250 2>>*/ _wu_(state_g_[3]),
-            /*<<simulation/state_interpreter.ml 255 28>>*/ dt_s_=
-             /*<<simulation/state_interpreter.ml 255 28>>*/ Math.abs
-             ( /*<<simulation/state_interpreter.ml 255 22>>*/ Math.log
-               ( /*<<simulation/state_interpreter.ml 254 11>>*/ _ry_(1))/
+            /*<<simulation/state_interpreter.ml 254 2>>*/ activity_J_=
+             /*<<simulation/state_interpreter.ml 254 2>>*/ _wu_(state_g_[3]),
+            /*<<simulation/state_interpreter.ml 259 28>>*/ dt_s_=
+             /*<<simulation/state_interpreter.ml 259 28>>*/ Math.abs
+             ( /*<<simulation/state_interpreter.ml 259 22>>*/ Math.log
+               ( /*<<simulation/state_interpreter.ml 258 11>>*/ _ry_(1))/
               activity_J_);
-           /*<<simulation/state_interpreter.ml 258 2>>*/ if(0<activity_J_)
+           /*<<simulation/state_interpreter.ml 262 2>>*/ if(0<activity_J_)
            if(dt_s_!=infinity_cQ_)
-            { /*<<simulation/state_interpreter.ml 281 4>>*/ var
+            { /*<<simulation/state_interpreter.ml 285 4>>*/ var
               _M_=
                state_g_[1][1];
-              /*<<simulation/state_interpreter.ml 281 4>>*/ if(_M_)
+              /*<<simulation/state_interpreter.ml 285 4>>*/ if(_M_)
               {var ti_ad_=_M_[1][1],tail_aQ_=_M_[2];
-                /*<<simulation/state_interpreter.ml 283 69>>*/ if
-                ( /*<<simulation/state_interpreter.ml 283 7>>*/ _uf_
+                /*<<simulation/state_interpreter.ml 287 69>>*/ if
+                ( /*<<simulation/state_interpreter.ml 287 7>>*/ _uf_
                   (ti_ad_,[0,counter_e_[1]+dt_s_]))
-                { /*<<simulation/state_interpreter.ml 284 7>>*/ state_g_[1][1]=
+                { /*<<simulation/state_interpreter.ml 288 7>>*/ state_g_[1][1]=
                  tail_aQ_;
                  var
-                   /*<<simulation/state_interpreter.ml 285 22>>*/ continue_aS_=
-                    /*<<simulation/state_interpreter.ml 285 22>>*/ _v$_
+                   /*<<simulation/state_interpreter.ml 289 22>>*/ continue_aS_=
+                    /*<<simulation/state_interpreter.ml 289 22>>*/ _v$_
                     (counter_e_,ti_ad_),
-                   /*<<simulation/state_interpreter.ml 287 2>>*/ match_O_=
-                    /*<<simulation/state_interpreter.ml 287 2>>*/ _jz_
+                   /*<<simulation/state_interpreter.ml 291 2>>*/ match_O_=
+                    /*<<simulation/state_interpreter.ml 291 2>>*/ _jz_
                     (outputs_a_,env_c_,domain_d_,counter_e_,graph_f_,state_g_),
-                   /*<<simulation/state_interpreter.ml 288 7>>*/ _aW_=
+                   /*<<simulation/state_interpreter.ml 292 7>>*/ _aW_=
                    1-
                    continue_aS_,
-                   /*<<simulation/state_interpreter.ml 287 52>>*/ state_aT_=
+                   /*<<simulation/state_interpreter.ml 291 52>>*/ state_aT_=
                    match_O_[3],
-                   /*<<simulation/state_interpreter.ml 287 52>>*/ graph_aU_=
+                   /*<<simulation/state_interpreter.ml 291 52>>*/ graph_aU_=
                    match_O_[2],
-                   /*<<simulation/state_interpreter.ml 287 52>>*/ stop_aV_=
+                   /*<<simulation/state_interpreter.ml 291 52>>*/ stop_aV_=
                    match_O_[1],
-                   /*<<simulation/state_interpreter.ml 288 7>>*/ _aX_=
+                   /*<<simulation/state_interpreter.ml 292 7>>*/ _aX_=
                    _aW_||
                    stop_aV_;
                  return [0,_aX_,graph_aU_,state_aT_]}}
              var
-               /*<<simulation/state_interpreter.ml 291 2>>*/ match_P_=
-                /*<<simulation/state_interpreter.ml 291 2>>*/ _jz_
+               /*<<simulation/state_interpreter.ml 295 2>>*/ match_P_=
+                /*<<simulation/state_interpreter.ml 295 2>>*/ _jz_
                 (outputs_a_,env_c_,domain_d_,counter_e_,graph_f_,state_g_),
-               /*<<simulation/state_interpreter.ml 291 52>>*/ state_q_=
+               /*<<simulation/state_interpreter.ml 295 52>>*/ state_q_=
                match_P_[3],
-               /*<<simulation/state_interpreter.ml 291 52>>*/ graph_i_=
+               /*<<simulation/state_interpreter.ml 295 52>>*/ graph_i_=
                match_P_[2],
-               /*<<simulation/state_interpreter.ml 291 52>>*/ stop_C_=
+               /*<<simulation/state_interpreter.ml 295 52>>*/ stop_C_=
                match_P_[1],
-               /*<<simulation/state_interpreter.ml 170 2>>*/ _I_=state_q_[3],
+               /*<<simulation/state_interpreter.ml 174 2>>*/ _I_=state_q_[3],
                /*<<dataStructures/random_tree.ml 155 8>>*/ match_Y_=
                 /*<<dataStructures/random_tree.ml 155 8>>*/ caml_call_gen1_m_
                 (_o_[1][37],_I_[4]);
@@ -53299,25 +53302,25 @@
                     w_F_];
                  break}}
              var
-               /*<<simulation/state_interpreter.ml 170 52>>*/ choice_x_=
+               /*<<simulation/state_interpreter.ml 174 52>>*/ choice_x_=
                match_aa_[1],
-               /*<<simulation/state_interpreter.ml 171 2>>*/ rule_id_j_=
+               /*<<simulation/state_interpreter.ml 175 2>>*/ rule_id_j_=
                choice_x_/
                2|
                0,
-               /*<<simulation/state_interpreter.ml 172 13>>*/ rule_p_=
-                /*<<simulation/state_interpreter.ml 172 13>>*/ _m6_
+               /*<<simulation/state_interpreter.ml 176 13>>*/ rule_p_=
+                /*<<simulation/state_interpreter.ml 176 13>>*/ _m6_
                 (env_c_,rule_id_j_),
-               /*<<simulation/state_interpreter.ml 173 2>>*/ store_y_=
+               /*<<simulation/state_interpreter.ml 177 2>>*/ store_y_=
                function(rd_id_a_,syntax_rd_id_b_,new_act_c_)
                 {var
-                   /*<<simulation/state_interpreter.ml 174 4>>*/ _g_=
+                   /*<<simulation/state_interpreter.ml 178 4>>*/ _g_=
                    state_q_[5],
-                   /*<<simulation/state_interpreter.ml 174 4>>*/ _h_=_g_[2],
-                   /*<<simulation/state_interpreter.ml 174 4>>*/ _k_=_g_[1];
-                  /*<<simulation/state_interpreter.ml 174 4>>*/ if(_h_)
+                   /*<<simulation/state_interpreter.ml 178 4>>*/ _h_=_g_[2],
+                   /*<<simulation/state_interpreter.ml 178 4>>*/ _k_=_g_[1];
+                  /*<<simulation/state_interpreter.ml 178 4>>*/ if(_h_)
                   {var
-                     /*<<simulation/state_interpreter.ml 178 2>>*/ _i_=
+                     /*<<simulation/state_interpreter.ml 182 2>>*/ _i_=
                      state_q_[3],
                      /*<<dataStructures/random_tree.ml 33 10>>*/ i_f_=
                       /*<<dataStructures/random_tree.ml 33 10>>*/ _wq_
@@ -53326,11 +53329,11 @@
                       /*<<dataStructures/random_tree.ml 33 22>>*/ caml_check_bound_l_
                        (_i_[6],i_f_)
                       [i_f_+1];
-                    /*<<simulation/state_interpreter.ml 179 1>>*/ if(_k_)
+                    /*<<simulation/state_interpreter.ml 183 1>>*/ if(_k_)
                     var
-                      /*<<simulation/state_interpreter.ml 183 40>>*/ _m_=
+                      /*<<simulation/state_interpreter.ml 187 40>>*/ _m_=
                       2===
-                        /*<<simulation/state_interpreter.ml 183 18>>*/ caml_classify_float_kA_
+                        /*<<simulation/state_interpreter.ml 187 18>>*/ caml_classify_float_kA_
                         (old_act_d_)
                        ?0
                        :(new_act_c_-old_act_d_)/old_act_d_,
@@ -53338,7 +53341,7 @@
                    else
                     var _j_=new_act_c_-old_act_d_;
                    var _e_=rule_p_[8];
-                    /*<<simulation/state_interpreter.ml 179 1>>*/  /*<<simulation/state_interpreter.ml 179 1>>*/ _ay_
+                    /*<<simulation/state_interpreter.ml 183 1>>*/  /*<<simulation/state_interpreter.ml 183 1>>*/ _ay_
                     (function(flux_a_)
                       { /*<<simulation/fluxmap.ml 12 44>>*/ var
                         _c_=
@@ -53357,16 +53360,16 @@
                                [syntax_rd_id_b_+1]=
                               _c_},
                      _h_)}
-                  /*<<simulation/state_interpreter.ml 189 7>>*/ return  /*<<simulation/state_interpreter.ml 189 7>>*/ _jx_
-                         (rd_id_a_,new_act_c_,state_q_[3]) /*<<simulation/state_interpreter.ml 189 53>>*/ },
-               /*<<simulation/state_interpreter.ml 201 2>>*/ get_alg_v_=
+                  /*<<simulation/state_interpreter.ml 193 7>>*/ return  /*<<simulation/state_interpreter.ml 193 7>>*/ _jx_
+                         (rd_id_a_,new_act_c_,state_q_[3]) /*<<simulation/state_interpreter.ml 193 53>>*/ },
+               /*<<simulation/state_interpreter.ml 205 2>>*/ get_alg_v_=
                function(i_a_)
-                { /*<<simulation/state_interpreter.ml 201 18>>*/ return  /*<<simulation/state_interpreter.ml 201 18>>*/ _jy_
-                         (env_c_,state_q_,i_a_) /*<<simulation/state_interpreter.ml 201 37>>*/ },
-               /*<<simulation/state_interpreter.ml 204 2>>*/ cause_an_=
+                { /*<<simulation/state_interpreter.ml 205 18>>*/ return  /*<<simulation/state_interpreter.ml 205 18>>*/ _jy_
+                         (env_c_,state_q_,i_a_) /*<<simulation/state_interpreter.ml 205 37>>*/ },
+               /*<<simulation/state_interpreter.ml 208 2>>*/ cause_an_=
                [1,rule_p_[8]],
-               /*<<simulation/state_interpreter.ml 211 3>>*/ _ap_=env_c_[7];
-              /*<<simulation/state_interpreter.ml 206 4>>*/ if
+               /*<<simulation/state_interpreter.ml 215 3>>*/ _ap_=env_c_[7];
+              /*<<simulation/state_interpreter.ml 210 4>>*/ if
               (1===(choice_x_%2|0))
               var
                _ae_=
@@ -53554,7 +53557,7 @@
                    /*<<simulation/rule_interpreter.ml 584 29>>*/ throw _z_};
              else
               var
-                /*<<simulation/state_interpreter.ml 208 9>>*/ _ao_=
+                /*<<simulation/state_interpreter.ml 212 9>>*/ _ao_=
                 [0,rule_id_j_],
                _ae_=
                 function(_a_,_b_,_c_,_d_,_e_,_f_,_g_,_h_)
@@ -53570,26 +53573,26 @@
                  graph_i_,
                  cause_an_,
                  rule_p_);
-              /*<<simulation/state_interpreter.ml 212 27>>*/ if
+              /*<<simulation/state_interpreter.ml 216 27>>*/ if
               (typeof match_A_==="number")
-              { /*<<simulation/state_interpreter.ml 227 5>>*/ var
+              { /*<<simulation/state_interpreter.ml 231 5>>*/ var
                 _aq_=
                  _uq_[1];
-                /*<<simulation/state_interpreter.ml 227 46>>*/ if
+                /*<<simulation/state_interpreter.ml 231 46>>*/ if
                 ( /*<<simulation/counter.ml 29 27>>*/ caml_check_bound_l_
                    (counter_e_[8],1)
                   [_nc_+1]<
                  _aq_)
                 {var
-                   /*<<simulation/state_interpreter.ml 230 60>>*/ _ar_=
+                   /*<<simulation/state_interpreter.ml 234 60>>*/ _ar_=
                    1-
-                    /*<<simulation/state_interpreter.ml 230 12>>*/ _v__
+                    /*<<simulation/state_interpreter.ml 234 12>>*/ _v__
                     (counter_e_,dt_s_),
-                   /*<<simulation/state_interpreter.ml 230 60>>*/ _as_=
+                   /*<<simulation/state_interpreter.ml 234 60>>*/ _as_=
                    _ar_||
                    stop_C_;
                  return [0,_as_,graph_i_,state_q_]}
-                /*<<simulation/state_interpreter.ml 232 7>>*/ if
+                /*<<simulation/state_interpreter.ml 236 7>>*/ if
                 (1===(choice_x_%2|0))
                 {var
                    /*<<simulation/rule_interpreter.ml 756 4>>*/ cands_ag_=
@@ -53685,26 +53688,26 @@
                   (_o_[2][6],rule_id_j_,matches_V_,graph_i_[2]);
                  var _ab_=newrecord_W_}
                var
-                 /*<<simulation/state_interpreter.ml 232 60>>*/ _at_=
+                 /*<<simulation/state_interpreter.ml 236 60>>*/ _at_=
                  1-
-                  /*<<simulation/state_interpreter.ml 232 12>>*/ _v__
+                  /*<<simulation/state_interpreter.ml 236 12>>*/ _v__
                   (counter_e_,dt_s_),
-                 /*<<simulation/state_interpreter.ml 232 60>>*/ _au_=
+                 /*<<simulation/state_interpreter.ml 236 60>>*/ _au_=
                  _at_||
                  stop_C_;
                return [0,_au_,_ab_,state_q_]}
              else
-              { /*<<simulation/state_interpreter.ml 212 27>>*/ if
+              { /*<<simulation/state_interpreter.ml 216 27>>*/ if
                 (0===match_A_[0])
                 {var
-                   /*<<simulation/state_interpreter.ml 215 7>>*/ graph_av_=
-                    /*<<simulation/state_interpreter.ml 215 7>>*/ _ju_
+                   /*<<simulation/state_interpreter.ml 219 7>>*/ graph_av_=
+                    /*<<simulation/state_interpreter.ml 219 7>>*/ _ju_
                     (get_alg_v_,store_y_,env_c_,counter_e_,match_A_[1]),
-                   /*<<simulation/state_interpreter.ml 217 5>>*/ _B_=
+                   /*<<simulation/state_interpreter.ml 221 5>>*/ _B_=
                    rule_p_[8],
-                   /*<<simulation/state_interpreter.ml 217 5>>*/ _ax_=
+                   /*<<simulation/state_interpreter.ml 221 5>>*/ _ax_=
                    state_q_[5][2];
-                  /*<<simulation/state_interpreter.ml 218 7>>*/  /*<<simulation/state_interpreter.ml 218 7>>*/ _ay_
+                  /*<<simulation/state_interpreter.ml 222 7>>*/  /*<<simulation/state_interpreter.ml 222 7>>*/ _ay_
                   (function(flux_a_)
                     { /*<<simulation/fluxmap.ml 15 69>>*/ var
                       _b_=
@@ -53735,16 +53738,16 @@
                     /*<<simulation/counter.ml 99 2>>*/ _g9_(counter_e_),
                    /*<<simulation/counter.ml 99 14>>*/ _az_=
                    _R_?_g__(counter_e_):_R_,
-                   /*<<simulation/state_interpreter.ml 225 53>>*/ _aA_=1-_az_,
-                   /*<<simulation/state_interpreter.ml 225 53>>*/ _aB_=
+                   /*<<simulation/state_interpreter.ml 229 53>>*/ _aA_=1-_az_,
+                   /*<<simulation/state_interpreter.ml 229 53>>*/ _aB_=
                    _aA_||
                    stop_C_;
                  return [0,_aB_,graph_av_,state_q_]}
-                /*<<simulation/state_interpreter.ml 241 7>>*/ var
+                /*<<simulation/state_interpreter.ml 245 7>>*/ var
                 graph_aC_=
-                  /*<<simulation/state_interpreter.ml 241 7>>*/ _ju_
+                  /*<<simulation/state_interpreter.ml 245 7>>*/ _ju_
                   (get_alg_v_,store_y_,env_c_,counter_e_,match_A_[1]);
-                /*<<simulation/state_interpreter.ml 243 5>>*/ if
+                /*<<simulation/state_interpreter.ml 247 5>>*/ if
                 (1===(choice_x_%2|0))
                 { /*<<simulation/counter.ml 105 73>>*/ counter_e_[8]=
                   /*<<simulation/counter.ml 40 31>>*/ _jo_
@@ -53770,59 +53773,59 @@
                    _S_?_g__(counter_e_):_S_,
                   continue_ac_=_aG_}
                var
-                 /*<<simulation/state_interpreter.ml 247 5>>*/ _aE_=
+                 /*<<simulation/state_interpreter.ml 251 5>>*/ _aE_=
                  1-
                  continue_ac_,
-                 /*<<simulation/state_interpreter.ml 247 5>>*/ _aF_=
+                 /*<<simulation/state_interpreter.ml 251 5>>*/ _aF_=
                  _aE_||
                  stop_C_;
                return [0,_aF_,graph_aC_,state_q_]}}
-           /*<<simulation/state_interpreter.ml 259 4>>*/ var
+           /*<<simulation/state_interpreter.ml 263 4>>*/ var
            _K_=
             state_g_[1][1];
-           /*<<simulation/state_interpreter.ml 259 4>>*/ if(_K_)
+           /*<<simulation/state_interpreter.ml 263 4>>*/ if(_K_)
            {var ti_aH_=_K_[1][1];
-             /*<<simulation/state_interpreter.ml 274 7>>*/ state_g_[1][1]=
+             /*<<simulation/state_interpreter.ml 278 7>>*/ state_g_[1][1]=
             _K_[2];
             var
-              /*<<simulation/state_interpreter.ml 275 22>>*/ continue_aI_=
-               /*<<simulation/state_interpreter.ml 275 22>>*/ _v$_
+              /*<<simulation/state_interpreter.ml 279 22>>*/ continue_aI_=
+               /*<<simulation/state_interpreter.ml 279 22>>*/ _v$_
                (counter_e_,ti_aH_),
-              /*<<simulation/state_interpreter.ml 277 2>>*/ match_L_=
-               /*<<simulation/state_interpreter.ml 277 2>>*/ _jz_
+              /*<<simulation/state_interpreter.ml 281 2>>*/ match_L_=
+               /*<<simulation/state_interpreter.ml 281 2>>*/ _jz_
                (outputs_a_,env_c_,domain_d_,counter_e_,graph_f_,state_g_),
-              /*<<simulation/state_interpreter.ml 278 7>>*/ _aM_=
+              /*<<simulation/state_interpreter.ml 282 7>>*/ _aM_=
               1-
               continue_aI_,
-              /*<<simulation/state_interpreter.ml 277 52>>*/ state_aJ_=
+              /*<<simulation/state_interpreter.ml 281 52>>*/ state_aJ_=
               match_L_[3],
-              /*<<simulation/state_interpreter.ml 277 52>>*/ graph_aK_=
+              /*<<simulation/state_interpreter.ml 281 52>>*/ graph_aK_=
               match_L_[2],
-              /*<<simulation/state_interpreter.ml 277 52>>*/ stop_aL_=
+              /*<<simulation/state_interpreter.ml 281 52>>*/ stop_aL_=
               match_L_[1],
-              /*<<simulation/state_interpreter.ml 278 7>>*/ _aN_=
+              /*<<simulation/state_interpreter.ml 282 7>>*/ _aN_=
               _aM_||
               stop_aL_;
             return [0,_aN_,graph_aK_,state_aJ_]}
-           /*<<simulation/state_interpreter.ml 261 7>>*/ if(_up_[1])
-            /*<<simulation/state_interpreter.ml 263 4>>*/ caml_call_gen1_m_
+           /*<<simulation/state_interpreter.ml 265 7>>*/ if(_up_[1])
+            /*<<simulation/state_interpreter.ml 267 4>>*/ caml_call_gen1_m_
             (outputs_a_,
              [3,
-               /*<<simulation/state_interpreter.ml 265 2>>*/ _jw_
+               /*<<simulation/state_interpreter.ml 269 2>>*/ _jw_
                (env_c_,counter_e_,_aub_,graph_f_)]);
           var
-            /*<<simulation/state_interpreter.ml 271 4>>*/ _aO_=counter_e_[1],
-            /*<<simulation/state_interpreter.ml 270 4>>*/ _aP_=counter_e_[2];
-           /*<<simulation/state_interpreter.ml 267 2>>*/  /*<<simulation/state_interpreter.ml 267 2>>*/ caml_call_gen3_k_
-           ( /*<<simulation/state_interpreter.ml 267 2>>*/ fprintf_h_
+            /*<<simulation/state_interpreter.ml 275 4>>*/ _aO_=counter_e_[1],
+            /*<<simulation/state_interpreter.ml 274 4>>*/ _aP_=counter_e_[2];
+           /*<<simulation/state_interpreter.ml 271 2>>*/  /*<<simulation/state_interpreter.ml 271 2>>*/ caml_call_gen3_k_
+           ( /*<<simulation/state_interpreter.ml 271 2>>*/ fprintf_h_
              (form_b_,_auc_),
             _aP_,
             _aO_,
             activity_J_);
-           /*<<simulation/state_interpreter.ml 272 7>>*/ return [0,
+           /*<<simulation/state_interpreter.ml 276 7>>*/ return [0,
                   1,
                   graph_f_,
-                  state_g_] /*<<simulation/state_interpreter.ml 292 56>>*/ },
+                  state_g_] /*<<simulation/state_interpreter.ml 296 56>>*/ },
        _wy_=
         function(contact_map_f_,counter_e_,domain_c_,l_d_)
          { /*<<grammar/eval.ml 13 2>>*/ var _a_=[0,domain_c_,0];
@@ -56901,43 +56904,43 @@
                                                (self_1_g_[_O_+1],0),
                                               f_a_)
                                            :return_unit_bc_ /*<<api/api.ml 116 68>>*/ }
-                                  /*<<simulation/state_interpreter.ml 295 2>>*/ function
+                                  /*<<simulation/state_interpreter.ml 299 2>>*/ function
                                   iter_i_
                                   (graph_a_,state_b_)
-                                  { /*<<simulation/state_interpreter.ml 296 4>>*/ try
+                                  { /*<<simulation/state_interpreter.ml 300 4>>*/ try
                                     {var
-                                       /*<<simulation/state_interpreter.ml 299 3>>*/ out_f_=
-                                        /*<<simulation/state_interpreter.ml 299 3>>*/ _aua_
+                                       /*<<simulation/state_interpreter.ml 303 3>>*/ out_f_=
+                                        /*<<simulation/state_interpreter.ml 303 3>>*/ _aua_
                                         (outputs_E_,form_w_,env_d_,domain_q_,_c_,graph_a_,state_b_),
-                                       /*<<simulation/state_interpreter.ml 299 54>>*/ state_o_=
+                                       /*<<simulation/state_interpreter.ml 303 54>>*/ state_o_=
                                        out_f_[3],
-                                       /*<<simulation/state_interpreter.ml 299 54>>*/ graph_p_=
+                                       /*<<simulation/state_interpreter.ml 303 54>>*/ graph_p_=
                                        out_f_[2],
-                                       /*<<simulation/state_interpreter.ml 299 54>>*/ stop_y_=
+                                       /*<<simulation/state_interpreter.ml 303 54>>*/ stop_y_=
                                        out_f_[1];
-                                      /*<<simulation/state_interpreter.ml 301 3>>*/  /*<<simulation/state_interpreter.ml 301 3>>*/ _asU_
+                                      /*<<simulation/state_interpreter.ml 305 3>>*/  /*<<simulation/state_interpreter.ml 305 3>>*/ _asU_
                                       (outputs_E_,
                                        _c_,
-                                        /*<<simulation/state_interpreter.ml 302 13>>*/ _ww_
+                                        /*<<simulation/state_interpreter.ml 306 13>>*/ _ww_
                                         (env_d_,_c_,graph_p_,state_o_));
-                                      /*<<simulation/state_interpreter.ml 303 1>>*/ if(stop_y_)
-                                       /*<<simulation/state_interpreter.ml 304 12>>*/ _jz_
+                                      /*<<simulation/state_interpreter.ml 307 1>>*/ if(stop_y_)
+                                       /*<<simulation/state_interpreter.ml 308 12>>*/ _jz_
                                        (outputs_E_,env_d_,domain_q_,_c_,graph_p_,state_o_);
                                      var match_e_=out_f_}
                                    catch(exn_f_)
                                     {exn_f_=caml_wrap_exception_x_(exn_f_);
                                      if(exn_f_[1]!==_iO_)throw exn_f_;
-                                      /*<<simulation/state_interpreter.ml 307 1>>*/ var
+                                      /*<<simulation/state_interpreter.ml 311 1>>*/ var
                                       f_t_=
                                        exn_f_[2];
-                                      /*<<simulation/state_interpreter.ml 307 10>>*/  /*<<simulation/state_interpreter.ml 307 10>>*/ pp_print_newline_dO_
+                                      /*<<simulation/state_interpreter.ml 311 10>>*/  /*<<simulation/state_interpreter.ml 311 10>>*/ pp_print_newline_dO_
                                       (form_w_,0);
-                                      /*<<simulation/state_interpreter.ml 308 11>>*/ var
+                                      /*<<simulation/state_interpreter.ml 312 11>>*/ var
                                       msg_v_=
-                                        /*<<simulation/state_interpreter.ml 308 11>>*/ caml_call_gen2_n_
+                                        /*<<simulation/state_interpreter.ml 312 11>>*/ caml_call_gen2_n_
                                         (f_t_,_c_[1],_c_[2]);
-                                      /*<<simulation/state_interpreter.ml 310 3>>*/  /*<<simulation/state_interpreter.ml 310 3>>*/ caml_call_gen1_m_
-                                      ( /*<<simulation/state_interpreter.ml 310 3>>*/ fprintf_h_
+                                      /*<<simulation/state_interpreter.ml 314 3>>*/  /*<<simulation/state_interpreter.ml 314 3>>*/ caml_call_gen1_m_
+                                      ( /*<<simulation/state_interpreter.ml 314 3>>*/ fprintf_h_
                                         (form_w_,_aud_),
                                        msg_v_);
                                       /*<<dataStructures/tools.ml 20 1>>*/ var
@@ -57002,29 +57005,29 @@
                                         _g_=
                                           /*<<dataStructures/tools.ml 29 22>>*/ invalid_arg_F_(_ad__)}
                                      var
-                                       /*<<simulation/state_interpreter.ml 316 11>>*/ match_j_=
-                                        /*<<simulation/state_interpreter.ml 316 11>>*/ _h6_(_g_),
-                                       /*<<simulation/state_interpreter.ml 316 49>>*/ switch_B_=
-                                        /*<<simulation/state_interpreter.ml 316 49>>*/ caml_string_notequal_u_
+                                       /*<<simulation/state_interpreter.ml 320 11>>*/ match_j_=
+                                        /*<<simulation/state_interpreter.ml 320 11>>*/ _h6_(_g_),
+                                       /*<<simulation/state_interpreter.ml 320 49>>*/ switch_B_=
+                                        /*<<simulation/state_interpreter.ml 320 49>>*/ caml_string_notequal_u_
                                          (match_j_,_aue_)
                                         ?caml_string_notequal_u_(match_j_,_auf_)?1:0
                                         :0;
                                       /*<<camlinternalFormatBasics.ml 502 8>>*/ if(!switch_B_)
-                                       /*<<simulation/state_interpreter.ml 318 8>>*/ outputs_E_
+                                       /*<<simulation/state_interpreter.ml 322 8>>*/ outputs_E_
                                        ([3,
-                                          /*<<simulation/state_interpreter.ml 320 6>>*/ _jw_
+                                          /*<<simulation/state_interpreter.ml 324 6>>*/ _jw_
                                           (env_d_,_c_,_aug_,graph_a_)]);
                                      var match_e_=[0,1,graph_a_,state_b_]}
                                    var state_k_=match_e_[3],graph_l_=match_e_[2];
-                                    /*<<simulation/state_interpreter.ml 323 4>>*/ return match_e_
+                                    /*<<simulation/state_interpreter.ml 327 4>>*/ return match_e_
                                             [1]
-                                           ? /*<<simulation/state_interpreter.ml 323 17>>*/ return_z_
+                                           ? /*<<simulation/state_interpreter.ml 327 17>>*/ return_z_
                                              (graph_l_,state_k_)
-                                           : /*<<simulation/state_interpreter.ml 324 9>>*/ hook_A_
+                                           : /*<<simulation/state_interpreter.ml 328 9>>*/ hook_A_
                                              (function(param_a_)
-                                               { /*<<simulation/state_interpreter.ml 324 25>>*/ return  /*<<simulation/state_interpreter.ml 324 25>>*/ iter_i_
-                                                        (graph_l_,state_k_) /*<<simulation/state_interpreter.ml 324 43>>*/ }) /*<<simulation/state_interpreter.ml 324 44>>*/ }
-                                  /*<<simulation/state_interpreter.ml 325 5>>*/ return  /*<<simulation/state_interpreter.ml 325 5>>*/ iter_i_
+                                               { /*<<simulation/state_interpreter.ml 328 25>>*/ return  /*<<simulation/state_interpreter.ml 328 25>>*/ iter_i_
+                                                        (graph_l_,state_k_) /*<<simulation/state_interpreter.ml 328 43>>*/ }) /*<<simulation/state_interpreter.ml 328 44>>*/ }
+                                  /*<<simulation/state_interpreter.ml 329 5>>*/ return  /*<<simulation/state_interpreter.ml 329 5>>*/ iter_i_
                                          (graph_j_,state_b_) /*<<api/api.ml 121 80>>*/ }
                                var
                                  /*<<api/api.ml 97 31>>*/ _c_=simulation_f_[2],
