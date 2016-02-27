@@ -93,86 +93,6 @@ type of the static information to be passed to each domain, let us
 <pre><span id="TYPEglobal_dynamic_information"><span class="keyword">type</span> <code class="type"></code>global_dynamic_information</span> </pre>
 
 
-<pre><code><span id="TYPEevent"><span class="keyword">type</span> <code class="type"></code>event</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTevent.Dummy"><span class="constructor">Dummy</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTevent.Check_rule"><span class="constructor">Check_rule</span></span> <span class="keyword">of</span> <code class="type"><a href="Analyzer_headers.html#TYPErule_id">rule_id</a></code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTevent.See_a_new_bond"><span class="constructor">See_a_new_bond</span></span> <span class="keyword">of</span> <code class="type">(int * int * int) * (int * int * int)</code></code></td>
-
-</tr></table>
-
-
-
-<pre><code><span id="TYPEbot_or_not"><span class="keyword">type</span> <code class="type">'a</code> bot_or_not</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTbot_or_not.Bot"><span class="constructor">Bot</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTbot_or_not.Not_bot"><span class="constructor">Not_bot</span></span> <span class="keyword">of</span> <code class="type">'a</code></code></td>
-
-</tr></table>
-
-
-
-<pre><code><span id="TYPEmaybe_bool"><span class="keyword">type</span> <code class="type"></code>maybe_bool</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTmaybe_bool.Sure_value"><span class="constructor">Sure_value</span></span> <span class="keyword">of</span> <code class="type">bool</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTmaybe_bool.Maybe"><span class="constructor">Maybe</span></span></code></td>
-
-</tr></table>
-
-
-
-<pre><code><span id="TYPEprecondition"><span class="keyword">type</span> <code class="type"></code>precondition</span> = {</code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTprecondition.precondition_dummy">precondition_dummy</span>&nbsp;: <code class="type">unit</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTprecondition.the_rule_is_applied_for_the_first_time">the_rule_is_applied_for_the_first_time</span>&nbsp;: <code class="type"><a href="Analyzer_headers.html#TYPEmaybe_bool">maybe_bool</a></code>;</code></td>
-
-</tr></table>
-}
-
-
-
 <pre><span id="TYPEkasa_state"><span class="keyword">type</span> <code class="type"></code>kasa_state</span> = <code class="type">unit</code> </pre>
 
 <br>
@@ -183,7 +103,6 @@ This is the type of the encoding of a chemical mixture as a result of
 
 
 <pre><span id="VALinitialize_global_information"><span class="keyword">val</span> initialize_global_information</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Mvbdu_wrapper.Mvbdu.html#TYPEhandler">Mvbdu_wrapper.Mvbdu.handler</a> -><br>       Cckappa_sig.compil -><br>       Cckappa_sig.kappa_handler -><br>       Exception.method_handler * <a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> *<br>       <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">global_dynamic_information</a></code></pre>
-<pre><span id="VALdummy_precondition"><span class="keyword">val</span> dummy_precondition</span> : <code class="type"><a href="Analyzer_headers.html#TYPEprecondition">precondition</a></code></pre>
 <pre><span id="VALget_parameter"><span class="keyword">val</span> get_parameter</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       Remanent_parameters_sig.parameters</code></pre>
 <pre><span id="VALget_compilation_information"><span class="keyword">val</span> get_compilation_information</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -><br>       <a href="Analyzer_headers.html#TYPEcompilation_result">compilation_result</a></code></pre>
 <pre><span id="VALget_bdu_common_static"><span class="keyword">val</span> get_bdu_common_static</span> : <code class="type"><a href="Analyzer_headers.html#TYPEglobal_static_information">global_static_information</a> -> Common_static.bdu_common_static</code></pre>

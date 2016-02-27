@@ -62,16 +62,6 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_static_information<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_dynamic_information<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;event&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Dummy</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Check_rule</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Analyzer_headers</span>.rule_id<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">See_a_new_bond</span>&nbsp;<span class="keyword">of</span>&nbsp;(int&nbsp;*&nbsp;int&nbsp;*&nbsp;int)&nbsp;*&nbsp;(int&nbsp;*&nbsp;int&nbsp;*&nbsp;int)<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;bot_or_not&nbsp;=&nbsp;<span class="constructor">Bot</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Not_bot</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>a<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;maybe_bool&nbsp;=&nbsp;<span class="constructor">Sure_value</span>&nbsp;<span class="keyword">of</span>&nbsp;bool&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Maybe</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;precondition&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;precondition_dummy&nbsp;:&nbsp;unit;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;the_rule_is_applied_for_the_first_time&nbsp;:&nbsp;<span class="constructor">Analyzer_headers</span>.maybe_bool;<br>
-&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;kasa_state&nbsp;=&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;initial_state&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.enriched_init<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize_global_information&nbsp;:<br>
@@ -82,7 +72,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dummy_precondition&nbsp;:&nbsp;<span class="constructor">Analyzer_headers</span>.precondition<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_parameter&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters<br>
