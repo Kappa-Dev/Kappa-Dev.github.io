@@ -51,8 +51,10 @@
 <link title="Analyzer" rel="Chapter" href="Analyzer.html">
 <link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
 <link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Communication" rel="Chapter" href="Communication.html">
 <link title="Composite_domain" rel="Chapter" href="Composite_domain.html">
 <link title="Product" rel="Chapter" href="Product.html">
+<link title="Usual_domains" rel="Chapter" href="Usual_domains.html">
 <link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
@@ -121,11 +123,11 @@
 <pre><span id="TYPEbinary"><span class="keyword">type</span> <code class="type">('a, 'b, 'c)</code> binary</span> = <code class="type"><a href="Analyzer_domain_sig.Domain.html#TYPEstatic_information">static_information</a> -><br>       <a href="Analyzer_domain_sig.Domain.html#TYPEdynamic_information">dynamic_information</a> -><br>       Exception.method_handler -><br>       'a -><br>       'b -><br>       Exception.method_handler * <a href="Analyzer_domain_sig.Domain.html#TYPEdynamic_information">dynamic_information</a> *<br>       'c</code> </pre>
 
 
-<pre><span id="VALadd_initial_state"><span class="keyword">val</span> add_initial_state</span> : <code class="type">(<a href="Analyzer_headers.html#TYPEinitial_state">Analyzer_headers.initial_state</a>, Communication.event list)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre>
-<pre><span id="VALis_enabled"><span class="keyword">val</span> is_enabled</span> : <code class="type">(Communication.rule_id, Communication.precondition,<br>        Communication.precondition option)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEbinary">binary</a></code></pre>
-<pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">(Communication.rule_id, Communication.precondition,<br>        Communication.precondition * Communication.event list)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEbinary">binary</a></code></pre>
-<pre><span id="VALapply_event_list"><span class="keyword">val</span> apply_event_list</span> : <code class="type">(Communication.event list, Communication.event list)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre>
+<pre><span id="VALadd_initial_state"><span class="keyword">val</span> add_initial_state</span> : <code class="type">(<a href="Analyzer_headers.html#TYPEinitial_state">Analyzer_headers.initial_state</a>, <a href="Communication.html#TYPEevent">Communication.event</a> list)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre>
+<pre><span id="VALis_enabled"><span class="keyword">val</span> is_enabled</span> : <code class="type">(<a href="Communication.html#TYPErule_id">Communication.rule_id</a>, <a href="Communication.html#TYPEprecondition">Communication.precondition</a>,<br>        <a href="Communication.html#TYPEprecondition">Communication.precondition</a> option)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEbinary">binary</a></code></pre>
+<pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">(<a href="Communication.html#TYPErule_id">Communication.rule_id</a>, <a href="Communication.html#TYPEprecondition">Communication.precondition</a>,<br>        <a href="Communication.html#TYPEprecondition">Communication.precondition</a> * <a href="Communication.html#TYPEevent">Communication.event</a> list)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEbinary">binary</a></code></pre>
+<pre><span id="VALapply_event_list"><span class="keyword">val</span> apply_event_list</span> : <code class="type">(<a href="Communication.html#TYPEevent">Communication.event</a> list, <a href="Communication.html#TYPEevent">Communication.event</a> list)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre>
 <pre><span id="VALexport"><span class="keyword">val</span> export</span> : <code class="type">(<a href="Analyzer_headers.html#TYPEkasa_state">Analyzer_headers.kasa_state</a>, <a href="Analyzer_headers.html#TYPEkasa_state">Analyzer_headers.kasa_state</a>)<br>       <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">(<a href="Loggers.html#TYPEt">Loggers.t</a> list, unit) <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre>
-<pre><span id="VALcc_mixture_is_reachable"><span class="keyword">val</span> cc_mixture_is_reachable</span> : <code class="type">(Ast.mixture, Usual_domains.maybe_bool) <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre>
-<pre><span id="VALlkappa_mixture_is_reachable"><span class="keyword">val</span> lkappa_mixture_is_reachable</span> : <code class="type">(Ast.mixture, Usual_domains.maybe_bool) <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre></body></html>
+<pre><span id="VALcc_mixture_is_reachable"><span class="keyword">val</span> cc_mixture_is_reachable</span> : <code class="type">(Ast.mixture, <a href="Usual_domains.html#TYPEmaybe_bool">Usual_domains.maybe_bool</a>) <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre>
+<pre><span id="VALlkappa_mixture_is_reachable"><span class="keyword">val</span> lkappa_mixture_is_reachable</span> : <code class="type">(Ast.mixture, <a href="Usual_domains.html#TYPEmaybe_bool">Usual_domains.maybe_bool</a>) <a href="Analyzer_domain_sig.Domain.html#TYPEunary">unary</a></code></pre></body></html>

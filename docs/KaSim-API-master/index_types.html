@@ -49,8 +49,10 @@
 <link title="Analyzer" rel="Chapter" href="Analyzer.html">
 <link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
 <link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Communication" rel="Chapter" href="Communication.html">
 <link title="Composite_domain" rel="Chapter" href="Composite_domain.html">
 <link title="Product" rel="Chapter" href="Product.html">
+<link title="Usual_domains" rel="Chapter" href="Usual_domains.html">
 <link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
@@ -74,7 +76,11 @@ agent_id * agent_type
 </td></tr>
 <tr><td><a href="Raw_mixture.html#TYPEagent">agent</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
+<tr><td><a href="Communication.html#TYPEagent_id">agent_id</a> [<a href="Communication.html">Communication</a>]</td>
+<td></td></tr>
 <tr><td><a href="Instantiation.html#TYPEagent_name">agent_name</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Communication.html#TYPEagent_type">agent_type</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#TYPEannot">annot</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
@@ -98,6 +104,8 @@ agent_id * agent_type
 <tr><td><a href="Utilities.html#TYPEblack_list">black_list</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#TYPEbool_op">bool_op</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td><a href="Usual_domains.html#TYPEbot_or_not">bot_or_not</a> [<a href="Usual_domains.html">Usual_domains</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>C</td></tr>
 <tr><td><a href="Connected_component.Matching.html#TYPEcache">cache</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
@@ -150,6 +158,8 @@ Cannonic forms
 <tr><td><a href="Utilities.html#TYPEenriched_cflow_grid">enriched_cflow_grid</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#TYPEerror_log">error_log</a> [<a href="Utilities.html">Utilities</a>]</td>
+<td></td></tr>
+<tr><td><a href="Communication.html#TYPEevent">event</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#TYPEevent">event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
@@ -210,6 +220,8 @@ Cannonic forms
 <td></td></tr>
 <tr><td><a href="Location.html#TYPEmaybe">maybe</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
+<tr><td><a href="Usual_domains.html#TYPEmaybe_bool">maybe_bool</a> [<a href="Usual_domains.html">Usual_domains</a>]</td>
+<td></td></tr>
 <tr><td><a href="Primitives.html#TYPEmodification">modification</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#TYPEmusical_grid">musical_grid</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -227,11 +239,15 @@ Blackboard with debugging utilities
 <tr><td align="left"><br>P</td></tr>
 <tr><td><a href="Utilities.html#TYPEparameter">parameter</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
+<tr><td><a href="Communication.html#TYPEpath">path</a> [<a href="Communication.html">Communication</a>]</td>
+<td></td></tr>
 <tr><td><a href="Edges.html#TYPEpath">path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="Primitives.html#TYPEperturbation">perturbation</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#TYPEport">port</a> [<a href="Navigation.html">Navigation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Communication.html#TYPEprecondition">precondition</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Priority.html#TYPEpriorities">priorities</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
@@ -255,6 +271,8 @@ A representation of 'left-hand-side' agent that stores how
  everything is transformed.
 </div>
 </td></tr>
+<tr><td><a href="Communication.html#TYPErule_id">rule_id</a> [<a href="Communication.html">Communication</a>]</td>
+<td></td></tr>
 <tr><td><a href="Analyzer_headers.html#TYPErule_id">rule_id</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="LKappa.html#TYPErule_internal">rule_internal</a> [<a href="LKappa.html">LKappa</a>]</td>
@@ -279,11 +297,15 @@ Store of all the agents
 <td></td></tr>
 <tr><td><a href="Utilities.html#TYPEshall_we">shall_we</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
+<tr><td><a href="Communication.html#TYPEsite">site</a> [<a href="Communication.html">Communication</a>]</td>
+<td></td></tr>
 <tr><td><a href="Instantiation.html#TYPEsite">site</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#TYPEsite_name">site_name</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Data.html#TYPEsnapshot">snapshot</a> [<a href="Data.html">Data</a>]</td>
+<td></td></tr>
+<tr><td><a href="Communication.html#TYPEstate">state</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
@@ -292,6 +314,8 @@ Store of all the agents
 <tr><td><a href="Analyzer_domain_sig.Domain.html#TYPEstatic_information">static_information</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer.Analyzer.html#TYPEstatic_information">static_information</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
+<td></td></tr>
+<tr><td><a href="Communication.html#TYPEstep">step</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#TYPEstep">step</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
@@ -305,6 +329,8 @@ Story table
 <tr><td><a href="LKappa.html#TYPEswitching">switching</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>T</td></tr>
+<tr><td><a href="Communication.PathMap.html#TYPEt">t</a> [<a href="Communication.PathMap.html">Communication.PathMap</a>]</td>
+<td></td></tr>
 <tr><td><a href="State_interpreter.html#TYPEt">t</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
 Abstract state
@@ -374,6 +400,8 @@ Store of one agent
 <tr><td><a href="Utilities.html#TYPEternary">ternary</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#TYPEtest">test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Usual_domains.html#TYPEtop_or_not">top_or_not</a> [<a href="Usual_domains.html">Usual_domains</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#TYPEtrace">trace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
