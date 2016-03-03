@@ -92,6 +92,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Communication</span>.<span class="constructor">PathMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;option<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">PathMap</span>&nbsp;:&nbsp;<span class="constructor">PathMap</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;precondition<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;fold&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -103,26 +104,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;prefold&nbsp;=&nbsp;{&nbsp;fold&nbsp;:&nbsp;<span class="keywordsign">'</span>a.&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Communication</span>.fold;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;precondition&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;precondition_dummy&nbsp;:&nbsp;unit;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;the_rule_is_applied_for_the_first_time&nbsp;:&nbsp;<span class="constructor">Usual_domains</span>.maybe_bool;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;state_of_site&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;int&nbsp;list&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;cache_state_of_site&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice&nbsp;<span class="constructor">Communication</span>.<span class="constructor">PathMap</span>.t;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;partner_map&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.agent_type&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.site&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Communication</span>.agent_type&nbsp;*&nbsp;<span class="constructor">Communication</span>.site&nbsp;*&nbsp;<span class="constructor">Communication</span>.state)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;partner_fold&nbsp;:&nbsp;<span class="keywordsign">'</span>a.&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Communication</span>.fold;<br>
-&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dummy_precondition&nbsp;:&nbsp;<span class="constructor">Communication</span>.precondition<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dummy_prefold&nbsp;:&nbsp;<span class="constructor">Communication</span>.prefold<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_the_rule_applied_for_the_first_time&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Usual_domains</span>.maybe_bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;the_rule_is_applied_for_the_first_time&nbsp;:<br>
@@ -141,6 +123,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;prefold&nbsp;=&nbsp;{&nbsp;fold&nbsp;:&nbsp;<span class="keywordsign">'</span>a.&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Communication</span>.fold;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;refine_information_about_state_of_site&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
