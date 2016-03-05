@@ -4106,7 +4106,7 @@
      a_f4_=caml_new_string_i_(str_q_),
      x_vp_=caml_new_string_i_("influence.dot"),
      x_vq_=caml_new_string_i_("contact.dot"),
-     version_string_mP_=caml_new_string_i_("31bfe10"),
+     version_string_mP_=caml_new_string_i_("44e2f5e"),
      match_mU_=caml_new_string_i_("profiling.txt"),
      reachability_map_0_vu_=[0,0,0,0,0,0,0,0,0,0,0],
      error_vB_=[0,0,0,0],
@@ -35571,10 +35571,10 @@
         function(param_a_,f_b_,_c_)
          { /*<<grammar/ast.ml 199 22>>*/ return  /*<<grammar/ast.ml 199 22>>*/ pr_tok_X_
                   (f_b_,_c_[1]) /*<<grammar/ast.ml 199 49>>*/ },
-        /*<<grammar/ast.ml 198 2>>*/ _ajQ_=
+        /*<<grammar/ast.ml 198 2>>*/ print_ast_link_ajQ_=
         function(_a_,_b_)
          { /*<<?>>*/ return print_link_ha_(_ajP_,_ajO_,_ajN_,_a_,_b_)},
-        /*<<grammar/ast.ml 201 20>>*/ _ajR_=
+        /*<<grammar/ast.ml 201 20>>*/ print_ast_internal_ajR_=
         function(f_a_,l_b_)
          { /*<<grammar/ast.ml 203 2>>*/ return  /*<<grammar/ast.ml 203 2>>*/ _b1_
                   (0,
@@ -35585,7 +35585,7 @@
                              ( /*<<grammar/ast.ml 203 35>>*/ fprintf_h_(f_a_,_ajS_),x_c_) /*<<grammar/ast.ml 203 60>>*/ },
                    f_a_,
                    l_b_) /*<<grammar/ast.ml 203 64>>*/ },
-        /*<<grammar/ast.ml 201 20>>*/ _ajT_=
+        /*<<grammar/ast.ml 201 20>>*/ print_ast_port_ajT_=
         function(f_a_,p_b_)
          {var
             /*<<grammar/ast.ml 206 2>>*/ _c_=p_b_[3][1],
@@ -35594,11 +35594,11 @@
            /*<<grammar/ast.ml 206 2>>*/ return  /*<<grammar/ast.ml 206 2>>*/ caml_call_gen5_j_
                   ( /*<<grammar/ast.ml 206 2>>*/ fprintf_h_(f_a_,_ajU_),
                    _e_,
-                   _ajR_,
+                   print_ast_internal_ajR_,
                    _d_,
-                   _ajQ_,
+                   print_ast_link_ajQ_,
                    _c_) /*<<grammar/ast.ml 208 34>>*/ },
-        /*<<grammar/ast.ml 201 20>>*/ _ajV_=
+        /*<<grammar/ast.ml 201 20>>*/ print_ast_agent_ajV_=
         function(f_a_,param_b_)
          {var l_c_=param_b_[2],ag_na_d_=param_b_[1][1];
            /*<<grammar/ast.ml 211 2>>*/ function _e_(f_a_)
@@ -35606,7 +35606,7 @@
                     (f_a_,_ajW_) /*<<grammar/ast.ml 212 42>>*/ }
            /*<<grammar/ast.ml 211 2>>*/ var _f_=0;
            /*<<grammar/ast.ml 212 3>>*/ function _g_(_a_,_b_)
-           { /*<<?>>*/ return _b1_(_f_,_e_,_ajT_,_a_,_b_)}
+           { /*<<?>>*/ return _b1_(_f_,_e_,print_ast_port_ajT_,_a_,_b_)}
            /*<<grammar/ast.ml 212 59>>*/ return  /*<<grammar/ast.ml 212 59>>*/ caml_call_gen3_k_
                   ( /*<<grammar/ast.ml 212 59>>*/ fprintf_h_(f_a_,_ajX_),
                    ag_na_d_,
@@ -35615,8 +35615,8 @@
         /*<<grammar/ast.ml 201 20>>*/ pr_mix_hb_=
         function(f_a_,m_b_)
          { /*<<grammar/ast.ml 214 24>>*/ return  /*<<grammar/ast.ml 214 24>>*/ _b1_
-                  (0,_cq_,_ajV_,f_a_,m_b_) /*<<grammar/ast.ml 214 60>>*/ },
-        /*<<grammar/ast.ml 201 20>>*/ _cJ_=
+                  (0,_cq_,print_ast_agent_ajV_,f_a_,m_b_) /*<<grammar/ast.ml 214 60>>*/ },
+        /*<<grammar/ast.ml 201 20>>*/ print_ast_alg_cJ_=
         function(pr_mix_g_,pr_tok_f_,pr_var_c_,f_d_,param_e_)
          { /*<<?>>*/ if(typeof param_e_==="number")
            switch(param_e_)
@@ -35638,11 +35638,11 @@
                op_i_=param_e_[1],
                 /*<<grammar/ast.ml 230 6>>*/ _j_=
                 function(_a_,_b_)
-                 { /*<<?>>*/ return _cJ_
+                 { /*<<?>>*/ return print_ast_alg_cJ_
                           (pr_mix_g_,pr_tok_f_,pr_var_c_,_a_,_b_)},
                 /*<<grammar/ast.ml 228 6>>*/ _k_=
                 function(_a_,_b_)
-                 { /*<<?>>*/ return _cJ_
+                 { /*<<?>>*/ return print_ast_alg_cJ_
                           (pr_mix_g_,pr_tok_f_,pr_var_c_,_a_,_b_)};
                /*<<grammar/ast.ml 228 42>>*/ return  /*<<grammar/ast.ml 228 42>>*/ caml_call_gen6_c4_
                       ( /*<<grammar/ast.ml 228 42>>*/ fprintf_h_(f_d_,_aj1_),
@@ -35658,7 +35658,7 @@
                op_m_=param_e_[1],
                 /*<<grammar/ast.ml 233 5>>*/ _o_=
                 function(_a_,_b_)
-                 { /*<<?>>*/ return _cJ_
+                 { /*<<?>>*/ return print_ast_alg_cJ_
                           (pr_mix_g_,pr_tok_f_,pr_var_c_,_a_,_b_)};
                /*<<grammar/ast.ml 233 41>>*/ return  /*<<grammar/ast.ml 233 41>>*/ caml_call_gen4_r_
                       ( /*<<grammar/ast.ml 233 41>>*/ fprintf_h_(f_d_,_aj2_),
@@ -35690,12 +35690,13 @@
              default:
                /*<<grammar/ast.ml 220 15>>*/ return  /*<<grammar/ast.ml 220 15>>*/ _jc_
                       (f_d_,param_e_[1])}},
-        /*<<grammar/ast.ml 201 20>>*/ _ve_=
+        /*<<grammar/ast.ml 201 20>>*/ print_one_size_ve_=
         function(tk_d_,f_b_,mix_c_)
          { /*<<grammar/ast.ml 243 7>>*/ function _e_(f_a_,param_b_)
            {var n_c_=param_b_[2][1],nb_d_=param_b_[1][1];
              /*<<grammar/ast.ml 236 27>>*/ function _e_(_a_,_b_)
-             { /*<<?>>*/ return _cJ_(pr_mix_hb_,pr_tok_X_,pr_tok_X_,_a_,_b_)}
+             { /*<<?>>*/ return print_ast_alg_cJ_
+                      (pr_mix_hb_,pr_tok_X_,pr_tok_X_,_a_,_b_)}
              /*<<grammar/ast.ml 236 63>>*/ return  /*<<grammar/ast.ml 236 63>>*/ caml_call_gen4_r_
                     ( /*<<grammar/ast.ml 236 63>>*/ fprintf_h_(f_a_,_aj6_),
                      _e_,
@@ -35719,12 +35720,12 @@
                    _i_,
                    _a_,
                    tk_d_) /*<<grammar/ast.ml 244 6>>*/ },
-        /*<<grammar/ast.ml 201 20>>*/ _aj__=
+        /*<<grammar/ast.ml 201 20>>*/ print_arrow_aj__=
         function(f_a_,param_b_)
          { /*<<?>>*/ return 0===param_b_
                   ? /*<<grammar/ast.ml 246 11>>*/ pr_tok_X_(f_a_,_aj$_)
                   : /*<<grammar/ast.ml 247 12>>*/ pr_tok_X_(f_a_,_aka_)},
-        /*<<grammar/ast.ml 201 20>>*/ _akf_=
+        /*<<grammar/ast.ml 201 20>>*/ print_ast_rule_akf_=
         function(f_a_,r_b_)
          {var
             /*<<grammar/ast.ml 270 2>>*/ _c_=r_b_[8],
@@ -35745,7 +35746,7 @@
                   function(_a_,_b_){ /*<<?>>*/ return _uW_(_f_,_a_,_b_)},
                   /*<<grammar/ast.ml 267 3>>*/ _i_=
                   function(_a_,_b_)
-                   { /*<<?>>*/ return _cJ_
+                   { /*<<?>>*/ return print_ast_alg_cJ_
                             (pr_mix_hb_,pr_tok_X_,pr_tok_X_,_a_,_b_)};
                  /*<<grammar/ast.ml 267 78>>*/ return  /*<<grammar/ast.ml 267 78>>*/ caml_call_gen4_r_
                         ( /*<<grammar/ast.ml 267 78>>*/ fprintf_h_(f_a_,_akd_),
@@ -35762,7 +35763,7 @@
                    d_b_=_c_[1][1],
                     /*<<grammar/ast.ml 255 25>>*/ _d_=
                     function(_a_,_b_)
-                     { /*<<?>>*/ return _cJ_
+                     { /*<<?>>*/ return print_ast_alg_cJ_
                               (pr_mix_hb_,pr_tok_X_,pr_tok_X_,_a_,_b_)};
                    /*<<grammar/ast.ml 255 61>>*/ return  /*<<grammar/ast.ml 255 61>>*/ caml_call_gen2_n_
                           ( /*<<grammar/ast.ml 255 61>>*/ fprintf_h_(f_a_,_akb_),
@@ -35770,7 +35771,8 @@
                            d_b_)}
                  /*<<grammar/ast.ml 253 15>>*/ return 0 /*<<grammar/ast.ml 255 63>>*/ }
                /*<<grammar/ast.ml 250 13>>*/ function _f_(_a_,_b_)
-               { /*<<?>>*/ return _cJ_(pr_mix_hb_,pr_tok_X_,pr_tok_X_,_a_,_b_)}
+               { /*<<?>>*/ return print_ast_alg_cJ_
+                        (pr_mix_hb_,pr_tok_X_,pr_tok_X_,_a_,_b_)}
                /*<<grammar/ast.ml 250 49>>*/ return  /*<<grammar/ast.ml 250 49>>*/ caml_call_gen3_k_
                       ( /*<<grammar/ast.ml 250 49>>*/ fprintf_h_(f_a_,_akc_),
                        _f_,
@@ -35785,18 +35787,18 @@
             /*<<grammar/ast.ml 275 31>>*/ _g_=r_b_[4],
             /*<<grammar/ast.ml 275 31>>*/ _i_=r_b_[5];
            /*<<grammar/ast.ml 274 4>>*/ function _j_(_a_,_b_)
-           { /*<<?>>*/ return _ve_(_i_,_a_,_b_)}
+           { /*<<?>>*/ return print_one_size_ve_(_i_,_a_,_b_)}
           var
             /*<<grammar/ast.ml 274 32>>*/ _l_=r_b_[3],
             /*<<grammar/ast.ml 274 32>>*/ _m_=r_b_[1],
             /*<<grammar/ast.ml 274 32>>*/ _o_=r_b_[2];
            /*<<grammar/ast.ml 272 4>>*/ function _p_(_a_,_b_)
-           { /*<<?>>*/ return _ve_(_o_,_a_,_b_)}
+           { /*<<?>>*/ return print_one_size_ve_(_o_,_a_,_b_)}
            /*<<grammar/ast.ml 272 31>>*/ return  /*<<grammar/ast.ml 272 31>>*/ caml_call_gen8_j3_
                   ( /*<<grammar/ast.ml 272 31>>*/ fprintf_h_(f_a_,_akg_),
                    _p_,
                    _m_,
-                   _aj__,
+                   print_arrow_aj__,
                    _l_,
                    _j_,
                    _g_,
@@ -43596,7 +43598,7 @@
                 /*<<grammar/lKappa.ml 674 16>>*/ caml_call_gen3_k_
                 ( /*<<grammar/lKappa.ml 674 16>>*/ asprintf_aS_(_asD_),
                  id_i_,
-                 _akf_,
+                 print_ast_rule_akf_,
                  r_c_)],
            label_e_=match_s_[2],
            id_z_=match_s_[1];
@@ -47113,7 +47115,7 @@
                                  remains_s_,
                                  _v_),
                               cache_c_=
-                                /*<<term/connected_component.ml 1078 6>>*/ caml_call_gen2_n_
+                                /*<<term/connected_component.ml 1078 17>>*/ caml_call_gen2_n_
                                 (_nl_[1][5],current_g_,cache_c_),
                               acc_d_=acc_l_,
                               param_e_=remains_x_;
@@ -47123,7 +47125,7 @@
                                   _atV_]}
                           /*<<term/connected_component.ml 1052 14>>*/ return [0,
                                  acc_d_,
-                                 cache_c_]} /*<<term/connected_component.ml 1083 58>>*/ },
+                                 cache_c_]} /*<<term/connected_component.ml 1083 69>>*/ },
                      acc_c_,
                      injs_e_)}
            /*<<term/connected_component.ml 1080 14>>*/ return acc_c_ /*<<term/connected_component.ml 1084 10>>*/ },
@@ -47516,7 +47518,8 @@
                           function(_a_,_b_){ /*<<?>>*/ return _f8_(sigs_d_,_a_,_b_)},
                           /*<<grammar/lKappa.ml 204 5>>*/ _o_=
                           function(_a_,_b_)
-                           { /*<<?>>*/ return _cJ_(_m_,pr_tok_f_,pr_var_i_,_a_,_b_)};
+                           { /*<<?>>*/ return print_ast_alg_cJ_
+                                    (_m_,pr_tok_f_,pr_var_i_,_a_,_b_)};
                          /*<<grammar/lKappa.ml 204 64>>*/ return  /*<<grammar/lKappa.ml 204 64>>*/ caml_call_gen4_r_
                                 ( /*<<grammar/lKappa.ml 204 64>>*/ fprintf_h_(f_a_,_arV_),
                                  _o_,
@@ -47529,7 +47532,8 @@
                     function(_a_,_b_){ /*<<?>>*/ return _f8_(sigs_d_,_a_,_b_)},
                     /*<<grammar/lKappa.ml 198 4>>*/ _j_=
                     function(_a_,_b_)
-                     { /*<<?>>*/ return _cJ_(_g_,pr_tok_f_,pr_var_i_,_a_,_b_)};
+                     { /*<<?>>*/ return print_ast_alg_cJ_
+                              (_g_,pr_tok_f_,pr_var_i_,_a_,_b_)};
                    /*<<grammar/lKappa.ml 198 63>>*/ return  /*<<grammar/lKappa.ml 198 63>>*/ caml_call_gen3_k_
                           ( /*<<grammar/lKappa.ml 198 63>>*/ fprintf_h_(f_a_,_arW_),
                            _j_,
@@ -47545,7 +47549,8 @@
                  /*<<grammar/lKappa.ml 231 22>>*/ function _g_(_a_,_b_)
                  { /*<<?>>*/ return _f8_(sigs_d_,_a_,_b_)}
                  /*<<grammar/lKappa.ml 231 3>>*/ function _j_(_a_,_b_)
-                 { /*<<?>>*/ return _cJ_(_g_,pr_tok_f_,pr_var_i_,_a_,_b_)}
+                 { /*<<?>>*/ return print_ast_alg_cJ_
+                          (_g_,pr_tok_f_,pr_var_i_,_a_,_b_)}
                  /*<<grammar/lKappa.ml 231 62>>*/ return  /*<<grammar/lKappa.ml 231 62>>*/ caml_call_gen4_r_
                         ( /*<<grammar/lKappa.ml 231 62>>*/ fprintf_h_(f_a_,_arX_),
                          _j_,
@@ -47817,7 +47822,8 @@
                  /*<<grammar/lKappa.ml 219 22>>*/ function _g_(_a_,_b_)
                  { /*<<?>>*/ return _f8_(sigs_d_,_a_,_b_)}
                  /*<<grammar/lKappa.ml 219 3>>*/ function _j_(_a_,_b_)
-                 { /*<<?>>*/ return _cJ_(_g_,pr_tok_f_,pr_var_i_,_a_,_b_)}
+                 { /*<<?>>*/ return print_ast_alg_cJ_
+                          (_g_,pr_tok_f_,pr_var_i_,_a_,_b_)}
                  /*<<grammar/lKappa.ml 219 62>>*/ return  /*<<grammar/lKappa.ml 219 62>>*/ caml_call_gen4_r_
                         ( /*<<grammar/lKappa.ml 219 62>>*/ fprintf_h_(f_a_,_ar0_),
                          _j_,
@@ -63822,7 +63828,7 @@
                                            /*<<api/api.ml 83 72>>*/ function _d_(_a_,_b_)
                                            { /*<<?>>*/ return _f8_(signature_c_,_a_,_b_)}
                                            /*<<api/api.ml 83 53>>*/ function _e_(_a_,_b_)
-                                           { /*<<?>>*/ return _cJ_
+                                           { /*<<?>>*/ return print_ast_alg_cJ_
                                                     (_d_,pp_print_int_iz_,pp_print_int_iz_,_a_,_b_)}
                                            /*<<api/api.ml 87 25>>*/ return  /*<<api/api.ml 83 32>>*/ caml_call_gen2_n_
                                                   ( /*<<api/api.ml 83 32>>*/ asprintf_aS_(_aA7_),
