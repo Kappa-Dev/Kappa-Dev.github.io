@@ -3504,7 +3504,7 @@
      a_eb_=caml_new_string_i_(str_r_),
      x_nO_=caml_new_string_i_("influence.dot"),
      x_nP_=caml_new_string_i_("contact.dot"),
-     version_string_iM_=caml_new_string_i_("bcb1ee8"),
+     version_string_iM_=caml_new_string_i_("6217172"),
      match_iR_=caml_new_string_i_("profiling.txt"),
      reachability_map_0_nT_=[0,0,0,0,0,0,0,0,0,0,0],
      error_n0_=[0,0,0,0],
@@ -50265,7 +50265,7 @@
                                                                       ( /*<<grammar/eval.ml 402 14>>*/ fprintf_h_(f_a_,_Rn_),
                                                                        param_c_) /*<<grammar/eval.ml 402 67>>*/ });
                                                            /*<<grammar/eval.ml 403 7>>*/ return acc_a_ /*<<grammar/eval.ml 403 10>>*/ }
-                                                         /*<<grammar/eval.ml 405 2>>*/ function set_value_w_
+                                                         /*<<grammar/eval.ml 405 2>>*/ function set_value_s_
                                                          (acc_a_,pos_p_b_,param_c_,value_list_d_,f_e_,ass_f_)
                                                          { /*<<grammar/eval.ml 407 6>>*/  /*<<grammar/eval.ml 407 6>>*/ get_value_G_
                                                            (0,
@@ -50278,7 +50278,7 @@
                                                                (f_e_,x_a_,p_b_);
                                                                /*<<grammar/eval.ml 407 66>>*/ return 0 /*<<grammar/eval.ml 407 66>>*/ });
                                                            /*<<grammar/eval.ml 408 4>>*/ return acc_a_ /*<<grammar/eval.ml 408 7>>*/ }
-                                                         /*<<grammar/eval.ml 409 2>>*/ function get_bool_value_A_
+                                                         /*<<grammar/eval.ml 409 2>>*/ function get_bool_value_w_
                                                          (acc_a_,pos_p_b_,param_c_,value_list_d_)
                                                          { /*<<grammar/eval.ml 410 4>>*/ return  /*<<grammar/eval.ml 410 4>>*/ get_value_G_
                                                                   (acc_a_,
@@ -50301,9 +50301,9 @@
                                                                          /*<<grammar/eval.ml 413 28>>*/ return 1}
                                                                       /*<<grammar/eval.ml 414 28>>*/ return 0 /*<<grammar/eval.ml 418 71>>*/ }) /*<<grammar/eval.ml 419 8>>*/ }
                                                         var
-                                                          /*<<grammar/eval.ml 420 2>>*/ _bd_=result_e_[7],
-                                                          /*<<grammar/eval.ml 420 2>>*/ _be_=0,
-                                                          /*<<grammar/eval.ml 420 2>>*/ relative_fluxmaps_bf_=
+                                                          /*<<grammar/eval.ml 420 2>>*/ _be_=result_e_[7],
+                                                          /*<<grammar/eval.ml 420 2>>*/ _bf_=0,
+                                                          /*<<grammar/eval.ml 420 2>>*/ relative_fluxmaps_bg_=
                                                            /*<<grammar/eval.ml 420 2>>*/ _t_
                                                            (function(acc_c_,param_b_)
                                                              {var
@@ -50316,7 +50316,7 @@
                                                                  (param_a_,_Ru_);
                                                                /*<<grammar/eval.ml 422 5>>*/ if(0<=switch_l_)
                                                                {if(!(0<switch_l_))
-                                                                 return  /*<<grammar/eval.ml 472 1>>*/ set_value_w_
+                                                                 return  /*<<grammar/eval.ml 472 1>>*/ set_value_s_
                                                                          (acc_c_,
                                                                           pos_p_e_,
                                                                           param_a_,
@@ -50336,7 +50336,7 @@
                                                                                       p_b_]]} /*<<grammar/eval.ml 477 48>>*/ },
                                                                           _nq_);
                                                                 if(!caml_string_notequal_v_(param_a_,_Rv_))
-                                                                 return  /*<<grammar/eval.ml 467 1>>*/ set_value_w_
+                                                                 return  /*<<grammar/eval.ml 467 1>>*/ set_value_s_
                                                                          (acc_c_,
                                                                           pos_p_e_,
                                                                           param_a_,
@@ -50346,7 +50346,7 @@
                                                                                     ( /*<<grammar/eval.ml 469 15>>*/ fprintf_h_(f_c_,_RG_),v_a_) /*<<grammar/eval.ml 469 38>>*/ },
                                                                           _Dk_);
                                                                 if(!caml_string_notequal_v_(param_a_,_Rw_))
-                                                                 return  /*<<grammar/eval.ml 444 1>>*/ set_value_w_
+                                                                 return  /*<<grammar/eval.ml 444 1>>*/ set_value_s_
                                                                          (acc_c_,
                                                                           pos_p_e_,
                                                                           param_a_,
@@ -50366,7 +50366,7 @@
                                                                                       p_b_]]} /*<<grammar/eval.ml 449 49>>*/ },
                                                                           _eX_);
                                                                 if(!caml_string_notequal_v_(param_a_,_Rx_))
-                                                                 return  /*<<grammar/eval.ml 453 1>>*/ set_value_w_
+                                                                 return  /*<<grammar/eval.ml 453 1>>*/ set_value_s_
                                                                          (acc_c_,
                                                                           pos_p_e_,
                                                                           param_a_,
@@ -50384,16 +50384,16 @@
                                                                                       p_b_]]} /*<<grammar/eval.ml 459 49>>*/ },
                                                                           _no_);
                                                                 if(!caml_string_notequal_v_(param_a_,_Ry_))
-                                                                 return  /*<<grammar/eval.ml 494 1>>*/ get_bool_value_A_
+                                                                 return  /*<<grammar/eval.ml 494 1>>*/ get_bool_value_w_
                                                                          (acc_c_,pos_p_e_,param_a_,value_list_d_);
                                                                 if(!caml_string_notequal_v_(param_a_,_Rz_))
                                                                  { /*<<grammar/eval.ml 499 80>>*/ _Dn_[1]=
-                                                                   /*<<grammar/eval.ml 499 39>>*/ get_bool_value_A_
+                                                                   /*<<grammar/eval.ml 499 39>>*/ get_bool_value_w_
                                                                    (acc_c_,pos_p_e_,param_a_,value_list_d_);
                                                                    /*<<grammar/eval.ml 500 4>>*/ return acc_c_}
                                                                 if(!caml_string_notequal_v_(param_a_,_RA_))
                                                                  { /*<<grammar/eval.ml 438 78>>*/ _go_[1]=
-                                                                   /*<<grammar/eval.ml 438 37>>*/ get_bool_value_A_
+                                                                   /*<<grammar/eval.ml 438 37>>*/ get_bool_value_w_
                                                                    (acc_c_,pos_p_e_,param_a_,value_list_d_);
                                                                    /*<<grammar/eval.ml 439 4>>*/ return acc_c_}}
                                                               else
@@ -50407,7 +50407,7 @@
                                                                            { /*<<main/kappa_files.ml 123 18>>*/ _DO_[1]=x_a_;
                                                                              /*<<grammar/eval.ml 442 52>>*/ return acc_c_ /*<<grammar/eval.ml 442 55>>*/ });
                                                                 if(!caml_string_notequal_v_(param_a_,_RK_))
-                                                                 return  /*<<grammar/eval.ml 484 1>>*/ set_value_w_
+                                                                 return  /*<<grammar/eval.ml 484 1>>*/ set_value_s_
                                                                          (acc_c_,
                                                                           pos_p_e_,
                                                                           param_a_,
@@ -50458,12 +50458,12 @@
                                                                      /*<<grammar/eval.ml 430 11>>*/ return acc_c_}}
                                                                 if(!caml_string_notequal_v_(param_a_,_RM_))
                                                                  { /*<<grammar/eval.ml 481 74>>*/ _Dm_[1]=
-                                                                   /*<<grammar/eval.ml 481 33>>*/ get_bool_value_A_
+                                                                   /*<<grammar/eval.ml 481 33>>*/ get_bool_value_w_
                                                                    (acc_c_,pos_p_e_,param_a_,value_list_d_);
                                                                    /*<<grammar/eval.ml 482 4>>*/ return acc_c_}
                                                                 if(!caml_string_notequal_v_(param_a_,_RN_))
                                                                  { /*<<grammar/eval.ml 464 74>>*/ _np_[1]=
-                                                                   /*<<grammar/eval.ml 464 33>>*/ get_bool_value_A_
+                                                                   /*<<grammar/eval.ml 464 33>>*/ get_bool_value_w_
                                                                    (acc_c_,pos_p_e_,param_a_,value_list_d_);
                                                                    /*<<grammar/eval.ml 465 4>>*/ return acc_c_}
                                                                 if(!caml_string_notequal_v_(param_a_,_RO_))
@@ -50480,8 +50480,8 @@
                                                                      [0,
                                                                        /*<<grammar/eval.ml 502 38>>*/ _j_(_RB_,param_a_),
                                                                       pos_p_e_]] /*<<grammar/eval.ml 503 5>>*/ },
-                                                            _be_,
-                                                            _bd_),
+                                                            _bf_,
+                                                            _be_),
                                                           /*<<term/connected_component.ml 358 45>>*/ nbt_aw_=
                                                            /*<<term/connected_component.ml 358 45>>*/ caml_make_vect_y_
                                                            ( /*<<term/connected_component.ml 358 24>>*/ _nE_
@@ -50502,7 +50502,7 @@
                                                          /*<<grammar/eval.ml 545 2>>*/  /*<<grammar/eval.ml 545 2>>*/ tag_c1_
                                                          (logger_p_,_R5_);
                                                         var
-                                                          /*<<grammar/eval.ml 511 4>>*/ _bg_=
+                                                          /*<<grammar/eval.ml 511 4>>*/ _bh_=
                                                            /*<<grammar/eval.ml 511 4>>*/ _dR_(result_e_[1]),
                                                           /*<<grammar/eval.ml 511 24>>*/ match_ag_=
                                                            /*<<grammar/eval.ml 511 24>>*/ _iE_
@@ -50520,10 +50520,10 @@
                                                                       match_e_[1],
                                                                       [0,lbl_pos_f_,match_e_[2]]] /*<<grammar/eval.ml 510 32>>*/ },
                                                             domain_aA_,
-                                                            _bg_),
+                                                            _bh_),
                                                           /*<<grammar/eval.ml 547 68>>*/ alg_a_T_=match_ag_[2],
-                                                          /*<<grammar/eval.ml 547 68>>*/ domain_bn_=match_ag_[1],
-                                                          /*<<grammar/eval.ml 548 15>>*/ algs_B_=
+                                                          /*<<grammar/eval.ml 547 68>>*/ domain_bo_=match_ag_[1],
+                                                          /*<<grammar/eval.ml 548 15>>*/ algs_A_=
                                                            /*<<grammar/eval.ml 548 15>>*/ _d$_(alg_a_T_),
                                                           /*<<term/alg_expr.ml 27 2>>*/ in_t_aH_=_ac_[1],
                                                           /*<<term/alg_expr.ml 28 2>>*/ in_e_aI_=_ac_[1],
@@ -50548,9 +50548,9 @@
                                                          /*<<grammar/eval.ml 551 2>>*/  /*<<grammar/eval.ml 551 2>>*/ tag_c1_
                                                          (logger_p_,_R6_);
                                                         var
-                                                          /*<<grammar/eval.ml 551 30>>*/ _bo_=result_e_[3],
-                                                          /*<<grammar/eval.ml 514 2>>*/ _bh_=
-                                                          [0,domain_bn_,1,[0,[0,_R0_,alg_deps_aM_]],_bp_[1],0],
+                                                          /*<<grammar/eval.ml 551 30>>*/ _bq_=result_e_[3],
+                                                          /*<<grammar/eval.ml 514 2>>*/ _bi_=
+                                                          [0,domain_bo_,1,[0,[0,_R0_,alg_deps_aM_]],_bp_[1],0],
                                                           /*<<grammar/eval.ml 515 4>>*/ _H_=
                                                            /*<<grammar/eval.ml 515 4>>*/ _t_
                                                            (function(param_a_,_b_)
@@ -50579,38 +50579,38 @@
                                                                        /*<<grammar/eval.ml 521 1>>*/ caml_call_gen2_k_
                                                                        (_bp_[12],unary_cc_g_,extra_unary_cc_h_),
                                                                       _m_] /*<<grammar/eval.ml 522 21>>*/ },
-                                                            _bh_,
-                                                            _bo_),
+                                                            _bi_,
+                                                            _bq_),
                                                           /*<<grammar/eval.ml 525 11>>*/ _ah_=_H_[3],
-                                                          /*<<grammar/eval.ml 525 11>>*/ _bi_=_H_[1];
+                                                          /*<<grammar/eval.ml 525 11>>*/ _bj_=_H_[1];
                                                          /*<<grammar/eval.ml 525 11>>*/ if(_ah_)
                                                          var
-                                                          unary_cc_bj_=_H_[4],
-                                                          falg_deps_bk_=_ah_[1][2],
-                                                          match_C_=
+                                                          unary_cc_bk_=_H_[4],
+                                                          falg_deps_bn_=_ah_[1][2],
+                                                          match_B_=
                                                            [0,
-                                                            _bi_,
-                                                            falg_deps_bk_,
+                                                            _bj_,
+                                                            falg_deps_bn_,
                                                              /*<<grammar/eval.ml 527 23>>*/ rev_ast_x_(_H_[5]),
-                                                            unary_cc_bj_];
+                                                            unary_cc_bk_];
                                                         else
                                                          var
-                                                          match_C_=
+                                                          match_B_=
                                                             /*<<grammar/eval.ml 529 5>>*/ failwith_S_(_R1_);
                                                         var
-                                                          /*<<grammar/eval.ml 553 71>>*/ alg_deps_r_=match_C_[2],
-                                                          /*<<grammar/eval.ml 553 71>>*/ cc_of_unaries_bq_=
-                                                          match_C_[4],
-                                                          /*<<grammar/eval.ml 553 71>>*/ domain_br_=match_C_[1],
-                                                          /*<<grammar/eval.ml 554 16>>*/ rules_bs_=
-                                                           /*<<grammar/eval.ml 554 16>>*/ _dR_(match_C_[3]);
+                                                          /*<<grammar/eval.ml 553 71>>*/ alg_deps_r_=match_B_[2],
+                                                          /*<<grammar/eval.ml 553 71>>*/ cc_of_unaries_br_=
+                                                          match_B_[4],
+                                                          /*<<grammar/eval.ml 553 71>>*/ domain_bs_=match_B_[1],
+                                                          /*<<grammar/eval.ml 554 16>>*/ rules_bt_=
+                                                           /*<<grammar/eval.ml 554 16>>*/ _dR_(match_B_[3]);
                                                          /*<<grammar/eval.ml 556 2>>*/  /*<<grammar/eval.ml 556 2>>*/ tag_c1_
                                                          (logger_p_,_R7_);
                                                         var
-                                                          /*<<grammar/eval.ml 556 38>>*/ _bt_=result_e_[3],
-                                                          /*<<grammar/eval.ml 556 38>>*/ _bu_=result_e_[1],
+                                                          /*<<grammar/eval.ml 556 38>>*/ _bu_=result_e_[3],
+                                                          /*<<grammar/eval.ml 556 38>>*/ _bv_=result_e_[1],
                                                           /*<<grammar/eval.ml 241 2>>*/ _a7_=result_e_[6],
-                                                          /*<<grammar/eval.ml 241 2>>*/ _a8_=[0,domain_br_,0,0,0,0],
+                                                          /*<<grammar/eval.ml 241 2>>*/ _a8_=[0,domain_bs_,0,0,0,0],
                                                           /*<<grammar/eval.ml 242 4>>*/ match_E_=
                                                            /*<<grammar/eval.ml 242 4>>*/ _t_
                                                            (function(param_a_,_b_)
@@ -50630,7 +50630,7 @@
                                                                  (contact_map_i_,counter_d_,param_a_[1],match_e_[1]),
                                                                 /*<<grammar/eval.ml 246 55>>*/ match_j_=_h_[2],
                                                                 /*<<grammar/eval.ml 246 55>>*/ pre_k_=match_j_[1],
-                                                                /*<<grammar/eval.ml 246 55>>*/ pos_pre_A_=match_j_[2],
+                                                                /*<<grammar/eval.ml 246 55>>*/ pos_pre_B_=match_j_[2],
                                                                 /*<<grammar/eval.ml 246 55>>*/ domain_C_=_h_[1];
                                                                /*<<grammar/eval.ml 247 7>>*/ try
                                                                { /*<<grammar/eval.ml 248 6>>*/ var
@@ -50638,14 +50638,14 @@
                                                                    /*<<grammar/eval.ml 248 6>>*/ _gT_(alg_deps_r_,pre_k_)}
                                                               catch(_f_)
                                                                {_f_=caml_wrap_exception_z_(_f_);
-                                                                if(_f_===_gq_)throw [0,_P_,[0,_Rg_,pos_pre_A_]];
+                                                                if(_f_===_gq_)throw [0,_P_,[0,_Rg_,pos_pre_B_]];
                                                                 throw _f_}
                                                               var
                                                                 /*<<grammar/eval.ml 256 2>>*/ match_m_=
                                                                  /*<<grammar/eval.ml 256 2>>*/ _Rb_
-                                                                 (algs_B_,
+                                                                 (algs_A_,
+                                                                  _bv_,
                                                                   _bu_,
-                                                                  _bt_,
                                                                   contact_map_i_,
                                                                   counter_d_,
                                                                   domain_C_,
@@ -50764,7 +50764,7 @@
                                                             _a6_,
                                                             _a5_),
                                                           /*<<grammar/eval.ml 575 51>>*/ obs_U_=match_aa_[2],
-                                                          /*<<grammar/eval.ml 575 51>>*/ domain_bv_=match_aa_[1];
+                                                          /*<<grammar/eval.ml 575 51>>*/ domain_C_=match_aa_[1];
                                                          /*<<grammar/eval.ml 576 2>>*/ if(obs_U_)
                                                          {var pos_bw_=obs_U_[1][2];
                                                            /*<<grammar/eval.ml 578 51>>*/ if(0===counter_d_[13])
@@ -50789,11 +50789,11 @@
                                                           [0,
                                                            sigs_nd_a_,
                                                            tk_nd_b_,
-                                                           algs_B_,
+                                                           algs_A_,
                                                            obs_by_,
                                                            ast_rules_bz_,
-                                                           rules_bs_,
-                                                           cc_of_unaries_bq_,
+                                                           rules_bt_,
+                                                           cc_of_unaries_br_,
                                                            perts_bx_,
                                                             /*<<term/environment.ml 23 28>>*/ caml_call_gen2_k_
                                                             (_ac_[12],alg_deps_r_[1],alg_deps_r_[2]),
@@ -50802,6 +50802,58 @@
                                                            0];
                                                          /*<<grammar/eval.ml 590 2>>*/  /*<<grammar/eval.ml 590 2>>*/ tag_c1_
                                                          (logger_p_,_R$_);
+                                                        var
+                                                          /*<<term/connected_component.ml 552 39>>*/ _aB_=
+                                                           /*<<term/connected_component.ml 552 26>>*/ _ei_
+                                                            (domain_C_,0)
+                                                           [4],
+                                                          /*<<term/connected_component.ml 552 39>>*/ level1_aD_=
+                                                           /*<<term/connected_component.ml 552 39>>*/ _F_
+                                                           (function(p_a_)
+                                                             { /*<<term/connected_component.ml 552 58>>*/ return p_a_[2] /*<<term/connected_component.ml 552 63>>*/ },
+                                                            _aB_);
+                                                         /*<<term/connected_component.ml 553 2>>*/ function f_aE_
+                                                         (id_a_,p_b_,env_c_)
+                                                         { /*<<term/connected_component.ml 554 4>>*/ return 0===
+                                                                  p_b_[4]
+                                                                  ? /*<<term/connected_component.ml 555 9>>*/ _oL_
+                                                                    (level1_aD_,env_c_,1,id_a_,p_b_[3])
+                                                                  :env_c_ /*<<term/connected_component.ml 556 12>>*/ }
+                                                         /*<<term/connected_component.ml 557 2>>*/ var
+                                                         _V_=
+                                                          domain_C_[4];
+                                                         /*<<term/connected_component.ml 557 2>>*/ if(0===_V_[0])
+                                                         {var
+                                                            /*<<term/connected_component.ml 560 5>>*/ s_W_=_V_[1],
+                                                            /*<<term/connected_component.ml 560 14>>*/ s_X_=
+                                                             /*<<term/connected_component.ml 560 14>>*/ caml_call_gen3_n_
+                                                             (_o_[2][40],f_aE_,s_W_,s_W_),
+                                                            /*<<term/connected_component.ml 561 20>>*/ match_Y_=
+                                                             /*<<term/connected_component.ml 561 20>>*/ caml_call_gen1_m_
+                                                             (_o_[2][5],s_X_),
+                                                            /*<<term/connected_component.ml 561 37>>*/ si_aF_=
+                                                            match_Y_?match_Y_[1]+1|0:0,
+                                                            /*<<term/connected_component.ml 562 55>>*/ out_Z_=
+                                                             /*<<term/connected_component.ml 562 55>>*/ caml_make_vect_y_
+                                                             (si_aF_,
+                                                               /*<<term/connected_component.ml 562 29>>*/ _oJ_
+                                                               (domain_C_[1])),
+                                                            /*<<term/connected_component.ml 563 5>>*/ _aG_=
+                                                            function(i_a_,p_b_)
+                                                             { /*<<term/connected_component.ml 563 38>>*/ return  /*<<term/connected_component.ml 563 38>>*/ caml_check_bound_l_
+                                                                       (out_Z_,i_a_)
+                                                                      [i_a_+1]=
+                                                                     p_b_ /*<<term/connected_component.ml 563 50>>*/ };
+                                                           /*<<term/connected_component.ml 563 14>>*/  /*<<term/connected_component.ml 563 14>>*/ caml_call_gen2_k_
+                                                           (_o_[2][39],_aG_,s_X_);
+                                                           /*<<term/connected_component.ml 564 5>>*/ var
+                                                           ___=
+                                                             /*<<term/connected_component.ml 564 5>>*/ domain_C_.slice();
+                                                           /*<<term/connected_component.ml 564 5>>*/ ___[4]=
+                                                          [1,out_Z_];
+                                                          var domain_al_=___}
+                                                        else
+                                                         var domain_al_=domain_C_;
                                                         var
                                                           /*<<grammar/eval.ml 307 2>>*/ _bb_=result_e_[5],
                                                           /*<<simulation/rule_interpreter.ml 43 23>>*/ _aQ_=
@@ -50864,7 +50916,7 @@
                                                            _N5_],
                                                           /*<<grammar/eval.ml 389 56>>*/ _bc_=
                                                           [0,
-                                                           domain_bv_,
+                                                           domain_al_,
                                                            [0,
                                                             _aP_[1],
                                                             _o_[2][1],
@@ -50905,7 +50957,7 @@
                                                                     0,
                                                                     function(i_a_)
                                                                      { /*<<grammar/eval.ml 9 41>>*/ return  /*<<grammar/eval.ml 9 16>>*/ caml_check_bound_l_
-                                                                                 (algs_B_[1],i_a_)
+                                                                                 (algs_A_[1],i_a_)
                                                                                 [i_a_+1]
                                                                                [2]
                                                                               [1] /*<<grammar/eval.ml 9 42>>*/ },
@@ -50976,7 +51028,7 @@
                                                                             (0,
                                                                              function(i_a_)
                                                                               { /*<<grammar/eval.ml 344 42>>*/ return  /*<<grammar/eval.ml 344 17>>*/ caml_check_bound_l_
-                                                                                          (algs_B_[1],i_a_)
+                                                                                          (algs_A_[1],i_a_)
                                                                                          [i_a_+1]
                                                                                         [2]
                                                                                        [1] /*<<grammar/eval.ml 344 43>>*/ },
@@ -51005,7 +51057,7 @@
                                                                pos_tk_N_=match_z_[2],
                                                                tk_id_Q_=match_z_[1],
                                                                alg_R_=init_t_e_[1],
-                                                                /*<<grammar/eval.ml 370 7>>*/ _A_=
+                                                                /*<<grammar/eval.ml 370 7>>*/ _B_=
                                                                  /*<<grammar/eval.ml 370 7>>*/ _g2_
                                                                  (0,
                                                                   contact_map_i_,
@@ -51020,8 +51072,8 @@
                                                                      [0,[0,alg_R_,tk_id_Q_],0],
                                                                       /*<<grammar/eval.ml 366 23>>*/ _O_([6,_d__]),
                                                                      0])),
-                                                                /*<<grammar/eval.ml 372 34>>*/ _m_=_A_[4],
-                                                                /*<<grammar/eval.ml 372 34>>*/ _C_=_A_[1];
+                                                                /*<<grammar/eval.ml 372 34>>*/ _m_=_B_[4],
+                                                                /*<<grammar/eval.ml 372 34>>*/ _C_=_B_[1];
                                                                /*<<grammar/eval.ml 372 34>>*/ if(_m_)
                                                                if(!_m_[2])
                                                                 {var
@@ -51032,7 +51084,7 @@
                                                                     (0,
                                                                      function(i_a_)
                                                                       { /*<<grammar/eval.ml 379 42>>*/ return  /*<<grammar/eval.ml 379 17>>*/ caml_check_bound_l_
-                                                                                  (algs_B_[1],i_a_)
+                                                                                  (algs_A_[1],i_a_)
                                                                                  [i_a_+1]
                                                                                 [2]
                                                                                [1] /*<<grammar/eval.ml 379 43>>*/ },
@@ -51053,59 +51105,6 @@
                                                             _bc_,
                                                             _bb_),
                                                           /*<<grammar/eval.ml 390 18>>*/ graph_af_=match_ae_[2],
-                                                          /*<<grammar/eval.ml 390 18>>*/ domain_s_=match_ae_[1],
-                                                          /*<<term/connected_component.ml 552 39>>*/ _aB_=
-                                                           /*<<term/connected_component.ml 552 26>>*/ _ei_
-                                                            (domain_s_,0)
-                                                           [4],
-                                                          /*<<term/connected_component.ml 552 39>>*/ level1_aD_=
-                                                           /*<<term/connected_component.ml 552 39>>*/ _F_
-                                                           (function(p_a_)
-                                                             { /*<<term/connected_component.ml 552 58>>*/ return p_a_[2] /*<<term/connected_component.ml 552 63>>*/ },
-                                                            _aB_);
-                                                         /*<<term/connected_component.ml 553 2>>*/ function f_aE_
-                                                         (id_a_,p_b_,env_c_)
-                                                         { /*<<term/connected_component.ml 554 4>>*/ return 0===
-                                                                  p_b_[4]
-                                                                  ? /*<<term/connected_component.ml 555 9>>*/ _oL_
-                                                                    (level1_aD_,env_c_,1,id_a_,p_b_[3])
-                                                                  :env_c_ /*<<term/connected_component.ml 556 12>>*/ }
-                                                         /*<<term/connected_component.ml 557 2>>*/ var
-                                                         _V_=
-                                                          domain_s_[4];
-                                                         /*<<term/connected_component.ml 557 2>>*/ if(0===_V_[0])
-                                                         {var
-                                                            /*<<term/connected_component.ml 560 5>>*/ s_W_=_V_[1],
-                                                            /*<<term/connected_component.ml 560 14>>*/ s_X_=
-                                                             /*<<term/connected_component.ml 560 14>>*/ caml_call_gen3_n_
-                                                             (_o_[2][40],f_aE_,s_W_,s_W_),
-                                                            /*<<term/connected_component.ml 561 20>>*/ match_Y_=
-                                                             /*<<term/connected_component.ml 561 20>>*/ caml_call_gen1_m_
-                                                             (_o_[2][5],s_X_),
-                                                            /*<<term/connected_component.ml 561 37>>*/ si_aF_=
-                                                            match_Y_?match_Y_[1]+1|0:0,
-                                                            /*<<term/connected_component.ml 562 55>>*/ out_Z_=
-                                                             /*<<term/connected_component.ml 562 55>>*/ caml_make_vect_y_
-                                                             (si_aF_,
-                                                               /*<<term/connected_component.ml 562 29>>*/ _oJ_
-                                                               (domain_s_[1])),
-                                                            /*<<term/connected_component.ml 563 5>>*/ _aG_=
-                                                            function(i_a_,p_b_)
-                                                             { /*<<term/connected_component.ml 563 38>>*/ return  /*<<term/connected_component.ml 563 38>>*/ caml_check_bound_l_
-                                                                       (out_Z_,i_a_)
-                                                                      [i_a_+1]=
-                                                                     p_b_ /*<<term/connected_component.ml 563 50>>*/ };
-                                                           /*<<term/connected_component.ml 563 14>>*/  /*<<term/connected_component.ml 563 14>>*/ caml_call_gen2_k_
-                                                           (_o_[2][39],_aG_,s_X_);
-                                                           /*<<term/connected_component.ml 564 5>>*/ var
-                                                           ___=
-                                                             /*<<term/connected_component.ml 564 5>>*/ domain_s_.slice();
-                                                           /*<<term/connected_component.ml 564 5>>*/ ___[4]=
-                                                          [1,out_Z_];
-                                                          var final_domain_al_=___}
-                                                        else
-                                                         var final_domain_al_=domain_s_;
-                                                        var
                                                           /*<<simulation/state_interpreter.ml 20 50>>*/ n_g_=
                                                           2*
                                                           (env_c_[6].length-1)|
@@ -51116,6 +51115,7 @@
                                                          k_q_=1,
                                                          current_layer_M_=1,
                                                          layer_end_L_=1,
+                                                          /*<<grammar/eval.ml 390 18>>*/ domain_bd_=match_ae_[1],
                                                           /*<<dataStructures/random_tree.ml 106 2>>*/ t_node_aT_=
                                                            /*<<dataStructures/random_tree.ml 106 2>>*/ caml_make_vect_y_
                                                            (n_g_+1|0,0),
@@ -51214,7 +51214,7 @@
                                                                1),
                                                              activity_tree_N_,
                                                              _a3_,
-                                                             [0,relative_fluxmaps_bf_,0]];
+                                                             [0,relative_fluxmaps_bg_,0]];
                                                            /*<<grammar/eval.ml 605 2>>*/ if(tracking_enabled_Q_)
                                                            {var _ap_=_nr_[1];
                                                             if(_ap_)
@@ -51234,7 +51234,7 @@
                                                            (logger_p_,_Sb_);
                                                            /*<<grammar/eval.ml 616 29>>*/ return [0,
                                                                   env_c_,
-                                                                  final_domain_al_,
+                                                                  domain_bd_,
                                                                   graph_a1_,
                                                                   state_a4_]}}},
                                                     form_r_,
