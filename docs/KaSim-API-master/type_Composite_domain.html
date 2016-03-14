@@ -93,16 +93,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Composite_domain</span>.<span class="constructor">Composite_domain</span>.dynamic_information&nbsp;*&nbsp;<span class="keywordsign">'</span>c<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;next_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.rule_id&nbsp;option<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Composite_domain</span>.<span class="constructor">Composite_domain</span>.zeroary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_rule_id&nbsp;option&nbsp;<span class="constructor">Composite_domain</span>.<span class="constructor">Composite_domain</span>.zeroary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_initial_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.initial_state,&nbsp;unit)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Composite_domain</span>.<span class="constructor">Composite_domain</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_enabled&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Communication</span>.rule_id,&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;option)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_rule_id,&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;option)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Composite_domain</span>.<span class="constructor">Composite_domain</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Communication</span>.rule_id,&nbsp;<span class="constructor">Communication</span>.precondition,&nbsp;unit)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_rule_id,&nbsp;<span class="constructor">Communication</span>.precondition,&nbsp;unit)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Composite_domain</span>.<span class="constructor">Composite_domain</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.kasa_state,&nbsp;<span class="constructor">Analyzer_headers</span>.kasa_state)<br>

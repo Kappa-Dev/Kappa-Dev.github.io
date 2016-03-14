@@ -87,21 +87,6 @@
 </div>
 <hr width="100%">
 
-<pre><span id="TYPErule_id"><span class="keyword">type</span> <code class="type"></code>rule_id</span> = <code class="type">Cckappa_sig.rule_id</code> </pre>
-
-
-<pre><span id="TYPEagent_id"><span class="keyword">type</span> <code class="type"></code>agent_id</span> = <code class="type">Cckappa_sig.agent_id</code> </pre>
-
-
-<pre><span id="TYPEagent_type"><span class="keyword">type</span> <code class="type"></code>agent_type</span> = <code class="type">Cckappa_sig.agent_name</code> </pre>
-
-
-<pre><span id="TYPEsite_name"><span class="keyword">type</span> <code class="type"></code>site_name</span> = <code class="type">Cckappa_sig.site_name</code> </pre>
-
-
-<pre><span id="TYPEstate_index"><span class="keyword">type</span> <code class="type"></code>state_index</span> = <code class="type">Cckappa_sig.state_index</code> </pre>
-
-
 <pre><code><span id="TYPEevent"><span class="keyword">type</span> <code class="type"></code>event</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -114,14 +99,14 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTevent.Check_rule"><span class="constructor">Check_rule</span></span> <span class="keyword">of</span> <code class="type"><a href="Communication.html#TYPErule_id">rule_id</a></code></code></td>
+<code><span id="TYPEELTevent.Check_rule"><span class="constructor">Check_rule</span></span> <span class="keyword">of</span> <code class="type">Ckappa_sig.c_rule_id</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTevent.See_a_new_bond"><span class="constructor">See_a_new_bond</span></span> <span class="keyword">of</span> <code class="type">((<a href="Communication.html#TYPEagent_type">agent_type</a> * <a href="Communication.html#TYPEsite_name">site_name</a> *<br>       <a href="Communication.html#TYPEstate_index">state_index</a>) *<br>      (<a href="Communication.html#TYPEagent_type">agent_type</a> * <a href="Communication.html#TYPEsite_name">site_name</a> *<br>       <a href="Communication.html#TYPEstate_index">state_index</a>))</code></code></td>
+<code><span id="TYPEELTevent.See_a_new_bond"><span class="constructor">See_a_new_bond</span></span> <span class="keyword">of</span> <code class="type">((Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state) *<br>      (Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state))</code></code></td>
 
 </tr></table>
 
@@ -132,21 +117,21 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTstep.site_out">site_out</span>&nbsp;: <code class="type"><a href="Communication.html#TYPEsite_name">site_name</a></code>;</code></td>
+<code><span id="TYPEELTstep.site_out">site_out</span>&nbsp;: <code class="type">Ckappa_sig.c_site_name</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTstep.site_in">site_in</span>&nbsp;: <code class="type"><a href="Communication.html#TYPEsite_name">site_name</a></code>;</code></td>
+<code><span id="TYPEELTstep.site_in">site_in</span>&nbsp;: <code class="type">Ckappa_sig.c_site_name</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTstep.agent_type_in">agent_type_in</span>&nbsp;: <code class="type"><a href="Communication.html#TYPEagent_type">agent_type</a></code>;</code></td>
+<code><span id="TYPEELTstep.agent_type_in">agent_type_in</span>&nbsp;: <code class="type">Ckappa_sig.c_agent_name</code>;</code></td>
 
 </tr></table>
 }
@@ -158,7 +143,7 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTpath.agent_id">agent_id</span>&nbsp;: <code class="type"><a href="Communication.html#TYPEagent_id">agent_id</a></code>;</code></td>
+<code><span id="TYPEELTpath.agent_id">agent_id</span>&nbsp;: <code class="type">Ckappa_sig.c_agent_id</code>;</code></td>
 
 </tr>
 <tr>
@@ -172,7 +157,7 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTpath.site">site</span>&nbsp;: <code class="type"><a href="Communication.html#TYPEsite_name">site_name</a></code>;</code></td>
+<code><span id="TYPEELTpath.site">site</span>&nbsp;: <code class="type">Ckappa_sig.c_site_name</code>;</code></td>
 
 </tr></table>
 }
@@ -184,7 +169,7 @@
 <pre><span id="TYPEprecondition"><span class="keyword">type</span> <code class="type"></code>precondition</span> </pre>
 
 
-<pre><span id="TYPEfold"><span class="keyword">type</span> <code class="type">'a</code> fold</span> = <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Communication.html#TYPEagent_type">agent_type</a> -><br>       <a href="Communication.html#TYPEsite_name">site_name</a> -><br>       Exception.method_handler *<br>       ((Remanent_parameters_sig.parameters -><br>         <a href="Communication.html#TYPEstate_index">state_index</a> -><br>         <a href="Communication.html#TYPEagent_type">agent_type</a> * <a href="Communication.html#TYPEsite_name">site_name</a> *<br>         <a href="Communication.html#TYPEstate_index">state_index</a> -><br>         Exception.method_handler * 'a -> Exception.method_handler * 'a) -><br>        Exception.method_handler -> 'a -> Exception.method_handler * 'a)<br>       <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a></code> </pre>
+<pre><span id="TYPEfold"><span class="keyword">type</span> <code class="type">'a</code> fold</span> = <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       Ckappa_sig.c_agent_name -><br>       Ckappa_sig.c_site_name -><br>       Exception.method_handler *<br>       ((Remanent_parameters_sig.parameters -><br>         Ckappa_sig.c_state -><br>         Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state -><br>         Exception.method_handler * 'a -> Exception.method_handler * 'a) -><br>        Exception.method_handler -> 'a -> Exception.method_handler * 'a)<br>       <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a></code> </pre>
 
 
 <pre><span id="VALdummy_precondition"><span class="keyword">val</span> dummy_precondition</span> : <code class="type"><a href="Communication.html#TYPEprecondition">precondition</a></code></pre>
@@ -205,6 +190,6 @@
 
 
 <pre><span id="VALrefine_information_about_state_of_site"><span class="keyword">val</span> refine_information_about_state_of_site</span> : <code class="type"><a href="Communication.html#TYPEprecondition">precondition</a> -><br>       (Exception.method_handler -><br>        <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">Analyzer_headers.global_dynamic_information</a> -><br>        <a href="Communication.html#TYPEpath">path</a> -><br>        int list <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a> -><br>        Exception.method_handler * <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">Analyzer_headers.global_dynamic_information</a> *<br>        int list <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a>) -><br>       <a href="Communication.html#TYPEprecondition">precondition</a></code></pre>
-<pre><span id="VALget_potential_partner"><span class="keyword">val</span> get_potential_partner</span> : <code class="type"><a href="Communication.html#TYPEprecondition">precondition</a> -><br>       <a href="Communication.html#TYPEagent_type">agent_type</a> -><br>       <a href="Communication.html#TYPEsite_name">site_name</a> -><br>       <a href="Communication.html#TYPEstate_index">state_index</a> -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> *<br>       (<a href="Communication.html#TYPEagent_type">agent_type</a> * <a href="Communication.html#TYPEsite_name">site_name</a> *<br>        <a href="Communication.html#TYPEstate_index">state_index</a>)<br>       <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a></code></pre>
-<pre><span id="VALfold_over_potential_partners"><span class="keyword">val</span> fold_over_potential_partners</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> -><br>       <a href="Communication.html#TYPEagent_type">agent_type</a> -><br>       <a href="Communication.html#TYPEsite_name">site_name</a> -><br>       (Remanent_parameters_sig.parameters -><br>        <a href="Communication.html#TYPEstate_index">state_index</a> -><br>        <a href="Communication.html#TYPEagent_type">agent_type</a> * <a href="Communication.html#TYPEsite_name">site_name</a> *<br>        <a href="Communication.html#TYPEstate_index">state_index</a> -><br>        Exception.method_handler * 'a -> Exception.method_handler * 'a) -><br>       'a -><br>       Exception.method_handler * <a href="Communication.html#TYPEprecondition">precondition</a> *<br>       'a <a href="Usual_domains.html#TYPEtop_or_not">Usual_domains.top_or_not</a></code></pre>
-<pre><span id="VALoverwrite_potential_partners_map"><span class="keyword">val</span> overwrite_potential_partners_map</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> -><br>       (<a href="Communication.html#TYPEagent_type">agent_type</a> -><br>        <a href="Communication.html#TYPEsite_name">site_name</a> -><br>        <a href="Communication.html#TYPEstate_index">state_index</a> -><br>        (<a href="Communication.html#TYPEagent_type">agent_type</a> * <a href="Communication.html#TYPEsite_name">site_name</a> *<br>         <a href="Communication.html#TYPEstate_index">state_index</a>)<br>        <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a>) -><br>       <a href="Communication.html#TYPEprefold">prefold</a> -><br>       Exception.method_handler * <a href="Communication.html#TYPEprecondition">precondition</a></code></pre></body></html>
+<pre><span id="VALget_potential_partner"><span class="keyword">val</span> get_potential_partner</span> : <code class="type"><a href="Communication.html#TYPEprecondition">precondition</a> -><br>       Ckappa_sig.c_agent_name -><br>       Ckappa_sig.c_site_name -><br>       Ckappa_sig.c_state -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> *<br>       (Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state)<br>       <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a></code></pre>
+<pre><span id="VALfold_over_potential_partners"><span class="keyword">val</span> fold_over_potential_partners</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> -><br>       Ckappa_sig.c_agent_name -><br>       Ckappa_sig.c_site_name -><br>       (Remanent_parameters_sig.parameters -><br>        Ckappa_sig.c_state -><br>        Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state -><br>        Exception.method_handler * 'a -> Exception.method_handler * 'a) -><br>       'a -><br>       Exception.method_handler * <a href="Communication.html#TYPEprecondition">precondition</a> *<br>       'a <a href="Usual_domains.html#TYPEtop_or_not">Usual_domains.top_or_not</a></code></pre>
+<pre><span id="VALoverwrite_potential_partners_map"><span class="keyword">val</span> overwrite_potential_partners_map</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> -><br>       (Ckappa_sig.c_agent_name -><br>        Ckappa_sig.c_site_name -><br>        Ckappa_sig.c_state -><br>        (Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state)<br>        <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a>) -><br>       <a href="Communication.html#TYPEprefold">prefold</a> -><br>       Exception.method_handler * <a href="Communication.html#TYPEprecondition">precondition</a></code></pre></body></html>
