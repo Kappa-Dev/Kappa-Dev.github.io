@@ -58,6 +58,7 @@
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
 <link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API</title>
 </head>
 <body>
@@ -257,6 +258,39 @@ Utilities on files
 
 <p>
 
+Some data_structures used in KaSa.
+This library that proposes different implementations for arrays can be found in KaSa_rep/data_structures/
+<br>
+<table class="indextable">
+<tr><td class="module"><a href="Int_storage.html">Int_storage</a></td><td><div class="info">
+* int_storage.mli
+   *
+   * Creation:                      &lt;2016-03-14 feret&gt;
+   * Last modification: Time-stamp: &lt;2016-03-14 16:01:22 feret&gt;
+   *
+   * openkappa
+   * Jérôme Feret, projet Abstraction, INRIA Paris-Rocquencourt
+   *
+   *
+   * This library provides primitives to deal with storage functions
+   *
+   * Copyright 2010,2011,2012,2013,2014,2015 Institut National
+   * de Recherche en Informatique et en Automatique.
+</div>
+</td></tr>
+</table>
+
+The library to deal with multi-valued decision diagrams is in KaSa_rep/data_structures/mvbdu/
+<br>
+<table class="indextable">
+<tr><td class="module"><a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a></td><td><div class="info">
+API of the multi-valued binary decision diagrams library
+</div>
+</td></tr>
+</table>
+
+<p>
+
 The code of the static analyser is in KaSa_rep/reachability_analysis/
 <br>
 <table class="indextable">
@@ -314,17 +348,6 @@ This domain tracks which rules can be applied, and warns other domains at the fi
 </td></tr>
 <tr><td class="module"><a href="Views_domain.html">Views_domain</a></td><td><div class="info">
 Abstract domain to over-approximate the set of reachable views
-</div>
-</td></tr>
-</table>
-
-<p>
-
-The library to deal with multi-valued decision diagrams is in KaSa_rep/data_structures/mvbdu/
-<br>
-<table class="indextable">
-<tr><td class="module"><a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a></td><td><div class="info">
-API of the multi-valued binary decision diagrams library
 </div>
 </td></tr>
 </table>
