@@ -61,8 +61,6 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;value<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Boolean_mvbdu</span>.memo_tables,&nbsp;<span class="constructor">Boolean_mvbdu</span>.mvbdu_dic,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.association_list_dic,&nbsp;<span class="constructor">Boolean_mvbdu</span>.variables_list_dic,<br>
@@ -211,30 +209,24 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu&nbsp;list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_association_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value)&nbsp;list,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((int&nbsp;*&nbsp;int)&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_association_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value)&nbsp;list,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((int&nbsp;*&nbsp;int)&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_association_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value)&nbsp;list,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((int&nbsp;*&nbsp;int)&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.constant<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;list,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;list,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_variables_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;list,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_variables_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.constant<br>
@@ -249,16 +241,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_variables_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list,&nbsp;int&nbsp;list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_association_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value)&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list,&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value)&nbsp;list&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu,&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list&nbsp;list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;variables_list_of_mvbdu&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list)<br>
