@@ -61,6 +61,8 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;value<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_variables_list<br>
@@ -175,22 +177,28 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_association_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_association_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_association_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_variables_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_variables_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;overwrite_association_lists&nbsp;:<br>
@@ -202,12 +210,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_variables_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;variables_list_of_mvbdu&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_variables_list<br>
