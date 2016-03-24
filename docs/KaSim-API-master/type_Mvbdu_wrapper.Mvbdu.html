@@ -71,6 +71,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_renaming_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>output&nbsp;constant&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.handler&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -189,7 +190,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_renaming_list,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:<br>
@@ -238,6 +239,20 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_variables_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.constant<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key)&nbsp;list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_renaming_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key)&nbsp;list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_renaming_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key)&nbsp;list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_renaming_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_renaming_list&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.constant<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;overwrite_association_lists&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list,<br>
@@ -294,4 +309,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu,&nbsp;<span class="keywordsign">'</span>data,&nbsp;<span class="keywordsign">'</span>map,&nbsp;<span class="keywordsign">'</span>map)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.ternary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;last_entry&nbsp;:&nbsp;(unit,&nbsp;int)&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;hash_of_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;hash_of_variables_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 <span class="keyword">end</span></code></body></html>
