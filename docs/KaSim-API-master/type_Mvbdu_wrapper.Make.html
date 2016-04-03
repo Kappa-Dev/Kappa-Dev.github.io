@@ -123,6 +123,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nfst&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nsnd&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_redefine&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_association_list,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_subseteq&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;bool)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_asso&nbsp;:&nbsp;(hconsed_association_list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_association_list&nbsp;:&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_association_list&nbsp;:&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_renaming_list,&nbsp;mvbdu)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;hconsed_variables_list,&nbsp;mvbdu)&nbsp;binary<br>
