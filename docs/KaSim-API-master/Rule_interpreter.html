@@ -164,7 +164,7 @@ resynchronizing. (This is what initial state and perturbations do.)<br>
 
 <pre><span id="VALadd_tracked"><span class="keyword">val</span> add_tracked</span> : <code class="type"><a href="Connected_component.html#TYPEt">Connected_component.t</a> array -><br>       Causal.event_kind -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
 <pre><span id="VALremove_tracked"><span class="keyword">val</span> remove_tracked</span> : <code class="type"><a href="Connected_component.html#TYPEt">Connected_component.t</a> array -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
-<pre><span id="VALgenerate_stories"><span class="keyword">val</span> generate_stories</span> : <code class="type">Format.formatter -> <a href="Environment.html#TYPEt">Environment.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> unit</code></pre><br>
+<pre><span id="VALgenerate_stories"><span class="keyword">val</span> generate_stories</span> : <code class="type">called_from:Remanent_parameters_sig.called_from -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> unit</code></pre><br>
 <h6 id="6_Debugging">Debugging</h6><br>
 
 <pre><span id="VALprint_injections"><span class="keyword">val</span> print_injections</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       Format.formatter -> Mods.IntSet.t Connected_component.Map.t -> unit</code></pre>
