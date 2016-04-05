@@ -3532,7 +3532,7 @@
      x_gU_=caml_new_string_i_(str_output_hH_),
      x_oH_=caml_new_string_i_("influence"),
      x_oI_=caml_new_string_i_("contact"),
-     version_string_jo_=caml_new_string_i_("2546fa9"),
+     version_string_jo_=caml_new_string_i_("f5d7ad3"),
      match_ju_=caml_new_string_i_("profiling.txt"),
      error_bw_=[0,0,0,0],
      s_pk_=caml_new_string_i_("line 475"),
@@ -59575,8 +59575,8 @@
                   obj_e_=_ni_(obj_0_b_,table_d_),
                    /*<<api/api.ml 11 35>>*/ lastyield_j_=
                    [0, /*<<api/api.ml 11 22>>*/ caml_sys_time_eZ_(0)],
-                  seconds_p_=0.1;
-                  /*<<js/WebWorker.ml 7 74>>*/ obj_e_[_o_+1]=
+                  seconds_p_=0.01;
+                  /*<<js/WebWorker.ml 7 75>>*/ obj_e_[_o_+1]=
                  function(param_a_)
                   { /*<<api/api.ml 12 12>>*/ var
                     t_k_=
@@ -59646,7 +59646,7 @@
                        default:var switch_l_=0}
                       /*<<lwt_js.ml 24 54>>*/ return t_b_}
                     /*<<api/api.ml 16 17>>*/ return return_unit_ch_ /*<<api/api.ml 16 32>>*/ };
-                  /*<<js/WebWorker.ml 7 74>>*/  /*<<js/WebWorker.ml 7 74>>*/ caml_call_gen1_m_
+                  /*<<js/WebWorker.ml 7 75>>*/  /*<<js/WebWorker.ml 7 75>>*/ caml_call_gen1_m_
                   (_S_,obj_e_);
                   /*<<camlinternalOO.ml 377 2>>*/ if(obj_0_b_)return obj_e_;
                   /*<<camlinternalOO.ml 377 44>>*/ var inits_g_=table_d_[8];
