@@ -140,13 +140,12 @@ agent_id * agent_type<br>
 <pre><span id="VALempty_path"><span class="keyword">val</span> empty_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALrev_path"><span class="keyword">val</span> rev_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a> -> <a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALprint_path"><span class="keyword">val</span> print_path</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> ?graph:<a href="Edges.html#TYPEt">t</a> -> Format.formatter -> <a href="Edges.html#TYPEpath">path</a> -> unit</code></pre>
-<pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?candidate:<a href="Edges.html#TYPEpath">path</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Edges.html#TYPEt">t</a> -><br>       (int * int) list -> int list -> int option -> bool -> <a href="Edges.html#TYPEpath">path</a> option</code></pre><div class="info ">
+<pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?candidate:<a href="Edges.html#TYPEpath">path</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Edges.html#TYPEt">t</a> -><br>       <a href="Edges.html#TYPEagent">agent</a> list -><br>       <a href="Edges.html#TYPEagent">agent</a> list -> int option -> bool -> <a href="Edges.html#TYPEpath">path</a> option</code></pre><div class="info ">
 <code class="code">are_connected ?candidate sigs graph nodes_x nodes_y dist store_dist</code><br>
 </div>
 
-<pre><span id="VALpaths_of_interest"><span class="keyword">val</span> paths_of_interest</span> : <code class="type">(int -> 'a option) -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Edges.html#TYPEt">t</a> -> int -> int -> <a href="Edges.html#TYPEpath">path</a> -> (('a * int) * <a href="Edges.html#TYPEpath">path</a>) list</code></pre><div class="info ">
-<code class="code">paths_of_interest
-         is_interesting sigs graph agent_name agent_id done_path</code><br>
+<pre><span id="VALpaths_of_interest"><span class="keyword">val</span> paths_of_interest</span> : <code class="type">(<a href="Edges.html#TYPEagent">agent</a> -> 'a option) -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEagent">agent</a> -> <a href="Edges.html#TYPEpath">path</a> -> (('a * int) * <a href="Edges.html#TYPEpath">path</a>) list</code></pre><div class="info ">
+<code class="code">paths_of_interest is_interesting sigs graph agent done_path</code><br>
 </div>
 
 <pre><span id="VALbuild_snapshot"><span class="keyword">val</span> build_snapshot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">t</a> -> (int * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>) list</code></pre>
