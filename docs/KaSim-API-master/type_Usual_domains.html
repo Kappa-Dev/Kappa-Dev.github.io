@@ -65,4 +65,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;maybe_bool&nbsp;=&nbsp;<span class="constructor">Sure_value</span>&nbsp;<span class="keyword">of</span>&nbsp;bool&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Maybe</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;top_or_not&nbsp;=&nbsp;<span class="constructor">Top</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Not_top</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>a<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;flat_lattice&nbsp;=&nbsp;<span class="constructor">Val</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Any</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Undefined</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lub&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice<br>
 <span class="keyword">end</span></code></body></html>
