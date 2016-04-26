@@ -68,6 +68,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_newline&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_cell&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_as_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flush_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;close_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;open_infinite_buffer&nbsp;:&nbsp;?mode:<span class="constructor">Loggers</span>.encoding&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;open_circular_buffer&nbsp;:<br>
