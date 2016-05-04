@@ -65,7 +65,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;decls&nbsp;:&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;array;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;finder&nbsp;:&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">NamedDecls</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?forbidden:<span class="constructor">Mods</span>.<span class="constructor">StringSet</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">NamedDecls</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;size&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;elt_name&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;elt_id&nbsp;:<br>
