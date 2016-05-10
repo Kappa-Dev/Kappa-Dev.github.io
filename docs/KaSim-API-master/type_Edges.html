@@ -82,6 +82,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_internal&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;path&nbsp;=&nbsp;((<span class="constructor">Edges</span>.agent&nbsp;*&nbsp;int)&nbsp;*&nbsp;(<span class="constructor">Edges</span>.agent&nbsp;*&nbsp;int))&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_path&nbsp;:&nbsp;<span class="constructor">Edges</span>.path<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;singleton_path&nbsp;:&nbsp;<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.path<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rev_path&nbsp;:&nbsp;<span class="constructor">Edges</span>.path&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.path<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_path&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -93,6 +94,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.agent&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.agent&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.path&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;paths_of_interest&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;looping:<span class="constructor">Edges</span>.agent&nbsp;*&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.path&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;((<span class="keywordsign">'</span>a&nbsp;*&nbsp;int)&nbsp;*&nbsp;<span class="constructor">Edges</span>.path)&nbsp;list<br>
