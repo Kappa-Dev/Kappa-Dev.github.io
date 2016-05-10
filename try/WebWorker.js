@@ -3498,7 +3498,7 @@
      x_gS_=caml_new_string_i_(str_output_hC_),
      x_oy_=caml_new_string_i_("influence"),
      x_oz_=caml_new_string_i_("contact"),
-     version_string_jn_=caml_new_string_i_("8cf168e"),
+     version_string_jn_=caml_new_string_i_("7e0335a"),
      dirname_gT_=caml_new_string_i_(str_s_),
      f_fg_=caml_new_string_i_("profiling.html"),
      match_jt_=caml_new_string_i_("profiling.txt"),
@@ -48982,58 +48982,60 @@
                      (_bg_[14],_o_[1][1],cc_a_,roots_E_);
                    /*<<simulation/rule_interpreter.ml 299 67>>*/ return  /*<<simulation/rule_interpreter.ml 299 67>>*/ caml_call_gen1_m_
                           (_o_[1][2],_b_) /*<<simulation/rule_interpreter.ml 299 67>>*/ };
-               /*<<simulation/rule_interpreter.ml 383 67>>*/ if
+               /*<<simulation/rule_interpreter.ml 383 66>>*/ if
                (1-
                  /*<<simulation/rule_interpreter.ml 296 4>>*/ caml_call_gen2_n_
                  (_bz_[27],_aF_,unary_ccs_d_))
-               var switch_J_=0;
+               var
+                 /*<<simulation/rule_interpreter.ml 385 1>>*/ _a5_=rule_i_[6],
+                 /*<<simulation/rule_interpreter.ml 386 3>>*/ unaries_to_explore_a6_=
+                  /*<<simulation/rule_interpreter.ml 386 3>>*/ _M_
+                  (function(_a_)
+                    { /*<<?>>*/ return _ab_(final_inj2graph_b_,_a_)},
+                   _a5_),
+                _am_=
+                  /*<<simulation/rule_interpreter.ml 388 1>>*/ _t_
+                  (function(acc_a_,param_b_)
+                    {var
+                       /*<<simulation/rule_interpreter.ml 389 3>>*/ ty_c_=
+                       param_b_[2],
+                       /*<<simulation/rule_interpreter.ml 389 3>>*/ id_e_=
+                       param_b_[1],
+                       /*<<simulation/rule_interpreter.ml 389 3>>*/ unary_cands_g_=
+                       acc_a_[1],
+                       /*<<simulation/rule_interpreter.ml 390 4>>*/ _h_=
+                       [0,id_e_,ty_c_],
+                       /*<<simulation/rule_interpreter.ml 391 6>>*/ l_f_=
+                        /*<<simulation/rule_interpreter.ml 391 6>>*/ _pY_
+                        (function(i_c_)
+                          { /*<<simulation/rule_interpreter.ml 303 2>>*/ function _b_
+                            (cc_a_)
+                            { /*<<simulation/rule_interpreter.ml 305 17>>*/ return  /*<<simulation/rule_interpreter.ml 305 17>>*/ _qe_
+                                     (edges_q_,i_c_,cc_a_) /*<<simulation/rule_interpreter.ml 305 67>>*/ }
+                            /*<<simulation/rule_interpreter.ml 304 4>>*/ var
+                            ccs_a_=
+                              /*<<simulation/rule_interpreter.ml 304 4>>*/ caml_call_gen2_n_
+                              (_bz_[25],_b_,unary_ccs_d_);
+                            /*<<simulation/rule_interpreter.ml 307 41>>*/ return  /*<<simulation/rule_interpreter.ml 307 5>>*/ caml_call_gen1_m_
+                                    (_bz_[2],ccs_a_)
+                                   ?0
+                                   :[0,ccs_a_]},
+                         _ap_,
+                         edges_q_,
+                         _h_,
+                         _pW_);
+                      /*<<simulation/rule_interpreter.ml 393 45>>*/ return l_f_
+                             ?[0,[0,[0,[0,id_e_,ty_c_],l_f_],unary_cands_g_],0]
+                             :acc_a_ /*<<simulation/rule_interpreter.ml 395 44>>*/ },
+                   unary_pack_al_,
+                   unaries_to_explore_a6_),
+                switch_J_=1;
               else
-               var _am_=unary_pack_al_,switch_J_=1}
+               var switch_J_=0}
             else
              var switch_J_=0;
              /*<<camlinternalFormatBasics.ml 502 8>>*/ if(!switch_J_)
-             var
-               /*<<simulation/rule_interpreter.ml 385 1>>*/ _a5_=rule_i_[6],
-               /*<<simulation/rule_interpreter.ml 386 3>>*/ unaries_to_explore_a6_=
-                /*<<simulation/rule_interpreter.ml 386 3>>*/ _M_
-                (function(_a_){ /*<<?>>*/ return _ab_(final_inj2graph_b_,_a_)},
-                 _a5_),
-              _am_=
-                /*<<simulation/rule_interpreter.ml 388 1>>*/ _t_
-                (function(acc_a_,param_b_)
-                  {var
-                     /*<<simulation/rule_interpreter.ml 389 3>>*/ ty_c_=
-                     param_b_[2],
-                     /*<<simulation/rule_interpreter.ml 389 3>>*/ id_e_=
-                     param_b_[1],
-                     /*<<simulation/rule_interpreter.ml 389 3>>*/ unary_cands_g_=
-                     acc_a_[1],
-                     /*<<simulation/rule_interpreter.ml 390 4>>*/ _h_=
-                     [0,id_e_,ty_c_],
-                     /*<<simulation/rule_interpreter.ml 391 6>>*/ l_f_=
-                      /*<<simulation/rule_interpreter.ml 391 6>>*/ _pY_
-                      (function(i_c_)
-                        { /*<<simulation/rule_interpreter.ml 303 2>>*/ function _b_
-                          (cc_a_)
-                          { /*<<simulation/rule_interpreter.ml 305 17>>*/ return  /*<<simulation/rule_interpreter.ml 305 17>>*/ _qe_
-                                   (edges_q_,i_c_,cc_a_) /*<<simulation/rule_interpreter.ml 305 67>>*/ }
-                          /*<<simulation/rule_interpreter.ml 304 4>>*/ var
-                          ccs_a_=
-                            /*<<simulation/rule_interpreter.ml 304 4>>*/ caml_call_gen2_n_
-                            (_bz_[25],_b_,unary_ccs_d_);
-                          /*<<simulation/rule_interpreter.ml 307 41>>*/ return  /*<<simulation/rule_interpreter.ml 307 5>>*/ caml_call_gen1_m_
-                                  (_bz_[2],ccs_a_)
-                                 ?0
-                                 :[0,ccs_a_]},
-                       _ap_,
-                       edges_q_,
-                       _h_,
-                       _pW_);
-                    /*<<simulation/rule_interpreter.ml 393 45>>*/ return l_f_
-                           ?[0,[0,[0,[0,id_e_,ty_c_],l_f_],unary_cands_g_],0]
-                           :acc_a_ /*<<simulation/rule_interpreter.ml 395 44>>*/ },
-                 unary_pack_al_,
-                 unaries_to_explore_a6_);
+             var _am_=unary_pack_al_;
             var match_G_=_am_}
           var
             /*<<simulation/rule_interpreter.ml 399 2>>*/ _ag_=state_a_[8],
