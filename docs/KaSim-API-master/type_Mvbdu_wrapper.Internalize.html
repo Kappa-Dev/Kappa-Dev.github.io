@@ -1,0 +1,303 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Pp" rel="Chapter" href="Pp.html">
+<link title="Pp_svg" rel="Chapter" href="Pp_svg.html">
+<link title="Pp_html" rel="Chapter" href="Pp_html.html">
+<link title="GenArray" rel="Chapter" href="GenArray.html">
+<link title="LargeArray" rel="Chapter" href="LargeArray.html">
+<link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Buffers" rel="Chapter" href="Buffers.html">
+<link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
+<link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
+<link title="Loggers" rel="Chapter" href="Loggers.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Expr" rel="Chapter" href="Expr.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Data" rel="Chapter" href="Data.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html">
+<link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
+<link title="Analyzer" rel="Chapter" href="Analyzer.html">
+<link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
+<link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Communication" rel="Chapter" href="Communication.html">
+<link title="Composite_domain" rel="Chapter" href="Composite_domain.html">
+<link title="Product" rel="Chapter" href="Product.html">
+<link title="Usual_domains" rel="Chapter" href="Usual_domains.html">
+<link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
+<link title="Views_domain" rel="Chapter" href="Views_domain.html">
+<link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
+<link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Int_storage" rel="Chapter" href="Int_storage.html">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Mvbdu_wrapper.Internalize</title>
+</head>
+<body>
+<code class="code"><span class="keyword">functor</span><br>
+&nbsp;&nbsp;(<span class="constructor">M</span>&nbsp;:&nbsp;<span class="keyword">sig</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;value&nbsp;=&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Boolean_mvbdu</span>.memo_tables,&nbsp;<span class="constructor">Boolean_mvbdu</span>.mvbdu_dic,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.association_list_dic,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.variables_list_dic,&nbsp;bool,&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Memo_sig</span>.handler<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_renaming_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>output&nbsp;constant&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler&nbsp;*&nbsp;<span class="keywordsign">'</span>output<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>input,&nbsp;<span class="keywordsign">'</span>output)&nbsp;unary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>input&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler&nbsp;*&nbsp;<span class="keywordsign">'</span>output<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>input1,&nbsp;<span class="keywordsign">'</span>input2,&nbsp;<span class="keywordsign">'</span>output)&nbsp;binary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>input1&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>input2&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler&nbsp;*&nbsp;<span class="keywordsign">'</span>output<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>input1,&nbsp;<span class="keywordsign">'</span>input2,&nbsp;<span class="keywordsign">'</span>input3,&nbsp;<span class="keywordsign">'</span>output)&nbsp;ternary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>input1&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>input2&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>input3&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler&nbsp;*&nbsp;<span class="keywordsign">'</span>output<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_init&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;equal&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;equal_with_logs&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;bool)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_false&nbsp;:&nbsp;mvbdu&nbsp;constant<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_true&nbsp;:&nbsp;mvbdu&nbsp;constant<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_not&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_id&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_unary_true&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_unary_false&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_and&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_or&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_xor&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nand&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nor&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_imply&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rev_imply&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_equiv&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nimply&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nrev_imply&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_bi_true&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_bi_false&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_fst&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_snd&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nfst&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nsnd&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_redefine&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_association_list,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_subseteq&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;bool)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_asso&nbsp;:&nbsp;(hconsed_association_list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_association_list&nbsp;:&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_renaming_list,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;hconsed_variables_list,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_abstract_away&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;hconsed_variables_list,&nbsp;mvbdu)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_cartesian_decomposition_depth&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;int,&nbsp;mvbdu&nbsp;option&nbsp;*&nbsp;mvbdu&nbsp;list)&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_full_cartesian_decomposition&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_cartesian_abstraction&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;hconsed_association_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;hconsed_association_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;hconsed_association_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;hconsed_association_list&nbsp;constant<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;(key&nbsp;list,&nbsp;hconsed_variables_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;list,&nbsp;hconsed_variables_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_variables_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;list,&nbsp;hconsed_variables_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_variables_list&nbsp;:&nbsp;hconsed_variables_list&nbsp;constant<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;key)&nbsp;list,&nbsp;hconsed_renaming_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;key)&nbsp;list,&nbsp;hconsed_renaming_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;key)&nbsp;list,&nbsp;hconsed_renaming_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_renaming_list&nbsp;:&nbsp;hconsed_renaming_list&nbsp;constant<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;overwrite_association_lists&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_association_list,&nbsp;hconsed_association_list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_association_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;merge_variables_lists&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_variables_list,&nbsp;hconsed_variables_list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_variables_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_variables_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_variables_list,&nbsp;key&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_association_list,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:&nbsp;(mvbdu,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;variables_list_of_mvbdu&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_variables_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_variables_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_by_variables_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>data&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">List_sig</span>.hash_key&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>data)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">List_sig</span>.hash_key&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>data&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>map)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>data&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>data,&nbsp;<span class="keywordsign">'</span>data,&nbsp;<span class="keywordsign">'</span>data)&nbsp;binary&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_variables_list,&nbsp;<span class="keywordsign">'</span>data,&nbsp;<span class="keywordsign">'</span>map,&nbsp;<span class="keywordsign">'</span>map)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_by_mvbdu&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>data&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_sig</span>.hash_key&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>data)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_sig</span>.hash_key&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>data&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>map)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>data&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>data,&nbsp;<span class="keywordsign">'</span>data,&nbsp;<span class="keywordsign">'</span>data)&nbsp;binary&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(mvbdu,&nbsp;<span class="keywordsign">'</span>data,&nbsp;<span class="keywordsign">'</span>map,&nbsp;<span class="keywordsign">'</span>map)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;last_entry&nbsp;:&nbsp;(unit,&nbsp;int)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;hash_of_association_list&nbsp;:&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;hash_of_variables_list&nbsp;:&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span>)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;<span class="keyword">sig</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;value&nbsp;=&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mvbdu&nbsp;=&nbsp;<span class="constructor">M</span>.mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Boolean_mvbdu</span>.memo_tables,&nbsp;<span class="constructor">Boolean_mvbdu</span>.mvbdu_dic,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.association_list_dic,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.variables_list_dic,&nbsp;bool,&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Memo_sig</span>.handler<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_renaming_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;import_handler&nbsp;:&nbsp;handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export_handler&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_init&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;equal&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_false&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_true&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_not&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_id&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_unary_true&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_unary_false&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_and&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_or&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_xor&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nand&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nor&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_imply&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rev_imply&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_equiv&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nimply&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nrev_imply&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_bi_true&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_bi_false&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_fst&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_snd&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nfst&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nsnd&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_redefine&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_subseteq&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_asso&nbsp;:&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_association_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_association_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_abstract_away&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_cartesian_abstraction&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_cartesian_decomposition_depth&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;option&nbsp;*&nbsp;mvbdu&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_full_cartesian_decomposition&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_variables_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_variables_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_renaming_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;key)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;key)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_renaming_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;key)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_renaming_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;overwrite_association_lists&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;merge_variables_lists&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_variables_list&nbsp;:&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;key&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;variables_list_of_mvbdu&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_association_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_variables_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;hash_of_association_list&nbsp;:&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;hash_of_variables_list&nbsp;:&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">end</span></code></body></html>

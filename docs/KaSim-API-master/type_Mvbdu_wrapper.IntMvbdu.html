@@ -63,11 +63,19 @@
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;value&nbsp;=&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mvbdu&nbsp;=&nbsp;<span class="constructor">Mvbdu</span>.mvbdu<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Boolean_mvbdu</span>.memo_tables,&nbsp;<span class="constructor">Boolean_mvbdu</span>.mvbdu_dic,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.association_list_dic,&nbsp;<span class="constructor">Boolean_mvbdu</span>.variables_list_dic,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool,&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Memo_sig</span>.handler<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_renaming_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;import_handler&nbsp;:&nbsp;handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export_handler&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_init&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;equal&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_false&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>

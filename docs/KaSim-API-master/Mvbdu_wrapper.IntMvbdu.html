@@ -71,7 +71,7 @@
 </div>
 <h1>Module <a href="type_Mvbdu_wrapper.IntMvbdu.html">Mvbdu_wrapper.IntMvbdu</a></h1>
 
-<pre><span class="keyword">module</span> IntMvbdu: <code class="type"><a href="Mvbdu_wrapper.Internalized_mvbdu.html">Internalized_mvbdu</a></code><code class="type">  with type key = int and type value = int</code></pre><hr width="100%">
+<pre><span class="keyword">module</span> IntMvbdu: <code class="type"><a href="Mvbdu_wrapper.Internalized_mvbdu.html">Internalized_mvbdu</a></code><code class="type">  with type key = int and type value = int and type mvbdu= Mvbdu.mvbdu</code></pre><hr width="100%">
 
 <pre><span id="TYPEkey"><span class="keyword">type</span> <code class="type"></code>key</span> </pre>
 
@@ -80,6 +80,9 @@
 
 
 <pre><span id="TYPEmvbdu"><span class="keyword">type</span> <code class="type"></code>mvbdu</span> </pre>
+
+
+<pre><span id="TYPEhandler"><span class="keyword">type</span> <code class="type"></code>handler</span> = <code class="type">(Boolean_mvbdu.memo_tables, Boolean_mvbdu.mvbdu_dic,<br>        Boolean_mvbdu.association_list_dic, Boolean_mvbdu.variables_list_dic, <br>        bool, int)<br>       Memo_sig.handler</code> </pre>
 
 
 <pre><span id="TYPEhconsed_association_list"><span class="keyword">type</span> <code class="type"></code>hconsed_association_list</span> </pre>
@@ -92,6 +95,8 @@
 
 
 <pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">Remanent_parameters_sig.parameters -> unit</code></pre>
+<pre><span id="VALimport_handler"><span class="keyword">val</span> import_handler</span> : <code class="type"><a href="Mvbdu_wrapper.Internalized_mvbdu.html#TYPEhandler">handler</a> -> unit</code></pre>
+<pre><span id="VALexport_handler"><span class="keyword">val</span> export_handler</span> : <code class="type">Exception.method_handler -><br>       Exception.method_handler * <a href="Mvbdu_wrapper.Internalized_mvbdu.html#TYPEhandler">handler</a> option</code></pre>
 <pre><span id="VALis_init"><span class="keyword">val</span> is_init</span> : <code class="type">unit -> bool</code></pre>
 <pre><span id="VALequal"><span class="keyword">val</span> equal</span> : <code class="type"><a href="Mvbdu_wrapper.Internalized_mvbdu.html#TYPEmvbdu">mvbdu</a> -><br>       <a href="Mvbdu_wrapper.Internalized_mvbdu.html#TYPEmvbdu">mvbdu</a> -> bool</code></pre>
 <pre><span id="VALmvbdu_false"><span class="keyword">val</span> mvbdu_false</span> : <code class="type">unit -> <a href="Mvbdu_wrapper.Internalized_mvbdu.html#TYPEmvbdu">mvbdu</a></code></pre>
