@@ -10,13 +10,13 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="JsSim.css?30295"></link>
-    <script src="contactmap.js?30295"></script>
-    <script src="Kappa.js?30295"></script>
-    <script src="common.js?30295"></script>
-    <script src="flux.js?30295"></script>
-    <script src="plot.js?30295"></script>
-    <script src="JsSim.js?30295"></script>
+    <link rel="stylesheet" type="text/css" href="JsSim.css?13041"></link>
+    <script src="contactmap.js?13041"></script>
+    <script src="Kappa.js?13041"></script>
+    <script src="common.js?13041"></script>
+    <script src="flux.js?13041"></script>
+    <script src="plot.js?13041"></script>
+    <script src="JsSim.js?13041"></script>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -163,7 +163,22 @@ rect { stroke-width: 2; }
 
 .snapshot_control {
     margin-top: 10px;
-}   </style>
+}
+
+.checkbox-control {
+    vertical-align: bottom;
+    margin: 1px !important;
+}
+
+@media .CodeMirror(max-width: 100px) {
+    width: 100%;
+}
+.CodeMirror {
+    border: 1px solid #eee;
+    min-height: 100px;
+    height: calc(100% - 320px);
+}
+   </style>
    <body>
    <!-- nav -->
    <nav class="navbar navbar-default navbar-static-top">
