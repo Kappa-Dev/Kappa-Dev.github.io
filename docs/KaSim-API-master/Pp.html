@@ -76,6 +76,7 @@
 <pre><span id="VALset"><span class="keyword">val</span> set</span> : <code class="type">?trailing:(Format.formatter -> unit) -><br>       ('b -> 'a list) -><br>       (Format.formatter -> unit) -><br>       (Format.formatter -> 'a -> unit) -> Format.formatter -> 'b -> unit</code></pre>
 <pre><span id="VALhashtbl"><span class="keyword">val</span> hashtbl</span> : <code class="type">(Format.formatter -> unit) -><br>       (Format.formatter -> 'a * 'b -> unit) -><br>       Format.formatter -> ('a, 'b) Hashtbl.t -> unit</code></pre>
 <pre><span id="VALoption"><span class="keyword">val</span> option</span> : <code class="type">(Format.formatter -> 'a -> unit) -> Format.formatter -> 'a option -> unit</code></pre>
+<pre><span id="VALpair"><span class="keyword">val</span> pair</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -> Format.formatter -> 'a * 'b -> unit</code></pre>
 <pre><span id="VALbottom"><span class="keyword">val</span> bottom</span> : <code class="type">Format.formatter -> unit</code></pre>
 <pre><span id="VALnu"><span class="keyword">val</span> nu</span> : <code class="type">Format.formatter -> unit</code></pre>
 <pre><span id="VALempty_set"><span class="keyword">val</span> empty_set</span> : <code class="type">Format.formatter -> unit</code></pre>
