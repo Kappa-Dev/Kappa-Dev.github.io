@@ -62,8 +62,7 @@
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
 <link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
-<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><link title="Create a connected component" rel="Section" href="#6_Createaconnectedcomponent">
-<link title="Use a connected component " rel="Section" href="#6_Useaconnectedcomponent">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><link title="Use a connected component " rel="Section" href="#6_Useaconnectedcomponent">
 <title>KaSim API : Connected_component</title>
 </head>
 <body>
@@ -94,10 +93,12 @@ type for partial domain<br>
 
 
 <pre><span class="keyword">module</span> <a href="Connected_component.ContentAgent.html">ContentAgent</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.ContentAgent.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><span class="keyword">module</span> <a href="Connected_component.Env.html">Env</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.Env.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><br>
-<h6 id="6_Createaconnectedcomponent">Create a connected component</h6><br>
+<pre><span class="keyword">module</span> <a href="Connected_component.Env.html">Env</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.Env.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
+<pre><span class="keyword">module</span> <a href="Connected_component.PreEnv.html">PreEnv</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.PreEnv.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info">
+Create a connected component
+</div>
 
-<pre><span id="VALbegin_new"><span class="keyword">val</span> begin_new</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Env.t</a> -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
+<pre><span id="VALbegin_new"><span class="keyword">val</span> begin_new</span> : <code class="type"><a href="Connected_component.PreEnv.html#TYPEt">PreEnv.t</a> -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
 Starts creation<br>
 </div>
 
@@ -114,7 +115,7 @@ Starts creation<br>
 <code class="code">new_link_type work (node,site) <span class="keyword">type</span></code><br>
 </div>
 
-<pre><span id="VALfinish_new"><span class="keyword">val</span> finish_new</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Env.t</a> * Renaming.t * <a href="Connected_component.html#TYPEt">t</a></code></pre><br>
+<pre><span id="VALfinish_new"><span class="keyword">val</span> finish_new</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.PreEnv.html#TYPEt">PreEnv.t</a> * Renaming.t * <a href="Connected_component.html#TYPEt">t</a></code></pre><br>
 <h6 id="6_Useaconnectedcomponent">Use a connected component </h6><br>
 
 <pre><span id="VALis_equal_canonicals"><span class="keyword">val</span> is_equal_canonicals</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> <a href="Connected_component.html#TYPEt">t</a> -> bool</code></pre>
