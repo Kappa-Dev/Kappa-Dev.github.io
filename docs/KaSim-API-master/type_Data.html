@@ -79,11 +79,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;agents&nbsp;:&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Raw_mixture</span>.t)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;tokens&nbsp;:&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;array;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;distances&nbsp;=&nbsp;(float&nbsp;*&nbsp;int)&nbsp;list&nbsp;option&nbsp;array<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;unary_distances&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;distances_data&nbsp;:&nbsp;<span class="constructor">Data</span>.distances;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;distances_rules&nbsp;:&nbsp;string&nbsp;array;<br>
+&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Flux</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Plot</span>&nbsp;<span class="keyword">of</span>&nbsp;float&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t&nbsp;array<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Print</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.file_line<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Snapshot</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UnaryDistances</span>&nbsp;<span class="keyword">of</span>&nbsp;float&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">DynArray</span>.t&nbsp;option&nbsp;array<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Log</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UnaryDistances</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.unary_distances<br>
 <span class="keyword">end</span></code></body></html>

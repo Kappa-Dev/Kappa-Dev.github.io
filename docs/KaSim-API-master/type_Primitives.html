@@ -93,8 +93,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;elementary_rule&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;rate&nbsp;:&nbsp;<span class="constructor">Alg_expr</span>.t;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;unary_rate&nbsp;:&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;*&nbsp;int&nbsp;option)&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rate&nbsp;:&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Location</span>.annot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unary_rate&nbsp;:&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int&nbsp;option)&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;connected_components&nbsp;:&nbsp;<span class="constructor">Connected_component</span>.t&nbsp;array;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;removed&nbsp;:&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;inserted&nbsp;:&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;list;<br>
@@ -102,8 +102,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.site)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;consumed_tokens&nbsp;:&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;*&nbsp;int)&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;injected_tokens&nbsp;:&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;consumed_tokens&nbsp;:&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;injected_tokens&nbsp;:&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;syntactic_rule&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;instantiations&nbsp;:&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.event;<br>
 &nbsp;&nbsp;}<br>
