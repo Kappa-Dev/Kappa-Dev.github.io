@@ -28,7 +28,6 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
@@ -36,9 +35,10 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
-<link title="Expr" rel="Chapter" href="Expr.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
@@ -237,7 +237,7 @@ Elementary rule transformations
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTperturbation.precondition">precondition</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr</code>;</code></td>
+<code><span id="TYPEELTperturbation.precondition">precondition</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
 
 </tr>
 <tr>
@@ -251,18 +251,14 @@ Elementary rule transformations
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTperturbation.abort">abort</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr option</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTperturbation.stopping_time">stopping_time</span>&nbsp;: <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a> list</code>;</code></td>
+<code><span id="TYPEELTperturbation.abort">abort</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a> option</code>;</code></td>
 
 </tr></table>
 }
 
 
 
-<pre><span id="VALexists_modification"><span class="keyword">val</span> exists_modification</span> : <code class="type">(<a href="Primitives.html#TYPEmodification">modification</a> -> bool) -> <a href="Primitives.html#TYPEperturbation">perturbation</a> list -> bool</code></pre></body></html>
+<pre><span id="VALexists_modification"><span class="keyword">val</span> exists_modification</span> : <code class="type">(<a href="Primitives.html#TYPEmodification">modification</a> -> bool) -> <a href="Primitives.html#TYPEperturbation">perturbation</a> list -> bool</code></pre>
+<pre><span id="VALmap_expr_rule"><span class="keyword">val</span> map_expr_rule</span> : <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a>) -><br>       <a href="Primitives.html#TYPEelementary_rule">elementary_rule</a> -> <a href="Primitives.html#TYPEelementary_rule">elementary_rule</a></code></pre>
+<pre><span id="VALmap_expr_perturbation"><span class="keyword">val</span> map_expr_perturbation</span> : <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a>) -><br>       (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a> -><br>        <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a>) -><br>       <a href="Primitives.html#TYPEperturbation">perturbation</a> -> <a href="Primitives.html#TYPEperturbation">perturbation</a></code></pre>
+<pre><span id="VALstops_of_perturbation"><span class="keyword">val</span> stops_of_perturbation</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -> <a href="Primitives.html#TYPEperturbation">perturbation</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> list</code></pre></body></html>

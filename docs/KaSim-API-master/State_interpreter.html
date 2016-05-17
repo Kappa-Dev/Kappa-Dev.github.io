@@ -28,7 +28,6 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
@@ -36,9 +35,10 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
-<link title="Expr" rel="Chapter" href="Expr.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
@@ -82,11 +82,10 @@ Abstract state<br>
 </div>
 
 
-<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -> (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">empty env stopping_times</code><br>
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> (int * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) list -> <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">empty env stopping_times variable_overwrite</code><br>
 </div>
 
-<pre><span id="VALreinit"><span class="keyword">val</span> reinit</span> : <code class="type">(int * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) list -> <a href="State_interpreter.html#TYPEt">t</a> -> <a href="State_interpreter.html#TYPEt">t</a></code></pre>
 <pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * <a href="Location.html#TYPEt">Location.t</a>) list -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">initial env domain counter graph state</code> builds up the initial state<br>
 </div>

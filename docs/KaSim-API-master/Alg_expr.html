@@ -28,7 +28,6 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
@@ -36,9 +35,10 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
-<link title="Expr" rel="Chapter" href="Expr.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
@@ -133,4 +133,7 @@ depend in time, depend in event number, depend in given var<br>
 depend in time, depend in event number, depend in given var<br>
 </div>
 
-<pre><span id="VALsetup_alg_vars_rev_dep"><span class="keyword">val</span> setup_alg_vars_rev_dep</span> : <code class="type">unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre></body></html>
+<pre><span id="VALsetup_alg_vars_rev_dep"><span class="keyword">val</span> setup_alg_vars_rev_dep</span> : <code class="type">unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre>
+<pre><span id="VALpropagate_constant"><span class="keyword">val</span> propagate_constant</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALpropagate_constant_bool"><span class="keyword">val</span> propagate_constant_bool</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       <a href="Alg_expr.html#TYPEt">t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a> -><br>       <a href="Alg_expr.html#TYPEt">t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALstops_of_bool_expr"><span class="keyword">val</span> stops_of_bool_expr</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -> <a href="Alg_expr.html#TYPEt">t</a> Ast.bool_expr -> <a href="Nbr.html#TYPEt">Nbr.t</a> list</code></pre></body></html>

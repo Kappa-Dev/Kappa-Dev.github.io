@@ -28,7 +28,6 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
@@ -36,9 +35,10 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
-<link title="Expr" rel="Chapter" href="Expr.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
@@ -95,9 +95,11 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="VALget_rule"><span class="keyword">val</span> get_rule</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a></code></pre>
 <pre><span id="VALmap_observables"><span class="keyword">val</span> map_observables</span> : <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> 'a) -> <a href="Environment.html#TYPEt">t</a> -> 'a array</code></pre>
 <pre><span id="VALfold_rules"><span class="keyword">val</span> fold_rules</span> : <code class="type">(int -> 'a -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> 'a) -> 'a -> <a href="Environment.html#TYPEt">t</a> -> 'a</code></pre>
+<pre><span id="VALfold_perturbations"><span class="keyword">val</span> fold_perturbations</span> : <code class="type">(int -> 'a -> <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> -> 'a) -> 'a -> <a href="Environment.html#TYPEt">t</a> -> 'a</code></pre>
 <pre><span id="VALget_alg_reverse_dependencies"><span class="keyword">val</span> get_alg_reverse_dependencies</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int -> Operator.DepSet.t</code></pre>
 <pre><span id="VALget_token_reverse_dependencies"><span class="keyword">val</span> get_token_reverse_dependencies</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int -> Operator.DepSet.t</code></pre>
 <pre><span id="VALget_always_outdated"><span class="keyword">val</span> get_always_outdated</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> Operator.DepSet.t</code></pre>
+<pre><span id="VALall_dependencies"><span class="keyword">val</span> all_dependencies</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre>
 <pre><span id="VALnum_of_agent"><span class="keyword">val</span> num_of_agent</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Environment.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnum_of_alg"><span class="keyword">val</span> num_of_alg</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Environment.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnum_of_token"><span class="keyword">val</span> num_of_token</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Environment.html#TYPEt">t</a> -> int</code></pre>
@@ -107,4 +109,8 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="VALprint_agent"><span class="keyword">val</span> print_agent</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_alg"><span class="keyword">val</span> print_alg</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_token"><span class="keyword">val</span> print_token</span> : <code class="type">?env:<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">(<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> unit) -><br>       (<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> unit) -><br>       (<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> -> unit) -><br>       Format.formatter -> <a href="Environment.html#TYPEt">t</a> -> unit</code></pre></body></html>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">(<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> unit) -><br>       (<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> unit) -><br>       (<a href="Environment.html#TYPEt">t</a> -> Format.formatter -> <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> -> unit) -><br>       Format.formatter -> <a href="Environment.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALpropagate_constant"><span class="keyword">val</span> propagate_constant</span> : <code class="type">int list -> <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Environment.html#TYPEt">t</a> -> <a href="Environment.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">propagate_constant updated_vars counter env</code><br>
+</div>
+</body></html>

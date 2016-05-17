@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Expr.html">
+<link rel="previous" href="Kappa_printer.html">
 <link rel="next" href="Snip.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
@@ -28,7 +28,6 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
@@ -36,9 +35,10 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
-<link title="Expr" rel="Chapter" href="Expr.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
@@ -65,7 +65,7 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : LKappa</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Expr.html" title="Expr">Previous</a>
+<div class="navbar"><a class="pre" href="Kappa_printer.html" title="Kappa_printer">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
 &nbsp;<a class="post" href="Snip.html" title="Snip">Next</a>
 </div>
@@ -255,7 +255,7 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 
 
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">ltypes:bool -><br>       rates:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
-<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       (Ast.agent, Ast.mixture, string, Ast.rule) Ast.compil -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> *<br>       (Ast.agent, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>) Ast.compil</code></pre><div class="info ">
+<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       (Ast.agent, Ast.mixture, string, Ast.rule) Ast.compil -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * int list *<br>       (Ast.agent, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>) Ast.compil</code></pre><div class="info ">
 <code class="code">compil_of_ast variable_overwrite ast</code><br>
 <b>Returns</b> the signature of agent, the signature of tokens and an
 Ast.compil where identifiers are integers and not string, syntactic

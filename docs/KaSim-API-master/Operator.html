@@ -28,7 +28,6 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
@@ -36,9 +35,10 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
-<link title="Expr" rel="Chapter" href="Expr.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
@@ -226,6 +226,27 @@ Compiled algebraic expression<br>
 <td align="left" valign="top" >
 <code><span id="TYPEELTstate_alg_op.NULL_EVENT_VAR"><span class="constructor">NULL_EVENT_VAR</span></span></code></td>
 
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_alg_op.TMAX_VAR"><span class="constructor">TMAX_VAR</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_alg_op.EMAX_VAR"><span class="constructor">EMAX_VAR</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate_alg_op.PLOTNUM"><span class="constructor">PLOTNUM</span></span></code></td>
+
 </tr></table>
 
 
@@ -282,15 +303,10 @@ Compiled algebraic expression<br>
 <br>
 <h6 id="6_Printers">Printers</h6><br>
 
-<pre><span id="VALbin_alg_op_to_string"><span class="keyword">val</span> bin_alg_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> string</code></pre>
 <pre><span id="VALprint_bin_alg_op"><span class="keyword">val</span> print_bin_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> unit</code></pre>
-<pre><span id="VALun_alg_op_to_string"><span class="keyword">val</span> un_alg_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEun_alg_op">un_alg_op</a> -> string</code></pre>
 <pre><span id="VALprint_un_alg_op"><span class="keyword">val</span> print_un_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEun_alg_op">un_alg_op</a> -> unit</code></pre>
-<pre><span id="VALstate_alg_op_to_string"><span class="keyword">val</span> state_alg_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> string</code></pre>
 <pre><span id="VALprint_state_alg_op"><span class="keyword">val</span> print_state_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> unit</code></pre>
-<pre><span id="VALbool_op_to_string"><span class="keyword">val</span> bool_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEbool_op">bool_op</a> -> string</code></pre>
 <pre><span id="VALprint_bool_op"><span class="keyword">val</span> print_bool_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbool_op">bool_op</a> -> unit</code></pre>
-<pre><span id="VALcompare_op_to_string"><span class="keyword">val</span> compare_op_to_string</span> : <code class="type">unit -> <a href="Operator.html#TYPEcompare_op">compare_op</a> -> string</code></pre>
 <pre><span id="VALprint_compare_op"><span class="keyword">val</span> print_compare_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEcompare_op">compare_op</a> -> unit</code></pre><br>
 <h6 id="6_Dependenciesmanagement">Dependencies management</h6><br>
 

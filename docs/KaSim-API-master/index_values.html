@@ -24,7 +24,6 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
@@ -32,9 +31,10 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
-<link title="Expr" rel="Chapter" href="Expr.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
@@ -133,6 +133,8 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
+<tr><td><a href="Environment.html#VALall_dependencies">all_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALappend">append</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALappend">append</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
@@ -177,8 +179,6 @@ Starts creation
 </td></tr>
 <tr><td><a href="Priority.html#VALbellow_average">bellow_average</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
-<tr><td><a href="Operator.html#VALbin_alg_op_to_string">bin_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
-<td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALbindings">bindings</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALblack_list">black_list</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -187,13 +187,13 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALblit">blit</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
-<tr><td><a href="Operator.html#VALbool_op_to_string">bool_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
-<td></td></tr>
 <tr><td><a href="Pp.html#VALbottom">bottom</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALbuild_association_list">build_association_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALbuild_association_list">build_association_list</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
+<td></td></tr>
+<tr><td><a href="Eval.html#VALbuild_initial_state">build_initial_state</a> [<a href="Eval.html">Eval</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALbuild_renaming_list">build_renaming_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
@@ -268,8 +268,6 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALcompare_canonical_form">compare_canonical_form</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
-<tr><td><a href="Operator.html#VALcompare_op_to_string">compare_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
-<td></td></tr>
 <tr><td><a href="Navigation.html#VALcompatible_point">compatible_point</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td><div class="info">
 Retuns all the extension of the given injections so that the second edge
@@ -281,14 +279,7 @@ Retuns all the extension of the given injections so that the second edge
 <code class="code">compil_of_ast variable_overwrite ast</code>
 </div>
 </td></tr>
-<tr><td><a href="Expr.html#VALcompile_alg">compile_alg</a> [<a href="Expr.html">Expr</a>]</td>
-<td><div class="info">
-<code class="code">compile_alg variable_map token_map (fresh_mix_id, mix_list) alg_pos</code>
-</div>
-</td></tr>
-<tr><td><a href="Expr.html#VALcompile_bool">compile_bool</a> [<a href="Expr.html">Expr</a>]</td>
-<td></td></tr>
-<tr><td><a href="Expr.html#VALcompile_pure_alg">compile_pure_alg</a> [<a href="Expr.html">Expr</a>]</td>
+<tr><td><a href="Eval.html#VALcompile">compile</a> [<a href="Eval.html">Eval</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALcomplete_progress_bar">complete_progress_bar</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
@@ -435,7 +426,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALempty">empty</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
-<code class="code">empty env stopping_times</code>
+<code class="code">empty env stopping_times variable_overwrite</code>
 </div>
 </td></tr>
 <tr><td><a href="Rule_interpreter.html#VALempty">empty</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
@@ -640,6 +631,8 @@ fold over the causal past of each observable in a given trace,
     the second arfument indicated whether the function is launched in debug mode or not
 </div>
 </td></tr>
+<tr><td><a href="Environment.html#VALfold_perturbations">fold_perturbations</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold_restriction_with_logs">fold_restriction_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold_restriction_with_missing_associations_with_logs">fold_restriction_with_missing_associations_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -837,6 +830,8 @@ check wether there is an observable in a trace
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALinit">init</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
+<tr><td><a href="Eval.html#VALinit_kasa">init_kasa</a> [<a href="Eval.html">Eval</a>]</td>
+<td></td></tr>
 <tr><td><a href="Compression_main.html#VALinit_secret_log_info">init_secret_log_info</a> [<a href="Compression_main.html">Compression_main</a>]</td>
 <td></td></tr>
 <tr><td><a href="Composite_domain.Composite_domain.html#VALinitialize">initialize</a> [<a href="Composite_domain.Composite_domain.html">Composite_domain.Composite_domain</a>]</td>
@@ -1005,6 +1000,10 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <tr><td><a href="SetMap.Map.html#VALmap2_with_logs">map2_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmap2z_with_logs">map2z_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="Primitives.html#VALmap_expr_perturbation">map_expr_perturbation</a> [<a href="Primitives.html">Primitives</a>]</td>
+<td></td></tr>
+<tr><td><a href="Primitives.html#VALmap_expr_rule">map_expr_rule</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALmap_observables">map_observables</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
@@ -1514,6 +1513,15 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <td></td></tr>
 <tr><td><a href="SetMap.Projection.html#VALproj_monadic">proj_monadic</a> [<a href="SetMap.Projection.html">SetMap.Projection</a>]</td>
 <td></td></tr>
+<tr><td><a href="Environment.html#VALpropagate_constant">propagate_constant</a> [<a href="Environment.html">Environment</a>]</td>
+<td><div class="info">
+<code class="code">propagate_constant updated_vars counter env</code>
+</div>
+</td></tr>
+<tr><td><a href="Alg_expr.html#VALpropagate_constant">propagate_constant</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Alg_expr.html#VALpropagate_constant_bool">propagate_constant_bool</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>R</td></tr>
 <tr><td><a href="SetMap.Set.html#VALrandom">random</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
@@ -1525,10 +1533,6 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <tr><td><a href="Loggers.html#VALredirect">redirect</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALrefine_information_about_state_of_site">refine_information_about_state_of_site</a> [<a href="Communication.html">Communication</a>]</td>
-<td></td></tr>
-<tr><td><a href="State_interpreter.html#VALreinit">reinit</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
-<td></td></tr>
-<tr><td><a href="Rule_interpreter.html#VALreinit">reinit</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALreinitialize">reinitialize</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
@@ -1690,9 +1694,9 @@ split_init split init event agent-wise
 </td></tr>
 <tr><td><a href="SetMap.Map.html#VALsplit_with_logs">split_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="Operator.html#VALstate_alg_op_to_string">state_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
+<tr><td><a href="Alg_expr.html#VALstops_of_bool_expr">stops_of_bool_expr</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Expr.html#VALstops_of_bool_expr">stops_of_bool_expr</a> [<a href="Expr.html">Expr</a>]</td>
+<tr><td><a href="Primitives.html#VALstops_of_perturbation">stops_of_perturbation</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALstore_by_mvbdu">store_by_mvbdu</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
@@ -1781,8 +1785,6 @@ convert a list of refined steps into a trace
 <tr><td><a href="Counter.html#VALtracked_events">tracked_events</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>U</td></tr>
-<tr><td><a href="Operator.html#VALun_alg_op_to_string">un_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
-<td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALunary_distances">unary_distances</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALunion">union</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
