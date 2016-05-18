@@ -78,6 +78,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;list&nbsp;*&nbsp;(string&nbsp;*&nbsp;string)&nbsp;list)&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">String2Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>c,&nbsp;<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int,&nbsp;<span class="constructor">LKappa</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_initial_state&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bind:(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;return:(<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -85,5 +87,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="constructor">Location</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;*&nbsp;<span class="keywordsign">'</span>a<br>
 <span class="keyword">end</span></code></body></html>
