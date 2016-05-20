@@ -42,6 +42,7 @@
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
@@ -142,20 +143,20 @@ Runtime information about a trace provided by the simulator<br>
 check wether there is an observable in a trace<br>
 </div>
 
-<pre><span id="VALtrace_of_pretrace"><span class="keyword">val</span> trace_of_pretrace</span> : <code class="type">S.PH.B.PB.CI.Po.K.refined_step list -> <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
+<pre><span id="VALtrace_of_pretrace"><span class="keyword">val</span> trace_of_pretrace</span> : <code class="type"><a href="Trace.html#TYPEt">Trace.t</a> -> <a href="Utilities.html#TYPEtrace">trace</a></code></pre><div class="info ">
 convert a list of refined steps into a trace<br>
 </div>
 
-<pre><span id="VALget_pretrace_of_trace"><span class="keyword">val</span> get_pretrace_of_trace</span> : <code class="type"><a href="Utilities.html#TYPEtrace">trace</a> -> S.PH.B.PB.CI.Po.K.refined_step list</code></pre><div class="info ">
+<pre><span id="VALget_pretrace_of_trace"><span class="keyword">val</span> get_pretrace_of_trace</span> : <code class="type"><a href="Utilities.html#TYPEtrace">trace</a> -> <a href="Trace.html#TYPEt">Trace.t</a></code></pre><div class="info ">
 conversely, convert a trace in a list of refined steps<br>
 </div>
 
-<pre><span id="VALget_simulation_time_of_event"><span class="keyword">val</span> get_simulation_time_of_event</span> : <code class="type">S.PH.B.PB.CI.Po.K.refined_step -> float option</code></pre><div class="info ">
+<pre><span id="VALget_simulation_time_of_event"><span class="keyword">val</span> get_simulation_time_of_event</span> : <code class="type"><a href="Trace.html#TYPEstep">Trace.step</a> -> float option</code></pre><div class="info ">
 get the date of an event in the simulation
     (only proper events have a time)<br>
 </div>
 
-<pre><span id="VALget_id_of_event"><span class="keyword">val</span> get_id_of_event</span> : <code class="type">S.PH.B.PB.CI.Po.K.refined_step -> int option</code></pre><div class="info ">
+<pre><span id="VALget_id_of_event"><span class="keyword">val</span> get_id_of_event</span> : <code class="type"><a href="Trace.html#TYPEstep">Trace.step</a> -> int option</code></pre><div class="info ">
 get the id of an event in the simulation
     (only proper events have an id)<br>
 </div>
@@ -261,10 +262,6 @@ The following functions are for expert only<br>
 compress a trace with the level of abstraction defined in the argument parameter.
     The optional argument heuristic can be used to tune the heuristic that select which
     event will be tried to be discarded first.<br>
-</div>
-
-<pre><span id="VALset_compression_mode"><span class="keyword">val</span> set_compression_mode</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       Parameter.current_compression_mode -> <a href="Utilities.html#TYPEparameter">parameter</a></code></pre><div class="info ">
-change the default level of oabstraction for compression (when used with compress)<br>
 </div>
 
 <pre><span id="VALcopy_log_info"><span class="keyword">val</span> copy_log_info</span> : <code class="type">StoryProfiling.StoryStats.log_info -> StoryProfiling.StoryStats.log_info</code></pre>

@@ -37,6 +37,7 @@
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
@@ -111,13 +112,10 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_trace&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;has_obs&nbsp;:&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;trace_of_pretrace&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.refined_step&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.trace<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_pretrace_of_trace&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.refined_step&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_simulation_time_of_event&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.refined_step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;option<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_id_of_event&nbsp;:&nbsp;<span class="constructor">S</span>.<span class="constructor">PH</span>.<span class="constructor">B</span>.<span class="constructor">PB</span>.<span class="constructor">CI</span>.<span class="constructor">Po</span>.<span class="constructor">K</span>.refined_step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;trace_of_pretrace&nbsp;:&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.trace<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_pretrace_of_trace&nbsp;:&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_simulation_time_of_event&nbsp;:&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_id_of_event&nbsp;:&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;remove_events_after_last_obs&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;split_init&nbsp;:&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace)&nbsp;<span class="constructor">Utilities</span>.unary<br>
@@ -175,9 +173,6 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compress&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?heuristic:<span class="constructor">Priority</span>.priorities&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;list)&nbsp;<span class="constructor">Utilities</span>.unary<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_compression_mode&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Parameter</span>.current_compression_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.parameter<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy_log_info&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">StoryProfiling</span>.<span class="constructor">StoryStats</span>.log_info&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">StoryProfiling</span>.<span class="constructor">StoryStats</span>.log_info<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cflow_grid&nbsp;=&nbsp;<span class="constructor">Causal</span>.grid<br>

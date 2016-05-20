@@ -38,6 +38,7 @@
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
@@ -72,6 +73,8 @@ One event loop
 </div>
 </td></tr>
 <tr><td><a href="Priority.html#VALabove_average">above_average</a> [<a href="Priority.html">Priority</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALactions_of_step">actions_of_step</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALactivity">activity</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
@@ -356,6 +359,10 @@ Give the number of stories (up to isomorphism classes) stored in a table
 Initialization
 </div>
 </td></tr>
+<tr><td><a href="Trace.html#VALcreation_of_actions">creation_of_actions</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALcreation_of_step">creation_of_step</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
 <tr><td><a href="Counter.html#VALcurrent_event">current_event</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALcurrent_story">current_story</a> [<a href="Counter.html">Counter</a>]</td>
@@ -408,6 +415,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Loggers.html#VALdummy_html_logger">dummy_html_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALdummy_precondition">dummy_precondition</a> [<a href="Communication.html">Communication</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALdummy_step">dummy_step</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALdummy_txt_logger">dummy_txt_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
@@ -463,7 +472,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALend_of_simulation">end_of_simulation</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
-What to do after stopping simulation
+What to do after stopping simulation.
 </div>
 </td></tr>
 <tr><td><a href="Utilities.html#VALenrich_grid_with_transitive_past_of_each_node_without_a_progress_bar">enrich_grid_with_transitive_past_of_each_node_without_a_progress_bar</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -779,6 +788,8 @@ get the date of an event in the simulation
 </div>
 </td></tr>
 <tr><td align="left"><br>H</td></tr>
+<tr><td><a href="Trace.html#VALhas_creation_of_step">has_creation_of_step</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
 <tr><td><a href="Location.html#VALhas_dummy_annot">has_dummy_annot</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALhas_obs">has_obs</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -786,6 +797,8 @@ get the date of an event in the simulation
 check wether there is an observable in a trace
 </div>
 </td></tr>
+<tr><td><a href="Kappa_files.html#VALhas_traceFile">has_traceFile</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALhash_of_association_list">hash_of_association_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALhash_of_association_list">hash_of_association_list</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
@@ -965,8 +978,8 @@ check wether there is an observable in a trace
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALloop">loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
-<code class="code">loop message_formatter env domain counter graph</code> does one event
-loop
+<code class="code">loop message_formatter env domain counter graph</code>
+ does a simulation in the command-line setting
 </div>
 </td></tr>
 <tr><td><a href="Priority.html#VALlow">low</a> [<a href="Priority.html">Priority</a>]</td>
@@ -1440,6 +1453,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALprint_concrete_action">print_concrete_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
+<tr><td><a href="Instantiation.html#VALprint_concrete_binding_state">print_concrete_binding_state</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
 <tr><td><a href="Instantiation.html#VALprint_concrete_test">print_concrete_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Raw_mixture.html#VALprint_dot">print_dot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
@@ -1449,6 +1464,10 @@ values of observables)
 <tr><td><a href="Connected_component.html#VALprint_dot">print_dot</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALprint_efficiency">print_efficiency</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALprint_event_kind">print_event_kind</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALprint_event_kind_dot_annot">print_event_kind_dot_annot</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALprint_expr_val">print_expr_val</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
@@ -1487,6 +1506,8 @@ prints both the site and its internal state if it is not <code class="code"><spa
 </div>
 </td></tr>
 <tr><td><a href="Operator.html#VALprint_state_alg_op">print_state_alg_op</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALprint_step">print_step</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALprint_step">print_step</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td><div class="info">
@@ -1596,10 +1617,6 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <tr><td align="left"><br>S</td></tr>
 <tr><td><a href="Agent_place.html#VALsame_connected_component">same_connected_component</a> [<a href="Agent_place.html">Agent_place</a>]</td>
 <td></td></tr>
-<tr><td><a href="Compression_main.html#VALsecret_store_event">secret_store_event</a> [<a href="Compression_main.html">Compression_main</a>]</td>
-<td></td></tr>
-<tr><td><a href="Compression_main.html#VALsecret_store_obs">secret_store_obs</a> [<a href="Compression_main.html">Compression_main</a>]</td>
-<td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALset">set</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALset">set</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
@@ -1624,11 +1641,6 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALset_cflow">set_cflow</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
-<tr><td><a href="Utilities.html#VALset_compression_mode">set_compression_mode</a> [<a href="Utilities.html">Utilities</a>]</td>
-<td><div class="info">
-change the default level of oabstraction for compression (when used with compress)
-</div>
-</td></tr>
 <tr><td><a href="Kappa_files.html#VALset_data">set_data</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALset_dir">set_dir</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
@@ -1655,6 +1667,8 @@ change the default level of oabstraction for compression (when used with compres
 <td></td></tr>
 <tr><td><a href="Pp.html#VALset_to_string">set_to_string</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
+<tr><td><a href="Kappa_files.html#VALset_traceFile">set_traceFile</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
 <tr><td><a href="Kappa_files.html#VALset_up_influence">set_up_influence</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALsetup_alg_vars_rev_dep">setup_alg_vars_rev_dep</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -1662,6 +1676,8 @@ change the default level of oabstraction for compression (when used with compres
 <tr><td><a href="Environment.html#VALsignatures">signatures</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.PreEnv.html#VALsigs">sigs</a> [<a href="Connected_component.PreEnv.html">Connected_component.PreEnv</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALsimulation_info_of_step">simulation_info_of_step</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALsingleton">singleton</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
@@ -1692,6 +1708,14 @@ split_init split init event agent-wise
 </td></tr>
 <tr><td><a href="SetMap.Map.html#VALsplit_with_logs">split_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
+<tr><td><a href="Trace.html#VALstep_is_event">step_is_event</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALstep_is_init">step_is_init</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALstep_is_obs">step_is_obs</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALstep_is_subs">step_is_subs</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
 <tr><td><a href="Alg_expr.html#VALstops_of_bool_expr">stops_of_bool_expr</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Primitives.html#VALstops_of_perturbation">stops_of_perturbation</a> [<a href="Primitives.html">Primitives</a>]</td>
@@ -1699,6 +1723,10 @@ split_init split init event agent-wise
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALstore_by_mvbdu">store_by_mvbdu</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALstore_by_variables_list">store_by_variables_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALstore_event">store_event</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALstore_obs">store_obs</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALstore_trace">store_trace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
@@ -1724,6 +1752,8 @@ compute the strong compression of a given trace,
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALsub">sub</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
+<tr><td><a href="Trace.html#VALsubs_step">subs_step</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALsubset">subset</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALsubst_agent_in_concrete_action">subst_agent_in_concrete_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
@@ -1747,6 +1777,8 @@ compute the strong compression of a given trace,
 <tr><td><a href="Nbr.html#VALsucc">succ</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>T</td></tr>
+<tr><td><a href="Trace.html#VALtests_of_step">tests_of_step</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
 <tr><td><a href="Communication.html#VALthe_rule_is_applied_for_the_first_time">the_rule_is_applied_for_the_first_time</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALthe_rule_is_not_applied_for_the_first_time">the_rule_is_not_applied_for_the_first_time</a> [<a href="Communication.html">Communication</a>]</td>
@@ -1843,6 +1875,8 @@ compute the weak compression of a given trace,
 <tr><td><a href="Kappa_files.html#VALwith_marshalized">with_marshalized</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_snapshot">with_snapshot</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALwith_traceFile">with_traceFile</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_unary_distances">with_unary_distances</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>

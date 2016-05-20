@@ -42,6 +42,7 @@
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
@@ -103,12 +104,12 @@ Returns the current activity<br>
 One event loop<br>
 </div>
 
-<pre><span id="VALend_of_simulation"><span class="keyword">val</span> end_of_simulation</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       called_from:Remanent_parameters_sig.called_from -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
-What to do after stopping simulation<br>
+<pre><span id="VALend_of_simulation"><span class="keyword">val</span> end_of_simulation</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> (((bool * bool * bool) * bool) * <a href="Trace.html#TYPEt">Trace.t</a>) option</code></pre><div class="info ">
+What to do after stopping simulation. Returns maybe a trace<br>
 </div>
 
-<pre><span id="VALloop"><span class="keyword">val</span> loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       called_from:Remanent_parameters_sig.called_from -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
-<code class="code">loop message_formatter env domain counter graph</code> does one event
-loop<br>
+<pre><span id="VALloop"><span class="keyword">val</span> loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       dotCflows:bool -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<code class="code">loop message_formatter env domain counter graph</code>
+ does a simulation in the command-line setting<br>
 </div>
 </body></html>

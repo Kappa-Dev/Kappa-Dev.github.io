@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Data.html">
+<link rel="next" href="Expr_interpreter.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Pp" rel="Chapter" href="Pp.html">
+<link title="Pp_svg" rel="Chapter" href="Pp_svg.html">
+<link title="Pp_html" rel="Chapter" href="Pp_html.html">
+<link title="GenArray" rel="Chapter" href="GenArray.html">
+<link title="LargeArray" rel="Chapter" href="LargeArray.html">
+<link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Buffers" rel="Chapter" href="Buffers.html">
+<link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
+<link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
+<link title="Loggers" rel="Chapter" href="Loggers.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html">
+<link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
+<link title="Analyzer" rel="Chapter" href="Analyzer.html">
+<link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
+<link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Communication" rel="Chapter" href="Communication.html">
+<link title="Composite_domain" rel="Chapter" href="Composite_domain.html">
+<link title="Product" rel="Chapter" href="Product.html">
+<link title="Usual_domains" rel="Chapter" href="Usual_domains.html">
+<link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
+<link title="Views_domain" rel="Chapter" href="Views_domain.html">
+<link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
+<link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Int_storage" rel="Chapter" href="Int_storage.html">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Trace</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Data.html" title="Data">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Expr_interpreter.html" title="Expr_interpreter">Next</a>
+</div>
+<h1>Module <a href="type_Trace.html">Trace</a></h1>
+
+<pre><span class="keyword">module</span> Trace: <code class="code"><span class="keyword">sig</span></code> <a href="Trace.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Trace of simulation<br>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPEevent_kind"><span class="keyword">type</span> <code class="type"></code>event_kind</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent_kind.OBS"><span class="constructor">OBS</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent_kind.RULE"><span class="constructor">RULE</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent_kind.INIT"><span class="constructor">INIT</span></span> <span class="keyword">of</span> <code class="type">int list</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+the agents<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent_kind.PERT"><span class="constructor">PERT</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+the rule<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+
+
+<pre><span id="VALprint_event_kind"><span class="keyword">val</span> print_event_kind</span> : <code class="type">?env:<a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Trace.html#TYPEevent_kind">event_kind</a> -> unit</code></pre>
+<pre><span id="VALprint_event_kind_dot_annot"><span class="keyword">val</span> print_event_kind_dot_annot</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Trace.html#TYPEevent_kind">event_kind</a> -> unit</code></pre>
+<pre><span id="TYPEevent"><span class="keyword">type</span> <code class="type"></code>event</span> = <code class="type"><a href="Trace.html#TYPEevent_kind">event_kind</a> * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a> *<br>       unit Mods.simulation_info</code> </pre>
+
+
+<pre><span id="TYPEobs"><span class="keyword">type</span> <code class="type"></code>obs</span> = <code class="type"><a href="Trace.html#TYPEevent_kind">event_kind</a> * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list *<br>       unit Mods.simulation_info</code> </pre>
+
+
+<pre><code><span id="TYPEstep"><span class="keyword">type</span> <code class="type"></code>step</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstep.Subs"><span class="constructor">Subs</span></span> <span class="keyword">of</span> <code class="type">int * int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstep.Event"><span class="constructor">Event</span></span> <span class="keyword">of</span> <code class="type"><a href="Trace.html#TYPEevent">event</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstep.Init"><span class="constructor">Init</span></span> <span class="keyword">of</span> <code class="type"><a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEaction">Instantiation.action</a> list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstep.Obs"><span class="constructor">Obs</span></span> <span class="keyword">of</span> <code class="type"><a href="Trace.html#TYPEobs">obs</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstep.Dummy"><span class="constructor">Dummy</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type"><a href="Trace.html#TYPEstep">step</a> list</code> </pre>
+
+
+<pre><span id="VALdummy_step"><span class="keyword">val</span> dummy_step</span> : <code class="type">string -> <a href="Trace.html#TYPEstep">step</a></code></pre>
+<pre><span id="VALsubs_step"><span class="keyword">val</span> subs_step</span> : <code class="type">int -> int -> <a href="Trace.html#TYPEstep">step</a></code></pre>
+<pre><span id="VALstep_is_obs"><span class="keyword">val</span> step_is_obs</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
+<pre><span id="VALstep_is_init"><span class="keyword">val</span> step_is_init</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
+<pre><span id="VALstep_is_subs"><span class="keyword">val</span> step_is_subs</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
+<pre><span id="VALstep_is_event"><span class="keyword">val</span> step_is_event</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
+<pre><span id="VALhas_creation_of_step"><span class="keyword">val</span> has_creation_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
+<pre><span id="VALtests_of_step"><span class="keyword">val</span> tests_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list</code></pre>
+<pre><span id="VALactions_of_step"><span class="keyword">val</span> actions_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEaction">Instantiation.action</a> list *<br>       (<a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a> *<br>        <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEbinding_state">Instantiation.binding_state</a>)<br>       list</code></pre>
+<pre><span id="VALsimulation_info_of_step"><span class="keyword">val</span> simulation_info_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> unit Mods.simulation_info option</code></pre>
+<pre><span id="VALcreation_of_actions"><span class="keyword">val</span> creation_of_actions</span> : <code class="type">('a -> 'b) -> 'a <a href="Instantiation.html#TYPEaction">Instantiation.action</a> list -> 'b list</code></pre>
+<pre><span id="VALcreation_of_step"><span class="keyword">val</span> creation_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> int list</code></pre>
+<pre><span id="VALprint_step"><span class="keyword">val</span> print_step</span> : <code class="type">?compact:bool -> ?env:<a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Trace.html#TYPEstep">step</a> -> unit</code></pre>
+<pre><span id="VALstore_event"><span class="keyword">val</span> store_event</span> : <code class="type"><a href="Trace.html#TYPEevent">event</a> -> <a href="Trace.html#TYPEt">t</a> -> <a href="Trace.html#TYPEt">t</a></code></pre>
+<pre><span id="VALstore_obs"><span class="keyword">val</span> store_obs</span> : <code class="type"><a href="Trace.html#TYPEobs">obs</a> -> <a href="Trace.html#TYPEt">t</a> -> <a href="Trace.html#TYPEt">t</a></code></pre></body></html>

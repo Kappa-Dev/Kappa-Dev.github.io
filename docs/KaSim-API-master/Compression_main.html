@@ -42,6 +42,7 @@
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
 <link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
 <link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
 <link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
@@ -80,15 +81,10 @@ Main entry to the story machinery<br>
 
 <pre><span id="TYPEsecret_log_info"><span class="keyword">type</span> <code class="type"></code>secret_log_info</span> </pre>
 
-
-<pre><span id="TYPEsecret_step"><span class="keyword">type</span> <code class="type"></code>secret_step</span> </pre>
-
 <br>
 <h6 id="6_Build">Build</h6><br>
 
-<pre><span id="VALinit_secret_log_info"><span class="keyword">val</span> init_secret_log_info</span> : <code class="type">unit -> <a href="Compression_main.html#TYPEsecret_log_info">secret_log_info</a></code></pre>
-<pre><span id="VALsecret_store_event"><span class="keyword">val</span> secret_store_event</span> : <code class="type"><a href="Compression_main.html#TYPEsecret_log_info">secret_log_info</a> -><br>       Causal.event_kind * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a> *<br>       unit Mods.simulation_info -><br>       <a href="Compression_main.html#TYPEsecret_step">secret_step</a> list -><br>       <a href="Compression_main.html#TYPEsecret_log_info">secret_log_info</a> * <a href="Compression_main.html#TYPEsecret_step">secret_step</a> list</code></pre>
-<pre><span id="VALsecret_store_obs"><span class="keyword">val</span> secret_store_obs</span> : <code class="type"><a href="Compression_main.html#TYPEsecret_log_info">secret_log_info</a> -><br>       Causal.event_kind * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list *<br>       unit Mods.simulation_info -><br>       <a href="Compression_main.html#TYPEsecret_step">secret_step</a> list -><br>       <a href="Compression_main.html#TYPEsecret_log_info">secret_log_info</a> * <a href="Compression_main.html#TYPEsecret_step">secret_step</a> list</code></pre><br>
+<pre><span id="VALinit_secret_log_info"><span class="keyword">val</span> init_secret_log_info</span> : <code class="type">unit -> <a href="Compression_main.html#TYPEsecret_log_info">secret_log_info</a></code></pre><br>
 <h6 id="6_Use">Use</h6><br>
 
-<pre><span id="VALcompress_and_print"><span class="keyword">val</span> compress_and_print</span> : <code class="type">called_from:Remanent_parameters_sig.called_from -><br>       ?js_interface:Cflow_js_interface.cflow_state Pervasives.ref -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Compression_main.html#TYPEsecret_log_info">secret_log_info</a> -> <a href="Compression_main.html#TYPEsecret_step">secret_step</a> list -> unit</code></pre></body></html>
+<pre><span id="VALcompress_and_print"><span class="keyword">val</span> compress_and_print</span> : <code class="type">called_from:Remanent_parameters_sig.called_from -><br>       dotFormat:bool -><br>       ?js_interface:Cflow_js_interface.cflow_state Pervasives.ref -><br>       none:bool -><br>       weak:bool -><br>       strong:bool -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -> <a href="Compression_main.html#TYPEsecret_log_info">secret_log_info</a> -> <a href="Trace.html#TYPEt">Trace.t</a> -> unit</code></pre></body></html>
