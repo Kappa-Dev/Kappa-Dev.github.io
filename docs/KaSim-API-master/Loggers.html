@@ -79,6 +79,13 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
+<code><span id="TYPEELTencoding.HTML_Graph"><span class="constructor">HTML_Graph</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
 <code><span id="TYPEELTencoding.HTML"><span class="constructor">HTML</span></span></code></td>
 
 </tr>
@@ -123,6 +130,7 @@
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
+<pre><span id="VALget_encoding_format"><span class="keyword">val</span> get_encoding_format</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> <a href="Loggers.html#TYPEencoding">encoding</a></code></pre>
 <pre><span id="VALfprintf"><span class="keyword">val</span> fprintf</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> ('a, Format.formatter, unit) Pervasives.format -> 'a</code></pre>
 <pre><span id="VALprint_newline"><span class="keyword">val</span> print_newline</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALprint_cell"><span class="keyword">val</span> print_cell</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> unit</code></pre>
@@ -140,4 +148,5 @@
 <pre><span id="VALdummy_html_logger"><span class="keyword">val</span> dummy_html_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALredirect"><span class="keyword">val</span> redirect</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> <a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALformatter_of_logger"><span class="keyword">val</span> formatter_of_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter option</code></pre>
-<pre><span id="VALflush_buffer"><span class="keyword">val</span> flush_buffer</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> unit</code></pre></body></html>
+<pre><span id="VALflush_buffer"><span class="keyword">val</span> flush_buffer</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> unit</code></pre>
+<pre><span id="VALint_of_string_id"><span class="keyword">val</span> int_of_string_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> int</code></pre></body></html>
