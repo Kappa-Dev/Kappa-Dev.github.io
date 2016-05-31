@@ -10,13 +10,13 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.css"></link>
-    <script src="contact.js?19960"></script>
-    <script src="Kappa.js?19960"></script>
-    <script src="common.js?19960"></script>
-    <script src="flux.js?19960"></script>
-    <script src="plot.js?19960"></script>
-    <script src="distances.js?19960"></script>
-    <script src="JsSim.js?19960"></script>
+    <script src="contact.js?1207"></script>
+    <script src="Kappa.js?1207"></script>
+    <script src="common.js?1207"></script>
+    <script src="flux.js?1207"></script>
+    <script src="plot.js?1207"></script>
+    <script src="distances.js?1207"></script>
+    <script src="JsSim.js?1207"></script>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -179,7 +179,13 @@ rect { stroke-width: 2; }
 }
 
 .plot-legend-swatch { stroke-width : 1; }
-.plot-tick-proof { }   </style>
+.plot-tick-proof { }
+.contact-tooltip { position: fixed;
+                   z-index: 10; padding: 2px;
+                   border-style: solid;
+                   border-width: 2px;
+                   border-radius : 4px;
+                   opacity : 0.8; }   </style>
    <body>
    <!-- nav -->
    <nav class="navbar navbar-default navbar-static-top">
