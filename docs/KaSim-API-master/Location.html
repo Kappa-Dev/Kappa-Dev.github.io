@@ -89,4 +89,50 @@
 <pre><span id="VALhas_dummy_annot"><span class="keyword">val</span> has_dummy_annot</span> : <code class="type">'a <a href="Location.html#TYPEannot">annot</a> -> bool</code></pre>
 <pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Location.html#TYPEt">t</a> -> string</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> <a href="Location.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALprint_annot"><span class="keyword">val</span> print_annot</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="Location.html#TYPEannot">annot</a> -> unit</code></pre></body></html>
+<pre><span id="VALprint_annot"><span class="keyword">val</span> print_annot</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="Location.html#TYPEannot">annot</a> -> unit</code></pre>
+<pre><code><span id="TYPEposition"><span class="keyword">type</span> <code class="type"></code>position</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTposition.chr">chr</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTposition.line">line</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPErange"><span class="keyword">type</span> <code class="type"></code>range</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrange.file">file</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrange.from_position">from_position</span>&nbsp;: <code class="type"><a href="Location.html#TYPEposition">position</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrange.to_position">to_position</span>&nbsp;: <code class="type"><a href="Location.html#TYPEposition">position</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALto_range"><span class="keyword">val</span> to_range</span> : <code class="type"><a href="Location.html#TYPEt">t</a> -> <a href="Location.html#TYPErange">range</a></code></pre></body></html>
