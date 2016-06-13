@@ -67,8 +67,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Export_to_KaSim</span>.contact_map&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Export_to_KaSim</span>.state<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.contact_map&nbsp;*&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Export_to_KaSim</span>.state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;pause:((unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -78,7 +77,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?rescale_init:float&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Export_to_KaSim</span>.contact_map&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.contact_map&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>c,&nbsp;<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int,&nbsp;<span class="constructor">LKappa</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_initial_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;bind:(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
