@@ -96,6 +96,7 @@ Returns (the current biological time, an array of the current
 values of observables)<br>
 </div>
 
+<pre><span id="VALdo_modification"><span class="keyword">val</span> do_modification</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       <a href="Primitives.html#TYPEmodification">Primitives.modification</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre>
 <pre><span id="VALactivity"><span class="keyword">val</span> activity</span> : <code class="type"><a href="State_interpreter.html#TYPEt">t</a> -> float</code></pre><div class="info ">
 Returns the current activity<br>
 </div>
@@ -108,8 +109,14 @@ One event loop<br>
 What to do after stopping simulation. Returns maybe a trace<br>
 </div>
 
+<pre><span id="VALfinalize"><span class="keyword">val</span> finalize</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       called_from:Remanent_parameters_sig.called_from -><br>       bool -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALloop"><span class="keyword">val</span> loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       dotCflows:bool -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
 <code class="code">loop message_formatter env domain counter graph</code>
  does a simulation in the command-line setting<br>
+</div>
+
+<pre><span id="VALinteractive_loop"><span class="keyword">val</span> interactive_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       Format.formatter -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">interactive_loop message_formatter env domain counter graph</code>
+ does a simulation in the command-line setting up to an interruption<br>
 </div>
 </body></html>

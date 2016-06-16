@@ -136,6 +136,8 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
+<tr><td><a href="Environment.html#VALalgs_finder">algs_finder</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
 <tr><td><a href="Environment.html#VALall_dependencies">all_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALappend">append</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
@@ -189,6 +191,8 @@ Starts creation
 <tr><td><a href="DynamicArray.DynArray.html#VALblit">blit</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALblit">blit</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
+<td></td></tr>
+<tr><td><a href="LKappa.html#VALbool_expr_of_ast">bool_expr_of_ast</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALbottom">bottom</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
@@ -283,6 +287,10 @@ Retuns all the extension of the given injections so that the second edge
 </div>
 </td></tr>
 <tr><td><a href="Eval.html#VALcompile">compile</a> [<a href="Eval.html">Eval</a>]</td>
+<td></td></tr>
+<tr><td><a href="Eval.html#VALcompile_bool">compile_bool</a> [<a href="Eval.html">Eval</a>]</td>
+<td></td></tr>
+<tr><td><a href="Eval.html#VALcompile_modification_no_update">compile_modification_no_update</a> [<a href="Eval.html">Eval</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALcomplete_progress_bar">complete_progress_bar</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
@@ -407,6 +415,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="SetMap.Set.html#VALdisjoint_union">disjoint_union</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALdisjoint_union_with_logs">disjoint_union_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="State_interpreter.html#VALdo_modification">do_modification</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALdummy">dummy</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
@@ -579,6 +589,8 @@ fill_siphon adds spurious init event, to break causal dependences;
 <tr><td><a href="SetMap.Map.html#VALfilter_one">filter_one</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALfilter_with_logs">filter_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="State_interpreter.html#VALfinalize">finalize</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.PreEnv.html#VALfinalize">finalize</a> [<a href="Connected_component.PreEnv.html">Connected_component.PreEnv</a>]</td>
 <td></td></tr>
@@ -868,6 +880,12 @@ check wether there is an observable in a trace
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALinter_with_logs">inter_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="State_interpreter.html#VALinteractive_loop">interactive_loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
+<td><div class="info">
+<code class="code">interactive_loop message_formatter env domain counter graph</code>
+ does a simulation in the command-line setting up to an interruption
+</div>
+</td></tr>
 <tr><td><a href="Signature.html#VALinternal_state_of_num">internal_state_of_num</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALinternal_states_number">internal_states_number</a> [<a href="Signature.html">Signature</a>]</td>
@@ -1069,6 +1087,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <tr><td><a href="SetMap.Set.html#VALminus_with_logs">minus_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALmk_dir_r">mk_dir_r</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="LKappa.html#VALmodif_expr_of_ast">modif_expr_of_ast</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALmodification">modification</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
@@ -1313,6 +1333,8 @@ values of observables)
 <tr><td><a href="Nbr.html#VALof_bin_alg_op">of_bin_alg_op</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALof_compare_op">of_compare_op</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Connected_component.PreEnv.html#VALof_env">of_env</a> [<a href="Connected_component.PreEnv.html">Connected_component.PreEnv</a>]</td>
 <td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALof_list">of_list</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
@@ -1818,6 +1840,8 @@ compute the strong compression of a given trace,
 <tr><td><a href="Nbr.html#VALto_string">to_string</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp_svg.html#VALto_string">to_string</a> [<a href="Pp_svg.html">Pp_svg</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALtokens_finder">tokens_finder</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALtrace_of_pretrace">trace_of_pretrace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
