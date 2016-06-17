@@ -3566,7 +3566,7 @@
              caml_new_string_i_(str_and_rZ_),
              [17,[0,caml_new_string_i_(str_a_),1,0],0]]]]]]]],
      partial_afa_=[0,caml_new_string_i_(str_a_),1,0],
-     version_string_jO_=caml_new_string_i_("25c5bc6"),
+     version_string_jO_=caml_new_string_i_("9334ca9"),
      a_o$_=caml_new_string_i_(str_output_hQ_),
      x_pa_=caml_new_string_i_(str_output_hQ_),
      x_pb_=caml_new_string_i_(str_output_hQ_),
@@ -59230,27 +59230,29 @@
                          { /*<<api/api.ml 361 12>>*/ var state_d_=match_j_[1];
                            /*<<api/api.ml 362 52>>*/ if
                            (1- /*<<api/api.ml 362 21>>*/ _gP_(state_d_[1]))
-                           { /*<<api/api.ml 363 16>>*/ var _l_=self_2_e_[_c_+1][2];
+                           { /*<<api/api.ml 363 16>>*/ var _n_=self_2_e_[_c_+1][2];
                              /*<<api/api.ml 364 76>>*/ self_2_e_[_c_+1]=
                             [0,
                               /*<<api/api.ml 364 42>>*/ caml_call_gen2_m_
                               (_o_[2][7],token_b_,self_2_e_[_c_+1][1]),
-                             _l_]}
+                             _n_]}
                            /*<<api/api.ml 366 12>>*/ if(state_d_[9][1])
                            var _k_=[0,num_847852583_dw_,state_d_[9][1]];
                           else
                            var
-                             /*<<api/api.ml 393 23>>*/ _n_=
+                             /*<<api/api.ml 393 23>>*/ _p_=
                               /*<<api/api.ml 393 23>>*/ _gP_(state_d_[1]),
-                             /*<<api/api.ml 393 52>>*/ _p_=state_d_[8][1],
-                             /*<<api/api.ml 393 52>>*/ _q_=state_d_[7][1],
-                             /*<<api/api.ml 393 52>>*/ _r_=state_d_[6][1],
-                             /*<<api/api.ml 385 56>>*/ _s_=
+                             /*<<api/api.ml 393 52>>*/ _q_=state_d_[8][1],
+                             /*<<api/api.ml 393 52>>*/ _r_=state_d_[7][1],
+                             /*<<api/api.ml 393 52>>*/ _s_=state_d_[6][1],
+                             /*<<api/api.ml 385 56>>*/ _t_=
                              [0, /*<<api/api.ml 385 24>>*/ _co_(state_d_[3]),0],
-                             /*<<api/api.ml 383 66>>*/ _f_=state_d_[2],
+                             /*<<api/api.ml 385 56>>*/ _l_=state_d_[2],
+                             /*<<simulation/counter.ml 141 2>>*/ _u_=
+                             0<=_l_[3]?[0,_l_[3]]:0,
+                             /*<<api/api.ml 383 59>>*/ _f_=state_d_[2],
                              /*<<simulation/counter.ml 126 2>>*/ _h_=_f_[11],
-                             /*<<api/api.ml 383 66>>*/ _t_=[0,state_d_[2][3]],
-                             /*<<simulation/counter.ml 126 2>>*/ _u_=
+                             /*<<simulation/counter.ml 126 2>>*/ _v_=
                              _h_
                               ?[0,
                                  /*<<simulation/counter.ml 128 15>>*/ caml_div_dC_
@@ -59258,8 +59260,8 @@
                               :0,
                              /*<<api/api.ml 379 50>>*/ _g_=state_d_[2],
                              /*<<simulation/counter.ml 133 2>>*/ _i_=_g_[10],
-                             /*<<api/api.ml 379 23>>*/ _v_=state_d_[2][2],
-                             /*<<simulation/counter.ml 133 2>>*/ _w_=
+                             /*<<api/api.ml 379 23>>*/ _w_=state_d_[2][2],
+                             /*<<simulation/counter.ml 133 2>>*/ _x_=
                              _i_?[0,num_100_a$_*(_g_[1]-_g_[8])/(_i_[1]-_g_[8])|0]:0,
                             _k_=
                              [0,
@@ -59268,6 +59270,7 @@
                                [0,state_d_[4][1]],
                                [0,state_d_[5][1]],
                                state_d_[2][1],
+                               _x_,
                                _w_,
                                _v_,
                                _u_,
@@ -59275,8 +59278,7 @@
                                _s_,
                                _r_,
                                _q_,
-                               _p_,
-                               _n_]];
+                               _p_]];
                           return return_aR_(_k_)}
                          /*<<api/api.ml 359 11>>*/ return  /*<<api/api.ml 359 11>>*/ _eB_
                                 (msg_token_not_found_rE_) /*<<api/api.ml 397 15>>*/ },
@@ -59298,32 +59300,32 @@
                  /*<<api/api.ml 205 42>>*/ _q_=parameter_b_[2],
                  /*<<api/api.ml 205 42>>*/ _Q_=parameter_b_[4],
                  /*<<api/api.ml 205 42>>*/ _R_=parameter_b_[3],
-                 /*<<simulation/counter.ml 202 2>>*/ init_t_A_=
+                 /*<<simulation/counter.ml 207 2>>*/ init_t_A_=
                  opt_rI_?opt_rI_[1]:0,
-                 /*<<simulation/counter.ml 202 2>>*/ init_e_B_=_rH_?_rH_[1]:0,
-                 /*<<simulation/counter.ml 203 25>>*/ mx_e_G_=
-                  /*<<simulation/counter.ml 203 25>>*/ _bD_
+                 /*<<simulation/counter.ml 207 2>>*/ init_e_B_=_rH_?_rH_[1]:0,
+                 /*<<simulation/counter.ml 208 25>>*/ mx_e_G_=
+                  /*<<simulation/counter.ml 208 25>>*/ _bD_
                   (function(x_a_)
-                    { /*<<simulation/counter.ml 203 53>>*/ return x_a_-
+                    { /*<<simulation/counter.ml 208 53>>*/ return x_a_-
                             init_e_B_|
-                            0 /*<<simulation/counter.ml 203 63>>*/ },
+                            0 /*<<simulation/counter.ml 208 63>>*/ },
                    _Q_),
-                 /*<<simulation/counter.ml 148 2>>*/ dE_U_=
+                 /*<<simulation/counter.ml 153 2>>*/ dE_U_=
                  0<_q_
                   ?mx_e_G_
                     ?[0,
-                       /*<<simulation/counter.ml 152 12>>*/ max_aJ_
-                       ( /*<<simulation/counter.ml 152 7>>*/ caml_div_dC_
+                       /*<<simulation/counter.ml 157 12>>*/ max_aJ_
+                       ( /*<<simulation/counter.ml 157 7>>*/ caml_div_dC_
                          (mx_e_G_[1],_q_),
                         1)]
                     :0
                   :0,
-                 /*<<simulation/counter.ml 205 25>>*/ mx_t_K_=
-                  /*<<simulation/counter.ml 205 25>>*/ _bD_
+                 /*<<simulation/counter.ml 210 25>>*/ mx_t_K_=
+                  /*<<simulation/counter.ml 210 25>>*/ _bD_
                   (function(x_a_)
-                    { /*<<simulation/counter.ml 205 53>>*/ return x_a_-init_t_A_ /*<<simulation/counter.ml 205 64>>*/ },
+                    { /*<<simulation/counter.ml 210 53>>*/ return x_a_-init_t_A_ /*<<simulation/counter.ml 210 64>>*/ },
                    _R_),
-                 /*<<simulation/counter.ml 142 2>>*/ dT_V_=
+                 /*<<simulation/counter.ml 147 2>>*/ dT_V_=
                  0<_q_?mx_t_K_?[0,mx_t_K_[1]/_q_]:0:0,
                  /*<<api/api.ml 198 41>>*/ simulation_r_=
                  [0,
@@ -59335,7 +59337,7 @@
                    0,
                    0,
                    0,
-                    /*<<simulation/counter.ml 210 15>>*/ caml_make_vect_y_(6,0),
+                    /*<<simulation/counter.ml 215 15>>*/ caml_make_vect_y_(6,0),
                    init_t_A_,
                    init_e_B_,
                    _R_,
@@ -59361,14 +59363,14 @@
                   /*<<api/api.ml 219 10>>*/ formatter_of_buffer_dL_
                   (simulation_r_[3]),
                  /*<<api/api.ml 220 8>>*/ _a_=simulation_r_[2];
-                /*<<simulation/counter.ml 223 2>>*/ _a_[1]=_a_[8];
-                /*<<simulation/counter.ml 224 2>>*/ _a_[2]=_a_[9];
-                /*<<simulation/counter.ml 225 2>>*/ _a_[3]=-1;
-                /*<<simulation/counter.ml 226 2>>*/ _a_[4]=0;
-                /*<<simulation/counter.ml 227 2>>*/ _a_[5]=0;
-                /*<<simulation/counter.ml 228 2>>*/ _a_[6]=0;
-                /*<<simulation/counter.ml 229 47>>*/ _a_[7]=
-                /*<<simulation/counter.ml 229 23>>*/ caml_make_vect_y_(6,0);
+                /*<<simulation/counter.ml 228 2>>*/ _a_[1]=_a_[8];
+                /*<<simulation/counter.ml 229 2>>*/ _a_[2]=_a_[9];
+                /*<<simulation/counter.ml 230 2>>*/ _a_[3]=-1;
+                /*<<simulation/counter.ml 231 2>>*/ _a_[4]=0;
+                /*<<simulation/counter.ml 232 2>>*/ _a_[5]=0;
+                /*<<simulation/counter.ml 233 2>>*/ _a_[6]=0;
+                /*<<simulation/counter.ml 234 47>>*/ _a_[7]=
+                /*<<simulation/counter.ml 234 23>>*/ caml_make_vect_y_(6,0);
                 /*<<api/api.ml 221 8>>*/ var
                 outputs___=
                  function(sigs_e_,param_b_)
@@ -60854,43 +60856,43 @@
                                                    /*<<simulation/state_interpreter.ml 340 11>>*/ observables_values_bk_=
                                                     /*<<simulation/state_interpreter.ml 340 11>>*/ _rx_
                                                     (env_d_,_c_,graph_az_,state_ax_),
-                                                   /*<<simulation/counter.ml 232 2>>*/ _ah_=_c_[14];
-                                                  /*<<simulation/counter.ml 232 2>>*/ if(_ah_)
+                                                   /*<<simulation/counter.ml 237 2>>*/ _ah_=_c_[14];
+                                                  /*<<simulation/counter.ml 237 2>>*/ if(_ah_)
                                                   var
                                                    next_B_=
-                                                     /*<<simulation/counter.ml 236 27>>*/ min_bN_
+                                                     /*<<simulation/counter.ml 241 27>>*/ min_bN_
                                                      (_c_[12],(_c_[1]-_c_[8])/_ah_[1]|0);
                                                  else
                                                   var
-                                                    /*<<simulation/counter.ml 238 5>>*/ _ai_=_c_[13],
-                                                    /*<<simulation/counter.ml 238 5>>*/ next_B_=
+                                                    /*<<simulation/counter.ml 243 5>>*/ _ai_=_c_[13],
+                                                    /*<<simulation/counter.ml 243 5>>*/ next_B_=
                                                     _ai_
-                                                     ? /*<<simulation/counter.ml 241 30>>*/ caml_div_dC_
+                                                     ? /*<<simulation/counter.ml 246 30>>*/ caml_div_dC_
                                                        (_c_[2]-_c_[9]|0,_ai_[1])
                                                      :0;
-                                                  /*<<simulation/counter.ml 245 2>>*/ var last_aG_=_c_[4];
-                                                  /*<<simulation/counter.ml 246 2>>*/ _c_[4]=next_B_;
+                                                  /*<<simulation/counter.ml 250 2>>*/ var last_aG_=_c_[4];
+                                                  /*<<simulation/counter.ml 251 2>>*/ _c_[4]=next_B_;
                                                  var
-                                                   /*<<simulation/counter.ml 247 2>>*/ n_D_=next_B_-last_aG_|0,
-                                                   /*<<simulation/counter.ml 248 2>>*/ _aj_=_c_[14];
-                                                  /*<<simulation/counter.ml 248 2>>*/ if(_aj_)
+                                                   /*<<simulation/counter.ml 252 2>>*/ n_D_=next_B_-last_aG_|0,
+                                                   /*<<simulation/counter.ml 253 2>>*/ _aj_=_c_[14];
+                                                  /*<<simulation/counter.ml 253 2>>*/ if(_aj_)
                                                   var
-                                                    /*<<simulation/counter.ml 250 5>>*/ dT_ak_=_aj_[1],
-                                                    /*<<simulation/counter.ml 250 5>>*/ _aH_=
+                                                    /*<<simulation/counter.ml 255 5>>*/ dT_ak_=_aj_[1],
+                                                    /*<<simulation/counter.ml 255 5>>*/ _aH_=
                                                     [0,next_B_*dT_ak_,0],
                                                    match_E_=
                                                     [0,
-                                                      /*<<simulation/counter.ml 251 7>>*/ _jH_
+                                                      /*<<simulation/counter.ml 256 7>>*/ _jH_
                                                        (function(param_a_,_b_)
                                                          {var
-                                                            /*<<simulation/counter.ml 252 3>>*/ acc_f_=param_a_[2],
-                                                            /*<<simulation/counter.ml 252 3>>*/ time_d_=param_a_[1],
+                                                            /*<<simulation/counter.ml 257 3>>*/ acc_f_=param_a_[2],
+                                                            /*<<simulation/counter.ml 257 3>>*/ time_d_=param_a_[1],
                                                             /*<<simulation/counter.ml 91 2>>*/ _e_=_c_[10],
                                                             /*<<simulation/counter.ml 91 2>>*/ _g_=
                                                             _e_?time_d_<=_e_[1]?1:0:1,
-                                                            /*<<simulation/counter.ml 254 37>>*/ _h_=
+                                                            /*<<simulation/counter.ml 259 37>>*/ _h_=
                                                             _g_?[0,time_d_,acc_f_]:acc_f_;
-                                                          return [0,time_d_-dT_ak_,_h_] /*<<simulation/counter.ml 254 62>>*/ },
+                                                          return [0,time_d_-dT_ak_,_h_] /*<<simulation/counter.ml 259 62>>*/ },
                                                         _aH_,
                                                         n_D_)
                                                       [2],
@@ -60900,25 +60902,25 @@
                                                    if(1<n_D_)
                                                     var
                                                      match_E_=
-                                                       /*<<simulation/counter.ml 261 74>>*/ invalid_arg_L_
-                                                       ( /*<<simulation/counter.ml 261 12>>*/ _j_
+                                                       /*<<simulation/counter.ml 266 74>>*/ invalid_arg_L_
+                                                       ( /*<<simulation/counter.ml 266 12>>*/ _j_
                                                          (_XQ_,
-                                                           /*<<simulation/counter.ml 261 58>>*/ caml_new_string_i_
+                                                           /*<<simulation/counter.ml 266 58>>*/ caml_new_string_i_
                                                            (str_s_+n_D_)));
                                                    else
                                                     var
-                                                      /*<<simulation/counter.ml 263 10>>*/ _aI_=
+                                                      /*<<simulation/counter.ml 268 10>>*/ _aI_=
                                                       0===n_D_?0:[0,_c_[1],0],
                                                      match_E_=[0,_aI_,_c_];
                                                   else
                                                    var match_E_=[0,0,_c_];
-                                                  /*<<simulation/counter.ml 268 26>>*/ var
+                                                  /*<<simulation/counter.ml 273 26>>*/ var
                                                   points_aK_=
                                                    match_E_[1];
-                                                  /*<<simulation/counter.ml 269 2>>*/  /*<<simulation/counter.ml 269 2>>*/ _aA_
+                                                  /*<<simulation/counter.ml 274 2>>*/  /*<<simulation/counter.ml 274 2>>*/ _aA_
                                                   (function(t_a_)
-                                                    { /*<<simulation/counter.ml 269 22>>*/ return  /*<<simulation/counter.ml 269 22>>*/ outputs_y_
-                                                             ([1,t_a_,observables_values_bk_]) /*<<simulation/counter.ml 269 64>>*/ },
+                                                    { /*<<simulation/counter.ml 274 22>>*/ return  /*<<simulation/counter.ml 274 22>>*/ outputs_y_
+                                                             ([1,t_a_,observables_values_bk_]) /*<<simulation/counter.ml 274 64>>*/ },
                                                    points_aK_);
                                                   /*<<simulation/state_interpreter.ml 341 2>>*/ if(stop_bj_)
                                                    /*<<simulation/state_interpreter.ml 342 13>>*/ _hE_
