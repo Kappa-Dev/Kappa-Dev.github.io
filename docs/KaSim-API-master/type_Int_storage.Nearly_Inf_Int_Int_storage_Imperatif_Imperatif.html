@@ -66,6 +66,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
