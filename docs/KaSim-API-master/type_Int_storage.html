@@ -90,6 +90,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.key,&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t,&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.dimension,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t)<br>
@@ -142,6 +144,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;<span class="constructor">Extension</span>.key&nbsp;*&nbsp;<span class="constructor">Underlying</span>.key<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;<span class="constructor">Extension</span>.dimension&nbsp;*&nbsp;<span class="constructor">Underlying</span>.dimension<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -164,6 +167,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;<span class="constructor">Basic</span>.key<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;<span class="constructor">Basic</span>.dimension<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -185,6 +189,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -207,6 +212,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -229,6 +235,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -250,6 +257,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -271,6 +279,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -292,6 +301,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -313,6 +323,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
@@ -334,6 +345,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;int&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;dimension&nbsp;=&nbsp;int&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:&nbsp;(dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create_biggest_key&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
