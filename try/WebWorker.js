@@ -2671,7 +2671,7 @@
             [11,caml_new_string("and"),[17,[0,caml_new_string("@ "),1,0],0]]]]]]]],
      partial$4=[0,caml_new_string("@ "),1,0],
      empty_compil=[0,0,0,0,0,0,0,0,0,0],
-     version_string=caml_new_string("b743375"),
+     version_string=caml_new_string("3547cde"),
      a=caml_new_string("output"),
      x=caml_new_string("output"),
      x$0=caml_new_string("output"),
@@ -24689,26 +24689,26 @@
            /*<<term/raw_mixture.ml 129 2>>*/ return out /*<<term/raw_mixture.ml 129 5>>*/ },
        _sn_=
         function(opt,message)
-         { /*<<api/api_data.ml 443 2>>*/ if(opt)
-            /*<<api/api_data.ml 441 36>>*/ var
-             /*<<api/api_data.ml 441 36>>*/ sth=opt[1],
+         { /*<<api/api_data.ml 446 2>>*/ if(opt)
+            /*<<api/api_data.ml 444 36>>*/ var
+             /*<<api/api_data.ml 444 36>>*/ sth=opt[1],
             severity=sth;
           else
            var severity=106380200;
-           /*<<api/api_data.ml 443 2>>*/ return [0,[0,severity,message,0],0] /*<<api/api_data.ml 445 30>>*/ },
+           /*<<api/api_data.ml 446 2>>*/ return [0,[0,severity,message,0],0] /*<<api/api_data.ml 448 30>>*/ },
        _so_=
         function(opt,param)
          {var location=param[2],message=param[1];
-           /*<<api/api_data.ml 450 2>>*/ if(opt)
-            /*<<api/api_data.ml 448 36>>*/ var
-             /*<<api/api_data.ml 448 36>>*/ sth=opt[1],
+           /*<<api/api_data.ml 453 2>>*/ if(opt)
+            /*<<api/api_data.ml 451 36>>*/ var
+             /*<<api/api_data.ml 451 36>>*/ sth=opt[1],
             severity=sth;
           else
            var severity=106380200;
            /*<<dataStructures/location.ml 54 2>>*/ var
             /*<<dataStructures/location.ml 54 2>>*/ end_location=location[2],
             /*<<dataStructures/location.ml 54 2>>*/ start_location=location[1];
-           /*<<api/api_data.ml 452 56>>*/ return [0,
+           /*<<api/api_data.ml 455 56>>*/ return [0,
                   [0,
                    severity,
                    message,
@@ -24720,8 +24720,8 @@
                   0]},
        _sp_=
         function(msg)
-         { /*<<api/api_data.ml 459 35>>*/ return  /*<<api/api_data.ml 459 35>>*/ return$0
-                  ([0,847852583, /*<<api/api_data.ml 459 11>>*/ _sn_(0,msg)]) /*<<api/api_data.ml 459 36>>*/ },
+         { /*<<api/api_data.ml 462 35>>*/ return  /*<<api/api_data.ml 462 35>>*/ return$0
+                  ([0,847852583, /*<<api/api_data.ml 462 11>>*/ _sn_(0,msg)]) /*<<api/api_data.ml 462 36>>*/ },
        write_info=
         function(ob,x)
          { /*<<generated/api_types_j.ml 12 4>>*/  /*<<generated/api_types_j.ml 12 4>>*/ add
