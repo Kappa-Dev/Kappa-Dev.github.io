@@ -35,6 +35,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
@@ -62,8 +63,12 @@
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
 <link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
-<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Signature</title>
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Signature</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="Agent_place.html" title="Agent_place">Previous</a>
@@ -97,7 +102,7 @@ Store of all the agents<br>
 </div>
 
 
-<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">Ast.agent list -> <a href="Signature.html#TYPEs">s</a></code></pre>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type"><a href="Ast.html#TYPEagent">Ast.agent</a> list -> <a href="Signature.html#TYPEs">s</a></code></pre>
 <pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> <a href="Signature.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">get sigs agent_id</code><br>

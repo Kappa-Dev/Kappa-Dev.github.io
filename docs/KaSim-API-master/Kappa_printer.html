@@ -5,7 +5,7 @@
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Environment.html">
-<link rel="next" href="LKappa.html">
+<link rel="next" href="Ast.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -35,6 +35,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
@@ -62,13 +63,17 @@
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
 <link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
-<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Kappa_printer</title>
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Kappa_printer</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="Environment.html" title="Environment">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="LKappa.html" title="LKappa">Next</a>
+&nbsp;<a class="post" href="Ast.html" title="Ast">Next</a>
 </div>
 <h1>Module <a href="type_Kappa_printer.html">Kappa_printer</a></h1>
 
@@ -78,7 +83,7 @@ Printers (user readable) of Kappa compiled units<br>
 <hr width="100%">
 
 <pre><span id="VALalg_expr"><span class="keyword">val</span> alg_expr</span> : <code class="type">?env:<a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> unit</code></pre>
-<pre><span id="VALprint_expr_val"><span class="keyword">val</span> print_expr_val</span> : <code class="type">('a -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -> Format.formatter -> 'a Ast.print_expr list -> unit</code></pre>
+<pre><span id="VALprint_expr_val"><span class="keyword">val</span> print_expr_val</span> : <code class="type">('a -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -> Format.formatter -> 'a <a href="Ast.html#TYPEprint_expr">Ast.print_expr</a> list -> unit</code></pre>
 <pre><span id="VALelementary_rule"><span class="keyword">val</span> elementary_rule</span> : <code class="type">?env:<a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> unit</code></pre>
 <pre><span id="VALmodification"><span class="keyword">val</span> modification</span> : <code class="type">?env:<a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Primitives.html#TYPEmodification">Primitives.modification</a> -> unit</code></pre>
 <pre><span id="VALperturbation"><span class="keyword">val</span> perturbation</span> : <code class="type">?env:<a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> -> unit</code></pre>

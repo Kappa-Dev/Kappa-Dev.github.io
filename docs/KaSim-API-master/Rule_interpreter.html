@@ -35,6 +35,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
@@ -62,8 +63,12 @@
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
 <link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
-<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><link title="Initialisation" rel="Section" href="#6_Initialisation">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><link title="Initialisation" rel="Section" href="#6_Initialisation">
 <link title="algebraic expression computation" rel="Section" href="#6_algebraicexpressioncomputation">
 <link title="Core" rel="Section" href="#6_Core">
 <link title="Stories" rel="Section" href="#6_Stories">
@@ -122,7 +127,7 @@ Abstract graph<br>
 wired because perturbations can redefined alg_expr.<br>
 
 <pre><span id="VALvalue_alg"><span class="keyword">val</span> value_alg</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a></code></pre>
-<pre><span id="VALvalue_bool"><span class="keyword">val</span> value_bool</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr -> bool</code></pre><br>
+<pre><span id="VALvalue_bool"><span class="keyword">val</span> value_bool</span> : <code class="type">get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> -> bool</code></pre><br>
 <h6 id="6_Core">Core</h6><br>
 
 <pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">?rule_id:int -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       Connected_component.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">

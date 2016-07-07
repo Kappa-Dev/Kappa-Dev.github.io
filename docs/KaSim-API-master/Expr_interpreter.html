@@ -35,6 +35,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
@@ -62,8 +63,12 @@
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
 <link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
-<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Expr_interpreter</title>
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Expr_interpreter</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="Trace.html" title="Trace">Previous</a>
@@ -84,4 +89,4 @@ As soon as you've got an graph available, I'll probably prefer use
 <code class="code">value_alg c ?t get_alg get_mix get_tok expr_alg</code> with <code class="code">get_mix [interp1;...;interpn]</code><br>
 </div>
 
-<pre><span id="VALvalue_bool"><span class="keyword">val</span> value_bool</span> : <code class="type"><a href="Counter.html#TYPEt">Counter.t</a> -><br>       ?time:float -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       get_mix:(<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -><br>       get_tok:(int -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> Ast.bool_expr -> bool</code></pre></body></html>
+<pre><span id="VALvalue_bool"><span class="keyword">val</span> value_bool</span> : <code class="type"><a href="Counter.html#TYPEt">Counter.t</a> -><br>       ?time:float -><br>       get_alg:(int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a>) -><br>       get_mix:(<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -><br>       get_tok:(int -> <a href="Nbr.html#TYPEt">Nbr.t</a>) -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> -> bool</code></pre></body></html>

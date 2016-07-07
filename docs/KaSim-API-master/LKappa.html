@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Kappa_printer.html">
+<link rel="previous" href="Ast.html">
 <link rel="next" href="Snip.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
@@ -35,6 +35,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
@@ -62,11 +63,15 @@
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
 <link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
-<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : LKappa</title>
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : LKappa</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Kappa_printer.html" title="Kappa_printer">Previous</a>
+<div class="navbar"><a class="pre" href="Ast.html" title="Ast">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
 &nbsp;<a class="post" href="Snip.html" title="Snip">Next</a>
 </div>
@@ -167,7 +172,7 @@ Intermediate representation of model on wich sanity has been checked<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule_agent.ra_ports">ra_ports</span>&nbsp;: <code class="type">((int, int * int) Ast.link <a href="Location.html#TYPEannot">Location.annot</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array</code>;</code></td>
+<code><span id="TYPEELTrule_agent.ra_ports">ra_ports</span>&nbsp;: <code class="type">((int, int * int) <a href="Ast.html#TYPElink">Ast.link</a> <a href="Location.html#TYPEannot">Location.annot</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array</code>;</code></td>
 
 </tr>
 <tr>
@@ -181,7 +186,7 @@ Intermediate representation of model on wich sanity has been checked<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule_agent.ra_syntax">ra_syntax</span>&nbsp;: <code class="type">(((int, int * int) Ast.link <a href="Location.html#TYPEannot">Location.annot</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array *<br>        <a href="LKappa.html#TYPErule_internal">rule_internal</a> array)<br>       option</code>;</code></td>
+<code><span id="TYPEELTrule_agent.ra_syntax">ra_syntax</span>&nbsp;: <code class="type">(((int, int * int) <a href="Ast.html#TYPElink">Ast.link</a> <a href="Location.html#TYPEannot">Location.annot</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array *<br>        <a href="LKappa.html#TYPErule_internal">rule_internal</a> array)<br>       option</code>;</code></td>
 
 </tr></table>
 }
@@ -227,28 +232,28 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_rm_tokens">r_rm_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
+<code><span id="TYPEELTrule.r_rm_tokens">r_rm_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_add_tokens">r_add_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
+<code><span id="TYPEELTrule.r_add_tokens">r_add_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_rate">r_rate</span>&nbsp;: <code class="type">(<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
+<code><span id="TYPEELTrule.r_rate">r_rate</span>&nbsp;: <code class="type">(<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_un_rate">r_un_rate</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) Ast.ast_alg_expr <a href="Location.html#TYPEannot">Location.annot</a> *<br>        int <a href="Location.html#TYPEannot">Location.annot</a> option)<br>       option</code>;</code></td>
+<code><span id="TYPEELTrule.r_un_rate">r_un_rate</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        int <a href="Location.html#TYPEannot">Location.annot</a> option)<br>       option</code>;</code></td>
 
 </tr></table>
 }
@@ -256,9 +261,9 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 
 
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">ltypes:bool -><br>       rates:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
-<pre><span id="VALbool_expr_of_ast"><span class="keyword">val</span> bool_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (((String.t * <a href="Location.html#TYPEt">Location.t</a>) * Ast.port list) list, Mods.StringMap.elt)<br>       Ast.ast_alg_expr Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a> -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) Ast.ast_alg_expr Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
-<pre><span id="VALmodif_expr_of_ast"><span class="keyword">val</span> modif_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (((String.t * <a href="Location.html#TYPEt">Location.t</a>) * Ast.port list) list, Mods.StringMap.elt)<br>       Ast.modif_expr -><br>       int list -> (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) Ast.modif_expr * int list</code></pre>
-<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       (Ast.agent, Ast.mixture, string, Ast.rule) Ast.compil -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * int list *<br>       (Ast.agent, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>) Ast.compil</code></pre><div class="info ">
+<pre><span id="VALbool_expr_of_ast"><span class="keyword">val</span> bool_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (((String.t * <a href="Location.html#TYPEt">Location.t</a>) * <a href="Ast.html#TYPEport">Ast.port</a> list) list, Mods.StringMap.elt)<br>       <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALmodif_expr_of_ast"><span class="keyword">val</span> modif_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (((String.t * <a href="Location.html#TYPEt">Location.t</a>) * <a href="Ast.html#TYPEport">Ast.port</a> list) list, Mods.StringMap.elt)<br>       <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> -><br>       int list -> (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> * int list</code></pre>
+<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       (<a href="Ast.html#TYPEagent">Ast.agent</a>, <a href="Ast.html#TYPEmixture">Ast.mixture</a>, string, <a href="Ast.html#TYPErule">Ast.rule</a>) <a href="Ast.html#TYPEcompil">Ast.compil</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * int list *<br>       (<a href="Ast.html#TYPEagent">Ast.agent</a>, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">Ast.compil</a></code></pre><div class="info ">
 <code class="code">compil_of_ast variable_overwrite ast</code><br>
 <b>Returns</b> the signature of agent, the signature of tokens and an
 Ast.compil where identifiers are integers and not string, syntactic

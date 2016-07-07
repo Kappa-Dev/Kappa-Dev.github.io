@@ -1,0 +1,642 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Kappa_printer.html">
+<link rel="next" href="LKappa.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Pp" rel="Chapter" href="Pp.html">
+<link title="Pp_svg" rel="Chapter" href="Pp_svg.html">
+<link title="Pp_html" rel="Chapter" href="Pp_html.html">
+<link title="GenArray" rel="Chapter" href="GenArray.html">
+<link title="LargeArray" rel="Chapter" href="LargeArray.html">
+<link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Buffers" rel="Chapter" href="Buffers.html">
+<link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
+<link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
+<link title="Loggers" rel="Chapter" href="Loggers.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html">
+<link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
+<link title="Analyzer" rel="Chapter" href="Analyzer.html">
+<link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
+<link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Communication" rel="Chapter" href="Communication.html">
+<link title="Composite_domain" rel="Chapter" href="Composite_domain.html">
+<link title="Product" rel="Chapter" href="Product.html">
+<link title="Usual_domains" rel="Chapter" href="Usual_domains.html">
+<link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
+<link title="Views_domain" rel="Chapter" href="Views_domain.html">
+<link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
+<link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
+<link title="Int_storage" rel="Chapter" href="Int_storage.html">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><link title="Printers" rel="Section" href="#6_Printers">
+<title>KaSim API : Ast</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Kappa_printer.html" title="Kappa_printer">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="LKappa.html" title="LKappa">Next</a>
+</div>
+<h1>Module <a href="type_Ast.html">Ast</a></h1>
+
+<pre><span class="keyword">module</span> Ast: <code class="code"><span class="keyword">sig</span></code> <a href="Ast.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Kappa AST just after parsing<br>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPElink"><span class="keyword">type</span> <code class="type">('a, 'annot)</code> link</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTlink.LNK_VALUE"><span class="constructor">LNK_VALUE</span></span> <span class="keyword">of</span> <code class="type">int * 'annot</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTlink.FREE"><span class="constructor">FREE</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTlink.LNK_ANY"><span class="constructor">LNK_ANY</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTlink.LNK_SOME"><span class="constructor">LNK_SOME</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTlink.LNK_TYPE"><span class="constructor">LNK_TYPE</span></span> <span class="keyword">of</span> <code class="type">'a * 'a</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+port * agent_type<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+
+
+<pre><span id="TYPEinternal"><span class="keyword">type</span> <code class="type"></code>internal</span> = <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> list</code> </pre>
+
+
+<pre><code><span id="TYPEport"><span class="keyword">type</span> <code class="type"></code>port</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTport.port_nme">port_nme</span>&nbsp;: <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTport.port_int">port_int</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEinternal">internal</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTport.port_lnk">port_lnk</span>&nbsp;: <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a>, unit) <a href="Ast.html#TYPElink">link</a> <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="TYPEagent"><span class="keyword">type</span> <code class="type"></code>agent</span> = <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Ast.html#TYPEport">port</a> list</code> </pre>
+
+
+<pre><span id="TYPEmixture"><span class="keyword">type</span> <code class="type"></code>mixture</span> = <code class="type"><a href="Ast.html#TYPEagent">agent</a> list</code> </pre>
+
+
+<pre><code><span id="TYPEast_alg_expr"><span class="keyword">type</span> <code class="type">('mixt, 'id)</code> ast_alg_expr</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTast_alg_expr.BIN_ALG_OP"><span class="constructor">BIN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEbin_alg_op">Operator.bin_alg_op</a> * ('mixt, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a><br>        * ('mixt, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTast_alg_expr.UN_ALG_OP"><span class="constructor">UN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEun_alg_op">Operator.un_alg_op</a> * ('mixt, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTast_alg_expr.STATE_ALG_OP"><span class="constructor">STATE_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEstate_alg_op">Operator.state_alg_op</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTast_alg_expr.OBS_VAR"><span class="constructor">OBS_VAR</span></span> <span class="keyword">of</span> <code class="type">'id</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTast_alg_expr.TOKEN_ID"><span class="constructor">TOKEN_ID</span></span> <span class="keyword">of</span> <code class="type">'id</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTast_alg_expr.KAPPA_INSTANCE"><span class="constructor">KAPPA_INSTANCE</span></span> <span class="keyword">of</span> <code class="type">'mixt</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTast_alg_expr.CONST"><span class="constructor">CONST</span></span> <span class="keyword">of</span> <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEbool_expr"><span class="keyword">type</span> <code class="type">'a</code> bool_expr</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_expr.TRUE"><span class="constructor">TRUE</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_expr.FALSE"><span class="constructor">FALSE</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_expr.BOOL_OP"><span class="constructor">BOOL_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEbool_op">Operator.bool_op</a> * 'a <a href="Ast.html#TYPEbool_expr">bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a><br>        * 'a <a href="Ast.html#TYPEbool_expr">bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_expr.COMPARE_OP"><span class="constructor">COMPARE_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEcompare_op">Operator.compare_op</a> * 'a <a href="Location.html#TYPEannot">Location.annot</a> * 'a <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEarrow"><span class="keyword">type</span> <code class="type"></code>arrow</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarrow.RAR"><span class="constructor">RAR</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarrow.LRAR"><span class="constructor">LRAR</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPErule"><span class="keyword">type</span> <code class="type"></code>rule</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.lhs">lhs</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEmixture">mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.rm_token">rm_token</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        string <a href="Location.html#TYPEannot">Location.annot</a>)<br>       list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.arrow">arrow</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEarrow">arrow</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.rhs">rhs</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEmixture">mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.add_token">add_token</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        string <a href="Location.html#TYPEannot">Location.annot</a>)<br>       list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.k_def">k_def</span>&nbsp;: <code class="type">(<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.k_un">k_un</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        int <a href="Location.html#TYPEannot">Location.annot</a> option)<br>       option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.k_op">k_op</span>&nbsp;: <code class="type">(<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.k_op_un">k_op_un</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        int <a href="Location.html#TYPEannot">Location.annot</a> option)<br>       option</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALflip_label"><span class="keyword">val</span> flip_label</span> : <code class="type">string -> string</code></pre>
+<pre><code><span id="TYPEprint_expr"><span class="keyword">type</span> <code class="type">'alg_expr</code> print_expr</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprint_expr.Str_pexpr"><span class="constructor">Str_pexpr</span></span> <span class="keyword">of</span> <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprint_expr.Alg_pexpr"><span class="constructor">Alg_pexpr</span></span> <span class="keyword">of</span> <code class="type">'alg_expr <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEmodif_expr"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> modif_expr</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.INTRO"><span class="constructor">INTRO</span></span> <span class="keyword">of</span> <code class="type">(('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> * 'mixture <a href="Location.html#TYPEannot">Location.annot</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.DELETE"><span class="constructor">DELETE</span></span> <span class="keyword">of</span> <code class="type">(('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> * 'mixture <a href="Location.html#TYPEannot">Location.annot</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.UPDATE"><span class="constructor">UPDATE</span></span> <span class="keyword">of</span> <code class="type">('id <a href="Location.html#TYPEannot">Location.annot</a> * ('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.UPDATE_TOK"><span class="constructor">UPDATE_TOK</span></span> <span class="keyword">of</span> <code class="type">('id <a href="Location.html#TYPEannot">Location.annot</a> * ('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type">(('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list *<br>      ('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.PLOTENTRY"><span class="constructor">PLOTENTRY</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.CFLOWLABEL"><span class="constructor">CFLOWLABEL</span></span> <span class="keyword">of</span> <code class="type">(bool * string <a href="Location.html#TYPEannot">Location.annot</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.CFLOWMIX"><span class="constructor">CFLOWMIX</span></span> <span class="keyword">of</span> <code class="type">(bool * 'mixture <a href="Location.html#TYPEannot">Location.annot</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type">bool * ('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list</code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="TYPEperturbation"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> perturbation</span> = <code class="type">(('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEbool_expr">bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        ('mixture, 'id) <a href="Ast.html#TYPEmodif_expr">modif_expr</a> list *<br>        ('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEbool_expr">bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> option)<br>       <a href="Location.html#TYPEannot">Location.annot</a></code> </pre>
+
+
+<pre><span id="TYPEconfiguration"><span class="keyword">type</span> <code class="type"></code>configuration</span> = <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> * string <a href="Location.html#TYPEannot">Location.annot</a> list</code> </pre>
+
+
+<pre><span id="TYPEvariable_def"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> variable_def</span> = <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> * ('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code> </pre>
+
+
+<pre><code><span id="TYPEinit_t"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> init_t</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinit_t.INIT_MIX"><span class="constructor">INIT_MIX</span></span> <span class="keyword">of</span> <code class="type">'mixture</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinit_t.INIT_TOK"><span class="constructor">INIT_TOK</span></span> <span class="keyword">of</span> <code class="type">'id</code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEinstruction"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> instruction</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.SIG"><span class="constructor">SIG</span></span> <span class="keyword">of</span> <code class="type"><a href="Ast.html#TYPEagent">agent</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.TOKENSIG"><span class="constructor">TOKENSIG</span></span> <span class="keyword">of</span> <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.VOLSIG"><span class="constructor">VOLSIG</span></span> <span class="keyword">of</span> <code class="type">string * float * string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.INIT"><span class="constructor">INIT</span></span> <span class="keyword">of</span> <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> option<br>        * ('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a><br>        * ('mixture, 'id) <a href="Ast.html#TYPEinit_t">init_t</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.DECLARE"><span class="constructor">DECLARE</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.OBS"><span class="constructor">OBS</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.PLOT"><span class="constructor">PLOT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.PERT"><span class="constructor">PERT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEperturbation">perturbation</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.CONFIG"><span class="constructor">CONFIG</span></span> <span class="keyword">of</span> <code class="type"><a href="Ast.html#TYPEconfiguration">configuration</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEcommand"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> command</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcommand.RUN"><span class="constructor">RUN</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEbool_expr">bool_expr</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcommand.MODIFY"><span class="constructor">MODIFY</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEmodif_expr">modif_expr</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcommand.QUIT"><span class="constructor">QUIT</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEcompil"><span class="keyword">type</span> <code class="type">('agent, 'mixture, 'id, 'rule)</code> compil</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.variables">variables</span>&nbsp;: <code class="type">('mixture, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.signatures">signatures</span>&nbsp;: <code class="type">'agent list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.rules">rules</span>&nbsp;: <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> option * 'rule <a href="Location.html#TYPEannot">Location.annot</a>) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.observables">observables</span>&nbsp;: <code class="type">('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.init">init</span>&nbsp;: <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> option *<br>        ('mixture, 'id) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        ('mixture, 'id) <a href="Ast.html#TYPEinit_t">init_t</a> <a href="Location.html#TYPEannot">Location.annot</a>)<br>       list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.perturbations">perturbations</span>&nbsp;: <code class="type">('mixture, 'id) <a href="Ast.html#TYPEperturbation">perturbation</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.configurations">configurations</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEconfiguration">configuration</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.tokens">tokens</span>&nbsp;: <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.volumes">volumes</span>&nbsp;: <code class="type">(string * float * string) list</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALempty_compil"><span class="keyword">val</span> empty_compil</span> : <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">compil</a></code></pre>
+<pre><span id="VALno_more_site_on_right"><span class="keyword">val</span> no_more_site_on_right</span> : <code class="type">bool -> <a href="Ast.html#TYPEport">port</a> list -> <a href="Ast.html#TYPEport">port</a> list -> bool</code></pre>
+<pre><span id="VALimplicit_signature"><span class="keyword">val</span> implicit_signature</span> : <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">compil</a> -><br>       (<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">compil</a></code></pre><div class="info ">
+Infer agent signatures and tokens from init, rules and perturbations<br>
+</div>
+<br>
+<h6 id="6_Printers">Printers</h6><br>
+
+<pre><span id="VALprint_link"><span class="keyword">val</span> print_link</span> : <code class="type">('a -> Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Ast.html#TYPElink">link</a> -> unit</code></pre>
+<pre><span id="VALprint_ast_mix"><span class="keyword">val</span> print_ast_mix</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEmixture">mixture</a> -> unit</code></pre>
+<pre><span id="VALprint_ast_alg"><span class="keyword">val</span> print_ast_alg</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> -> unit</code></pre>
+<pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
+<pre><span id="VALprint_ast_rule_no_rate"><span class="keyword">val</span> print_ast_rule_no_rate</span> : <code class="type">reverse:bool -> Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
+<pre><span id="VALprint_bool"><span class="keyword">val</span> print_bool</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="Ast.html#TYPEbool_expr">bool_expr</a> -> unit</code></pre>
+<pre><span id="VALprint_ast_bool"><span class="keyword">val</span> print_ast_bool</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">ast_alg_expr</a> <a href="Ast.html#TYPEbool_expr">bool_expr</a> -> unit</code></pre></body></html>

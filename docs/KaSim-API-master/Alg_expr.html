@@ -35,6 +35,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Environment" rel="Chapter" href="Environment.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
@@ -62,8 +63,12 @@
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
 <link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
-<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html"><title>KaSim API : Alg_expr</title>
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Alg_expr</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="Instantiation.html" title="Instantiation">Previous</a>
@@ -136,5 +141,5 @@ depend in time, depend in event number, depend in given var<br>
 
 <pre><span id="VALsetup_alg_vars_rev_dep"><span class="keyword">val</span> setup_alg_vars_rev_dep</span> : <code class="type">unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre>
 <pre><span id="VALpropagate_constant"><span class="keyword">val</span> propagate_constant</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
-<pre><span id="VALpropagate_constant_bool"><span class="keyword">val</span> propagate_constant_bool</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       <a href="Alg_expr.html#TYPEt">t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a> -><br>       <a href="Alg_expr.html#TYPEt">t</a> Ast.bool_expr <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
-<pre><span id="VALstops_of_bool_expr"><span class="keyword">val</span> stops_of_bool_expr</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -> <a href="Alg_expr.html#TYPEt">t</a> Ast.bool_expr -> <a href="Nbr.html#TYPEt">Nbr.t</a> list</code></pre></body></html>
+<pre><span id="VALpropagate_constant_bool"><span class="keyword">val</span> propagate_constant_bool</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Alg_expr.html#TYPEt">t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       <a href="Alg_expr.html#TYPEt">t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       <a href="Alg_expr.html#TYPEt">t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALstops_of_bool_expr"><span class="keyword">val</span> stops_of_bool_expr</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -> <a href="Alg_expr.html#TYPEt">t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> list</code></pre></body></html>

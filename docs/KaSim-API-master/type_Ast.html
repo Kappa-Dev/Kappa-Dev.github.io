@@ -1,0 +1,218 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Pp" rel="Chapter" href="Pp.html">
+<link title="Pp_svg" rel="Chapter" href="Pp_svg.html">
+<link title="Pp_html" rel="Chapter" href="Pp_html.html">
+<link title="GenArray" rel="Chapter" href="GenArray.html">
+<link title="LargeArray" rel="Chapter" href="LargeArray.html">
+<link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Buffers" rel="Chapter" href="Buffers.html">
+<link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
+<link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
+<link title="Loggers" rel="Chapter" href="Loggers.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Location" rel="Chapter" href="Location.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent_place" rel="Chapter" href="Agent_place.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html">
+<link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
+<link title="Analyzer" rel="Chapter" href="Analyzer.html">
+<link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
+<link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Communication" rel="Chapter" href="Communication.html">
+<link title="Composite_domain" rel="Chapter" href="Composite_domain.html">
+<link title="Product" rel="Chapter" href="Product.html">
+<link title="Usual_domains" rel="Chapter" href="Usual_domains.html">
+<link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
+<link title="Views_domain" rel="Chapter" href="Views_domain.html">
+<link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
+<link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
+<link title="Int_storage" rel="Chapter" href="Int_storage.html">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Ast</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>annot)&nbsp;link&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LNK_VALUE</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;<span class="keywordsign">'</span>annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FREE</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">LNK_ANY</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">LNK_SOME</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">LNK_TYPE</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;*&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;internal&nbsp;=&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;port&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port_nme&nbsp;:&nbsp;string&nbsp;<span class="constructor">Location</span>.annot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port_int&nbsp;:&nbsp;<span class="constructor">Ast</span>.internal;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port_lnk&nbsp;:&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot,&nbsp;unit)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="constructor">Location</span>.annot;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent&nbsp;=&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mixture&nbsp;=&nbsp;<span class="constructor">Ast</span>.agent&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>mixt,&nbsp;<span class="keywordsign">'</span>id)&nbsp;ast_alg_expr&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">BIN_ALG_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.bin_alg_op&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixt,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixt,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UN_ALG_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.un_alg_op&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixt,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">STATE_ALG_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.state_alg_op<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">OBS_VAR</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">TOKEN_ID</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">KAPPA_INSTANCE</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>mixt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CONST</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Nbr</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;bool_expr&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">TRUE</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FALSE</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">BOOL_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.bool_op&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">COMPARE_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.compare_op&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;arrow&nbsp;=&nbsp;<span class="constructor">RAR</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">LRAR</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lhs&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rm_token&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;arrow&nbsp;:&nbsp;<span class="constructor">Ast</span>.arrow;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rhs&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;add_token&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;k_def&nbsp;:&nbsp;(<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;k_un&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Location</span>.annot&nbsp;option)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;k_op&nbsp;:&nbsp;(<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;k_op_un&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Location</span>.annot&nbsp;option)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flip_label&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>alg_expr&nbsp;print_expr&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Str_pexpr</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Alg_pexpr</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>alg_expr&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;modif_expr&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">INTRO</span>&nbsp;<span class="keyword">of</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>mixture&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">DELETE</span>&nbsp;<span class="keyword">of</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>mixture&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UPDATE</span>&nbsp;<span class="keyword">of</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>id&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UPDATE_TOK</span>&nbsp;<span class="keyword">of</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>id&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">STOP</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">SNAPSHOT</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PRINT</span>&nbsp;<span class="keyword">of</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.print_expr&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.print_expr&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PLOTENTRY</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CFLOWLABEL</span>&nbsp;<span class="keyword">of</span>&nbsp;(bool&nbsp;*&nbsp;string&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CFLOWMIX</span>&nbsp;<span class="keyword">of</span>&nbsp;(bool&nbsp;*&nbsp;<span class="keywordsign">'</span>mixture&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FLUX</span>&nbsp;<span class="keyword">of</span>&nbsp;bool&nbsp;*&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FLUXOFF</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;perturbation&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.modif_expr&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;option)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;configuration&nbsp;=&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;variable_def&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;init_t&nbsp;=&nbsp;<span class="constructor">INIT_MIX</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>mixture&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">INIT_TOK</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>id<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;instruction&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">SIG</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ast</span>.agent<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">TOKENSIG</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">VOLSIG</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;*&nbsp;float&nbsp;*&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">INIT</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.init_t&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">DECLARE</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.variable_def<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">OBS</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.variable_def<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PLOT</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PERT</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.perturbation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CONFIG</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ast</span>.configuration<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;command&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">RUN</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.bool_expr<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">MODIFY</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.modif_expr<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">QUIT</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id,&nbsp;<span class="keywordsign">'</span>rule)&nbsp;compil&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;variables&nbsp;:&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.variable_def&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;signatures&nbsp;:&nbsp;<span class="keywordsign">'</span>agent&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rules&nbsp;:&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;option&nbsp;*&nbsp;<span class="keywordsign">'</span>rule&nbsp;<span class="constructor">Location</span>.annot)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;observables&nbsp;:&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;init&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.init_t&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;perturbations&nbsp;:&nbsp;(<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.perturbation&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;configurations&nbsp;:&nbsp;<span class="constructor">Ast</span>.configuration&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tokens&nbsp;:&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;volumes&nbsp;:&nbsp;(string&nbsp;*&nbsp;float&nbsp;*&nbsp;string)&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_compil&nbsp;:&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;no_more_site_on_right&nbsp;:&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.port&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.port&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;implicit_signature&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_link&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_mix&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_alg&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_rule&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_rule_no_rate&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;reverse:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_bool&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_bool&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+<span class="keyword">end</span></code></body></html>
