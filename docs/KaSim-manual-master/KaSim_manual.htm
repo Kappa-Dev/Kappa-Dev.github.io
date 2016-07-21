@@ -6579,15 +6579,20 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (b22a9db) (without Tk interface)
- <br />Analysis launched at 2016/07/21 10:19:28 (GMT+0) on
- <br />testing-worker-linux-docker-956ed46d-3436-linux-2
+Kappa Static Analyzer (c4c651e) (without Tk interface)
+ <br />Analysis launched at 2016/07/21 13:07:47 (GMT+0) on
+ <br />testing-worker-linux-docker-db1c355d-3428-linux-13
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
  <br />Reachability analysis...
+ <br />rule_id:0 A: x:p
+ <br />rule_id:1 A: y:A@y
+ <br />rule_id:1 A: y:A@y
+ <br />rule_id:2 A: x:q
+ <br />rule_id:2 A: y:free
  <br />execution finished without any exception</div>
-<!--l. 10--><p class="nopar" >
+<!--l. 15--><p class="nopar" >
 <br /><div class="caption" 
 ><span class="id">Figure 7.4: </span><span  
 class="content">Reachability analysis of the model <span 
@@ -6607,13 +6612,18 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (b22a9db) (without Tk interface)
- <br />Analysis launched at 2016/07/21 10:19:28 (GMT+0) on
- <br />testing-worker-linux-docker-956ed46d-3436-linux-2
+Kappa Static Analyzer (c4c651e) (without Tk interface)
+ <br />Analysis launched at 2016/07/21 13:07:47 (GMT+0) on
+ <br />testing-worker-linux-docker-db1c355d-3428-linux-13
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
  <br />Reachability analysis...
+ <br />rule_id:0 A: x:p
+ <br />rule_id:1 A: y:A@y
+ <br />rule_id:1 A: y:A@y
+ <br />rule_id:2 A: x:q
+ <br />rule_id:2 A: y:free
  <br />
  <br />------------------------------------------------------------
  <br />* Dead rules :
@@ -6640,14 +6650,14 @@ Kappa Static Analyzer (b22a9db) (without Tk interface)
  <br />------------------------------------------------------------
  <br />* Site accross bonds domain
  <br />------------------------------------------------------------
+                                                                                  
+
+                                                                                  
  <br />------------------------------------------------------------
  <br />* Parallel bonds domain
  <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 39--><p class="nopar" >
-                                                                                  
-
-                                                                                  
+<!--l. 44--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.5: </span><span  
 class="content">Reachability analysis of the model <span 
