@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Circular_buffers.html">
-<link rel="next" href="Graph_loggers.html">
+<link rel="previous" href="Graph_loggers.html">
+<link rel="next" href="Nbr.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -70,17 +70,17 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Loggers</title>
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Ode_loggers</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Circular_buffers.html" title="Circular_buffers">Previous</a>
+<div class="navbar"><a class="pre" href="Graph_loggers.html" title="Graph_loggers">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Graph_loggers.html" title="Graph_loggers">Next</a>
+&nbsp;<a class="post" href="Nbr.html" title="Nbr">Next</a>
 </div>
-<h1>Module <a href="type_Loggers.html">Loggers</a></h1>
+<h1>Module <a href="type_Ode_loggers.html">Ode_loggers</a></h1>
 
-<pre><span class="keyword">module</span> Loggers: <code class="code"><span class="keyword">sig</span></code> <a href="Loggers.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-* loggers.mli
+<pre><span class="keyword">module</span> Ode_loggers: <code class="code"><span class="keyword">sig</span></code> <a href="Ode_loggers.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+* graph_loggers.ml
   *
   * a module for KaSim
   * Jérôme Feret, projet Antique, INRIA Paris
@@ -88,7 +88,7 @@
   * KaSim
   * Jean Krivine, Université Paris-Diderot, CNRS
   *
-  * Creation: 26/01/2016
+  * Creation: 23/05/2016
   * Last modification: 25/05/2016
   * *
   *
@@ -99,101 +99,109 @@
 </div>
 <hr width="100%">
 
-<pre><code><span id="TYPEencoding"><span class="keyword">type</span> <code class="type"></code>encoding</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEvariable"><span class="keyword">type</span> <code class="type"></code>variable</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTencoding.HTML_Graph"><span class="constructor">HTML_Graph</span></span></code></td>
+<code><span id="TYPEELTvariable.Expr"><span class="constructor">Expr</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTencoding.HTML"><span class="constructor">HTML</span></span></code></td>
+<code><span id="TYPEELTvariable.Init"><span class="constructor">Init</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTencoding.HTML_Tabular"><span class="constructor">HTML_Tabular</span></span></code></td>
+<code><span id="TYPEELTvariable.Deriv"><span class="constructor">Deriv</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTencoding.DOT"><span class="constructor">DOT</span></span></code></td>
+<code><span id="TYPEELTvariable.Jacobian"><span class="constructor">Jacobian</span></span> <span class="keyword">of</span> <code class="type">int * int</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTencoding.TXT"><span class="constructor">TXT</span></span></code></td>
+<code><span id="TYPEELTvariable.Tinit"><span class="constructor">Tinit</span></span></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTencoding.TXT_Tabular"><span class="constructor">TXT_Tabular</span></span></code></td>
+<code><span id="TYPEELTvariable.Tend"><span class="constructor">Tend</span></span></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTencoding.XLS"><span class="constructor">XLS</span></span></code></td>
+<code><span id="TYPEELTvariable.InitialStep"><span class="constructor">InitialStep</span></span></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTencoding.Octave"><span class="constructor">Octave</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTencoding.Matlab"><span class="constructor">Matlab</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTencoding.Maple"><span class="constructor">Maple</span></span></code></td>
+<code><span id="TYPEELTvariable.Num_t_points"><span class="constructor">Num_t_points</span></span></code></td>
 
 </tr></table>
 
 
 
-<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+<pre><code><span id="TYPEnetwork_handler"><span class="keyword">type</span> <code class="type">('a, 'b)</code> network_handler</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTnetwork_handler.int_of_obs">int_of_obs</span>&nbsp;: <code class="type">'b -> int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTnetwork_handler.int_of_kappa_instance">int_of_kappa_instance</span>&nbsp;: <code class="type">'a -> int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTnetwork_handler.int_of_token_id">int_of_token_id</span>&nbsp;: <code class="type">'b -> int</code>;</code></td>
+
+</tr></table>
+}
 
 
-<pre><span id="VALrefresh_id"><span class="keyword">val</span> refresh_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALget_encoding_format"><span class="keyword">val</span> get_encoding_format</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> <a href="Loggers.html#TYPEencoding">encoding</a></code></pre>
-<pre><span id="VALfprintf"><span class="keyword">val</span> fprintf</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> ('a, Format.formatter, unit) Pervasives.format -> 'a</code></pre>
-<pre><span id="VALprint_newline"><span class="keyword">val</span> print_newline</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALprint_cell"><span class="keyword">val</span> print_cell</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> unit</code></pre>
-<pre><span id="VALprint_as_logger"><span class="keyword">val</span> print_as_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> (Format.formatter -> unit) -> unit</code></pre>
-<pre><span id="VALflush_logger"><span class="keyword">val</span> flush_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALclose_logger"><span class="keyword">val</span> close_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALopen_infinite_buffer"><span class="keyword">val</span> open_infinite_buffer</span> : <code class="type">?mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> unit -> <a href="Loggers.html#TYPEt">t</a></code></pre>
-<pre><span id="VALopen_circular_buffer"><span class="keyword">val</span> open_circular_buffer</span> : <code class="type">?mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> ?size:int -> unit -> <a href="Loggers.html#TYPEt">t</a></code></pre>
-<pre><span id="VALopen_logger_from_formatter"><span class="keyword">val</span> open_logger_from_formatter</span> : <code class="type">?mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> Format.formatter -> <a href="Loggers.html#TYPEt">t</a></code></pre>
-<pre><span id="VALopen_logger_from_channel"><span class="keyword">val</span> open_logger_from_channel</span> : <code class="type">?mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> Pervasives.out_channel -> <a href="Loggers.html#TYPEt">t</a></code></pre>
-<pre><span id="VALopen_row"><span class="keyword">val</span> open_row</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALclose_row"><span class="keyword">val</span> close_row</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALprint_breakable_space"><span class="keyword">val</span> print_breakable_space</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALdummy_txt_logger"><span class="keyword">val</span> dummy_txt_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a></code></pre>
-<pre><span id="VALdummy_html_logger"><span class="keyword">val</span> dummy_html_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a></code></pre>
-<pre><span id="VALredirect"><span class="keyword">val</span> redirect</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> <a href="Loggers.html#TYPEt">t</a></code></pre>
-<pre><span id="VALformatter_of_logger"><span class="keyword">val</span> formatter_of_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter option</code></pre>
-<pre><span id="VALflush_buffer"><span class="keyword">val</span> flush_buffer</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> unit</code></pre>
-<pre><span id="VALint_of_string_id"><span class="keyword">val</span> int_of_string_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> int</code></pre></body></html>
+
+<pre><code><span id="TYPEoptions"><span class="keyword">type</span> <code class="type"></code>options</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELToptions.Comment"><span class="constructor">Comment</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALprint_ode_preamble"><span class="keyword">val</span> print_ode_preamble</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?filter_in:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list option -><br>       ?filter_out:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list -> unit -> unit</code></pre>
+<pre><span id="VALdeclare_global"><span class="keyword">val</span> declare_global</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> unit</code></pre>
+<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> <a href="Ode_loggers.html#TYPEvariable">variable</a> -> unit</code></pre>
+<pre><span id="VALassociate"><span class="keyword">val</span> associate</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> -> ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
+<pre><span id="VALincrement"><span class="keyword">val</span> increment</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> -> ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
+<pre><span id="VALprint_comment"><span class="keyword">val</span> print_comment</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?filter_in:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list option -><br>       ?filter_out:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list -> string -> unit</code></pre>
+<pre><span id="VALopen_procedure"><span class="keyword">val</span> open_procedure</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> string -> string list -> unit</code></pre>
+<pre><span id="VALreturn"><span class="keyword">val</span> return</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> unit</code></pre>
+<pre><span id="VALclose_procedure"><span class="keyword">val</span> close_procedure</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre></body></html>

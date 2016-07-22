@@ -18,6 +18,8 @@
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
 <link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
 <link title="Loggers" rel="Chapter" href="Loggers.html">
+<link title="Graph_loggers" rel="Chapter" href="Graph_loggers.html">
+<link title="Ode_loggers" rel="Chapter" href="Ode_loggers.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
@@ -177,6 +179,8 @@ Returns the graph obtained by applying the rule.
 </td></tr>
 <tr><td><a href="Pp.html#VALarray">array</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
+<tr><td><a href="Ode_loggers.html#VALassociate">associate</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Composite_domain.Composite_domain.html#VALast_mixture_is_reachable">ast_mixture_is_reachable</a> [<a href="Composite_domain.Composite_domain.html">Composite_domain.Composite_domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Priority.html#VALaverage">average</a> [<a href="Priority.html">Priority</a>]</td>
@@ -260,7 +264,11 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALclose_all_out_desc">close_all_out_desc</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALclose_asso">close_asso</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Loggers.html#VALclose_logger">close_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_loggers.html#VALclose_procedure">close_procedure</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALclose_row">close_row</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
@@ -399,6 +407,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Connected_component.Matching.html#VALdebug_print">debug_print</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALdebug_print">debug_print</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_loggers.html#VALdeclare_global">declare_global</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALdefault_internal_state">default_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
@@ -884,6 +894,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 </td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALimport_handler">import_handler</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
 <td></td></tr>
+<tr><td><a href="Ode_loggers.html#VALincrement">increment</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Export_to_KaSa.html#VALinit">init</a> [<a href="Export_to_KaSa.html">Export_to_KaSa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSim.html#VALinit">init</a> [<a href="Export_to_KaSim.html">Export_to_KaSim</a>]</td>
@@ -916,6 +928,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 <code class="code">initial env domain counter graph state</code> builds up the initial state
 </div>
 </td></tr>
+<tr><td><a href="Ode_loggers.html#VALinitialize">initialize</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALinitialize_global_information">initialize_global_information</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALinjection_for_one_more_edge">injection_for_one_more_edge</a> [<a href="Navigation.html">Navigation</a>]</td>
@@ -1408,6 +1422,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Counter.html#VALone_time_correction_event">one_time_correction_event</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALopen_asso">open_asso</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Kappa_files.html#VALopen_branch_and_cut_engine_profiling">open_branch_and_cut_engine_profiling</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALopen_circular_buffer">open_circular_buffer</a> [<a href="Loggers.html">Loggers</a>]</td>
@@ -1419,6 +1435,8 @@ values of observables)
 <tr><td><a href="Loggers.html#VALopen_logger_from_formatter">open_logger_from_formatter</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALopen_out">open_out</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_loggers.html#VALopen_procedure">open_procedure</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALopen_row">open_row</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
@@ -1519,6 +1537,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALprint_as_logger">print_as_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALprint_asso">print_asso</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALprint_association_list">print_association_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALprint_association_list">print_association_list</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
@@ -1545,6 +1565,10 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALprint_cell">print_cell</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Ode_loggers.html#VALprint_comment">print_comment</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALprint_comment">print_comment</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Operator.html#VALprint_compare_op">print_compare_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALprint_concrete_action">print_concrete_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
@@ -1559,6 +1583,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Connected_component.html#VALprint_dot">print_dot</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALprint_edge">print_edge</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
+<td></td></tr>
 <tr><td><a href="Counter.html#VALprint_efficiency">print_efficiency</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Trace.html#VALprint_event_kind">print_event_kind</a> [<a href="Trace.html">Trace</a>]</td>
@@ -1566,6 +1592,10 @@ values of observables)
 <tr><td><a href="Trace.html#VALprint_event_kind_dot_annot">print_event_kind_dot_annot</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALprint_expr_val">print_expr_val</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALprint_graph_foot">print_graph_foot</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALprint_graph_preamble">print_graph_preamble</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALprint_injections">print_injections</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
@@ -1580,6 +1610,12 @@ values of observables)
 <tr><td><a href="Utilities.html#VALprint_musical_grid">print_musical_grid</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALprint_newline">print_newline</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALprint_node">print_node</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_loggers.html#VALprint_ode_preamble">print_ode_preamble</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Graph_loggers.html#VALprint_one_to_n_relation">print_one_to_n_relation</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALprint_path">print_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
@@ -1709,6 +1745,8 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <tr><td><a href="Instantiation.html#VALrename_abstract_test">rename_abstract_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALrename_step">rename_step</a> [<a href="Navigation.html">Navigation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_loggers.html#VALreturn">return</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALrev_path">rev_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
