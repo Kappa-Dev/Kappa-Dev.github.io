@@ -88,6 +88,7 @@ agent_id * agent_type<br>
 </div>
 
 
+<pre><span id="VALprint_agent"><span class="keyword">val</span> print_agent</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Edges.html#TYPEagent">agent</a> -> unit</code></pre>
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
@@ -146,7 +147,7 @@ agent_id * agent_type<br>
 <pre><span id="VALempty_path"><span class="keyword">val</span> empty_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALsingleton_path"><span class="keyword">val</span> singleton_path</span> : <code class="type"><a href="Edges.html#TYPEagent">agent</a> -> int -> <a href="Edges.html#TYPEagent">agent</a> -> int -> <a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALrev_path"><span class="keyword">val</span> rev_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a> -> <a href="Edges.html#TYPEpath">path</a></code></pre>
-<pre><span id="VALprint_path"><span class="keyword">val</span> print_path</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> ?graph:<a href="Edges.html#TYPEt">t</a> -> Format.formatter -> <a href="Edges.html#TYPEpath">path</a> -> unit</code></pre>
+<pre><span id="VALprint_path"><span class="keyword">val</span> print_path</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Edges.html#TYPEpath">path</a> -> unit</code></pre>
 <pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?candidate:<a href="Edges.html#TYPEpath">path</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Edges.html#TYPEt">t</a> -><br>       <a href="Edges.html#TYPEagent">agent</a> list -><br>       <a href="Edges.html#TYPEagent">agent</a> list -> int option -> bool -> <a href="Edges.html#TYPEpath">path</a> option</code></pre><div class="info ">
 <code class="code">are_connected ?candidate sigs graph nodes_x nodes_y dist store_dist</code><br>
 </div>
