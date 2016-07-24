@@ -123,28 +123,41 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.embedding_forest&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.mixture<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;binary_rule_that_can_be_applied_in_a_unary_context&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lhs&nbsp;:&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.pattern<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;direction&nbsp;=&nbsp;<span class="constructor">Direct</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Reverse</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;arity&nbsp;=&nbsp;<span class="constructor">Usual</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Unary</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_mode&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.direction&nbsp;*&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.arity<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id&nbsp;=&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id_with_mode&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_id&nbsp;*&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_mode<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;valid_modes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_mode&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lhs&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.pattern<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;token_vector&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_mode&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.connected_component,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;string&nbsp;<span class="constructor">Location</span>.annot)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_id&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_id&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_id<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rate&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_mode&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.pattern,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule_mode&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.embedding_forest&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lift_species&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.chemical_species&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.mixture<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;compil<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compil&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compil&nbsp;:&nbsp;string&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_rules&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.rule&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_initial_state&nbsp;:<br>
@@ -157,4 +170,10 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_variables&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.pattern,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.variable_def&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_t_init&nbsp;:&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_t_end&nbsp;:&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_n_points&nbsp;:&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_files&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_m_output_file&nbsp;:&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_data_output_file&nbsp;:&nbsp;<span class="constructor">Ode_interface</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
 <span class="keyword">end</span></code></body></html>

@@ -121,20 +121,68 @@
 <pre><span id="TYPErule"><span class="keyword">type</span> <code class="type"></code>rule</span> </pre>
 
 
-<pre><span id="TYPErule_id"><span class="keyword">type</span> <code class="type"></code>rule_id</span> </pre>
+<pre><code><span id="TYPEdirection"><span class="keyword">type</span> <code class="type"></code>direction</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTdirection.Direct"><span class="constructor">Direct</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTdirection.Reverse"><span class="constructor">Reverse</span></span></code></td>
+
+</tr></table>
 
 
-<pre><span id="VALbinary_rule_that_can_be_applied_in_a_unary_context"><span class="keyword">val</span> binary_rule_that_can_be_applied_in_a_unary_context</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -> bool</code></pre>
-<pre><span id="VALlhs"><span class="keyword">val</span> lhs</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -> <a href="Ode_interface.Interface.html#TYPEpattern">pattern</a></code></pre>
-<pre><span id="VALtoken_vector"><span class="keyword">val</span> token_vector</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -><br>       ((<a href="Ode_interface.Interface.html#TYPEconnected_component">connected_component</a>, string) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a><br>        <a href="Location.html#TYPEannot">Location.annot</a> * string <a href="Location.html#TYPEannot">Location.annot</a>)<br>       list</code></pre>
+
+<pre><code><span id="TYPEarity"><span class="keyword">type</span> <code class="type"></code>arity</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarity.Usual"><span class="constructor">Usual</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarity.Unary"><span class="constructor">Unary</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="TYPErule_mode"><span class="keyword">type</span> <code class="type"></code>rule_mode</span> = <code class="type"><a href="Ode_interface.Interface.html#TYPEdirection">direction</a> * <a href="Ode_interface.Interface.html#TYPEarity">arity</a></code> </pre>
+
+
+<pre><span id="TYPErule_id"><span class="keyword">type</span> <code class="type"></code>rule_id</span> = <code class="type">int</code> </pre>
+
+
+<pre><span id="TYPErule_id_with_mode"><span class="keyword">type</span> <code class="type"></code>rule_id_with_mode</span> = <code class="type"><a href="Ode_interface.Interface.html#TYPErule_id">rule_id</a> * <a href="Ode_interface.Interface.html#TYPErule_mode">rule_mode</a></code> </pre>
+
+
+<pre><span id="VALvalid_modes"><span class="keyword">val</span> valid_modes</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -> <a href="Ode_interface.Interface.html#TYPErule_mode">rule_mode</a> list</code></pre>
+<pre><span id="VALlhs"><span class="keyword">val</span> lhs</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface.Interface.html#TYPErule_mode">rule_mode</a> -> <a href="Ode_interface.Interface.html#TYPEpattern">pattern</a></code></pre>
+<pre><span id="VALtoken_vector"><span class="keyword">val</span> token_vector</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface.Interface.html#TYPErule_mode">rule_mode</a> -><br>       ((<a href="Ode_interface.Interface.html#TYPEconnected_component">connected_component</a>, string) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a><br>        <a href="Location.html#TYPEannot">Location.annot</a> * string <a href="Location.html#TYPEannot">Location.annot</a>)<br>       list</code></pre>
 <pre><span id="VALprint_rule_id"><span class="keyword">val</span> print_rule_id</span> : <code class="type">Format.formatter -> <a href="Ode_interface.Interface.html#TYPErule_id">rule_id</a> -> unit</code></pre>
-<pre><span id="VALrule_id"><span class="keyword">val</span> rule_id</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -> <a href="Ode_interface.Interface.html#TYPErule_id">rule_id</a></code></pre>
-<pre><span id="VALapply"><span class="keyword">val</span> apply</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface.Interface.html#TYPEembedding_forest">embedding_forest</a> -><br>       <a href="Ode_interface.Interface.html#TYPEmixture">mixture</a> -> <a href="Ode_interface.Interface.html#TYPEmixture">mixture</a></code></pre>
+<pre><span id="VALrate"><span class="keyword">val</span> rate</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface.Interface.html#TYPErule_mode">rule_mode</a> -><br>       (<a href="Ode_interface.Interface.html#TYPEpattern">pattern</a>, string) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a><br>       option</code></pre>
+<pre><span id="VALapply"><span class="keyword">val</span> apply</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface.Interface.html#TYPErule_mode">rule_mode</a> -><br>       <a href="Ode_interface.Interface.html#TYPEembedding_forest">embedding_forest</a> -><br>       <a href="Ode_interface.Interface.html#TYPEmixture">mixture</a> -> <a href="Ode_interface.Interface.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="VALlift_species"><span class="keyword">val</span> lift_species</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEchemical_species">chemical_species</a> -> <a href="Ode_interface.Interface.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="TYPEcompil"><span class="keyword">type</span> <code class="type"></code>compil</span> </pre>
 
 
-<pre><span id="VALget_compil"><span class="keyword">val</span> get_compil</span> : <code class="type">unit -> <a href="Ode_interface.Interface.html#TYPEcompil">compil</a></code></pre>
+<pre><span id="VALget_compil"><span class="keyword">val</span> get_compil</span> : <code class="type">string list -> <a href="Ode_interface.Interface.html#TYPEcompil">compil</a></code></pre>
 <pre><span id="VALget_rules"><span class="keyword">val</span> get_rules</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -> <a href="Ode_interface.Interface.html#TYPErule">rule</a> list</code></pre>
 <pre><span id="VALget_initial_state"><span class="keyword">val</span> get_initial_state</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> option *<br>        (<a href="Ode_interface.Interface.html#TYPEpattern">pattern</a>, string) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        (<a href="Ode_interface.Interface.html#TYPEmixture">mixture</a>, string) <a href="Ast.html#TYPEinit_t">Ast.init_t</a> <a href="Location.html#TYPEannot">Location.annot</a>)<br>       list</code></pre>
-<pre><span id="VALget_variables"><span class="keyword">val</span> get_variables</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -><br>       (<a href="Ode_interface.Interface.html#TYPEpattern">pattern</a>, string) <a href="Ast.html#TYPEvariable_def">Ast.variable_def</a> list</code></pre></body></html>
+<pre><span id="VALget_variables"><span class="keyword">val</span> get_variables</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -><br>       (<a href="Ode_interface.Interface.html#TYPEpattern">pattern</a>, string) <a href="Ast.html#TYPEvariable_def">Ast.variable_def</a> list</code></pre>
+<pre><span id="VALget_t_init"><span class="keyword">val</span> get_t_init</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -> float option</code></pre>
+<pre><span id="VALget_t_end"><span class="keyword">val</span> get_t_end</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -> float option</code></pre>
+<pre><span id="VALget_n_points"><span class="keyword">val</span> get_n_points</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -> int option</code></pre>
+<pre><span id="VALget_files"><span class="keyword">val</span> get_files</span> : <code class="type">unit -> string list</code></pre>
+<pre><span id="VALget_m_output_file"><span class="keyword">val</span> get_m_output_file</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -> string</code></pre>
+<pre><span id="VALget_data_output_file"><span class="keyword">val</span> get_data_output_file</span> : <code class="type"><a href="Ode_interface.Interface.html#TYPEcompil">compil</a> -> string</code></pre></body></html>

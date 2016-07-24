@@ -128,6 +128,13 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
+<code><span id="TYPEELTvariable.Obs"><span class="constructor">Obs</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
 <code><span id="TYPEELTvariable.Jacobian"><span class="constructor">Jacobian</span></span> <span class="keyword">of</span> <code class="type">int * int</code></code></td>
 
 </tr>
@@ -170,7 +177,49 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTvariable.Unary_rate"><span class="constructor">Unary_rate</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+<code><span id="TYPEELTvariable.Rated"><span class="constructor">Rated</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.Rateun"><span class="constructor">Rateun</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.Rateund"><span class="constructor">Rateund</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.N_rules"><span class="constructor">N_rules</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.N_ode_var"><span class="constructor">N_ode_var</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.N_obs"><span class="constructor">N_obs</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.Tmp"><span class="constructor">Tmp</span></span></code></td>
 
 </tr></table>
 
@@ -223,6 +272,7 @@
 <pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> <a href="Ode_loggers.html#TYPEvariable">variable</a> -> unit</code></pre>
 <pre><span id="VALassociate"><span class="keyword">val</span> associate</span> : <code class="type">?init_mode:bool -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
 <pre><span id="VALincrement"><span class="keyword">val</span> increment</span> : <code class="type">?init_mode:bool -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
+<pre><span id="VALassociate_nrows"><span class="keyword">val</span> associate_nrows</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
 <pre><span id="VALprint_comment"><span class="keyword">val</span> print_comment</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?filter_in:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list option -><br>       ?filter_out:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list -> string -> unit</code></pre>
 <pre><span id="VALopen_procedure"><span class="keyword">val</span> open_procedure</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> string -> string list -> unit</code></pre>
 <pre><span id="VALreturn"><span class="keyword">val</span> return</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> unit</code></pre>
