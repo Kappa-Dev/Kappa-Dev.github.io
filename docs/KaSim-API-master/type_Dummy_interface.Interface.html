@@ -131,6 +131,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mixture,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.init_t&nbsp;<span class="constructor">Location</span>.annot)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_variables&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(pattern,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.variable_def&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_obs&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(pattern,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_tokens&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_t_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_t_end&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_n_points&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option<br>

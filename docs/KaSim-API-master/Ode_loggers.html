@@ -91,9 +91,8 @@
   * KaSim
   * Jean Krivine, Université Paris-Diderot, CNRS
   *
-  * Creation: 23/05/2016
-  * Last modification: 25/05/2016
-  * *
+  * Creation: 20/07/2016
+  * Last modification: Time-stamp: &lt;Jul 25 2016&gt;* *
   *
   *
   * Copyright 2016  Institut National de Recherche en Informatique et
@@ -115,6 +114,13 @@
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
 <code><span id="TYPEELTvariable.Init"><span class="constructor">Init</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.Initbis"><span class="constructor">Initbis</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
 
 </tr>
 <tr>
@@ -219,6 +225,13 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
+<code><span id="TYPEELTvariable.N_var"><span class="constructor">N_var</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
 <code><span id="TYPEELTvariable.N_obs"><span class="constructor">N_obs</span></span></code></td>
 
 </tr>
@@ -227,6 +240,13 @@
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
 <code><span id="TYPEELTvariable.Tmp"><span class="constructor">Tmp</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.Current_time"><span class="constructor">Current_time</span></span></code></td>
 
 </tr></table>
 
@@ -280,6 +300,8 @@
 <pre><span id="VALassociate"><span class="keyword">val</span> associate</span> : <code class="type">?init_mode:bool -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
 <pre><span id="VALincrement"><span class="keyword">val</span> increment</span> : <code class="type">?init_mode:bool -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
 <pre><span id="VALassociate_nrows"><span class="keyword">val</span> associate_nrows</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
+<pre><span id="VALstart_time"><span class="keyword">val</span> start_time</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> float -> unit</code></pre>
+<pre><span id="VALdeclare_init"><span class="keyword">val</span> declare_init</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> int -> unit</code></pre>
 <pre><span id="VALconsume"><span class="keyword">val</span> consume</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -> <a href="Ode_loggers.html#TYPEvariable">variable</a> -> <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> unit</code></pre>
 <pre><span id="VALproduce"><span class="keyword">val</span> produce</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -> <a href="Ode_loggers.html#TYPEvariable">variable</a> -> <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> unit</code></pre>
 <pre><span id="VALupdate_token"><span class="keyword">val</span> update_token</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_lhs:int -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
