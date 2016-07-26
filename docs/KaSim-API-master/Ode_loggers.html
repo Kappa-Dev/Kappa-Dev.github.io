@@ -239,6 +239,13 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
+<code><span id="TYPEELTvariable.N_rows"><span class="constructor">N_rows</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
 <code><span id="TYPEELTvariable.Tmp"><span class="constructor">Tmp</span></span></code></td>
 
 </tr>
@@ -300,8 +307,11 @@
 <pre><span id="VALassociate"><span class="keyword">val</span> associate</span> : <code class="type">?init_mode:bool -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
 <pre><span id="VALincrement"><span class="keyword">val</span> increment</span> : <code class="type">?init_mode:bool -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
 <pre><span id="VALassociate_nrows"><span class="keyword">val</span> associate_nrows</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
+<pre><span id="VALassociate_t"><span class="keyword">val</span> associate_t</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> int -> unit</code></pre>
+<pre><span id="VALinit_time"><span class="keyword">val</span> init_time</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> int -> unit</code></pre>
 <pre><span id="VALstart_time"><span class="keyword">val</span> start_time</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> float -> unit</code></pre>
 <pre><span id="VALdeclare_init"><span class="keyword">val</span> declare_init</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> int -> unit</code></pre>
+<pre><span id="VALlaunch_main"><span class="keyword">val</span> launch_main</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
 <pre><span id="VALconsume"><span class="keyword">val</span> consume</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -> <a href="Ode_loggers.html#TYPEvariable">variable</a> -> <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> unit</code></pre>
 <pre><span id="VALproduce"><span class="keyword">val</span> produce</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -> <a href="Ode_loggers.html#TYPEvariable">variable</a> -> <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> unit</code></pre>
 <pre><span id="VALupdate_token"><span class="keyword">val</span> update_token</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_lhs:int -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       ('a, 'b) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> ('a, 'b) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
