@@ -104,7 +104,7 @@ type of the static information to be passed to each domain, let us
 <pre><span id="TYPEglobal_dynamic_information"><span class="keyword">type</span> <code class="type"></code>global_dynamic_information</span> </pre>
 
 
-<pre><span id="TYPEkasa_state"><span class="keyword">type</span> <code class="type"></code>kasa_state</span> = <code class="type">unit</code> </pre>
+<pre><span id="TYPEkasa_state"><span class="keyword">type</span> <code class="type">('static, 'dynamic)</code> kasa_state</span> = <code class="type">('static, 'dynamic) Remanent_state.state</code> </pre>
 
 <br>
 This is the type of the encoding of a chemical mixture as a result of

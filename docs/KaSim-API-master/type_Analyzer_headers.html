@@ -75,7 +75,8 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;compilation_result<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_static_information<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;global_dynamic_information<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;kasa_state&nbsp;=&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>static,&nbsp;<span class="keywordsign">'</span>dynamic)&nbsp;kasa_state&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>static,&nbsp;<span class="keywordsign">'</span>dynamic)&nbsp;<span class="constructor">Remanent_state</span>.state<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;initial_state&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.enriched_init<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize_global_information&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
