@@ -100,10 +100,8 @@
 <pre><span id="TYPEnetwork"><span class="keyword">type</span> <code class="type"></code>network</span> </pre>
 
 
-<pre><span id="VALget_input_files"><span class="keyword">val</span> get_input_files</span> : <code class="type">unit -> string list</code></pre>
 <pre><span id="VALget_compil"><span class="keyword">val</span> get_compil</span> : <code class="type">string list -> I.compil</code></pre>
-<pre><span id="VALget_m_output_file"><span class="keyword">val</span> get_m_output_file</span> : <code class="type">I.compil -> string</code></pre>
 <pre><span id="VALnetwork_from_compil"><span class="keyword">val</span> network_from_compil</span> : <code class="type">I.compil -> <a href="Odes.Make.html#TYPEnetwork">network</a></code></pre>
 <pre><span id="VALget_reactions"><span class="keyword">val</span> get_reactions</span> : <code class="type"><a href="Odes.Make.html#TYPEnetwork">network</a> -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> list * <a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> list *<br>        ((I.pattern, string) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>         <a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> <a href="Location.html#TYPEannot">Location.annot</a>)<br>        list * I.rule)<br>       list</code></pre>
-<pre><span id="VALexport_network"><span class="keyword">val</span> export_network</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> I.compil -> <a href="Odes.Make.html#TYPEnetwork">network</a> -> unit</code></pre>
+<pre><span id="VALexport_network"><span class="keyword">val</span> export_network</span> : <code class="type">command_line:string -><br>       command_line_quotes:string -><br>       data_file:string -><br>       init_t:float -><br>       max_t:float -><br>       nb_points:int -> <a href="Loggers.html#TYPEt">Loggers.t</a> -> I.compil -> <a href="Odes.Make.html#TYPEnetwork">network</a> -> unit</code></pre>
 <pre><span id="VALspecies_of_species_id"><span class="keyword">val</span> species_of_species_id</span> : <code class="type"><a href="Odes.Make.html#TYPEnetwork">network</a> -> <a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> -> I.chemical_species</code></pre></body></html>
