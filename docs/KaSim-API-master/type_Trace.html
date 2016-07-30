@@ -72,6 +72,21 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Simulation_info</span>&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;story_id&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;story_time&nbsp;:&nbsp;float;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;story_event&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;profiling_info&nbsp;:&nbsp;<span class="keywordsign">'</span>a;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compare_by_story_id&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_profiling_info&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;event&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;story_id&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;event_kind&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">OBS</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">RULE</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
@@ -83,10 +98,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;event&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.event&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="constructor">Mods</span>.simulation_info<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;obs&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="constructor">Mods</span>.simulation_info<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;step&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Subs</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Event</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Trace</span>.event<br>
@@ -110,13 +125,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.binding_state)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;simulation_info_of_step&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;creation_of_actions&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.action&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;creation_of_step&nbsp;:&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_step&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?compact:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?env:<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_event&nbsp;:&nbsp;<span class="constructor">Trace</span>.event&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_obs&nbsp;:&nbsp;<span class="constructor">Trace</span>.obs&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_event&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.event&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_obs&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
 <span class="keyword">end</span></code></body></html>

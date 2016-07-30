@@ -116,7 +116,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?event:<span class="constructor">StoryProfiling</span>.step_kind&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;((<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.binary,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b&nbsp;list,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.ternary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace_runtime_info&nbsp;=&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Mods</span>.simulation_info<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace_runtime_info&nbsp;=&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;size_of_pretrace&nbsp;:&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;last_eid_in_pretrace&nbsp;:&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_trace&nbsp;:<br>
@@ -203,7 +203,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;musical_grid<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;observable_hit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_runtime_info_from_observable_hit&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.observable_hit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="constructor">Mods</span>.simulation_info&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.observable_hit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;convert_trace_into_musical_notation&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Utilities</span>.trace,&nbsp;<span class="constructor">Utilities</span>.musical_grid)&nbsp;<span class="constructor">Utilities</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extract_observable_hits_from_musical_notation&nbsp;:<br>
