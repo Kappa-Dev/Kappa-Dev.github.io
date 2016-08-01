@@ -84,6 +84,24 @@
 
 <pre><span class="keyword">module</span> Communication: <code class="code"><span class="keyword">sig</span></code> <a href="Communication.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
 
+<pre><code><span id="TYPEpath_defined_in"><span class="keyword">type</span> <code class="type"></code>path_defined_in</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpath_defined_in.LHS"><span class="constructor">LHS</span></span> <span class="keyword">of</span> <code class="type">Cckappa_sig.enriched_rule</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpath_defined_in.RHS"><span class="constructor">RHS</span></span> <span class="keyword">of</span> <code class="type">Cckappa_sig.enriched_rule</code></code></td>
+
+</tr></table>
+
+
+
 <pre><code><span id="TYPEevent"><span class="keyword">type</span> <code class="type"></code>event</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -140,6 +158,13 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
+<code><span id="TYPEELTpath.defined_in">defined_in</span>&nbsp;: <code class="type"><a href="Communication.html#TYPEpath_defined_in">path_defined_in</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
 <code><span id="TYPEELTpath.agent_id">agent_id</span>&nbsp;: <code class="type">Ckappa_sig.c_agent_id</code>;</code></td>
 
 </tr>
@@ -189,4 +214,5 @@
 <pre><span id="VALrefine_information_about_state_of_site"><span class="keyword">val</span> refine_information_about_state_of_site</span> : <code class="type"><a href="Communication.html#TYPEprecondition">precondition</a> -><br>       (Exception.method_handler -><br>        <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">Analyzer_headers.global_dynamic_information</a> -><br>        <a href="Communication.html#TYPEpath">path</a> -><br>        Ckappa_sig.c_state list <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a> -><br>        Exception.method_handler * <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">Analyzer_headers.global_dynamic_information</a> *<br>        Ckappa_sig.c_state list <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a>) -><br>       <a href="Communication.html#TYPEprecondition">precondition</a></code></pre>
 <pre><span id="VALget_potential_partner"><span class="keyword">val</span> get_potential_partner</span> : <code class="type"><a href="Communication.html#TYPEprecondition">precondition</a> -><br>       Exception.method_handler -><br>       Ckappa_sig.c_agent_name -><br>       Ckappa_sig.c_site_name -><br>       Ckappa_sig.c_state -><br>       Exception.method_handler * <a href="Communication.html#TYPEprecondition">precondition</a> *<br>       (Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state)<br>       <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a></code></pre>
 <pre><span id="VALfold_over_potential_partners"><span class="keyword">val</span> fold_over_potential_partners</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> -><br>       Ckappa_sig.c_agent_name -><br>       Ckappa_sig.c_site_name -><br>       (Remanent_parameters_sig.parameters -><br>        Ckappa_sig.c_state -><br>        Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state -><br>        Exception.method_handler * 'a -> Exception.method_handler * 'a) -><br>       'a -><br>       Exception.method_handler * <a href="Communication.html#TYPEprecondition">precondition</a> *<br>       'a <a href="Usual_domains.html#TYPEtop_or_not">Usual_domains.top_or_not</a></code></pre>
-<pre><span id="VALoverwrite_potential_partners_map"><span class="keyword">val</span> overwrite_potential_partners_map</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> -><br>       (Exception.method_handler -><br>        Ckappa_sig.c_agent_name -><br>        Ckappa_sig.c_site_name -><br>        Ckappa_sig.c_state -><br>        Exception.method_handler *<br>        (Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state)<br>        <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a>) -><br>       <a href="Communication.html#TYPEprefold">prefold</a> -><br>       Exception.method_handler * <a href="Communication.html#TYPEprecondition">precondition</a></code></pre></body></html>
+<pre><span id="VALoverwrite_potential_partners_map"><span class="keyword">val</span> overwrite_potential_partners_map</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> -><br>       (Exception.method_handler -><br>        Ckappa_sig.c_agent_name -><br>        Ckappa_sig.c_site_name -><br>        Ckappa_sig.c_state -><br>        Exception.method_handler *<br>        (Ckappa_sig.c_agent_name * Ckappa_sig.c_site_name * Ckappa_sig.c_state)<br>        <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a>) -><br>       <a href="Communication.html#TYPEprefold">prefold</a> -><br>       Exception.method_handler * <a href="Communication.html#TYPEprecondition">precondition</a></code></pre>
+<pre><span id="VALpost_condition"><span class="keyword">val</span> post_condition</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       Ckappa_sig.c_rule -><br>       <a href="Communication.html#TYPEprecondition">precondition</a> -><br>       <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">Analyzer_headers.global_dynamic_information</a> -><br>       <a href="Communication.html#TYPEpath">path</a> -><br>       Exception.method_handler * <a href="Analyzer_headers.html#TYPEglobal_dynamic_information">Analyzer_headers.global_dynamic_information</a> *<br>       Ckappa_sig.c_state list <a href="Usual_domains.html#TYPEflat_lattice">Usual_domains.flat_lattice</a></code></pre></body></html>

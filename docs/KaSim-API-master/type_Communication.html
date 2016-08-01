@@ -72,6 +72,9 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;path_defined_in&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LHS</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Cckappa_sig</span>.enriched_rule<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">RHS</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Cckappa_sig</span>.enriched_rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;event&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Dummy</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Check_rule</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_rule_id<br>
@@ -86,6 +89,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type_in&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_name;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;path&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;defined_in&nbsp;:&nbsp;<span class="constructor">Communication</span>.path_defined_in;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;agent_id&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_id;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;relative_address&nbsp;:&nbsp;<span class="constructor">Communication</span>.step&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;site&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name;<br>
@@ -180,4 +184,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.prefold&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Communication</span>.precondition<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;post_condition&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_rule&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;list&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice<br>
 <span class="keyword">end</span></code></body></html>
