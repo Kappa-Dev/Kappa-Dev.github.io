@@ -74,6 +74,7 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><link title="Printers" rel="Section" href="#6_Printers">
+<link title="Json " rel="Section" href="#6_Json">
 <link title="Dependencies management" rel="Section" href="#6_Dependenciesmanagement">
 <title>KaSim API : Operator</title>
 </head>
@@ -319,6 +320,18 @@ Compiled algebraic expression<br>
 <pre><span id="VALprint_state_alg_op"><span class="keyword">val</span> print_state_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> unit</code></pre>
 <pre><span id="VALprint_bool_op"><span class="keyword">val</span> print_bool_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbool_op">bool_op</a> -> unit</code></pre>
 <pre><span id="VALprint_compare_op"><span class="keyword">val</span> print_compare_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEcompare_op">compare_op</a> -> unit</code></pre><br>
+<h6 id="6_Json">Json </h6><br>
+
+<pre><span id="VALbin_alg_op_to_json"><span class="keyword">val</span> bin_alg_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALbin_alg_op_of_json"><span class="keyword">val</span> bin_alg_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a></code></pre>
+<pre><span id="VALun_alg_op_to_json"><span class="keyword">val</span> un_alg_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEun_alg_op">un_alg_op</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALun_alg_op_of_json"><span class="keyword">val</span> un_alg_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEun_alg_op">un_alg_op</a></code></pre>
+<pre><span id="VALstate_alg_op_to_json"><span class="keyword">val</span> state_alg_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALstate_alg_op_of_json"><span class="keyword">val</span> state_alg_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a></code></pre>
+<pre><span id="VALbool_op_to_json"><span class="keyword">val</span> bool_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEbool_op">bool_op</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALbool_op_of_json"><span class="keyword">val</span> bool_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEbool_op">bool_op</a></code></pre>
+<pre><span id="VALcompare_op_to_json"><span class="keyword">val</span> compare_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEcompare_op">compare_op</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALcompare_op_of_json"><span class="keyword">val</span> compare_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEcompare_op">compare_op</a></code></pre><br>
 <h6 id="6_Dependenciesmanagement">Dependencies management</h6><br>
 
 <pre><code><span id="TYPErev_dep"><span class="keyword">type</span> <code class="type"></code>rev_dep</span> = </code></pre><table class="typetable">

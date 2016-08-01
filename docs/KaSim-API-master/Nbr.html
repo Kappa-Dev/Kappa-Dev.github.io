@@ -131,14 +131,19 @@ Kappa numbers (either float, int or int64) and operations on them<br>
 <pre><span id="VALone"><span class="keyword">val</span> one</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a></code></pre>
 <pre><span id="VALis_strictly_positive"><span class="keyword">val</span> is_strictly_positive</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> <a href="Nbr.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> string</code></pre>
 <pre><span id="VALiteri"><span class="keyword">val</span> iteri</span> : <code class="type">(<a href="Nbr.html#TYPEt">t</a> -> 'a -> 'a) -> 'a -> <a href="Nbr.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
 <code class="code">iter f x n</code><br>
 <b>Returns</b> f (n - k) (... (f (n - 1) (f n x))) where k &lt; n &lt;= k+1<br>
 </div>
 
+<pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> string</code></pre>
 <pre><span id="VALof_string"><span class="keyword">val</span> of_string</span> : <code class="type">string -> <a href="Nbr.html#TYPEt">t</a></code></pre><div class="info ">
 <b>Raises</b> <code>Failure</code> "float_of_string"<br>
+</div>
+
+<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Nbr.html#TYPEt">t</a></code></pre><div class="info ">
+<b>Raises</b> <code>Yojson.Basic.Util.Type_error</code> if incorrect<br>
 </div>
 
 <pre><span id="VALof_un_alg_op"><span class="keyword">val</span> of_un_alg_op</span> : <code class="type"><a href="Operator.html#TYPEun_alg_op">Operator.un_alg_op</a> -> <a href="Nbr.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">t</a></code></pre>

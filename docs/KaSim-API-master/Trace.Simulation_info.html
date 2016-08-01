@@ -120,4 +120,6 @@ type of data to be given with observables for story compression
 <pre><span id="VALcompare_by_story_id"><span class="keyword">val</span> compare_by_story_id</span> : <code class="type">'a <a href="Trace.Simulation_info.html#TYPEt">t</a> -> 'a <a href="Trace.Simulation_info.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALupdate_profiling_info"><span class="keyword">val</span> update_profiling_info</span> : <code class="type">'a -> 'b <a href="Trace.Simulation_info.html#TYPEt">t</a> -> 'a <a href="Trace.Simulation_info.html#TYPEt">t</a></code></pre>
 <pre><span id="VALevent"><span class="keyword">val</span> event</span> : <code class="type">'a <a href="Trace.Simulation_info.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALstory_id"><span class="keyword">val</span> story_id</span> : <code class="type">'a <a href="Trace.Simulation_info.html#TYPEt">t</a> -> int</code></pre></body></html>
+<pre><span id="VALstory_id"><span class="keyword">val</span> story_id</span> : <code class="type">'a <a href="Trace.Simulation_info.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type">('a -> Yojson.Basic.json) -> 'a <a href="Trace.Simulation_info.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">(Yojson.Basic.json -> 'a) -> Yojson.Basic.json -> 'a <a href="Trace.Simulation_info.html#TYPEt">t</a></code></pre></body></html>
