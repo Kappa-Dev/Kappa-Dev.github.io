@@ -72,22 +72,6 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;direction&nbsp;=&nbsp;<span class="constructor">Direct</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Reverse</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Undirected</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Both</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;shape&nbsp;=&nbsp;<span class="constructor">Invisible</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">House</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Rect</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Ellipse</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Circle</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;headkind&nbsp;=&nbsp;<span class="constructor">Normal</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Vee</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Tee</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">No_head</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;linestyle&nbsp;=&nbsp;<span class="constructor">Plain</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Dotted</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Dashed</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;color&nbsp;=&nbsp;<span class="constructor">Red</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Green</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">White</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Blue</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Black</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">LightSkyBlue</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PaleGreen</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;options&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Color</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Graph_loggers</span>.color<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FillColor</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Graph_loggers</span>.color<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Label</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Width</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Height</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Direction</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Graph_loggers</span>.direction<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Shape</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Graph_loggers</span>.shape<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ArrowHead</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Graph_loggers</span>.headkind<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ArrowTail</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Graph_loggers</span>.headkind<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">LineStyle</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Graph_loggers</span>.linestyle<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_graph_preamble&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?filter_in:<span class="constructor">Loggers</span>.encoding&nbsp;list&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -102,14 +86,15 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;close_asso&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_asso&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_node&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;?directives:<span class="constructor">Graph_loggers</span>.options&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?directives:<span class="constructor">Graph_loggers_options</span>.options&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_edge&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;?directives:<span class="constructor">Graph_loggers</span>.options&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?directives:<span class="constructor">Graph_loggers_options</span>.options&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?prefix:string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_one_to_n_relation&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;?directives:<span class="constructor">Graph_loggers</span>.options&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;?style_one:<span class="constructor">Graph_loggers</span>.linestyle&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;?style_n:<span class="constructor">Graph_loggers</span>.linestyle&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?directives:<span class="constructor">Graph_loggers_options</span>.options&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?style_one:<span class="constructor">Graph_loggers_options</span>.linestyle&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?style_n:<span class="constructor">Graph_loggers_options</span>.linestyle&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 <span class="keyword">end</span></code></body></html>
