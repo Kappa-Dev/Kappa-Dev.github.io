@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Usual_domains.html">
-<link rel="next" href="Views_domain.html">
+<link rel="previous" href="Ode_loggers.html">
+<link rel="next" href="Nbr.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -74,18 +74,34 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Rules_domain</title>
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Graph_json</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Usual_domains.html" title="Usual_domains">Previous</a>
+<div class="navbar"><a class="pre" href="Ode_loggers.html" title="Ode_loggers">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Views_domain.html" title="Views_domain">Next</a>
+&nbsp;<a class="post" href="Nbr.html" title="Nbr">Next</a>
 </div>
-<h1>Module <a href="type_Rules_domain.html">Rules_domain</a></h1>
+<h1>Module <a href="type_Graph_json.html">Graph_json</a></h1>
 
-<pre><span class="keyword">module</span> Rules_domain: <code class="code"><span class="keyword">sig</span></code> <a href="Rules_domain.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-This domain tracks which rules can be applied, and warns other domains at the first application of a rule<br>
+<pre><span class="keyword">module</span> Graph_json: <code class="code"><span class="keyword">sig</span></code> <a href="Graph_json.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+* graph_js.ml
+  *
+  * a module for KaSim
+  * Jérôme Feret, projet Antique, INRIA Paris
+  *
+  * KaSim
+  * Jean Krivine, Université Paris-Diderot, CNRS
+  *
+  * Creation: 23/05/2016
+  * Last modification: 25/05/2016
+  * *
+  *
+  *
+  * Copyright 2016  Institut National de Recherche en Informatique et
+  * en Automatique.  All rights reserved.  This file is distributed
+  * under the terms of the GNU Library General Public License<br>
 </div>
 <hr width="100%">
 
-<pre><span class="keyword">module</span> <a href="Rules_domain.Domain.html">Domain</a>: <code class="type"><a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a></code><code class="type"> </code></pre></body></html>
+<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type">Graph_loggers_sig.graph -> Yojson.Basic.json</code></pre>
+<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> Graph_loggers_sig.graph</code></pre></body></html>
