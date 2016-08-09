@@ -100,14 +100,14 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.array">array</span>&nbsp;: <code class="type">'a G.t Pervasives.ref</code>;</code></td>
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.array">array</span>&nbsp;: <code class="type">'a G.t</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.current_size">current_size</span>&nbsp;: <code class="type">int Pervasives.ref</code>;</code></td>
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.current_size">current_size</span>&nbsp;: <code class="type">int</code>;</code></td>
 
 </tr>
 <tr>
@@ -139,5 +139,6 @@
 <pre><span id="VALiteri"><span class="keyword">val</span> iteri</span> : <code class="type">(int -> 'a -> unit) -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALfold_lefti"><span class="keyword">val</span> fold_lefti</span> : <code class="type">(int -> 'a -> 'b -> 'a) -> 'a -> 'b <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> 'a</code></pre>
 <pre><span id="VALfold_righti"><span class="keyword">val</span> fold_righti</span> : <code class="type">(int -> 'a -> 'b -> 'b) -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> 'b -> 'b</code></pre>
+<pre><span id="VALmap"><span class="keyword">val</span> map</span> : <code class="type">('a -> 'b) -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> 'b <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
 <pre><span id="VALblit"><span class="keyword">val</span> blit</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -><br>       int -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> int -> int -> unit</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?trailing:(Format.formatter -> unit) -><br>       (Format.formatter -> unit) -><br>       (int -> Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> unit</code></pre></body></html>

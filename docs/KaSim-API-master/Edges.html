@@ -101,6 +101,10 @@ agent_id * agent_type<br>
 
 
 <pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">unit -> <a href="Edges.html#TYPEt">t</a></code></pre>
+<pre><span id="VALcopy"><span class="keyword">val</span> copy</span> : <code class="type"><a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
+You'd better NOT use that on the state of a simulation<br>
+</div>
+
 <pre><span id="VALadd_agent"><span class="keyword">val</span> add_agent</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> int * <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">add_agent sigs agent_type graph</code><br>
 </div>
