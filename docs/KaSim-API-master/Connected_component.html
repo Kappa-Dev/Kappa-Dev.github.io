@@ -110,6 +110,7 @@ type for partial domain<br>
 Create a connected component
 </div>
 
+<pre><span id="VALempty_cc"><span class="keyword">val</span> empty_cc</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Connected_component.html#TYPEcc">cc</a></code></pre>
 <pre><span id="VALbegin_new"><span class="keyword">val</span> begin_new</span> : <code class="type"><a href="Connected_component.PreEnv.html#TYPEt">PreEnv.t</a> -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
 Starts creation<br>
 </div>
@@ -130,6 +131,7 @@ Starts creation<br>
 <pre><span id="VALfinish_new"><span class="keyword">val</span> finish_new</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.PreEnv.html#TYPEt">PreEnv.t</a> * Renaming.t * <a href="Connected_component.html#TYPEt">t</a></code></pre><br>
 <h6 id="6_Useaconnectedcomponent">Use a connected component </h6><br>
 
+<pre><span id="VALcompare_canonicals"><span class="keyword">val</span> compare_canonicals</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> <a href="Connected_component.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALis_equal_canonicals"><span class="keyword">val</span> is_equal_canonicals</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> <a href="Connected_component.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       ?with_id:unit -> Format.formatter -> <a href="Connected_component.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
 <code class="code">print ~sigs ?with_id:<span class="constructor">None</span> form cc</code><br>
@@ -139,5 +141,7 @@ Starts creation<br>
 <pre><span id="VALfind_root_type"><span class="keyword">val</span> find_root_type</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> int option</code></pre>
 <pre><span id="VALautomorphisms"><span class="keyword">val</span> automorphisms</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> Renaming.t list</code></pre>
 <pre><span class="keyword">module</span> <a href="Connected_component.Matching.html">Matching</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.Matching.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
+<pre><span id="VALembeddings_to_fully_specified"><span class="keyword">val</span> embeddings_to_fully_specified</span> : <code class="type"><a href="Connected_component.html#TYPEcc">cc</a> -> <a href="Connected_component.html#TYPEcc">cc</a> -> Renaming.t list</code></pre>
+<pre><span id="VALadd_fully_specified_to_graph"><span class="keyword">val</span> add_fully_specified_to_graph</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Connected_component.html#TYPEcc">cc</a> -> <a href="Edges.html#TYPEt">Edges.t</a> * Renaming.t</code></pre>
 <pre><span class="keyword">module</span> <a href="Connected_component.Set.html">Set</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt=t</code></pre>
 <pre><span class="keyword">module</span> <a href="Connected_component.Map.html">Map</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt=t</code></pre></body></html>
