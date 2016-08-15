@@ -6583,9 +6583,9 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (b5b0c53) (without Tk interface)
- <br />Analysis launched at 2016/08/14 21:14:19 (GMT+0) on
- <br />testing-worker-linux-docker-d3c45f2b-3477-linux-9
+Kappa Static Analyzer (f88abb0) (without Tk interface)
+ <br />Analysis launched at 2016/08/15 11:46:53 (GMT+0) on
+ <br />testing-worker-linux-docker-845ffc1d-3547-linux-10
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6611,9 +6611,9 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (b5b0c53) (without Tk interface)
- <br />Analysis launched at 2016/08/14 21:14:19 (GMT+0) on
- <br />testing-worker-linux-docker-d3c45f2b-3477-linux-9
+Kappa Static Analyzer (f88abb0) (without Tk interface)
+ <br />Analysis launched at 2016/08/15 11:46:53 (GMT+0) on
+ <br />testing-worker-linux-docker-845ffc1d-3547-linux-10
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6631,21 +6631,19 @@ Kappa Static Analyzer (b5b0c53) (without Tk interface)
  <br />------------------------------------------------------------
  <br />* Relational properties:
  <br />------------------------------------------------------------
- <br />In agent A, the internal state of site x is p whenever the
- <br />binding state of site y is A@y.
+ <br />A(y!A.y) =&#x003E; A(x~p,y!A.y)
  <br />
  <br />------------------------------------------------------------
  <br />* Non relational properties:
  <br />------------------------------------------------------------
- <br />The internal state of site y in agent A is always u.
- <br />The internal state of site x in agent A ranges over u and p.
- <br />The binding state of site y in agent A ranges over free and
- <br />A@y.
+ <br />A() =&#x003E; [ A(y~u?) ]
+ <br />A() =&#x003E; [ A(x~u) v A(x~p) ]
+ <br />A() =&#x003E; [ A(y) v A(y!A.y) ]
  <br />------------------------------------------------------------
  <br />* Parallel bonds domain
  <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 36--><p class="nopar" >
+<!--l. 34--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.5: </span><span  
 class="content">Reachability analysis of the model <span 
