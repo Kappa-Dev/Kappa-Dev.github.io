@@ -51,8 +51,8 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
+<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
 <link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
-<link title="Dummy_interface" rel="Chapter" href="Dummy_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
 <link title="Analyzer" rel="Chapter" href="Analyzer.html">
 <link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
@@ -171,7 +171,7 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALappend">append</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALapply">apply</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALapply">apply</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALapply_event_list">apply_event_list</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
 <td></td></tr>
@@ -291,7 +291,7 @@ Starts creation
 <tr><td align="left"><br>C</td></tr>
 <tr><td><a href="Composite_domain.Composite_domain.html#VALc_mixture_is_reachable">c_mixture_is_reachable</a> [<a href="Composite_domain.Composite_domain.html">Composite_domain.Composite_domain</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALcanonic_form">canonic_form</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALcanonic_form">canonic_form</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Priority.html#VALcausal">causal</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
@@ -338,6 +338,8 @@ Starts creation
 <tr><td><a href="Utilities.html#VALcompare_canonical_form">compare_canonical_form</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.html#VALcompare_canonicals">compare_canonicals</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALcompare_connected_component">compare_connected_component</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#VALcompare_op_of_json">compare_op_of_json</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
@@ -387,9 +389,9 @@ compress a trace with the level of abstraction defined in the argument parameter
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALconcretize_test">concretize_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALconnected_components_of_mixture">connected_components_of_mixture</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALconnected_components_of_mixture">connected_components_of_mixture</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALconnected_components_of_patterns">connected_components_of_patterns</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALconnected_components_of_patterns">connected_components_of_patterns</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALconnected_components_of_unary_rules">connected_components_of_unary_rules</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
@@ -497,7 +499,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALdimension">dimension</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALdisjoint_union">disjoint_union</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALdisjoint_union">disjoint_union</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALdisjoint_union">disjoint_union</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
@@ -505,15 +507,13 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALdo_modification">do_modification</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALdo_we_divide_rates_by_n_auto_in_lhs">do_we_divide_rates_by_n_auto_in_lhs</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALdo_we_divide_rates_by_n_auto_in_lhs">do_we_divide_rates_by_n_auto_in_lhs</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALdummy">dummy</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALdummy_annot">dummy_annot</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALdummy_canonic_species">dummy_canonic_species</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
-<td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALdummy_chemical_species">dummy_chemical_species</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALdummy_chemical_species">dummy_chemical_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALdummy_html_logger">dummy_html_logger</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
@@ -566,6 +566,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALempty_association_list">empty_association_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALempty_association_list">empty_association_list</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALempty_cache">empty_cache</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.Matching.html#VALempty_cache">empty_cache</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
 <td></td></tr>
@@ -713,9 +715,9 @@ fill_siphon adds spurious init event, to break causal dependences;
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfind_default_with_logs">find_default_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALfind_embeddings">find_embeddings</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALfind_embeddings">find_embeddings</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALfind_embeddings_unary_binary">find_embeddings_unary_binary</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALfind_embeddings_unary_binary">find_embeddings_unary_binary</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfind_option">find_option</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -852,7 +854,7 @@ Apply the rule for sure if it is possible.
 <td></td></tr>
 <tr><td><a href="Odes.Make.html#VALget_compil">get_compil</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALget_compil">get_compil</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALget_compil">get_compil</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_compilation_information">get_compilation_information</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
@@ -886,7 +888,7 @@ get the id of an event in the simulation
 </td></tr>
 <tr><td><a href="Export_to_KaSa.html#VALget_influence_map">get_influence_map</a> [<a href="Export_to_KaSa.html">Export_to_KaSa</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALget_initial_state">get_initial_state</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALget_init">get_init</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALget_internal">get_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
@@ -899,9 +901,9 @@ get the id of an event in the simulation
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_mvbdu_handler">get_mvbdu_handler</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALget_obs">get_obs</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALget_obs">get_obs</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALget_obs_titles">get_obs_titles</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALget_obs_titles">get_obs_titles</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALget_ode">get_ode</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
@@ -930,7 +932,7 @@ conversely, convert a trace in a list of refined steps
 <td></td></tr>
 <tr><td><a href="Environment.html#VALget_rule">get_rule</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALget_rules">get_rules</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALget_rules">get_rules</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALget_runtime_info_from_observable_hit">get_runtime_info_from_observable_hit</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
@@ -951,11 +953,9 @@ get the date of an event in the simulation
 <td></td></tr>
 <tr><td><a href="Environment.html#VALget_token_reverse_dependencies">get_token_reverse_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALget_tokens">get_tokens</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
-<td></td></tr>
 <tr><td><a href="Agent_place.html#VALget_type">get_type</a> [<a href="Agent_place.html">Agent_place</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALget_variables">get_variables</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALget_variables">get_variables</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Usual_domains.html#VALglb_list">glb_list</a> [<a href="Usual_domains.html">Usual_domains</a>]</td>
 <td></td></tr>
@@ -1164,11 +1164,11 @@ Infer agent signatures and tokens from init, rules and perturbations
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALlength">length</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALlhs">lhs</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALlhs">lhs</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALlift_embedding">lift_embedding</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALlift_embedding">lift_embedding</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALlift_species">lift_species</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALlift_species">lift_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALlink_destination">link_destination</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
@@ -1288,6 +1288,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 </div>
 </td></tr>
 <tr><td><a href="SetMap.Set.html#VALminus_with_logs">minus_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALmixture_of_init">mixture_of_init</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALmk_dir_r">mk_dir_r</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
@@ -1456,11 +1458,13 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Environment.html#VALnb_syntactic_rules">nb_syntactic_rules</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALnb_tokens">nb_tokens</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
 <tr><td><a href="Environment.html#VALnb_tokens">nb_tokens</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALnbr_automorphisms_in_chemical_species">nbr_automorphisms_in_chemical_species</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALnbr_automorphisms_in_chemical_species">nbr_automorphisms_in_chemical_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALnbr_automorphisms_in_pattern">nbr_automorphisms_in_pattern</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALnbr_automorphisms_in_pattern">nbr_automorphisms_in_pattern</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALnbr_variables">nbr_variables</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
@@ -1742,11 +1746,11 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALprint_breakable_space">print_breakable_space</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALprint_canonic_species">print_canonic_species</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALprint_canonic_species">print_canonic_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALprint_cell">print_cell</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALprint_chemical_species">print_chemical_species</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALprint_chemical_species">print_chemical_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_comment">print_comment</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
@@ -1760,7 +1764,7 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALprint_concrete_test">print_concrete_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALprint_connected_component_id">print_connected_component_id</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALprint_connected_component">print_connected_component</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Raw_mixture.html#VALprint_dot">print_dot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
@@ -1816,11 +1820,13 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Operator.html#VALprint_rev_dep">print_rev_dep</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALprint_rule">print_rule</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
 <tr><td><a href="LKappa.html#VALprint_rule">print_rule</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALprint_rule">print_rule</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALprint_rule_id">print_rule_id</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALprint_rule_id">print_rule_id</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="LKappa.html#VALprint_rule_mixture">print_rule_mixture</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
@@ -1888,7 +1894,7 @@ proj_set f set is the set {f(a) | a\in S}
 <tr><td align="left"><br>R</td></tr>
 <tr><td><a href="SetMap.Set.html#VALrandom">random</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALrate">rate</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALrate">rate</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.Matching.html#VALreconstruct">reconstruct</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
 <td><div class="info">
@@ -2207,7 +2213,9 @@ compute the strong compression of a given trace,
 <td></td></tr>
 <tr><td><a href="Pp_svg.html#VALto_string">to_string</a> [<a href="Pp_svg.html">Pp_svg</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALtoken_vector">token_vector</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALtoken_vector">token_vector</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALtoken_vector_of_init">token_vector_of_init</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALtokens_finder">tokens_finder</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
@@ -2249,7 +2257,7 @@ Resynchronize the state after a rule application.
 <tr><td><a href="SetMap.Map.html#VALupdate_with_logs">update_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>V</td></tr>
-<tr><td><a href="Ode_interface.Interface.html#VALvalid_modes">valid_modes</a> [<a href="Ode_interface.Interface.html">Ode_interface.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALvalid_modes">valid_modes</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
