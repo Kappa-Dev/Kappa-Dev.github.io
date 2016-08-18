@@ -95,7 +95,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_canonic_species&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;canonic_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_divide_rates_by_n_auto_in_lhs&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_divide_rates_by_n_auto_in_lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_chemical_species&nbsp;:&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_pattern&nbsp;:&nbsp;pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;canonic_form&nbsp;:&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;canonic_species<br>
@@ -138,7 +138,9 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mixture_of_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hidden_init&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lift_species&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compil&nbsp;:&nbsp;<span class="constructor">Common_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compil&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rate_convention:<span class="constructor">Ode_args</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_rules&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_variables&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>

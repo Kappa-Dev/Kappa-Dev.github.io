@@ -101,7 +101,7 @@
 <pre><span id="TYPEnetwork"><span class="keyword">type</span> <code class="type">'a</code> network</span> </pre>
 
 
-<pre><span id="VALget_compil"><span class="keyword">val</span> get_compil</span> : <code class="type">Common_args.t -> Run_cli_args.t -> I.compil</code></pre>
+<pre><span id="VALget_compil"><span class="keyword">val</span> get_compil</span> : <code class="type">rate_convention:Ode_args.rate_convention -><br>       Common_args.t -> Run_cli_args.t -> I.compil</code></pre>
 <pre><span id="VALnetwork_from_compil"><span class="keyword">val</span> network_from_compil</span> : <code class="type">I.compil -> int <a href="Odes.Make.html#TYPEnetwork">network</a></code></pre>
 <pre><span id="VALget_reactions"><span class="keyword">val</span> get_reactions</span> : <code class="type">'a <a href="Odes.Make.html#TYPEnetwork">network</a> -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> list * <a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> list *<br>        ('a <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> <a href="Location.html#TYPEannot">Location.annot</a>) list *<br>        I.rule)<br>       list</code></pre>
 <pre><span id="VALexport_network"><span class="keyword">val</span> export_network</span> : <code class="type">command_line:string -><br>       command_line_quotes:string -><br>       data_file:string -><br>       init_t:float -><br>       max_t:float -><br>       nb_points:int -> <a href="Loggers.html#TYPEt">Loggers.t</a> -> I.compil -> int <a href="Odes.Make.html#TYPEnetwork">network</a> -> unit</code></pre>
