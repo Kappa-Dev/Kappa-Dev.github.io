@@ -107,6 +107,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.canonic_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_divide_rates_by_n_auto_in_lhs&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_count_in_embeddings&nbsp;:&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_chemical_species&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_pattern&nbsp;:<br>
@@ -205,6 +206,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compil&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rate_convention:<span class="constructor">Ode_args</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;show_reactions:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;count:<span class="constructor">Ode_args</span>.count&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;compute_jacobian:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_rules&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>

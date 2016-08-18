@@ -260,6 +260,31 @@
 
 
 
+<pre><code><span id="TYPEcorrect"><span class="keyword">type</span> <code class="type"></code>correct</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcorrect.Div"><span class="constructor">Div</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcorrect.Mul"><span class="constructor">Mul</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcorrect.Nil"><span class="constructor">Nil</span></span></code></td>
+
+</tr></table>
+
+
+
 <pre><code><span id="TYPEnetwork_handler"><span class="keyword">type</span> <code class="type">('a, 'b)</code> network_handler</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -313,9 +338,9 @@
 <pre><span id="VALstart_time"><span class="keyword">val</span> start_time</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> float -> unit</code></pre>
 <pre><span id="VALdeclare_init"><span class="keyword">val</span> declare_init</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> int -> unit</code></pre>
 <pre><span id="VALlaunch_main"><span class="keyword">val</span> launch_main</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALconsume"><span class="keyword">val</span> consume</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -> <a href="Ode_loggers.html#TYPEvariable">variable</a> -> <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> unit</code></pre>
-<pre><span id="VALproduce"><span class="keyword">val</span> produce</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -> <a href="Ode_loggers.html#TYPEvariable">variable</a> -> <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> unit</code></pre>
-<pre><span id="VALupdate_token"><span class="keyword">val</span> update_token</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_lhs:int -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       'a <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> list -> ('a, int) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
+<pre><span id="VALconsume"><span class="keyword">val</span> consume</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       (<a href="Ode_loggers.html#TYPEvariable">variable</a> * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> unit</code></pre>
+<pre><span id="VALproduce"><span class="keyword">val</span> produce</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       (<a href="Ode_loggers.html#TYPEvariable">variable</a> * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> unit</code></pre>
+<pre><span id="VALupdate_token"><span class="keyword">val</span> update_token</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       nauto_in_lhs:int -><br>       <a href="Ode_loggers.html#TYPEvariable">variable</a> -><br>       'a <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       (<a href="Ode_loggers.html#TYPEvariable">variable</a> * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -><br>       ('a, int) <a href="Ode_loggers.html#TYPEnetwork_handler">network_handler</a> -> unit</code></pre>
 <pre><span id="VALprint_comment"><span class="keyword">val</span> print_comment</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?filter_in:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list option -><br>       ?filter_out:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list -> string -> unit</code></pre>
 <pre><span id="VALopen_procedure"><span class="keyword">val</span> open_procedure</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> string -> string list -> unit</code></pre>
 <pre><span id="VALreturn"><span class="keyword">val</span> return</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> unit</code></pre>
