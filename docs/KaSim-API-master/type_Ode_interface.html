@@ -114,11 +114,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;*&nbsp;embedding&nbsp;*&nbsp;chemical_species)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;pattern&nbsp;*&nbsp;embedding_forest&nbsp;*&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_name&nbsp;=&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;arity&nbsp;=&nbsp;<span class="constructor">Usual</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Unary</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;direction&nbsp;=&nbsp;<span class="constructor">Direct</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Op</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id&nbsp;=&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id_with_mode&nbsp;=&nbsp;rule_id&nbsp;*&nbsp;arity<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;valid_modes&nbsp;:&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;arity&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lhs&nbsp;:&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;pattern<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id_with_mode&nbsp;=&nbsp;rule_id&nbsp;*&nbsp;arity&nbsp;*&nbsp;direction<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;valid_modes&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;pattern<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;token_vector&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list<br>
@@ -128,8 +130,11 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_id&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule&nbsp;:&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rate&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;arity&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rate_name&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_name<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mixture_of_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hidden_init&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lift_species&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
