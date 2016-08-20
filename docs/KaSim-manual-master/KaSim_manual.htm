@@ -6583,9 +6583,9 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (89aa117) (without Tk interface)
- <br />Analysis launched at 2016/08/19 05:45:09 (GMT+0) on
- <br />testing-worker-linux-docker-ce385e36-3440-linux-8
+Kappa Static Analyzer (1d72454) (without Tk interface)
+ <br />Analysis launched at 2016/08/20 08:00:32 (GMT+0) on
+ <br />testing-worker-linux-docker-260b6bde-3446-linux-12
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6611,22 +6611,20 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (89aa117) (without Tk interface)
- <br />Analysis launched at 2016/08/19 05:45:09 (GMT+0) on
- <br />testing-worker-linux-docker-ce385e36-3440-linux-8
+Kappa Static Analyzer (1d72454) (without Tk interface)
+ <br />Analysis launched at 2016/08/20 08:00:32 (GMT+0) on
+ <br />testing-worker-linux-docker-260b6bde-3446-linux-12
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
  <br />Reachability analysis...
  <br />
  <br />------------------------------------------------------------
- <br />* Dead rules :
+ <br />* There are some non applyable rules
  <br />------------------------------------------------------------
  <br />rule 2: dead will never be applied.
- <br />
  <br />------------------------------------------------------------
- <br />* Dead agents :
- <br />------------------------------------------------------------
+ <br />every agent may occur in the model
  <br />
  <br />------------------------------------------------------------
  <br />* Relational properties:
@@ -6640,10 +6638,13 @@ Kappa Static Analyzer (89aa117) (without Tk interface)
  <br />A() =&#x003E; [ A(x~u) v A(x~p) ]
  <br />A() =&#x003E; [ A(y) v A(y!A.y) ]
  <br />------------------------------------------------------------
- <br />* Parallel bonds domain
+ <br />* Properties in connected agents
+ <br />------------------------------------------------------------
+ <br />------------------------------------------------------------
+ <br />* Properties of pairs of bonds
  <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 34--><p class="nopar" >
+<!--l. 35--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.5: </span><span  
 class="content">Reachability analysis of the model <span 

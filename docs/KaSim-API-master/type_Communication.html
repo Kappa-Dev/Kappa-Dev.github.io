@@ -91,11 +91,24 @@
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type_in&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_name;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;path&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;defined_in&nbsp;:&nbsp;<span class="constructor">Communication</span>.path_defined_in;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;agent_id&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_id;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;relative_address&nbsp;:&nbsp;<span class="constructor">Communication</span>.step&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;site&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;path_in_pattern&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;defined_in&nbsp;:&nbsp;<span class="constructor">Communication</span>.path_defined_in;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;path&nbsp;:&nbsp;<span class="constructor">Communication</span>.path;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;output&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cannot_exist</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">May_exist</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Communication</span>.path<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Located</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_id<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_defined_in&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path_in_pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Communication</span>.path_defined_in<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_agent_id&nbsp;:&nbsp;<span class="constructor">Communication</span>.path_in_pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_id<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_site&nbsp;:&nbsp;<span class="constructor">Communication</span>.path_in_pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_relative_address&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path_in_pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Communication</span>.step&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="keyword">type</span>&nbsp;<span class="constructor">PathMap</span>&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t<br>
@@ -185,8 +198,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path_in_pattern&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;list&nbsp;<span class="constructor">Usual_domains</span>.flat_lattice<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;follow_path_inside_cc&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.mixture&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.path&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="constructor">Communication</span>.output<br>
 <span class="keyword">end</span></code></body></html>
