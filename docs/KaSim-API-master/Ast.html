@@ -650,4 +650,6 @@ Infer agent signatures and tokens from init, rules and perturbations<br>
 Fragile: the list MUST NOT be a singleton<br>
 </div>
 
-<pre><span id="VALlink_of_json"><span class="keyword">val</span> link_of_json</span> : <code class="type">('a -> Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json list -> 'b) -> Yojson.Basic.json -> ('a, 'b) <a href="Ast.html#TYPElink">link</a></code></pre></body></html>
+<pre><span id="VALlink_of_json"><span class="keyword">val</span> link_of_json</span> : <code class="type">('a -> Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json list -> 'b) -> Yojson.Basic.json -> ('a, 'b) <a href="Ast.html#TYPElink">link</a></code></pre>
+<pre><span id="VALcompil_of_json"><span class="keyword">val</span> compil_of_json</span> : <code class="type">Yojson.Basic.json -> (<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">compil</a></code></pre>
+<pre><span id="VALcompil_to_json"><span class="keyword">val</span> compil_to_json</span> : <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">compil</a> -> Yojson.Basic.json</code></pre></body></html>
