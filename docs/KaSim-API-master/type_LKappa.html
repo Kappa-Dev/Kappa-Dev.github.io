@@ -103,12 +103,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;r_mix&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_created&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_rm_tokens&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_add_tokens&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;r_rate&nbsp;:&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;r_rate&nbsp;:&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_un_rate&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Location</span>.annot&nbsp;option)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
@@ -126,9 +126,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(((<span class="constructor">String</span>.t&nbsp;*&nbsp;<span class="constructor">Location</span>.t)&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list)&nbsp;list,&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.elt)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_agent&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.ast_alg_expr&nbsp;<span class="constructor">Ast</span>.bool_expr<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_agent&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;modif_expr_of_ast&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>

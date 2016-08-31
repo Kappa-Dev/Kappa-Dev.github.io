@@ -256,7 +256,7 @@ In the reverse order on purpose so that we rev_map when we
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTperturbation.precondition">precondition</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
+<code><span id="TYPEELTperturbation.precondition">precondition</span>&nbsp;: <code class="type">(<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list, int) <a href="Alg_expr.html#TYPEbool_expr">Alg_expr.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
 
 </tr>
 <tr>
@@ -270,7 +270,7 @@ In the reverse order on purpose so that we rev_map when we
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTperturbation.abort">abort</span>&nbsp;: <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> option</code>;</code></td>
+<code><span id="TYPEELTperturbation.abort">abort</span>&nbsp;: <code class="type">(<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list, int) <a href="Alg_expr.html#TYPEbool_expr">Alg_expr.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a><br>       option</code>;</code></td>
 
 </tr></table>
 }
@@ -279,5 +279,5 @@ In the reverse order on purpose so that we rev_map when we
 
 <pre><span id="VALexists_modification"><span class="keyword">val</span> exists_modification</span> : <code class="type">(<a href="Primitives.html#TYPEmodification">modification</a> -> bool) -> <a href="Primitives.html#TYPEperturbation">perturbation</a> list -> bool</code></pre>
 <pre><span id="VALmap_expr_rule"><span class="keyword">val</span> map_expr_rule</span> : <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a>) -><br>       <a href="Primitives.html#TYPEelementary_rule">elementary_rule</a> -> <a href="Primitives.html#TYPEelementary_rule">elementary_rule</a></code></pre>
-<pre><span id="VALmap_expr_perturbation"><span class="keyword">val</span> map_expr_perturbation</span> : <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a>) -><br>       (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>        <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a>) -><br>       <a href="Primitives.html#TYPEperturbation">perturbation</a> -> <a href="Primitives.html#TYPEperturbation">perturbation</a></code></pre>
+<pre><span id="VALmap_expr_perturbation"><span class="keyword">val</span> map_expr_perturbation</span> : <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a>) -><br>       ((<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list, int) <a href="Alg_expr.html#TYPEbool_expr">Alg_expr.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>        (<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list, int) <a href="Alg_expr.html#TYPEbool_expr">Alg_expr.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a>) -><br>       <a href="Primitives.html#TYPEperturbation">perturbation</a> -> <a href="Primitives.html#TYPEperturbation">perturbation</a></code></pre>
 <pre><span id="VALstops_of_perturbation"><span class="keyword">val</span> stops_of_perturbation</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -> <a href="Primitives.html#TYPEperturbation">perturbation</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> list</code></pre></body></html>

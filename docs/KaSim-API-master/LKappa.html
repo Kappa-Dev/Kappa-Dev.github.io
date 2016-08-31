@@ -239,28 +239,28 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_rm_tokens">r_rm_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
+<code><span id="TYPEELTrule.r_rm_tokens">r_rm_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_add_tokens">r_add_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
+<code><span id="TYPEELTrule.r_add_tokens">r_add_tokens</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Location.html#TYPEannot">Location.annot</a> * int) list</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_rate">r_rate</span>&nbsp;: <code class="type">(<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
+<code><span id="TYPEELTrule.r_rate">r_rate</span>&nbsp;: <code class="type">(<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Location.html#TYPEannot">Location.annot</a></code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.r_un_rate">r_un_rate</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        int <a href="Location.html#TYPEannot">Location.annot</a> option)<br>       option</code>;</code></td>
+<code><span id="TYPEELTrule.r_un_rate">r_un_rate</span>&nbsp;: <code class="type">((<a href="LKappa.html#TYPErule_mixture">rule_mixture</a>, int) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Location.html#TYPEannot">Location.annot</a> *<br>        int <a href="Location.html#TYPEannot">Location.annot</a> option)<br>       option</code>;</code></td>
 
 </tr></table>
 }
@@ -270,7 +270,7 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">ltypes:bool -><br>       rates:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALrule_to_json"><span class="keyword">val</span> rule_to_json</span> : <code class="type"><a href="LKappa.html#TYPErule">rule</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALrule_of_json"><span class="keyword">val</span> rule_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="LKappa.html#TYPErule">rule</a></code></pre>
-<pre><span id="VALbool_expr_of_ast"><span class="keyword">val</span> bool_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (((String.t * <a href="Location.html#TYPEt">Location.t</a>) * <a href="Ast.html#TYPEport">Ast.port</a> list) list, Mods.StringMap.elt)<br>       <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Ast.html#TYPEast_alg_expr">Ast.ast_alg_expr</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALbool_expr_of_ast"><span class="keyword">val</span> bool_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (((String.t * <a href="Location.html#TYPEt">Location.t</a>) * <a href="Ast.html#TYPEport">Ast.port</a> list) list, Mods.StringMap.elt)<br>       <a href="Alg_expr.html#TYPEbool_expr">Alg_expr.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Alg_expr.html#TYPEbool_expr">Alg_expr.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
 <pre><span id="VALmodif_expr_of_ast"><span class="keyword">val</span> modif_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (((String.t * <a href="Location.html#TYPEt">Location.t</a>) * <a href="Ast.html#TYPEport">Ast.port</a> list) list, Mods.StringMap.elt)<br>       <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> -><br>       int list -> (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> * int list</code></pre>
 <pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       (<a href="Ast.html#TYPEagent">Ast.agent</a>, <a href="Ast.html#TYPEmixture">Ast.mixture</a>, string, <a href="Ast.html#TYPErule">Ast.rule</a>) <a href="Ast.html#TYPEcompil">Ast.compil</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * int list *<br>       (<a href="Ast.html#TYPEagent">Ast.agent</a>, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">Ast.compil</a></code></pre><div class="info ">
 <code class="code">compil_of_ast variable_overwrite ast</code><br>

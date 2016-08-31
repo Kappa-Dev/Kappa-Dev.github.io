@@ -82,7 +82,8 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;connected_component<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hidden_init<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;init&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;hidden_init&nbsp;*&nbsp;<span class="constructor">Location</span>.t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;hidden_init&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.t)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_cache&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;init<br>
@@ -127,10 +128,12 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;pattern<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;token_vector&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;token_vector_of_init&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;hidden_init&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_id&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule&nbsp;:&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_name&nbsp;:&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -138,7 +141,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rate_name&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_name<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mixture_of_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hidden_init&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
@@ -152,9 +155,10 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_variables&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;array<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_obs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;array&nbsp;list&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_obs&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_obs_titles&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_tokens&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 <span class="keyword">end</span></code></body></html>

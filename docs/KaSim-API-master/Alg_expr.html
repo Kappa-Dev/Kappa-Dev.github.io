@@ -88,19 +88,19 @@ depend in time, depend in event number, depend in given var<br>
 </div>
 <hr width="100%">
 
-<pre><code><span id="TYPEe"><span class="keyword">type</span> <code class="type">'a</code> e</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEe"><span class="keyword">type</span> <code class="type">('mix, 'id)</code> e</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTe.BIN_ALG_OP"><span class="constructor">BIN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEbin_alg_op">Operator.bin_alg_op</a> * 'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a><br>        * 'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+<code><span id="TYPEELTe.BIN_ALG_OP"><span class="constructor">BIN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEbin_alg_op">Operator.bin_alg_op</a> * ('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a><br>        * ('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTe.UN_ALG_OP"><span class="constructor">UN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEun_alg_op">Operator.un_alg_op</a> * 'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+<code><span id="TYPEELTe.UN_ALG_OP"><span class="constructor">UN_ALG_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEun_alg_op">Operator.un_alg_op</a> * ('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
 
 </tr>
 <tr>
@@ -114,21 +114,21 @@ depend in time, depend in event number, depend in given var<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTe.ALG_VAR"><span class="constructor">ALG_VAR</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+<code><span id="TYPEELTe.ALG_VAR"><span class="constructor">ALG_VAR</span></span> <span class="keyword">of</span> <code class="type">'id</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTe.KAPPA_INSTANCE"><span class="constructor">KAPPA_INSTANCE</span></span> <span class="keyword">of</span> <code class="type">'a</code></code></td>
+<code><span id="TYPEELTe.KAPPA_INSTANCE"><span class="constructor">KAPPA_INSTANCE</span></span> <span class="keyword">of</span> <code class="type">'mix</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTe.TOKEN_ID"><span class="constructor">TOKEN_ID</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+<code><span id="TYPEELTe.TOKEN_ID"><span class="constructor">TOKEN_ID</span></span> <span class="keyword">of</span> <code class="type">'id</code></code></td>
 
 </tr>
 <tr>
@@ -141,16 +141,52 @@ depend in time, depend in event number, depend in given var<br>
 
 
 
-<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type"><a href="Connected_component.html#TYPEcc">Connected_component.cc</a> array list <a href="Alg_expr.html#TYPEe">e</a></code> </pre>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type">(<a href="Connected_component.html#TYPEcc">Connected_component.cc</a> array list, int) <a href="Alg_expr.html#TYPEe">e</a></code> </pre>
 
 
-<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type">('a -> Yojson.Basic.json) -> 'a <a href="Alg_expr.html#TYPEe">e</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">(Yojson.Basic.json -> 'a) -> Yojson.Basic.json -> 'a <a href="Alg_expr.html#TYPEe">e</a></code></pre>
-<pre><span id="VALadd_dep"><span class="keyword">val</span> add_dep</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       <a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre><div class="info ">
+<pre><code><span id="TYPEbool_expr"><span class="keyword">type</span> <code class="type">('mix, 'id)</code> bool_expr</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_expr.TRUE"><span class="constructor">TRUE</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_expr.FALSE"><span class="constructor">FALSE</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_expr.BOOL_OP"><span class="constructor">BOOL_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEbool_op">Operator.bool_op</a> * ('mix, 'id) <a href="Alg_expr.html#TYPEbool_expr">bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a><br>        * ('mix, 'id) <a href="Alg_expr.html#TYPEbool_expr">bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbool_expr.COMPARE_OP"><span class="constructor">COMPARE_OP</span></span> <span class="keyword">of</span> <code class="type"><a href="Operator.html#TYPEcompare_op">Operator.compare_op</a> * ('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a><br>        * ('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type">('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json) -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">(Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'b) -> Yojson.Basic.json -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a></code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> -> unit</code></pre>
+<pre><span id="VALbool_to_json"><span class="keyword">val</span> bool_to_json</span> : <code class="type">('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json) -> ('a, 'b) <a href="Alg_expr.html#TYPEbool_expr">bool_expr</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALbool_of_json"><span class="keyword">val</span> bool_of_json</span> : <code class="type">(Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'b) -> Yojson.Basic.json -> ('a, 'b) <a href="Alg_expr.html#TYPEbool_expr">bool_expr</a></code></pre>
+<pre><span id="VALprint_bool"><span class="keyword">val</span> print_bool</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Alg_expr.html#TYPEbool_expr">bool_expr</a> -> unit</code></pre>
+<pre><span id="VALadd_dep"><span class="keyword">val</span> add_dep</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       <a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre><div class="info ">
 depend in time, depend in event number, depend in given var<br>
 </div>
 
-<pre><span id="VALsetup_alg_vars_rev_dep"><span class="keyword">val</span> setup_alg_vars_rev_dep</span> : <code class="type">unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * 'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre>
-<pre><span id="VALpropagate_constant"><span class="keyword">val</span> propagate_constant</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * 'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a> -> 'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
-<pre><span id="VALpropagate_constant_bool"><span class="keyword">val</span> propagate_constant_bool</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * 'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
-<pre><span id="VALstops_of_bool_expr"><span class="keyword">val</span> stops_of_bool_expr</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -> 'a <a href="Alg_expr.html#TYPEe">e</a> <a href="Ast.html#TYPEbool_expr">Ast.bool_expr</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> list</code></pre></body></html>
+<pre><span id="VALsetup_alg_vars_rev_dep"><span class="keyword">val</span> setup_alg_vars_rev_dep</span> : <code class="type">unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre>
+<pre><span id="VALpropagate_constant"><span class="keyword">val</span> propagate_constant</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a> -> ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALpropagate_constant_bool"><span class="keyword">val</span> propagate_constant_bool</span> : <code class="type">int list -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       ('a, int) <a href="Alg_expr.html#TYPEbool_expr">bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       ('a, int) <a href="Alg_expr.html#TYPEbool_expr">bool_expr</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
+<pre><span id="VALstops_of_bool_expr"><span class="keyword">val</span> stops_of_bool_expr</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -> ('a, int) <a href="Alg_expr.html#TYPEbool_expr">bool_expr</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> list</code></pre></body></html>
