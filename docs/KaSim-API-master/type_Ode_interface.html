@@ -75,6 +75,7 @@
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;compil<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cache<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;nauto_in_lhs_cache<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;chemical_species<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;canonic_species<br>
@@ -86,6 +87,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.t)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_cache&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_lkappa_cache&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;nauto_in_lhs_cache<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;init<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dummy_chemical_species&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compare_connected_component&nbsp;:<br>
@@ -124,6 +126,8 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;direction&nbsp;=&nbsp;<span class="constructor">Direct</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Op</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id_with_mode&nbsp;=&nbsp;rule_id&nbsp;*&nbsp;arity&nbsp;*&nbsp;direction<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_lhs&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nauto_in_lhs_cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;nauto_in_lhs_cache&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;valid_modes&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;pattern<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;token_vector&nbsp;:<br>
