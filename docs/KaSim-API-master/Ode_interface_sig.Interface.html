@@ -87,7 +87,7 @@
 <pre><span id="TYPEcache"><span class="keyword">type</span> <code class="type"></code>cache</span> </pre>
 
 
-<pre><span id="TYPEnauto_in_lhs_cache"><span class="keyword">type</span> <code class="type"></code>nauto_in_lhs_cache</span> </pre>
+<pre><span id="TYPEnauto_in_rules_cache"><span class="keyword">type</span> <code class="type"></code>nauto_in_rules_cache</span> </pre>
 
 
 <pre><span id="TYPEmixture"><span class="keyword">type</span> <code class="type"></code>mixture</span> </pre>
@@ -112,7 +112,7 @@
 
 
 <pre><span id="VALempty_cache"><span class="keyword">val</span> empty_cache</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> <a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a></code></pre>
-<pre><span id="VALempty_lkappa_cache"><span class="keyword">val</span> empty_lkappa_cache</span> : <code class="type">unit -> <a href="Ode_interface_sig.Interface.html#TYPEnauto_in_lhs_cache">nauto_in_lhs_cache</a></code></pre>
+<pre><span id="VALempty_lkappa_cache"><span class="keyword">val</span> empty_lkappa_cache</span> : <code class="type">unit -> <a href="Ode_interface_sig.Interface.html#TYPEnauto_in_rules_cache">nauto_in_rules_cache</a></code></pre>
 <pre><span id="VALget_init"><span class="keyword">val</span> get_init</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> <a href="Ode_interface_sig.Interface.html#TYPEinit">init</a></code></pre>
 <pre><span id="VALmixture_of_init"><span class="keyword">val</span> mixture_of_init</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEhidden_init">hidden_init</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="VALdummy_chemical_species"><span class="keyword">val</span> dummy_chemical_species</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEchemical_species">chemical_species</a></code></pre>
@@ -122,7 +122,6 @@
 <pre><span id="VALprint_canonic_species"><span class="keyword">val</span> print_canonic_species</span> : <code class="type">?compil:<a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       Format.formatter -> <a href="Ode_interface_sig.Interface.html#TYPEcanonic_species">canonic_species</a> -> unit</code></pre>
 <pre><span id="VALrate_convention"><span class="keyword">val</span> rate_convention</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> Ode_args.rate_convention</code></pre>
 <pre><span id="VALwhat_do_we_count"><span class="keyword">val</span> what_do_we_count</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> Ode_args.count</code></pre>
-<pre><span id="VALdo_we_divide_rates_by_n_auto_in_lhs"><span class="keyword">val</span> do_we_divide_rates_by_n_auto_in_lhs</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> bool</code></pre>
 <pre><span id="VALdo_we_count_in_embeddings"><span class="keyword">val</span> do_we_count_in_embeddings</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> bool</code></pre>
 <pre><span id="VALdo_we_prompt_reactions"><span class="keyword">val</span> do_we_prompt_reactions</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> bool</code></pre>
 <pre><span id="VALnbr_automorphisms_in_chemical_species"><span class="keyword">val</span> nbr_automorphisms_in_chemical_species</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEchemical_species">chemical_species</a> -> int</code></pre>
@@ -188,7 +187,7 @@
 <pre><span id="TYPErule_id_with_mode"><span class="keyword">type</span> <code class="type"></code>rule_id_with_mode</span> = <code class="type"><a href="Ode_interface_sig.Interface.html#TYPErule_id">rule_id</a> * <a href="Ode_interface_sig.Interface.html#TYPEarity">arity</a> *<br>       <a href="Ode_interface_sig.Interface.html#TYPEdirection">direction</a></code> </pre>
 
 
-<pre><span id="VALnbr_automorphisms_in_lhs"><span class="keyword">val</span> nbr_automorphisms_in_lhs</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEnauto_in_lhs_cache">nauto_in_lhs_cache</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEnauto_in_lhs_cache">nauto_in_lhs_cache</a> * int</code></pre>
+<pre><span id="VALdivide_rule_rate_by"><span class="keyword">val</span> divide_rule_rate_by</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEnauto_in_rules_cache">nauto_in_rules_cache</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEnauto_in_rules_cache">nauto_in_rules_cache</a> * int</code></pre>
 <pre><span id="VALvalid_modes"><span class="keyword">val</span> valid_modes</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule_id">rule_id</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule_id_with_mode">rule_id_with_mode</a> list</code></pre>
 <pre><span id="VALlhs"><span class="keyword">val</span> lhs</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule_id_with_mode">rule_id_with_mode</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -> <a href="Ode_interface_sig.Interface.html#TYPEpattern">pattern</a></code></pre>
 <pre><span id="VALtoken_vector"><span class="keyword">val</span> token_vector</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -><br>       ((<a href="Ode_interface_sig.Interface.html#TYPEconnected_component">connected_component</a> array list, int) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>        <a href="Location.html#TYPEannot">Location.annot</a> * int)<br>       list</code></pre>
