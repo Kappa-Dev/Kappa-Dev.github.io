@@ -196,22 +196,26 @@
 
 
 
-<pre><span id="TYPEdistances"><span class="keyword">type</span> <code class="type"></code>distances</span> = <code class="type">(float * int) list option array</code> </pre>
-
-
-<pre><code><span id="TYPEunary_distances"><span class="keyword">type</span> <code class="type"></code>unary_distances</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEdistance"><span class="keyword">type</span> <code class="type"></code>distance</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTunary_distances.distances_data">distances_data</span>&nbsp;: <code class="type"><a href="Data.html#TYPEdistances">distances</a></code>;</code></td>
+<code><span id="TYPEELTdistance.distance_rule">distance_rule</span>&nbsp;: <code class="type">int</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTunary_distances.distances_rules">distances_rules</span>&nbsp;: <code class="type">string array</code>;</code></td>
+<code><span id="TYPEELTdistance.distance_time">distance_time</span>&nbsp;: <code class="type">float</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTdistance.distance_length">distance_length</span>&nbsp;: <code class="type">int</code>;</code></td>
 
 </tr></table>
 }
@@ -258,7 +262,7 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.UnaryDistances"><span class="constructor">UnaryDistances</span></span> <span class="keyword">of</span> <code class="type"><a href="Data.html#TYPEunary_distances">unary_distances</a></code></code></td>
+<code><span id="TYPEELTt.UnaryDistance"><span class="constructor">UnaryDistance</span></span> <span class="keyword">of</span> <code class="type"><a href="Data.html#TYPEdistance">distance</a></code></code></td>
 
 </tr></table>
 
