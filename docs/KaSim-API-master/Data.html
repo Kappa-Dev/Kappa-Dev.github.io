@@ -149,51 +149,54 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTfile_line.file_name">file_name</span>&nbsp;: <code class="type">string option</code>;</code></td>
+<code><span id="TYPEELTfile_line.file_line_name">file_line_name</span>&nbsp;: <code class="type">string option</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTfile_line.line">line</span>&nbsp;: <code class="type">string</code>;</code></td>
+<code><span id="TYPEELTfile_line.file_line_text">file_line_text</span>&nbsp;: <code class="type">string</code>;</code></td>
 
 </tr></table>
 }
 
 
 
-<pre><code><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEgeneric_snapshot"><span class="keyword">type</span> <code class="type">('agent, 'token)</code> generic_snapshot</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTsnapshot.snap_file">snap_file</span>&nbsp;: <code class="type">string</code>;</code></td>
+<code><span id="TYPEELTgeneric_snapshot.snapshot_file">snapshot_file</span>&nbsp;: <code class="type">string</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTsnapshot.snap_event">snap_event</span>&nbsp;: <code class="type">int</code>;</code></td>
+<code><span id="TYPEELTgeneric_snapshot.snapshot_event">snapshot_event</span>&nbsp;: <code class="type">int</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTsnapshot.agents">agents</span>&nbsp;: <code class="type">(int * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>) list</code>;</code></td>
+<code><span id="TYPEELTgeneric_snapshot.snapshot_agents">snapshot_agents</span>&nbsp;: <code class="type">'agent list</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTsnapshot.tokens">tokens</span>&nbsp;: <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) array</code>;</code></td>
+<code><span id="TYPEELTgeneric_snapshot.snapshot_tokens">snapshot_tokens</span>&nbsp;: <code class="type">'token array</code>;</code></td>
 
 </tr></table>
 }
 
+
+
+<pre><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> = <code class="type">(int * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>, string * <a href="Nbr.html#TYPEt">Nbr.t</a>) <a href="Data.html#TYPEgeneric_snapshot">generic_snapshot</a></code> </pre>
 
 
 <pre><code><span id="TYPEdistance"><span class="keyword">type</span> <code class="type"></code>distance</span> = {</code></pre><table class="typetable">

@@ -84,13 +84,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;flux_data&nbsp;:&nbsp;<span class="constructor">Data</span>.flux_data;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;flux_end&nbsp;:&nbsp;float;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;file_line&nbsp;=&nbsp;{&nbsp;file_name&nbsp;:&nbsp;string&nbsp;option;&nbsp;line&nbsp;:&nbsp;string;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snap_file&nbsp;:&nbsp;string;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snap_event&nbsp;:&nbsp;int;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;agents&nbsp;:&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Raw_mixture</span>.t)&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;tokens&nbsp;:&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;array;<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;file_line&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file_line_name&nbsp;:&nbsp;string&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file_line_text&nbsp;:&nbsp;string;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>token)&nbsp;generic_snapshot&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_file&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_event&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_agents&nbsp;:&nbsp;<span class="keywordsign">'</span>agent&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_tokens&nbsp;:&nbsp;<span class="keywordsign">'</span>token&nbsp;array;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot&nbsp;=&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Raw_mixture</span>.t,&nbsp;string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;<span class="constructor">Data</span>.generic_snapshot<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;distance&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;distance_rule&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;distance_time&nbsp;:&nbsp;float;<br>
