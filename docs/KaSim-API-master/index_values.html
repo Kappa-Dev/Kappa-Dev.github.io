@@ -139,6 +139,7 @@ depend in time, depend in event number, depend in given var
 <tr><td><a href="Edges.html#VALadd_link">add_link</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
 <code class="code">add_link ag1 s1 ag2 s2 t</code>
+ Some (i,j) as second returned element means cc j is now merged into cc i
 </div>
 </td></tr>
 <tr><td><a href="Loggers.html#VALadd_node">add_node</a> [<a href="Loggers.html">Loggers</a>]</td>
@@ -204,7 +205,7 @@ Returns the graph obtained by applying the rule.
 </td></tr>
 <tr><td><a href="Edges.html#VALare_connected">are_connected</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">are_connected ?candidate sigs graph nodes_x nodes_y dist store_dist</code>
+<code class="code">are_connected ?max_distance graph nodes_x nodes_y</code>
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALarity">arity</a> [<a href="Signature.html">Signature</a>]</td>
@@ -894,6 +895,8 @@ Apply the rule for sure if it is possible.
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_compilation_information">get_compilation_information</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Edges.html#VALget_connected_component">get_connected_component</a> [<a href="Edges.html">Edges</a>]</td>
+<td></td></tr>
 <tr><td><a href="Export_to_KaSa.html#VALget_contact_map">get_contact_map</a> [<a href="Export_to_KaSa.html">Export_to_KaSa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSim.html#VALget_contact_map">get_contact_map</a> [<a href="Export_to_KaSim.html">Export_to_KaSim</a>]</td>
@@ -1071,6 +1074,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 </div>
 </td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALimport_handler">import_handler</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
+<td></td></tr>
+<tr><td><a href="Edges.html#VALin_same_connected_component">in_same_connected_component</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALinc_stories">inc_stories</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
@@ -1706,11 +1711,6 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALpartition_with_logs">partition_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="Edges.html#VALpaths_of_interest">paths_of_interest</a> [<a href="Edges.html">Edges</a>]</td>
-<td><div class="info">
-<code class="code">paths_of_interest is_interesting sigs graph agent done_path</code>
-</div>
-</td></tr>
 <tr><td><a href="Kappa_printer.html#VALperturbation">perturbation</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALplain_array">plain_array</a> [<a href="Pp.html">Pp</a>]</td>
@@ -1993,7 +1993,10 @@ remove the events after the last observable
 <tr><td><a href="Edges.html#VALremove_internal">remove_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALremove_link">remove_link</a> [<a href="Edges.html">Edges</a>]</td>
-<td></td></tr>
+<td><div class="info">
+Some (i,j) as second returned element means separate "new" cc j from cc i
+</div>
+</td></tr>
 <tr><td><a href="Utilities.html#VALremove_obs_before">remove_obs_before</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
 remove_obs_before removes the observable_hits before the simulation info prodided as a first argument

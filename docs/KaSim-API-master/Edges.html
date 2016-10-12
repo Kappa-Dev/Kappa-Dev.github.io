@@ -100,7 +100,7 @@ agent_id * agent_type<br>
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
-<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">unit -> <a href="Edges.html#TYPEt">t</a></code></pre>
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">with_connected_components:bool -> <a href="Edges.html#TYPEt">t</a></code></pre>
 <pre><span id="VALcopy"><span class="keyword">val</span> copy</span> : <code class="type"><a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
 You'd better NOT use that on the state of a simulation<br>
 </div>
@@ -117,14 +117,18 @@ You'd better NOT use that on the state of a simulation<br>
 <code class="code">add_internal agent_id site internal_state graph</code><br>
 </div>
 
-<pre><span id="VALadd_link"><span class="keyword">val</span> add_link</span> : <code class="type"><a href="Edges.html#TYPEagent">agent</a> -> int -> <a href="Edges.html#TYPEagent">agent</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">add_link ag1 s1 ag2 s2 t</code><br>
+<pre><span id="VALadd_link"><span class="keyword">val</span> add_link</span> : <code class="type"><a href="Edges.html#TYPEagent">agent</a> -><br>       int -> <a href="Edges.html#TYPEagent">agent</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a> * (int * int) option</code></pre><div class="info ">
+<code class="code">add_link ag1 s1 ag2 s2 t</code>
+ Some (i,j) as second returned element means cc j is now merged into cc i<br>
 </div>
 
 <pre><span id="VALremove_agent"><span class="keyword">val</span> remove_agent</span> : <code class="type">int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
 <pre><span id="VALremove_free"><span class="keyword">val</span> remove_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
 <pre><span id="VALremove_internal"><span class="keyword">val</span> remove_internal</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
-<pre><span id="VALremove_link"><span class="keyword">val</span> remove_link</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
+<pre><span id="VALremove_link"><span class="keyword">val</span> remove_link</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a> * (int * int) option</code></pre><div class="info ">
+Some (i,j) as second returned element means separate "new" cc j from cc i<br>
+</div>
+
 <pre><span id="VALis_agent"><span class="keyword">val</span> is_agent</span> : <code class="type"><a href="Edges.html#TYPEagent">agent</a> -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
 <code class="code">is_agent agent graph</code><br>
 </div>
@@ -153,6 +157,8 @@ You'd better NOT use that on the state of a simulation<br>
 <code class="code">get_internal ag site graph</code><br>
 </div>
 
+<pre><span id="VALget_connected_component"><span class="keyword">val</span> get_connected_component</span> : <code class="type">int -> <a href="Edges.html#TYPEt">t</a> -> int option</code></pre>
+<pre><span id="VALin_same_connected_component"><span class="keyword">val</span> in_same_connected_component</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALall_agents_where"><span class="keyword">val</span> all_agents_where</span> : <code class="type">(<a href="Edges.html#TYPEagent">agent</a> -> bool) -> <a href="Edges.html#TYPEt">t</a> -> Mods.IntSet.t</code></pre>
 <pre><span id="TYPEpath"><span class="keyword">type</span> <code class="type"></code>path</span> = <code class="type">((<a href="Edges.html#TYPEagent">agent</a> * int) * (<a href="Edges.html#TYPEagent">agent</a> * int)) list</code> </pre>
 
@@ -161,12 +167,8 @@ You'd better NOT use that on the state of a simulation<br>
 <pre><span id="VALsingleton_path"><span class="keyword">val</span> singleton_path</span> : <code class="type"><a href="Edges.html#TYPEagent">agent</a> -> int -> <a href="Edges.html#TYPEagent">agent</a> -> int -> <a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALrev_path"><span class="keyword">val</span> rev_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a> -> <a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALprint_path"><span class="keyword">val</span> print_path</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Edges.html#TYPEpath">path</a> -> unit</code></pre>
-<pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?candidate:<a href="Edges.html#TYPEpath">path</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Edges.html#TYPEt">t</a> -><br>       <a href="Edges.html#TYPEagent">agent</a> list -><br>       <a href="Edges.html#TYPEagent">agent</a> list -> int option -> bool -> <a href="Edges.html#TYPEpath">path</a> option</code></pre><div class="info ">
-<code class="code">are_connected ?candidate sigs graph nodes_x nodes_y dist store_dist</code><br>
-</div>
-
-<pre><span id="VALpaths_of_interest"><span class="keyword">val</span> paths_of_interest</span> : <code class="type">looping:<a href="Edges.html#TYPEagent">agent</a> * int -><br>       (<a href="Edges.html#TYPEagent">agent</a> -> 'a option) -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEagent">agent</a> -> <a href="Edges.html#TYPEpath">path</a> -> (('a * int) * <a href="Edges.html#TYPEpath">path</a>) list</code></pre><div class="info ">
-<code class="code">paths_of_interest is_interesting sigs graph agent done_path</code><br>
+<pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?max_distance:int -><br>       <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEagent">agent</a> list -> <a href="Edges.html#TYPEagent">agent</a> list -> <a href="Edges.html#TYPEpath">path</a> option</code></pre><div class="info ">
+<code class="code">are_connected ?max_distance graph nodes_x nodes_y</code><br>
 </div>
 
 <pre><span id="VALbuild_snapshot"><span class="keyword">val</span> build_snapshot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">t</a> -> (int * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>) list</code></pre>

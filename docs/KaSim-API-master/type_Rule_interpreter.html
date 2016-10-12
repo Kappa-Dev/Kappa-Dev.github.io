@@ -76,8 +76,8 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;result&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Clash</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Corrected</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Success</span>&nbsp;<span class="keyword">of</span>&nbsp;(int&nbsp;option&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Corrected</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?story_compression:(bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;*&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;store_distances:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
@@ -151,19 +151,22 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(((bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;*&nbsp;bool)&nbsp;*&nbsp;<span class="constructor">Trace</span>.t)&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_injections&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;debug_print&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_negative_transformation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*&nbsp;<span class="constructor">Edges</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_positive_transformation&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t)&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Connected_component</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t)&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*&nbsp;<span class="constructor">Edges</span>.t)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t)&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t<br>
 <span class="keyword">end</span></code></body></html>
