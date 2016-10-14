@@ -84,7 +84,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;port&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;port_nme&nbsp;:&nbsp;string&nbsp;<span class="constructor">Location</span>.annot;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;port_int&nbsp;:&nbsp;<span class="constructor">Ast</span>.internal;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;port_lnk&nbsp;:&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot,&nbsp;unit)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="constructor">Location</span>.annot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port_lnk&nbsp;:&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot,&nbsp;unit)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="constructor">Location</span>.annot&nbsp;list;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent&nbsp;=&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mixture&nbsp;=&nbsp;<span class="constructor">Ast</span>.agent&nbsp;list<br>
