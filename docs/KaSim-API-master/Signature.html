@@ -96,7 +96,7 @@ Store of one agent<br>
 
 <pre><span id="VALnum_of_site"><span class="keyword">val</span> num_of_site</span> : <code class="type">?agent_name:string -> string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Signature.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALsite_of_num"><span class="keyword">val</span> site_of_num</span> : <code class="type">int -> <a href="Signature.html#TYPEt">t</a> -> string</code></pre>
-<pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(int -> string -> 'a -> 'a) -> <a href="Signature.html#TYPEt">t</a> -> 'a -> 'a</code></pre>
+<pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(int -> string -> 'a -> 'a) -> 'a -> <a href="Signature.html#TYPEt">t</a> -> 'a</code></pre>
 <pre><span id="VALnum_of_internal_state"><span class="keyword">val</span> num_of_internal_state</span> : <code class="type">int -> string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Signature.html#TYPEt">t</a> -> int</code></pre><div class="info ">
 <code class="code">num_of_internal_state site_id state_name sign</code><br>
 </div>
@@ -108,7 +108,7 @@ Store of all the agents<br>
 </div>
 
 
-<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> option <a href="NamedDecls.html#TYPEt">NamedDecls.t</a>) array -><br>       <a href="Signature.html#TYPEs">s</a></code></pre>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> *<br>        (unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * (string <a href="Location.html#TYPEannot">Location.annot</a> * string <a href="Location.html#TYPEannot">Location.annot</a>) list)<br>        <a href="NamedDecls.html#TYPEt">NamedDecls.t</a>)<br>       array -> <a href="Signature.html#TYPEs">s</a></code></pre>
 <pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> <a href="Signature.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">get sigs agent_id</code><br>
@@ -136,6 +136,10 @@ Store of all the agents<br>
 </div>
 
 <pre><span id="VALdefault_internal_state"><span class="keyword">val</span> default_internal_state</span> : <code class="type">int -> int -> <a href="Signature.html#TYPEs">s</a> -> int option</code></pre>
+<pre><span id="VALallowed_link"><span class="keyword">val</span> allowed_link</span> : <code class="type">int -> int -> int -> int -> <a href="Signature.html#TYPEs">s</a> -> bool</code></pre><div class="info ">
+<code class="code">allowed_link ag1 s1 ag2 s2 sigs</code><br>
+</div>
+
 <pre><span id="VALprint_agent"><span class="keyword">val</span> print_agent</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_site"><span class="keyword">val</span> print_site</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_internal_state"><span class="keyword">val</span> print_internal_state</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> int -> Format.formatter -> int -> unit</code></pre>

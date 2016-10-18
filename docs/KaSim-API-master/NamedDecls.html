@@ -93,7 +93,7 @@ Stores a bunch of stuff the user gave a name to<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.decls">decls</span>&nbsp;: <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> * 'a) array</code>;</code></td>
+<code><span id="TYPEELTt.decls">decls</span>&nbsp;: <code class="type">(string * 'a) array</code>;</code></td>
 <td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
 the name of the stuff * the stuff<br>
 </div>
@@ -118,6 +118,7 @@ the name of the stuff * the stuff<br>
 <pre><span id="VALelt_name"><span class="keyword">val</span> elt_name</span> : <code class="type">'a <a href="NamedDecls.html#TYPEt">t</a> -> int -> string</code></pre>
 <pre><span id="VALelt_id"><span class="keyword">val</span> elt_id</span> : <code class="type">?kind:string -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> string <a href="Location.html#TYPEannot">Location.annot</a> -> int</code></pre>
 <pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(int -> string -> 'a -> 'b -> 'a) -> 'a -> 'b <a href="NamedDecls.html#TYPEt">t</a> -> 'a</code></pre>
+<pre><span id="VALmapi"><span class="keyword">val</span> mapi</span> : <code class="type">(int -> string -> 'a -> 'b) -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> 'b <a href="NamedDecls.html#TYPEt">t</a></code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">sep:(Format.formatter -> unit) -><br>       (int -> string -> Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type">('a -> Yojson.Basic.json) -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
