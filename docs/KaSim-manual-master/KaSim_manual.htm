@@ -3677,41 +3677,39 @@ display="inline" ><mi
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-10-4-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-4-1"  
 class="td11">  <span 
-class="ectt-1095">--implicit-signature                                                                  </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-4-2"  
-class="td11"> Automatically deduce agent signature<a 
- id="dx1-35002"></a>s (see Chapter <a 
-href="#x1-400006">6<!--tex4ht:ref: chap:advanced --></a>)                                                                                                          </td>
+class="ectt-1095">-make-sim </span><span 
+class="ecti-1095">sim_ﬁle                                                                                                     </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-4-2"  
+class="td11"> makes a simulation package out of the input kappa ﬁles                                                                                                          </td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-10-5-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-5-1"  
 class="td11">  <span 
-class="ectt-1095">-make-sim </span><span 
-class="ecti-1095">sim_ﬁle                                                                                                     </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-5-2"  
-class="td11"> makes a simulation package out of the input kappa ﬁles                                                                                                          </td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-10-6-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-6-1"  
-class="td11">  <span 
 class="ectt-1095">-load-sim </span><span 
-class="ecti-1095">sim_ﬁle                                                                                                     </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-6-2"  
+class="ecti-1095">sim_ﬁle                                                                                                     </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-5-2"  
 class="td11"> use simulation package <span 
 class="ecti-1095">sim_ﬁle </span>as input                                                                                                                             </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-7-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-7-1"  
+ style="vertical-align:baseline;" id="TBL-10-6-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-6-1"  
 class="td11">  <span 
-class="ectt-1095">--gluttony                                                                            </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-7-2"  
+class="ectt-1095">--gluttony                                                                            </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-6-2"  
 class="td11"> simulation mode that is memory intensive                                                                                                                           </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-8-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-8-1"  
-class="td11">                                                                                        </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-8-2"  
+ style="vertical-align:baseline;" id="TBL-10-7-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-7-1"  
+class="td11">                                                                                        </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-7-2"  
 class="td11"> but that speeds up simulation time                                                                                                                                    </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-9-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-9-1"  
+ style="vertical-align:baseline;" id="TBL-10-8-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-8-1"  
 class="td11">  <span 
-class="ectt-1095">--batch                                                                               </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-9-2"  
+class="ectt-1095">-mode batch                                                                           </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-8-2"  
 class="td11"> Set non interactive mode (never halt waiting for an user                                                                                                         </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-10-10-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-10-1"  
-class="td11">                                                                                        </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-10-2"  
+ style="vertical-align:baseline;" id="TBL-10-9-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-9-1"  
+class="td11">                                                                                        </td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-9-2"  
 class="td11"> action but assume default (data loosing) answer)                                                                                                                  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-10-10-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-10-1"  
+class="td11">  <span 
+class="ectt-1095">-mode interactive                                                                     </span></td><td  style="text-align:left; white-space:nowrap;" id="TBL-10-10-2"  
+class="td11"> Launch the toplevel just after model initialisation                                                                                                                 </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-10-11-"><td  style="text-align:left; white-space:nowrap;" id="TBL-10-11-1"  
@@ -6216,8 +6214,136 @@ href="#x1-130003">3<!--tex4ht:ref: chap:kappa --></a>).
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-</div>
-<!--l. 2--><p class="nopar" >
+General options
+ <br />  --help            Verbose help
+ <br />   -h               Short help
+ <br />  --version         Show version number
+ <br />  --gui             GUI to select
+ <br />  --(no-)expert     Expert mode (more options)
+ <br />
+ <br />0_Actions
+ <br />  --do-all
+ <br />      launch everything
+ <br />  --reset-all
+ <br />      launch nothing
+ <br />  --(no-)compute-contact-map    (default: enabled)
+ <br />      compute the contact map
+ <br />  --(no-)compute-influence-map    (default: enabled)
+ <br />      compute the influence map
+ <br />  --(no-)compute-ODE-flow-of-information    (default: disabled)
+ <br />      Compute an approximation of the flow of information in the ODE
+ <br />      semantics
+ <br />  --(no-)compute-stochastic-flow-of-information    (default: disabled)
+ <br />      Compute an approximation of the flow of information in the stochastic
+ <br />      semantics
+ <br />  --(no-)compute-reachability-analysis    (default: enabled)
+ <br />      Compute an approximation of the states of agent sites
+ <br />  --(no-)compute-local-traces    (default: disabled)
+ <br />      Compute the local traces of interesting parts of agent interfaces
+ <br />
+ <br />1_Output
+ <br />  --output-directory &#x003C;value&#x003E;
+ <br />      Default repository for outputs
+ <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the contact map file in this directory
+ <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the influence map file in this directory
+ <br />  --output-local-traces-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the files about local traces in this directory
+ <br />  --output-log-directory &#x003C;name&#x003E;   (default: output)
+                                                                                  
+
+                                                                                  
+ <br />      put the log files in this directory
+ <br />  --contact-map-format DOT    (default: DOT)
+ <br />      Tune the output format for the contact map
+ <br />  --influence-map-format DOT | HTML    (default: DOT)
+ <br />      Tune the output format for the influence map
+ <br />  --local-traces-format DOT | HTML    (default: DOT)
+ <br />      Tune the output format for the local transition systems
+ <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
+ <br />      file name for the contact map output
+ <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
+ <br />      file name for the influence map
+ <br />
+ <br />2_Reachability_analysis
+ <br />  --(no-)compute-reachability-analysis    (default: enabled)
+ <br />      Compute an approximation of the states of agent sites
+ <br />  --view-analysis High    (default: High)
+ <br />      Tune the accuracy level of the view analysis
+ <br />  --verbosity-level-for-reachability-analysis Mute | Low | Medium | High |
+ <br />                                              Full    (default: Low)
+ <br />      Tune the verbosity level for the reachability analysis
+ <br />  --output-mode-for-reachability-analysis raw | kappa | english    (default: KAPPA)
+ <br />      post-process relation and output the result in the chosen format
+ <br />
+ <br />3_Trace_analysis
+ <br />  --(no-)compute-local-traces    (default: disabled)
+ <br />      Compute the local traces of interesting parts of agent interfaces
+ <br />  --(no-)show-rule-names-in-local-traces    (default: enabled)
+ <br />      Annotate each transition with the name of the rules in trace
+ <br />      abstraction
+ <br />  --(no-)use-macrotransitions-in-local-traces    (default: disabled)
+ <br />      Use macrotransitions to get a compact trace up to change of the
+ <br />      interleaving order of commuting microtransitions
+ <br />  --(no-)ignore-trivial-losanges    (default: disabled)
+ <br />      Do not use macrotransitions for simplifying trivial losanges
+ <br />  --output-local-traces-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the files about local traces in this directory
+ <br />  --local-traces-format DOT | HTML    (default: DOT)
+ <br />      Tune the output format for the local transition systems
+ <br />
+ <br />4_Contact_map
+ <br />  --(no-)compute-contact-map    (default: enabled)
+                                                                                  
+
+                                                                                  
+ <br />      compute the contact map
+ <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the contact map file in this directory
+ <br />  --contact-map-format DOT    (default: DOT)
+ <br />      Tune the output format for the contact map
+ <br />  --contact-map-accuracy-level Low | High    (default: Low)
+ <br />      Tune the accuracy level of the contact map
+ <br />  --(no-)pure-contact    (default: disabled)
+ <br />      show in the contact map only the sites with a binding state
+ <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
+ <br />      file name for the contact map output
+ <br />
+ <br />5_Influence_map
+ <br />  --(no-)compute-influence-map    (default: enabled)
+ <br />      compute the influence map
+ <br />  --influence-map-accuracy-level Low | Medium    (default: Medium)
+ <br />      Tune the accuracy level of the influence map
+ <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the influence map file in this directory
+ <br />  --influence-map-format DOT | HTML    (default: DOT)
+ <br />      Tune the output format for the influence map
+ <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
+ <br />      file name for the influence map
+ <br />
+ <br />6_Flow_of_information
+ <br />  --(no-)compute-ODE-flow-of-information    (default: disabled)
+ <br />      Compute an approximation of the flow of information in the ODE
+ <br />      semantics
+ <br />  --(no-)compute-stochastic-flow-of-information    (default: disabled)
+ <br />      Compute an approximation of the flow of information in the stochastic
+ <br />      semantics
+ <br />
+ <br />7_Debugging_info
+ <br />  --output-log-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the log files in this directory
+ <br />  --(no-)debugging-mode    (default: disabled)
+ <br />      dump debugging information
+ <br />  --(no-)unsafe-mode    (default: enabled)
+ <br />      Exceptions are gathered at the end of the computation, instead of
+ <br />      halting it
+ <br />
+                                                                                  
+
+                                                                                  
+ <br />(49 options)</div>
+<!--l. 123--><p class="nopar" >
 <!--l. 1155--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -6593,9 +6719,9 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (c82ed3c) (without Tk interface)
- <br />Analysis launched at 2016/10/24 12:46:37 (GMT+0) on
- <br />testing-worker-linux-docker-e6bac67f-3463-linux-9
+Kappa Static Analyzer (b1bdd11) (without Tk interface)
+ <br />Analysis launched at 2016/10/24 17:51:05 (GMT+0) on
+ <br />testing-worker-linux-docker-e1e9c419-3407-linux-16
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6621,9 +6747,9 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (c82ed3c) (without Tk interface)
- <br />Analysis launched at 2016/10/24 12:46:37 (GMT+0) on
- <br />testing-worker-linux-docker-e6bac67f-3463-linux-9
+Kappa Static Analyzer (b1bdd11) (without Tk interface)
+ <br />Analysis launched at 2016/10/24 17:51:05 (GMT+0) on
+ <br />testing-worker-linux-docker-e1e9c419-3407-linux-16
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -8137,10 +8263,6 @@ previously.
                                                                                   
 
                                                                                   
-<!--l. 1524--><p class="noindent" >
-                                                                                  
-
-                                                                                  
 <h2 class="chapterHead"><span class="titlemark">Chapter 8</span><br /><a 
  id="x1-660008"></a>Frequently asked questions</h2>
 <h3 class="likesectionHead"><a 
@@ -8489,7 +8611,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <h2 class="likechapterHead"><a 
  id="x1-740008"></a>Index</h2>
 <div class="theindex"><span class="index-item">activity, 8, 21, 44 <br /></span>
-<span class="index-item">agent signature, 15, 16, 19, 26, 30, 34 <br /></span>
+<span class="index-item">agent signature, 15, 16, 19, 26, 34 <br /></span>
 <span class="index-item">agents, 15 <br /></span>
 <span class="index-item">algebraic expression, 18 <br /></span>
 <span class="index-item">algebraic expression, 21, 26, 37, 44 <br /></span>
@@ -8501,13 +8623,13 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">causality, 41 <br /></span>
 <span class="index-item">comments, 15 <br /></span>
 </p><p class="theindex">
-<span class="index-item">data ﬁle, 26, 30, 68 <br /></span>
+<span class="index-item">data ﬁle, 26, 30, 70 <br /></span>
 <span class="index-item">declaration, 15, 18, 21, 24, 27, 34, 37, 40, 41, 44, 45 <br /></span>
 <span class="index-item">default state, 19 <br /></span>
 <span class="index-item">don&#x2019;t care don&#x2019;t write, 17, 19, 26 <br /></span>
 </p><p class="theindex">
 <span class="index-item">eﬀect, 37, 39 <br /></span>
-<span class="index-item">embedding, 68 <br /></span>
+<span class="index-item">embedding, 70 <br /></span>
 <span class="index-item">event, 8, 25 <br /></span>
 </p><p class="theindex">
 <span class="index-item">ﬂux map, 42 <br /></span>
@@ -8519,12 +8641,12 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 </p><p class="theindex">
 <span class="index-item">hybrid rules, 19, 21 <br /></span>
 </p><p class="theindex">
-<span class="index-item">inﬂuence map, 68 <br /></span>
+<span class="index-item">inﬂuence map, 70 <br /></span>
 <span class="index-item">initial condition, 15, 26 <br /></span>
 <span class="index-item">internal state, 16 <br /></span>
 </p><p class="theindex">
 <span class="index-item">kappa expressions, 18 <br /></span>
-<span class="index-item">kappa ﬁle, 15, 16, 18, 24, 26, 34, 45, 46, 68 <br /></span>
+<span class="index-item">kappa ﬁle, 15, 16, 18, 24, 26, 34, 45, 46, 70 <br /></span>
 <span class="index-item">kinetic rate, 21, 26 <br /></span>
 <span class="index-subitem">    deterministic rate constant, 21 <br /></span>
 <span class="index-subitem">    stochastic rate constant, 21 <br /></span>
@@ -8533,9 +8655,9 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">link type, 18 <br /></span>
 <span class="index-item">longest preﬁx convention, 20 <br /></span>
 </p><p class="theindex">
-<span class="index-item">mixture, 8, 20, 24, 26, 39–41, 46, 68 <br /></span>
+<span class="index-item">mixture, 8, 20, 24, 26, 39–41, 46, 70 <br /></span>
 </p><p class="theindex">
-<span class="index-item">null event, 25, 67 <br /></span>
+<span class="index-item">null event, 25, 69 <br /></span>
 </p><p class="theindex">
 <span class="index-item">perturbation, 15, 37 <br /></span>
 <span class="index-subitem">    one shot, 37 <br /></span>

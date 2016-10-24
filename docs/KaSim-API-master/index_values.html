@@ -233,6 +233,12 @@ Returns the graph obtained by applying the rule.
 <tr><td><a href="Priority.html#VALaverage">average</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>B</td></tr>
+<tr><td><a href="State_interpreter.html#VALbatch_loop">batch_loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
+<td><div class="info">
+<code class="code">loop message_formatter env domain counter graph</code>
+ does a simulation in the command-line setting
+</div>
+</td></tr>
 <tr><td><a href="Connected_component.html#VALbegin_new">begin_new</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td><div class="info">
 Starts creation
@@ -1269,12 +1275,6 @@ Fragile: the list MUST NOT be a singleton
 <td></td></tr>
 <tr><td><a href="Trace.html#VALlog_event_kind">log_event_kind</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
-<tr><td><a href="State_interpreter.html#VALloop">loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
-<td><div class="info">
-<code class="code">loop message_formatter env domain counter graph</code>
- does a simulation in the command-line setting
-</div>
-</td></tr>
 <tr><td><a href="Priority.html#VALlow">low</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
 <tr><td><a href="Priority.html#VALlower">lower</a> [<a href="Priority.html">Priority</a>]</td>
@@ -1722,7 +1722,7 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Pp.html#VALplain_array">plain_array</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
-<tr><td><a href="Counter.html#VALplot_points">plot_points</a> [<a href="Counter.html">Counter</a>]</td>
+<tr><td><a href="Counter.html#VALplot_period">plot_period</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALpop">pop</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -2111,11 +2111,11 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALset_mvbdu_handler">set_mvbdu_handler</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Counter.html#VALset_nb_points">set_nb_points</a> [<a href="Counter.html">Counter</a>]</td>
-<td></td></tr>
 <tr><td><a href="Kappa_files.html#VALset_ode">set_ode</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.html#VALset_parameters">set_parameters</a> [<a href="Export_to_KaSa.html">Export_to_KaSa</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALset_plot_period">set_plot_period</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALset_potential_side_effects">set_potential_side_effects</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
