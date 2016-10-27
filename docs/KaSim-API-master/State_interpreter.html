@@ -29,6 +29,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -98,8 +99,8 @@ Abstract state<br>
 <code class="code">empty env stopping_times variable_overwrite</code><br>
 </div>
 
-<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type">bind:('a -> (<a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -> 'a) -><br>       return:(<a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * <a href="Location.html#TYPEt">Location.t</a>) list -> 'a</code></pre><div class="info ">
-<code class="code">initial env domain counter graph state</code> builds up the initial state<br>
+<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type">bind:('a -> (<a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -> 'a) -><br>       return:(<a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * <a href="Location.html#TYPEt">Location.t</a>) list -> 'a</code></pre><div class="info ">
+<code class="code">initial env counter graph state</code> builds up the initial state<br>
 </div>
 
 <pre><span id="VALobservables_values"><span class="keyword">val</span> observables_values</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> array</code></pre><div class="info ">
@@ -107,12 +108,12 @@ Returns (the current biological time, an array of the current
 values of observables)<br>
 </div>
 
-<pre><span id="VALdo_modification"><span class="keyword">val</span> do_modification</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       <a href="Primitives.html#TYPEmodification">Primitives.modification</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre>
+<pre><span id="VALdo_modification"><span class="keyword">val</span> do_modification</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       <a href="Primitives.html#TYPEmodification">Primitives.modification</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre>
 <pre><span id="VALactivity"><span class="keyword">val</span> activity</span> : <code class="type"><a href="State_interpreter.html#TYPEt">t</a> -> float</code></pre><div class="info ">
 Returns the current activity<br>
 </div>
 
-<pre><span id="VALa_loop"><span class="keyword">val</span> a_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALa_loop"><span class="keyword">val</span> a_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
 One event loop<br>
 </div>
 
@@ -121,13 +122,13 @@ What to do after stopping simulation. Returns maybe a trace<br>
 </div>
 
 <pre><span id="VALfinalize"><span class="keyword">val</span> finalize</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       called_from:Remanent_parameters_sig.called_from -><br>       <a href="Ast.html#TYPEformatCflow">Ast.formatCflow</a> -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALbatch_loop"><span class="keyword">val</span> batch_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       formatCflows:<a href="Ast.html#TYPEformatCflow">Ast.formatCflow</a> -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
-<code class="code">loop message_formatter env domain counter graph</code>
+<pre><span id="VALbatch_loop"><span class="keyword">val</span> batch_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       formatCflows:<a href="Ast.html#TYPEformatCflow">Ast.formatCflow</a> -><br>       Format.formatter -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<code class="code">loop message_formatter env counter graph</code>
  does a simulation in the command-line setting<br>
 </div>
 
-<pre><span id="VALinteractive_loop"><span class="keyword">val</span> interactive_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       Format.formatter -><br>       (<a href="Connected_component.html#TYPEt">Connected_component.t</a> array list, int) <a href="Alg_expr.html#TYPEbool_expr">Alg_expr.bool_expr</a> -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">interactive_loop message_formatter env domain counter graph</code>
+<pre><span id="VALinteractive_loop"><span class="keyword">val</span> interactive_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       Format.formatter -><br>       (<a href="Connected_component.html#TYPEid">Connected_component.id</a> array list, int) <a href="Alg_expr.html#TYPEbool_expr">Alg_expr.bool_expr</a> -><br>       <a href="Environment.html#TYPEt">Environment.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">interactive_loop message_formatter env counter graph</code>
  does a simulation in the command-line setting up to an interruption<br>
 </div>
 </body></html>

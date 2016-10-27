@@ -24,6 +24,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -73,13 +74,8 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Existing</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">ContentAgent</span>.t&nbsp;*&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Fresh</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.work&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent_place</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;<span class="constructor">Existing</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Agent</span>.t&nbsp;*&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Fresh</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent_place</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;concretize&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;*&nbsp;int<br>

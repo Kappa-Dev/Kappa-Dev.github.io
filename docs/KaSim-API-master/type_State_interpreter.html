@@ -24,6 +24,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -81,7 +82,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;bind:(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;return:(<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -92,7 +92,6 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_modification&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -102,7 +101,6 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;a_loop&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t<br>
@@ -125,14 +123,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;formatCflows:<span class="constructor">Ast</span>.formatCflow&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;interactive_loop&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.t&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t<br>

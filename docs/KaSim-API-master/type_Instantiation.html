@@ -24,6 +24,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -78,7 +79,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;internal_state&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;binding_type&nbsp;=&nbsp;<span class="constructor">Instantiation</span>.agent_name&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.site_name<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;abstract&nbsp;=&nbsp;<span class="constructor">Agent_place</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;concrete&nbsp;=&nbsp;<span class="constructor">Edges</span>.agent<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;concrete&nbsp;=&nbsp;<span class="constructor">Agent</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;site&nbsp;=&nbsp;<span class="keywordsign">'</span>a&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.site_name<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;test&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Is_Here</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>a<br>
@@ -107,30 +108,22 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.binding_state)&nbsp;list&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list)<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename_abstract_test&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.work&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.cc&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.test<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename_abstract_action&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.work&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.cc&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.action&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.action<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename_abstract_event&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.work&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.cc&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.event&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.event<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename_abstract_side_effect&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.work&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.cc&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Agent_place</span>.t&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;*&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="constructor">Instantiation</span>.binding_state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Agent_place</span>.t&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;*&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="constructor">Instantiation</span>.binding_state<br>

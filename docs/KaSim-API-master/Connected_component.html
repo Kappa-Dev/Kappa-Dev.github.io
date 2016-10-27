@@ -29,6 +29,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -74,7 +75,8 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><link title="Use a connected component " rel="Section" href="#6_Useaconnectedcomponent">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><link title="Create a connected component" rel="Section" href="#6_Createaconnectedcomponent">
+<link title="Use a connected component " rel="Section" href="#6_Useaconnectedcomponent">
 <title>KaSim API : Connected_component</title>
 </head>
 <body>
@@ -98,50 +100,51 @@ type for domain points<br>
 </div>
 
 
+<pre><span id="TYPEid"><span class="keyword">type</span> <code class="type"></code>id</span> </pre>
+
+
 <pre><span id="TYPEwork"><span class="keyword">type</span> <code class="type"></code>work</span> </pre>
 <div class="info ">
 type for partial domain<br>
 </div>
 
 
-<pre><span class="keyword">module</span> <a href="Connected_component.ContentAgent.html">ContentAgent</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.ContentAgent.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
 <pre><span class="keyword">module</span> <a href="Connected_component.Env.html">Env</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.Env.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><span class="keyword">module</span> <a href="Connected_component.PreEnv.html">PreEnv</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.PreEnv.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info">
-Create a connected component
-</div>
+<pre><span class="keyword">module</span> <a href="Connected_component.PreEnv.html">PreEnv</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.PreEnv.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><br>
+<h6 id="6_Createaconnectedcomponent">Create a connected component</h6><br>
 
 <pre><span id="VALempty_cc"><span class="keyword">val</span> empty_cc</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Connected_component.html#TYPEcc">cc</a></code></pre>
 <pre><span id="VALbegin_new"><span class="keyword">val</span> begin_new</span> : <code class="type"><a href="Connected_component.PreEnv.html#TYPEt">PreEnv.t</a> -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
 Starts creation<br>
 </div>
 
-<pre><span id="VALnew_node"><span class="keyword">val</span> new_node</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       int -> <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
+<pre><span id="VALnew_node"><span class="keyword">val</span> new_node</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -> int -> <a href="Agent.html#TYPEt">Agent.t</a> * <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
 <code class="code">new_node wk node_type</code><br>
 </div>
 
-<pre><span id="VALnew_link"><span class="keyword">val</span> new_link</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
+<pre><span id="VALnew_link"><span class="keyword">val</span> new_link</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Agent.html#TYPEt">Agent.t</a> * int -> <a href="Agent.html#TYPEt">Agent.t</a> * int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
 <code class="code">new_link wk (node, site_id) (node', site_id')</code><br>
 </div>
 
-<pre><span id="VALnew_free"><span class="keyword">val</span> new_free</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre>
-<pre><span id="VALnew_internal_state"><span class="keyword">val</span> new_internal_state</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.ContentAgent.html#TYPEt">ContentAgent.t</a> * int -> int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
+<pre><span id="VALnew_free"><span class="keyword">val</span> new_free</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -> <a href="Agent.html#TYPEt">Agent.t</a> * int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre>
+<pre><span id="VALnew_internal_state"><span class="keyword">val</span> new_internal_state</span> : <code class="type"><a href="Connected_component.html#TYPEwork">work</a> -> <a href="Agent.html#TYPEt">Agent.t</a> * int -> int -> <a href="Connected_component.html#TYPEwork">work</a></code></pre><div class="info ">
 <code class="code">new_link_type work (node,site) <span class="keyword">type</span></code><br>
 </div>
 
-<pre><span id="VALfinish_new"><span class="keyword">val</span> finish_new</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.PreEnv.html#TYPEt">PreEnv.t</a> * Renaming.t * <a href="Connected_component.html#TYPEt">t</a></code></pre><br>
+<pre><span id="VALfinish_new"><span class="keyword">val</span> finish_new</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Connected_component.html#TYPEwork">work</a> -><br>       <a href="Connected_component.PreEnv.html#TYPEt">PreEnv.t</a> * Renaming.t * <a href="Connected_component.html#TYPEid">id</a></code></pre><br>
 <h6 id="6_Useaconnectedcomponent">Use a connected component </h6><br>
 
-<pre><span id="VALcompare_canonicals"><span class="keyword">val</span> compare_canonicals</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> <a href="Connected_component.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALis_equal_canonicals"><span class="keyword">val</span> is_equal_canonicals</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> <a href="Connected_component.html#TYPEt">t</a> -> bool</code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       ?with_id:unit -> Format.formatter -> <a href="Connected_component.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
-<code class="code">print ~sigs ?with_id:<span class="constructor">None</span> form cc</code><br>
+<pre><span id="VALcompare_canonicals"><span class="keyword">val</span> compare_canonicals</span> : <code class="type"><a href="Connected_component.html#TYPEid">id</a> -> <a href="Connected_component.html#TYPEid">id</a> -> int</code></pre>
+<pre><span id="VALis_equal_canonicals"><span class="keyword">val</span> is_equal_canonicals</span> : <code class="type"><a href="Connected_component.html#TYPEid">id</a> -> <a href="Connected_component.html#TYPEid">id</a> -> bool</code></pre>
+<pre><span id="VALprint_cc"><span class="keyword">val</span> print_cc</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       ?cc_id:<a href="Connected_component.html#TYPEid">id</a> -><br>       Format.formatter -> <a href="Connected_component.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?domain:<a href="Connected_component.Env.html#TYPEt">Env.t</a> -><br>       with_id:bool -> Format.formatter -> <a href="Connected_component.html#TYPEid">id</a> -> unit</code></pre><div class="info ">
+<code class="code">print ~domain ?with_id:<span class="constructor">None</span> form cc</code><br>
 </div>
 
-<pre><span id="VALprint_dot"><span class="keyword">val</span> print_dot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Connected_component.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALfind_root_type"><span class="keyword">val</span> find_root_type</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> int option</code></pre>
 <pre><span id="VALautomorphisms"><span class="keyword">val</span> automorphisms</span> : <code class="type"><a href="Connected_component.html#TYPEt">t</a> -> Renaming.t list</code></pre>
 <pre><span class="keyword">module</span> <a href="Connected_component.Matching.html">Matching</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Connected_component.Matching.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><span id="VALembeddings_to_fully_specified"><span class="keyword">val</span> embeddings_to_fully_specified</span> : <code class="type"><a href="Connected_component.html#TYPEcc">cc</a> -> <a href="Connected_component.html#TYPEcc">cc</a> -> Renaming.t list</code></pre>
+<pre><span id="VALembeddings_to_fully_specified"><span class="keyword">val</span> embeddings_to_fully_specified</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Env.t</a> -><br>       <a href="Connected_component.html#TYPEid">id</a> -> <a href="Connected_component.html#TYPEcc">cc</a> -> Renaming.t list</code></pre>
 <pre><span id="VALadd_fully_specified_to_graph"><span class="keyword">val</span> add_fully_specified_to_graph</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Connected_component.html#TYPEcc">cc</a> -> <a href="Edges.html#TYPEt">Edges.t</a> * Renaming.t</code></pre>
-<pre><span class="keyword">module</span> <a href="Connected_component.Set.html">Set</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt=t</code></pre>
-<pre><span class="keyword">module</span> <a href="Connected_component.Map.html">Map</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt=t</code></pre></body></html>
+<pre><span class="keyword">module</span> <a href="Connected_component.Set.html">Set</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt=id</code></pre>
+<pre><span class="keyword">module</span> <a href="Connected_component.Map.html">Map</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt=id</code></pre></body></html>

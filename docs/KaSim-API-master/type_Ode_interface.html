@@ -24,6 +24,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -103,7 +104,6 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_count_in_embeddings&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_prompt_reactions&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_chemical_species&nbsp;:&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_pattern&nbsp;:&nbsp;pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;canonic_form&nbsp;:&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;canonic_species<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;connected_components_of_patterns&nbsp;:&nbsp;pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;connected_components_of_mixture&nbsp;:<br>
@@ -112,9 +112,9 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;embedding_forest<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lift_embedding&nbsp;:&nbsp;embedding&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;find_embeddings&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;find_embeddings_unary_binary&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;disjoint_union&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;*&nbsp;embedding&nbsp;*&nbsp;chemical_species)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>

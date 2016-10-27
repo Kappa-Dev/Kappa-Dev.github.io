@@ -24,6 +24,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -75,7 +76,7 @@
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array&nbsp;*<br>
@@ -91,6 +92,9 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_perturbations&nbsp;:&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;connected_components_of_unary_rules&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Set</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;domain&nbsp;:&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;new_domain&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Environment</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;signatures&nbsp;:&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Signature</span>.s<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;tokens_finder&nbsp;:&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;algs_finder&nbsp;:&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t<br>

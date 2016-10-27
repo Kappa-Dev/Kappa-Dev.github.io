@@ -4,7 +4,8 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="next" href="Pp_svg.html">
+<link rel="previous" href="Operator.html">
+<link rel="next" href="Agent_place.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -74,33 +75,31 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Pp</title>
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Agent</title>
 </head>
 <body>
-<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Pp_svg.html" title="Pp_svg">Next</a>
+<div class="navbar"><a class="pre" href="Operator.html" title="Operator">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Agent_place.html" title="Agent_place">Next</a>
 </div>
-<h1>Module <a href="type_Pp.html">Pp</a></h1>
+<h1>Module <a href="type_Agent.html">Agent</a></h1>
 
-<pre><span class="keyword">module</span> Pp: <code class="code"><span class="keyword">sig</span></code> <a href="Pp.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+<pre><span class="keyword">module</span> Agent: <code class="code"><span class="keyword">sig</span></code> <a href="Agent.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+A node of a site graph<br>
+</div>
+<hr width="100%">
 
-<pre><span id="VALlisti"><span class="keyword">val</span> listi</span> : <code class="type">?trailing:(Format.formatter -> unit) -><br>       (Format.formatter -> unit) -><br>       (int -> Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a list -> unit</code></pre>
-<pre><span id="VALlist"><span class="keyword">val</span> list</span> : <code class="type">?trailing:(Format.formatter -> unit) -><br>       (Format.formatter -> unit) -><br>       (Format.formatter -> 'a -> unit) -> Format.formatter -> 'a list -> unit</code></pre>
-<pre><span id="VALset"><span class="keyword">val</span> set</span> : <code class="type">?trailing:(Format.formatter -> unit) -><br>       ('b -> 'a list) -><br>       (Format.formatter -> unit) -><br>       (Format.formatter -> 'a -> unit) -> Format.formatter -> 'b -> unit</code></pre>
-<pre><span id="VALhashtbl"><span class="keyword">val</span> hashtbl</span> : <code class="type">(Format.formatter -> unit) -><br>       (Format.formatter -> 'a * 'b -> unit) -><br>       Format.formatter -> ('a, 'b) Hashtbl.t -> unit</code></pre>
-<pre><span id="VALoption"><span class="keyword">val</span> option</span> : <code class="type">(Format.formatter -> 'a -> unit) -> Format.formatter -> 'a option -> unit</code></pre>
-<pre><span id="VALpair"><span class="keyword">val</span> pair</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -> Format.formatter -> 'a * 'b -> unit</code></pre>
-<pre><span id="VALbottom"><span class="keyword">val</span> bottom</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALnu"><span class="keyword">val</span> nu</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALempty_set"><span class="keyword">val</span> empty_set</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALcompact_comma"><span class="keyword">val</span> compact_comma</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALcomma"><span class="keyword">val</span> comma</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALcolon"><span class="keyword">val</span> colon</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALspace"><span class="keyword">val</span> space</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALcut"><span class="keyword">val</span> cut</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">Format.formatter -> unit</code></pre>
-<pre><span id="VALarray"><span class="keyword">val</span> array</span> : <code class="type">?trailing:(Format.formatter -> unit) -><br>       (Format.formatter -> unit) -><br>       (int -> Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a array -> unit</code></pre>
-<pre><span id="VALplain_array"><span class="keyword">val</span> plain_array</span> : <code class="type">(Format.formatter -> 'a -> unit) -> Format.formatter -> 'a array -> unit</code></pre>
-<pre><span id="VALerror"><span class="keyword">val</span> error</span> : <code class="type">(Format.formatter -> 'a -> unit) -> 'a <a href="Location.html#TYPEannot">Location.annot</a> -> unit</code></pre>
-<pre><span id="VALlist_to_string"><span class="keyword">val</span> list_to_string</span> : <code class="type">(unit -> string) -> (unit -> 'a -> string) -> unit -> 'a list -> string</code></pre>
-<pre><span id="VALset_to_string"><span class="keyword">val</span> set_to_string</span> : <code class="type">('b -> 'a list) -><br>       (unit -> string) -> (unit -> 'a -> string) -> unit -> 'b -> string</code></pre></body></html>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type">int * int</code> </pre>
+<div class="info ">
+agent_id * agent_type<br>
+</div>
+
+
+<pre><span id="VALsort"><span class="keyword">val</span> sort</span> : <code class="type"><a href="Agent.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALid"><span class="keyword">val</span> id</span> : <code class="type"><a href="Agent.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> with_id:bool -> Format.formatter -> <a href="Agent.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint_site"><span class="keyword">val</span> print_site</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Agent.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
+<pre><span id="VALprint_internal"><span class="keyword">val</span> print_internal</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Agent.html#TYPEt">t</a> -> int -> Format.formatter -> int -> unit</code></pre>
+<pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type">Renaming.t -> <a href="Agent.html#TYPEt">t</a> -> <a href="Agent.html#TYPEt">t</a></code></pre>
+<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Agent.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Agent.html#TYPEt">t</a></code></pre></body></html>

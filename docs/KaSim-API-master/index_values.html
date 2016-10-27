@@ -25,6 +25,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -158,10 +159,6 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALadjust_unary_rule_instances">adjust_unary_rule_instances</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
-<tr><td><a href="Edges.html#VALagent_of_json">agent_of_json</a> [<a href="Edges.html">Edges</a>]</td>
-<td></td></tr>
-<tr><td><a href="Edges.html#VALagent_to_json">agent_to_json</a> [<a href="Edges.html">Edges</a>]</td>
-<td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALalgs_finder">algs_finder</a> [<a href="Environment.html">Environment</a>]</td>
@@ -235,7 +232,7 @@ Returns the graph obtained by applying the rule.
 <tr><td align="left"><br>B</td></tr>
 <tr><td><a href="State_interpreter.html#VALbatch_loop">batch_loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
-<code class="code">loop message_formatter env domain counter graph</code>
+<code class="code">loop message_formatter env counter graph</code>
  does a simulation in the command-line setting
 </div>
 </td></tr>
@@ -542,6 +539,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Ode_interface_sig.Interface.html#VALdo_we_count_in_embeddings">do_we_count_in_embeddings</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALdo_we_prompt_reactions">do_we_prompt_reactions</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALdomain">domain</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALdummy">dummy</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
@@ -863,6 +862,11 @@ Apply the rule for sure if it is possible.
 <td></td></tr>
 <tr><td><a href="Connected_component.Matching.html#VALget">get</a> [<a href="Connected_component.Matching.html">Connected_component.Matching</a>]</td>
 <td></td></tr>
+<tr><td><a href="Connected_component.PreEnv.html#VALget">get</a> [<a href="Connected_component.PreEnv.html">Connected_component.PreEnv</a>]</td>
+<td><div class="info">
+Awfully inefficient
+</div>
+</td></tr>
 <tr><td><a href="Signature.html#VALget">get</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
 <code class="code">get sigs agent_id</code>
@@ -1011,8 +1015,6 @@ get the date of an event in the simulation
 </td></tr>
 <tr><td><a href="Communication.html#VALget_site">get_site</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.ContentAgent.html#VALget_sort">get_sort</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
-<td></td></tr>
 <tr><td><a href="Communication.html#VALget_state_of_site">get_state_of_site</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALget_state_of_site_in_postcondition">get_state_of_site_in_postcondition</a> [<a href="Communication.html">Communication</a>]</td>
@@ -1069,6 +1071,8 @@ check wether there is an observable in a trace
 <tr><td><a href="Priority.html#VALhighest">highest</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>I</td></tr>
+<tr><td><a href="Agent.html#VALid">id</a> [<a href="Agent.html">Agent</a>]</td>
+<td></td></tr>
 <tr><td><a href="Signature.html#VALid_of_internal_state">id_of_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
 <code class="code">id_of_internal_state agent_type site_name state_name sigs</code>
@@ -1125,7 +1129,7 @@ Infer agent signatures and tokens from init, rules and perturbations
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALinitialize">initialize</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
-<code class="code">initial env domain counter graph state</code> builds up the initial state
+<code class="code">initial env counter graph state</code> builds up the initial state
 </div>
 </td></tr>
 <tr><td><a href="Ode_loggers.html#VALinitialize">initialize</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
@@ -1142,7 +1146,7 @@ Infer agent signatures and tokens from init, rules and perturbations
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALinteractive_loop">interactive_loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
-<code class="code">interactive_loop message_formatter env domain counter graph</code>
+<code class="code">interactive_loop message_formatter env counter graph</code>
  does a simulation in the command-line setting up to an interruption
 </div>
 </td></tr>
@@ -1534,8 +1538,6 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALnbr_automorphisms_in_chemical_species">nbr_automorphisms_in_chemical_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface_sig.Interface.html#VALnbr_automorphisms_in_pattern">nbr_automorphisms_in_pattern</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
-<td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALnbr_variables">nbr_variables</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALnbr_variables">nbr_variables</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
@@ -1543,6 +1545,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <tr><td><a href="Nbr.html#VALneg">neg</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Odes.Make.html#VALnetwork_from_compil">network_from_compil</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALnew_domain">new_domain</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td><a href="Connected_component.html#VALnew_free">new_free</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td></td></tr>
@@ -1630,6 +1634,8 @@ values of observables)
 <tr><td><a href="Alg_expr.html#VALof_json">of_json</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALof_json">of_json</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALof_json">of_json</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALof_json">of_json</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
@@ -1752,16 +1758,16 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Connected_component.Env.html#VALprint">print</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.ContentAgent.html#VALprint">print</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
-<td></td></tr>
 <tr><td><a href="Connected_component.html#VALprint">print</a> [<a href="Connected_component.html">Connected_component</a>]</td>
 <td><div class="info">
-<code class="code">print ~sigs ?with_id:<span class="constructor">None</span> form cc</code>
+<code class="code">print ~domain ?with_id:<span class="constructor">None</span> form cc</code>
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALprint">print</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agent_place.html#VALprint">print</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALprint">print</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALprint">print</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
@@ -1778,8 +1784,6 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <tr><td><a href="DynamicArray.DynArray.html#VALprint">print</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALprint">print</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
-<td></td></tr>
-<tr><td><a href="Edges.html#VALprint_agent">print_agent</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html#VALprint_agent">print_agent</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
@@ -1815,6 +1819,8 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_canonic_species">print_canonic_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
+<tr><td><a href="Connected_component.html#VALprint_cc">print_cc</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<td></td></tr>
 <tr><td><a href="Loggers.html#VALprint_cell">print_cell</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_chemical_species">print_chemical_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
@@ -1837,8 +1843,6 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Connected_component.Env.html#VALprint_dot">print_dot</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.html#VALprint_dot">print_dot</a> [<a href="Connected_component.html">Connected_component</a>]</td>
-<td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_dump_plots">print_dump_plots</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Graph_loggers.html#VALprint_edge">print_edge</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
@@ -1859,9 +1863,9 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_integrate">print_integrate</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.ContentAgent.html#VALprint_internal">print_internal</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
-<td></td></tr>
 <tr><td><a href="Agent_place.html#VALprint_internal">print_internal</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALprint_internal">print_internal</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALprint_internal_state">print_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
@@ -1899,11 +1903,11 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_rule_name">print_rule_name</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.ContentAgent.html#VALprint_site">print_site</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
-<td></td></tr>
 <tr><td><a href="Signature.html#VALprint_site">print_site</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agent_place.html#VALprint_site">print_site</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALprint_site">print_site</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALprint_site_internal_state">print_site_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
@@ -2026,9 +2030,9 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALrename">rename</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.ContentAgent.html#VALrename">rename</a> [<a href="Connected_component.ContentAgent.html">Connected_component.ContentAgent</a>]</td>
-<td></td></tr>
 <tr><td><a href="Agent_place.html#VALrename">rename</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALrename">rename</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALrename_abstract_action">rename_abstract_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
@@ -2139,6 +2143,8 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Environment.html#VALsignatures">signatures</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
+<tr><td><a href="Connected_component.Env.html#VALsignatures">signatures</a> [<a href="Connected_component.Env.html">Connected_component.Env</a>]</td>
+<td></td></tr>
 <tr><td><a href="Connected_component.PreEnv.html#VALsigs">sigs</a> [<a href="Connected_component.PreEnv.html">Connected_component.PreEnv</a>]</td>
 <td></td></tr>
 <tr><td><a href="Trace.html#VALsimulation_info_of_step">simulation_info_of_step</a> [<a href="Trace.html">Trace</a>]</td>
@@ -2160,6 +2166,8 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <tr><td><a href="Utilities.html#VALsize_of_pretrace">size_of_pretrace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALsnapshot">snapshot</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALsort">sort</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALspace">space</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
@@ -2290,6 +2298,8 @@ compute the strong compression of a given trace,
 <tr><td><a href="Alg_expr.html#VALto_json">to_json</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALto_json">to_json</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALto_json">to_json</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALto_json">to_json</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>

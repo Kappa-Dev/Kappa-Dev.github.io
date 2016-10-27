@@ -24,6 +24,7 @@
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Connected_component" rel="Chapter" href="Connected_component.html">
@@ -83,7 +84,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">PreEnv</span>.t&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.t&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile_modifications_no_track&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.contact_map&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -92,8 +94,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;pause:((unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;return:(<span class="constructor">Environment</span>.t&nbsp;*&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;option&nbsp;*&nbsp;bool&nbsp;option&nbsp;*&nbsp;<span class="constructor">Ast</span>.formatCflow&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return:(<span class="constructor">Environment</span>.t&nbsp;*&nbsp;(bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;option&nbsp;*&nbsp;bool&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.formatCflow&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="constructor">Location</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?rescale_init:float&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -106,7 +108,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;((bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;*&nbsp;bool)&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;store_distances:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="constructor">Location</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
