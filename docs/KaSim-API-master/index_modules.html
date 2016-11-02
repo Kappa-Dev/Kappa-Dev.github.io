@@ -28,7 +28,7 @@
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Pattern" rel="Chapter" href="Pattern.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -137,11 +137,6 @@ composite abstract domain (no longer with communications which have been interna
 Main entry to the story machinery
 </div>
 </td></tr>
-<tr><td><a href="Connected_component.html">Connected_component</a> </td>
-<td><div class="info">
-Domain to navigate in the graph
-</div>
-</td></tr>
 <tr><td><a href="Contact_map_domain.html">Contact_map_domain</a> </td>
 <td><div class="info">
 This domain tracks which rules can be applied, and warns other domains at the first application of a rule
@@ -198,7 +193,7 @@ Simulation progress keeper
 Concrete graph implementation
 </div>
 </td></tr>
-<tr><td><a href="Connected_component.Env.html">Env</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<tr><td><a href="Pattern.Env.html">Env</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="Environment.html">Environment</a> </td>
 <td><div class="info">
@@ -388,11 +383,11 @@ Implementation of array only limited by max_int
 <td></td></tr>
 <tr><td><a href="SetMap.Make.html">Make</a> [<a href="SetMap.html">SetMap</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.Map.html">Map</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<tr><td><a href="Pattern.Map.html">Map</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Map.html">Map</a> [<a href="SetMap.S.html">SetMap.S</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.Matching.html">Matching</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<tr><td><a href="Pattern.Matching.html">Matching</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu</a> [<a href="Mvbdu_wrapper.html">Mvbdu_wrapper</a>]</td>
 <td></td></tr>
@@ -509,6 +504,11 @@ Abstract domain to over-approximate the set of reachable views
 </td></tr>
 <tr><td><a href="Communication.PathMap.html">PathMap</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
+<tr><td><a href="Pattern.html">Pattern</a> </td>
+<td><div class="info">
+Domain to navigate in the graph
+</div>
+</td></tr>
 <tr><td><a href="Pp.html">Pp</a> </td>
 <td></td></tr>
 <tr><td><a href="Pp_html.html">Pp_html</a> </td>
@@ -518,7 +518,7 @@ Abstract domain to over-approximate the set of reachable views
 </td></tr>
 <tr><td><a href="Pp_svg.html">Pp_svg</a> </td>
 <td></td></tr>
-<tr><td><a href="Connected_component.PreEnv.html">PreEnv</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<tr><td><a href="Pattern.PreEnv.html">PreEnv</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="Primitives.html">Primitives</a> </td>
 <td><div class="info">
@@ -568,7 +568,7 @@ This domain tracks which rules can be applied, and warns other domains at the fi
 <tr><td align="left"><br>S</td></tr>
 <tr><td><a href="Utilities.S.html">S</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
-<tr><td><a href="Connected_component.Set.html">Set</a> [<a href="Connected_component.html">Connected_component</a>]</td>
+<tr><td><a href="Pattern.Set.html">Set</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.S.Set.html">Set</a> [<a href="SetMap.S.html">SetMap.S</a>]</td>
 <td></td></tr>

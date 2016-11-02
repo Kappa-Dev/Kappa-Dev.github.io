@@ -27,7 +27,7 @@
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Pattern" rel="Chapter" href="Pattern.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -79,12 +79,14 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;arrow&nbsp;=&nbsp;<span class="constructor">ToNode</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Navigation</span>.port&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ToNothing</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ToInternal</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;step&nbsp;=&nbsp;<span class="constructor">Navigation</span>.port&nbsp;*&nbsp;<span class="constructor">Navigation</span>.arrow<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;<span class="constructor">Navigation</span>.step&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_step&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename_step&nbsp;:&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.step<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compatible_point&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Renaming</span>.t&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Renaming</span>.t&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Renaming</span>.t&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_subnavigation&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Navigation</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Renaming</span>.t&nbsp;*&nbsp;<span class="constructor">Navigation</span>.t)&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_edge&nbsp;:&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Navigation</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;injection_for_one_more_edge&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?root:<span class="constructor">Agent</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>

@@ -32,7 +32,7 @@
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Pattern" rel="Chapter" href="Pattern.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -92,7 +92,7 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
-<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> option * <a href="LKappa.html#TYPErule">LKappa.rule</a> <a href="Location.html#TYPEannot">Location.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array * Connected_component.Set.t -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> array -><br>       <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Environment.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> option * <a href="LKappa.html#TYPErule">LKappa.rule</a> <a href="Location.html#TYPEannot">Location.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array * Pattern.Set.t -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> array -><br>       <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Environment.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code><br>
 </div>
 
@@ -101,9 +101,9 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="VALnb_rules"><span class="keyword">val</span> nb_rules</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnb_syntactic_rules"><span class="keyword">val</span> nb_syntactic_rules</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnb_perturbations"><span class="keyword">val</span> nb_perturbations</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALconnected_components_of_unary_rules"><span class="keyword">val</span> connected_components_of_unary_rules</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> Connected_component.Set.t</code></pre>
-<pre><span id="VALdomain"><span class="keyword">val</span> domain</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> <a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a></code></pre>
-<pre><span id="VALnew_domain"><span class="keyword">val</span> new_domain</span> : <code class="type"><a href="Connected_component.Env.html#TYPEt">Connected_component.Env.t</a> -> <a href="Environment.html#TYPEt">t</a> -> <a href="Environment.html#TYPEt">t</a></code></pre>
+<pre><span id="VALconnected_components_of_unary_rules"><span class="keyword">val</span> connected_components_of_unary_rules</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> Pattern.Set.t</code></pre>
+<pre><span id="VALdomain"><span class="keyword">val</span> domain</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> <a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a></code></pre>
+<pre><span id="VALnew_domain"><span class="keyword">val</span> new_domain</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -> <a href="Environment.html#TYPEt">t</a> -> <a href="Environment.html#TYPEt">t</a></code></pre>
 <pre><span id="VALsignatures"><span class="keyword">val</span> signatures</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> <a href="Signature.html#TYPEs">Signature.s</a></code></pre>
 <pre><span id="VALtokens_finder"><span class="keyword">val</span> tokens_finder</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int Mods.StringMap.t</code></pre>
 <pre><span id="VALalgs_finder"><span class="keyword">val</span> algs_finder</span> : <code class="type"><a href="Environment.html#TYPEt">t</a> -> int Mods.StringMap.t</code></pre>

@@ -27,7 +27,7 @@
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Pattern" rel="Chapter" href="Pattern.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -77,8 +77,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;<span class="constructor">Existing</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Agent</span>.t&nbsp;*&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Fresh</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent_place</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;concretize&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;*&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_type&nbsp;:&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;same_connected_component&nbsp;:&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_site_from_fresh&nbsp;:&nbsp;<span class="constructor">Agent_place</span>.t&nbsp;*&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>

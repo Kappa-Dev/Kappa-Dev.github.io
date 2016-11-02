@@ -27,7 +27,7 @@
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
-<link title="Connected_component" rel="Chapter" href="Connected_component.html">
+<link title="Pattern" rel="Chapter" href="Pattern.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -89,12 +89,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_rule&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?rule_id:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.result<br>
@@ -102,14 +102,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;rule_id:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.result<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;force_rule&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
@@ -128,8 +128,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;incorporate_extra_pattern&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Connected_component</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extra_outdated_var&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_outdated_activities&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -140,32 +139,32 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_tracked&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.id&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;remove_tracked&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Connected_component</span>.id&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;generate_stories&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(((bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;*&nbsp;bool)&nbsp;*&nbsp;<span class="constructor">Trace</span>.t)&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_injections&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?domain:<span class="constructor">Connected_component</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?domain:<span class="constructor">Pattern</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;debug_print&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_negative_transformation&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_positive_transformation&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Connected_component</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Pattern</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t)&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Connected_component</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Pattern</span>.<span class="constructor">Matching</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t)&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Connected_component</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntMap</span>.t&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Map</span>.t&nbsp;*&nbsp;<span class="constructor">Edges</span>.t)&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t<br>
 <span class="keyword">end</span></code></body></html>
