@@ -145,14 +145,14 @@ Pathes to explore a mixture<br>
 <code class="code">print signatures find_existing_type nav</code><br>
 </div>
 
-<pre><span id="VALrename_step"><span class="keyword">val</span> rename_step</span> : <code class="type">Renaming.t -> <a href="Navigation.html#TYPEstep">step</a> -> <a href="Navigation.html#TYPEstep">step</a></code></pre>
+<pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type">Renaming.t -> <a href="Navigation.html#TYPEt">t</a> -> Renaming.t * <a href="Navigation.html#TYPEt">t</a></code></pre>
 <pre><span id="VALcompatible_point"><span class="keyword">val</span> compatible_point</span> : <code class="type">Renaming.t -> <a href="Navigation.html#TYPEstep">step</a> -> <a href="Navigation.html#TYPEstep">step</a> -> Renaming.t option</code></pre><div class="info ">
 Retuns the extension of the given injections so that the second edge
     is the image of the first<br>
 </div>
 
 <pre><span id="VALis_subnavigation"><span class="keyword">val</span> is_subnavigation</span> : <code class="type">Renaming.t -><br>       <a href="Navigation.html#TYPEt">t</a> -> <a href="Navigation.html#TYPEt">t</a> -> (Renaming.t * <a href="Navigation.html#TYPEt">t</a>) option</code></pre><div class="info ">
-<code class="code">is_subnavigation inj_nav2sub nav subpart</code><br>
+<code class="code">is_subnavigation inj_sub2nav nav subpart</code><br>
 </div>
 
 <pre><span id="VALcheck_edge"><span class="keyword">val</span> check_edge</span> : <code class="type"><a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Navigation.html#TYPEstep">step</a> -> bool</code></pre>
