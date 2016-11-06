@@ -111,7 +111,7 @@ error_init is an empty log of errors<br>
 <br>
 enriched types for functions:<br>
 
-<pre><span id="TYPEwith_handlers"><span class="keyword">type</span> <code class="type">'a</code> with_handlers</span> = <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       ?shall_we_compute:<a href="Utilities.html#TYPEshall_we">shall_we</a> -><br>       ?shall_we_compute_profiling_information:<a href="Utilities.html#TYPEshall_we">shall_we</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a> -> 'a</code> </pre>
+<pre><span id="TYPEwith_handlers"><span class="keyword">type</span> <code class="type">'a</code> with_handlers</span> = <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -><br>       ?shall_we_compute:<a href="Utilities.html#TYPEshall_we">shall_we</a> -><br>       ?shall_we_compute_profiling_information:<a href="Utilities.html#TYPEshall_we">shall_we</a> -><br>       ?print_if_zero:<a href="Utilities.html#TYPEshall_we">shall_we</a> -><br>       <a href="Utilities.html#TYPEkappa_handler">kappa_handler</a> -><br>       <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> -> <a href="Utilities.html#TYPEerror_log">error_log</a> -> 'a</code> </pre>
 
 
 <pre><span id="TYPEzeroary"><span class="keyword">type</span> <code class="type">'a</code> zeroary</span> = <code class="type">(<a href="Utilities.html#TYPEerror_log">error_log</a> * <a href="Utilities.html#TYPEprofiling_info">profiling_info</a> * 'a) <a href="Utilities.html#TYPEwith_handlers">with_handlers</a></code> </pre>
