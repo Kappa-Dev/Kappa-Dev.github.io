@@ -89,14 +89,13 @@
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent&nbsp;=&nbsp;string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mixture&nbsp;=&nbsp;<span class="constructor">Ast</span>.agent&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;arrow&nbsp;=&nbsp;<span class="constructor">RAR</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">LRAR</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;lhs&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rm_token&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="constructor">Location</span>.annot)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;arrow&nbsp;:&nbsp;<span class="constructor">Ast</span>.arrow;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bidirectional&nbsp;:&nbsp;bool;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rhs&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;add_token&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
