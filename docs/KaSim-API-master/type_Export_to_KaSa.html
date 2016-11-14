@@ -81,27 +81,29 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;internal_influence_map&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Quark_type</span>.<span class="constructor">Labels</span>.label_set_couple&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">PairRule_setmap</span>.<span class="constructor">Map</span>.t&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Quark_type</span>.<span class="constructor">Labels</span>.label_set_couple&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">PairRule_setmap</span>.<span class="constructor">Map</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;internal_constraints_list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_constraints_list&nbsp;:&nbsp;<span class="constructor">Export_to_KaSa</span>.internal_constraints_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;c_compilation&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.compil<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;reachability_analysis<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;ode_flow<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;ctmc_flow<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_parameters&nbsp;:&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.parameters<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_errors&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.errors&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_parameters&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_parameters&nbsp;:&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.parameters<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_handler&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.handler<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_errors&nbsp;:&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.errors<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_c_compilation&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.c_compilation<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_contact_map&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.internal_contact_map<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_handler&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.handler<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_errors&nbsp;:&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.errors<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_errors&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.errors&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_c_compilation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.c_compilation<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_influence_map&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -109,6 +111,9 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_reachability_analysis&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.reachability_analysis<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_constraints_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.internal_constraints_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_ctmc_flow&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.ctmc_flow<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_ode_flow&nbsp;:<br>
@@ -117,25 +122,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.c_compilation&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_contact_map&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?loggers:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_influence_map&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?loggers:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_constraint_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Remanent_state</span>.constraint_list&nbsp;option<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_constraint_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.constraint_list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_internal_constraint_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Remanent_state</span>.internal_constraint_list&nbsp;option<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_internal_constraint_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.internal_constraint_list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_constraint_list_to_json&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_internal_constraint_list_to_json&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_constraints_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
 <span class="keyword">end</span></code></body></html>
