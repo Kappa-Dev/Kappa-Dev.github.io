@@ -124,4 +124,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?loggers:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_constraint_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Remanent_state</span>.constraint_list&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_constraint_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.constraint_list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_internal_constraint_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Remanent_state</span>.internal_constraint_list&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_internal_constraint_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.internal_constraint_list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_constraint_list_to_json&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_internal_constraint_list_to_json&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.state&nbsp;*&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 <span class="keyword">end</span></code></body></html>

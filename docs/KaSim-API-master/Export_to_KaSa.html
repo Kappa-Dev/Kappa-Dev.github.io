@@ -88,7 +88,7 @@
   * Jérôme Feret, projet Abstraction/Antique, INRIA Paris-Rocquencourt
   *
   * Creation: June 30 2016
-  * Last modification: Time-stamp: &lt;Oct 13 2016&gt;
+  * Last modification: Time-stamp: &lt;Nov 14 2016&gt;
   * *
   *
   * Copyright 2010,2011 Institut National de Recherche en Informatique et
@@ -141,4 +141,10 @@
 <pre><span id="VALget_ode_flow"><span class="keyword">val</span> get_ode_flow</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEode_flow">ode_flow</a></code></pre>
 <pre><span id="VALdump_c_compil"><span class="keyword">val</span> dump_c_compil</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEc_compilation">c_compilation</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
 <pre><span id="VALoutput_contact_map"><span class="keyword">val</span> output_contact_map</span> : <code class="type">?loggers:<a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?accuracy_level:Remanent_state.accuracy_level -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
-<pre><span id="VALoutput_influence_map"><span class="keyword">val</span> output_influence_map</span> : <code class="type">?loggers:<a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?accuracy_level:Remanent_state.accuracy_level -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre></body></html>
+<pre><span id="VALoutput_influence_map"><span class="keyword">val</span> output_influence_map</span> : <code class="type">?loggers:<a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?accuracy_level:Remanent_state.accuracy_level -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
+<pre><span id="VALget_constraint_list"><span class="keyword">val</span> get_constraint_list</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> Remanent_state.constraint_list option</code></pre>
+<pre><span id="VALset_constraint_list"><span class="keyword">val</span> set_constraint_list</span> : <code class="type">Remanent_state.constraint_list -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
+<pre><span id="VALget_internal_constraint_list"><span class="keyword">val</span> get_internal_constraint_list</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> Remanent_state.internal_constraint_list option</code></pre>
+<pre><span id="VALset_internal_constraint_list"><span class="keyword">val</span> set_internal_constraint_list</span> : <code class="type">Remanent_state.internal_constraint_list -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
+<pre><span id="VALget_constraint_list_to_json"><span class="keyword">val</span> get_constraint_list_to_json</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> * Yojson.Basic.json</code></pre>
+<pre><span id="VALget_internal_constraint_list_to_json"><span class="keyword">val</span> get_internal_constraint_list_to_json</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> * Yojson.Basic.json</code></pre></body></html>
