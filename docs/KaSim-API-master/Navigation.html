@@ -145,6 +145,10 @@ Pathes to explore a mixture<br>
 <code class="code">print signatures find_existing_type nav</code><br>
 </div>
 
+<pre><span id="VALstep_to_yojson"><span class="keyword">val</span> step_to_yojson</span> : <code class="type"><a href="Navigation.html#TYPEstep">step</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALstep_of_yojson"><span class="keyword">val</span> step_of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Navigation.html#TYPEstep">step</a></code></pre>
+<pre><span id="VALto_yojson"><span class="keyword">val</span> to_yojson</span> : <code class="type"><a href="Navigation.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALof_yojson"><span class="keyword">val</span> of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Navigation.html#TYPEt">t</a></code></pre>
 <pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type">Renaming.t -> <a href="Navigation.html#TYPEt">t</a> -> Renaming.t * <a href="Navigation.html#TYPEt">t</a></code></pre>
 <pre><span id="VALcompatible_point"><span class="keyword">val</span> compatible_point</span> : <code class="type">Renaming.t -> <a href="Navigation.html#TYPEstep">step</a> -> <a href="Navigation.html#TYPEstep">step</a> -> Renaming.t option</code></pre><div class="info ">
 Retuns the extension of the given injections so that the second edge

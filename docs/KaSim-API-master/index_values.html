@@ -1651,8 +1651,6 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Trace.html#VALof_json">of_json</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALof_json">of_json</a> [<a href="Environment.html">Environment</a>]</td>
-<td></td></tr>
 <tr><td><a href="Raw_mixture.html#VALof_json">of_json</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALof_json">of_json</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -1688,6 +1686,12 @@ values of observables)
 </div>
 </td></tr>
 <tr><td><a href="Nbr.html#VALof_un_alg_op">of_un_alg_op</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Navigation.html#VALof_yojson">of_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALof_yojson">of_yojson</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern.Env.html#VALof_yojson">of_yojson</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALone">one</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -1875,8 +1879,6 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_connected_component">print_connected_component</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Raw_mixture.html#VALprint_dot">print_dot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
-<td></td></tr>
-<tr><td><a href="Pattern.Env.html#VALprint_dot">print_dot</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_dump_plots">print_dump_plots</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
@@ -2113,8 +2115,6 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALset_bonds_rhs">set_bonds_rhs</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Kappa_files.html#VALset_ccFile">set_ccFile</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
-<td></td></tr>
 <tr><td><a href="Kappa_files.html#VALset_cflow">set_cflow</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALset_created_bonds">set_created_bonds</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
@@ -2230,6 +2230,10 @@ split_init split init event agent-wise
 <td></td></tr>
 <tr><td><a href="Trace.html#VALstep_is_subs">step_is_subs</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
+<tr><td><a href="Navigation.html#VALstep_of_yojson">step_of_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Navigation.html#VALstep_to_yojson">step_to_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
+<td></td></tr>
 <tr><td><a href="Alg_expr.html#VALstops_of_bool_expr">stops_of_bool_expr</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Primitives.html#VALstops_of_perturbation">stops_of_perturbation</a> [<a href="Primitives.html">Primitives</a>]</td>
@@ -2321,8 +2325,6 @@ compute the strong compression of a given trace,
 <td></td></tr>
 <tr><td><a href="Trace.html#VALto_json">to_json</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALto_json">to_json</a> [<a href="Environment.html">Environment</a>]</td>
-<td></td></tr>
 <tr><td><a href="Raw_mixture.html#VALto_json">to_json</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALto_json">to_json</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -2352,6 +2354,12 @@ compute the strong compression of a given trace,
 <tr><td><a href="Nbr.html#VALto_string">to_string</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp_svg.html#VALto_string">to_string</a> [<a href="Pp_svg.html">Pp_svg</a>]</td>
+<td></td></tr>
+<tr><td><a href="Navigation.html#VALto_yojson">to_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Environment.html#VALto_yojson">to_yojson</a> [<a href="Environment.html">Environment</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern.Env.html#VALto_yojson">to_yojson</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALtoken_vector">token_vector</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -2425,8 +2433,6 @@ compute the weak compression of a given trace,
 </div>
 </td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALwhat_do_we_count">what_do_we_count</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
-<td></td></tr>
-<tr><td><a href="Kappa_files.html#VALwith_ccFile">with_ccFile</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_cflow_file">with_cflow_file</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
