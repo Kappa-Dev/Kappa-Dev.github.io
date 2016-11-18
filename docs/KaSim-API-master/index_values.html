@@ -472,8 +472,6 @@ Give the number of stories (up to isomorphism classes) stored in a table
 <td></td></tr>
 <tr><td><a href="Outputs.html#VALcreate_distances">create_distances</a> [<a href="Outputs.html">Outputs</a>]</td>
 <td></td></tr>
-<tr><td><a href="Outputs.html#VALcreate_plot">create_plot</a> [<a href="Outputs.html">Outputs</a>]</td>
-<td></td></tr>
 <tr><td><a href="Utilities.html#VALcreate_story_table">create_story_table</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
 Initialization
@@ -484,6 +482,8 @@ Initialization
 <tr><td><a href="Trace.html#VALcreation_of_step">creation_of_step</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALcurrent_event">current_event</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Counter.html#VALcurrent_simulation_info">current_simulation_info</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALcurrent_story">current_story</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
@@ -860,8 +860,6 @@ Apply the rule for sure if it is possible.
 <tr><td><a href="Primitives.Transformation.html#VALfresh_bindings">fresh_bindings</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>G</td></tr>
-<tr><td><a href="Rule_interpreter.html#VALgenerate_stories">generate_stories</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
-<td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALget">get</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.Matching.html#VALget">get</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
@@ -929,8 +927,6 @@ Awfully inefficient
 <tr><td><a href="Analyzer_headers.html#VALget_created_bonds">get_created_bonds</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.html#VALget_ctmc_flow">get_ctmc_flow</a> [<a href="Export_to_KaSa.html">Export_to_KaSa</a>]</td>
-<td></td></tr>
-<tr><td><a href="Kappa_files.html#VALget_data">get_data</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALget_defined_in">get_defined_in</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
@@ -1098,6 +1094,10 @@ check wether there is an observable in a trace
 <code class="code">id_of_site agent_type site_name sigs</code>
 </div>
 </td></tr>
+<tr><td><a href="Pattern.html#VALid_of_yojson">id_of_yojson</a> [<a href="Pattern.html">Pattern</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern.html#VALid_to_yojson">id_to_yojson</a> [<a href="Pattern.html">Pattern</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ast.html#VALimplicit_signature">implicit_signature</a> [<a href="Ast.html">Ast</a>]</td>
 <td><div class="info">
 Infer agent signatures and tokens from init, rules and perturbations
@@ -1139,6 +1139,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 <tr><td><a href="Composite_domain.Composite_domain.html#VALinitialize">initialize</a> [<a href="Composite_domain.Composite_domain.html">Composite_domain.Composite_domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALinitialize">initialize</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
+<td></td></tr>
+<tr><td><a href="Outputs.html#VALinitialize">initialize</a> [<a href="Outputs.html">Outputs</a>]</td>
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALinitialize">initialize</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
@@ -1591,6 +1593,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Composite_domain.Composite_domain.html#VALnext_rule">next_rule</a> [<a href="Composite_domain.Composite_domain.html">Composite_domain.Composite_domain</a>]</td>
 <td></td></tr>
+<tr><td><a href="Counter.html#VALnext_story">next_story</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ast.html#VALno_more_site_on_right">no_more_site_on_right</a> [<a href="Ast.html">Ast</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALnu">nu</a> [<a href="Pp.html">Pp</a>]</td>
@@ -1649,8 +1653,6 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Trace.Simulation_info.html#VALof_json">of_json</a> [<a href="Trace.Simulation_info.html">Trace.Simulation_info</a>]</td>
 <td></td></tr>
-<tr><td><a href="Trace.html#VALof_json">of_json</a> [<a href="Trace.html">Trace</a>]</td>
-<td></td></tr>
 <tr><td><a href="Raw_mixture.html#VALof_json">of_json</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALof_json">of_json</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -1686,6 +1688,8 @@ values of observables)
 </div>
 </td></tr>
 <tr><td><a href="Nbr.html#VALof_un_alg_op">of_un_alg_op</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALof_yojson">of_yojson</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALof_yojson">of_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
@@ -1989,7 +1993,7 @@ proj_set f set is the set {f(a) | a\in S}
 <td></td></tr>
 <tr><td><a href="Environment.html#VALpropagate_constant">propagate_constant</a> [<a href="Environment.html">Environment</a>]</td>
 <td><div class="info">
-<code class="code">propagate_constant updated_vars counter env</code>
+<code class="code">propagate_constant updated_vars env</code>
 </div>
 </td></tr>
 <tr><td><a href="Alg_expr.html#VALpropagate_constant">propagate_constant</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -2119,8 +2123,6 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALset_created_bonds">set_created_bonds</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Kappa_files.html#VALset_data">set_data</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
-<td></td></tr>
 <tr><td><a href="Kappa_files.html#VALset_dir">set_dir</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALset_distances">set_distances</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
@@ -2230,7 +2232,11 @@ split_init split init event agent-wise
 <td></td></tr>
 <tr><td><a href="Trace.html#VALstep_is_subs">step_is_subs</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
+<tr><td><a href="Trace.html#VALstep_of_yojson">step_of_yojson</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
 <tr><td><a href="Navigation.html#VALstep_of_yojson">step_of_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALstep_to_yojson">step_to_yojson</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALstep_to_yojson">step_to_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
@@ -2241,10 +2247,6 @@ split_init split init event agent-wise
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALstore_by_mvbdu">store_by_mvbdu</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALstore_by_variables_list">store_by_variables_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
-<td></td></tr>
-<tr><td><a href="Trace.html#VALstore_event">store_event</a> [<a href="Trace.html">Trace</a>]</td>
-<td></td></tr>
-<tr><td><a href="Trace.html#VALstore_obs">store_obs</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALstore_trace">store_trace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
@@ -2323,8 +2325,6 @@ compute the strong compression of a given trace,
 <td></td></tr>
 <tr><td><a href="Trace.Simulation_info.html#VALto_json">to_json</a> [<a href="Trace.Simulation_info.html">Trace.Simulation_info</a>]</td>
 <td></td></tr>
-<tr><td><a href="Trace.html#VALto_json">to_json</a> [<a href="Trace.html">Trace</a>]</td>
-<td></td></tr>
 <tr><td><a href="Raw_mixture.html#VALto_json">to_json</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALto_json">to_json</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -2354,6 +2354,8 @@ compute the strong compression of a given trace,
 <tr><td><a href="Nbr.html#VALto_string">to_string</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp_svg.html#VALto_string">to_string</a> [<a href="Pp_svg.html">Pp_svg</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALto_yojson">to_yojson</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALto_yojson">to_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>

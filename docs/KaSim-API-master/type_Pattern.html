@@ -131,6 +131,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?domain:<span class="constructor">Pattern</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;with_id:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;id_to_yojson&nbsp;:&nbsp;<span class="constructor">Pattern</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;id_of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;find_root_type&nbsp;:&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;automorphisms&nbsp;:&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Renaming</span>.t&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Matching</span>&nbsp;:<br>

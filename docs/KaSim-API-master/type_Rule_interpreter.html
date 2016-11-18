@@ -75,12 +75,9 @@
 <body>
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;result&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Clash</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Corrected</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Success</span>&nbsp;<span class="keyword">of</span>&nbsp;(int&nbsp;option&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t)<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;result&nbsp;=&nbsp;<span class="constructor">Clash</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Corrected</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Success</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?trace_file:string&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;with_trace:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;store_distances:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Random</span>.<span class="constructor">State</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;value_alg&nbsp;:<br>
@@ -92,6 +89,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool_expr&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_rule&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?rule_id:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -100,6 +98,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.result<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply_unary_rule&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule_id:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -108,6 +107,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.result<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;force_rule&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;get_alg:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Set</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -147,7 +147,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;remove_tracked&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Rule_interpreter</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;generate_stories&nbsp;:&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Trace</span>.t)&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_injections&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?domain:<span class="constructor">Pattern</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">ObsMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>

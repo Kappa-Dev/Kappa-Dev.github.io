@@ -144,14 +144,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_step&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?compact:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?env:<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_json&nbsp;:&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_json&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_event&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.event&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;store_obs&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.event_kind&nbsp;*&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;step_to_yojson&nbsp;:&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;step_of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_yojson&nbsp;:&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
 <span class="keyword">end</span></code></body></html>
