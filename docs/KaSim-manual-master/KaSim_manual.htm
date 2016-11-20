@@ -6719,9 +6719,9 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (c23efdb) (without Tk interface)
- <br />Analysis launched at 2016/11/19 15:02:34 (GMT+0) on
- <br />testing-gce-accaa425-b3a3-4f2c-8228-afb896b1a318
+Kappa Static Analyzer (c3fb438) (without Tk interface)
+ <br />Analysis launched at 2016/11/20 09:20:28 (GMT+0) on
+ <br />testing-gce-5b98656f-681c-420d-b5b4-9ad80cca7a9a
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6747,9 +6747,9 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (c23efdb) (without Tk interface)
- <br />Analysis launched at 2016/11/19 15:02:34 (GMT+0) on
- <br />testing-gce-accaa425-b3a3-4f2c-8228-afb896b1a318
+Kappa Static Analyzer (c3fb438) (without Tk interface)
+ <br />Analysis launched at 2016/11/20 09:20:28 (GMT+0) on
+ <br />testing-gce-5b98656f-681c-420d-b5b4-9ad80cca7a9a
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6843,11 +6843,11 @@ class="content">Reachability analysis: one rule successfully applied</span></div
 
                                                                                   
 <div class="verbatim" id="verbatim-9">
-Views in initial state
+Views in initial state:
  <br />
  <br />A(y~u)
  <br />--
- <br />Views in initial state
+ <br />Views in initial state:
  <br />
  <br />A(x~u,y!free)</div>
 <!--l. 9--><p class="nopar" >
@@ -6876,9 +6876,8 @@ Applying rule 0: A.p:
  <br />
  <br />Updating the views for A(x~,y!)
  <br />
- <br />
  <br />A(x~p,y!free)</div>
-<!--l. 12--><p class="nopar" >
+<!--l. 11--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.9: </span><span  
 class="content">Reachability analysis: extensional description of the new views created when
@@ -6905,12 +6904,12 @@ Applying rule 0: A.p:
  <br />
  <br />Updating the views for A(x~,y!)
  <br />
- <br />
  <br />A(x~p,y!free)
  <br />
- <br />Wake-up rules
- <br />Updating the views for A(x~,y!)
+ <br />Wake-up rules:
  <br />(rule 0: A.p) should be investigated
+ <br />(rule 1: dimer) should be investigated
+ <br />(rule 2: dead) should be investigated
  <br />--
  <br />Applying rule 1: dimer:
  <br />the precondition is satisfied
@@ -6919,13 +6918,12 @@ Applying rule 0: A.p:
  <br />
  <br />Updating the views for A(x~,y!)
  <br />
- <br />
  <br />A(x~p,y!A@y)
  <br />
- <br />Wake-up rules
- <br />Updating the views for A(x~,y!)
- <br />(rule 0: A.p) should be investigated</div>
-<!--l. 29--><p class="nopar" >
+ <br />Wake-up rules:
+ <br />(rule 0: A.p) should be investigated
+ <br />(rule 1: dimer) should be investigated</div>
+<!--l. 28--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.10: </span><span  
 class="content">Reachability analysis: discovering new views force the analysis to apply some
