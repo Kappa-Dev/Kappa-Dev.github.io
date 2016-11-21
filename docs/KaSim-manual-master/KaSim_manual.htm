@@ -6238,8 +6238,6 @@ General options
  <br />      semantics
  <br />  --(no-)compute-reachability-analysis    (default: enabled)
  <br />      Compute an approximation of the states of agent sites
- <br />  --(no-)views-domain    (default: enabled)
- <br />      enable local views analysis
  <br />  --(no-)double-bonds-domain    (default: enabled)
  <br />      enable double bonds analysis
  <br />  --(no-)sites-accross-bonds-domain    (default: enabled)
@@ -6251,11 +6249,11 @@ General options
  <br />1_Output
  <br />  --output-directory &#x003C;value&#x003E;
  <br />      Default repository for outputs
+ <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the contact map file in this directory
                                                                                   
 
                                                                                   
- <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
- <br />      put the contact map file in this directory
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the influence map file in this directory
  <br />  --output-local-traces-directory &#x003C;name&#x003E;   (default: output)
@@ -6280,30 +6278,26 @@ General options
  <br />      enable every abstract domain
  <br />  --disable-every-domain
  <br />      disable every abstract domain
- <br />  --(no-)views-domain    (default: enabled)
- <br />      enable local views analysis
  <br />  --(no-)double-bonds-domain    (default: enabled)
  <br />      enable double bonds analysis
  <br />  --(no-)sites-accross-bonds-domain    (default: enabled)
  <br />      enable the analysis of the relation amond the states of sites in
  <br />      connected agents
- <br />  --view-analysis High    (default: High)
- <br />      Tune the accuracy level of the view analysis
  <br />  --verbosity-level-for-reachability-analysis Mute | Low | Medium | High |
  <br />                                              Full    (default: Low)
  <br />      Tune the verbosity level for the reachability analysis
  <br />  --output-mode-for-reachability-analysis raw | kappa | english    (default: KAPPA)
  <br />      post-process relation and output the result in the chosen format
  <br />
-                                                                                  
-
-                                                                                  
  <br />3_Trace_analysis
  <br />  --(no-)compute-local-traces    (default: disabled)
  <br />      Compute the local traces of interesting parts of agent interfaces
  <br />  --(no-)show-rule-names-in-local-traces    (default: enabled)
  <br />      Annotate each transition with the name of the rules in trace
  <br />      abstraction
+                                                                                  
+
+                                                                                  
  <br />  --(no-)use-macrotransitions-in-local-traces    (default: disabled)
  <br />      Use macrotransitions to get a compact trace up to change of the
  <br />      interleaving order of commuting microtransitions
@@ -6339,15 +6333,15 @@ General options
  <br />      Tune the output format for the influence map
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
  <br />      file name for the influence map
-                                                                                  
-
-                                                                                  
  <br />
  <br />6_FLow_of_information
  <br />  --(no-)compute-ODE-flow-of-information    (default: disabled)
  <br />      Compute an approximation of the flow of information in the ODE
  <br />      semantics
  <br />  --(no-)compute-stochastic-flow-of-information    (default: disabled)
+                                                                                  
+
+                                                                                  
  <br />      Compute an approximation of the flow of information in the stochastic
  <br />      semantics
  <br />
@@ -6360,8 +6354,8 @@ General options
  <br />      Exceptions are gathered at the end of the computation, instead of
  <br />      halting it
  <br />
- <br />(57 options)</div>
-<!--l. 141--><p class="nopar" >
+ <br />(54 options)</div>
+<!--l. 135--><p class="nopar" >
 <!--l. 1155--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -6375,9 +6369,6 @@ before compilation.
 <h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
  id="x1-580007.2.1"></a>Launching the interface</h4>
 <!--l. 1164--><p class="noindent" >The graphical interface can be launched by typing
-                                                                                  
-
-                                                                                  
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ectt-1095">KaSa</span></li></ul>
@@ -6740,9 +6731,9 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (89340be) (without Tk interface)
- <br />Analysis launched at 2016/11/21 16:30:44 (GMT+0) on
- <br />testing-gce-314a33e0-9151-4177-a50c-8c992f62770a
+Kappa Static Analyzer (f9667e3) (without Tk interface)
+ <br />Analysis launched at 2016/11/21 17:14:25 (GMT+0) on
+ <br />testing-gce-6eb770fb-2bbd-4d50-b0f8-aeeacbdf9fc8
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6768,9 +6759,9 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (89340be) (without Tk interface)
- <br />Analysis launched at 2016/11/21 16:30:44 (GMT+0) on
- <br />testing-gce-314a33e0-9151-4177-a50c-8c992f62770a
+Kappa Static Analyzer (f9667e3) (without Tk interface)
+ <br />Analysis launched at 2016/11/21 17:14:25 (GMT+0) on
+ <br />testing-gce-6eb770fb-2bbd-4d50-b0f8-aeeacbdf9fc8
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -8270,6 +8261,10 @@ It results that the ﬁrst rule has a positive inﬂuence on the second.</span><
 despite the fact that there can be no actual one. But if it shows no inﬂuence it means that either
 there are NO such inﬂuence, or that we are in a case that is not covered yet as itemised
 previously.
+                                                                                  
+
+                                                                                  
+<!--l. 1524--><p class="noindent" >
                                                                                   
 
                                                                                   
