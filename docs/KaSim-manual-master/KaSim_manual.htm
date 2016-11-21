@@ -6238,6 +6238,8 @@ General options
  <br />      semantics
  <br />  --(no-)compute-reachability-analysis    (default: enabled)
  <br />      Compute an approximation of the states of agent sites
+ <br />  --(no-)views-domain    (default: enabled)
+ <br />      enable local views analysis
  <br />  --(no-)double-bonds-domain    (default: enabled)
  <br />      enable double bonds analysis
  <br />  --(no-)sites-accross-bonds-domain    (default: enabled)
@@ -6249,11 +6251,11 @@ General options
  <br />1_Output
  <br />  --output-directory &#x003C;value&#x003E;
  <br />      Default repository for outputs
- <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
- <br />      put the contact map file in this directory
                                                                                   
 
                                                                                   
+ <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the contact map file in this directory
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the influence map file in this directory
  <br />  --output-local-traces-directory &#x003C;name&#x003E;   (default: output)
@@ -6278,6 +6280,8 @@ General options
  <br />      enable every abstract domain
  <br />  --disable-every-domain
  <br />      disable every abstract domain
+ <br />  --(no-)views-domain    (default: enabled)
+ <br />      enable local views analysis
  <br />  --(no-)double-bonds-domain    (default: enabled)
  <br />      enable double bonds analysis
  <br />  --(no-)sites-accross-bonds-domain    (default: enabled)
@@ -6291,13 +6295,13 @@ General options
  <br />
  <br />3_Trace_analysis
  <br />  --(no-)compute-local-traces    (default: disabled)
+                                                                                  
+
+                                                                                  
  <br />      Compute the local traces of interesting parts of agent interfaces
  <br />  --(no-)show-rule-names-in-local-traces    (default: enabled)
  <br />      Annotate each transition with the name of the rules in trace
  <br />      abstraction
-                                                                                  
-
-                                                                                  
  <br />  --(no-)use-macrotransitions-in-local-traces    (default: disabled)
  <br />      Use macrotransitions to get a compact trace up to change of the
  <br />      interleaving order of commuting microtransitions
@@ -6335,13 +6339,13 @@ General options
  <br />      file name for the influence map
  <br />
  <br />6_FLow_of_information
+                                                                                  
+
+                                                                                  
  <br />  --(no-)compute-ODE-flow-of-information    (default: disabled)
  <br />      Compute an approximation of the flow of information in the ODE
  <br />      semantics
  <br />  --(no-)compute-stochastic-flow-of-information    (default: disabled)
-                                                                                  
-
-                                                                                  
  <br />      Compute an approximation of the flow of information in the stochastic
  <br />      semantics
  <br />
@@ -6354,8 +6358,8 @@ General options
  <br />      Exceptions are gathered at the end of the computation, instead of
  <br />      halting it
  <br />
- <br />(54 options)</div>
-<!--l. 135--><p class="nopar" >
+ <br />(56 options)</div>
+<!--l. 139--><p class="nopar" >
 <!--l. 1155--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -6372,6 +6376,9 @@ before compilation.
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ectt-1095">KaSa</span></li></ul>
+                                                                                  
+
+                                                                                  
 <!--l. 1167--><p class="noindent" >without any option.
 <!--l. 1169--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
@@ -6731,15 +6738,24 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (157fca5) (without Tk interface)
- <br />Analysis launched at 2016/11/21 17:20:45 (GMT+0) on
- <br />testing-gce-9656d602-21ef-4899-a7e3-145abe628da8
+Kappa Static Analyzer (6865376) (without Tk interface)
+ <br />Analysis launched at 2016/11/21 20:34:27 (GMT+0) on
+ <br />testing-gce-4abfd4bf-9418-405d-bcf6-09c47f47e76f
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
  <br />Reachability analysis...
+ <br />(rule 2: dead) should be
+ <br />investigated
+ <br />(rule 1: dimer) should be
+ <br />investigated
+ <br />(rule 1: dimer) should be
+ <br />investigated
+ <br />(rule 0: A.p) should be
+ <br />investigated
+ <br />
  <br />execution finished without any exception</div>
-<!--l. 10--><p class="nopar" >
+<!--l. 19--><p class="nopar" >
 <br /><div class="caption" 
 ><span class="id">Figure 7.4: </span><span  
 class="content">Reachability analysis of the model <span 
@@ -6759,13 +6775,22 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (157fca5) (without Tk interface)
- <br />Analysis launched at 2016/11/21 17:20:45 (GMT+0) on
- <br />testing-gce-9656d602-21ef-4899-a7e3-145abe628da8
+Kappa Static Analyzer (6865376) (without Tk interface)
+ <br />Analysis launched at 2016/11/21 20:34:27 (GMT+0) on
+ <br />testing-gce-4abfd4bf-9418-405d-bcf6-09c47f47e76f
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
  <br />Reachability analysis...
+ <br />(rule 2: dead) should be
+ <br />investigated
+ <br />(rule 1: dimer) should be
+ <br />investigated
+ <br />(rule 1: dimer) should be
+ <br />investigated
+ <br />(rule 0: A.p) should be
+ <br />investigated
+ <br />
  <br />
  <br />------------------------------------------------------------
  <br />* There are some non applyable rules
@@ -6788,11 +6813,14 @@ Kappa Static Analyzer (157fca5) (without Tk interface)
  <br />------------------------------------------------------------
  <br />* Properties in connected agents
  <br />------------------------------------------------------------
+                                                                                  
+
+                                                                                  
  <br />------------------------------------------------------------
  <br />* Properties of pairs of bonds
  <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 35--><p class="nopar" >
+<!--l. 44--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.5: </span><span  
 class="content">Reachability analysis of the model <span 
