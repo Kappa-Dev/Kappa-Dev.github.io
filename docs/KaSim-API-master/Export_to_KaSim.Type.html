@@ -1,7 +1,10 @@
-<html><head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
+<link rel="Up" href="Export_to_KaSim.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -70,29 +73,22 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Export_to_KaSim</title>
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Export_to_KaSim.Type</title>
 </head>
 <body>
-<code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="keyword">type</span>&nbsp;<span class="constructor">Type</span>&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;contact_map&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;list&nbsp;*&nbsp;(string&nbsp;*&nbsp;string)&nbsp;list)&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringSetMap</span>.<span class="constructor">Map</span>.t<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?compil:(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;called_from:<span class="constructor">Remanent_parameters_sig</span>.called_from&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Type</span>.state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_contact_map&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Type</span>.contact_map<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dump_errors_light&nbsp;:&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flush_errors&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSim</span>.<span class="constructor">Type</span>.state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
-&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Export</span>&nbsp;:&nbsp;<span class="keyword">functor</span>&nbsp;(<span class="constructor">Reachability</span>&nbsp;:&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Type</span><br>
-<span class="keyword">end</span></code></body></html>
+<div class="navbar">&nbsp;<a class="up" href="Export_to_KaSim.html" title="Export_to_KaSim">Up</a>
+&nbsp;</div>
+<h1>Module type <a href="type_Export_to_KaSim.Type.html">Export_to_KaSim.Type</a></h1>
+
+<pre><span class="keyword">module type</span> Type = <code class="code"><span class="keyword">sig</span></code> <a href="Export_to_KaSim.Type.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+
+<pre><span id="TYPEstate"><span class="keyword">type</span> <code class="type"></code>state</span> </pre>
+
+
+<pre><span id="TYPEcontact_map"><span class="keyword">type</span> <code class="type"></code>contact_map</span> = <code class="type">(string list * (string * string) list) Mods.StringMap.t<br>       Mods.StringSetMap.Map.t</code> </pre>
+
+
+<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">?compil:(string <a href="Location.html#TYPEannot">Location.annot</a> * <a href="Ast.html#TYPEport">Ast.port</a> list, <a href="Ast.html#TYPEmixture">Ast.mixture</a>, string,<br>                <a href="Ast.html#TYPErule">Ast.rule</a>)<br>               <a href="Ast.html#TYPEcompil">Ast.compil</a> -><br>       called_from:Remanent_parameters_sig.called_from -><br>       unit -> <a href="Export_to_KaSim.Type.html#TYPEstate">state</a></code></pre>
+<pre><span id="VALget_contact_map"><span class="keyword">val</span> get_contact_map</span> : <code class="type">?accuracy_level:Remanent_state.accuracy_level -><br>       <a href="Export_to_KaSim.Type.html#TYPEstate">state</a> -><br>       <a href="Export_to_KaSim.Type.html#TYPEstate">state</a> * <a href="Export_to_KaSim.Type.html#TYPEcontact_map">contact_map</a></code></pre>
+<pre><span id="VALdump_errors_light"><span class="keyword">val</span> dump_errors_light</span> : <code class="type"><a href="Export_to_KaSim.Type.html#TYPEstate">state</a> -> unit</code></pre>
+<pre><span id="VALflush_errors"><span class="keyword">val</span> flush_errors</span> : <code class="type"><a href="Export_to_KaSim.Type.html#TYPEstate">state</a> -> <a href="Export_to_KaSim.Type.html#TYPEstate">state</a></code></pre></body></html>

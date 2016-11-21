@@ -88,7 +88,7 @@
   * Jérôme Feret, projet Abstraction/Antique, INRIA Paris-Rocquencourt
   *
   * Creation: June 30 2016
-  * Last modification: Time-stamp: &lt;Nov 14 2016&gt;
+  * Last modification: Time-stamp: &lt;Nov 21 2016&gt;
   * *
   *
   * Copyright 2010,2011 Institut National de Recherche en Informatique et
@@ -97,54 +97,5 @@
 </div>
 <hr width="100%">
 
-<pre><span id="TYPEstate"><span class="keyword">type</span> <code class="type"></code>state</span> </pre>
-
-
-<pre><span id="TYPEparameters"><span class="keyword">type</span> <code class="type"></code>parameters</span> = <code class="type">Remanent_parameters_sig.parameters</code> </pre>
-
-
-<pre><span id="TYPEerrors"><span class="keyword">type</span> <code class="type"></code>errors</span> = <code class="type">Exception.method_handler</code> </pre>
-
-
-<pre><span id="TYPEinternal_contact_map"><span class="keyword">type</span> <code class="type"></code>internal_contact_map</span> </pre>
-
-
-<pre><span id="TYPEinternal_influence_map"><span class="keyword">type</span> <code class="type"></code>internal_influence_map</span> = <code class="type">Quark_type.Labels.label_set_couple Ckappa_sig.PairRule_setmap.Map.t *<br>       Quark_type.Labels.label_set_couple Ckappa_sig.PairRule_setmap.Map.t</code> </pre>
-
-
-<pre><span id="TYPEinternal_constraints_list"><span class="keyword">type</span> <code class="type"></code>internal_constraints_list</span> </pre>
-
-
-<pre><span id="VALempty_constraints_list"><span class="keyword">val</span> empty_constraints_list</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEinternal_constraints_list">internal_constraints_list</a></code></pre>
-<pre><span id="TYPEhandler"><span class="keyword">type</span> <code class="type"></code>handler</span> = <code class="type">Cckappa_sig.kappa_handler</code> </pre>
-
-
-<pre><span id="TYPEc_compilation"><span class="keyword">type</span> <code class="type"></code>c_compilation</span> = <code class="type">Cckappa_sig.compil</code> </pre>
-
-
-<pre><span id="TYPEreachability_analysis"><span class="keyword">type</span> <code class="type"></code>reachability_analysis</span> </pre>
-
-
-<pre><span id="TYPEode_flow"><span class="keyword">type</span> <code class="type"></code>ode_flow</span> </pre>
-
-
-<pre><span id="TYPEctmc_flow"><span class="keyword">type</span> <code class="type"></code>ctmc_flow</span> </pre>
-
-
-<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">unit -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
-<pre><span id="VALset_errors"><span class="keyword">val</span> set_errors</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEerrors">errors</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
-<pre><span id="VALset_parameters"><span class="keyword">val</span> set_parameters</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEparameters">parameters</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
-<pre><span id="VALget_parameters"><span class="keyword">val</span> get_parameters</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEparameters">parameters</a></code></pre>
-<pre><span id="VALget_handler"><span class="keyword">val</span> get_handler</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEhandler">handler</a></code></pre>
-<pre><span id="VALget_errors"><span class="keyword">val</span> get_errors</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEerrors">errors</a></code></pre>
-<pre><span id="VALget_c_compilation"><span class="keyword">val</span> get_c_compilation</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEc_compilation">c_compilation</a></code></pre>
-<pre><span id="VALget_contact_map"><span class="keyword">val</span> get_contact_map</span> : <code class="type">?accuracy_level:Remanent_state.accuracy_level -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEinternal_contact_map">internal_contact_map</a></code></pre>
-<pre><span id="VALget_influence_map"><span class="keyword">val</span> get_influence_map</span> : <code class="type">?accuracy_level:Remanent_state.accuracy_level -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEinternal_influence_map">internal_influence_map</a></code></pre>
-<pre><span id="VALget_reachability_analysis"><span class="keyword">val</span> get_reachability_analysis</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEreachability_analysis">reachability_analysis</a></code></pre>
-<pre><span id="VALget_constraints_list"><span class="keyword">val</span> get_constraints_list</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEinternal_constraints_list">internal_constraints_list</a></code></pre>
-<pre><span id="VALget_ctmc_flow"><span class="keyword">val</span> get_ctmc_flow</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEctmc_flow">ctmc_flow</a></code></pre>
-<pre><span id="VALget_ode_flow"><span class="keyword">val</span> get_ode_flow</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> * <a href="Export_to_KaSa.html#TYPEode_flow">ode_flow</a></code></pre>
-<pre><span id="VALdump_c_compil"><span class="keyword">val</span> dump_c_compil</span> : <code class="type"><a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEc_compilation">c_compilation</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
-<pre><span id="VALoutput_contact_map"><span class="keyword">val</span> output_contact_map</span> : <code class="type">?logger:<a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?accuracy_level:Remanent_state.accuracy_level -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
-<pre><span id="VALoutput_influence_map"><span class="keyword">val</span> output_influence_map</span> : <code class="type">?logger:<a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?accuracy_level:Remanent_state.accuracy_level -><br>       <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre>
-<pre><span id="VALoutput_constraints_list"><span class="keyword">val</span> output_constraints_list</span> : <code class="type">?logger:<a href="Loggers.html#TYPEt">Loggers.t</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a> -> <a href="Export_to_KaSa.html#TYPEstate">state</a></code></pre></body></html>
+<pre><span class="keyword">module type</span> <a href="Export_to_KaSa.Type.html">Type</a> = <code class="code"><span class="keyword">sig</span></code> <a href="Export_to_KaSa.Type.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
+<pre><span class="keyword">module</span> <a href="Export_to_KaSa.Export.html">Export</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">Reachability</span></code><code class="code"> : </code><code class="type"><a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="Export_to_KaSa.Type.html">Type</a></code><code class="type"> </code></div></pre></body></html>
