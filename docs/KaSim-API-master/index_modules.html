@@ -65,7 +65,8 @@
 <link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
 <link title="Views_domain" rel="Chapter" href="Views_domain.html">
 <link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
-<link title="Contact_map_domain" rel="Chapter" href="Contact_map_domain.html">
+<link title="Static_contact_map_domain" rel="Chapter" href="Static_contact_map_domain.html">
+<link title="Dynamic_contact_map_domain" rel="Chapter" href="Dynamic_contact_map_domain.html">
 <link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
 <link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
@@ -137,11 +138,6 @@ composite abstract domain (no longer with communications which have been interna
 Main entry to the story machinery
 </div>
 </td></tr>
-<tr><td><a href="Contact_map_domain.html">Contact_map_domain</a> </td>
-<td><div class="info">
-This domain tracks which rules can be applied, and warns other domains at the first application of a rule
-</div>
-</td></tr>
 <tr><td><a href="Counter.html">Counter</a> </td>
 <td><div class="info">
 Simulation progress keeper
@@ -156,7 +152,9 @@ Simulation progress keeper
 <td></td></tr>
 <tr><td><a href="Parallel_bonds.Domain.html">Domain</a> [<a href="Parallel_bonds.html">Parallel_bonds</a>]</td>
 <td></td></tr>
-<tr><td><a href="Contact_map_domain.Domain.html">Domain</a> [<a href="Contact_map_domain.html">Contact_map_domain</a>]</td>
+<tr><td><a href="Dynamic_contact_map_domain.Domain.html">Domain</a> [<a href="Dynamic_contact_map_domain.html">Dynamic_contact_map_domain</a>]</td>
+<td></td></tr>
+<tr><td><a href="Static_contact_map_domain.Domain.html">Domain</a> [<a href="Static_contact_map_domain.html">Static_contact_map_domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agents_domain.Domain.html">Domain</a> [<a href="Agents_domain.html">Agents_domain</a>]</td>
 <td></td></tr>
@@ -185,6 +183,11 @@ Simulation progress keeper
   *
   * Copyright 2011,2012  Institut National de Recherche en Informatique et
   * en Automatique.
+</div>
+</td></tr>
+<tr><td><a href="Dynamic_contact_map_domain.html">Dynamic_contact_map_domain</a> </td>
+<td><div class="info">
+This domain tracks which rules can be applied, and warns other domains at the first application of a rule
 </div>
 </td></tr>
 <tr><td align="left"><br>E</td></tr>
@@ -545,6 +548,8 @@ Functor to combine several abstract domains (with explicit communiaction among t
 <td></td></tr>
 <tr><td><a href="SetMap.Proj2.html">Proj2</a> [<a href="SetMap.html">SetMap</a>]</td>
 <td></td></tr>
+<tr><td><a href="Static_contact_map_domain.Domain.Proj_bonds.html">Proj_bonds</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>Q</td></tr>
 <tr><td><a href="Int_storage.Quick_Nearly_inf_Imperatif.html">Quick_Nearly_inf_Imperatif</a> [<a href="Int_storage.html">Int_storage</a>]</td>
 <td><div class="info">
@@ -601,6 +606,21 @@ Kappa pattern compiler
 <tr><td><a href="State_interpreter.html">State_interpreter</a> </td>
 <td><div class="info">
 Event loop module
+</div>
+</td></tr>
+<tr><td><a href="Static_contact_map_domain.html">Static_contact_map_domain</a> </td>
+<td><div class="info">
+* contact_map_domain.ml
+   * openkappa
+   * Jérôme Feret &amp; Ly Kim Quyen, project Antique, INRIA Paris
+   *
+   * Creation: 2016, the 22th of February
+   * Last modification: Time-stamp: &lt;Nov 22 2016&gt;
+   *
+   * Abstract domain to record live rules
+   *
+   * Copyright 2010,2011,2012,2013,2014,2015,2016 Institut National de Recherche
+   * en Informatique et en Automatique.
 </div>
 </td></tr>
 <tr><td align="left"><br>T</td></tr>

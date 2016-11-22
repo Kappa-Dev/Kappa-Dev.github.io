@@ -6280,6 +6280,8 @@ General options
  <br />      enable every abstract domain
  <br />  --disable-every-domain
  <br />      disable every abstract domain
+ <br />  --contact-map-domain static | dynamic    (default: Dynamic)
+ <br />      contact map domain is used to over-approximate side-effects
  <br />  --(no-)views-domain    (default: enabled)
  <br />      enable local views analysis
  <br />  --(no-)double-bonds-domain    (default: enabled)
@@ -6293,11 +6295,11 @@ General options
  <br />  --output-mode-for-reachability-analysis raw | kappa | english    (default: KAPPA)
  <br />      post-process relation and output the result in the chosen format
  <br />
- <br />3_Trace_analysis
- <br />  --(no-)compute-local-traces    (default: disabled)
                                                                                   
 
                                                                                   
+ <br />3_Trace_analysis
+ <br />  --(no-)compute-local-traces    (default: disabled)
  <br />      Compute the local traces of interesting parts of agent interfaces
  <br />  --(no-)show-rule-names-in-local-traces    (default: enabled)
  <br />      Annotate each transition with the name of the rules in trace
@@ -6337,11 +6339,11 @@ General options
  <br />      Tune the output format for the influence map
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
  <br />      file name for the influence map
- <br />
- <br />6_FLow_of_information
                                                                                   
 
                                                                                   
+ <br />
+ <br />6_FLow_of_information
  <br />  --(no-)compute-ODE-flow-of-information    (default: disabled)
  <br />      Compute an approximation of the flow of information in the ODE
  <br />      semantics
@@ -6358,8 +6360,8 @@ General options
  <br />      Exceptions are gathered at the end of the computation, instead of
  <br />      halting it
  <br />
- <br />(56 options)</div>
-<!--l. 139--><p class="nopar" >
+ <br />(57 options)</div>
+<!--l. 141--><p class="nopar" >
 <!--l. 1155--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -6373,12 +6375,12 @@ before compilation.
 <h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
  id="x1-580007.2.1"></a>Launching the interface</h4>
 <!--l. 1164--><p class="noindent" >The graphical interface can be launched by typing
-     <ul class="itemize1">
-     <li class="itemize"><span 
-class="ectt-1095">KaSa</span></li></ul>
                                                                                   
 
                                                                                   
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">KaSa</span></li></ul>
 <!--l. 1167--><p class="noindent" >without any option.
 <!--l. 1169--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
@@ -6738,9 +6740,9 @@ class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (b7a7f84) (without Tk interface)
- <br />Analysis launched at 2016/11/22 16:18:04 (GMT+0) on
- <br />testing-gce-0b3a977d-3e20-4a04-a084-a8d55bd0e6ea
+Kappa Static Analyzer (abb2e5c) (without Tk interface)
+ <br />Analysis launched at 2016/11/22 20:46:57 (GMT+0) on
+ <br />testing-gce-4131f54a-f957-4892-acc8-1a56daf57fee
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -6767,9 +6769,9 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (b7a7f84) (without Tk interface)
- <br />Analysis launched at 2016/11/22 16:18:04 (GMT+0) on
- <br />testing-gce-0b3a977d-3e20-4a04-a084-a8d55bd0e6ea
+Kappa Static Analyzer (abb2e5c) (without Tk interface)
+ <br />Analysis launched at 2016/11/22 20:46:57 (GMT+0) on
+ <br />testing-gce-4131f54a-f957-4892-acc8-1a56daf57fee
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
