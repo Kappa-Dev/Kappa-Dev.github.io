@@ -118,6 +118,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.key,&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.key,&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.binary<br>
@@ -149,6 +153,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t,&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t,&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Storage</span>.t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Extend</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">functor</span>&nbsp;(<span class="constructor">Extension</span>&nbsp;:&nbsp;<span class="constructor">Storage</span>)&nbsp;(<span class="constructor">Underlying</span>&nbsp;:&nbsp;<span class="constructor">Storage</span>)&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -161,6 +168,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -172,6 +180,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Quick_key_list</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">functor</span>&nbsp;(<span class="constructor">Basic</span>&nbsp;:&nbsp;<span class="constructor">Storage</span>)&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -184,6 +193,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -195,6 +205,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Int_storage_imperatif</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
@@ -206,6 +217,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -217,6 +229,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Nearly_infinite_arrays</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">functor</span><br>
@@ -229,6 +242,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -242,6 +256,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span>)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t<br>
@@ -252,6 +267,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -263,6 +279,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Nearly_inf_Imperatif</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
@@ -274,6 +291,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -285,6 +303,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Quick_Nearly_inf_Imperatif</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
@@ -296,6 +315,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -307,6 +327,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Int_Int_storage_Imperatif_Imperatif</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
@@ -318,6 +339,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -329,6 +351,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Nearly_Inf_Int_Int_storage_Imperatif_Imperatif</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
@@ -340,6 +363,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -351,6 +375,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Nearly_Inf_Int_Int_Int_storage_Imperatif_Imperatif_Imperatif</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
@@ -362,6 +387,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;expand_and_copy&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;(dimension,&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a)&nbsp;unary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;unsafe_get&nbsp;:&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;option)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dimension&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;dimension)&nbsp;unary<br>
@@ -373,5 +399,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;ternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 <span class="keyword">end</span></code></body></html>
