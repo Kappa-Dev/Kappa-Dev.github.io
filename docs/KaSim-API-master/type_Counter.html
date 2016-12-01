@@ -75,11 +75,13 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;period&nbsp;=&nbsp;<span class="constructor">DE</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">DT</span>&nbsp;<span class="keyword">of</span>&nbsp;float<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;create&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?init_t:float&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?init_e:int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;?max_time:float&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;?max_event:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;plot_period:float&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Counter</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?max_time:float&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?max_event:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;plot_period:<span class="constructor">Counter</span>.period&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Counter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;reinitialize&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;current_simulation_info&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;next_story&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t<br>
@@ -102,7 +104,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;time&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;tracked_events&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;plot_period&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_plot_period&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_plot_period&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Counter</span>.period&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;current_time&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;current_event&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;current_story&nbsp;:&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
