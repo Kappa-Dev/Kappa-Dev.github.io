@@ -138,6 +138,9 @@ enriched types for functions:<br>
 
 <pre><span id="VALfold_left_with_progress_bar"><span class="keyword">val</span> fold_left_with_progress_bar</span> : <code class="type">?event:StoryProfiling.step_kind -><br>       (('a, 'b, 'a) <a href="Utilities.html#TYPEbinary">binary</a>, 'a, 'b list, 'a) <a href="Utilities.html#TYPEternary">ternary</a></code></pre>
 <pre><span id="VALpop_json"><span class="keyword">val</span> pop_json</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> Yojson.Basic.json option</code></pre>
+<pre><span id="VALprofiling_state_to_json"><span class="keyword">val</span> profiling_state_to_json</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALerror_list_to_json"><span class="keyword">val</span> error_list_to_json</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALcomputation_steps_to_json"><span class="keyword">val</span> computation_steps_to_json</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="TYPEtrace"><span class="keyword">type</span> <code class="type"></code>trace</span> </pre>
 <div class="info ">
 traces<br>
@@ -266,7 +269,7 @@ Apply a function on each trace (and each list of runtime information associated 
 put together the stories having the same canonic form, this has do be done explicitely on the moment, I will improve this soon<br>
 </div>
 
-<pre><span id="VALexport_story_table"><span class="keyword">val</span> export_story_table</span> : <code class="type">(<a href="Utilities.html#TYPEstory_table">story_table</a>,<br>        (Causal.grid * <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list) list)<br>       <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
+<pre><span id="VALexport_story_table"><span class="keyword">val</span> export_story_table</span> : <code class="type">(<a href="Utilities.html#TYPEstory_table">story_table</a>,<br>        (<a href="Trace.html#TYPEt">Trace.t</a> * Causal.grid * <a href="Utilities.html#TYPEtrace_runtime_info">trace_runtime_info</a> list) list)<br>       <a href="Utilities.html#TYPEunary">unary</a></code></pre><div class="info ">
 convert a table into a list of grid (with runtime information)<br>
 </div>
 <br>
