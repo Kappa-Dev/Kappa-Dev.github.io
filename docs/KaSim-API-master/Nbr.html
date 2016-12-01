@@ -127,13 +127,20 @@ Kappa numbers (either float, int or int64) and operations on them<br>
 <pre><span id="VALsucc"><span class="keyword">val</span> succ</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">t</a></code></pre>
 <pre><span id="VALpred"><span class="keyword">val</span> pred</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">t</a></code></pre>
 <pre><span id="VALneg"><span class="keyword">val</span> neg</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">t</a></code></pre>
-<pre><span id="VALto_float"><span class="keyword">val</span> to_float</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> float</code></pre>
+<pre><span id="VALto_float"><span class="keyword">val</span> to_float</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> float option</code></pre><div class="info ">
+<code class="code"><span class="constructor">None</span></code> when infinity or Not a Number<br>
+</div>
+
 <pre><span id="VALto_int"><span class="keyword">val</span> to_int</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALzero"><span class="keyword">val</span> zero</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a></code></pre>
 <pre><span id="VALis_zero"><span class="keyword">val</span> is_zero</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALone"><span class="keyword">val</span> one</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a></code></pre>
 <pre><span id="VALis_strictly_positive"><span class="keyword">val</span> is_strictly_positive</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> <a href="Nbr.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint_option"><span class="keyword">val</span> print_option</span> : <code class="type">Format.formatter -> <a href="Nbr.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+Prints nothing in case of infinity or Not a Number<br>
+</div>
+
 <pre><span id="VALiteri"><span class="keyword">val</span> iteri</span> : <code class="type">(<a href="Nbr.html#TYPEt">t</a> -> 'a -> 'a) -> 'a -> <a href="Nbr.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
 <code class="code">iter f x n</code><br>
 <b>Returns</b> f (n - k) (... (f (n - 1) (f n x))) where k &lt; n &lt;= k+1<br>
