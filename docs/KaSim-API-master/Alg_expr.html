@@ -90,6 +90,9 @@ depend in time, depend in event number, depend in given var<br>
 </div>
 <hr width="100%">
 
+<pre><span id="TYPEpervasives_bool"><span class="keyword">type</span> <code class="type"></code>pervasives_bool</span> = <code class="type">bool</code> </pre>
+
+
 <pre><code><span id="TYPEe"><span class="keyword">type</span> <code class="type">('mix, 'id)</code> e</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -196,6 +199,7 @@ depend in time, depend in event number, depend in given var<br>
 </div>
 
 <pre><span id="VALsetup_alg_vars_rev_dep"><span class="keyword">val</span> setup_alg_vars_rev_dep</span> : <code class="type">unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre>
+<pre><span id="VALhas_mix"><span class="keyword">val</span> has_mix</span> : <code class="type">?var_decls:('b -> ('c, 'b) <a href="Alg_expr.html#TYPEe">e</a>) -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> -> <a href="Alg_expr.html#TYPEpervasives_bool">pervasives_bool</a></code></pre>
 <pre><span id="VALextract_connected_components"><span class="keyword">val</span> extract_connected_components</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a> -> 'a list</code></pre>
 <pre><span id="VALpropagate_constant"><span class="keyword">val</span> propagate_constant</span> : <code class="type">?max_time:float -><br>       ?max_events:int -><br>       int list -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a> -> ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
 <pre><span id="VALpropagate_constant_bool"><span class="keyword">val</span> propagate_constant_bool</span> : <code class="type">?max_time:float -><br>       ?max_events:int -><br>       int list -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> * ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Location.html#TYPEannot">Location.annot</a>) array -><br>       ('a, int) <a href="Alg_expr.html#TYPEbool">bool</a> <a href="Location.html#TYPEannot">Location.annot</a> -><br>       ('a, int) <a href="Alg_expr.html#TYPEbool">bool</a> <a href="Location.html#TYPEannot">Location.annot</a></code></pre>
