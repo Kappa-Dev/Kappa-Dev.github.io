@@ -76,8 +76,7 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><link title="Create a connected component" rel="Section" href="#6_Createaconnectedcomponent">
-<link title="Use a connected component " rel="Section" href="#6_Useaconnectedcomponent">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><link title="Use a connected component " rel="Section" href="#6_Useaconnectedcomponent">
 <title>KaSim API : Pattern</title>
 </head>
 <body>
@@ -105,15 +104,15 @@ type for domain points<br>
 
 
 <pre><span class="keyword">module</span> <a href="Pattern.ObsMap.html">ObsMap</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Pattern.ObsMap.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
+<pre><span class="keyword">module</span> <a href="Pattern.Env.html">Env</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Pattern.Env.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
+<pre><span class="keyword">module</span> <a href="Pattern.PreEnv.html">PreEnv</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Pattern.PreEnv.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
 <pre><span id="TYPEwork"><span class="keyword">type</span> <code class="type"></code>work</span> </pre>
 <div class="info ">
-type for partial domain<br>
+<h6 id="6_Createaconnectedcomponent">Create a connected component</h6>
+<p>
+type of a PreEnv during a pattern construction<br>
 </div>
 
-
-<pre><span class="keyword">module</span> <a href="Pattern.Env.html">Env</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Pattern.Env.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><span class="keyword">module</span> <a href="Pattern.PreEnv.html">PreEnv</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Pattern.PreEnv.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><br>
-<h6 id="6_Createaconnectedcomponent">Create a connected component</h6><br>
 
 <pre><span id="VALempty_cc"><span class="keyword">val</span> empty_cc</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Pattern.html#TYPEcc">cc</a></code></pre>
 <pre><span id="VALbegin_new"><span class="keyword">val</span> begin_new</span> : <code class="type"><a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> -> <a href="Pattern.html#TYPEwork">work</a></code></pre><div class="info ">
