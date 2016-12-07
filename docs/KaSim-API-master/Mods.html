@@ -94,15 +94,15 @@ Datastructures' functors instantiation<br>
 <pre><span id="VALint_compare"><span class="keyword">val</span> int_compare</span> : <code class="type">int -> int -> int</code></pre>
 <pre><span id="VALint_pair_compare"><span class="keyword">val</span> int_pair_compare</span> : <code class="type">int * int -> int * int -> int</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.StringSetMap.html">StringSetMap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = string</code></pre>
-<pre><span class="keyword">module</span> <a href="Mods.StringSet.html">StringSet</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt = string</code></pre>
-<pre><span class="keyword">module</span> <a href="Mods.StringMap.html">StringMap</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt = string and type set = StringSet.t</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.StringSet.html">StringSet</a>: <code class="type">StringSetMap.Set</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.StringMap.html">StringMap</a>: <code class="type">StringSetMap.Map</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.IntSetMap.html">IntSetMap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = int</code></pre>
-<pre><span class="keyword">module</span> <a href="Mods.IntSet.html">IntSet</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt = int</code></pre>
-<pre><span class="keyword">module</span> <a href="Mods.IntMap.html">IntMap</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt = int and type set = IntSet.t</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.IntSet.html">IntSet</a>: <code class="type">IntSetMap.Set</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.IntMap.html">IntMap</a>: <code class="type">IntSetMap.Map</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.Int2SetMap.html">Int2SetMap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = int*int</code></pre>
-<pre><span class="keyword">module</span> <a href="Mods.Int2Set.html">Int2Set</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt = int*int</code></pre>
-<pre><span class="keyword">module</span> <a href="Mods.Int2Map.html">Int2Map</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt = int*int and type set = Int2Set.t</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.Int2Set.html">Int2Set</a>: <code class="type">Int2SetMap.Set</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.Int2Map.html">Int2Map</a>: <code class="type">Int2SetMap.Map</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.CharSetMap.html">CharSetMap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = char</code></pre>
-<pre><span class="keyword">module</span> <a href="Mods.CharSet.html">CharSet</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt = char</code></pre>
-<pre><span class="keyword">module</span> <a href="Mods.CharMap.html">CharMap</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt = char and type set = CharSet.t</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.CharSet.html">CharSet</a>: <code class="type">CharSetMap.Set</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.CharMap.html">CharMap</a>: <code class="type">CharSetMap.Map</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.DynArray.html">DynArray</a>: <code class="type"><a href="GenArray.GenArray.html">GenArray.GenArray</a></code><code class="type"> </code></pre></body></html>
