@@ -181,7 +181,7 @@ href="#x1-640007.5" id="QQ2-1-94">Contact map</a></span>
 <br /> <span class="sectionToc" >7.6 <a 
 href="#x1-650007.6" id="QQ2-1-97">Inﬂuence map</a></span>
 <br /><span class="chapterToc" >8 <a 
-href="#x1-660008" id="QQ2-1-101">Frequently asked questions</a></span>
+href="#x1-660008" id="QQ2-1-105">Frequently asked questions</a></span>
 </div>
                                                                                   
 
@@ -248,9 +248,9 @@ href="http://www.pps.univ-paris-diderot.fr/~danos/pdf/mytdg.pdf" >Modelling epig
 class="ecss-1095">KaSim</span> engine</h3>
 <!--l. 106--><p class="noindent" ><span 
 class="ecss-1095">KaSim</span> is an open source stochastic simulator of rule-based models <span class="cite">[<a 
-href="#XDanLan04">7</a>, <a 
-href="#XDan_etal07a">6</a>, <a 
-href="#XFae_etal05">8</a>]</span> written in Kappa.
+href="#XDanLan04">8</a>, <a 
+href="#XDan_etal07a">7</a>, <a 
+href="#XFae_etal05">9</a>]</span> written in Kappa.
 The Kappa language describes site graphs and their local transformations. <span 
 class="ecss-1095">KaSim</span> takes one or
 several <a 
@@ -261,10 +261,10 @@ href="#x1-130003">Kappa ﬁles</a> as input and generates stochastic trajectorie
 <span 
 class="ecss-1095">KaSim</span> implements Danos <span 
 class="ecti-1095">et al</span>&#x2019;s implicit state simulation algorithm <span class="cite">[<a 
-href="#XDan_etal07b">4</a>]</span> which adapts Gillespie&#x2019;s
+href="#XDan_etal07b">5</a>]</span> which adapts Gillespie&#x2019;s
 algorithm <span class="cite">[<a 
-href="#XGil76">13</a>, <a 
-href="#XGil77">14</a>]</span> to rule-based models.
+href="#XGil76">14</a>, <a 
+href="#XGil77">15</a>]</span> to rule-based models.
 <!--l. 108--><p class="noindent" >A <span 
 class="ecti-1095">simulation event</span><a 
  id="dx1-5001"></a> corresponds to the application of a rewriting rule, contained in the Kappa
@@ -288,7 +288,7 @@ are updated at each step (see Fig. <a
 href="#x1-50081">1.1<!--tex4ht:ref: fig:event-loop --></a>). Importantly, the cost of a simulation event
 is bounded by a constant that is independent of the size of the graph it is applied
 to <span class="cite">[<a 
-href="#XDan_etal07b">4</a>]</span>.
+href="#XDan_etal07b">5</a>]</span>.
 <!--l. 118--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
@@ -324,20 +324,20 @@ href="http://www.gnuplot.info/" >gnuplot</a>.
 class="ecss-1095">KaSa</span> static analyser</h3>
 <!--l. 130--><p class="noindent" ><span 
 class="ecss-1095">KaSa</span> is an open source static analyser tool of rule-based models <span class="cite">[<a 
-href="#XDanLan04">7</a>, <a 
-href="#XDan_etal07a">6</a>, <a 
-href="#XFae_etal05">8</a>]</span> written in Kappa.
+href="#XDanLan04">8</a>, <a 
+href="#XDan_etal07a">7</a>, <a 
+href="#XFae_etal05">9</a>]</span> written in Kappa.
 <span 
 class="ecss-1095">KaSa</span> takes one or several <a 
 href="#x1-130003">Kappa ﬁles</a> as input and some command line options to toggle on/oﬀ
 some speciﬁc static analysis. Currently, <span 
 class="ecss-1095">KaSa</span> can compute the contact map and the inﬂuence
 map. It can perform reachability analysis <span class="cite">[<a 
-href="#XFeret-ICCMSE2007">10</a>, <a 
-href="#XDanosEtAl-VMCAI08">5</a>]</span> as well. Other analyses including model
+href="#XFeret-ICCMSE2007">11</a>, <a 
+href="#XDanosEtAl-VMCAI08">6</a>]</span> as well. Other analyses including model
 reduction <span class="cite">[<a 
-href="#XFeret-et-al-pnas2009">11</a>, <a 
-href="#XDanosEtAl-LICS2010">3</a>, <a 
+href="#XFeret-et-al-pnas2009">12</a>, <a 
+href="#XDanosEtAl-LICS2010">4</a>, <a 
 href="#XFeret-MFPSXXVII">1</a>]</span> will come soon.
 <!--l. 132--><p class="noindent" >A graphical interface is proposed to navigate through the various options and utilities of <span 
 class="ecss-1095">KaSa</span>.
@@ -5355,7 +5355,7 @@ display="inline" ><mi
 It is possible to tell <span 
 class="ecss-1095">KaSim</span> to retain only events that are more strongly related to the
 observable using two compression techniques (see Ref. <span class="cite">[<a 
-href="#XDan_etal12">2</a>]</span> for formal details). Intuitively,
+href="#XDan_etal12">3</a>]</span> for formal details). Intuitively,
 in a <span 
 class="ecti-1095">weakly </span>compressed causal<a 
  id="dx1-46002"></a> ﬂow one has the additional property that if an event
@@ -6319,22 +6319,22 @@ General options
                                                                                   
  <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the contact map file in this directory
- <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
- <br />      put the influence map file in this directory
- <br />  --output-local-traces-directory &#x003C;name&#x003E;   (default: output)
- <br />      put the files about local traces in this directory
- <br />  --output-log-directory &#x003C;name&#x003E;   (default: output)
- <br />      put the log files in this directory
- <br />  --contact-map-format DOT    (default: DOT)
- <br />      Tune the output format for the contact map
- <br />  --influence-map-format DOT | HTML    (default: DOT)
- <br />      Tune the output format for the influence map
- <br />  --local-traces-format DOT | HTML    (default: DOT)
- <br />      Tune the output format for the local transition systems
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
  <br />      file name for the contact map output
+ <br />  --contact-map-format DOT    (default: DOT)
+ <br />      Tune the output format for the contact map
+ <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the influence map file in this directory
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
  <br />      file name for the influence map
+ <br />  --influence-map-format DOT | HTML    (default: DOT)
+ <br />      Tune the output format for the influence map
+ <br />  --output-local-traces-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the files about local traces in this directory
+ <br />  --local-traces-format DOT | HTML    (default: DOT)
+ <br />      Tune the output format for the local transition systems
+ <br />  --output-log-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the log files in this directory
  <br />
  <br />2_Reachability_analysis
  <br />  --(no-)compute-reachability-analysis    (default: enabled)
@@ -6382,14 +6382,14 @@ General options
  <br />      compute the contact map
  <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the contact map file in this directory
+ <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
+ <br />      file name for the contact map output
  <br />  --contact-map-format DOT    (default: DOT)
  <br />      Tune the output format for the contact map
  <br />  --contact-map-accuracy-level Low | High    (default: Low)
  <br />      Tune the accuracy level of the contact map
  <br />  --(no-)pure-contact    (default: disabled)
  <br />      show in the contact map only the sites with a binding state
- <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
- <br />      file name for the contact map output
  <br />
  <br />5_Influence_map
  <br />  --(no-)compute-influence-map    (default: enabled)
@@ -6398,10 +6398,10 @@ General options
  <br />      Tune the accuracy level of the influence map
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the influence map file in this directory
- <br />  --influence-map-format DOT | HTML    (default: DOT)
- <br />      Tune the output format for the influence map
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
  <br />      file name for the influence map
+ <br />  --influence-map-format DOT | HTML    (default: DOT)
+ <br />      Tune the output format for the influence map
                                                                                   
 
                                                                                   
@@ -6580,7 +6580,8 @@ class="ectt-1095">1_output</span></span></div><!--tex4ht:label?: x1-610012 -->
 <!--l. 1234--><p class="noindent" ></div><hr class="endfigure">
 <!--l. 1237--><p class="noindent" >The sub-tab <span 
 class="ectt-1095">1_Ouput </span>(see Fig. <a 
-href="#x1-610012">7.2<!--tex4ht:ref: fig:kasa:1 --></a>) contains the names of the output ﬁles.
+href="#x1-610012">7.2<!--tex4ht:ref: fig:kasa:1 --></a>) contains the names of the output ﬁles and their
+format.
      <ul class="itemize1">
      <li class="itemize">The ﬁeld <span 
 class="ectt-1095">–output-directory </span>can be used to set the repository where output ﬁle are
@@ -6594,10 +6595,25 @@ class="ecss-1095">KaSa</span> will
      create this repository, if it does not exist.
      </li>
      <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–output-contact-map </span>contains the name of the ﬁle for the contact map. If
+     the ﬁle name does not end by it, the proper extension will be added to the ﬁle name.
+     </li>
+     <li class="itemize">The ﬁeld <span 
 class="ectt-1095">–output-influence-map-directory </span>can be used to set the reporitory where
      the output ﬁle for the inﬂuence map is written, if an inﬂuence map is requested.
      <span 
 class="ecss-1095">KaSa</span> will create this repository, if it does not exist.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–output-influence-map </span>contains the name of the ﬁle for the inﬂuence map.
+     If the ﬁle name does not end by it, the proper extension will be added to the ﬁle
+     name.
+     </li>
+     <li class="itemize">The format for the inﬂuence map can be chosen among <span 
+class="ectt-1095">DOT </span>and <span 
+class="ectt-1095">HTML </span>thanks to the
+     option <span 
+class="ectt-1095">–influence-map-format</span>.
      </li>
      <li class="itemize">The ﬁeld <span 
 class="ectt-1095">–output-local-traces-directory </span>can be used to set the reporitory where
@@ -6605,15 +6621,19 @@ class="ectt-1095">–output-local-traces-directory </span>can be used to set the
      <span 
 class="ecss-1095">KaSa</span> will create this repository, if it does not exist.
      </li>
-     <li class="itemize">The ﬁeld <span 
-class="ectt-1095">–output-contact-map </span>contains the name of the ﬁle for the contact map.
-     </li>
-     <li class="itemize">The ﬁeld <span 
-class="ectt-1095">–output-influence-map </span>contains the name of the ﬁle for the inﬂuence map.</li></ul>
-<!--l. 1248--><p class="noindent" >When a ﬁle already exists, it is overwritten without any warning.
+     <li class="itemize">The format for the local traces can be chosen among <span 
+class="ectt-1095">DOT </span>and <span 
+class="ectt-1095">HTML </span>thanks to the
+     option <span 
+class="ectt-1095">–local-traces-format</span>.
+     </li></ul>
+<!--l. 1252--><p class="noindent" >When a ﬁle already exists, it is overwritten without any warning.
+                                                                                  
+
+                                                                                  
 <h3 class="sectionHead"><span class="titlemark">7.3   </span> <a 
  id="x1-620007.3"></a>Reachability analysis</h3>
-<!--l. 1252--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1256--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -6624,7 +6644,7 @@ class="ectt-1095">–output-influence-map </span>contains the name of the ﬁle 
 
                                                                                   
 
-<!--l. 1254--><p class="noindent" ><img 
+<!--l. 1258--><p class="noindent" ><img 
 src="img/kasa_2.png" alt="PIC"  
 width="341.43306pt" height="215.99379pt" >
 <br /> <div class="caption" 
@@ -6635,16 +6655,16 @@ class="ectt-1095">2_Reachability_analysis</span></span></div><!--tex4ht:label?: 
                                                                                   
 
                                                                                   
-<!--l. 1257--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1259--><p class="noindent" >Reachability analysis aimed at detecting statically properties about the bio-molecular species that
+<!--l. 1261--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1263--><p class="noindent" >Reachability analysis aimed at detecting statically properties about the bio-molecular species that
 can be formed in a model. Knowing whether, or not, a given bio-molecular species, can be formed
 in a model is an undecidable problem <span class="cite">[<a 
-href="#XKreyssig">15</a>]</span>. Thus, our analysis is approximate. Indeed, it computes
+href="#XKreyssig">16</a>]</span>. Thus, our analysis is approximate. Indeed, it computes
 an over-approximation of the set of the bio-molecular species that can be reached from the initial
 state of the model, by applying an unbounded number of computation steps. As formalized in
 <span class="cite">[<a 
-href="#XDanosEtAl-VMCAI08">5</a>, <span 
-class="ecbx-1095">?</span>]</span>, the abstraction consists in:
+href="#XDanosEtAl-VMCAI08">6</a>, <a 
+href="#XFeret:SASB2016">13</a>]</span>, the abstraction consists in:
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x1-62003x1">ﬁrstly, ignoring the number of occurrences of bio-molecular species (we assume that
@@ -6653,13 +6673,15 @@ class="ecbx-1095">?</span>]</span>, the abstraction consists in:
      </li>
      <li 
   class="enumerate" id="x1-62005x2">secondly, abstracting a bio-molecular species by the set of its properties.</li></ol>
-<!--l. 1265--><p class="noindent" >The classes of properties of interest are encoded in so called abstract domains, which can be
+<!--l. 1269--><p class="noindent" >The analysis takes into account also the chemical species that may be introduced in a
+perturbation.
+<!--l. 1271--><p class="noindent" >The classes of properties of interest are encoded in so called abstract domains, which can be
 independently enabled/disabled. The whole analysis can be understood as a mutual recursion
 between smaller analyses (one per abstract domain), that communicates information between
 each other at each step of the analysis. We took the same scheme of collaboration between
-abstract domains as in <span class="cite">[<span 
-class="ecbx-1095">?</span>]</span>.
-<!--l. 1269--><p class="noindent" >As an example, we consider the following model: <!--l. 1270-->
+abstract domains as in <span class="cite">[<a 
+href="#XCousotEtAl06-ASIAN">2</a>]</span>.
+<!--l. 1275--><p class="noindent" >As an example, we consider the following model: <!--l. 1276-->
 <div class="lstlisting" id="listing-26"><span class="label"><a 
  id="x1-62006r1"></a><span 
 class="ecrm-0600">1</span></span><span 
@@ -6931,23 +6953,23 @@ class="ectt-1095">)</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">@1</span>
 </div>
-<!--l. 1286--><p class="noindent" >Typing the following instruction:
+<!--l. 1292--><p class="noindent" >Typing the following instruction:
                                                                                   
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
 KaSa reachability.ka --reset-all --compute-reachability-analysis</div>
-<!--l. 1289--><p class="nopar" >
-<!--l. 1291--><p class="noindent" >will perform the reachability analysis on the model <span 
+<!--l. 1295--><p class="nopar" >
+<!--l. 1297--><p class="noindent" >will perform the reachability analysis on the model <span 
 class="ectt-1095">reachability.ka</span>.
-<!--l. 1293--><p class="noindent" >We obtain the following result:
+<!--l. 1299--><p class="noindent" >We obtain the following result:
                                                                                   
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (6c3d7c3) (without Tk interface)
- <br />Analysis launched at 2016/12/12 06:30:13 (GMT+0) on
- <br />testing-gce-1b56a127-5097-4542-b08d-686e386d65bd
+Kappa Static Analyzer (c192bfd) (without Tk interface)
+ <br />Analysis launched at 2016/12/13 12:50:48 (GMT+0) on
+ <br />testing-gce-8022dfb8-21e9-4855-a2e0-047754d4289e
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7010,17 +7032,17 @@ Kappa Static Analyzer (6c3d7c3) (without Tk interface)
  <br />R(c!R.c,n!R.cr) =&#x003E; R(c!1,n!2),R(c!1,cr!2)
  <br />execution finished without any exception</div>
 <!--l. 63--><p class="nopar" >
-<!--l. 1298--><p class="noindent" >This result is displayed in the standard output, and it is made of six parts.
-<!--l. 1300--><p class="noindent" >The ﬁrst two parts provide an enumeration of dead rules and dead agents. The next parts display
+<!--l. 1304--><p class="noindent" >This result is displayed in the standard output, and it is made of six parts.
+<!--l. 1306--><p class="noindent" >The ﬁrst two parts provide an enumeration of dead rules and dead agents. The next parts display
 what we call reﬁnement lemmas. A reﬁnement lemma is made of a precondition (on
 the left of the implication symbol) that is a site graph, and a postcondition (on the
 right of the implication symbol) that is a list of site graphs. Each site graph in the
 post-condition is a reﬁnement of the precondition (the position of agent matters: the
-<!--l. 1302--><math 
+<!--l. 1308--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >n</mi></math>-th agent in the precondition
-corresponds to the <!--l. 1302--><math 
+corresponds to the <!--l. 1308--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >n</mi></math>-th
@@ -7033,7 +7055,7 @@ contexts for the precondition.
                                                                                   
 
                                                                                   
-<!--l. 1306--><p class="noindent" >We now detail the six diﬀerent parts:
+<!--l. 1312--><p class="noindent" >We now detail the six diﬀerent parts:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ecbx-1095">Detection of dead rules. </span>A rule is called dead, if there is no trace starting from the
@@ -7041,7 +7063,7 @@ class="ecbx-1095">Detection of dead rules. </span>A rule is called dead, if ther
      has detected to be dead. Due to the over-approximation, it may happen that a dead
      rule is not discovered by the analysis. Yet, every rule that is reported as dead, is dead
      indeed.
-     <!--l. 1310--><p class="noindent" >In our example, we notice that the rule ‘<span 
+     <!--l. 1316--><p class="noindent" >In our example, we notice that the rule ‘<span 
 class="ectt-1095">obs</span>&#x2019; can never be trigered.
      </li>
      <li class="itemize"><span 
@@ -7050,14 +7072,14 @@ class="ecbx-1095">Detection of dead agents. </span>An agent is called dead, if t
      the list of the agents it has detected to be dead. Due to the over-approximation, it
      may happen that a dead agent is not discovered by the analysis. Yet, every agent that
      is reported as dead, is dead indeed.
-     <!--l. 1314--><p class="noindent" >In our example, there are no dead agent.
+     <!--l. 1320--><p class="noindent" >In our example, there are no dead agent.
      </li>
      <li class="itemize"><span 
 class="ecbx-1095">Non-relational  properties. </span>The  analysis  detects  for  each  kind  of  site,  the  set
      of states this site can take. Due to the over-approximation, the analysis reports a
      super-set of the set of the potential states. Yet, we are sure that a given site only take
      states within this set.
-     <!--l. 1319--><p class="noindent" >In our example, the site <span 
+     <!--l. 1325--><p class="noindent" >In our example, the site <span 
 class="ectt-1095">cr </span>of <span 
 class="ectt-1095">R </span>may be free, or bound to the site <span 
 class="ectt-1095">n </span>of an agent <span 
@@ -7067,17 +7089,17 @@ class="ectt-1095">R</span>.
 class="ecbx-1095">Relational properties. </span>The analysis detects some relationships among the states
      of packs of sites within each agent, hence capturing potential valuations for local
      views <span class="cite">[<a 
-href="#XFeret-ICCMSE2007">10</a>, <a 
-href="#XDanosEtAl-VMCAI08">5</a>]</span>. Due to the over-approximation of the analysis, the analysis may fail
+href="#XFeret-ICCMSE2007">11</a>, <a 
+href="#XDanosEtAl-VMCAI08">6</a>]</span>. Due to the over-approximation of the analysis, the analysis may fail
      in discovering a relationship. But each relationship that is found by the analysis, is
      satisﬁed.
-     <!--l. 1325--><p class="noindent" >In our example, the states of the sites <span 
+     <!--l. 1331--><p class="noindent" >In our example, the states of the sites <span 
 class="ectt-1095">c</span>, <span 
 class="ectt-1095">cr</span>, <span 
 class="ectt-1095">n</span>, and <span 
 class="ectt-1095">x </span>of <span 
 class="ectt-1095">R </span>are entangled with a relational
-     property (othewise, we would have <!--l. 1325--><math 
+     property (othewise, we would have <!--l. 1331--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msup><mrow 
 ><mn>5</mn></mrow><mrow 
@@ -7088,14 +7110,14 @@ display="inline" ><msup><mrow
      <li class="itemize"><span 
 class="ecbx-1095">Properties in connected agent. </span>When two agents are connected, there may be a
      relation among the states of theirs respective sites. This abstraction <span class="cite">[<a 
-href="#XFeret:SASB2016">12</a>]</span> collects for
+href="#XFeret:SASB2016">13</a>]</span> collects for
      each kind of bonds, the relation between the state of one site in the ﬁrst agent and
      the state of one site in the second agent. Due to the over-approximation, the analysis
      reports a super-set of the set of the potential pairs of states.
                                                                                   
 
                                                                                   
-     <!--l. 1331--><p class="noindent" >This abstraction aimed at capturing information about protein transportation. It is
+     <!--l. 1337--><p class="noindent" >This abstraction aimed at capturing information about protein transportation. It is
      quite common to model the location of a protein as the internal state of a ﬁctitious
      site. With such an encoding, it might be important to ensure that two connected
      proteins, are always located in the same location. This abstraction focuses on this
@@ -7103,12 +7125,12 @@ href="#XFeret:SASB2016">12</a>]</span> collects for
      </li>
      <li class="itemize"><span 
 class="ecbx-1095">Properties of pairs of bonds.</span>
-     <!--l. 1336--><p class="noindent" >It might be interesting to know whether a protein can be bound to another protein
+     <!--l. 1342--><p class="noindent" >It might be interesting to know whether a protein can be bound to another protein
      twice simultaneously, and whether a protein can be bound to two instances of a same
      protein simultaneously. This abstraction <span class="cite">[<a 
-href="#XFeret:SASB2016">12</a>]</span> captures this kind of constraint. It can
+href="#XFeret:SASB2016">13</a>]</span> captures this kind of constraint. It can
      be used to prove that some proteins do not polymerize.
-     <!--l. 1338--><p class="noindent" >In our example, when a <span 
+     <!--l. 1344--><p class="noindent" >In our example, when a <span 
 class="ectt-1095">R </span>has its sites <span 
 class="ectt-1095">cr </span>and <span 
 class="ectt-1095">c </span>bound, they are necessarily bound to
@@ -7116,7 +7138,7 @@ class="ectt-1095">c </span>bound, they are necessarily bound to
 class="ectt-1095">R</span>. The same statement holds for the sites <span 
 class="ectt-1095">cr </span>and <span 
 class="ectt-1095">n</span>.</li></ul>
-<!--l. 1344--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1350--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -7127,9 +7149,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (6c3d7c3) (without Tk interface)
- <br />Analysis launched at 2016/12/12 06:30:13 (GMT+0) on
- <br />testing-gce-1b56a127-5097-4542-b08d-686e386d65bd
+Kappa Static Analyzer (c192bfd) (without Tk interface)
+ <br />Analysis launched at 2016/12/13 12:50:48 (GMT+0) on
+ <br />testing-gce-8022dfb8-21e9-4855-a2e0-047754d4289e
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7143,8 +7165,8 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
                                                                                   
 
                                                                                   
-<!--l. 1348--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1354--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1354--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1360--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -7165,8 +7187,8 @@ bio-molecular species already constructed.</span></div><!--tex4ht:label?: x1-620
                                                                                   
 
                                                                                   
-<!--l. 1358--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1360--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1364--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1366--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -7186,8 +7208,8 @@ class="content">Reachability analysis: one rule successfully applied</span></div
                                                                                   
 
                                                                                   
-<!--l. 1364--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1366--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1370--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1372--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -7212,8 +7234,8 @@ class="content">Reachability analysis: extensional description of initial states
                                                                                   
 
                                                                                   
-<!--l. 1370--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1372--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1376--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1378--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -7246,8 +7268,8 @@ applying a rule.</span></div><!--tex4ht:label?: x1-620238 -->
                                                                                   
 
                                                                                   
-<!--l. 1376--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1378--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1382--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1384--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -7289,17 +7311,17 @@ some rules again, until reaching a ﬁx-point.</span></div><!--tex4ht:label?: x1
                                                                                   
 
                                                                                   
-<!--l. 1382--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1384--><p class="noindent" >Now we describe the options that are available on this sub-tab.
-<!--l. 1386--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
+<!--l. 1388--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1390--><p class="noindent" >Now we describe the options that are available on this sub-tab.
+<!--l. 1392--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--compute-reachability-analysis</span></span></span> can be used to switch on/oﬀ then reachability
 analysis.
-<!--l. 1388--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
+<!--l. 1394--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--enable-every-domain</span></span></span> can be used to switch on every abstract domain,
 whereas the option <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--disable-every-domain</span></span></span> can be used to switch oﬀ every abstract
 domain.
-<!--l. 1390--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
+<!--l. 1396--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--contact-map-domain</span></span></span> impacts the way side-eﬀects are handled with during the
 analysis. In <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">static</span></span></span> mode, we consider that every bond that occurs syntactically in initial state, in
@@ -7307,16 +7329,16 @@ the rhs of a rule, or in a introduction directive of a perturbation, may be rele
 In <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">dynamic</span></span></span> mode, only the bond that has been encountered so far during the analysis are
 considered.
-<!--l. 1393--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
+<!--l. 1399--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--views-domain</span></span></span> can be used to switch on/oﬀ the views domains that combine the
 non-relational analysis and the relational analysis.
-<!--l. 1395--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
+<!--l. 1401--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--double-bonds-domain</span></span></span> can be used to switch on/oﬀ the analysis of potential double
 bonds between between proteins.
-<!--l. 1397--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
+<!--l. 1403--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--site-accross-bonds-domain</span></span></span> can be used to switch on/oﬀ the analysis of the
 relations among the states of the sites in connected proteins.
-<!--l. 1400--><p class="noindent" >It is possible to get more details about the computation of the analysis by tuning the verbosity
+<!--l. 1406--><p class="noindent" >It is possible to get more details about the computation of the analysis by tuning the verbosity
 level of the view analysis:
      <ul class="itemize1">
      <li class="itemize">With the option <span class="obeylines-h"><span class="verb"><span 
@@ -7334,7 +7356,7 @@ class="ectt-1095"> Low</span></span></span>,  only  the
 class="ectt-1095">--verbosity-level-for-reachability-analysis</span><span 
 class="ectt-1095"> Medium</span></span></span>,  the
      analysis also describes which rules are applied and in which order.
-     <!--l. 1408--><p class="noindent" >When trying to apply a rule, the analysis may detect that the rule cannot be applied
+     <!--l. 1414--><p class="noindent" >When trying to apply a rule, the analysis may detect that the rule cannot be applied
      yet because the precondition is not satisﬁed at the current state of the iteration
      (eg. see Fig. <a 
 href="#x1-620205">7.5<!--tex4ht:ref: fig:reachability_medium_ko --></a>). Otherwise, the analysis can apply the rule and update the state of
@@ -7348,7 +7370,7 @@ href="#x1-620216">7.6<!--tex4ht:ref: fig:reachability_medium_ok --></a>).
 class="ectt-1095">--verbosity-level-for-reachability-analysis</span><span 
 class="ectt-1095"> High</span></span></span>,   the
      analysis also describes which patterns are discovered.
-     <!--l. 1414--><p class="noindent" >In particular, at the beginning of the iteration, the analysis prompts the patterns of
+     <!--l. 1420--><p class="noindent" >In particular, at the beginning of the iteration, the analysis prompts the patterns of
      interest that occur in initial state (eg. see Fig. <a 
 href="#x1-620227">7.7<!--tex4ht:ref: fig:reachability_high_init --></a>). Then, each time a rule is applied
      successfully, the analysis shows which new patterns have been discovered (eg. see
@@ -7357,14 +7379,14 @@ href="#x1-620238">7.8<!--tex4ht:ref: fig:reachability_high_rule --></a>).
      </li>
      <li class="itemize">When new patterns are discovered, then, it is necessary to apply again any rule that
      may operate over these patterns.
-     <!--l. 1419--><p class="noindent" >With   the   option   <span class="obeylines-h"><span class="verb"><span 
+     <!--l. 1425--><p class="noindent" >With   the   option   <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--verbosity-level-for-reachability-analysis</span><span 
 class="ectt-1095"> Full</span></span></span>,   the
      analysis also describes which rules are awaken by the discovery of a new pattern (see
      Fig. <a 
 href="#x1-620249">7.9<!--tex4ht:ref: fig:reachability_full --></a>).
      </li></ul>
-<!--l. 1423--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
+<!--l. 1429--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">--output-mode-for-reachability-analysis</span></span></span> can be used to tune the
 output of the analysis. The default mode is <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">kappa</span></span></span>. In mode, <span class="obeylines-h"><span class="verb"><span 
@@ -7377,7 +7399,7 @@ properties in natural language: when the option is disabled, each relationship i
 extension.
 <h3 class="sectionHead"><span class="titlemark">7.4   </span> <a 
  id="x1-630007.4"></a>Local traces</h3>
-<!--l. 1432--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1438--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -7388,7 +7410,7 @@ extension.
 
                                                                                   
 
-<!--l. 1434--><p class="noindent" ><img 
+<!--l. 1440--><p class="noindent" ><img 
 src="img/kasa_3.png" alt="PIC"  
 width="341.43306pt" height="215.99379pt" >
 <br /> <div class="caption" 
@@ -7399,15 +7421,15 @@ class="ectt-1095">3_Trace_analysis</span></span></div><!--tex4ht:label?: x1-6300
                                                                                   
 
                                                                                   
-<!--l. 1437--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1439--><p class="noindent" >Trace analysis is a reﬁnement of reachability analysis that additionaly explains how one agent can
+<!--l. 1443--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1445--><p class="noindent" >Trace analysis is a reﬁnement of reachability analysis that additionaly explains how one agent can
 go from a given view to another one, following a path that we call a local trace. Thus the set of
 the local traces for a given agent can be described as a transition system among the views for a
 given agent: in this transition system, the nodes are local views; introduction arrows correspond
 to either initial states, or creation rules; transitions denote a potential conformation change
 of an agent, from one local views to another one, due to the application of a given
 rule.
-<!--l. 1442--><p class="noindent" >We consider the following example: <!--l. 1443-->
+<!--l. 1448--><p class="noindent" >We consider the following example: <!--l. 1449-->
 <div class="lstlisting" id="listing-27"><span class="label"><a 
  id="x1-63002r1"></a><span 
 class="ecrm-0600">1</span></span><span 
@@ -7754,14 +7776,14 @@ class="ectt-1095">)</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">@1</span>
 </div>
-<!--l. 1459--><p class="noindent" >Typing the following instruction:
+<!--l. 1465--><p class="noindent" >Typing the following instruction:
                                                                                   
 
                                                                                   
 <div class="verbatim" id="verbatim-12">
 KaSa protein2x2.ka --reset-all --compute-local-traces</div>
-<!--l. 1463--><p class="nopar" >
-<!--l. 1465--><p class="noindent" >will perform the trace analysis on the model <span 
+<!--l. 1469--><p class="nopar" >
+<!--l. 1471--><p class="noindent" >will perform the trace analysis on the model <span 
 class="ectt-1095">protein2x2ka</span>, and produce two dot format ﬁles
 <span 
 class="ectt-1095">Agent_trace_K_x^.dot </span>and <span 
@@ -7775,46 +7797,46 @@ followed by the kind of protein and the list of the sites of interest (the symbo
 class="ectt-1095">^</span>&#x2019; denotes a
 binding state, and the symbol ‘<span 
 class="ectt-1095">_</span>&#x2019; an internal state).
-<!--l. 1468--><p class="noindent" >The transition system that describes the local traces for the agents of kind
-<!--l. 1468--><math 
+<!--l. 1474--><p class="noindent" >The transition system that describes the local traces for the agents of kind
+<!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >P</mi></math> is descrided in
 Figure <a 
 href="#x1-6301511">7.11<!--tex4ht:ref: fig:trace-raw --></a>. We notice that the nodes of this transition system are labelled with the states of the sites of
-<!--l. 1468--><math 
+<!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >P</mi></math>. The internal state
-of a site <!--l. 1468--><math 
+of a site <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> is denoted
-as <!--l. 1468--><math 
+as <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi><mo 
 class="MathClass-rel">∼</mo><mi 
 >u</mi></math> (meaning that
-the site <!--l. 1468--><math 
+the site <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> has state
-<!--l. 1468--><math 
+<!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >u</mi></math>, whereas the binding
-state of a site <!--l. 1468--><math 
+state of a site <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> is
-denoted as <!--l. 1468--><math 
+denoted as <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi><mo 
 class="MathClass-punc">!</mo><mstyle 
 class="text"><mtext class="textit" mathvariant="italic" >free</mtext></mstyle></math>, when
-the site is free, and as <!--l. 1468--><math 
+the site is free, and as <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi><mo 
@@ -7822,19 +7844,19 @@ class="MathClass-punc">!</mo><mi
 >K</mi><mi 
 >@</mi><mi 
 >x</mi></math>
-when the site <!--l. 1468--><math 
+when the site <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> is bound
-to the site <!--l. 1468--><math 
+to the site <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> of a given
-agent of kind <!--l. 1468--><math 
+agent of kind <!--l. 1474--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >K</mi></math>.
-<!--l. 1470--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1476--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -7845,7 +7867,7 @@ display="inline" ><mi
 
                                                                                   
 
-<!--l. 1472--><p class="noindent" ><img 
+<!--l. 1478--><p class="noindent" ><img 
 src="generated_img/trace_raw.png" alt="PIC"  
 width="284.52756pt" height="150.6898pt" >
 <br /> <div class="caption" 
@@ -7856,24 +7878,24 @@ href="#x1-630007.4">7.4<!--tex4ht:ref: sec:local-traces --></a></span></div><!--
                                                                                   
 
                                                                                   
-<!--l. 1475--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1477--><p class="noindent" >We notice that the transition system that is given in Fig. <a 
+<!--l. 1481--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1483--><p class="noindent" >We notice that the transition system that is given in Fig. <a 
 href="#x1-6301511">7.11<!--tex4ht:ref: fig:trace-raw --></a> contains too many nodes. We can
 coarse-grain this transition system thanks to the following option:
 <div class="center" 
 >
-<!--l. 1478--><p class="noindent" >
-<!--l. 1479--><p class="noindent" ><span 
+<!--l. 1484--><p class="noindent" >
+<!--l. 1485--><p class="noindent" ><span 
 class="ectt-1095">–use-macrotransitions-in-local-traces</span>.</div>
-<!--l. 1481--><p class="noindent" >Typing the following instruction:
+<!--l. 1487--><p class="noindent" >Typing the following instruction:
                                                                                   
 
                                                                                   
 <div class="verbatim" id="verbatim-13">
 KaSa protein2x2.ka --reset-all --compute-local-traces
  <br />                   --use-macrotransitions-in-local-traces</div>
-<!--l. 1486--><p class="nopar" >
-<!--l. 1488--><p class="noindent" >will perform the trace analysis on the model <span 
+<!--l. 1492--><p class="nopar" >
+<!--l. 1494--><p class="noindent" >will perform the trace analysis on the model <span 
 class="ectt-1095">protein2x2ka</span>, and produce two dot format ﬁles
 <span 
 class="ectt-1095">Agent_trace_K_x^.dot </span>and <span 
@@ -7883,8 +7905,8 @@ class="ectt-1095">–output-directory </span>and
 <span 
 class="ectt-1095">–output-local-trace-directory</span>. This time, the ﬁles describe a coarse-graining of the
 corresponding transition systems.
-<!--l. 1492--><p class="noindent" >For instance, the coarse-grained transition system for the local traces of the proteins of kind
-<!--l. 1492--><math 
+<!--l. 1498--><p class="noindent" >For instance, the coarse-grained transition system for the local traces of the proteins of kind
+<!--l. 1498--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >P</mi></math>, is given
@@ -7892,28 +7914,28 @@ in Figure <a
 href="#x1-6301612">7.12<!--tex4ht:ref: fig:trace-macro --></a>. This coarse-grained transition system is a compact implicit encoding of the transition
 system in Figure <a 
 href="#x1-6301511">7.11<!--tex4ht:ref: fig:trace-raw --></a>. It is obtained by exploiting the fact that locally, the behavior of the pair of
-states <!--l. 1492--><math 
+states <!--l. 1498--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >a</mi></mrow><mrow 
 ><mn>1</mn></mrow></msub 
 ></math> and
-<!--l. 1492--><math 
+<!--l. 1498--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >b</mi></mrow><mrow 
 ><mn>1</mn></mrow></msub 
 ></math> is independent from the
-behavior of the pair of states <!--l. 1492--><math 
+behavior of the pair of states <!--l. 1498--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >a</mi></mrow><mrow 
 ><mn>2</mn></mrow></msub 
 ></math>
-and <!--l. 1492--><math 
+and <!--l. 1498--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -7921,15 +7943,15 @@ display="inline" ><msub><mrow
 ><mn>2</mn></mrow></msub 
 ></math>,
 until these four sites are phosphorylated, so that the site
-<!--l. 1492--><math 
+<!--l. 1498--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >g</mi></math> can
 get bound.
-<!--l. 1495--><p class="noindent" >More formally, in that transition system, some states are microstates (in a
+<!--l. 1501--><p class="noindent" >More formally, in that transition system, some states are microstates (in a
 microstate, the state of each site is documented); some others are macrostates: (in
 a macrostate, the states of only a subset of site is documented). Thus a macrostate
-<!--l. 1496--><math 
+<!--l. 1502--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msup><mrow 
 ><mi 
@@ -7938,7 +7960,7 @@ display="inline" ><msup><mrow
 >♯</mi></mrow></msup 
 ></math>
 can be seen intensionally as a part of a local view, but also extensionnaly as the set
-<!--l. 1496--><math 
+<!--l. 1502--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >γ</mi><mrow ><mo 
@@ -7950,11 +7972,11 @@ class="MathClass-open">(</mo><mrow><msup><mrow
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></math>
 of the local views they are a subpart of. A microstate
-<!--l. 1496--><math 
+<!--l. 1502--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >v</mi></math> can be described by any sequence
-<!--l. 1496--><math 
+<!--l. 1502--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">(</mo><mrow><msubsup><mrow 
@@ -7966,7 +7988,7 @@ class="MathClass-open">(</mo><mrow><msubsup><mrow
 >♯</mi></mrow></msubsup 
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></math> of macrostates prodiding
-that the intersection <!--l. 1496--><math 
+that the intersection <!--l. 1502--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mo 
 class="MathClass-op"> ⋂</mo>
@@ -7981,7 +8003,7 @@ class="MathClass-open">(</mo><mrow><msubsup><mrow
 >♯</mi></mrow></msubsup 
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></math> of the
-extensional denotation <!--l. 1496--><math 
+extensional denotation <!--l. 1502--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >γ</mi><mrow ><mo 
@@ -7994,7 +8016,7 @@ class="MathClass-open">(</mo><mrow><msubsup><mrow
 >♯</mi></mrow></msubsup 
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></math> of these
-macrostates <!--l. 1496--><math 
+macrostates <!--l. 1502--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msubsup><mrow 
 ><mi 
@@ -8004,17 +8026,17 @@ display="inline" ><msubsup><mrow
 ><mi 
 >♯</mi></mrow></msubsup 
 ></math>, is equal to the
-singleton <!--l. 1496--><math 
+singleton <!--l. 1502--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">{</mo><mrow><mi 
 >v</mi></mrow><mo 
 class="MathClass-close">}</mo></mrow></math>; moreover a transition
-between two microstates <!--l. 1497--><math 
+between two microstates <!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >v</mi></math>
-and <!--l. 1497--><math 
+and <!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msup><mrow 
 ><mi 
@@ -8026,7 +8048,7 @@ can be described by any transition between one macro state
                                                                                   
 
                                                                                   
-<!--l. 1497--><math 
+<!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msup><mrow 
 ><mi 
@@ -8034,7 +8056,7 @@ display="inline" ><msup><mrow
 ><mi 
 >♯</mi></mrow></msup 
 ></math> and another one
-<!--l. 1497--><math 
+<!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msup><mrow 
 ><mi 
@@ -8046,7 +8068,7 @@ display="inline" ><msup><mrow
 ><mi 
 >♯</mi></mrow></msup 
 ></math>, provided that there exists
-a sequence of macrostate <!--l. 1497--><math 
+a sequence of macrostate <!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">(</mo><mrow><msubsup><mrow 
@@ -8058,7 +8080,7 @@ class="MathClass-open">(</mo><mrow><msubsup><mrow
 >♯</mi></mrow></msubsup 
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></math>
-such that the sequence <!--l. 1497--><math 
+such that the sequence <!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">(</mo><mrow><msup><mrow 
@@ -8078,11 +8100,11 @@ class="MathClass-open">(</mo><mrow><msubsup><mrow
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></mrow><mo 
 class="MathClass-close">)</mo></mrow></math>
-denotes the microstate <!--l. 1497--><math 
+denotes the microstate <!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >v</mi></math>
-and the sequence <!--l. 1497--><math 
+and the sequence <!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">(</mo><mrow><msup><mrow 
@@ -8106,7 +8128,7 @@ class="MathClass-open">(</mo><mrow><msubsup><mrow
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></mrow><mo 
 class="MathClass-close">)</mo></mrow></math> denotes
-the microstate <!--l. 1497--><math 
+the microstate <!--l. 1503--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msup><mrow 
 ><mi 
@@ -8114,7 +8136,7 @@ display="inline" ><msup><mrow
 ><mi 
 >′</mi></mrow></msup 
 ></math>.
-<!--l. 1499--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1505--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -8125,7 +8147,7 @@ display="inline" ><msup><mrow
 
                                                                                   
 
-<!--l. 1501--><p class="noindent" ><img 
+<!--l. 1507--><p class="noindent" ><img 
 src="generated_img/trace_macro.png" alt="PIC"  
 width="284.52756pt" height="111.59079pt" >
 <br /> <div class="caption" 
@@ -8136,27 +8158,27 @@ href="#x1-630007.4">7.4<!--tex4ht:ref: sec:local-traces --></a></span></div><!--
                                                                                   
 
                                                                                   
-<!--l. 1504--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1506--><p class="noindent" >Such coarse-grained transition system can be geometrically interpreted as a simplicial complex
+<!--l. 1510--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1512--><p class="noindent" >Such coarse-grained transition system can be geometrically interpreted as a simplicial complex
 <span class="cite">[<a 
-href="#XDBLP:conf/concur/FajstrupGR98">9</a>]</span>.
-<!--l. 1508--><p class="noindent" >As a microstate could be decomposed into several sequences of macrostates (including the trivial
+href="#XDBLP:conf/concur/FajstrupGR98">10</a>]</span>.
+<!--l. 1514--><p class="noindent" >As a microstate could be decomposed into several sequences of macrostates (including the trivial
 sequence containing only the microstate itself), the system may jump spontaneously (by using a
-<!--l. 1508--><math 
+<!--l. 1514--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >𝜀</mi></math>
 transition) from one representation to another representation. This corresponds to the
 intersection between several simplexes in the corresponding simpliﬁcial complex.
-<!--l. 1510--><p class="noindent" >Although the semantics of a coarse-grainged transition system is fully deﬁned by its labelled
+<!--l. 1516--><p class="noindent" >Although the semantics of a coarse-grainged transition system is fully deﬁned by its labelled
 transitions, it is useful to annotate the graph by some information about the relation between the
 denotation of each macrostate. By default, we use hypertlinks to relate each macrostate
-<!--l. 1510--><math 
+<!--l. 1516--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >v</mi></math>
 (including each microstate) to the set of its immediate subparts
-<!--l. 1511--><math 
+<!--l. 1517--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msup><mrow 
 ><mi 
@@ -8164,16 +8186,16 @@ display="inline" ><msup><mrow
 ><mi 
 >′</mi></mrow></msup 
 ></math>. In such a
-hyperlink, <!--l. 1511--><math 
+hyperlink, <!--l. 1517--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >v</mi></math>
 is connected via a dotted arrow, whereas each immediate subpart is connected via a dashed
 arrow.
-<!--l. 1513--><p class="noindent" >More options are available in expert mode, but they are not documented yet.
+<!--l. 1519--><p class="noindent" >More options are available in expert mode, but they are not documented yet.
 <h3 class="sectionHead"><span class="titlemark">7.5   </span> <a 
  id="x1-640007.5"></a>Contact map</h3>
-<!--l. 1517--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1523--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -8184,7 +8206,7 @@ arrow.
 
                                                                                   
 
-<!--l. 1519--><p class="noindent" ><img 
+<!--l. 1525--><p class="noindent" ><img 
 src="img/kasa_4.png" alt="PIC"  
 width="341.43306pt" height="215.99379pt" >
 <br /> <div class="caption" 
@@ -8195,81 +8217,81 @@ class="ectt-1095">4_Contact_map</span></span></div><!--tex4ht:label?: x1-6400113
                                                                                   
 
                                                                                   
-<!--l. 1522--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1524--><p class="noindent" >The contact map of a model is an object that may help modelers checking the consistency of the
+<!--l. 1528--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1530--><p class="noindent" >The contact map of a model is an object that may help modelers checking the consistency of the
 rule set they use. The contact map is <span 
 class="ecti-1095">statically </span>computed and does not depend on kinetic rates
 nor initial conditions.
-<!--l. 1527--><p class="noindent" >Typing the following instruction:
-<!--l. 1529--><p class="noindent" ><span 
+<!--l. 1533--><p class="noindent" >Typing the following instruction:
+<!--l. 1535--><p class="noindent" ><span 
 class="ectt-1095">KaSa abc.ka –reset-all –compute-contact-map</span>
-<!--l. 1531--><p class="noindent" >will produce a dot format ﬁle named <span 
-class="ectt-1095">contact.dot</span>. The name of the output ﬁle and the directory
-can be changed to the command line options <span 
-class="ectt-1095">–output-contact-map </span>and <span 
-class="ectt-1095">–output-directory</span>.
-The directory is assumed to exist. The ﬁle will be overwritten if it exists. All the options related
-to the computation of the contact map can be accessed on the sub-tab <span 
-class="ectt-1095">4_Contact_map </span>of the
-graphical interface (see Fig. <a 
+<!--l. 1537--><p class="noindent" >will produce a dot format ﬁle named <span 
+class="ectt-1095">contact.dot</span>. The name of the output ﬁle and the
+directory can be changed thanks to the command line options <span 
+class="ectt-1095">–output-contact-map </span>and
+<span 
+class="ectt-1095">–output-directory</span>. The directory is assumed to exist. The ﬁle will be overwritten if it exists. All
+the options related to the computation of the contact map can be accessed on the sub-tab
+<span 
+class="ectt-1095">4_Contact_map </span>of the graphical interface (see Fig. <a 
 href="#x1-6500115">7.15<!--tex4ht:ref: fig:kasa:4 --></a>).
-<!--l. 1539--><p class="noindent" >The contact map summarises the diﬀerent types of agent, their interface and the potential
+<!--l. 1545--><p class="noindent" >The contact map summarises the diﬀerent types of agent, their interface and the potential
 binding between sites. It is an over approximation, thus if the contact map indicates a potential
 bond, it does not mean that it is always possible to reach a state in which two sites of these
 kinds are bound, but if the contact map indicates no bond between two sites, it means
 that it is NOT possible to reach a state in which two sites of these kinds are bound
 together.
-<!--l. 1542--><p class="noindent" >The contact map for the <span 
+<!--l. 1548--><p class="noindent" >The contact map for the <span 
 class="ectt-1095">abc.ka </span>model deﬁned in Chapter <a 
 href="#x1-370005">5<!--tex4ht:ref: chap:abc --></a> is given in
 Figure <a 
 href="#x1-6400214">7.14<!--tex4ht:ref: fig:abc-contact --></a>. On this map, we notice that there are three kinds of agent, namely
-<!--l. 1542--><math 
+<!--l. 1548--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math>,
-<!--l. 1542--><math 
+<!--l. 1548--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >B</mi></math>, and
-<!--l. 1542--><math 
+<!--l. 1548--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >C</mi></math>. Agents of
-kind <!--l. 1543--><math 
+kind <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> have
-two sites <!--l. 1543--><math 
+two sites <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math>
-and <!--l. 1543--><math 
+and <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >c</mi></math>,
 that bear no internal state (they appear in yellow only), agents of kind
-<!--l. 1543--><math 
+<!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >B</mi></math> have one
-site <!--l. 1543--><math 
+site <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math>,
 that bears no internal state (they appear in yellow only), and agents of kind
-<!--l. 1543--><math 
+<!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >C</mi></math> have two
-sites <!--l. 1543--><math 
+sites <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >x</mi></mrow><mrow 
 ><mn>1</mn></mrow></msub 
 ></math>
-and <!--l. 1543--><math 
+and <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -8279,52 +8301,52 @@ display="inline" ><msub><mrow
 with both a binding state and an internal state (they appear both in yellow and in green). We
 notice that when a site can bear both an internal state and a binding state, they are considered as
 two diﬀerent sites in the contact map. Additionally, the contact map indicates that sites
-<!--l. 1543--><math 
+<!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> of the agents of kind
-<!--l. 1543--><math 
+<!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> can be bound to the
-site <!--l. 1543--><math 
+site <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >x</mi></math> of an agent of
                                                                                   
 
                                                                                   
-kind <!--l. 1543--><math 
+kind <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >B</mi></math> and that sites
-<!--l. 1543--><math 
+<!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >c</mi></math> of the agents of
-kind <!--l. 1543--><math 
+kind <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> can be bound
-to the agents of kind <!--l. 1543--><math 
+to the agents of kind <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >C</mi></math>
-either on the site <!--l. 1543--><math 
+either on the site <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >x</mi></mrow><mrow 
 ><mn>1</mn></mrow></msub 
 ></math>, or
-on the site <!--l. 1543--><math 
+on the site <!--l. 1549--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
 >x</mi></mrow><mrow 
 ><mn>2</mn></mrow></msub 
 ></math>.
-<!--l. 1545--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1551--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -8335,7 +8357,7 @@ display="inline" ><msub><mrow
 
                                                                                   
 
-<!--l. 1547--><p class="noindent" ><img 
+<!--l. 1553--><p class="noindent" ><img 
 src="generated_img/abc_contact.png" alt="PIC"  
 width="227.62204pt" height="143.98993pt" >
 <br /> <div class="caption" 
@@ -8346,25 +8368,29 @@ href="#x1-370005">5<!--tex4ht:ref: chap:abc --></a></span></div><!--tex4ht:label
                                                                                   
 
                                                                                   
-<!--l. 1550--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1556--><p class="noindent" ></div><hr class="endfigure">
 <h3 class="sectionHead"><span class="titlemark">7.6   </span> <a 
  id="x1-650007.6"></a>Inﬂuence map</h3>
-<!--l. 1556--><p class="noindent" >The inﬂuence map of a model is an object that may help modelers checking the consistency of the
+<!--l. 1562--><p class="noindent" >The inﬂuence map of a model is an object that may help modelers checking the consistency of the
 rule set they use.
-<!--l. 1558--><p class="noindent" >Typing the following instruction:
-<!--l. 1560--><p class="noindent" ><span 
+<!--l. 1564--><p class="noindent" >Typing the following instruction:
+<!--l. 1566--><p class="noindent" ><span 
 class="ectt-1095">KaSa abc.ka –reset-all –compute-influence-map</span>
-<!--l. 1562--><p class="noindent" >will produce a dot format ﬁle named <span 
+<!--l. 1568--><p class="noindent" >will produce a dot format ﬁle named <span 
 class="ectt-1095">influence.dot</span>. The name of the output ﬁle and the
-directory can be changed to the command line options <span 
+directory can be changed thanks to the command line options <span 
 class="ectt-1095">–output-influence-map </span>and
 <span 
-class="ectt-1095">–output-directory</span>. The directory is assumed to exist. The ﬁle will be overwritten if it exists. All
-the options related to the computation of the inﬂuence map can be accessed on the sub-tab
-<span 
-class="ectt-1095">4_Influence_map </span>of the graphical interface (see Fig. <a 
+class="ectt-1095">–output-directory</span>. The directory is assumed to exist. The ﬁle will be overwritten
+if it exists. All the options related to the computation of the inﬂuence map can be
+accessed on the sub-tab <span 
+class="ectt-1095">5_Influence_map </span>of the graphical interface (see Fig. <a 
 href="#x1-6500115">7.15<!--tex4ht:ref: fig:kasa:4 --></a>).
-<!--l. 1566--><p class="noindent" ><hr class="figure"><div class="figure" 
+Two formats are available for the output: inﬂuence map can be generated in DOT
+or HTML format. The format can be choosen thanks to the command line option
+<span 
+class="ectt-1095">–influence-map-format</span>.
+<!--l. 1572--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -8375,7 +8401,7 @@ href="#x1-6500115">7.15<!--tex4ht:ref: fig:kasa:4 --></a>).
 
                                                                                   
 
-<!--l. 1568--><p class="noindent" ><img 
+<!--l. 1574--><p class="noindent" ><img 
 src="img/kasa_5.png" alt="PIC"  
 width="341.43306pt" height="215.99379pt" >
 <br /> <div class="caption" 
@@ -8386,13 +8412,13 @@ class="ectt-1095">5_Influence_map</span></span></div><!--tex4ht:label?: x1-65001
                                                                                   
 
                                                                                   
-<!--l. 1571--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1573--><p class="noindent" >Unlike the ﬂux map, the inﬂuence map is <span 
+<!--l. 1577--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1579--><p class="noindent" >Unlike the ﬂux map, the inﬂuence map is <span 
 class="ecti-1095">statically </span>computed and does not depend on kinetic
-rates nor initial conditions. It describes how rules may potentially inﬂuence each other during a
-simulation. <span 
-class="ecss-1095">KaSa</span> will produce a dot format ﬁle containing the inﬂuence relation over all
-rules and observables of the model. The produced graph visualised using a circular
+rates nor the quantities in initial conditions. It describes how rules may potentially inﬂuence each
+other during a simulation. <span 
+class="ecss-1095">KaSa</span> will produce a dot format ﬁle containing the inﬂuence relation
+over all rules and observables of the model. The produced graph visualised using a circular
 rendering<span class="footnote-mark"><a 
 href="Ka4.htm#fn1x8"><sup class="textsuperscript">1</sup></a></span><a 
  id="x1-65002f1"></a> 
@@ -8405,7 +8431,7 @@ by the kappa deﬁnition of the rule/observable. Edges are decorated with the li
 embeddings (separated by a semi-colon) allowing the identiﬁcation of agents in both rules<span 
 class="tcrm-1095">'</span>s
 right hand sides/left hand sides. More precisely, for positive inﬂuences, the notation
-<!--l. 1575--><math 
+<!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -8413,18 +8439,18 @@ class="MathClass-open">[</mo><mrow><mi
 class="MathClass-rel">→</mo> <mi 
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math> denotes a pair of embeddings
-from the agent number <!--l. 1575--><math 
+from the agent number <!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of the origin<span 
 class="tcrm-1095">'</span>s right hand side and from the agent number
-<!--l. 1575--><math 
+<!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math> of the target<span 
 class="tcrm-1095">'</span>s left hand
-side and the notation <!--l. 1575--><math 
+side and the notation <!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -8434,19 +8460,19 @@ class="MathClass-rel">→</mo> <mi
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math>
 denotes a pair of embeddings from an agent attached to the agent number
-<!--l. 1575--><math 
+<!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math> of the
 origin<span 
 class="tcrm-1095">'</span>s left hand side, which have been freed by side eﬀect and from the agent number
-<!--l. 1575--><math 
+<!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math>
 of the target<span 
 class="tcrm-1095">'</span>s left hand side; for negative inﬂuences, the notation
-<!--l. 1575--><math 
+<!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -8454,18 +8480,18 @@ class="MathClass-open">[</mo><mrow><mi
 class="MathClass-rel">→</mo> <mi 
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math> denotes a pair of embeddings
-from the agent number <!--l. 1575--><math 
+from the agent number <!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of the origin<span 
 class="tcrm-1095">'</span>s left hand side and from the agent number
-<!--l. 1575--><math 
+<!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math> of the target<span 
 class="tcrm-1095">'</span>s left hand
-side and the notation <!--l. 1575--><math 
+side and the notation <!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -8475,20 +8501,20 @@ class="MathClass-rel">→</mo> <mi
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math>
 denotes a pair of embeddings from an agent attached to the agent number
-<!--l. 1575--><math 
+<!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math> of the
 origin<span 
 class="tcrm-1095">'</span>s left hand side, which have been freed by side eﬀect and from the agent number
-<!--l. 1575--><math 
+<!--l. 1581--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math> of the
 target<span 
 class="tcrm-1095">'</span>s left hand side; Observables have no inﬂuence, but they can be inﬂuenced by rules, if the
 rule can increase or decrease their value.
-<!--l. 1579--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1585--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -8499,7 +8525,7 @@ rule can increase or decrease their value.
 
                                                                                   
 
-<!--l. 1581--><p class="noindent" ><img 
+<!--l. 1587--><p class="noindent" ><img 
 src="generated_img/abc_influence.png" alt="PIC"  
 >
 <br />  <div class="caption" 
@@ -8508,7 +8534,7 @@ class="content">The   inﬂuence   map   of   the   <span
 class="ectt-1095">abc.ka  </span>model   deﬁned   in   Chapter <a 
 href="#x1-370005">5<!--tex4ht:ref: chap:abc --></a>.
 Edge    labels    denote    embeddings    with    the    convention    that    the    notation
-<!--l. 1585--><math 
+<!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -8517,18 +8543,18 @@ class="MathClass-rel">→</mo> <mi
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math>,
 in   a   positive   inﬂuence,   denotes   a   pair   of   embeddings   from   the   agent   number
-<!--l. 1585--><math 
+<!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of     the     origin<span 
 class="tcrm-1095">'</span>s     right     hand     side     and     from     the     agent     number
-<!--l. 1585--><math 
+<!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math>
 of the target<span 
-class="tcrm-1095">'</span>s left hand side; the notation <!--l. 1585--><math 
+class="tcrm-1095">'</span>s left hand side; the notation <!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -8537,18 +8563,18 @@ class="MathClass-rel">→</mo> <mi
 >j</mi></mrow><mo 
 class="MathClass-close">]</mo></mrow></math>,
 in   negative   inﬂuence,   denotes   a   pair   of   embeddings   from   the   agent   number
-<!--l. 1585--><math 
+<!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of     the     origin<span 
 class="tcrm-1095">'</span>s     left     hand     side     and     from     the     agent     number
-<!--l. 1585--><math 
+<!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math>
 of the target<span 
-class="tcrm-1095">'</span>s left hand side; the notation <!--l. 1585--><math 
+class="tcrm-1095">'</span>s left hand side; the notation <!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow ><mo 
 class="MathClass-open">[</mo><mrow><mi 
@@ -8559,13 +8585,13 @@ class="MathClass-rel">→</mo> <mi
 class="MathClass-close">]</mo></mrow></math>,
 whatever     the     inﬂuence     is     positive     of     negative,     denotes     a     pair
 of     embeddings     from     an     agent     attached     to     the     agent     number
-<!--l. 1585--><math 
+<!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi></math>
 of the origin<span 
 class="tcrm-1095">'</span>s left hand side, which have been freed by side eﬀect and from the agent number
-<!--l. 1585--><math 
+<!--l. 1591--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >j</mi></math>
@@ -8574,8 +8600,8 @@ class="tcrm-1095">'</span>s left hand side. </span></div><!--tex4ht:label?: x1-6
                                                                                   
 
                                                                                   
-<!--l. 1587--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1589--><p class="noindent" >More formally, consider the rules <!--l. 1589--><math 
+<!--l. 1593--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1595--><p class="noindent" >More formally, consider the rules <!--l. 1595--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi> <mo 
@@ -8583,7 +8609,7 @@ class="MathClass-punc">:</mo> <mi
 >L</mi> <mo 
 class="MathClass-rel">→</mo> <mi 
 >R</mi></math>
-and <!--l. 1589--><math 
+and <!--l. 1595--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi> <mo 
@@ -8600,20 +8626,20 @@ class="MathClass-rel">→</mo> <msup><mrow
 >′</mi></mrow></msup 
 ></math>.
 One wishes to know whether it is possible that the application of rule
-<!--l. 1589--><math 
+<!--l. 1595--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi></math> over a graph
-<!--l. 1589--><math 
+<!--l. 1595--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >G</mi></math> creates a new instance
-of rule <!--l. 1589--><math 
+of rule <!--l. 1595--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi></math> (which is
 called a positive inﬂuence and that is described by green arrows in the inﬂuence map), or destroy a previous
-instance of rule <!--l. 1589--><math 
+instance of rule <!--l. 1595--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi></math>
@@ -8622,7 +8648,7 @@ Fig. <a
 href="#x1-6500417">7.17<!--tex4ht:ref: fig:imbis --></a>, we illustrate the construction of positive inﬂuences due to overlap of the left hand side
 of a rule and the right hand side of another rule on some sites that are modiﬁed by the former
 one.
-<!--l. 1592--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1598--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -8633,7 +8659,7 @@ one.
 
                                                                                   
 
-<!--l. 1594--><p class="noindent" ><img 
+<!--l. 1600--><p class="noindent" ><img 
 src="img/im.png" alt="PIC"  
 width="227.62204pt" height="117.69789pt" >
 <br /> <div class="caption" 
@@ -8644,8 +8670,8 @@ It results that the ﬁrst rule has a positive inﬂuence on the second.</span><
                                                                                   
 
                                                                                   
-<!--l. 1597--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 1599--><p class="noindent" >The current implementation has the following limitations:
+<!--l. 1603--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1605--><p class="noindent" >The current implementation has the following limitations:
      <ul class="itemize1">
      <li class="itemize">Currently, only observables that are deﬁned as patterns are taken into account.
      </li>
@@ -8659,10 +8685,429 @@ It results that the ﬁrst rule has a positive inﬂuence on the second.</span><
      <li class="itemize">Token are not taken into yet. They are currently ignored.
      </li>
      <li class="itemize">Positive/negative inﬂuence of time is not taken into account either.</li></ul>
-<!--l. 1608--><p class="noindent" >Lastly, KaSa computes an over-approximation of the inﬂuence map. They may show an inﬂuence
+<!--l. 1614--><p class="noindent" >Lastly, KaSa computes an over-approximation of the inﬂuence map. They may show an inﬂuence
 despite the fact that there can be no actual one. But if it shows no inﬂuence it means that either
 there are NO such inﬂuence, or that we are in a case that is not covered yet as itemised
 previously.
+<!--l. 1616--><p class="noindent" >Three levels of precision are available: <span 
+class="ectt-1095">Low</span>, <span 
+class="ectt-1095">Medium</span>, and <span 
+class="ectt-1095">High</span>. The level of precision can be
+changed thanks to the command line option <span 
+class="ectt-1095">–influence-map-accuracy-level</span>.
+<!--l. 1619--><p class="noindent" >At low precision, an inﬂuence is detected if one rule change at least one bit of information (the
+internal state of a site, the binding state of a site), in favor/defavor of the application another
+rule. This abstraction level ignore completely the context of application of rules, and just focuses
+on modiﬁcations.
+<!--l. 1621--><p class="noindent" >At medium precision, the analysis checks that both rules have a common context.
+<!--l. 1623--><p class="noindent" >At high precision, the analysis checks that such common context is realizable taking into account
+the species that have been declared as initial states and the potential species introduction in
+perturbations. High resolution inﬂuence is parameterized by the accuracy of the reachability
+analysis. It may happen that a given context is infeasible, but that this is not detected by the
+analysis.
+<!--l. 1627--><p class="noindent" >Let us illustrate these three levels of accuracy by a case study.
+<!--l. 1629--><p class="noindent" >We consider the following model. <!--l. 1630-->
+<div class="lstlisting" id="listing-28"><span class="label"><a 
+ id="x1-65005r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%agent:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">w</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,y</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,z</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65006r2"></a><span 
+class="ecrm-0600">2</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65007r3"></a><span 
+class="ecrm-0600">3</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65008r4"></a><span 
+class="ecrm-0600">4</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,y</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,y</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65009r5"></a><span 
+class="ecrm-0600">5</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,z</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,z</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65010r6"></a><span 
+class="ecrm-0600">6</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u,z</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,w</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u,z</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,w</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65011r7"></a><span 
+class="ecrm-0600">7</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u,z</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u,z</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65012r8"></a><span 
+class="ecrm-0600">8</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,w</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">p,w</span><span 
+class="ectt-1095">~</span><span 
+class="ectt-1095">u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65013r9"></a><span 
+class="ecrm-0600">9</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-65014r10"></a><span 
+class="ecrm-0600">10</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%init:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">10</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">()</span>
+                                                                                  
+
+                                                                                  
+</div>
+<!--l. 1643--><p class="noindent" >The low resolution inﬂuence map is given in Fig. <a 
+href="#x1-6501518">7.18<!--tex4ht:ref: fig:low-res --></a>. There is a positive arc (in green) from a
+rule to another one whenever the application of the former pushes at least one bit of information
+towards the application of the later; whereas there is a negative arc (in red) from a rule to
+another one whenever the former pulls at least one bit of information away from the application
+of the later.
+<!--l. 1646--><p class="noindent" >The medium resolution inﬂuence map is given in Fig. <a 
+href="#x1-6501619">7.19<!--tex4ht:ref: fig:medium-res --></a>. Every arc corresponding to
+incompatible contexts have been removed. In our example, these are the arcs from the rule
+<!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn></math> and the rule
+<!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn></math> (in both direction). Despite
+the fact that the rule <!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn></math>
+may phosphorylate the site <span 
+class="ectt-1095">w </span>which is required to apply the rule
+<!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn></math>, no instance
+of the rule <!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn></math>
+may be applied thanks to the application of the rule
+<!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn></math> right after, because after
+the application of the rule <!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn></math>
+the state of the site <!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi></math>
+is necessarily unphosphorylated, whereas it has to be phosphorylated for the rule
+<!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn></math>
+to be applied. The same kind of explanation holds to remove the arc from the rule
+<!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn></math> to the rule
+<!--l. 1648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn></math>.
+<!--l. 1650--><p class="noindent" >There are some structural invariants in these models. We give in Fig. <a 
+href="#x1-6501821">7.21<!--tex4ht:ref: fig:reachability_influence --></a> the
+log of the computation of the high resolution contact map. It turns out that
+whenever the site <span 
+class="ectt-1095">y </span>of an agent is phosphorylated, then the site <span 
+class="ectt-1095">x </span>of this protein is
+phosphorylated as well. Thus we can deduce that the positive arc from the rules
+<!--l. 1650--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn></math> and
+<!--l. 1650--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn></math>, and the negative
+arcs from the rules <!--l. 1650--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn></math>
+and <!--l. 1650--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>4</mn></math>
+(in both direction) are false positive unless we change the set of the species in the initial state
+or in the perturbations. Thus we obtain the high resolution inﬂuence map given in
+Fig. <a 
+href="#x1-6501720">7.20<!--tex4ht:ref: fig:high-res --></a>.
+<!--l. 1656--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-6501518"></a>
+                                                                                  
+
+                                                                                  
+<div class="center" 
+>
+<!--l. 1657--><p class="noindent" >
+
+<!--l. 1658--><p class="noindent" ><img 
+src="generated_img/inf_map_low_res.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure 7.18: </span><span  
+class="content">Low resolution inﬂuence map</span></div><!--tex4ht:label?: x1-6501518 -->
+</div>
+                                                                                  
+
+                                                                                  
+<!--l. 1662--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1663--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-6501619"></a>
+                                                                                  
+
+                                                                                  
+<div class="center" 
+>
+<!--l. 1664--><p class="noindent" >
+
+<!--l. 1665--><p class="noindent" ><img 
+src="generated_img/inf_map_medium_res.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure 7.19: </span><span  
+class="content">Medium resolution inﬂuence map</span></div><!--tex4ht:label?: x1-6501619 -->
+</div>
+                                                                                  
+
+                                                                                  
+<!--l. 1669--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1670--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-6501720"></a>
+                                                                                  
+
+                                                                                  
+<div class="center" 
+>
+<!--l. 1671--><p class="noindent" >
+
+<!--l. 1672--><p class="noindent" ><img 
+src="generated_img/inf_map_high_res.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure 7.20: </span><span  
+class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1-6501720 -->
+</div>
+                                                                                  
+
+                                                                                  
+<!--l. 1676--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 1678--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-6501821"></a>
+                                                                                  
+
+                                                                                  
+<div class="verbatim" id="verbatim-14">
+Kappa Static Analyzer (c192bfd) (without Tk interface)
+ <br />Analysis launched at 2016/12/13 12:50:47 (GMT+0) on
+ <br />testing-gce-8022dfb8-21e9-4855-a2e0-047754d4289e
+ <br />Parsing ../kappa/influence.ka...
+ <br />done
+ <br />Compiling...
+ <br />Reachability analysis...
+ <br />------------------------------------------------------------
+ <br />every rule may be applied
+ <br />------------------------------------------------------------
+ <br />every agent may occur in the model
+ <br />
+ <br />------------------------------------------------------------
+ <br />* Non relational properties:
+ <br />------------------------------------------------------------
+ <br />A() =&#x003E; [ A(x~u) v A(x~p) ]
+ <br />A() =&#x003E; [ A(w~u) v A(w~p) ]
+ <br />A() =&#x003E; [ A(y~u) v A(y~p) ]
+ <br />A() =&#x003E; [ A(z~u) v A(z~p) ]
+ <br />
+ <br />------------------------------------------------------------
+ <br />* Relational properties:
+ <br />------------------------------------------------------------
+ <br />A(w~p) =&#x003E; A(w~p,z~p)
+ <br />A(y~p) =&#x003E; A(x~p,y~p)
+ <br />------------------------------------------------------------
+ <br />* Properties in connected agents
+ <br />------------------------------------------------------------
+ <br />------------------------------------------------------------
+ <br />* Properties of pairs of bonds
+ <br />------------------------------------------------------------
+ <br />execution finished without any exception</div>
+<!--l. 34--><p class="nopar" >
+<br /> <div class="caption" 
+><span class="id">Figure 7.21: </span><span  
+class="content">Log of the reachability analysis.</span></div><!--tex4ht:label?: x1-6501821 -->
+                                                                                  
+
+                                                                                  
+<!--l. 1682--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
 
                                                                                   
@@ -8670,18 +9115,18 @@ previously.
  id="x1-660008"></a>Frequently asked questions</h2>
 <h3 class="likesectionHead"><a 
  id="x1-670008"></a>Simulation hangs after a while</h3>
-<!--l. 1612--><p class="noindent" >If the progress bar seems stalled, it does not necessarily mean that the simulation is blocked. In
+<!--l. 1686--><p class="noindent" >If the progress bar seems stalled, it does not necessarily mean that the simulation is blocked. In
 particular when a simulation is triggered with a <span 
 class="ecti-1095">time </span>limit (<span 
 class="ectt-1095">-l </span>option of the command
 line) it might only indicate that the bio clock is stalled while computation events still
 occur. Recall that the average (bio) time one has to wait in order to apply a rule is
-<!--l. 1612--><math 
+<!--l. 1686--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mn>1</mn><mo 
 class="MathClass-bin">∕</mo><mi 
 >A</mi></math>, where
-<!--l. 1612--><math 
+<!--l. 1686--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> is the
@@ -8692,7 +9137,7 @@ that grows rapidly, the average time increment might tend to 0 and if it remains
 while, it will block the progress bar whose advance is proportional to the bio time
 <span 
 class="ectt-1095">[T]</span>.
-<!--l. 1614--><p class="noindent" >In order to make sure that <span 
+<!--l. 1688--><p class="noindent" >In order to make sure that <span 
 class="ecss-1095">KaSim</span> is not incorrectly blocked you may wish to plot the
 event clock against time clock using the observable <span 
 class="ectt-1095">%obs: </span><span 
@@ -8703,17 +9148,17 @@ class="ectt-1095">[E] </span>or run the
 simulation using an event limit (<span 
 class="ectt-1095">-e </span>option of the command line) instead of a time
 limit.
-<!--l. 1616--><p class="noindent" >
+<!--l. 1690--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-680008"></a>What do null events mean, why do I have any?</h3>
-<!--l. 1618--><p class="noindent" >Null events<a 
+<!--l. 1692--><p class="noindent" >Null events<a 
  id="dx1-68001"></a> is a way for <span 
 class="ecss-1095">KaSim</span> to compensate for some over approximation it is doing, in order
 deal with large simulations more eﬃciently. They usually do not impact signiﬁcantly the
 performances of the simulator, unless the model contains rules using the special notation to deal
 with ambiguous molecularity (see Section <a 
 href="#x1-290003.4.4">3.4.4<!--tex4ht:ref: sec:ambiguous --></a>). With pure Kappa rules, the ratio
-<!--l. 1618--><math 
+<!--l. 1692--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi></math> of null
@@ -8724,139 +9169,103 @@ class="ectt-1095">r</span><span
 class="tctt-1095">' </span><span 
 class="ectt-1095">[E-]/[E]</span>) should
 tend to 0 when models have a lot of agents.
-<!--l. 1620--><p class="noindent" >
+<!--l. 1694--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-690008"></a>No data points are generated</h3>
                                                                                   
 
                                                                                   
-<!--l. 1621--><p class="noindent" >Make sure you have <span 
+<!--l. 1695--><p class="noindent" >Make sure you have <span 
 class="ectt-1095">%obs </span>or <span 
 class="ectt-1095">%plot </span>instructions in your KF<a 
  id="dx1-69001"></a>. Also make sure to use a reasonable
 value for the <span 
 class="ectt-1095">-p </span>option in the command line to tell KaSim how often you wish to have points on
 your curves.
-<!--l. 1623--><p class="noindent" >
+<!--l. 1697--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-700008"></a>Too many instances of an observable</h3>
-<!--l. 1624--><p class="noindent" >The value of a kappa expression <!--l. 1624--><math 
+<!--l. 1698--><p class="noindent" >The value of a kappa expression <!--l. 1698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
 is equal to the number of embeddings<a 
  id="dx1-70001"></a> it has in the current mixture<a 
  id="dx1-70002"></a>
-<!--l. 1624--><math 
+<!--l. 1698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>. Embeddings are
-maps from agents in <!--l. 1624--><math 
+maps from agents in <!--l. 1698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
-to agents in <!--l. 1624--><math 
+to agents in <!--l. 1698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>. If
-<!--l. 1624--><math 
+<!--l. 1698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> has symmetries then
-every permutation of <!--l. 1624--><math 
+every permutation of <!--l. 1698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
 will be counted as a new embedding. For instance let
-<!--l. 1624--><math 
+<!--l. 1698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi> <mo 
 class="MathClass-rel">=</mo></math><span 
 class="ectt-1095">A(x!1),A(x!1) </span>and let
-<!--l. 1624--><math 
+<!--l. 1698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi> <mo 
 class="MathClass-rel">=</mo></math><span 
 class="ectt-1095">A(x!1,y~p),A(x!1,y~u)</span>.
 <span 
-class="ecss-1095">KaSim</span> will count two instances of <!--l. 1625--><math 
+class="ecss-1095">KaSim</span> will count two instances of <!--l. 1699--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
-in <!--l. 1625--><math 
+in <!--l. 1699--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>: the one mapping
 the ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 1625--><math 
+class="ectt-1095">A </span>of <!--l. 1699--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> to the
 ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 1625--><math 
+class="ectt-1095">A </span>of <!--l. 1699--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math> and the one
 mapping the ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 1625--><math 
+class="ectt-1095">A </span>of <!--l. 1699--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> to
 the second <span 
-class="ectt-1095">A </span>of <!--l. 1625--><math 
+class="ectt-1095">A </span>of <!--l. 1699--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>.
-<!--l. 1627--><p class="noindent" >
+<!--l. 1704--><p class="noindent" >
 <h3 class="likesectionHead"><a 
- id="x1-710008"></a>The computed inﬂuence map is incorrect, it misses some activation or has too much of
-them</h3>
-<!--l. 1628--><p class="noindent" >The inﬂuence map<a 
- id="dx1-71001"></a> computed by <span 
-class="ecss-1095">KaSim</span> contains relations that are computed on side
-eﬀect free rules only. It is likely that a missing activation is due to a side eﬀect that
-is not taken into account. If the inﬂuence map shows an activation between rule
-<!--l. 1628--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
->r</mi></math> and
-<!--l. 1628--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
->s</mi></math>
-that is never possible with a given model, just remember that activation
-computation implies that <span 
-class="ecti-1095">there exists </span>a context in which applying rule
-<!--l. 1628--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
->r</mi></math> will create a new
-                                                                                  
-
-                                                                                  
-instance of rule <!--l. 1628--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
->s</mi></math>.
-This context might simply never be realized with the given rules or initial conditions.
-<!--l. 1630--><p class="noindent" >
-<h3 class="likesectionHead"><a 
- id="x1-720008"></a>Value <span 
+ id="x1-710008"></a>Value <span 
 class="ectt-1095">nan </span>in the data ﬁle at the end of the simulation</h3>
-<!--l. 1631--><p class="noindent" >The value <span 
+<!--l. 1705--><p class="noindent" >The value <span 
 class="ectt-1095">nan </span>means &#x0022;Not a Number&#x0022;. It is generated when a plotted variable is inﬁnite. Make
 sure this variable is not divided by zero at some point.
                                                                                   
 
                                                                                   
-<!--l. 1--><p class="noindent" >
-                                                                                  
-
-                                                                                  
 <h2 class="likechapterHead"><a 
- id="x1-730008"></a>Bibliography</h2>
+ id="x1-720008"></a>Bibliography</h2>
     <div class="thebibliography">
     <p class="bibitem" ><span class="biblabel">
   [1]<span class="bibsp">   </span></span><a 
@@ -8872,6 +9281,23 @@ class="ecti-1095">Notes in Theoretical Computer Science</span>, pages 31–61, P
     </p>
     <p class="bibitem" ><span class="biblabel">
   [2]<span class="bibsp">   </span></span><a 
+ id="XCousotEtAl06-ASIAN"></a>Patrick Cousot, Radhia Cousot, Jérôme Feret, Laurent Mauborgne, Antoine
+    Miné,  David  Monniaux,  and  Xavier  Rival.   Combination  of  abstractions  in  the
+    <span 
+class="eccc-1095">A<span 
+class="small-caps">S</span><span 
+class="small-caps">T</span><span 
+class="small-caps">R</span></span><span 
+class="eccc-1095">é</span><span 
+class="eccc-1095"><span 
+class="small-caps">E</span> </span>static analyzer. In M. Okada and I. Satoh, editors, <span 
+class="ecti-1095">Eleventh Annual Asian</span>
+    <span 
+class="ecti-1095">Computing Science Conference (ASIAN&#x2019;06)</span>, pages 1–24, Tokyo, Japan, LNCS 4435,
+    December 6–8 2007. Springer, Berlin.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">   </span></span><a 
  id="XDan_etal12"></a>Vincent  Danos,  Jérôme  Feret,  Walter  Fontana,  Russell  Harmer,  Jonathan
     Hayman,  Jean  Krivine,  Chris  Thompson-Walsh,  and  Glynn  Winskel.    Graphs,
     rewriting  and  pathway  reconstruction  for  rule-based  models.   In  Schloss  Dagstuhl
@@ -8883,33 +9309,33 @@ class="ecti-1095">on Foundations of Software Technology and Theoretical Computer
 class="ecti-1095">LIPIcs</span>, pages 276–288, 2012.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [3]<span class="bibsp">   </span></span><a 
+  [4]<span class="bibsp">   </span></span><a 
  id="XDanosEtAl-LICS2010"></a>Vincent  Danos,  Jérôme  Feret,  Walter  Fontana,  Russell  Harmer,  and  Jean
     Krivine.    Abstracting  the  diﬀerential  semantics  of  rule-based  models:  exact  and
     automated   model   reduction.      In   Jean-Pierre   Jouannaud,   editor,   <span 
 class="ecti-1095">Proceedings</span>
+                                                                                  
+
+                                                                                  
     <span 
 class="ecti-1095">of  the  Twenty-Fifth  Annual  IEEE  Symposium  on  Logic  in  Computer  Science,</span>
     <span 
-class="ecti-1095">LICS</span><!--l. 27--><math 
+class="ecti-1095">LICS</span><!--l. 35--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mspace width="0.3em" class="thinspace"/></math><span 
 class="ecti-1095">&#x2019;2010</span>,
     volume 0, pages 362–381, Edinburgh, UK, 11–14 July 2010. IEEE Computer Society.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [4]<span class="bibsp">   </span></span><a 
+  [5]<span class="bibsp">   </span></span><a 
  id="XDan_etal07b"></a>Vincent  Danos,  Jérôme  Feret,  Walter  Fontana,  and  Jean  Krivine.   Scalable
-                                                                                  
-
-                                                                                  
     simulation of cellular signaling networks. In <span 
 class="ecti-1095">Proc. APLAS&#x2019;07</span>, volume 4807 of <span 
 class="ecti-1095">LNCS</span>,
     pages 139–157, 2007.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [5]<span class="bibsp">   </span></span><a 
+  [6]<span class="bibsp">   </span></span><a 
  id="XDanosEtAl-VMCAI08"></a>Vincent   Danos,   Jérôme   Feret,   Walter   Fontana,   and   Jean   Krivine.
     Abstract  interpretation  of  cellular  signalling  networks.     In  Francesco  Logozzo,
     Doron A. Peled,    and    Lenore D. Zuck,    editors,    <span 
@@ -8917,7 +9343,7 @@ class="ecti-1095">Proceedings   of   the   Ninth</span>
     <span 
 class="ecti-1095">International Conference on Veriﬁcation, Model Checking and Abstract Interpretation,</span>
     <span 
-class="ecti-1095">VMCAI</span><!--l. 41--><math 
+class="ecti-1095">VMCAI</span><!--l. 49--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mspace width="0.3em" class="thinspace"/></math><span 
 class="ecti-1095">&#x2019;2008</span>,
@@ -8926,7 +9352,7 @@ class="ecti-1095">Lecture Notes in Computer Science</span>, pages 83–97, San F
     7–9 January 2008. Springer, Berlin, Germany.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [6]<span class="bibsp">   </span></span><a 
+  [7]<span class="bibsp">   </span></span><a 
  id="XDan_etal07a"></a>Vincent Danos, Jérôme Feret, Walter Fontanta, Russ Harmer, and Jean Krivine.
     Rule based modeling of biological signaling.  In Luís Caires and Vasco Thudichum
     Vasconcelos,  editors,  <span 
@@ -8935,48 +9361,48 @@ class="ecti-1095">LNCS</span>,  pages
     17–41. Springer, 2007.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [7]<span class="bibsp">   </span></span><a 
+  [8]<span class="bibsp">   </span></span><a 
  id="XDanLan04"></a>Vincent  Danos  and  Cosimo  Laneve.    Formal  molecular  biology.    <span 
 class="ecti-1095">Theoretical</span>
     <span 
 class="ecti-1095">Computer Science</span>, 325, 2004.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [8]<span class="bibsp">   </span></span><a 
+  [9]<span class="bibsp">   </span></span><a 
  id="XFae_etal05"></a>James R.  Faeder,  Mickael L.  Blinov,  and  William S.  Hlavacek.    Rule  based
     modeling of biochemical networks. <span 
 class="ecti-1095">Complexity</span>, pages 22–41, 2005.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [9]<span class="bibsp">   </span></span><a 
+ [10]<span class="bibsp">   </span></span><a 
  id="XDBLP:conf/concur/FajstrupGR98"></a>Lisbeth  Fajstrup,  Eric  Goubault,  and  Martin  Raußen.   Detecting  deadlocks  in
     concurrent systems. In <span 
 class="ecti-1095">Proc.</span><span 
 class="ecti-1095"> CONCUR &#x2019;98</span>, volume 1466 of <span 
 class="ecti-1095">LNCS</span>, 1998.
+                                                                                  
+
+                                                                                  
     </p>
     <p class="bibitem" ><span class="biblabel">
- [10]<span class="bibsp">   </span></span><a 
+ [11]<span class="bibsp">   </span></span><a 
  id="XFeret-ICCMSE2007"></a>Jérôme   Feret.      Reachability   analysis   of   biological   signalling   pathways
     by   abstract   interpretation.        In   T.E. Simos,   editor,   <span 
 class="ecti-1095">Proceedings   of   the</span>
     <span 
 class="ecti-1095">International  Conference  of  Computational  Methods  in  Sciences  and  Engineering,</span>
     <span 
-class="ecti-1095">ICCMSE</span><!--l. 74--><math 
+class="ecti-1095">ICCMSE</span><!--l. 82--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mspace width="0.3em" class="thinspace"/></math><span 
 class="ecti-1095">&#x2019;2007,</span>
-                                                                                  
-
-                                                                                  
     <span 
 class="ecti-1095">Corfu,  Greece</span>,   number   963.(2)   in   American   Institute   of   Physics   Conference
     Proceedings, pages 619–622, Corfu, Greece, 25–30 September 2007. American Institute
     of Physics.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [11]<span class="bibsp">   </span></span><a 
+ [12]<span class="bibsp">   </span></span><a 
  id="XFeret-et-al-pnas2009"></a>Jérôme Feret, Vincent Danos, Jean Krivine, Russ Harmer, and Walter Fontana.
     Internal coarse-graining of molecular systems. <span 
 class="ecti-1095">Proceedings of the National Academy of</span>
@@ -8984,7 +9410,7 @@ class="ecti-1095">Proceedings of the National Academy of</span>
 class="ecti-1095">Sciences of the United States of America</span>, April 3 2009.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [12]<span class="bibsp">   </span></span><a 
+ [13]<span class="bibsp">   </span></span><a 
  id="XFeret:SASB2016"></a>Jérôme Feret and Kim Quyên Lý.  Reachability analysis via orthogonal sets
     of patterns.  In <span 
 class="ecti-1095">Seventeenth International Workshop on Static Analysis and Systems</span>
@@ -8992,20 +9418,20 @@ class="ecti-1095">Seventeenth International Workshop on Static Analysis and Syst
 class="ecti-1095">Biology (SASB&#x2019;16)</span>, ENTCS. elsevier. to appear.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [13]<span class="bibsp">   </span></span><a 
+ [14]<span class="bibsp">   </span></span><a 
  id="XGil76"></a>Daniel T. Gillespie.  A general method for numerically simulating the stochastic
     time  evolution  of  coupled  chemical  reactions.   <span 
 class="ecti-1095">Journal  of  Computational  Physics</span>,
     22(4):403–434, 1976.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [14]<span class="bibsp">   </span></span><a 
+ [15]<span class="bibsp">   </span></span><a 
  id="XGil77"></a>Daniel T. Gillespie.  Exact stochastic simulation of coupled chemical reactions.
     <span 
 class="ecti-1095">Journal of Physical Chemistry</span>, 81(25):2340–2361, 1977.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [15]<span class="bibsp">   </span></span><a 
+ [16]<span class="bibsp">   </span></span><a 
  id="XKreyssig"></a>Peter Kreyßig.  <span 
 class="ecti-1095">Chemical Organisation Theory Beyond Classical Models: Discrete</span>
     <span 
@@ -9015,12 +9441,11 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
                                                                                   
 
                                                                                   
-<!--l. 1--><p class="noindent" >
                                                                                   
 
                                                                                   
 <h2 class="likechapterHead"><a 
- id="x1-740008"></a>Index</h2>
+ id="x1-730008"></a>Index</h2>
 <div class="theindex"><span class="index-item">activity, 8, 21, 44 <br /></span>
 <span class="index-item">agent signature, 15, 16, 19, 26, 34 <br /></span>
 <span class="index-item">agents, 15 <br /></span>
@@ -9034,13 +9459,13 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">causality, 41 <br /></span>
 <span class="index-item">comments, 15 <br /></span>
 </p><p class="theindex">
-<span class="index-item">data ﬁle, 26, 74 <br /></span>
+<span class="index-item">data ﬁle, 26, 78 <br /></span>
 <span class="index-item">declaration, 15, 18, 21, 24, 27, 34, 37, 40, 41, 44, 45 <br /></span>
 <span class="index-item">default state, 19 <br /></span>
 <span class="index-item">don&#x2019;t care don&#x2019;t write, 17, 19, 26 <br /></span>
 </p><p class="theindex">
 <span class="index-item">eﬀect, 37, 39 <br /></span>
-<span class="index-item">embedding, 74 <br /></span>
+<span class="index-item">embedding, 78 <br /></span>
 <span class="index-item">event, 8, 25 <br /></span>
 </p><p class="theindex">
 <span class="index-item">ﬂux map, 42 <br /></span>
@@ -9052,12 +9477,11 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 </p><p class="theindex">
 <span class="index-item">hybrid rules, 19, 21 <br /></span>
 </p><p class="theindex">
-<span class="index-item">inﬂuence map, 74 <br /></span>
 <span class="index-item">initial condition, 15, 26 <br /></span>
 <span class="index-item">internal state, 16 <br /></span>
 </p><p class="theindex">
 <span class="index-item">kappa expressions, 18 <br /></span>
-<span class="index-item">kappa ﬁle, 15, 16, 18, 24, 26, 34, 45, 46, 74 <br /></span>
+<span class="index-item">kappa ﬁle, 15, 16, 18, 24, 26, 34, 45, 46, 78 <br /></span>
 <span class="index-item">kinetic rate, 21, 26 <br /></span>
 <span class="index-subitem">    deterministic rate constant, 21 <br /></span>
 <span class="index-subitem">    stochastic rate constant, 21 <br /></span>
@@ -9066,9 +9490,9 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">link type, 18 <br /></span>
 <span class="index-item">longest preﬁx convention, 20 <br /></span>
 </p><p class="theindex">
-<span class="index-item">mixture, 8, 20, 24, 26, 39–41, 46, 74 <br /></span>
+<span class="index-item">mixture, 8, 20, 24, 26, 39–41, 46, 78 <br /></span>
 </p><p class="theindex">
-<span class="index-item">null event, 25, 73 <br /></span>
+<span class="index-item">null event, 25, 77 <br /></span>
 </p><p class="theindex">
 <span class="index-item">perturbation, 15, 37 <br /></span>
 <span class="index-subitem">    one shot, 37 <br /></span>
