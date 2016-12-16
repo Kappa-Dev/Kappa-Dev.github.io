@@ -142,6 +142,13 @@ enriched types for functions:<br>
 <pre><span id="VALprofiling_state_to_json"><span class="keyword">val</span> profiling_state_to_json</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALerror_list_to_json"><span class="keyword">val</span> error_list_to_json</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALcomputation_steps_to_json"><span class="keyword">val</span> computation_steps_to_json</span> : <code class="type"><a href="Utilities.html#TYPEparameter">parameter</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="TYPEon_the_fly_cut_state"><span class="keyword">type</span> <code class="type"></code>on_the_fly_cut_state</span> </pre>
+
+
+<pre><span id="VALon_the_fly_cut_init"><span class="keyword">val</span> on_the_fly_cut_init</span> : <code class="type"><a href="Utilities.html#TYPEon_the_fly_cut_state">on_the_fly_cut_state</a></code></pre>
+<pre><span id="VALon_the_fly_cut_step"><span class="keyword">val</span> on_the_fly_cut_step</span> : <code class="type"><a href="Utilities.html#TYPEon_the_fly_cut_state">on_the_fly_cut_state</a> -><br>       <a href="Trace.html#TYPEstep">Trace.step</a> -> <a href="Utilities.html#TYPEon_the_fly_cut_state">on_the_fly_cut_state</a></code></pre>
+<pre><span id="VALon_the_fly_cut_finalize"><span class="keyword">val</span> on_the_fly_cut_finalize</span> : <code class="type"><a href="Utilities.html#TYPEon_the_fly_cut_state">on_the_fly_cut_state</a> -> <a href="Trace.html#TYPEstep">Trace.step</a> list</code></pre>
+<pre><span id="VALcut_rev_trace"><span class="keyword">val</span> cut_rev_trace</span> : <code class="type"><a href="Trace.html#TYPEstep">Trace.step</a> list -> <a href="Trace.html#TYPEstep">Trace.step</a> list</code></pre>
 <pre><span id="TYPEtrace"><span class="keyword">type</span> <code class="type"></code>trace</span> </pre>
 <div class="info ">
 traces<br>

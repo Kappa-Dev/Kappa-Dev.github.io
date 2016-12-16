@@ -124,6 +124,14 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;profiling_state_to_json&nbsp;:&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;error_list_to_json&nbsp;:&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;computation_steps_to_json&nbsp;:&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;on_the_fly_cut_state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;on_the_fly_cut_init&nbsp;:&nbsp;<span class="constructor">Utilities</span>.on_the_fly_cut_state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;on_the_fly_cut_step&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.on_the_fly_cut_state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Utilities</span>.on_the_fly_cut_state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;on_the_fly_cut_finalize&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.on_the_fly_cut_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cut_rev_trace&nbsp;:&nbsp;<span class="constructor">Trace</span>.step&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;trace_runtime_info&nbsp;=&nbsp;<span class="constructor">Utilities</span>.profiling_info&nbsp;<span class="constructor">Trace</span>.<span class="constructor">Simulation_info</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;size_of_pretrace&nbsp;:&nbsp;<span class="constructor">Utilities</span>.trace&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
