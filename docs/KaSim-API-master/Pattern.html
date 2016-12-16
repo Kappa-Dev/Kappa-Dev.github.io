@@ -5,7 +5,7 @@
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Signature.html">
-<link rel="next" href="Instantiation.html">
+<link rel="next" href="Matching.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -31,9 +31,9 @@
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
-<link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Pattern" rel="Chapter" href="Pattern.html">
+<link title="Matching" rel="Chapter" href="Matching.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -83,7 +83,7 @@
 <body>
 <div class="navbar"><a class="pre" href="Signature.html" title="Signature">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Instantiation.html" title="Instantiation">Next</a>
+&nbsp;<a class="post" href="Matching.html" title="Matching">Next</a>
 </div>
 <h1>Module <a href="type_Pattern.html">Pattern</a></h1>
 
@@ -146,9 +146,12 @@ Starts creation<br>
 
 <pre><span id="VALid_to_yojson"><span class="keyword">val</span> id_to_yojson</span> : <code class="type"><a href="Pattern.html#TYPEid">id</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALid_of_yojson"><span class="keyword">val</span> id_of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Pattern.html#TYPEid">id</a></code></pre>
-<pre><span id="VALfind_root_type"><span class="keyword">val</span> find_root_type</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> int option</code></pre>
+<pre><span id="VALreconstruction_navigation"><span class="keyword">val</span> reconstruction_navigation</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> <a href="Navigation.html#TYPEt">Navigation.t</a></code></pre>
+<pre><span id="VALfind_ty"><span class="keyword">val</span> find_ty</span> : <code class="type"><a href="Pattern.html#TYPEcc">cc</a> -> int -> int</code></pre><div class="info ">
+Abstraction leak, please do not use<br>
+</div>
+
 <pre><span id="VALautomorphisms"><span class="keyword">val</span> automorphisms</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> Renaming.t list</code></pre>
-<pre><span class="keyword">module</span> <a href="Pattern.Matching.html">Matching</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Pattern.Matching.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
 <pre><span id="VALembeddings_to_fully_specified"><span class="keyword">val</span> embeddings_to_fully_specified</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Env.t</a> -> <a href="Pattern.html#TYPEid">id</a> -> <a href="Pattern.html#TYPEcc">cc</a> -> Renaming.t list</code></pre>
 <pre><span id="VALadd_fully_specified_to_graph"><span class="keyword">val</span> add_fully_specified_to_graph</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Pattern.html#TYPEcc">cc</a> -> <a href="Edges.html#TYPEt">Edges.t</a> * Renaming.t</code></pre>
 <pre><span class="keyword">module</span> <a href="Pattern.Set.html">Set</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt=id</code></pre></body></html>

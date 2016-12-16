@@ -27,9 +27,9 @@
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
-<link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Pattern" rel="Chapter" href="Pattern.html">
+<link title="Matching" rel="Chapter" href="Matching.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -114,7 +114,7 @@ Returns the current activity
 <code class="code">add_agent sigs agent_type graph</code>
 </div>
 </td></tr>
-<tr><td><a href="Pattern.Matching.html#VALadd_cc">add_cc</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALadd_cc">add_cc</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALadd_dep">add_dep</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td><div class="info">
@@ -428,7 +428,7 @@ compress a trace with the level of abstraction defined in the argument parameter
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALconcretize">concretize</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Agent_place.html#VALconcretize">concretize</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<tr><td><a href="Matching.Agent.html#VALconcretize">concretize</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALconcretize_action">concretize_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
@@ -449,6 +449,8 @@ compress a trace with the level of abstraction defined in the argument parameter
 <tr><td><a href="Counter.html#VALconsecutive_null_event">consecutive_null_event</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALconsume">consume</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern.Env.html#VALcontent">content</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALconvert_trace_into_grid">convert_trace_into_grid</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
@@ -523,7 +525,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Edges.html#VALdebug_print">debug_print</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern.Matching.html#VALdebug_print">debug_print</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALdebug_print">debug_print</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALdebug_print">debug_print</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
@@ -532,6 +534,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Ode_loggers.html#VALdeclare_init">declare_init</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALdefault_internal_state">default_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern.Env.html#VALdeps">deps</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALdiff">diff</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -597,7 +601,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALelements">elements</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern.Matching.html#VALelements_with_types">elements_with_types</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALelements_with_types">elements_with_types</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALelt_id">elt_id</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
@@ -616,7 +620,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Edges.html#VALempty">empty</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern.Matching.html#VALempty">empty</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALempty">empty</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALempty">empty</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -630,7 +634,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALempty_cache">empty_cache</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern.Matching.html#VALempty_cache">empty_cache</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALempty_cache">empty_cache</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.html#VALempty_cc">empty_cc</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
@@ -794,8 +798,11 @@ fill_siphon adds spurious init event, to break causal dependences;
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfind_option_with_logs">find_option_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern.html#VALfind_root_type">find_root_type</a> [<a href="Pattern.html">Pattern</a>]</td>
-<td></td></tr>
+<tr><td><a href="Pattern.html#VALfind_ty">find_ty</a> [<a href="Pattern.html">Pattern</a>]</td>
+<td><div class="info">
+Abstraction leak, please do not use
+</div>
+</td></tr>
 <tr><td><a href="Pattern.html#VALfinish_new">finish_new</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALflatten_story_table">flatten_story_table</a> [<a href="Utilities.html">Utilities</a>]</td>
@@ -898,13 +905,15 @@ Apply the rule for sure if it is possible.
 <tr><td align="left"><br>G</td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALget">get</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern.Matching.html#VALget">get</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALget">get</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.PreEnv.html#VALget">get</a> [<a href="Pattern.PreEnv.html">Pattern.PreEnv</a>]</td>
 <td><div class="info">
 Awfully inefficient
 </div>
 </td></tr>
+<tr><td><a href="Pattern.Env.html#VALget">get</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pattern.ObsMap.html#VALget">get</a> [<a href="Pattern.ObsMap.html">Pattern.ObsMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALget">get</a> [<a href="Signature.html">Signature</a>]</td>
@@ -977,6 +986,8 @@ Awfully inefficient
 <tr><td><a href="Kappa_files.html#VALget_dir">get_dir</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALget_distances">get_distances</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern.Env.html#VALget_elementary">get_elementary</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALget_encoding_format">get_encoding_format</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
@@ -1078,6 +1089,8 @@ get the date of an event in the simulation
     (only proper events have a time)
 </div>
 </td></tr>
+<tr><td><a href="Pattern.Env.html#VALget_single_agent">get_single_agent</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
+<td></td></tr>
 <tr><td><a href="Communication.html#VALget_site">get_site</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALget_state_of_site">get_state_of_site</a> [<a href="Communication.html">Communication</a>]</td>
@@ -1088,7 +1101,7 @@ get the date of an event in the simulation
 <td></td></tr>
 <tr><td><a href="Environment.html#VALget_token_reverse_dependencies">get_token_reverse_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
-<tr><td><a href="Agent_place.html#VALget_type">get_type</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<tr><td><a href="Matching.Agent.html#VALget_type">get_type</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALget_variables">get_variables</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -1271,11 +1284,11 @@ Infer agent signatures and tokens from init, rules and perturbations
 <code class="code">is_internal internal_state agent_id site graph</code>
 </div>
 </td></tr>
-<tr><td><a href="Pattern.Matching.html#VALis_root_of">is_root_of</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALis_root_of">is_root_of</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALis_singleton">is_singleton</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="Agent_place.html#VALis_site_from_fresh">is_site_from_fresh</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<tr><td><a href="Matching.Agent.html#VALis_site_from_fresh">is_site_from_fresh</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALis_smaller">is_smaller</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -1693,24 +1706,24 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <tr><td><a href="Environment.html#VALnums_of_rule">nums_of_rule</a> [<a href="Environment.html">Environment</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>O</td></tr>
-<tr><td><a href="Pattern.Matching.html#VALobservables_from_agent">observables_from_agent</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALobservables_from_agent">observables_from_agent</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
 <code class="code">observables_from_free domain graph sort agent</code>
     the int * int in the return list and the following ones
     is a Instantiation.concrete
 </div>
 </td></tr>
-<tr><td><a href="Pattern.Matching.html#VALobservables_from_free">observables_from_free</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALobservables_from_free">observables_from_free</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
 <code class="code">observables_from_free domain graph sort agent site</code>
 </div>
 </td></tr>
-<tr><td><a href="Pattern.Matching.html#VALobservables_from_internal">observables_from_internal</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALobservables_from_internal">observables_from_internal</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
 <code class="code">observables_from_internal domain graph sort agent site internal_state</code>
 </div>
 </td></tr>
-<tr><td><a href="Pattern.Matching.html#VALobservables_from_link">observables_from_link</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALobservables_from_link">observables_from_link</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
 <code class="code">observables_from_link domain graph sort ag site sort' ag' site'</code>
 </div>
@@ -1883,6 +1896,8 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALprint">print</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
+<tr><td><a href="Matching.Agent.html#VALprint">print</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pattern.Env.html#VALprint">print</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.ObsMap.html#VALprint">print</a> [<a href="Pattern.ObsMap.html">Pattern.ObsMap</a>]</td>
@@ -1893,8 +1908,6 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALprint">print</a> [<a href="Signature.html">Signature</a>]</td>
-<td></td></tr>
-<tr><td><a href="Agent_place.html#VALprint">print</a> [<a href="Agent_place.html">Agent_place</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agent.html#VALprint">print</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
@@ -1990,7 +2003,7 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_integrate">print_integrate</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Agent_place.html#VALprint_internal">print_internal</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<tr><td><a href="Matching.Agent.html#VALprint_internal">print_internal</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agent.html#VALprint_internal">print_internal</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
@@ -2035,9 +2048,9 @@ Prints nothing in case of infinity or Not a Number
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_rule_name">print_rule_name</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Signature.html#VALprint_site">print_site</a> [<a href="Signature.html">Signature</a>]</td>
+<tr><td><a href="Matching.Agent.html#VALprint_site">print_site</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
 <td></td></tr>
-<tr><td><a href="Agent_place.html#VALprint_site">print_site</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<tr><td><a href="Signature.html#VALprint_site">print_site</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agent.html#VALprint_site">print_site</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
@@ -2102,11 +2115,13 @@ proj_set f set is the set {f(a) | a\in S}
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALrate_name">rate_name</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern.Matching.html#VALreconstruct">reconstruct</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Matching.html#VALreconstruct">reconstruct</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
 <code class="code">reconstruct graph matching_of_previous_cc cc_id_in_rule cc root </code>
 </div>
 </td></tr>
+<tr><td><a href="Pattern.html#VALreconstruction_navigation">reconstruction_navigation</a> [<a href="Pattern.html">Pattern</a>]</td>
+<td></td></tr>
 <tr><td><a href="Loggers.html#VALredirect">redirect</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALrefine_information_about_state_of_sites_in_precondition">refine_information_about_state_of_sites_in_precondition</a> [<a href="Communication.html">Communication</a>]</td>
@@ -2161,7 +2176,7 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALrename">rename</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Agent_place.html#VALrename">rename</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<tr><td><a href="Matching.Agent.html#VALrename">rename</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agent.html#VALrename">rename</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
@@ -2179,14 +2194,19 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALroot">root</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern.Matching.html#VALroots_of">roots_of</a> [<a href="Pattern.Matching.html">Pattern.Matching</a>]</td>
+<tr><td><a href="Pattern.Env.html#VALroots">roots</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
+<td><div class="info">
+(ids,ty)
+</div>
+</td></tr>
+<tr><td><a href="Matching.html#VALroots_of">roots_of</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="LKappa.html#VALrule_of_json">rule_of_json</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="LKappa.html#VALrule_to_json">rule_to_json</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>S</td></tr>
-<tr><td><a href="Agent_place.html#VALsame_connected_component">same_connected_component</a> [<a href="Agent_place.html">Agent_place</a>]</td>
+<tr><td><a href="Matching.Agent.html#VALsame_connected_component">same_connected_component</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALset">set</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
@@ -2295,6 +2315,8 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <tr><td><a href="Utilities.html#VALsize_of_pretrace">size_of_pretrace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALsnapshot">snapshot</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern.Env.html#VALsons">sons</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agent.html#VALsort">sort</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>

@@ -29,9 +29,9 @@
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
-<link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Pattern" rel="Chapter" href="Pattern.html">
+<link title="Matching" rel="Chapter" href="Matching.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -134,6 +134,6 @@ Elementary rule transformations<br>
 
 
 <pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type">int -><br>       Renaming.t -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a> -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a></code></pre>
-<pre><span id="VALconcretize"><span class="keyword">val</span> concretize</span> : <code class="type"><a href="Pattern.Matching.html#TYPEt">Pattern.Matching.t</a> * int Mods.IntMap.t -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Primitives.Transformation.html#TYPEt">t</a></code></pre>
+<pre><span id="VALconcretize"><span class="keyword">val</span> concretize</span> : <code class="type"><a href="Matching.html#TYPEt">Matching.t</a> * int Mods.IntMap.t -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Primitives.Transformation.html#TYPEt">t</a></code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       Format.formatter -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALfresh_bindings"><span class="keyword">val</span> fresh_bindings</span> : <code class="type">short_branch_agents:int list -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">t</a> list -><br>       (<a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a> *<br>        <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a>)<br>       list</code></pre></body></html>

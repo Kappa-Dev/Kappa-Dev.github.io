@@ -30,9 +30,9 @@
 <link title="Location" rel="Chapter" href="Location.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
-<link title="Agent_place" rel="Chapter" href="Agent_place.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
 <link title="Pattern" rel="Chapter" href="Pattern.html">
+<link title="Matching" rel="Chapter" href="Matching.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
@@ -90,7 +90,7 @@
 <pre><span id="VALlist"><span class="keyword">val</span> list</span> : <code class="type">?trailing:(Format.formatter -> unit) -><br>       (Format.formatter -> unit) -><br>       (Format.formatter -> 'a -> unit) -> Format.formatter -> 'a list -> unit</code></pre>
 <pre><span id="VALset"><span class="keyword">val</span> set</span> : <code class="type">?trailing:(Format.formatter -> unit) -><br>       ('b -> 'a list) -><br>       (Format.formatter -> unit) -><br>       (Format.formatter -> 'a -> unit) -> Format.formatter -> 'b -> unit</code></pre>
 <pre><span id="VALhashtbl"><span class="keyword">val</span> hashtbl</span> : <code class="type">(Format.formatter -> unit) -><br>       (Format.formatter -> 'a * 'b -> unit) -><br>       Format.formatter -> ('a, 'b) Hashtbl.t -> unit</code></pre>
-<pre><span id="VALoption"><span class="keyword">val</span> option</span> : <code class="type">(Format.formatter -> 'a -> unit) -> Format.formatter -> 'a option -> unit</code></pre>
+<pre><span id="VALoption"><span class="keyword">val</span> option</span> : <code class="type">?with_space:bool -><br>       (Format.formatter -> 'a -> unit) -> Format.formatter -> 'a option -> unit</code></pre>
 <pre><span id="VALpair"><span class="keyword">val</span> pair</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -> Format.formatter -> 'a * 'b -> unit</code></pre>
 <pre><span id="VALbottom"><span class="keyword">val</span> bottom</span> : <code class="type">Format.formatter -> unit</code></pre>
 <pre><span id="VALnu"><span class="keyword">val</span> nu</span> : <code class="type">Format.formatter -> unit</code></pre>
