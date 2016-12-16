@@ -183,10 +183,19 @@
 <td align="left" valign="top" >
 <code><span id="TYPEELTencoding.Json"><span class="constructor">Json</span></span></code></td>
 
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTencoding.SBML"><span class="constructor">SBML</span></span></code></td>
+
 </tr></table>
 
 
 
+<pre><span class="keyword">module type</span> <a href="Loggers.FormatMap.html">FormatMap</a> = <code class="code"><span class="keyword">sig</span></code> <a href="Loggers.FormatMap.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
+<pre><span class="keyword">module</span> <a href="Loggers.FormatMap.html">FormatMap</a>: <code class="type"><a href="Loggers.FormatMap.html">FormatMap</a></code><code class="type"> </code></pre>
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
@@ -205,6 +214,7 @@
 <pre><span id="VALopen_row"><span class="keyword">val</span> open_row</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALclose_row"><span class="keyword">val</span> close_row</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALprint_breakable_space"><span class="keyword">val</span> print_breakable_space</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint_breakable_hint"><span class="keyword">val</span> print_breakable_hint</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALdummy_txt_logger"><span class="keyword">val</span> dummy_txt_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALdummy_html_logger"><span class="keyword">val</span> dummy_html_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a></code></pre>
 <pre><span id="VALredirect"><span class="keyword">val</span> redirect</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> <a href="Loggers.html#TYPEt">t</a></code></pre>
@@ -216,5 +226,9 @@
 <pre><span id="VALadd_node"><span class="keyword">val</span> add_node</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> Graph_loggers_sig.options list -> unit</code></pre>
 <pre><span id="VALadd_edge"><span class="keyword">val</span> add_edge</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> string -> Graph_loggers_sig.options list -> unit</code></pre>
 <pre><span id="VALdump_json"><span class="keyword">val</span> dump_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json -> unit</code></pre>
+<pre><span id="VALget_expr"><span class="keyword">val</span> get_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Location.html#TYPEannot">Location.annot</a> option</code></pre>
+<pre><span id="VALset_expr"><span class="keyword">val</span> set_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Location.html#TYPEannot">Location.annot</a> -> unit</code></pre>
+<pre><span id="VALis_const"><span class="keyword">val</span> is_const</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Ode_loggers_sig.variable -> bool</code></pre>
 <pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> string list</code></pre>
-<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre></body></html>
+<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALget_fresh_reaction_id"><span class="keyword">val</span> get_fresh_reaction_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> int</code></pre></body></html>

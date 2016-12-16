@@ -76,35 +76,7 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;variable&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Expr</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Init</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Initbis</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Concentration</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Deriv</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Obs</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Jacobian</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Tinit</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Tend</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">InitialStep</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Period_t_points</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Rate</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Rated</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Rateun</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Rateund</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">N_rules</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">N_ode_var</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">N_var</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">N_obs</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">N_rows</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Tmp</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Current_time</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;correct&nbsp;=&nbsp;<span class="constructor">Div</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Mul</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Nil</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;network_handler&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int_of_obs&nbsp;:&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int_of_kappa_instance&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int_of_token_id&nbsp;:&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int;<br>
-&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;options&nbsp;=&nbsp;<span class="constructor">Comment</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ode_preamble&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -112,7 +84,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;rate_convention:<span class="constructor">Ode_args</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?filter_in:<span class="constructor">Loggers</span>.encoding&nbsp;list&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?filter_out:<span class="constructor">Loggers</span>.encoding&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;declare_global&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;declare_global&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_options&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_license_check&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_integrate&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -120,21 +92,26 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dump_plots&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;data_file:string&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;command_line:string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;titles:string&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;associate&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?init_mode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?comment:string&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Ode_loggers</span>.network_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)&nbsp;<span class="constructor">Alg_expr</span>.e<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Network_handler</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;increment&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?init_mode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?comment:string&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Ode_loggers</span>.network_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)&nbsp;<span class="constructor">Alg_expr</span>.e<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Network_handler</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;associate_nrows&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;associate_t&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init_time&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -143,26 +120,29 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;launch_main&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;consume&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_species:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_lhs:int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;produce&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_species:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_lhs:int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_token&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_lhs:int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Ode_loggers</span>.network_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)&nbsp;<span class="constructor">Alg_expr</span>.e<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Network_handler</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_newline&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_comment&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?filter_in:<span class="constructor">Loggers</span>.encoding&nbsp;list&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>
