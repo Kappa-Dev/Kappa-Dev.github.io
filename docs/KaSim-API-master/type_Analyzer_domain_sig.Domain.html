@@ -125,6 +125,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.dynamic_information&nbsp;*&nbsp;<span class="keywordsign">'</span>c<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>d)&nbsp;ternary&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.dynamic_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>c&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.dynamic_information&nbsp;*&nbsp;<span class="keywordsign">'</span>d<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_initial_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.initial_state,&nbsp;<span class="constructor">Communication</span>.event&nbsp;list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.unary<br>
@@ -146,7 +155,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;(<span class="constructor">Loggers</span>.t,&nbsp;unit)&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.unary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;maybe_reachable&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Cckappa_sig</span>.mixture,&nbsp;<span class="constructor">Communication</span>.precondition,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;option)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.binary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.pattern_matching_flag,&nbsp;<span class="constructor">Cckappa_sig</span>.mixture,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.precondition,&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;option)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_domain_sig</span>.<span class="constructor">Domain</span>.ternary<br>
 <span class="keyword">end</span></code></body></html>

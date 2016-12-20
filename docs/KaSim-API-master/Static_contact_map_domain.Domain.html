@@ -140,9 +140,12 @@
 <pre><span id="TYPEbinary"><span class="keyword">type</span> <code class="type">('a, 'b, 'c)</code> binary</span> = <code class="type"><a href="Static_contact_map_domain.Domain.html#TYPEstatic_information">static_information</a> -><br>       <a href="Static_contact_map_domain.Domain.html#TYPEdynamic_information">dynamic_information</a> -><br>       Exception.method_handler -><br>       'a -><br>       'b -><br>       Exception.method_handler *<br>       <a href="Static_contact_map_domain.Domain.html#TYPEdynamic_information">dynamic_information</a> * 'c</code> </pre>
 
 
+<pre><span id="TYPEternary"><span class="keyword">type</span> <code class="type">('a, 'b, 'c, 'd)</code> ternary</span> = <code class="type"><a href="Static_contact_map_domain.Domain.html#TYPEstatic_information">static_information</a> -><br>       <a href="Static_contact_map_domain.Domain.html#TYPEdynamic_information">dynamic_information</a> -><br>       Exception.method_handler -><br>       'a -><br>       'b -><br>       'c -><br>       Exception.method_handler *<br>       <a href="Static_contact_map_domain.Domain.html#TYPEdynamic_information">dynamic_information</a> * 'd</code> </pre>
+
+
 <pre><span id="VALadd_initial_state"><span class="keyword">val</span> add_initial_state</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'c * 'b * 'e list</code></pre>
 <pre><span id="VALis_enabled"><span class="keyword">val</span> is_enabled</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'e -> 'c * 'b * 'e option</code></pre>
-<pre><span id="VALmaybe_reachable"><span class="keyword">val</span> maybe_reachable</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'e -> 'c * 'b * 'e option</code></pre>
+<pre><span id="VALmaybe_reachable"><span class="keyword">val</span> maybe_reachable</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'e -> 'f -> 'c * 'b * 'f option</code></pre>
 <pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'e -> 'c * 'b * ('e * 'f list)</code></pre>
 <pre><span id="VALapply_event_list"><span class="keyword">val</span> apply_event_list</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'c * 'b * 'e list</code></pre>
 <pre><span id="VALstabilize"><span class="keyword">val</span> stabilize</span> : <code class="type">'a -> 'b -> 'c -> 'c * 'b * unit</code></pre>
