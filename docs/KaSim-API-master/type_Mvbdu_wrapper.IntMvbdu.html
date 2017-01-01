@@ -81,9 +81,10 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mvbdu&nbsp;=&nbsp;<span class="constructor">Mvbdu</span>.mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Boolean_mvbdu</span>.memo_tables,&nbsp;<span class="constructor">Boolean_mvbdu</span>.mvbdu_dic,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.association_list_dic,&nbsp;<span class="constructor">Boolean_mvbdu</span>.variables_list_dic,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool,&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.association_list_dic,&nbsp;<span class="constructor">Boolean_mvbdu</span>.range_list_dic,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Boolean_mvbdu</span>.variables_list_dic,&nbsp;bool,&nbsp;int)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Memo_sig</span>.handler<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hconsed_renaming_list<br>
@@ -116,11 +117,17 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nfst&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_nsnd&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_redefine&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_redefine_range&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_subseteq&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_asso&nbsp;:&nbsp;hconsed_association_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_association_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_association_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_range&nbsp;:&nbsp;hconsed_range_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_abstract_away&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
@@ -134,6 +141,12 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_variables_list&nbsp;:<br>
