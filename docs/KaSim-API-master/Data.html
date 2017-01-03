@@ -86,7 +86,10 @@
 </div>
 <h1>Module <a href="type_Data.html">Data</a></h1>
 
-<pre><span class="keyword">module</span> Data: <code class="code"><span class="keyword">sig</span></code> <a href="Data.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+<pre><span class="keyword">module</span> Data: <code class="code"><span class="keyword">sig</span></code> <a href="Data.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Must have length &gt;= 1 (at least <code class="code"><span class="constructor">T</span></code> or <code class="code"><span class="constructor">E</span></code>)<br>
+</div>
+<hr width="100%">
 
 <pre><code><span id="TYPEflux_data"><span class="keyword">type</span> <code class="type"></code>flux_data</span> = {</code></pre><table class="typetable">
 <tr>
@@ -247,8 +250,11 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.Plot"><span class="constructor">Plot</span></span> <span class="keyword">of</span> <code class="type">float * <a href="Nbr.html#TYPEt">Nbr.t</a> array</code></code></td>
-
+<code><span id="TYPEELTt.Plot"><span class="constructor">Plot</span></span> <span class="keyword">of</span> <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a> array</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+Must have length &gt;= 1 (at least <code class="code"><span class="constructor">T</span></code> or <code class="code"><span class="constructor">E</span></code>)<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
 </tr>
 <tr>
 <td align="left" valign="top" >
