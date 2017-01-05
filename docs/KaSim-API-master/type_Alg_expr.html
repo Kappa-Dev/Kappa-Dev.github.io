@@ -129,6 +129,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_dep_bool&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.rev_dep&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;setup_alg_vars_rev_dep&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;(<span class="keywordsign">'</span>a,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot)&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>

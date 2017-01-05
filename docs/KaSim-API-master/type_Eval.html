@@ -77,6 +77,7 @@
 <body>
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile_bool&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?origin:<span class="constructor">Operator</span>.rev_dep&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.contact_map&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -100,8 +101,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.contact_map&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>c,&nbsp;<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int,&nbsp;<span class="constructor">LKappa</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_initial_state&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;bind:(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;return:(<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;bind:(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(bool&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;return:(bool&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
