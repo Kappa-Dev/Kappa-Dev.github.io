@@ -15,6 +15,8 @@
 <link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
 <link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Mods" rel="Chapter" href="Mods.html">
+<link title="List_util" rel="Chapter" href="List_util.html">
+<link title="Tools" rel="Chapter" href="Tools.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
 <link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
@@ -34,7 +36,7 @@
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
 <link title="Primitives" rel="Chapter" href="Primitives.html">
-<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Model" rel="Chapter" href="Model.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
@@ -191,11 +193,6 @@ Concrete graph implementation
 </td></tr>
 <tr><td><a href="Pattern.Env.html">Env</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html">Environment</a> </td>
-<td><div class="info">
-Compiled representation of a full Kappa model
-</div>
-</td></tr>
 <tr><td><a href="Eval.html">Eval</a> </td>
 <td><div class="info">
 Main compilation functions
@@ -365,6 +362,13 @@ Implementation of array only limited by max_int
 </td></tr>
 <tr><td><a href="Priority.LevelMap.html">LevelMap</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
+<tr><td><a href="List_util.html">List_util</a> </td>
+<td><div class="info">
+Set union of 2 sorted list
+  When l1 is included in l2:
+  <code class="code">merge_uniq l1 l2 == merge_uniq l2 l1 == l2</code>
+</div>
+</td></tr>
 <tr><td><a href="Location.html">Location</a> </td>
 <td></td></tr>
 <tr><td><a href="Loggers.html">Loggers</a> </td>
@@ -402,6 +406,11 @@ Implementation of array only limited by max_int
 <tr><td><a href="Matching.html">Matching</a> </td>
 <td><div class="info">
 Injection from a pattern in the mixture
+</div>
+</td></tr>
+<tr><td><a href="Model.html">Model</a> </td>
+<td><div class="info">
+Compiled representation of a full Kappa model
 </div>
 </td></tr>
 <tr><td><a href="Mods.html">Mods</a> </td>
@@ -643,6 +652,11 @@ Event loop module
 <tr><td><a href="Mods.StringSetMap.html">StringSetMap</a> [<a href="Mods.html">Mods</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>T</td></tr>
+<tr><td><a href="Tools.html">Tools</a> </td>
+<td><div class="info">
+Misc utilities
+</div>
+</td></tr>
 <tr><td><a href="Trace.html">Trace</a> </td>
 <td><div class="info">
 Trace of simulation

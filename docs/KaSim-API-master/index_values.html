@@ -15,6 +15,8 @@
 <link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
 <link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Mods" rel="Chapter" href="Mods.html">
+<link title="List_util" rel="Chapter" href="List_util.html">
+<link title="Tools" rel="Chapter" href="Tools.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
 <link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
@@ -34,7 +36,7 @@
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
 <link title="Primitives" rel="Chapter" href="Primitives.html">
-<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Model" rel="Chapter" href="Model.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
@@ -179,11 +181,11 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALalg_expr">alg_expr</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALalgs_finder">algs_finder</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALalgs_finder">algs_finder</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALall_agents_where">all_agents_where</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALall_dependencies">all_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALall_dependencies">all_dependencies</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALallowed_link">allowed_link</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
@@ -238,6 +240,20 @@ Returns the graph obtained by applying the rule.
 </div>
 </td></tr>
 <tr><td><a href="Pp.html#VALarray">array</a> [<a href="Pp.html">Pp</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALarray_filter">array_filter</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALarray_fold_left2i">array_fold_left2i</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALarray_fold_left_mapi">array_fold_left_mapi</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALarray_fold_lefti">array_fold_lefti</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALarray_map_of_list">array_map_of_list</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALarray_min_equal_not_null">array_min_equal_not_null</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALarray_rev_of_list">array_rev_of_list</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALassociate">associate</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
@@ -354,7 +370,7 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALcheck_edge">check_edge</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALcheck_if_counter_is_filled_enough">check_if_counter_is_filled_enough</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALcheck_if_counter_is_filled_enough">check_if_counter_is_filled_enough</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALchoose">choose</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
@@ -456,7 +472,7 @@ compress a trace with the level of abstraction defined in the argument parameter
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALconnected_components_of_patterns">connected_components_of_patterns</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALconnected_components_of_unary_rules">connected_components_of_unary_rules</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALconnected_components_of_unary_rules">connected_components_of_unary_rules</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Snip.html#VALconnected_components_sum_of_ambiguous_mixture">connected_components_sum_of_ambiguous_mixture</a> [<a href="Snip.html">Snip</a>]</td>
 <td></td></tr>
@@ -586,7 +602,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALdo_we_prompt_reactions">do_we_prompt_reactions</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALdomain">domain</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALdomain">domain</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.ObsMap.html#VALdummy">dummy</a> [<a href="Pattern.ObsMap.html">Pattern.ObsMap</a>]</td>
 <td></td></tr>
@@ -736,6 +752,8 @@ error_init is an empty log of errors
 </td></tr>
 <tr><td><a href="Primitives.html#VALexists_modification">exists_modification</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
+<tr><td><a href="List_util.html#VALexists_uniq">exists_uniq</a> [<a href="List_util.html">List_util</a>]</td>
+<td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALexpand">expand</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALexpand_and_copy">expand_and_copy</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
@@ -864,6 +882,8 @@ put together the stories having the same canonic form, this has do be done expli
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALfold_inv">fold_inv</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
+<tr><td><a href="List_util.html#VALfold_left2">fold_left2</a> [<a href="List_util.html">List_util</a>]</td>
+<td></td></tr>
 <tr><td><a href="Utilities.html#VALfold_left_with_progress_bar">fold_left_with_progress_bar</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.ObsMap.html#VALfold_lefti">fold_lefti</a> [<a href="Pattern.ObsMap.html">Pattern.ObsMap</a>]</td>
@@ -881,17 +901,19 @@ fold over the causal past of each observable in a given trace,
     the second arfument indicated whether the function is launched in debug mode or not
 </div>
 </td></tr>
-<tr><td><a href="Environment.html#VALfold_perturbations">fold_perturbations</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALfold_perturbations">fold_perturbations</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold_restriction_with_logs">fold_restriction_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold_restriction_with_missing_associations_with_logs">fold_restriction_with_missing_associations_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
+<tr><td><a href="List_util.html#VALfold_right_map">fold_right_map</a> [<a href="List_util.html">List_util</a>]</td>
+<td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALfold_righti">fold_righti</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALfold_righti">fold_righti</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALfold_rules">fold_rules</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALfold_rules">fold_rules</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALfold_sites">fold_sites</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
@@ -959,15 +981,15 @@ Awfully inefficient
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_agent_name_from_pattern">get_agent_name_from_pattern</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALget_alg">get_alg</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALget_alg">get_alg</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALget_alg_reverse_dependencies">get_alg_reverse_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALget_alg_reverse_dependencies">get_alg_reverse_dependencies</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALget_algs">get_algs</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALget_algs">get_algs</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALget_always_outdated">get_always_outdated</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALget_always_outdated">get_always_outdated</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALget_ast_rule">get_ast_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALget_ast_rule">get_ast_rule</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_bdu_common_static">get_bdu_common_static</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
@@ -1089,7 +1111,7 @@ Use
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALget_parameters">get_parameters</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALget_perturbation">get_perturbation</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALget_perturbation">get_perturbation</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALget_potential_partner">get_potential_partner</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
@@ -1114,7 +1136,7 @@ conversely, convert a trace in a list of refined steps
 <td></td></tr>
 <tr><td><a href="Odes.Make.html#VALget_rule">get_rule</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALget_rule">get_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALget_rule">get_rule</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Odes.Make.html#VALget_rule_id_with_mode">get_rule_id_with_mode</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
@@ -1145,7 +1167,7 @@ get the date of an event in the simulation
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALget_symmetries">get_symmetries</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALget_token_reverse_dependencies">get_token_reverse_dependencies</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALget_token_reverse_dependencies">get_token_reverse_dependencies</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Matching.Agent.html#VALget_type">get_type</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
 <td></td></tr>
@@ -1240,7 +1262,7 @@ Infer agent signatures and tokens from init, rules and perturbations
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALinit">init</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALinit">init</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALinit">init</a> [<a href="Model.html">Model</a>]</td>
 <td><div class="info">
 <code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code>
 </div>
@@ -1372,6 +1394,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 <code class="code">iter f x n</code>
 </div>
 </td></tr>
+<tr><td><a href="Tools.html#VALiteri">iteri</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALiteri">iteri</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALiteri">iteri</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
@@ -1383,6 +1407,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 <tr><td><a href="Int_storage.Storage.html#VALkey_list">key_list</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>L</td></tr>
+<tr><td><a href="List_util.html#VALlast">last</a> [<a href="List_util.html">List_util</a>]</td>
+<td></td></tr>
 <tr><td><a href="Utilities.html#VALlast_eid_in_pretrace">last_eid_in_pretrace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALlast_entry">last_entry</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
@@ -1468,9 +1494,15 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Primitives.html#VALmap_expr_rule">map_expr_rule</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALmap_observables">map_observables</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="List_util.html#VALmap_flatten">map_flatten</a> [<a href="List_util.html">List_util</a>]</td>
+<td></td></tr>
+<tr><td><a href="Model.html#VALmap_observables">map_observables</a> [<a href="Model.html">Model</a>]</td>
+<td></td></tr>
+<tr><td><a href="List_util.html#VALmap_option">map_option</a> [<a href="List_util.html">List_util</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALmapi">mapi</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
+<td></td></tr>
+<tr><td><a href="List_util.html#VALmapi">mapi</a> [<a href="List_util.html">List_util</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmapi">mapi</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -1486,6 +1518,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <tr><td><a href="Counter.html#VALmax_events">max_events</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmax_key">max_key</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALmax_pos_int_not_zero">max_pos_int_not_zero</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALmax_time">max_time</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
@@ -1503,6 +1537,13 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmerge">merge</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
+<tr><td><a href="List_util.html#VALmerge_uniq">merge_uniq</a> [<a href="List_util.html">List_util</a>]</td>
+<td><div class="info">
+Set union of 2 sorted list
+  When l1 is included in l2:
+  <code class="code">merge_uniq l1 l2 == merge_uniq l2 l1 == l2</code>
+</div>
+</td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALmerge_variables_lists">merge_variables_lists</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALmerge_variables_lists">merge_variables_lists</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
@@ -1516,6 +1557,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <tr><td><a href="SetMap.Set.html#VALmin_elt">min_elt</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Priority.html#VALmin_level">min_level</a> [<a href="Priority.html">Priority</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALmin_pos_int_not_zero">min_pos_int_not_zero</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.html#VALminimal_env">minimal_env</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
@@ -1705,19 +1748,19 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Priority.html#VALn_story">n_story</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnb_algs">nb_algs</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnb_algs">nb_algs</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALnb_null_event">nb_null_event</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnb_perturbations">nb_perturbations</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnb_perturbations">nb_perturbations</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnb_rules">nb_rules</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnb_rules">nb_rules</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnb_syntactic_rules">nb_syntactic_rules</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnb_syntactic_rules">nb_syntactic_rules</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALnb_tokens">nb_tokens</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnb_tokens">nb_tokens</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnb_tokens">nb_tokens</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALnbr_automorphisms_in_chemical_species">nbr_automorphisms_in_chemical_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -1729,7 +1772,7 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Odes.Make.html#VALnetwork_from_compil">network_from_compil</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnew_domain">new_domain</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnew_domain">new_domain</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.html#VALnew_free">new_free</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
@@ -1756,13 +1799,15 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Ast.html#VALno_more_site_on_right">no_more_site_on_right</a> [<a href="Ast.html">Ast</a>]</td>
 <td></td></tr>
+<tr><td><a href="Tools.html#VALnot_an_id">not_an_id</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pp.html#VALnu">nu</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnum_of_agent">num_of_agent</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnum_of_agent">num_of_agent</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALnum_of_agent">num_of_agent</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnum_of_alg">num_of_alg</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnum_of_alg">num_of_alg</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALnum_of_internal_state">num_of_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
@@ -1771,9 +1816,9 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 </td></tr>
 <tr><td><a href="Signature.html#VALnum_of_site">num_of_site</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnum_of_token">num_of_token</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnum_of_token">num_of_token</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALnums_of_rule">nums_of_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALnums_of_rule">nums_of_rule</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>O</td></tr>
 <tr><td><a href="Matching.html#VALobservables_from_agent">observables_from_agent</a> [<a href="Matching.html">Matching</a>]</td>
@@ -1852,7 +1897,7 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALof_yojson">of_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALof_yojson">of_yojson</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALof_yojson">of_yojson</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.Env.html#VALof_yojson">of_yojson</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
@@ -1896,6 +1941,8 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Pp.html#VALoption">option</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
+<tr><td><a href="Tools.html#VALoption_map">option_map</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALoutput_constraints_list">output_constraints_list</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALoutput_contact_map">output_contact_map</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
@@ -1937,6 +1984,10 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALpop_json">pop_json</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
+<tr><td><a href="Tools.html#VALpow">pow</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALpow64">pow64</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALpred">pred</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALpretty_print">pretty_print</a> [<a href="Nbr.html">Nbr</a>]</td>
@@ -1965,7 +2016,7 @@ Floats are compactly printed
 <code class="code">print signatures find_existing_type nav</code>
 </div>
 </td></tr>
-<tr><td><a href="Environment.html#VALprint">print</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALprint">print</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALprint">print</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td></td></tr>
@@ -2004,11 +2055,11 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALprint">print</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALprint_agent">print_agent</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALprint_agent">print_agent</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALprint_agent">print_agent</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALprint_alg">print_alg</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALprint_alg">print_alg</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#VALprint_annot">print_annot</a> [<a href="Location.html">Location</a>]</td>
 <td></td></tr>
@@ -2024,7 +2075,7 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="Ast.html#VALprint_ast_rule">print_ast_rule</a> [<a href="Ast.html">Ast</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALprint_ast_rule">print_ast_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALprint_ast_rule">print_ast_rule</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ast.html#VALprint_ast_rule_no_rate">print_ast_rule_no_rate</a> [<a href="Ast.html">Ast</a>]</td>
 <td></td></tr>
@@ -2121,7 +2172,7 @@ Prints nothing in case of infinity or Not a Number
 <td></td></tr>
 <tr><td><a href="LKappa.html#VALprint_rule">print_rule</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALprint_rule">print_rule</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALprint_rule">print_rule</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_rule_id">print_rule_id</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -2147,7 +2198,7 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_token">print_token</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALprint_token">print_token</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALprint_token">print_token</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALprint_trace">print_trace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
@@ -2182,7 +2233,7 @@ proj_set f set is the set {f(a) | a\in S}
 </td></tr>
 <tr><td><a href="SetMap.Projection.html#VALproj_set_monadic">proj_set_monadic</a> [<a href="SetMap.Projection.html">SetMap.Projection</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALpropagate_constant">propagate_constant</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALpropagate_constant">propagate_constant</a> [<a href="Model.html">Model</a>]</td>
 <td><div class="info">
 <code class="code">propagate_constant updated_vars env</code>
 </div>
@@ -2192,6 +2243,8 @@ proj_set f set is the set {f(a) | a\in S}
 <tr><td><a href="Alg_expr.html#VALpropagate_constant_bool">propagate_constant_bool</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>R</td></tr>
+<tr><td><a href="List_util.html#VALrandom">random</a> [<a href="List_util.html">List_util</a>]</td>
+<td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALrandom">random</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALrate">rate</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
@@ -2200,6 +2253,8 @@ proj_set f set is the set {f(a) | a\in S}
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALrate_name">rate_name</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
+<tr><td><a href="Tools.html#VALread_input">read_input</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
 <tr><td><a href="Matching.html#VALreconstruct">reconstruct</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
 <code class="code">reconstruct graph matching_of_previous_cc cc_id_in_rule cc root </code>
@@ -2207,6 +2262,11 @@ proj_set f set is the set {f(a) | a\in S}
 </td></tr>
 <tr><td><a href="Pattern.html#VALreconstruction_navigation">reconstruction_navigation</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
+<tr><td><a href="Tools.html#VALrecti">recti</a> [<a href="Tools.html">Tools</a>]</td>
+<td><div class="info">
+<code class="code">recti f x n</code> = f (f (f ..
+</div>
+</td></tr>
 <tr><td><a href="Loggers.html#VALredirect">redirect</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALrefine_information_about_state_of_sites_in_precondition">refine_information_about_state_of_sites_in_precondition</a> [<a href="Communication.html">Communication</a>]</td>
@@ -2222,6 +2282,8 @@ proj_set f set is the set {f(a) | a\in S}
 <tr><td><a href="Edges.html#VALremove_agent">remove_agent</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALremove_blacklisted_event">remove_blacklisted_event</a> [<a href="Utilities.html">Utilities</a>]</td>
+<td></td></tr>
+<tr><td><a href="List_util.html#VALremove_consecutive_double">remove_consecutive_double</a> [<a href="List_util.html">List_util</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALremove_events_after_last_obs">remove_events_after_last_obs</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
@@ -2247,6 +2309,8 @@ remove_obs_before removes the observable_hits before the simulation info prodide
 remove_pseudo_inverse_events removes pseudo inverse events
 </div>
 </td></tr>
+<tr><td><a href="List_util.html#VALremove_suffix_after_last_occurrence">remove_suffix_after_last_occurrence</a> [<a href="List_util.html">List_util</a>]</td>
+<td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALremove_tracked">remove_tracked</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALremove_while_testing_existence">remove_while_testing_existence</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -2274,6 +2338,8 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <tr><td><a href="Instantiation.html#VALrename_abstract_test">rename_abstract_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALreturn">return</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="List_util.html#VALrev_map_append">rev_map_append</a> [<a href="List_util.html">List_util</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALrev_path">rev_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
@@ -2377,7 +2443,7 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALsetup_alg_vars_rev_dep">setup_alg_vars_rev_dep</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALsignatures">signatures</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALsignatures">signatures</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.Env.html#VALsignatures">signatures</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
@@ -2400,6 +2466,13 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <tr><td><a href="SetMap.Set.html#VALsize">size</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALsize_of_pretrace">size_of_pretrace</a> [<a href="Utilities.html">Utilities</a>]</td>
+<td></td></tr>
+<tr><td><a href="List_util.html#VALsmart_filter">smart_filter</a> [<a href="List_util.html">List_util</a>]</td>
+<td><div class="info">
+not tail rec but don't allocate if unecessary
+</div>
+</td></tr>
+<tr><td><a href="List_util.html#VALsmart_map">smart_map</a> [<a href="List_util.html">List_util</a>]</td>
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALsnapshot">snapshot</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
 <td></td></tr>
@@ -2572,7 +2645,7 @@ compute the strong compression of a given trace,
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALto_yojson">to_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALto_yojson">to_yojson</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALto_yojson">to_yojson</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.Env.html#VALto_yojson">to_yojson</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
@@ -2580,7 +2653,7 @@ compute the strong compression of a given trace,
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALtoken_vector_of_init">token_vector_of_init</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Environment.html#VALtokens_finder">tokens_finder</a> [<a href="Environment.html">Environment</a>]</td>
+<tr><td><a href="Model.html#VALtokens_finder">tokens_finder</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALtrace_of_pretrace">trace_of_pretrace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
@@ -2603,6 +2676,8 @@ convert a list of refined steps into a trace
 <tr><td><a href="SetMap.Set.html#VALunion_with_logs">union_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALunsafe_get">unsafe_get</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALunsome">unsome</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALupdate">update</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>

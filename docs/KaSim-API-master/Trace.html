@@ -19,6 +19,8 @@
 <link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
 <link title="SetMap" rel="Chapter" href="SetMap.html">
 <link title="Mods" rel="Chapter" href="Mods.html">
+<link title="List_util" rel="Chapter" href="List_util.html">
+<link title="Tools" rel="Chapter" href="Tools.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
 <link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
@@ -38,7 +40,7 @@
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
 <link title="Primitives" rel="Chapter" href="Primitives.html">
-<link title="Environment" rel="Chapter" href="Environment.html">
+<link title="Model" rel="Chapter" href="Model.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
@@ -130,8 +132,8 @@ the rule<br>
 
 
 
-<pre><span id="VALprint_event_kind"><span class="keyword">val</span> print_event_kind</span> : <code class="type">?env:<a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Trace.html#TYPEevent_kind">event_kind</a> -> unit</code></pre>
-<pre><span id="VALprint_event_kind_dot_annot"><span class="keyword">val</span> print_event_kind_dot_annot</span> : <code class="type"><a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Trace.html#TYPEevent_kind">event_kind</a> -> unit</code></pre>
+<pre><span id="VALprint_event_kind"><span class="keyword">val</span> print_event_kind</span> : <code class="type">?env:<a href="Model.html#TYPEt">Model.t</a> -> Format.formatter -> <a href="Trace.html#TYPEevent_kind">event_kind</a> -> unit</code></pre>
+<pre><span id="VALprint_event_kind_dot_annot"><span class="keyword">val</span> print_event_kind_dot_annot</span> : <code class="type"><a href="Model.html#TYPEt">Model.t</a> -> Format.formatter -> <a href="Trace.html#TYPEevent_kind">event_kind</a> -> unit</code></pre>
 <pre><span id="TYPEevent"><span class="keyword">type</span> <code class="type"></code>event</span> = <code class="type"><a href="Trace.html#TYPEevent_kind">event_kind</a> * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a> *<br>       unit <a href="Trace.Simulation_info.html#TYPEt">Simulation_info.t</a></code> </pre>
 
 
@@ -192,7 +194,7 @@ the rule<br>
 <pre><span id="VALsimulation_info_of_step"><span class="keyword">val</span> simulation_info_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> unit <a href="Trace.Simulation_info.html#TYPEt">Simulation_info.t</a> option</code></pre>
 <pre><span id="VALcreation_of_actions"><span class="keyword">val</span> creation_of_actions</span> : <code class="type">('a -> 'b) -> 'a <a href="Instantiation.html#TYPEaction">Instantiation.action</a> list -> 'b list</code></pre>
 <pre><span id="VALcreation_of_step"><span class="keyword">val</span> creation_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> int list</code></pre>
-<pre><span id="VALprint_step"><span class="keyword">val</span> print_step</span> : <code class="type">?compact:bool -> ?env:<a href="Environment.html#TYPEt">Environment.t</a> -> Format.formatter -> <a href="Trace.html#TYPEstep">step</a> -> unit</code></pre>
+<pre><span id="VALprint_step"><span class="keyword">val</span> print_step</span> : <code class="type">?compact:bool -> ?env:<a href="Model.html#TYPEt">Model.t</a> -> Format.formatter -> <a href="Trace.html#TYPEstep">step</a> -> unit</code></pre>
 <pre><span id="VALstep_to_yojson"><span class="keyword">val</span> step_to_yojson</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALstep_of_yojson"><span class="keyword">val</span> step_of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Trace.html#TYPEstep">step</a></code></pre>
 <pre><span id="VALto_yojson"><span class="keyword">val</span> to_yojson</span> : <code class="type"><a href="Trace.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
