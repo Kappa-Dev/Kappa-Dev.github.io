@@ -25,7 +25,7 @@
 <link title="Graph_json" rel="Chapter" href="Graph_json.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Location" rel="Chapter" href="Location.html">
+<link title="Locality" rel="Chapter" href="Locality.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
@@ -105,7 +105,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)&nbsp;<span class="constructor">Alg_expr</span>.e<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Network_handler</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;increment&nbsp;:<br>
@@ -114,7 +114,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)&nbsp;<span class="constructor">Alg_expr</span>.e<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Network_handler</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;associate_nrows&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -143,7 +143,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_lhs:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)&nbsp;<span class="constructor">Alg_expr</span>.e<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Network_handler</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>

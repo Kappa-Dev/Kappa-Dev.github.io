@@ -25,7 +25,7 @@
 <link title="Graph_json" rel="Chapter" href="Graph_json.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Location" rel="Chapter" href="Location.html">
+<link title="Locality" rel="Chapter" href="Locality.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
@@ -78,7 +78,7 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;switching&nbsp;=&nbsp;<span class="constructor">Linked</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Freed</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Maintained</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Erased</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;switching&nbsp;=&nbsp;<span class="constructor">Linked</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Freed</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Maintained</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Erased</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_internal&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">I_ANY</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">I_ANY_CHANGED</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
@@ -89,10 +89,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;ra_type&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;ra_erased&nbsp;:&nbsp;bool;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;ra_ports&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((int,&nbsp;int&nbsp;*&nbsp;int)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="constructor">LKappa</span>.switching)&nbsp;array;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((int,&nbsp;int&nbsp;*&nbsp;int)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">LKappa</span>.switching)&nbsp;array;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;ra_ints&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_internal&nbsp;array;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;ra_syntax&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(((int,&nbsp;int&nbsp;*&nbsp;int)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;<span class="constructor">LKappa</span>.switching)&nbsp;array&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(((int,&nbsp;int&nbsp;*&nbsp;int)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">LKappa</span>.switching)&nbsp;array&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule_internal&nbsp;array)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
@@ -108,13 +108,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;r_mix&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_created&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_rm_tokens&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_add_tokens&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;r_rate&nbsp;:&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;r_rate&nbsp;:&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_un_rate&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Location</span>.annot&nbsp;option)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule&nbsp;:<br>
@@ -131,15 +131,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?max_allowed_var:int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(((<span class="constructor">String</span>.t&nbsp;*&nbsp;<span class="constructor">Location</span>.t)&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list)&nbsp;list,&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.elt)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Location</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_agent&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Location</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(((<span class="constructor">String</span>.t&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list)&nbsp;list,&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.elt)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_agent&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;modif_expr_of_ast&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.contact_map&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(((<span class="constructor">String</span>.t&nbsp;*&nbsp;<span class="constructor">Location</span>.t)&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list)&nbsp;list,&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.elt)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(((<span class="constructor">String</span>.t&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list)&nbsp;list,&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.elt)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.modif_expr&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">LKappa</span>.rule_agent&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Ast</span>.modif_expr&nbsp;*&nbsp;int&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compil_of_ast&nbsp;:<br>

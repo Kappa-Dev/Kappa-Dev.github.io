@@ -30,7 +30,7 @@
 <link title="Graph_json" rel="Chapter" href="Graph_json.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Location" rel="Chapter" href="Location.html">
+<link title="Locality" rel="Chapter" href="Locality.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
@@ -228,8 +228,8 @@
 <pre><span id="VALadd_node"><span class="keyword">val</span> add_node</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> Graph_loggers_sig.options list -> unit</code></pre>
 <pre><span id="VALadd_edge"><span class="keyword">val</span> add_edge</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> string -> Graph_loggers_sig.options list -> unit</code></pre>
 <pre><span id="VALdump_json"><span class="keyword">val</span> dump_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json -> unit</code></pre>
-<pre><span id="VALget_expr"><span class="keyword">val</span> get_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Location.html#TYPEannot">Location.annot</a> option</code></pre>
-<pre><span id="VALset_expr"><span class="keyword">val</span> set_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Location.html#TYPEannot">Location.annot</a> -> unit</code></pre>
+<pre><span id="VALget_expr"><span class="keyword">val</span> get_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> option</code></pre>
+<pre><span id="VALset_expr"><span class="keyword">val</span> set_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -> unit</code></pre>
 <pre><span id="VALis_const"><span class="keyword">val</span> is_const</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Ode_loggers_sig.variable -> bool</code></pre>
 <pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> string list</code></pre>
 <pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>

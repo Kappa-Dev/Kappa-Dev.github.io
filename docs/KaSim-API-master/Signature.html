@@ -30,7 +30,7 @@
 <link title="Graph_json" rel="Chapter" href="Graph_json.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Location" rel="Chapter" href="Location.html">
+<link title="Locality" rel="Chapter" href="Locality.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
@@ -99,10 +99,10 @@ Store of one agent<br>
 </div>
 
 
-<pre><span id="VALnum_of_site"><span class="keyword">val</span> num_of_site</span> : <code class="type">?agent_name:string -> string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Signature.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALnum_of_site"><span class="keyword">val</span> num_of_site</span> : <code class="type">?agent_name:string -> string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Signature.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALsite_of_num"><span class="keyword">val</span> site_of_num</span> : <code class="type">int -> <a href="Signature.html#TYPEt">t</a> -> string</code></pre>
 <pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(int -> string -> 'a -> 'a) -> 'a -> <a href="Signature.html#TYPEt">t</a> -> 'a</code></pre>
-<pre><span id="VALnum_of_internal_state"><span class="keyword">val</span> num_of_internal_state</span> : <code class="type">int -> string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Signature.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<pre><span id="VALnum_of_internal_state"><span class="keyword">val</span> num_of_internal_state</span> : <code class="type">int -> string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Signature.html#TYPEt">t</a> -> int</code></pre><div class="info ">
 <code class="code">num_of_internal_state site_id state_name sign</code><br>
 </div>
 
@@ -113,7 +113,7 @@ Store of all the agents<br>
 </div>
 
 
-<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">(string <a href="Location.html#TYPEannot">Location.annot</a> *<br>        (unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * (string <a href="Location.html#TYPEannot">Location.annot</a> * string <a href="Location.html#TYPEannot">Location.annot</a>) list)<br>        <a href="NamedDecls.html#TYPEt">NamedDecls.t</a>)<br>       array -> <a href="Signature.html#TYPEs">s</a></code></pre>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">(string <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>        (unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * (string <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>) list)<br>        <a href="NamedDecls.html#TYPEt">NamedDecls.t</a>)<br>       array -> <a href="Signature.html#TYPEs">s</a></code></pre>
 <pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> <a href="Signature.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">get sigs agent_id</code><br>
@@ -127,12 +127,12 @@ Store of all the agents<br>
 <code class="code">max_arity sigs</code> returns max <br>
 </div>
 
-<pre><span id="VALnum_of_agent"><span class="keyword">val</span> num_of_agent</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Signature.html#TYPEs">s</a> -> int</code></pre>
-<pre><span id="VALid_of_site"><span class="keyword">val</span> id_of_site</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Signature.html#TYPEs">s</a> -> int</code></pre><div class="info ">
+<pre><span id="VALnum_of_agent"><span class="keyword">val</span> num_of_agent</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Signature.html#TYPEs">s</a> -> int</code></pre>
+<pre><span id="VALid_of_site"><span class="keyword">val</span> id_of_site</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -> string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Signature.html#TYPEs">s</a> -> int</code></pre><div class="info ">
 <code class="code">id_of_site agent_type site_name sigs</code><br>
 </div>
 
-<pre><span id="VALid_of_internal_state"><span class="keyword">val</span> id_of_internal_state</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -><br>       string <a href="Location.html#TYPEannot">Location.annot</a> -> string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Signature.html#TYPEs">s</a> -> int</code></pre><div class="info ">
+<pre><span id="VALid_of_internal_state"><span class="keyword">val</span> id_of_internal_state</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       string <a href="Locality.html#TYPEannot">Locality.annot</a> -> string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Signature.html#TYPEs">s</a> -> int</code></pre><div class="info ">
 <code class="code">id_of_internal_state agent_type site_name state_name sigs</code><br>
 </div>
 

@@ -30,7 +30,7 @@
 <link title="Graph_json" rel="Chapter" href="Graph_json.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
-<link title="Location" rel="Chapter" href="Location.html">
+<link title="Locality" rel="Chapter" href="Locality.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
@@ -96,7 +96,7 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
-<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Location.html#TYPEannot">Location.annot</a> option * <a href="LKappa.html#TYPErule">LKappa.rule</a> <a href="Location.html#TYPEannot">Location.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array * Pattern.Set.t -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a> array -> <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Model.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> option * <a href="LKappa.html#TYPErule">LKappa.rule</a> <a href="Locality.html#TYPEannot">Locality.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array * Pattern.Set.t -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> array -> <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Model.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code><br>
 </div>
 
@@ -112,7 +112,7 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="VALtokens_finder"><span class="keyword">val</span> tokens_finder</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int Mods.StringMap.t</code></pre>
 <pre><span id="VALalgs_finder"><span class="keyword">val</span> algs_finder</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int Mods.StringMap.t</code></pre>
 <pre><span id="VALget_alg"><span class="keyword">val</span> get_alg</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a></code></pre>
-<pre><span id="VALget_algs"><span class="keyword">val</span> get_algs</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> (string * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Location.html#TYPEannot">Location.annot</a>) array</code></pre>
+<pre><span id="VALget_algs"><span class="keyword">val</span> get_algs</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> (string * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a>) array</code></pre>
 <pre><span id="VALget_perturbation"><span class="keyword">val</span> get_perturbation</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int -> <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a></code></pre>
 <pre><span id="VALget_rule"><span class="keyword">val</span> get_rule</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a></code></pre>
 <pre><span id="VALget_ast_rule"><span class="keyword">val</span> get_ast_rule</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int -> <a href="LKappa.html#TYPErule">LKappa.rule</a></code></pre>
@@ -123,9 +123,9 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="VALget_token_reverse_dependencies"><span class="keyword">val</span> get_token_reverse_dependencies</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int -> Operator.DepSet.t</code></pre>
 <pre><span id="VALget_always_outdated"><span class="keyword">val</span> get_always_outdated</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> Operator.DepSet.t</code></pre>
 <pre><span id="VALall_dependencies"><span class="keyword">val</span> all_dependencies</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre>
-<pre><span id="VALnum_of_agent"><span class="keyword">val</span> num_of_agent</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALnum_of_alg"><span class="keyword">val</span> num_of_alg</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALnum_of_token"><span class="keyword">val</span> num_of_token</span> : <code class="type">string <a href="Location.html#TYPEannot">Location.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALnum_of_agent"><span class="keyword">val</span> num_of_agent</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALnum_of_alg"><span class="keyword">val</span> num_of_alg</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALnum_of_token"><span class="keyword">val</span> num_of_token</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnums_of_rule"><span class="keyword">val</span> nums_of_rule</span> : <code class="type">string -> <a href="Model.html#TYPEt">t</a> -> int list</code></pre>
 <pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>

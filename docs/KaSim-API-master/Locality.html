@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Nbr.html">
-<link rel="next" href="Locality.html">
+<link rel="previous" href="NamedDecls.html">
+<link rel="next" href="Operator.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -79,55 +79,80 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : NamedDecls</title>
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Locality</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Nbr.html" title="Nbr">Previous</a>
+<div class="navbar"><a class="pre" href="NamedDecls.html" title="NamedDecls">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Locality.html" title="Locality">Next</a>
+&nbsp;<a class="post" href="Operator.html" title="Operator">Next</a>
 </div>
-<h1>Module <a href="type_NamedDecls.html">NamedDecls</a></h1>
+<h1>Module <a href="type_Locality.html">Locality</a></h1>
 
-<pre><span class="keyword">module</span> NamedDecls: <code class="code"><span class="keyword">sig</span></code> <a href="NamedDecls.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-Stores a bunch of stuff the user gave a name to<br>
-</div>
-<hr width="100%">
+<pre><span class="keyword">module</span> Locality: <code class="code"><span class="keyword">sig</span></code> <a href="Locality.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
 
-<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> = private {</code></pre><table class="typetable">
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+
+
+<pre><span id="TYPEannot"><span class="keyword">type</span> <code class="type">'a</code> annot</span> = <code class="type">'a * <a href="Locality.html#TYPEt">t</a></code> </pre>
+
+
+<pre><span id="TYPEmaybe"><span class="keyword">type</span> <code class="type">'a</code> maybe</span> = <code class="type">?pos:<a href="Locality.html#TYPEt">t</a> -> 'a</code> </pre>
+
+
+<pre><span id="VALof_pos"><span class="keyword">val</span> of_pos</span> : <code class="type">Lexing.position -> Lexing.position -> <a href="Locality.html#TYPEt">t</a></code></pre>
+<pre><span id="VALdummy"><span class="keyword">val</span> dummy</span> : <code class="type"><a href="Locality.html#TYPEt">t</a></code></pre>
+<pre><span id="VALdummy_annot"><span class="keyword">val</span> dummy_annot</span> : <code class="type">'a -> 'a <a href="Locality.html#TYPEannot">annot</a></code></pre>
+<pre><span id="VALhas_dummy_annot"><span class="keyword">val</span> has_dummy_annot</span> : <code class="type">'a <a href="Locality.html#TYPEannot">annot</a> -> bool</code></pre>
+<pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Locality.html#TYPEt">t</a> -> string</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> <a href="Locality.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint_annot"><span class="keyword">val</span> print_annot</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="Locality.html#TYPEannot">annot</a> -> unit</code></pre>
+<pre><code><span id="TYPEposition"><span class="keyword">type</span> <code class="type"></code>position</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.decls">decls</span>&nbsp;: <code class="type">(string * 'a) array</code>;</code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-the name of the stuff * the stuff<br>
-</div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+<code><span id="TYPEELTposition.chr">chr</span>&nbsp;: <code class="type">int</code>;</code></td>
+
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.finder">finder</span>&nbsp;: <code class="type">int Mods.StringMap.t</code>;</code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-<code class="code">fst (fst d.decls.(<span class="constructor">StringMap</span>.find s d.finder))</code> MUST be equal to <code class="code">s</code><br>
-</div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+<code><span id="TYPEELTposition.line">line</span>&nbsp;: <code class="type">int</code>;</code></td>
+
 </tr></table>
 }
 
 
 
-<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">?forbidden:Mods.StringSet.t -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> * 'a) array -> 'a <a href="NamedDecls.html#TYPEt">t</a></code></pre>
-<pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type">'a <a href="NamedDecls.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALelt_name"><span class="keyword">val</span> elt_name</span> : <code class="type">'a <a href="NamedDecls.html#TYPEt">t</a> -> int -> string</code></pre>
-<pre><span id="VALelt_id"><span class="keyword">val</span> elt_id</span> : <code class="type">?kind:string -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> string <a href="Locality.html#TYPEannot">Locality.annot</a> -> int</code></pre>
-<pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(int -> string -> 'a -> 'b -> 'a) -> 'a -> 'b <a href="NamedDecls.html#TYPEt">t</a> -> 'a</code></pre>
-<pre><span id="VALmapi"><span class="keyword">val</span> mapi</span> : <code class="type">(int -> string -> 'a -> 'b) -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> 'b <a href="NamedDecls.html#TYPEt">t</a></code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">sep:(Format.formatter -> unit) -><br>       (int -> string -> Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type">('a -> Yojson.Basic.json) -> 'a <a href="NamedDecls.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">(Yojson.Basic.json -> 'a) -> Yojson.Basic.json -> 'a <a href="NamedDecls.html#TYPEt">t</a></code></pre><div class="info ">
-<b>Raises</b> <code>Yojson.Basic.Util.Type_error</code> if it fails<br>
-</div>
-</body></html>
+<pre><code><span id="TYPErange"><span class="keyword">type</span> <code class="type"></code>range</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrange.file">file</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrange.from_position">from_position</span>&nbsp;: <code class="type"><a href="Locality.html#TYPEposition">position</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrange.to_position">to_position</span>&nbsp;: <code class="type"><a href="Locality.html#TYPEposition">position</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALto_range"><span class="keyword">val</span> to_range</span> : <code class="type"><a href="Locality.html#TYPEt">t</a> -> <a href="Locality.html#TYPErange">range</a></code></pre>
+<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Locality.html#TYPEt">t</a></code></pre>
+<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Locality.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALannot_of_json"><span class="keyword">val</span> annot_of_json</span> : <code class="type">(Yojson.Basic.json -> 'a) -> Yojson.Basic.json -> 'a <a href="Locality.html#TYPEannot">annot</a></code></pre>
+<pre><span id="VALannot_to_json"><span class="keyword">val</span> annot_to_json</span> : <code class="type">('a -> Yojson.Basic.json) -> 'a <a href="Locality.html#TYPEannot">annot</a> -> Yojson.Basic.json</code></pre></body></html>
