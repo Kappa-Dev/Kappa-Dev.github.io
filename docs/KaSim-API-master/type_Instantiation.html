@@ -106,11 +106,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">BOUND</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">BOUND_TYPE</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Instantiation</span>.binding_type<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">BOUND_to</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.site<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;event&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.action&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.binding_state)&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list)<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;event&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tests&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;actions&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.action&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;side_effects_src&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.binding_state)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;side_effects_dst&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.site&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_event&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Instantiation</span>.event<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename_abstract_test&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
