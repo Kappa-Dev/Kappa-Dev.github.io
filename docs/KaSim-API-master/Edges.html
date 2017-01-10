@@ -101,8 +101,8 @@ Concrete graph implementation<br>
 You'd better NOT use that on the state of a simulation<br>
 </div>
 
-<pre><span id="VALadd_agent"><span class="keyword">val</span> add_agent</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> int * <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">add_agent sigs agent_type graph</code><br>
+<pre><span id="VALadd_agent"><span class="keyword">val</span> add_agent</span> : <code class="type">?id:int -> <a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> int * <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">add_agent ?id sigs agent_type graph</code><br>
 </div>
 
 <pre><span id="VALadd_free"><span class="keyword">val</span> add_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
@@ -120,7 +120,7 @@ You'd better NOT use that on the state of a simulation<br>
 
 <pre><span id="VALremove_agent"><span class="keyword">val</span> remove_agent</span> : <code class="type">int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
 <pre><span id="VALremove_free"><span class="keyword">val</span> remove_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
-<pre><span id="VALremove_internal"><span class="keyword">val</span> remove_internal</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre>
+<pre><span id="VALremove_internal"><span class="keyword">val</span> remove_internal</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> int * <a href="Edges.html#TYPEt">t</a></code></pre>
 <pre><span id="VALremove_link"><span class="keyword">val</span> remove_link</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a> * (int * int) option</code></pre><div class="info ">
 Some (i,j) as second returned element means separate "new" cc j from cc i<br>
 </div>
