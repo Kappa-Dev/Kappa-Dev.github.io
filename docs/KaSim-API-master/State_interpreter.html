@@ -48,6 +48,7 @@
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
 <link title="Trace" rel="Chapter" href="Trace.html">
@@ -123,15 +124,5 @@ One event loop<br>
 
 <pre><span id="VALend_of_simulation"><span class="keyword">val</span> end_of_simulation</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       Format.formatter -> <a href="Model.html#TYPEt">Model.t</a> -> <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="State_interpreter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
 What to do after stopping simulation.<br>
-</div>
-
-<pre><span id="VALbatch_loop"><span class="keyword">val</span> batch_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       Format.formatter -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">loop message_formatter env counter graph</code>
- does a simulation in the command-line setting<br>
-</div>
-
-<pre><span id="VALinteractive_loop"><span class="keyword">val</span> interactive_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       Format.formatter -><br>       (<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">interactive_loop message_formatter env counter graph</code>
- does a simulation in the command-line setting up to an interruption<br>
 </div>
 </body></html>

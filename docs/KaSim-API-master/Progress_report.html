@@ -1,8 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
+<link rel="previous" href="Edges.html">
+<link rel="next" href="Counter.html">
+<link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -76,13 +80,23 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Index of class types</title>
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Progress_report</title>
 </head>
 <body>
-<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;</div>
-<h1>Index of class types</h1>
-<table>
-</table>
-</body>
-</html>
+<div class="navbar"><a class="pre" href="Edges.html" title="Edges">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Counter.html" title="Counter">Next</a>
+</div>
+<h1>Module <a href="type_Progress_report.html">Progress_report</a></h1>
+
+<pre><span class="keyword">module</span> Progress_report: <code class="code"><span class="keyword">sig</span></code> <a href="Progress_report.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Utilities to show progress on stdout<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+
+
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">int -> char -> <a href="Progress_report.html#TYPEt">t</a></code></pre>
+<pre><span id="VALtick"><span class="keyword">val</span> tick</span> : <code class="type">float -> float -> int -> float -> <a href="Progress_report.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALcomplete_progress_bar"><span class="keyword">val</span> complete_progress_bar</span> : <code class="type">float -> int -> <a href="Progress_report.html#TYPEt">t</a> -> unit</code></pre></body></html>

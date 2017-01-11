@@ -44,6 +44,7 @@
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
 <link title="Trace" rel="Chapter" href="Trace.html">
@@ -266,12 +267,6 @@ Returns the graph obtained by applying the rule.
 <tr><td><a href="Priority.html#VALaverage">average</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>B</td></tr>
-<tr><td><a href="State_interpreter.html#VALbatch_loop">batch_loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
-<td><div class="info">
-<code class="code">loop message_formatter env counter graph</code>
- does a simulation in the command-line setting
-</div>
-</td></tr>
 <tr><td><a href="Pattern.html#VALbegin_new">begin_new</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td><div class="info">
 Starts creation
@@ -437,6 +432,8 @@ Retuns the extension of the given injections so that the second edge
 <td></td></tr>
 <tr><td><a href="Counter.html#VALcomplete_progress_bar">complete_progress_bar</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
+<tr><td><a href="Progress_report.html#VALcomplete_progress_bar">complete_progress_bar</a> [<a href="Progress_report.html">Progress_report</a>]</td>
+<td></td></tr>
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALcomplete_wake_up_relation">complete_wake_up_relation</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALcomplete_wake_up_relation">complete_wake_up_relation</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
@@ -513,6 +510,8 @@ Give the number of stories (up to isomorphism classes) stored in a table
 <tr><td><a href="Int_storage.Storage.html#VALcreate">create</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALcreate">create</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Progress_report.html#VALcreate">create</a> [<a href="Progress_report.html">Progress_report</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALcreate">create</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
@@ -1310,12 +1309,6 @@ Infer agent signatures and tokens from init, rules and perturbations
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALinter_with_logs">inter_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
-<tr><td><a href="State_interpreter.html#VALinteractive_loop">interactive_loop</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
-<td><div class="info">
-<code class="code">interactive_loop message_formatter env counter graph</code>
- does a simulation in the command-line setting up to an interruption
-</div>
-</td></tr>
 <tr><td><a href="Signature.html#VALinternal_state_of_num">internal_state_of_num</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALinternal_states_number">internal_states_number</a> [<a href="Signature.html">Signature</a>]</td>
@@ -2597,6 +2590,11 @@ compute the strong compression of a given trace,
 <tr><td><a href="Communication.html#VALthe_rule_is_not_applied_for_the_first_time">the_rule_is_not_applied_for_the_first_time</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALtick">tick</a> [<a href="Counter.html">Counter</a>]</td>
+<td><div class="info">
+Output on stdout 
+</div>
+</td></tr>
+<tr><td><a href="Progress_report.html#VALtick">tick</a> [<a href="Progress_report.html">Progress_report</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALtime">time</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>

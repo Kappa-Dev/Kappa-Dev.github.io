@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Edges.html">
+<link rel="previous" href="Progress_report.html">
 <link rel="next" href="Data.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
@@ -48,6 +48,7 @@
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
 <link title="Data" rel="Chapter" href="Data.html">
 <link title="Trace" rel="Chapter" href="Trace.html">
@@ -82,7 +83,7 @@
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Counter</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Edges.html" title="Edges">Previous</a>
+<div class="navbar"><a class="pre" href="Progress_report.html" title="Progress_report">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
 &nbsp;<a class="post" href="Data.html" title="Data">Next</a>
 </div>
@@ -118,9 +119,7 @@ Simulation progress keeper<br>
 <pre><span id="VALreinitialize"><span class="keyword">val</span> reinitialize</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALcurrent_simulation_info"><span class="keyword">val</span> current_simulation_info</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit <a href="Trace.Simulation_info.html#TYPEt">Trace.Simulation_info.t</a></code></pre>
 <pre><span id="VALnext_story"><span class="keyword">val</span> next_story</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit <a href="Trace.Simulation_info.html#TYPEt">Trace.Simulation_info.t</a></code></pre>
-<pre><span id="VALtick"><span class="keyword">val</span> tick</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALfill"><span class="keyword">val</span> fill</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -> <a href="Counter.html#TYPEt">t</a> -> (<a href="Counter.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> array) -> unit</code></pre>
-<pre><span id="VALcomplete_progress_bar"><span class="keyword">val</span> complete_progress_bar</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALone_constructive_event"><span class="keyword">val</span> one_constructive_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
 <pre><span id="VALone_clashing_instance_event"><span class="keyword">val</span> one_clashing_instance_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
 <pre><span id="VALone_no_more_unary_event"><span class="keyword">val</span> one_no_more_unary_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
@@ -143,4 +142,9 @@ Simulation progress keeper<br>
 <pre><span id="VALcurrent_story"><span class="keyword">val</span> current_story</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnb_null_event"><span class="keyword">val</span> nb_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALconsecutive_null_event"><span class="keyword">val</span> consecutive_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALprint_efficiency"><span class="keyword">val</span> print_efficiency</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre></body></html>
+<pre><span id="VALprint_efficiency"><span class="keyword">val</span> print_efficiency</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALtick"><span class="keyword">val</span> tick</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<h5 id="5_Outputonstdout">Output on stdout </h5><br>
+</div>
+
+<pre><span id="VALcomplete_progress_bar"><span class="keyword">val</span> complete_progress_bar</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit</code></pre></body></html>
