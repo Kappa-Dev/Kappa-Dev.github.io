@@ -106,11 +106,10 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compilation_information&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.compilation_result<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_bdu_common_static&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.bdu_common_static<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_bdu_common_static&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.bdu_common_static&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_common_views&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Common_static</span>.common_views<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_common_views&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Common_static</span>.common_views&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_agent_name&nbsp;:<br>
@@ -188,23 +187,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_views_lhs&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentsSitePState_map_and_set</span>.<span class="constructor">Set</span>.t<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Map</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_views_lhs&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentsSitePState_map_and_set</span>.<span class="constructor">Set</span>.t<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_views_lhs'&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_agent_name&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.pair_of_states)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.pair_of_states&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Site_map_and_set</span>.<span class="constructor">Map</span>.t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Agent_id_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Map</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_views_lhs'&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_agent_name&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.pair_of_states)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.pair_of_states&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Site_map_and_set</span>.<span class="constructor">Map</span>.t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Agent_id_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
@@ -215,6 +203,13 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_modified_map&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentsSiteState_map_and_set</span>.<span class="constructor">Set</span>.t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_test_modif_map&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Set</span>.t&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentSite_map_and_set</span>.<span class="constructor">Map</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_test_modif_map&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Set</span>.t&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentSite_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_project_modified_map&nbsp;:<br>
