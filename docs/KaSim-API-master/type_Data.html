@@ -102,11 +102,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;snapshot_tokens&nbsp;:&nbsp;<span class="keywordsign">'</span>token&nbsp;array;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot&nbsp;=&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Raw_mixture</span>.t,&nbsp;string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;<span class="constructor">Data</span>.generic_snapshot<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;distance&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;distance_rule&nbsp;:&nbsp;int;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;distance_time&nbsp;:&nbsp;float;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;distance_length&nbsp;:&nbsp;int;<br>
-&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Flux</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Plot</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Nbr</span>.t&nbsp;array<br>
@@ -114,5 +109,4 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">TraceStep</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Trace</span>.step<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Snapshot</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Log</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UnaryDistance</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.distance<br>
 <span class="keyword">end</span></code></body></html>

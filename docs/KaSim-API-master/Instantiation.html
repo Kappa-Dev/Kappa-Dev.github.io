@@ -259,9 +259,9 @@ in a simulation state<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTevent.tests">tests</span>&nbsp;: <code class="type">'a <a href="Instantiation.html#TYPEtest">test</a> list</code>;</code></td>
+<code><span id="TYPEELTevent.tests">tests</span>&nbsp;: <code class="type">'a <a href="Instantiation.html#TYPEtest">test</a> list list</code>;</code></td>
 <td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-The tests written in the rule<br>
+The tests written in the rule (pattern by pattern)<br>
 </div>
 </td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
 </tr>
@@ -294,6 +294,16 @@ the site of the agents mentioned in the rule where there is a side
 <td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
 the site of agents not mentionned in the rule that have been freed
     by side effect<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent.connectivity_tests">connectivity_tests</span>&nbsp;: <code class="type">'a <a href="Instantiation.html#TYPEtest">test</a> list</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+witness that patterns where connected (unary instances only of course)<br>
 </div>
 </td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
 </tr></table>
