@@ -99,6 +99,8 @@ Datastructures' functors instantiation<br>
 <pre><span class="keyword">module</span> <a href="Mods.StringSetMap.html">StringSetMap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = string</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.StringSet.html">StringSet</a>: <code class="type">StringSetMap.Set</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.StringMap.html">StringMap</a>: <code class="type">StringSetMap.Map</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.String2SetMap.html">String2SetMap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = string*string</code></pre>
+<pre><span class="keyword">module</span> <a href="Mods.String2Map.html">String2Map</a>: <code class="type">String2SetMap.Map</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.IntSetMap.html">IntSetMap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = int</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.IntSet.html">IntSet</a>: <code class="type">IntSetMap.Set</code></pre>
 <pre><span class="keyword">module</span> <a href="Mods.IntMap.html">IntMap</a>: <code class="type">IntSetMap.Map</code></pre>

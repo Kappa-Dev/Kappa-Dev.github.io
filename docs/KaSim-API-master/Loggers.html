@@ -114,6 +114,13 @@
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
+<code><span id="TYPEELTencoding.Matrix"><span class="constructor">Matrix</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
 <code><span id="TYPEELTencoding.HTML_Graph"><span class="constructor">HTML_Graph</span></span></code></td>
 
 </tr>
@@ -229,6 +236,8 @@
 <pre><span id="VALadd_node"><span class="keyword">val</span> add_node</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> Graph_loggers_sig.options list -> unit</code></pre>
 <pre><span id="VALadd_edge"><span class="keyword">val</span> add_edge</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> string -> Graph_loggers_sig.options list -> unit</code></pre>
 <pre><span id="VALdump_json"><span class="keyword">val</span> dump_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json -> unit</code></pre>
+<pre><span id="VALget_edge_map"><span class="keyword">val</span> get_edge_map</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Graph_loggers_sig.options list list Mods.String2Map.t</code></pre>
+<pre><span id="VALget_nodes"><span class="keyword">val</span> get_nodes</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> (string * Graph_loggers_sig.options list) list</code></pre>
 <pre><span id="VALget_expr"><span class="keyword">val</span> get_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> option</code></pre>
 <pre><span id="VALset_expr"><span class="keyword">val</span> set_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -> unit</code></pre>
 <pre><span id="VALis_const"><span class="keyword">val</span> is_const</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Ode_loggers_sig.variable -> bool</code></pre>
