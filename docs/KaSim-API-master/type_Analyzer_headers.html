@@ -219,6 +219,44 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentSite_map_and_set</span>.<span class="constructor">Set</span>.t&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_covering_classes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Covering_classes_type</span>.remanent<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Agent_type_quick_nearly_Inf_Int_storage_Imperatif</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_covering_classes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Covering_classes_type</span>.remanent<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Agent_type_quick_nearly_Inf_Int_storage_Imperatif</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_list_of_site_type_in_covering_classes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Covering_classes_type</span>.<span class="constructor">AgentCV_map_and_set</span>.<span class="constructor">Map</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_list_of_site_type_in_covering_classes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Covering_classes_type</span>.<span class="constructor">AgentCV_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_covering_classes_id&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Covering_classes_type</span>.cv_id&nbsp;list&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentSite_map_and_set</span>.<span class="constructor">Map</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_covering_classes_id&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Covering_classes_type</span>.cv_id&nbsp;list&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentSite_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_remanent_triple&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Covering_classes_type</span>.<span class="constructor">Dictionary_of_List_sites</span>.key&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Covering_classes_type</span>.<span class="constructor">Dictionary_of_List_sites</span>.value&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Site_map_and_set</span>.<span class="constructor">Set</span>.t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Agent_type_quick_nearly_Inf_Int_storage_Imperatif</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_remanent_triple&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Covering_classes_type</span>.<span class="constructor">Dictionary_of_List_sites</span>.key&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Covering_classes_type</span>.<span class="constructor">Dictionary_of_List_sites</span>.value&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Site_map_and_set</span>.<span class="constructor">Set</span>.t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Agent_type_quick_nearly_Inf_Int_storage_Imperatif</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compute_initial_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information&nbsp;<span class="keywordsign">-&gt;</span><br>

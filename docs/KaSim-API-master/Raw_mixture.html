@@ -141,7 +141,12 @@
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type"><a href="Raw_mixture.html#TYPEagent">agent</a> list</code> </pre>
 
 
-<pre><span id="VALequal"><span class="keyword">val</span> equal</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Raw_mixture.html#TYPEt">t</a> -> <a href="Raw_mixture.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> </pre>
+
+
+<pre><span id="VALempty_snapshot"><span class="keyword">val</span> empty_snapshot</span> : <code class="type"><a href="Raw_mixture.html#TYPEsnapshot">snapshot</a></code></pre>
+<pre><span id="VALincrement_in_snapshot"><span class="keyword">val</span> increment_in_snapshot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Raw_mixture.html#TYPEt">t</a> -> <a href="Raw_mixture.html#TYPEsnapshot">snapshot</a> -> <a href="Raw_mixture.html#TYPEsnapshot">snapshot</a></code></pre>
+<pre><span id="VALoutput_snapshot"><span class="keyword">val</span> output_snapshot</span> : <code class="type"><a href="Raw_mixture.html#TYPEsnapshot">snapshot</a> -> (int * <a href="Raw_mixture.html#TYPEt">t</a>) list</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">compact:bool -> <a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Raw_mixture.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALprint_dot"><span class="keyword">val</span> print_dot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> int -> Format.formatter -> <a href="Raw_mixture.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Raw_mixture.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
