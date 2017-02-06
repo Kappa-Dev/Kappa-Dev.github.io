@@ -313,11 +313,11 @@ div.lstinputlisting{ font-family: monospace; white-space: nowrap; }
 #textcolor18{color:#0000FF}
 #textcolor19{color:#0000FF}
 #textcolor20{color:#0000FF}
+tr#TBL-5-1- td{border-top:0.12193em solid} 
+tr#TBL-5-1- td{border-bottom:0.07622em solid}
+tr#TBL-5-7- td{border-bottom:0.12193em solid}
 #textcolor21{color:#0000FF}
 #textcolor22{color:#0000FF}
-tr#TBL-6-1- td{border-top:0.12193em solid} 
-tr#TBL-6-1- td{border-bottom:0.07622em solid}
-tr#TBL-6-7- td{border-bottom:0.12193em solid}
 #textcolor23{color:#0000FF}
 #textcolor24{color:#0000FF}
 #textcolor25{color:#0000FF}
@@ -360,8 +360,5 @@ tr#TBL-8-24- td{border-bottom:0.12193em solid}
 #textcolor57{color:#0000FF}
 #textcolor58{color:#0000FF}
 #textcolor59{color:#0000FF}
-#textcolor60{color:#0000FF}
-#textcolor61{color:#0000FF}
-#textcolor62{color:#0000FF}
 /* end css.sty */
 
