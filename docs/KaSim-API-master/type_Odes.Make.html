@@ -91,6 +91,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count:<span class="constructor">Ode_args</span>.count&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute_jacobian:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.compil<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;network_from_compil&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ignore_obs:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(int,&nbsp;int)&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.network<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_reactions&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.network&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -120,6 +121,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.enriched_rule&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Odes</span>.<span class="constructor">Make</span>.connected_component_id&nbsp;*&nbsp;<span class="constructor">I</span>.connected_component)&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_divide_rate_by&nbsp;:&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.enriched_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_list_of_divide_rule_by_rate&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cannonic_form_from_syntactic_rules&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.nauto_in_rules_cache&nbsp;*&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">end</span></code></body></html>
