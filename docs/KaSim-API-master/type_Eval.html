@@ -94,7 +94,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;pause:((unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;return:(<span class="constructor">Model</span>.t&nbsp;*&nbsp;(bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;option&nbsp;*&nbsp;string&nbsp;*&nbsp;string&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return:(int&nbsp;option&nbsp;*&nbsp;<span class="constructor">Model</span>.t&nbsp;*&nbsp;(bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;option&nbsp;*&nbsp;string&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;option&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;max_sharing:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?rescale_init:float&nbsp;<span class="keywordsign">-&gt;</span><br>

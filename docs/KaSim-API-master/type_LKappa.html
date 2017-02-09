@@ -104,13 +104,12 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_raw_mixture&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy_rule_agent&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_mixture&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;ltypes:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_mix&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_created&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;r_rm_tokens&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;r_add_tokens&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;r_delta_tokens&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_rate&nbsp;:&nbsp;(<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_un_rate&nbsp;:<br>

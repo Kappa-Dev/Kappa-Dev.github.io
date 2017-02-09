@@ -98,6 +98,10 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mixture&nbsp;=&nbsp;<span class="constructor">Ast</span>.agent&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;edit_rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;mix&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;delta_token&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;act&nbsp;:&nbsp;(<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;un_act&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
