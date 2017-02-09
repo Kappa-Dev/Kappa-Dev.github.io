@@ -133,10 +133,6 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id_with_mode&nbsp;=&nbsp;rule_id&nbsp;*&nbsp;arity&nbsp;*&nbsp;direction<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;divide_rule_rate_by&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_rules_cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;nauto_in_rules_cache&nbsp;*&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cannonic_form_from_syntactic_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;nauto_in_rules_cache&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;nauto_in_rules_cache&nbsp;*&nbsp;<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;valid_modes&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;pattern<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;token_vector&nbsp;:<br>
@@ -173,4 +169,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_obs_titles&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_tokens&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cannonic_form_from_syntactic_rule&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nauto_in_rules_cache&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option&nbsp;list&nbsp;*&nbsp;nauto_in_rules_cache&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list<br>
 <span class="keyword">end</span></code></body></html>
