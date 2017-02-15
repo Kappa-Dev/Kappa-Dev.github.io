@@ -721,6 +721,8 @@ compute transitive closure with different parameters (progress_bar, gc)
 <td></td></tr>
 <tr><td><a href="Kappa_printer.html#VALenv">env</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
 <td></td></tr>
+<tr><td><a href="Kappa_printer.html#VALenv_kappa">env_kappa</a> [<a href="Kappa_printer.html">Kappa_printer</a>]</td>
+<td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALequal">equal</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALequal">equal</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
@@ -741,8 +743,6 @@ error_init is an empty log of errors
 <tr><td><a href="Utilities.html#VALerror_list_to_json">error_list_to_json</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Trace.Simulation_info.html#VALevent">event</a> [<a href="Trace.Simulation_info.html">Trace.Simulation_info</a>]</td>
-<td></td></tr>
-<tr><td><a href="Counter.html#VALevent">event</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALevent_of_json">event_of_json</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
@@ -866,6 +866,8 @@ put together the stories having the same canonic form, this has do be done expli
 </div>
 </td></tr>
 <tr><td><a href="Ast.html#VALflip_label">flip_label</a> [<a href="Ast.html">Ast</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALfloat_is_zero">float_is_zero</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALflush_buffer">flush_buffer</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
@@ -1299,7 +1301,11 @@ Infer agent signatures and tokens from init, rules and perturbations
 <td></td></tr>
 <tr><td><a href="Communication.html#VALinit_sites_working_list">init_sites_working_list</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
+<tr><td><a href="Counter.html#VALinit_time">init_time</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALinit_time">init_time</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Outputs.html#VALinitial_inputs">initial_inputs</a> [<a href="Outputs.html">Outputs</a>]</td>
 <td></td></tr>
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALinitialize">initialize</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
 <td></td></tr>
@@ -1319,6 +1325,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 <tr><td><a href="Analyzer_headers.html#VALinitialize_global_information">initialize_global_information</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALinjection_for_one_more_edge">injection_for_one_more_edge</a> [<a href="Navigation.html">Navigation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Outputs.html#VALinput_modifications">input_modifications</a> [<a href="Outputs.html">Outputs</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mods.html#VALint_compare">int_compare</a> [<a href="Mods.html">Mods</a>]</td>
 <td></td></tr>
@@ -1953,6 +1961,11 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALopen_out">open_out</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
+<tr><td><a href="Kappa_files.html#VALopen_out_fresh">open_out_fresh</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td><div class="info">
+<code class="code">open_out_fresh base facultative ext</code>
+</div>
+</td></tr>
 <tr><td><a href="Ode_loggers.html#VALopen_procedure">open_procedure</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALopen_row">open_row</a> [<a href="Loggers.html">Loggers</a>]</td>
@@ -1978,6 +1991,8 @@ values of observables)
 <tr><td><a href="Communication.html#VALoverwrite_potential_partners_map">overwrite_potential_partners_map</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Rule_interpreter.html#VALoverwrite_var">overwrite_var</a> [<a href="Rule_interpreter.html">Rule_interpreter</a>]</td>
+<td></td></tr>
+<tr><td><a href="Model.html#VALoverwrite_vars">overwrite_vars</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>P</td></tr>
 <tr><td><a href="Pp.html#VALpair">pair</a> [<a href="Pp.html">Pp</a>]</td>
@@ -2165,6 +2180,8 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_interpolate">print_interpolate</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Model.html#VALprint_kappa">print_kappa</a> [<a href="Model.html">Model</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_license_check">print_license_check</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ast.html#VALprint_link">print_link</a> [<a href="Ast.html">Ast</a>]</td>
@@ -2259,7 +2276,7 @@ proj_set f set is the set {f(a) | a\in S}
 <td></td></tr>
 <tr><td><a href="Model.html#VALpropagate_constant">propagate_constant</a> [<a href="Model.html">Model</a>]</td>
 <td><div class="info">
-<code class="code">propagate_constant updated_vars env</code>
+<code class="code">propagate_constant updated_vars overwrite_vars env</code>
 </div>
 </td></tr>
 <tr><td><a href="Alg_expr.html#VALpropagate_constant">propagate_constant</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -2628,8 +2645,6 @@ Output on stdout
 </div>
 </td></tr>
 <tr><td><a href="Progress_report.html#VALtick">tick</a> [<a href="Progress_report.html">Progress_report</a>]</td>
-<td></td></tr>
-<tr><td><a href="Counter.html#VALtime">time</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALtime_percentage">time_percentage</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
