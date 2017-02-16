@@ -1,7 +1,12 @@
-<html><head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
+<link rel="previous" href="Alg_expr.html">
+<link rel="next" href="Raw_mixture.html">
+<link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -76,7 +81,23 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Mods.DynArray</title>
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : Alg_expr_extra</title>
 </head>
 <body>
-<code class="code"><span class="constructor">GenArray</span>.<span class="constructor">GenArray</span></code></body></html>
+<div class="navbar"><a class="pre" href="Alg_expr.html" title="Alg_expr">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Raw_mixture.html" title="Raw_mixture">Next</a>
+</div>
+<h1>Module <a href="type_Alg_expr_extra.html">Alg_expr_extra</a></h1>
+
+<pre><span class="keyword">module</span> Alg_expr_extra: <code class="code"><span class="keyword">sig</span></code> <a href="Alg_expr_extra.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+
+<pre><span id="VALdivide_expr_by_int"><span class="keyword">val</span> divide_expr_by_int</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       int -> ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALmult_expr_by_int"><span class="keyword">val</span> mult_expr_by_int</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       int -> ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALadd"><span class="keyword">val</span> add</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="TYPEcorrected_rate_const"><span class="keyword">type</span> <code class="type">'a</code> corrected_rate_const</span> </pre>
+
+
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">(Format.formatter -> 'a option -> unit) -><br>       Format.formatter -> 'a <a href="Alg_expr_extra.html#TYPEcorrected_rate_const">corrected_rate_const</a> option -> unit</code></pre>
+<pre><span id="VALget_corrected_rate"><span class="keyword">val</span> get_corrected_rate</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       'b <a href="Alg_expr_extra.html#TYPEcorrected_rate_const">corrected_rate_const</a> option</code></pre>
+<pre><span id="VALnecessarily_equal"><span class="keyword">val</span> necessarily_equal</span> : <code class="type">'a <a href="Alg_expr_extra.html#TYPEcorrected_rate_const">corrected_rate_const</a> option -><br>       'a <a href="Alg_expr_extra.html#TYPEcorrected_rate_const">corrected_rate_const</a> option -> bool</code></pre></body></html>
