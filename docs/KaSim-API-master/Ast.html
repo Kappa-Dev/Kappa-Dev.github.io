@@ -621,6 +621,10 @@ rules with explicit modifications<br>
 
 <pre><span id="VALempty_compil"><span class="keyword">val</span> empty_compil</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a></code></pre>
 <pre><span id="VALno_more_site_on_right"><span class="keyword">val</span> no_more_site_on_right</span> : <code class="type">bool -> <a href="Ast.html#TYPEport">port</a> list -> <a href="Ast.html#TYPEport">port</a> list -> bool</code></pre>
+<pre><span id="VALsplit_mixture"><span class="keyword">val</span> split_mixture</span> : <code class="type"><a href="Ast.html#TYPEmixture">mixture</a> -> <a href="Ast.html#TYPEmixture">mixture</a> * <a href="Ast.html#TYPEmixture">mixture</a> * <a href="Ast.html#TYPEmixture">mixture</a> * <a href="Ast.html#TYPEmixture">mixture</a></code></pre><div class="info ">
+<b>Returns</b> <code class="code">lhs,rhs,add,del</code><br>
+</div>
+
 <pre><span id="VALimplicit_signature"><span class="keyword">val</span> implicit_signature</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a> -> <a href="Ast.html#TYPEparsing_compil">parsing_compil</a></code></pre><div class="info ">
 Infer agent signatures and tokens from init, rules and perturbations<br>
 </div>
