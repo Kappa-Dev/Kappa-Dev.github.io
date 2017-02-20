@@ -81,7 +81,9 @@
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
-<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html"><title>KaSim API : LKappa</title>
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
+<link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : LKappa</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="Ast.html" title="Ast">Previous</a>
@@ -267,12 +269,6 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 
 
 
-<pre><span id="VALprint_intf_lhs"><span class="keyword">val</span> print_intf_lhs</span> : <code class="type">ltypes:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       int -><br>       Format.formatter -><br>       ((int, int * int) <a href="Ast.html#TYPElink">Ast.link</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array *<br>       <a href="LKappa.html#TYPErule_internal">rule_internal</a> array -> unit</code></pre>
-<pre><span id="VALget_agent_lhs"><span class="keyword">val</span> get_agent_lhs</span> : <code class="type"><a href="LKappa.html#TYPErule_agent">rule_agent</a> -><br>       int *<br>       (((int, int * int) <a href="Ast.html#TYPElink">Ast.link</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array *<br>        <a href="LKappa.html#TYPErule_internal">rule_internal</a> array)</code></pre>
-<pre><span id="VALprint_agent_lhs"><span class="keyword">val</span> print_agent_lhs</span> : <code class="type">ltypes:bool -> <a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> -> unit</code></pre>
-<pre><span id="VALprint_agent_rhs"><span class="keyword">val</span> print_agent_rhs</span> : <code class="type">ltypes:bool -> <a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> -> unit</code></pre>
-<pre><span id="VALprint_rule_agent"><span class="keyword">val</span> print_rule_agent</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> ltypes:bool -> Format.formatter -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> -> unit</code></pre>
-<pre><span id="VALprint_rhs"><span class="keyword">val</span> print_rhs</span> : <code class="type">ltypes:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a> -> Format.formatter -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> list -> unit</code></pre>
 <pre><span id="VALprint_rates"><span class="keyword">val</span> print_rates</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">full:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALrule_to_json"><span class="keyword">val</span> rule_to_json</span> : <code class="type"><a href="LKappa.html#TYPErule">rule</a> -> Yojson.Basic.json</code></pre>
