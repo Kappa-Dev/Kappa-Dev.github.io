@@ -103,13 +103,6 @@ Trace of simulation<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTevent_kind.OBS"><span class="constructor">OBS</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
 <code><span id="TYPEELTevent_kind.RULE"><span class="constructor">RULE</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
 
 </tr>
@@ -138,12 +131,6 @@ the rule<br>
 
 <pre><span id="VALprint_event_kind"><span class="keyword">val</span> print_event_kind</span> : <code class="type">?env:<a href="Model.html#TYPEt">Model.t</a> -> Format.formatter -> <a href="Trace.html#TYPEevent_kind">event_kind</a> -> unit</code></pre>
 <pre><span id="VALprint_event_kind_dot_annot"><span class="keyword">val</span> print_event_kind_dot_annot</span> : <code class="type"><a href="Model.html#TYPEt">Model.t</a> -> Format.formatter -> <a href="Trace.html#TYPEevent_kind">event_kind</a> -> unit</code></pre>
-<pre><span id="TYPEevent"><span class="keyword">type</span> <code class="type"></code>event</span> = <code class="type"><a href="Trace.html#TYPEevent_kind">event_kind</a> * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a> *<br>       unit <a href="Trace.Simulation_info.html#TYPEt">Simulation_info.t</a></code> </pre>
-
-
-<pre><span id="TYPEobs"><span class="keyword">type</span> <code class="type"></code>obs</span> = <code class="type"><a href="Trace.html#TYPEevent_kind">event_kind</a> * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list list *<br>       unit <a href="Trace.Simulation_info.html#TYPEt">Simulation_info.t</a></code> </pre>
-
-
 <pre><code><span id="TYPEstep"><span class="keyword">type</span> <code class="type"></code>step</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -156,7 +143,14 @@ the rule<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTstep.Event"><span class="constructor">Event</span></span> <span class="keyword">of</span> <code class="type"><a href="Trace.html#TYPEevent">event</a></code></code></td>
+<code><span id="TYPEELTstep.Rule"><span class="constructor">Rule</span></span> <span class="keyword">of</span> <code class="type">int * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a><br>        * unit <a href="Trace.Simulation_info.html#TYPEt">Simulation_info.t</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstep.Pert"><span class="constructor">Pert</span></span> <span class="keyword">of</span> <code class="type">string * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a><br>        * unit <a href="Trace.Simulation_info.html#TYPEt">Simulation_info.t</a></code></code></td>
 
 </tr>
 <tr>
@@ -170,7 +164,7 @@ the rule<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTstep.Obs"><span class="constructor">Obs</span></span> <span class="keyword">of</span> <code class="type"><a href="Trace.html#TYPEobs">obs</a></code></code></td>
+<code><span id="TYPEELTstep.Obs"><span class="constructor">Obs</span></span> <span class="keyword">of</span> <code class="type">string * <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list list<br>        * unit <a href="Trace.Simulation_info.html#TYPEt">Simulation_info.t</a></code></code></td>
 
 </tr>
 <tr>
@@ -191,10 +185,12 @@ the rule<br>
 <pre><span id="VALstep_is_obs"><span class="keyword">val</span> step_is_obs</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
 <pre><span id="VALstep_is_init"><span class="keyword">val</span> step_is_init</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
 <pre><span id="VALstep_is_subs"><span class="keyword">val</span> step_is_subs</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
-<pre><span id="VALstep_is_event"><span class="keyword">val</span> step_is_event</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
+<pre><span id="VALstep_is_rule"><span class="keyword">val</span> step_is_rule</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
+<pre><span id="VALstep_is_pert"><span class="keyword">val</span> step_is_pert</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
 <pre><span id="VALhas_creation_of_step"><span class="keyword">val</span> has_creation_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> bool</code></pre>
 <pre><span id="VALtests_of_step"><span class="keyword">val</span> tests_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list</code></pre>
 <pre><span id="VALactions_of_step"><span class="keyword">val</span> actions_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEaction">Instantiation.action</a> list *<br>       (<a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a> *<br>        <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEbinding_state">Instantiation.binding_state</a>)<br>       list</code></pre>
+<pre><span id="VALside_effects_of_step"><span class="keyword">val</span> side_effects_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a> list</code></pre>
 <pre><span id="VALsimulation_info_of_step"><span class="keyword">val</span> simulation_info_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> unit <a href="Trace.Simulation_info.html#TYPEt">Simulation_info.t</a> option</code></pre>
 <pre><span id="VALcreation_of_actions"><span class="keyword">val</span> creation_of_actions</span> : <code class="type">('a -> 'b) -> 'a <a href="Instantiation.html#TYPEaction">Instantiation.action</a> list -> 'b list</code></pre>
 <pre><span id="VALcreation_of_step"><span class="keyword">val</span> creation_of_step</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> int list</code></pre>
@@ -202,5 +198,4 @@ the rule<br>
 <pre><span id="VALstep_to_yojson"><span class="keyword">val</span> step_to_yojson</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALstep_of_yojson"><span class="keyword">val</span> step_of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Trace.html#TYPEstep">step</a></code></pre>
 <pre><span id="VALto_yojson"><span class="keyword">val</span> to_yojson</span> : <code class="type"><a href="Trace.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALof_yojson"><span class="keyword">val</span> of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Trace.html#TYPEt">t</a></code></pre>
-<pre><span id="VALlog_event"><span class="keyword">val</span> log_event</span> : <code class="type">int -><br>       (int * (int * int * int)) list -><br>       <a href="Trace.html#TYPEevent_kind">event_kind</a> -> <a href="Trace.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre></body></html>
+<pre><span id="VALof_yojson"><span class="keyword">val</span> of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Trace.html#TYPEt">t</a></code></pre></body></html>

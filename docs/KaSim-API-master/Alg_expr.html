@@ -93,7 +93,7 @@
 <h1>Module <a href="type_Alg_expr.html">Alg_expr</a></h1>
 
 <pre><span class="keyword">module</span> Alg_expr: <code class="code"><span class="keyword">sig</span></code> <a href="Alg_expr.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-depend in time, depend in event number, depend in given var<br>
+<h6 id="6_Smartconstructor">Smart constructor </h6><br>
 </div>
 <hr width="100%">
 
@@ -201,6 +201,14 @@ depend in time, depend in event number, depend in given var<br>
 <pre><span id="VALbool_to_yojson"><span class="keyword">val</span> bool_to_yojson</span> : <code class="type">('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json) -> ('a, 'b) <a href="Alg_expr.html#TYPEbool">bool</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALbool_of_yojson"><span class="keyword">val</span> bool_of_yojson</span> : <code class="type">(Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'b) -> Yojson.Basic.json -> ('a, 'b) <a href="Alg_expr.html#TYPEbool">bool</a></code></pre>
 <pre><span id="VALprint_bool"><span class="keyword">val</span> print_bool</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Alg_expr.html#TYPEbool">bool</a> -> unit</code></pre>
+<pre><span id="VALconst"><span class="keyword">val</span> const</span> : <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre><div class="info ">
+<h6 id="6_Smartconstructor">Smart constructor </h6><br>
+</div>
+
+<pre><span id="VALadd"><span class="keyword">val</span> add</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALminus"><span class="keyword">val</span> minus</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALmult"><span class="keyword">val</span> mult</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALdiv"><span class="keyword">val</span> div</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
 <pre><span id="VALadd_dep"><span class="keyword">val</span> add_dep</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       <a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre><div class="info ">
 depend in time, depend in event number, depend in given var<br>
 </div>
