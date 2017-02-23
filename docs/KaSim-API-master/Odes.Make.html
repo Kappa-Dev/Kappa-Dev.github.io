@@ -130,7 +130,22 @@
 <pre><span id="VALget_lhs"><span class="keyword">val</span> get_lhs</span> : <code class="type"><a href="Odes.Make.html#TYPEenriched_rule">enriched_rule</a> -> I.pattern</code></pre>
 <pre><span id="VALget_lhs_cc"><span class="keyword">val</span> get_lhs_cc</span> : <code class="type"><a href="Odes.Make.html#TYPEenriched_rule">enriched_rule</a> -><br>       (<a href="Odes.Make.html#TYPEconnected_component_id">connected_component_id</a> * I.connected_component) list</code></pre>
 <pre><span id="VALget_divide_rate_by"><span class="keyword">val</span> get_divide_rate_by</span> : <code class="type"><a href="Odes.Make.html#TYPEenriched_rule">enriched_rule</a> -> int</code></pre>
-<pre><span id="TYPEkind"><span class="keyword">type</span> <code class="type"></code>kind</span> </pre>
+<pre><code><span id="TYPEkind"><span class="keyword">type</span> <code class="type"></code>kind</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkind.Internal"><span class="constructor">Internal</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkind.Binding"><span class="constructor">Binding</span></span></code></td>
+
+</tr></table>
 
 
-<pre><span id="VALcompute_symmetries_from_syntactic_rules"><span class="keyword">val</span> compute_symmetries_from_syntactic_rules</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> I.compil -> I.nauto_in_rules_cache * unit</code></pre></body></html>
+
+<pre><span id="VALcompute_symmetries_from_syntactic_rules"><span class="keyword">val</span> compute_symmetries_from_syntactic_rules</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       I.compil -><br>       <a href="Odes.Make.html#TYPEkind">kind</a> -><br>       <a href="Odes.Make.html#TYPEkind">kind</a> -><br>       Symmetries.partitioned_contact_map -> I.nauto_in_rules_cache * unit</code></pre></body></html>

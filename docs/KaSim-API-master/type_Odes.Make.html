@@ -126,7 +126,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.enriched_rule&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Odes</span>.<span class="constructor">Make</span>.connected_component_id&nbsp;*&nbsp;<span class="constructor">I</span>.connected_component)&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_divide_rate_by&nbsp;:&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.enriched_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;kind<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;kind&nbsp;=&nbsp;<span class="constructor">Internal</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Binding</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compute_symmetries_from_syntactic_rules&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.nauto_in_rules_cache&nbsp;*&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">I</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.kind&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.kind&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.partitioned_contact_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.nauto_in_rules_cache&nbsp;*&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">end</span></code></body></html>
