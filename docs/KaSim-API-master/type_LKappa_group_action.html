@@ -79,32 +79,15 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Export_to_KaDE</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : LKappa_group_action</title>
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="keyword">type</span>&nbsp;<span class="constructor">Type</span>&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;parameters&nbsp;=&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;errors&nbsp;=&nbsp;<span class="constructor">Exception</span>.method_handler<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?compil:<span class="constructor">Ast</span>.parsing_compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_parameters&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.parameters<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_parameters&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_handler&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.handler<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_errors&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.errors<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_symmetric_sites&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Remanent_state</span>.symmetric_sites<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
-&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Export</span>&nbsp;:&nbsp;<span class="keyword">functor</span>&nbsp;(<span class="constructor">Reachability</span>&nbsp;:&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Type</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_over_orbit&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Raw_mixture</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Raw_mixture</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
 <span class="keyword">end</span></code></body></html>

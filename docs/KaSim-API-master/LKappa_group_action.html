@@ -1,7 +1,12 @@
-<html><head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
+<link rel="previous" href="Mvbdu_wrapper.html">
+<link rel="next" href="Export_to_KaSim.html">
+<link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -79,32 +84,23 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Export_to_KaDE</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : LKappa_group_action</title>
 </head>
 <body>
-<code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="keyword">type</span>&nbsp;<span class="constructor">Type</span>&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;parameters&nbsp;=&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;errors&nbsp;=&nbsp;<span class="constructor">Exception</span>.method_handler<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?compil:<span class="constructor">Ast</span>.parsing_compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_parameters&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.parameters<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_parameters&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_handler&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.handler<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_errors&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.errors<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_symmetric_sites&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaDE</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Remanent_state</span>.symmetric_sites<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
-&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Export</span>&nbsp;:&nbsp;<span class="keyword">functor</span>&nbsp;(<span class="constructor">Reachability</span>&nbsp;:&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Type</span><br>
-<span class="keyword">end</span></code></body></html>
+<div class="navbar"><a class="pre" href="Mvbdu_wrapper.html" title="Mvbdu_wrapper">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Export_to_KaSim.html" title="Export_to_KaSim">Next</a>
+</div>
+<h1>Module <a href="type_LKappa_group_action.html">LKappa_group_action</a></h1>
+
+<pre><span class="keyword">module</span> LKappa_group_action: <code class="code"><span class="keyword">sig</span></code> <a href="LKappa_group_action.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+fold_over_orbit positions sigma sigma_inv sigma_raw sigma_raw_inv f rule init iterates the function f over the orbit of rule by a subgroup of transformations.
+sigma and sigma_inv apply a transformation and its inverse to tested/modified/deleted agents.
+sigma_raw and sigma_raw_inv apply a transformatio and its inverse to created agents.
+These four functions operate by side-effects (LKappa agents are imperatif).
+The subgroup is defined by these transformations on agents and the list of  agents positions, where the transformation may be applied.  Positions starts at 0 with the agents that may be tested/modified/deleted, followed by the ones that may be created.
+At the end of the itteration, the rule has the same value as before the iteration.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALfold_over_orbit"><span class="keyword">val</span> fold_over_orbit</span> : <code class="type">int list -><br>       (<a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit) -><br>       (<a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit) -><br>       (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit) -><br>       (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit) -><br>       (<a href="LKappa.html#TYPErule">LKappa.rule</a> -> 'a -> 'a) -> <a href="LKappa.html#TYPErule">LKappa.rule</a> -> 'a -> 'a</code></pre></body></html>
