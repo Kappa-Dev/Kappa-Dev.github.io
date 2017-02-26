@@ -94,15 +94,12 @@
 <h1>Module <a href="type_LKappa_group_action.html">LKappa_group_action</a></h1>
 
 <pre><span class="keyword">module</span> LKappa_group_action: <code class="code"><span class="keyword">sig</span></code> <a href="LKappa_group_action.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-Primitives to test whether it is worth applying a transposition of states
-   on a given agent<br>
+Primitives to detect where a permutation of states may be applied in a rule<br>
 </div>
 <hr width="100%">
 
-<pre><span id="VALmay_swap_internal_state_regular"><span class="keyword">val</span> may_swap_internal_state_regular</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> bool</code></pre>
-<pre><span id="VALmay_swap_binding_state_regular"><span class="keyword">val</span> may_swap_binding_state_regular</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> bool</code></pre>
-<pre><span id="VALmay_swap_internal_state_created"><span class="keyword">val</span> may_swap_internal_state_created</span> : <code class="type">int -> int -> int -> <a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> bool</code></pre>
-<pre><span id="VALmay_swap_binding_state_created"><span class="keyword">val</span> may_swap_binding_state_created</span> : <code class="type">int -> int -> int -> <a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> bool</code></pre>
+<pre><span id="VALpotential_positions_for_swapping_internal_states"><span class="keyword">val</span> potential_positions_for_swapping_internal_states</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule">LKappa.rule</a> -> int list</code></pre>
+<pre><span id="VALpotential_positions_for_swapping_binding_states"><span class="keyword">val</span> potential_positions_for_swapping_binding_states</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule">LKappa.rule</a> -> int list</code></pre>
 <pre><span id="VALswap_internal_state_regular"><span class="keyword">val</span> swap_internal_state_regular</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit</code></pre><div class="info ">
 Primitives to apply a transposition of states on a given agent<br>
 </div>
