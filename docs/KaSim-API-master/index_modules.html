@@ -399,7 +399,11 @@ Intermediate representation of model on wich sanity has been checked
 </td></tr>
 <tr><td><a href="LKappa_group_action.html">LKappa_group_action</a> </td>
 <td><div class="info">
-Primitives to detect where a permutation of states may be applied in a rule
+check_orbit_internal_state_permutation ~agent_type ~site1 ~site2 rule
+    ~correct rates cache ~counter to_be_checked
+    will visit the orbit of rule when swapping the internal states of site1 and site2 in agents of type agent_type;
+    rates contains the rate of each rule (stored according to their hash)
+    to be divided by the respecive integer in correct.
 </div>
 </td></tr>
 <tr><td><a href="LargeArray.html">LargeArray</a> </td>

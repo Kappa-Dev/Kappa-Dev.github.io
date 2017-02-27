@@ -94,25 +94,26 @@
 <h1>Module <a href="type_LKappa_group_action.html">LKappa_group_action</a></h1>
 
 <pre><span class="keyword">module</span> LKappa_group_action: <code class="code"><span class="keyword">sig</span></code> <a href="LKappa_group_action.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-Primitives to detect where a permutation of states may be applied in a rule<br>
+check_orbit_internal_state_permutation ~agent_type ~site1 ~site2 rule
+    ~correct rates cache ~counter to_be_checked
+    will visit the orbit of rule when swapping the internal states of site1 and site2 in agents of type agent_type;
+    rates contains the rate of each rule (stored according to their hash)
+    to be divided by the respecive integer in correct.
+    counter is an array of 0 (after the call, the array is reset to 0.
+    to_be_checked is an array of boolean: false means that there is no rule corresponding to this hash, or that this rule is already in an orbit;
+     true, means that there is a rule corresponding to this hash, and it does not belong to a visited orbit<br>
 </div>
 <hr width="100%">
 
-<pre><span id="VALpotential_positions_for_swapping_internal_states"><span class="keyword">val</span> potential_positions_for_swapping_internal_states</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule">LKappa.rule</a> -> int list</code></pre>
-<pre><span id="VALpotential_positions_for_swapping_binding_states"><span class="keyword">val</span> potential_positions_for_swapping_binding_states</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule">LKappa.rule</a> -> int list</code></pre>
-<pre><span id="VALswap_internal_state_regular"><span class="keyword">val</span> swap_internal_state_regular</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit</code></pre><div class="info ">
-Primitives to apply a transposition of states on a given agent<br>
+<pre><span id="VALcheck_orbit_internal_state_permutation"><span class="keyword">val</span> check_orbit_internal_state_permutation</span> : <code class="type">agent_type:int -><br>       site1:int -><br>       site2:int -><br>       <a href="LKappa.html#TYPErule">LKappa.rule</a> -><br>       correct:int array -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> array -><br>       LKappa_auto.cache -><br>       counter:int array -><br>       bool array -> (LKappa_auto.cache * int array * bool array) * bool</code></pre>
+<pre><span id="VALcheck_orbit_binding_state_permutation"><span class="keyword">val</span> check_orbit_binding_state_permutation</span> : <code class="type">agent_type:int -><br>       site1:int -><br>       site2:int -><br>       <a href="LKappa.html#TYPErule">LKappa.rule</a> -><br>       correct:int array -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> array -><br>       LKappa_auto.cache -><br>       counter:int array -><br>       bool array -> (LKappa_auto.cache * int array * bool array) * bool</code></pre><div class="info ">
+check_orbit_binding_state_permutation ~agent_type ~site1 ~site2 rule
+    ~correct rates cache ~counter to_be_checked
+    will visit the orbit of rule when swapping the binding states of site1 and site2 in agents of type agent_type;
+    rates contains the rate of each rule (stored according to their hash)
+    to be divided by the respecive integer in correct.
+    counter is an array of 0 (after the call, the array is reset to 0.
+    to_be_checked is an array of boolean: false means that there is no rule corresponding to this hash, or that this rule is already in an orbit;
+     true, means that there is a rule corresponding to this hash, and it does not belong to a visited orbit<br>
 </div>
-
-<pre><span id="VALswap_binding_state_regular"><span class="keyword">val</span> swap_binding_state_regular</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit</code></pre>
-<pre><span id="VALswap_internal_state_created"><span class="keyword">val</span> swap_internal_state_created</span> : <code class="type">int -> int -> int -> <a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit</code></pre>
-<pre><span id="VALswap_binding_state_created"><span class="keyword">val</span> swap_binding_state_created</span> : <code class="type">int -> int -> int -> <a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit</code></pre><br>
-for_all_over_orbit positions sigma sigma_inv sigma_raw sigma_raw_inv f rule init iterates the function f over the orbit of rule by a subgroup of transformations.
-If one execution returns false, then the iteration is interrupted, and the result is false.
-sigma and sigma_inv apply a transformation and its inverse to tested/modified/deleted agents.
-sigma_raw and sigma_raw_inv apply a transformatio and its inverse to created agents.
-These four functions operate by side-effects (LKappa agents are imperatif).
-The subgroup is defined by these transformations on agents and the list of  agents positions, where the transformation may be applied.  Positions starts at 0 with the agents that may be tested/modified/deleted, followed by the ones that may be created.
-At the end of the itteration, the rule has the same value as before the iteration.<br>
-
-<pre><span id="VALfor_all_over_orbit"><span class="keyword">val</span> for_all_over_orbit</span> : <code class="type">int list -><br>       (<a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit) -><br>       (<a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit) -><br>       (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit) -><br>       (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit) -><br>       (<a href="LKappa.html#TYPErule">LKappa.rule</a> -> 'a -> 'a * bool) -> <a href="LKappa.html#TYPErule">LKappa.rule</a> -> 'a -> 'a * bool</code></pre></body></html>
+</body></html>
