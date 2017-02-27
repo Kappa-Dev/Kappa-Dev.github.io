@@ -107,12 +107,12 @@ Primitives to apply a transposition of states on a given agent<br>
 <pre><span id="VALswap_binding_state_regular"><span class="keyword">val</span> swap_binding_state_regular</span> : <code class="type">int -> int -> int -> <a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit</code></pre>
 <pre><span id="VALswap_internal_state_created"><span class="keyword">val</span> swap_internal_state_created</span> : <code class="type">int -> int -> int -> <a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit</code></pre>
 <pre><span id="VALswap_binding_state_created"><span class="keyword">val</span> swap_binding_state_created</span> : <code class="type">int -> int -> int -> <a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit</code></pre><br>
-fold_over_orbit positions sigma sigma_inv sigma_raw sigma_raw_inv f rule init iterates the function f over the orbit of rule by a subgroup of transformations.
-If one execution returns None, then the iteration is interrupted, and the result is None.
+for_all_over_orbit positions sigma sigma_inv sigma_raw sigma_raw_inv f rule init iterates the function f over the orbit of rule by a subgroup of transformations.
+If one execution returns false, then the iteration is interrupted, and the result is false.
 sigma and sigma_inv apply a transformation and its inverse to tested/modified/deleted agents.
 sigma_raw and sigma_raw_inv apply a transformatio and its inverse to created agents.
 These four functions operate by side-effects (LKappa agents are imperatif).
 The subgroup is defined by these transformations on agents and the list of  agents positions, where the transformation may be applied.  Positions starts at 0 with the agents that may be tested/modified/deleted, followed by the ones that may be created.
 At the end of the itteration, the rule has the same value as before the iteration.<br>
 
-<pre><span id="VALfold_over_orbit"><span class="keyword">val</span> fold_over_orbit</span> : <code class="type">int list -><br>       (<a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit) -><br>       (<a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit) -><br>       (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit) -><br>       (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit) -><br>       (<a href="LKappa.html#TYPErule">LKappa.rule</a> -> 'a -> 'a option) -> <a href="LKappa.html#TYPErule">LKappa.rule</a> -> 'a -> 'a option</code></pre></body></html>
+<pre><span id="VALfor_all_over_orbit"><span class="keyword">val</span> for_all_over_orbit</span> : <code class="type">int list -><br>       (<a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit) -><br>       (<a href="LKappa.html#TYPErule_agent">LKappa.rule_agent</a> -> unit) -><br>       (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit) -><br>       (<a href="Raw_mixture.html#TYPEagent">Raw_mixture.agent</a> -> unit) -><br>       (<a href="LKappa.html#TYPErule">LKappa.rule</a> -> 'a -> 'a * bool) -> <a href="LKappa.html#TYPErule">LKappa.rule</a> -> 'a -> 'a * bool</code></pre></body></html>
