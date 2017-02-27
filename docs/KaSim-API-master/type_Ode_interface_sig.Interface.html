@@ -254,12 +254,11 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_obs_titles&nbsp;:&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_tokens&nbsp;:&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cannonic_form_from_syntactic_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.nauto_in_rules_cache&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.rule&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.nauto_in_rules_cache&nbsp;*&nbsp;<span class="constructor">Signature</span>.s&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;*&nbsp;int&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;*&nbsp;int&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option&nbsp;list&nbsp;*&nbsp;<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;translate_symmetries&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.partitioned_contact_map&nbsp;<span class="keywordsign">-&gt;</span><br>
