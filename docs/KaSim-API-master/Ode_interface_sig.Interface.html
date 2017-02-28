@@ -151,49 +151,12 @@
 <pre><span id="TYPErule_name"><span class="keyword">type</span> <code class="type"></code>rule_name</span> = <code class="type">string</code> </pre>
 
 
-<pre><code><span id="TYPEarity"><span class="keyword">type</span> <code class="type"></code>arity</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTarity.Usual"><span class="constructor">Usual</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTarity.Unary"><span class="constructor">Unary</span></span></code></td>
-
-</tr></table>
-
-
-
-<pre><code><span id="TYPEdirection"><span class="keyword">type</span> <code class="type"></code>direction</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTdirection.Direct"><span class="constructor">Direct</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTdirection.Op"><span class="constructor">Op</span></span></code></td>
-
-</tr></table>
-
-
-
 <pre><span id="TYPErule_id"><span class="keyword">type</span> <code class="type"></code>rule_id</span> = <code class="type">int</code> </pre>
 
 
-<pre><span id="TYPErule_id_with_mode"><span class="keyword">type</span> <code class="type"></code>rule_id_with_mode</span> = <code class="type"><a href="Ode_interface_sig.Interface.html#TYPErule_id">rule_id</a> * <a href="Ode_interface_sig.Interface.html#TYPEarity">arity</a> *<br>       <a href="Ode_interface_sig.Interface.html#TYPEdirection">direction</a></code> </pre>
+<pre><span id="TYPErule_id_with_mode"><span class="keyword">type</span> <code class="type"></code>rule_id_with_mode</span> = <code class="type"><a href="Ode_interface_sig.Interface.html#TYPErule_id">rule_id</a> * Rule_modes.arity * Rule_modes.direction</code> </pre>
 
 
-<pre><span class="keyword">module</span> <a href="Ode_interface_sig.Interface.RuleModeMap.html">RuleModeMap</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt = arity * direction</code></pre>
 <pre><span id="VALdivide_rule_rate_by"><span class="keyword">val</span> divide_rule_rate_by</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -> <a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a> * int</code></pre>
 <pre><span id="VALvalid_modes"><span class="keyword">val</span> valid_modes</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule_id">rule_id</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule_id_with_mode">rule_id_with_mode</a> list</code></pre>
 <pre><span id="VALlhs"><span class="keyword">val</span> lhs</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule_id_with_mode">rule_id_with_mode</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -> <a href="Ode_interface_sig.Interface.html#TYPEpattern">pattern</a></code></pre>
@@ -214,7 +177,7 @@
 <pre><span id="VALget_obs"><span class="keyword">val</span> get_obs</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       (<a href="Ode_interface_sig.Interface.html#TYPEconnected_component">connected_component</a> array list, int) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       list</code></pre>
 <pre><span id="VALget_obs_titles"><span class="keyword">val</span> get_obs_titles</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> string list</code></pre>
 <pre><span id="VALnb_tokens"><span class="keyword">val</span> nb_tokens</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -> int</code></pre>
-<pre><span id="VALcannonic_form_from_syntactic_rule"><span class="keyword">val</span> cannonic_form_from_syntactic_rule</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a> * <a href="LKappa.html#TYPErule">LKappa.rule</a> * int *<br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> RuleModeMap.t *<br>       LKappa_auto.RuleCache.hashed_list</code></pre>
+<pre><span id="VALcannonic_form_from_syntactic_rule"><span class="keyword">val</span> cannonic_form_from_syntactic_rule</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPErule">rule</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a> * <a href="LKappa.html#TYPErule">LKappa.rule</a> * int *<br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> Rule_modes.RuleModeMap.t *<br>       LKappa_auto.RuleCache.hashed_list</code></pre>
 <pre><span id="VALtranslate_symmetries"><span class="keyword">val</span> translate_symmetries</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       Symmetries.partitioned_contact_map -><br>       Symmetries.lkappa_partitioned_contact_map</code></pre>
 <pre><span id="VALprint_partitioned_contact_map_in_lkappa"><span class="keyword">val</span> print_partitioned_contact_map_in_lkappa</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcompil">compil</a> -><br>       Symmetries.lkappa_partitioned_contact_map -> unit</code></pre>
 <pre><span id="VALget_representant"><span class="keyword">val</span> get_representant</span> : <code class="type"><a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a> -><br>       Symmetries.partitioned_contact_map -><br>       <a href="Ode_interface_sig.Interface.html#TYPEchemical_species">chemical_species</a> -><br>       <a href="Ode_interface_sig.Interface.html#TYPEcache">cache</a> *<br>       <a href="Ode_interface_sig.Interface.html#TYPEchemical_species">chemical_species</a></code></pre></body></html>
