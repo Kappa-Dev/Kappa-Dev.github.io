@@ -17,6 +17,7 @@
 <link title="Mods" rel="Chapter" href="Mods.html">
 <link title="List_util" rel="Chapter" href="List_util.html">
 <link title="Tools" rel="Chapter" href="Tools.html">
+<link title="IntCollection" rel="Chapter" href="IntCollection.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
@@ -31,6 +32,7 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Contact_map" rel="Chapter" href="Contact_map.html">
 <link title="Pattern" rel="Chapter" href="Pattern.html">
 <link title="Matching" rel="Chapter" href="Matching.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
@@ -115,6 +117,8 @@ Returns the current activity
 <tr><td><a href="Loggers.FormatMap.html#VALadd">add</a> [<a href="Loggers.FormatMap.html">Loggers.FormatMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="Buffers.Buffers.html#VALadd">add</a> [<a href="Buffers.Buffers.html">Buffers.Buffers</a>]</td>
+<td></td></tr>
+<tr><td><a href="IntCollection.html#VALadd">add</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALadd">add</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -545,6 +549,11 @@ Give the number of stories (up to isomorphism classes) stored in a table
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALcreate">create</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
+<tr><td><a href="IntCollection.html#VALcreate">create</a> [<a href="IntCollection.html">IntCollection</a>]</td>
+<td><div class="info">
+<code class="code">create initial_guess_size</code>
+</div>
+</td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALcreate">create</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALcreate">create</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
@@ -906,6 +915,8 @@ put together the stories having the same canonic form, this has do be done expli
 <tr><td><a href="NamedDecls.html#VALfold">fold</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALfold">fold</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
+<td></td></tr>
+<tr><td><a href="IntCollection.html#VALfold">fold</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALfold">fold</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -1407,6 +1418,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 </div>
 </td></tr>
 <tr><td><a href="Loggers.html#VALis_const">is_const</a> [<a href="Loggers.html">Loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="IntCollection.html#VALis_empty">is_empty</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALis_empty">is_empty</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -2148,6 +2161,8 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALprint">print</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
+<tr><td><a href="IntCollection.html#VALprint">print</a> [<a href="IntCollection.html">IntCollection</a>]</td>
+<td></td></tr>
 <tr><td><a href="SetMap.OrderedType.html#VALprint">print</a> [<a href="SetMap.OrderedType.html">SetMap.OrderedType</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALprint">print</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -2216,6 +2231,8 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_connected_component">print_connected_component</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
+<tr><td><a href="Contact_map.html#VALprint_cycles">print_cycles</a> [<a href="Contact_map.html">Contact_map</a>]</td>
+<td></td></tr>
 <tr><td><a href="Raw_mixture.html#VALprint_dot">print_dot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_dump_plots">print_dump_plots</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
@@ -2247,6 +2264,8 @@ Floats are compactly printed
 <tr><td><a href="Ode_loggers.html#VALprint_interpolate">print_interpolate</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Model.html#VALprint_kappa">print_kappa</a> [<a href="Model.html">Model</a>]</td>
+<td></td></tr>
+<tr><td><a href="Contact_map.html#VALprint_kappa">print_kappa</a> [<a href="Contact_map.html">Contact_map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_license_check">print_license_check</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
@@ -2352,6 +2371,8 @@ proj_set f set is the set {f(a) | a\in S}
 <tr><td><a href="Alg_expr.html#VALpropagate_constant_bool">propagate_constant_bool</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>R</td></tr>
+<tr><td><a href="IntCollection.html#VALrandom">random</a> [<a href="IntCollection.html">IntCollection</a>]</td>
+<td></td></tr>
 <tr><td><a href="List_util.html#VALrandom">random</a> [<a href="List_util.html">List_util</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALrandom">random</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
@@ -2385,6 +2406,8 @@ proj_set f set is the set {f(a) | a\in S}
 <tr><td><a href="Loggers.html#VALrefresh_id">refresh_id</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALreinitialize">reinitialize</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="IntCollection.html#VALremove">remove</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALremove">remove</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -2579,6 +2602,8 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <tr><td><a href="Signature.html#VALsize">size</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="NamedDecls.html#VALsize">size</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
+<td></td></tr>
+<tr><td><a href="IntCollection.html#VALsize">size</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALsize">size</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>

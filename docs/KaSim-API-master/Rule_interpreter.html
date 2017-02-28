@@ -21,6 +21,7 @@
 <link title="Mods" rel="Chapter" href="Mods.html">
 <link title="List_util" rel="Chapter" href="List_util.html">
 <link title="Tools" rel="Chapter" href="Tools.html">
+<link title="IntCollection" rel="Chapter" href="IntCollection.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
@@ -35,6 +36,7 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Contact_map" rel="Chapter" href="Contact_map.html">
 <link title="Pattern" rel="Chapter" href="Pattern.html">
 <link title="Matching" rel="Chapter" href="Matching.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
@@ -188,7 +190,7 @@ resynchronizing. (This is what initial state does.)<br>
 <pre><span id="VALremove_tracked"><span class="keyword">val</span> remove_tracked</span> : <code class="type"><a href="Pattern.html#TYPEid">Pattern.id</a> array -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><br>
 <h6 id="6_Debugging">Debugging</h6><br>
 
-<pre><span id="VALprint_injections"><span class="keyword">val</span> print_injections</span> : <code class="type">?domain:<a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       Format.formatter -> Mods.IntSet.t <a href="Pattern.ObsMap.html#TYPEt">Pattern.ObsMap.t</a> -> unit</code></pre>
+<pre><span id="VALprint_injections"><span class="keyword">val</span> print_injections</span> : <code class="type">?domain:<a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       Format.formatter -> <a href="IntCollection.html#TYPEt">IntCollection.t</a> <a href="Pattern.ObsMap.html#TYPEt">Pattern.ObsMap.t</a> -> unit</code></pre>
 <pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">Format.formatter -> <a href="Rule_interpreter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALapply_negative_transformation"><span class="keyword">val</span> apply_negative_transformation</span> : <code class="type"><a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a> list *<br>       Mods.IntSet.t Mods.IntMap.t <a href="Pattern.ObsMap.html#TYPEt">Pattern.ObsMap.t</a> * <a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Primitives.Transformation.html#TYPEt">Primitives.Transformation.t</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a> list *<br>       Mods.IntSet.t Mods.IntMap.t <a href="Pattern.ObsMap.html#TYPEt">Pattern.ObsMap.t</a> * <a href="Edges.html#TYPEt">Edges.t</a></code></pre><div class="info ">
 <h6 id="6_Internals">Internals </h6><br>

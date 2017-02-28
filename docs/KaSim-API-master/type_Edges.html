@@ -16,6 +16,7 @@
 <link title="Mods" rel="Chapter" href="Mods.html">
 <link title="List_util" rel="Chapter" href="List_util.html">
 <link title="Tools" rel="Chapter" href="Tools.html">
+<link title="IntCollection" rel="Chapter" href="IntCollection.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
@@ -30,6 +31,7 @@
 <link title="Operator" rel="Chapter" href="Operator.html">
 <link title="Agent" rel="Chapter" href="Agent.html">
 <link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Contact_map" rel="Chapter" href="Contact_map.html">
 <link title="Pattern" rel="Chapter" href="Pattern.html">
 <link title="Matching" rel="Chapter" href="Matching.html">
 <link title="Instantiation" rel="Chapter" href="Instantiation.html">
@@ -106,7 +108,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_internal&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_connected_component&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;in_same_connected_component&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;all_agents_where&nbsp;:&nbsp;(<span class="constructor">Agent</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;all_agents_where&nbsp;:&nbsp;(<span class="constructor">Agent</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">IntCollection</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;path&nbsp;=&nbsp;((<span class="constructor">Agent</span>.t&nbsp;*&nbsp;int)&nbsp;*&nbsp;(<span class="constructor">Agent</span>.t&nbsp;*&nbsp;int))&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_path&nbsp;:&nbsp;<span class="constructor">Edges</span>.path<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;singleton_path&nbsp;:&nbsp;<span class="constructor">Agent</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Agent</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.path<br>
