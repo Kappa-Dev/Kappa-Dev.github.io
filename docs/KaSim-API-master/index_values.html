@@ -477,7 +477,7 @@ compress a trace with the level of abstraction defined in the argument parameter
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALcompute_initial_state">compute_initial_state</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Odes.Make.html#VALcompute_symmetries_from_syntactic_rules">compute_symmetries_from_syntactic_rules</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
+<tr><td><a href="Odes.Make.html#VALcompute_symmetries_from_model">compute_symmetries_from_model</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALconcat">concat</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
@@ -605,6 +605,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Signature.html#VALdefault_internal_state">default_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.Env.html#VALdeps">deps</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALdetect_symmetries">detect_symmetries</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALdiff">diff</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -1071,6 +1073,8 @@ Apply the rule for sure if it is possible.
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALget_constraints_list">get_constraints_list</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
+<tr><td><a href="Export_to_KaDE.Type.html#VALget_contact_map">get_contact_map</a> [<a href="Export_to_KaDE.Type.html">Export_to_KaDE.Type</a>]</td>
+<td></td></tr>
 <tr><td><a href="Export_to_json.Type.html#VALget_contact_map">get_contact_map</a> [<a href="Export_to_json.Type.html">Export_to_json.Type</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALget_contact_map">get_contact_map</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
@@ -1244,10 +1248,6 @@ get the date of an event in the simulation
 <tr><td><a href="Communication.html#VALget_state_of_site_in_postcondition">get_state_of_site_in_postcondition</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALget_state_of_site_in_precondition">get_state_of_site_in_precondition</a> [<a href="Communication.html">Communication</a>]</td>
-<td></td></tr>
-<tr><td><a href="Export_to_KaDE.Type.html#VALget_symmetric_sites">get_symmetric_sites</a> [<a href="Export_to_KaDE.Type.html">Export_to_KaDE.Type</a>]</td>
-<td></td></tr>
-<tr><td><a href="Export_to_KaSa.Type.html#VALget_symmetric_sites">get_symmetric_sites</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_test_modif_map">get_test_modif_map</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td><div class="info">
@@ -2293,8 +2293,6 @@ Prints nothing in case of infinity or Not a Number
 </td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_options">print_options</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface_sig.Interface.html#VALprint_partitioned_contact_map_in_lkappa">print_partitioned_contact_map_in_lkappa</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
-<td></td></tr>
 <tr><td><a href="Edges.html#VALprint_path">print_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
 <tr><td><a href="LKappa.html#VALprint_rates">print_rates</a> [<a href="LKappa.html">LKappa</a>]</td>
@@ -2821,8 +2819,6 @@ convert a list of refined steps into a trace
 </div>
 </td></tr>
 <tr><td><a href="Counter.html#VALtracked_events">tracked_events</a> [<a href="Counter.html">Counter</a>]</td>
-<td></td></tr>
-<tr><td><a href="Ode_interface_sig.Interface.html#VALtranslate_symmetries">translate_symmetries</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>U</td></tr>
 <tr><td><a href="Operator.html#VALun_alg_op_of_json">un_alg_op_of_json</a> [<a href="Operator.html">Operator</a>]</td>
