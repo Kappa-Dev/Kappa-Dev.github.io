@@ -113,6 +113,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.handler<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_errors&nbsp;:&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.errors<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_env&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Model</span>.t&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_c_compilation&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.c_compilation<br>
@@ -153,5 +155,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_constraints_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_symmetries&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state<br>
 <span class="keyword">end</span></code></body></html>
