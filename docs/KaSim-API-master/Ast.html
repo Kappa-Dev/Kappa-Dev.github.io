@@ -313,24 +313,6 @@ port * agent_type<br>
 
 
 <pre><span id="VALflip_label"><span class="keyword">val</span> flip_label</span> : <code class="type">string -> string</code></pre>
-<pre><code><span id="TYPEprint_expr"><span class="keyword">type</span> <code class="type">'alg_expr</code> print_expr</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTprint_expr.Str_pexpr"><span class="constructor">Str_pexpr</span></span> <span class="keyword">of</span> <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTprint_expr.Alg_pexpr"><span class="constructor">Alg_pexpr</span></span> <span class="keyword">of</span> <code class="type">'alg_expr <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
-
-</tr></table>
-
-
-
 <pre><code><span id="TYPEmodif_expr"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> modif_expr</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -364,21 +346,21 @@ port * agent_type<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type">(('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list *<br>      ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list)</code></code></td>
+<code><span id="TYPEELTmodif_expr.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list<br>        * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
@@ -406,14 +388,14 @@ port * agent_type<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type">bool * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type"><a href="Primitives.html#TYPEflux_kind">Primitives.flux_kind</a> * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Ast.html#TYPEprint_expr">print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr></table>
 

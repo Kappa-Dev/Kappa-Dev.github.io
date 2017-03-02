@@ -180,6 +180,53 @@ In the reverse order on purpose so that we rev_map when we
 
 
 
+<pre><code><span id="TYPEprint_expr"><span class="keyword">type</span> <code class="type">'alg_expr</code> print_expr</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprint_expr.Str_pexpr"><span class="constructor">Str_pexpr</span></span> <span class="keyword">of</span> <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprint_expr.Alg_pexpr"><span class="constructor">Alg_pexpr</span></span> <span class="keyword">of</span> <code class="type">'alg_expr <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALprint_expr_to_yojson"><span class="keyword">val</span> print_expr_to_yojson</span> : <code class="type">('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json) -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALprint_expr_of_yojson"><span class="keyword">val</span> print_expr_of_yojson</span> : <code class="type">(Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'b) -><br>       Yojson.Basic.json -> ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a></code></pre>
+<pre><code><span id="TYPEflux_kind"><span class="keyword">type</span> <code class="type"></code>flux_kind</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTflux_kind.ABSOLUTE"><span class="constructor">ABSOLUTE</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTflux_kind.RELATIVE"><span class="constructor">RELATIVE</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTflux_kind.PROBABILITY"><span class="constructor">PROBABILITY</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALflux_kind_to_yojson"><span class="keyword">val</span> flux_kind_to_yojson</span> : <code class="type"><a href="Primitives.html#TYPEflux_kind">flux_kind</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALflux_kind_of_yojson"><span class="keyword">val</span> flux_kind_of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Primitives.html#TYPEflux_kind">flux_kind</a></code></pre>
 <pre><code><span id="TYPEmodification"><span class="keyword">type</span> <code class="type"></code>modification</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -199,14 +246,14 @@ In the reverse order on purpose so that we rev_map when we
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEprint_expr">Ast.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodification.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEprint_expr">Ast.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodification.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
@@ -223,14 +270,14 @@ First string is the named used by the user<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type">bool * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEprint_expr">Ast.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodification.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type"><a href="Primitives.html#TYPEflux_kind">flux_kind</a> * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEprint_expr">Ast.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodification.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
@@ -251,7 +298,7 @@ First string is the named used by the user<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodification.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type">(<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEprint_expr">Ast.print_expr</a> list * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Ast.html#TYPEprint_expr">Ast.print_expr</a> list)</code></code></td>
+<code><span id="TYPEELTmodification.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type"><a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> list * <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> list</code></code></td>
 
 </tr></table>
 
