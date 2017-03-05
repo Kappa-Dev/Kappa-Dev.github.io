@@ -1,8 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
+<link rel="previous" href="LKappa_group_action.html">
+<link rel="next" href="Export_to_KaSim.html">
+<link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -84,13 +88,41 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Index of classes</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Symmetries</title>
 </head>
 <body>
-<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;</div>
-<h1>Index of classes</h1>
-<table>
-</table>
-</body>
-</html>
+<div class="navbar"><a class="pre" href="LKappa_group_action.html" title="LKappa_group_action">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Export_to_KaSim.html" title="Export_to_KaSim">Next</a>
+</div>
+<h1>Module <a href="type_Symmetries.html">Symmetries</a></h1>
+
+<pre><span class="keyword">module</span> Symmetries: <code class="code"><span class="keyword">sig</span></code> <a href="Symmetries.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+* symmetries.ml
+   * openkappa
+   * Jérôme Feret &amp; Ly Kim Quyen, projet Antique, INRIA Paris-Rocquencourt
+   *
+   * Creation: 2016, the 5th of December
+   * Last modification: Time-stamp: &lt;Mar 02 2017&gt;
+   *
+   * Abstract domain to record relations between pair of sites in connected agents.
+   *
+   * Copyright 2010,2011,2012,2013,2014,2015,2016 Institut National de Recherche
+   * en Informatique et en Automatique.
+   * All rights reserved.  This file is distributed
+   * under the terms of the GNU Library General Public License<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEsymmetries"><span class="keyword">type</span> <code class="type"></code>symmetries</span> = <code class="type">(int list list * int list list) array</code> </pre>
+
+
+<pre><span id="VALdetect_symmetries"><span class="keyword">val</span> detect_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       LKappa_auto.cache -><br>       (LKappa_auto.RuleCache.hashed_list * <a href="LKappa.html#TYPErule">LKappa.rule</a>) list -><br>       bool array * int array *<br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> Rule_modes.RuleModeMap.t array * int array -><br>       (string list * (string * string) list) Mods.StringMap.t Mods.StringMap.t -><br>       LKappa_auto.cache * <a href="Symmetries.html#TYPEsymmetries">symmetries</a></code></pre>
+<pre><span id="VALbuild_array_for_symmetries"><span class="keyword">val</span> build_array_for_symmetries</span> : <code class="type">LKappa_auto.RuleCache.hashed_list list -><br>       bool array * int array * 'a Rule_modes.RuleModeMap.t array * int array</code></pre>
+<pre><span id="VALprint_cannonic_form_from_syntactic_rules"><span class="keyword">val</span> print_cannonic_form_from_syntactic_rules</span> : <code class="type">compil:'a -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       (compil:'a -> Format.formatter -> 'b -> unit) -><br>       (Format.formatter -> 'c -> unit) -><br>       'c -><br>       'b -><br>       int -><br>       LKappa_auto.RuleCache.hashed_list -> (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * 'd) option list -> unit</code></pre>
+<pre><span id="VALprint_symmetries"><span class="keyword">val</span> print_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -> <a href="Symmetries.html#TYPEsymmetries">symmetries</a> -> unit</code></pre>
+<pre><span id="TYPEcache"><span class="keyword">type</span> <code class="type"></code>cache</span> </pre>
+
+
+<pre><span id="VALempty_cache"><span class="keyword">val</span> empty_cache</span> : <code class="type">unit -> <a href="Symmetries.html#TYPEcache">cache</a></code></pre>
+<pre><span id="VALrepresentant"><span class="keyword">val</span> representant</span> : <code class="type"><a href="Symmetries.html#TYPEcache">cache</a> -><br>       <a href="Symmetries.html#TYPEsymmetries">symmetries</a> -> <a href="Pattern.html#TYPEcc">Pattern.cc</a> -> <a href="Symmetries.html#TYPEcache">cache</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a></code></pre></body></html>

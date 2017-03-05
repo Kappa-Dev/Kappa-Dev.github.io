@@ -80,6 +80,7 @@
 <link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
+<link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
@@ -312,6 +313,8 @@ Starts creation
 <tr><td><a href="Alg_expr.html#VALbool_to_yojson">bool_to_yojson</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALbottom">bottom</a> [<a href="Pp.html">Pp</a>]</td>
+<td></td></tr>
+<tr><td><a href="Symmetries.html#VALbuild_array_for_symmetries">build_array_for_symmetries</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALbuild_association_list">build_association_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
@@ -608,6 +611,8 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Pattern.Env.html#VALdeps">deps</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
+<tr><td><a href="Symmetries.html#VALdetect_symmetries">detect_symmetries</a> [<a href="Symmetries.html">Symmetries</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALdetect_symmetries">detect_symmetries</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALdiff">diff</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -710,6 +715,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALempty_association_list">empty_association_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALempty_association_list">empty_association_list</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
+<td></td></tr>
+<tr><td><a href="Symmetries.html#VALempty_cache">empty_cache</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALempty_cache">empty_cache</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -918,6 +925,8 @@ put together the stories having the same canonic form, this has do be done expli
 <tr><td><a href="Primitives.html#VALflux_kind_of_yojson">flux_kind_of_yojson</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
 <tr><td><a href="Primitives.html#VALflux_kind_to_yojson">flux_kind_to_yojson</a> [<a href="Primitives.html">Primitives</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern.html#VALfold">fold</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALfold">fold</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
@@ -2224,6 +2233,8 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALprint_breakable_space">print_breakable_space</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Symmetries.html#VALprint_cannonic_form_from_syntactic_rules">print_cannonic_form_from_syntactic_rules</a> [<a href="Symmetries.html">Symmetries</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_canonic_species">print_canonic_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.html#VALprint_cc">print_cc</a> [<a href="Pattern.html">Pattern</a>]</td>
@@ -2342,6 +2353,8 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <tr><td><a href="Operator.html#VALprint_state_alg_op">print_state_alg_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Trace.html#VALprint_step">print_step</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Symmetries.html#VALprint_symmetries">print_symmetries</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_token">print_token</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -2487,6 +2500,8 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <tr><td><a href="Instantiation.html#VALrename_abstract_side_effect">rename_abstract_side_effect</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALrename_abstract_test">rename_abstract_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Symmetries.html#VALrepresentant">representant</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALreturn">return</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>

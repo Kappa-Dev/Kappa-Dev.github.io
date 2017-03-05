@@ -84,6 +84,7 @@
 <link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
+<link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
@@ -101,6 +102,9 @@
 Domain to navigate in the graph<br>
 </div>
 <hr width="100%">
+
+<pre><span id="TYPElink"><span class="keyword">type</span> <code class="type"></code>link</span> </pre>
+
 
 <pre><span id="TYPEcc"><span class="keyword">type</span> <code class="type"></code>cc</span> </pre>
 
@@ -164,4 +168,5 @@ Abstraction leak, please do not use<br>
 <pre><span id="VALautomorphisms"><span class="keyword">val</span> automorphisms</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> Renaming.t list</code></pre>
 <pre><span id="VALembeddings_to_fully_specified"><span class="keyword">val</span> embeddings_to_fully_specified</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Env.t</a> -> <a href="Pattern.html#TYPEid">id</a> -> <a href="Pattern.html#TYPEcc">cc</a> -> Renaming.t list</code></pre>
 <pre><span id="VALadd_fully_specified_to_graph"><span class="keyword">val</span> add_fully_specified_to_graph</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Pattern.html#TYPEcc">cc</a> -> <a href="Edges.html#TYPEt">Edges.t</a> * Renaming.t</code></pre>
+<pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(pos:int -> agent_type:int -> 'a -> 'a) -><br>       (pos:int -> site:int -> <a href="Pattern.html#TYPElink">link</a> * int -> 'a -> 'a) -><br>       <a href="Pattern.html#TYPEcc">cc</a> -> 'a -> 'a</code></pre>
 <pre><span class="keyword">module</span> <a href="Pattern.Set.html">Set</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt=id</code></pre></body></html>
