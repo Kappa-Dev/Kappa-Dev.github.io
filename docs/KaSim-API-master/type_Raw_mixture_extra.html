@@ -91,10 +91,12 @@
 <body>
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;raw_mixture_to_pattern&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?signature:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;*&nbsp;<span class="constructor">Pattern</span>.id<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pattern_to_raw_mixture&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Raw_mixture</span>.t&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list)&nbsp;option<br>
 <span class="keyword">end</span></code></body></html>
