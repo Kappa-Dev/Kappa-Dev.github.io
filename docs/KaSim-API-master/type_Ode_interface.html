@@ -97,14 +97,13 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;canonic_species<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;pattern<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;connected_component<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hidden_init<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;init&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;hidden_init&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Locality</span>.t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;rule&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_cache&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;init<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mixture_of_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hidden_init&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mixture_of_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dummy_chemical_species&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compare_connected_component&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
@@ -135,7 +134,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(connected_component&nbsp;*&nbsp;embedding&nbsp;*&nbsp;chemical_species)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;pattern&nbsp;*&nbsp;embedding_forest&nbsp;*&nbsp;mixture<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_name&nbsp;=&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_id_with_mode&nbsp;=&nbsp;rule_id&nbsp;*&nbsp;<span class="constructor">Rule_modes</span>.arity&nbsp;*&nbsp;<span class="constructor">Rule_modes</span>.direction<br>
@@ -147,7 +145,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;token_vector_of_init&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;hidden_init&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_id&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
