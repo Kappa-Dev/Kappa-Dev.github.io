@@ -165,6 +165,20 @@
 <td align="left" valign="top" >
 <code><span id="TYPEELTe.IF"><span class="constructor">IF</span></span> <span class="keyword">of</span> <code class="type">('mix, 'id) <a href="Alg_expr.html#TYPEbool">bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a><br>        * ('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a><br>        * ('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
 
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTe.DIFF_TOKEN"><span class="constructor">DIFF_TOKEN</span></span> <span class="keyword">of</span> <code class="type">(('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * 'id)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTe.DIFF_KAPPA_INSTANCE"><span class="constructor">DIFF_KAPPA_INSTANCE</span></span> <span class="keyword">of</span> <code class="type">(('mix, 'id) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * 'mix)</code></code></td>
+
 </tr></table>
 
 
@@ -220,6 +234,12 @@
 <pre><span id="VALminus"><span class="keyword">val</span> minus</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
 <pre><span id="VALmult"><span class="keyword">val</span> mult</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
 <pre><span id="VALdiv"><span class="keyword">val</span> div</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALpow"><span class="keyword">val</span> pow</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALln"><span class="keyword">val</span> ln</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALuminus"><span class="keyword">val</span> uminus</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALsin"><span class="keyword">val</span> sin</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALcos"><span class="keyword">val</span> cos</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALsqrt"><span class="keyword">val</span> sqrt</span> : <code class="type">('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
 <pre><span id="VALadd_dep"><span class="keyword">val</span> add_dep</span> : <code class="type">Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       <a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       ('a, int) <a href="Alg_expr.html#TYPEe">e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre><div class="info ">
 depend in time, depend in event number, depend in given var<br>
 </div>
