@@ -84,6 +84,7 @@
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Raw_mixture_group_action" rel="Chapter" href="Raw_mixture_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
@@ -402,11 +403,22 @@ check_orbit_binding_state_permutation ~agent_type ~site1 ~site2 rule
     to be divided by the respecive integer in correct.
 </div>
 </td></tr>
+<tr><td><a href="LKappa_group_action.html#VALcheck_orbit_full_permutation">check_orbit_full_permutation</a> [<a href="LKappa_group_action.html">LKappa_group_action</a>]</td>
+<td><div class="info">
+check_orbit_full_permutation ~agent_type ~site1 ~site2 rule
+    ~correct rates cache ~counter to_be_checked
+    will visit the orbit of rule when swapping both the binding and the internal states of site1 and site2 in agents of type agent_type;
+    rates contains the rate of each rule (stored according to their hash)
+    to be divided by the respecive integer in correct.
+</div>
+</td></tr>
 <tr><td><a href="LKappa_group_action.html#VALcheck_orbit_internal_state_permutation">check_orbit_internal_state_permutation</a> [<a href="LKappa_group_action.html">LKappa_group_action</a>]</td>
 <td></td></tr>
 <tr><td><a href="Raw_mixture_group_action.html#VALcheck_symmetries_of_internal_states">check_symmetries_of_internal_states</a> [<a href="Raw_mixture_group_action.html">Raw_mixture_group_action</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALchoose">choose</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
+<td></td></tr>
+<tr><td><a href="Symmetries_sig.html#VALclean">clean</a> [<a href="Symmetries_sig.html">Symmetries_sig</a>]</td>
 <td></td></tr>
 <tr><td><a href="Odes.Make.html#VALclean_symmetries">clean_symmetries</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
@@ -714,6 +726,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="NamedDecls.html#VALelt_name">elt_name</a> [<a href="NamedDecls.html">NamedDecls</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.html#VALembeddings_to_fully_specified">embeddings_to_fully_specified</a> [<a href="Pattern.html">Pattern</a>]</td>
+<td></td></tr>
+<tr><td><a href="Symmetries_sig.html#VALempty">empty</a> [<a href="Symmetries_sig.html">Symmetries_sig</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.PathMap.html#VALempty">empty</a> [<a href="Communication.PathMap.html">Communication.PathMap</a>]</td>
 <td></td></tr>
@@ -1623,6 +1637,8 @@ Fragile: the list MUST NOT be a singleton
 reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 </div>
 </td></tr>
+<tr><td><a href="Symmetries_sig.html#VALmap">map</a> [<a href="Symmetries_sig.html">Symmetries_sig</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pattern.ObsMap.html#VALmap">map</a> [<a href="Pattern.ObsMap.html">Pattern.ObsMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="Option_util.html#VALmap">map</a> [<a href="Option_util.html">Option_util</a>]</td>
@@ -2171,6 +2187,8 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 Floats are compactly printed
 </div>
 </td></tr>
+<tr><td><a href="Symmetries_sig.html#VALprint">print</a> [<a href="Symmetries_sig.html">Symmetries_sig</a>]</td>
+<td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALprint">print</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALprint">print</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>

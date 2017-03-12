@@ -88,6 +88,7 @@
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Raw_mixture_group_action" rel="Chapter" href="Raw_mixture_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
@@ -103,5 +104,5 @@
 
 <pre><span class="keyword">module</span> Raw_mixture_group_action: <code class="code"><span class="keyword">sig</span></code> <a href="Raw_mixture_group_action.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
 
-<pre><span id="VALnormalize"><span class="keyword">val</span> normalize</span> : <code class="type">LKappa_auto.cache -><br>       (int list list * int list list) array -><br>       <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a> -> LKappa_auto.cache * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></pre>
-<pre><span id="VALcheck_symmetries_of_internal_states"><span class="keyword">val</span> check_symmetries_of_internal_states</span> : <code class="type">(int list list * int list list) array -> <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a> -> bool</code></pre></body></html>
+<pre><span id="VALnormalize"><span class="keyword">val</span> normalize</span> : <code class="type">LKappa_auto.cache -><br>       int <a href="Symmetries_sig.html#TYPEsite_partition">Symmetries_sig.site_partition</a> array -><br>       <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a> -> LKappa_auto.cache * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></pre>
+<pre><span id="VALcheck_symmetries_of_internal_states"><span class="keyword">val</span> check_symmetries_of_internal_states</span> : <code class="type">int <a href="Symmetries_sig.html#TYPEsite_partition">Symmetries_sig.site_partition</a> array -> <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a> -> bool</code></pre></body></html>

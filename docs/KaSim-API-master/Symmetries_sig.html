@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Kappa_files.html">
-<link rel="next" href="Ode_interface.html">
+<link rel="previous" href="Pattern_group_action.html">
+<link rel="next" href="Symmetries.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -93,20 +93,44 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Ode_interface_sig</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Symmetries_sig</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Kappa_files.html" title="Kappa_files">Previous</a>
+<div class="navbar"><a class="pre" href="Pattern_group_action.html" title="Pattern_group_action">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Ode_interface.html" title="Ode_interface">Next</a>
+&nbsp;<a class="post" href="Symmetries.html" title="Symmetries">Next</a>
 </div>
-<h1>Module <a href="type_Ode_interface_sig.html">Ode_interface_sig</a></h1>
+<h1>Module <a href="type_Symmetries_sig.html">Symmetries_sig</a></h1>
 
-<pre><span class="keyword">module</span> Ode_interface_sig: <code class="code"><span class="keyword">sig</span></code> <a href="Ode_interface_sig.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-Network/ODE generation
-  * Creation: 22/07/2016
-  * Last modification: Time-stamp: &lt;Mar 09 2017&gt;<br>
-</div>
-<hr width="100%">
+<pre><span class="keyword">module</span> Symmetries_sig: <code class="code"><span class="keyword">sig</span></code> <a href="Symmetries_sig.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
 
-<pre><span class="keyword">module type</span> <a href="Ode_interface_sig.Interface.html">Interface</a> = <code class="code"><span class="keyword">sig</span></code> <a href="Ode_interface_sig.Interface.html">..</a> <code class="code"><span class="keyword">end</span></code></pre></body></html>
+<pre><code><span id="TYPEsite_partition"><span class="keyword">type</span> <code class="type">'a</code> site_partition</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite_partition.over_binding_states">over_binding_states</span>&nbsp;: <code class="type">'a list list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite_partition.over_internal_states">over_internal_states</span>&nbsp;: <code class="type">'a list list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite_partition.over_full_states">over_full_states</span>&nbsp;: <code class="type">'a list list</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">'a <a href="Symmetries_sig.html#TYPEsite_partition">site_partition</a></code></pre>
+<pre><span id="VALmap"><span class="keyword">val</span> map</span> : <code class="type">('a -> 'b) -><br>       'a <a href="Symmetries_sig.html#TYPEsite_partition">site_partition</a> -> 'b <a href="Symmetries_sig.html#TYPEsite_partition">site_partition</a></code></pre>
+<pre><span id="VALclean"><span class="keyword">val</span> clean</span> : <code class="type">'a <a href="Symmetries_sig.html#TYPEsite_partition">site_partition</a> -> 'a <a href="Symmetries_sig.html#TYPEsite_partition">site_partition</a></code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ('agent -> Format.formatter -> 'site -> unit) -><br>       (Format.formatter -> 'agent -> unit) -><br>       'agent -> 'site <a href="Symmetries_sig.html#TYPEsite_partition">site_partition</a> -> unit</code></pre></body></html>
