@@ -108,7 +108,7 @@
    * Jérôme Feret &amp; Ly Kim Quyen, projet Antique, INRIA Paris-Rocquencourt
    *
    * Creation: 2016, the 5th of December
-   * Last modification: Time-stamp: &lt;Mar 12 2017&gt;
+   * Last modification: Time-stamp: &lt;Mar 14 2017&gt;
    *
    * Abstract domain to record relations between pair of sites in connected agents.
    *
@@ -122,7 +122,8 @@
 <pre><span id="TYPEsymmetries"><span class="keyword">type</span> <code class="type"></code>symmetries</span> = <code class="type">int <a href="Symmetries_sig.html#TYPEsite_partition">Symmetries_sig.site_partition</a> array</code> </pre>
 
 
-<pre><span id="VALdetect_symmetries"><span class="keyword">val</span> detect_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       LKappa_auto.cache -><br>       (LKappa_auto.RuleCache.hashed_list * <a href="LKappa.html#TYPErule">LKappa.rule</a>) list -><br>       bool array * int array *<br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> Rule_modes.RuleModeMap.t array * int array -><br>       (string list * (string * string) list) Mods.StringMap.t Mods.StringMap.t -><br>       LKappa_auto.cache * <a href="Symmetries.html#TYPEsymmetries">symmetries</a></code></pre>
+<pre><span id="VALdetect_symmetries_for_rules"><span class="keyword">val</span> detect_symmetries_for_rules</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       LKappa_auto.cache -><br>       (LKappa_auto.RuleCache.hashed_list * <a href="LKappa.html#TYPErule">LKappa.rule</a>) list -><br>       bool array * int array *<br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> Rule_modes.RuleModeMap.t array * int array -><br>       (string list * (string * string) list) Mods.StringMap.t Mods.StringMap.t -><br>       LKappa_auto.cache * <a href="Symmetries.html#TYPEsymmetries">symmetries</a></code></pre>
+<pre><span id="VALdetect_symmetries_for_init"><span class="keyword">val</span> detect_symmetries_for_init</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       LKappa_auto.cache -><br>       (LKappa_auto.RuleCache.hashed_list * <a href="LKappa.html#TYPErule">LKappa.rule</a>) list -><br>       bool array * int array *<br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> Rule_modes.RuleModeMap.t array * int array -><br>       (string list * (string * string) list) Mods.StringMap.t Mods.StringMap.t -><br>       LKappa_auto.cache * <a href="Symmetries.html#TYPEsymmetries">symmetries</a></code></pre>
 <pre><span id="VALbuild_array_for_symmetries"><span class="keyword">val</span> build_array_for_symmetries</span> : <code class="type">LKappa_auto.RuleCache.hashed_list list -><br>       bool array * int array * 'a Rule_modes.RuleModeMap.t array * int array</code></pre>
 <pre><span id="VALprint_symmetries"><span class="keyword">val</span> print_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -> <a href="Symmetries.html#TYPEsymmetries">symmetries</a> -> unit</code></pre>
 <pre><span id="TYPEcache"><span class="keyword">type</span> <code class="type"></code>cache</span> </pre>
