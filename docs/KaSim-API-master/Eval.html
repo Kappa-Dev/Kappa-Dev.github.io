@@ -48,6 +48,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Model" rel="Chapter" href="Model.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Configuration" rel="Chapter" href="Configuration.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
@@ -107,47 +108,7 @@ Main compilation functions<br>
 </div>
 <hr width="100%">
 
-<pre><code><span id="TYPEconfiguration"><span class="keyword">type</span> <code class="type"></code>configuration</span> = {</code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTconfiguration.seed">seed</span>&nbsp;: <code class="type">int option</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTconfiguration.traceFileName">traceFileName</span>&nbsp;: <code class="type">string option</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTconfiguration.plotPeriod">plotPeriod</span>&nbsp;: <code class="type"><a href="Counter.html#TYPEperiod">Counter.period</a> option</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTconfiguration.outputFileName">outputFileName</span>&nbsp;: <code class="type">string option</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTconfiguration.initial">initial</span>&nbsp;: <code class="type">float option</code>;</code></td>
-
-</tr></table>
-}
-
-
-
-<pre><span id="VALcompile_bool"><span class="keyword">val</span> compile_bool</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       (<a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a>, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * (<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
-<pre><span id="VALcompile_modifications_no_track"><span class="keyword">val</span> compile_modifications_no_track</span> : <code class="type"><a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       (<a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a>, int) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> list -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Primitives.html#TYPEmodification">Primitives.modification</a> list</code></pre>
-<pre><span id="VALcompile"><span class="keyword">val</span> compile</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> 'a) -><br>       pause:((unit -> 'b) -> 'b) -><br>       return:(<a href="Eval.html#TYPEconfiguration">configuration</a> * <a href="Model.html#TYPEt">Model.t</a> * (bool * bool * bool) option * <br>               string * string option *<br>               (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * <a href="Locality.html#TYPEt">Locality.t</a>) list -> 'b) -><br>       max_sharing:bool -><br>       ?rescale_init:float -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       ('c, <a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a>, int, <a href="LKappa.html#TYPErule">LKappa.rule</a>, unit) <a href="Ast.html#TYPEcompil">Ast.compil</a> -> 'b</code></pre>
+<pre><span id="VALcompile_bool"><span class="keyword">val</span> compile_bool</span> : <code class="type">compileModeOn:bool -><br>       ?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       (<a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a>, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * (<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALcompile_modifications_no_track"><span class="keyword">val</span> compile_modifications_no_track</span> : <code class="type">compileModeOn:bool -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       (<a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a>, int) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> list -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Primitives.html#TYPEmodification">Primitives.modification</a> list</code></pre>
+<pre><span id="VALcompile"><span class="keyword">val</span> compile</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> 'a) -><br>       pause:((unit -> 'b) -> 'b) -><br>       return:(<a href="Model.html#TYPEt">Model.t</a> * bool *<br>               (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * <a href="Locality.html#TYPEt">Locality.t</a>) list -> 'b) -><br>       max_sharing:bool -><br>       compileModeOn:bool -><br>       ?rescale_init:float -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       ('c, <a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a>, int, <a href="LKappa.html#TYPErule">LKappa.rule</a>, unit) <a href="Ast.html#TYPEcompil">Ast.compil</a> -> 'b</code></pre>
 <pre><span id="VALbuild_initial_state"><span class="keyword">val</span> build_initial_state</span> : <code class="type">bind:('a -> (bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">State_interpreter.t</a> -> 'a) -> 'a) -><br>       return:(bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">State_interpreter.t</a> -> 'a) -><br>       outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       with_trace:bool -><br>       Random.State.t -><br>       (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * <a href="Locality.html#TYPEt">Locality.t</a>) list -> 'a</code></pre></body></html>

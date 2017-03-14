@@ -48,6 +48,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Model" rel="Chapter" href="Model.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Configuration" rel="Chapter" href="Configuration.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
@@ -107,6 +108,26 @@ Simulation progress keeper<br>
 </div>
 <hr width="100%">
 
+<pre><code><span id="TYPEprogressBar"><span class="keyword">type</span> <code class="type"></code>progressBar</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprogressBar.progressSize">progressSize</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprogressBar.progressChar">progressChar</span>&nbsp;: <code class="type">char</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALdefault_progress"><span class="keyword">val</span> default_progress</span> : <code class="type"><a href="Counter.html#TYPEprogressBar">progressBar</a></code></pre>
 <pre><code><span id="TYPEperiod"><span class="keyword">type</span> <code class="type"></code>period</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -156,7 +177,7 @@ Simulation progress keeper<br>
 <pre><span id="VALnb_null_event"><span class="keyword">val</span> nb_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALconsecutive_null_event"><span class="keyword">val</span> consecutive_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALprint_efficiency"><span class="keyword">val</span> print_efficiency</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALtick"><span class="keyword">val</span> tick</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<pre><span id="VALtick"><span class="keyword">val</span> tick</span> : <code class="type"><a href="Counter.html#TYPEprogressBar">progressBar</a> -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
 <h5 id="5_Outputonstdout">Output on stdout </h5><br>
 </div>
 

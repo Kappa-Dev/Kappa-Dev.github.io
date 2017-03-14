@@ -1,12 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
+<html><head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Int_storage.html">
-<link rel="next" href="Infinite_buffers.html">
-<link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -94,15 +89,23 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Buffers</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Configuration</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Int_storage.html" title="Int_storage">Previous</a>
-&nbsp;<a class="up" href="index.html" title="Index">Up</a>
-&nbsp;<a class="post" href="Infinite_buffers.html" title="Infinite_buffers">Next</a>
-</div>
-<h1>Module <a href="type_Buffers.html">Buffers</a></h1>
-
-<pre><span class="keyword">module</span> Buffers: <code class="code"><span class="keyword">sig</span></code> <a href="Buffers.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
-
-<pre><span class="keyword">module type</span> <a href="Buffers.Buffers.html">Buffers</a> = <code class="code"><span class="keyword">sig</span></code> <a href="Buffers.Buffers.html">..</a> <code class="code"><span class="keyword">end</span></code></pre></body></html>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dumpIfDeadlocked&nbsp;:&nbsp;bool;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;initial&nbsp;:&nbsp;float&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;maxConsecutiveClash&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;newSyntax&nbsp;:&nbsp;bool;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFileName&nbsp;:&nbsp;string&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;plotPeriod&nbsp;:&nbsp;<span class="constructor">Counter</span>.period&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;seed&nbsp;:&nbsp;int&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;traceFileName&nbsp;:&nbsp;string&nbsp;option;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;parse&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((string&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)&nbsp;*&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)&nbsp;list)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Configuration</span>.t&nbsp;*&nbsp;<span class="constructor">Counter</span>.progressBar&nbsp;*&nbsp;(bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;*&nbsp;string&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Configuration</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+<span class="keyword">end</span></code></body></html>

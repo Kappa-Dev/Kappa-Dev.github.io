@@ -48,6 +48,7 @@
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Model" rel="Chapter" href="Model.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Configuration" rel="Chapter" href="Configuration.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
 <link title="Snip" rel="Chapter" href="Snip.html">
@@ -283,9 +284,9 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">full:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALrule_to_json"><span class="keyword">val</span> rule_to_json</span> : <code class="type"><a href="LKappa.html#TYPErule">rule</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALrule_of_json"><span class="keyword">val</span> rule_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="LKappa.html#TYPErule">rule</a></code></pre>
-<pre><span id="VALbool_expr_of_ast"><span class="keyword">val</span> bool_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       ?max_allowed_var:int -><br>       (<a href="Ast.html#TYPEmixture">Ast.mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
-<pre><span id="VALmodif_expr_of_ast"><span class="keyword">val</span> modif_expr_of_ast</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       (<a href="Ast.html#TYPEmixture">Ast.mixture</a>, string) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> -><br>       int list -> (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> * int list</code></pre>
-<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       <a href="Ast.html#TYPEparsing_compil">Ast.parsing_compil</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * <a href="Contact_map.html#TYPEt">Contact_map.t</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * int list *<br>       (<a href="Ast.html#TYPEagent">Ast.agent</a>, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>, unit) <a href="Ast.html#TYPEcompil">Ast.compil</a></code></pre><div class="info ">
+<pre><span id="VALbool_expr_of_ast"><span class="keyword">val</span> bool_expr_of_ast</span> : <code class="type">new_syntax:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       ?max_allowed_var:int -><br>       (<a href="Ast.html#TYPEmixture">Ast.mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span id="VALmodif_expr_of_ast"><span class="keyword">val</span> modif_expr_of_ast</span> : <code class="type">new_syntax:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       (<a href="Ast.html#TYPEmixture">Ast.mixture</a>, string) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> -><br>       int list -> (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> * int list</code></pre>
+<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">new_syntax:bool -><br>       (string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       <a href="Ast.html#TYPEparsing_compil">Ast.parsing_compil</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * <a href="Contact_map.html#TYPEt">Contact_map.t</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * int list *<br>       (<a href="Ast.html#TYPEagent">Ast.agent</a>, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int, <a href="LKappa.html#TYPErule">rule</a>, unit) <a href="Ast.html#TYPEcompil">Ast.compil</a></code></pre><div class="info ">
 <code class="code">compil_of_ast variable_overwrite ast</code><br>
 <b>Returns</b> the signature of agent, the contact map, the signature of
     tokens, algebraic variable on which constant propagation is
@@ -310,6 +311,8 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
     a new variable is declared called rulelabel_un_rate; it is
     necessary in the update phase.</li>
 </ul>
-<br>
+
+    After this step, <code class="code"><span class="constructor">Ast</span>.<span class="constructor">ANY_FREE</span></code> is a synonym of "an <code class="code"><span class="constructor">Ast</span>.<span class="constructor">LNK_ANY</span></code>
+    explicitely given by the user".<br>
 </div>
 </body></html>
