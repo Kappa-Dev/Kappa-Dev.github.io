@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim &#x0026; KaSa reference manual
-(release 2bﬀ2a4)</title> 
+(release 8bcf2c1)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim &#x0026; KaSa reference manual<br />
-(release 2bﬀ2a4)</h2>
+(release 8bcf2c1)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -6656,13 +6656,16 @@ General options
  <br />      connected agents
  <br />  --(no-)compute-local-traces    (default: disabled)
  <br />      Compute the local traces of interesting parts of agent interfaces
+ <br />  --(no-)compute-separating-transitions    (default: disabled)
+ <br />      Compute the transitions that separates strongly connected set of
+ <br />      configurations
  <br />
- <br />1_Output
- <br />  --output-directory &#x003C;value&#x003E;
- <br />      Default repository for outputs
                                                                                   
 
                                                                                   
+ <br />1_Output
+ <br />  --output-directory &#x003C;value&#x003E;
+ <br />      Default repository for outputs
  <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the contact map file in this directory
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
@@ -6701,12 +6704,12 @@ General options
  <br />  --verbosity-level-for-reachability-analysis Mute | Low | Medium | High |
  <br />                                              Full    (default: Low)
  <br />      Tune the verbosity level for the reachability analysis
- <br />  --output-mode-for-reachability-analysis raw | kappa | english    (default: kappa)
- <br />      post-process relation and output the result in the chosen format
- <br />
                                                                                   
 
                                                                                   
+ <br />  --output-mode-for-reachability-analysis raw | kappa | english    (default: kappa)
+ <br />      post-process relation and output the result in the chosen format
+ <br />
  <br />3_Trace_analysis
  <br />  --(no-)compute-local-traces    (default: disabled)
  <br />      Compute the local traces of interesting parts of agent interfaces
@@ -6718,6 +6721,9 @@ General options
  <br />      interleaving order of commuting microtransitions
  <br />  --(no-)ignore-trivial-losanges    (default: disabled)
  <br />      Do not use macrotransitions for simplifying trivial losanges
+ <br />  --(no-)compute-separating-transitions    (default: disabled)
+ <br />      Compute the transitions that separates strongly connected set of
+ <br />      configurations
  <br />  --output-local-traces-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the files about local traces in this directory
  <br />  --local-traces-format DOT | HTML    (default: DOT)
@@ -6742,15 +6748,15 @@ General options
  <br />      compute the influence map
  <br />  --influence-map-accuracy-level Low | Medium | High    (default: Medium)
  <br />      Tune the accuracy level of the influence map
+                                                                                  
+
+                                                                                  
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the influence map file in this directory
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
  <br />      file name for the influence map
  <br />  --influence-map-format DOT | DIM | HTML    (default: DOT)
  <br />      Tune the output format for the influence map
-                                                                                  
-
-                                                                                  
  <br />
  <br />6_FLow_of_information
  <br />  --(no-)compute-ODE-flow-of-information    (default: disabled)
@@ -6769,8 +6775,8 @@ General options
  <br />      Exceptions are gathered at the end of the computation, instead of
  <br />      halting it
  <br />
- <br />(57 options)</div>
-<!--l. 141--><p class="nopar" >
+ <br />(59 options)</div>
+<!--l. 147--><p class="nopar" >
 <!--l. 1390--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -6780,13 +6786,13 @@ before compilation.
 <!--l. 1395--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">7.2   </span> <a 
  id="x1-600007.2"></a>Graphical interface</h3>
+                                                                                  
+
+                                                                                  
 <!--l. 1397--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
  id="x1-610007.2.1"></a>Launching the interface</h4>
 <!--l. 1399--><p class="noindent" >The graphical interface can be launched by typing
-                                                                                  
-
-                                                                                  
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ectt-1095">KaSa</span></li></ul>
@@ -7279,9 +7285,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (2bff2a4) (without Tk interface)
- <br />Analysis launched at 2017/03/15 16:12:50 (GMT+0) on
- <br />testing-gce-f65dfbb5-6831-4cdf-9c55-8ded4322953a
+Kappa Static Analyzer (8bcf2c1) (without Tk interface)
+ <br />Analysis launched at 2017/03/15 17:20:25 (GMT+0) on
+ <br />testing-gce-5421e24c-46cc-416f-9111-67f35dbf8060
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7461,9 +7467,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (2bff2a4) (without Tk interface)
- <br />Analysis launched at 2017/03/15 16:12:50 (GMT+0) on
- <br />testing-gce-f65dfbb5-6831-4cdf-9c55-8ded4322953a
+Kappa Static Analyzer (8bcf2c1) (without Tk interface)
+ <br />Analysis launched at 2017/03/15 17:20:25 (GMT+0) on
+ <br />testing-gce-5421e24c-46cc-416f-9111-67f35dbf8060
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -9238,9 +9244,9 @@ class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1
 
                                                                                   
 <div class="verbatim" id="verbatim-14">
-Kappa Static Analyzer (2bff2a4) (without Tk interface)
- <br />Analysis launched at 2017/03/15 16:12:48 (GMT+0) on
- <br />testing-gce-f65dfbb5-6831-4cdf-9c55-8ded4322953a
+Kappa Static Analyzer (8bcf2c1) (without Tk interface)
+ <br />Analysis launched at 2017/03/15 17:20:23 (GMT+0) on
+ <br />testing-gce-5421e24c-46cc-416f-9111-67f35dbf8060
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
