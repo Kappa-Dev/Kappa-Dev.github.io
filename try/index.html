@@ -26,12 +26,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/codemirror.min.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/addon/lint/lint.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/addon/dialog/dialog.css"></link>
-    <script src="contact.js?16392"></script>
-    <script src="Kappa.js?16392"></script>
-    <script src="common.js?16392"></script>
-    <script src="flux.js?16392"></script>
-    <script src="plot.js?16392"></script>
-    <script src="JsSim.js?16392"></script>
+    <script src="contact.js?24024"></script>
+    <script src="Kappa.js?24024"></script>
+    <script src="common.js?24024"></script>
+    <script src="flux.js?24024"></script>
+    <script src="plot.js?24024"></script>
+    <script src="JsSim.js?24024"></script>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -131,7 +131,8 @@ rect { stroke-width: 2; }
     white-space : pre;
 }
 .filename {
-    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
@@ -140,9 +141,7 @@ rect { stroke-width: 2; }
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    background: rgb(245, 245, 245);
     border : 0px;
-    cursor : default;
 }
 
 .node-rect { stroke-width:2;
