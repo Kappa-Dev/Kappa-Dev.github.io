@@ -98,51 +98,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;rules_and_initial_states&nbsp;:&nbsp;int&nbsp;<span class="constructor">Symmetries_sig</span>.site_partition&nbsp;array&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rules_and_alg_expr&nbsp;:&nbsp;int&nbsp;<span class="constructor">Symmetries_sig</span>.site_partition&nbsp;array&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rate&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;*&nbsp;<span class="constructor">Rule_modes</span>.arity&nbsp;*&nbsp;<span class="constructor">Rule_modes</span>.direction&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;valid_modes&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Rule_modes</span>.arity&nbsp;*&nbsp;<span class="constructor">Rule_modes</span>.direction)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_to_lkappa_rule&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_array_for_symmetries&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;array&nbsp;*&nbsp;int&nbsp;array&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Rule_modes</span>.<span class="constructor">RuleModeMap</span>.t&nbsp;array&nbsp;*&nbsp;int&nbsp;array<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;divide_rule_rate_by&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;int&nbsp;*&nbsp;int<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cannonic_form_from_syntactic_rules&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;((int&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="constructor">Rule_modes</span>.<span class="constructor">RuleModeMap</span>.t&nbsp;*&nbsp;int)&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="constructor">Rule_modes</span>.<span class="constructor">RuleModeMap</span>.t&nbsp;*&nbsp;int))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list&nbsp;*&nbsp;<span class="constructor">LKappa</span>.rule)&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list&nbsp;*&nbsp;<span class="constructor">LKappa</span>.rule))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;detect_symmetries&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list&nbsp;*&nbsp;<span class="constructor">LKappa</span>.rule)&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">LKappa_auto</span>.<span class="constructor">RuleCache</span>.hashed_list&nbsp;*&nbsp;<span class="constructor">LKappa</span>.rule))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;array&nbsp;*&nbsp;int&nbsp;array&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="constructor">Rule_modes</span>.<span class="constructor">RuleModeMap</span>.t&nbsp;array&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;array&nbsp;*&nbsp;int&nbsp;array&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>d)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="constructor">Rule_modes</span>.<span class="constructor">RuleModeMap</span>.t&nbsp;array&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;list&nbsp;*&nbsp;(string&nbsp;*&nbsp;string)&nbsp;list)&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;<span class="constructor">Symmetries</span>.symmetries<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_symmetries&nbsp;:<br>
