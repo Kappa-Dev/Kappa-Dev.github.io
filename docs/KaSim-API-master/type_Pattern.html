@@ -185,6 +185,9 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;finalize&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;max_sharing:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Contact_map</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Env</span>.t&nbsp;*&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.stat<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pushout&nbsp;:&nbsp;<span class="constructor">Renaming</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;infs&nbsp;:&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;matchings&nbsp;:&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Renaming</span>.t&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Set</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;elt&nbsp;=&nbsp;id<br>
