@@ -98,6 +98,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;rules_and_initial_states&nbsp;:&nbsp;int&nbsp;<span class="constructor">Symmetries_sig</span>.site_partition&nbsp;array&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rules_and_alg_expr&nbsp;:&nbsp;int&nbsp;<span class="constructor">Symmetries_sig</span>.site_partition&nbsp;array&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_of_initial_state&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;list&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list)&nbsp;array&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="keywordsign">'</span>b)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_to_lkappa_rule&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>

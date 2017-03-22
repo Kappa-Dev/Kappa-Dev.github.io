@@ -109,7 +109,7 @@
    * Jérôme Feret &amp; Ly Kim Quyen, projet Antique, INRIA Paris-Rocquencourt
    *
    * Creation: 2016, the 5th of December
-   * Last modification: Time-stamp: &lt;Mar 16 2017&gt;
+   * Last modification: Time-stamp: &lt;Mar 22 2017&gt;
    *
    * Abstract domain to record relations between pair of sites in connected agents.
    *
@@ -146,6 +146,7 @@
 
 
 
+<pre><span id="VALspecies_of_initial_state"><span class="keyword">val</span> species_of_initial_state</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       (int list * (int * int) list) array array -><br>       ('a * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * 'b) list -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a> list</code></pre>
 <pre><span id="VALspecies_to_lkappa_rule"><span class="keyword">val</span> species_to_lkappa_rule</span> : <code class="type">Remanent_parameters_sig.parameters -> <a href="Model.html#TYPEt">Model.t</a> -> <a href="Pattern.html#TYPEcc">Pattern.cc</a> -> <a href="LKappa.html#TYPErule">LKappa.rule</a></code></pre>
 <pre><span id="VALdetect_symmetries"><span class="keyword">val</span> detect_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       LKappa_auto.cache -><br>       Remanent_parameters_sig.rate_convention -><br>       <a href="LKappa.html#TYPErule">LKappa.rule</a> list -><br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> list -><br>       (string list * (string * string) list) Mods.StringMap.t Mods.StringMap.t -><br>       LKappa_auto.cache * <a href="Symmetries.html#TYPEsymmetries">symmetries</a></code></pre>
 <pre><span id="VALprint_symmetries"><span class="keyword">val</span> print_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -> <a href="Symmetries.html#TYPEsymmetries">symmetries</a> -> unit</code></pre>
