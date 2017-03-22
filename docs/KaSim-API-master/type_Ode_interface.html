@@ -177,6 +177,10 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_obs_titles&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_tokens&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;divide_rule_rate_by&nbsp;:&nbsp;cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache&nbsp;*&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_of_initial_state&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;cache&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>b&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;detect_symmetries&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
