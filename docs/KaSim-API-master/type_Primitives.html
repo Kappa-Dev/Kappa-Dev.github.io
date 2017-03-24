@@ -133,6 +133,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;syntactic_rule&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;instantiations&nbsp;:&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.event;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_to_yojson&nbsp;:&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>alg_expr&nbsp;print_expr&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Str_pexpr</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Alg_pexpr</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>alg_expr&nbsp;<span class="constructor">Locality</span>.annot<br>
