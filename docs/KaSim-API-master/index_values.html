@@ -20,6 +20,7 @@
 <link title="Tools" rel="Chapter" href="Tools.html">
 <link title="IntCollection" rel="Chapter" href="IntCollection.html">
 <link title="Int_storage" rel="Chapter" href="Int_storage.html">
+<link title="ValMap" rel="Chapter" href="ValMap.html">
 <link title="Buffers" rel="Chapter" href="Buffers.html">
 <link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
 <link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
@@ -124,6 +125,8 @@ Returns the current activity
 <tr><td><a href="Loggers.FormatMap.html#VALadd">add</a> [<a href="Loggers.FormatMap.html">Loggers.FormatMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="Buffers.Buffers.html#VALadd">add</a> [<a href="Buffers.Buffers.html">Buffers.Buffers</a>]</td>
+<td></td></tr>
+<tr><td><a href="ValMap.html#VALadd">add</a> [<a href="ValMap.html">ValMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="IntCollection.html#VALadd">add</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
@@ -745,6 +748,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Pattern.PreEnv.html#VALempty">empty</a> [<a href="Pattern.PreEnv.html">Pattern.PreEnv</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.FormatMap.html#VALempty">empty</a> [<a href="Loggers.FormatMap.html">Loggers.FormatMap</a>]</td>
+<td></td></tr>
+<tr><td><a href="ValMap.html#VALempty">empty</a> [<a href="ValMap.html">ValMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALempty">empty</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -1491,6 +1496,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 </td></tr>
 <tr><td><a href="Loggers.html#VALis_const">is_const</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="ValMap.html#VALis_empty">is_empty</a> [<a href="ValMap.html">ValMap</a>]</td>
+<td></td></tr>
 <tr><td><a href="IntCollection.html#VALis_empty">is_empty</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALis_empty">is_empty</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -1717,6 +1724,8 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALmaybe_reachable">maybe_reachable</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer.Analyzer.html#VALmaybe_reachable">maybe_reachable</a> [<a href="Analyzer.Analyzer.html">Analyzer.Analyzer</a>]</td>
+<td></td></tr>
+<tr><td><a href="ValMap.html#VALmem">mem</a> [<a href="ValMap.html">ValMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmem">mem</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
@@ -2271,6 +2280,8 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALprint">print</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
+<tr><td><a href="ValMap.html#VALprint">print</a> [<a href="ValMap.html">ValMap</a>]</td>
+<td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALprint">print</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
 <tr><td><a href="IntCollection.html#VALprint">print</a> [<a href="IntCollection.html">IntCollection</a>]</td>
@@ -2495,6 +2506,8 @@ proj_set f set is the set {f(a) | a\in S}
 <tr><td><a href="Alg_expr.html#VALpropagate_constant_bool">propagate_constant_bool</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>R</td></tr>
+<tr><td><a href="ValMap.html#VALrandom">random</a> [<a href="ValMap.html">ValMap</a>]</td>
+<td></td></tr>
 <tr><td><a href="IntCollection.html#VALrandom">random</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
 <tr><td><a href="List_util.html#VALrandom">random</a> [<a href="List_util.html">List_util</a>]</td>
@@ -2534,6 +2547,8 @@ proj_set f set is the set {f(a) | a\in S}
 <tr><td><a href="Loggers.html#VALrefresh_id">refresh_id</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Counter.html#VALreinitialize">reinitialize</a> [<a href="Counter.html">Counter</a>]</td>
+<td></td></tr>
+<tr><td><a href="ValMap.html#VALremove">remove</a> [<a href="ValMap.html">ValMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="IntCollection.html#VALremove">remove</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td></td></tr>
@@ -2963,6 +2978,8 @@ Output on stdout
 <tr><td><a href="Ode_interface_sig.Interface.html#VALtoken_vector_of_init">token_vector_of_init</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Model.html#VALtokens_finder">tokens_finder</a> [<a href="Model.html">Model</a>]</td>
+<td></td></tr>
+<tr><td><a href="ValMap.html#VALtotal">total</a> [<a href="ValMap.html">ValMap</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALtrace_of_pretrace">trace_of_pretrace</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
