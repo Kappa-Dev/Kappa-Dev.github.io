@@ -40,7 +40,7 @@
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Alg_expr_extra" rel="Chapter" href="Alg_expr_extra.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
-<link title="Raw_mixture_extra" rel="Chapter" href="Raw_mixture_extra.html">
+<link title="Patterns_extra" rel="Chapter" href="Patterns_extra.html">
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Model" rel="Chapter" href="Model.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
@@ -83,7 +83,6 @@
 <link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
-<link title="Raw_mixture_group_action" rel="Chapter" href="Raw_mixture_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
@@ -1005,7 +1004,7 @@ put together the stories having the same canonic form, this has do be done expli
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALfold_lefti">fold_lefti</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
 <td></td></tr>
-<tr><td><a href="Alg_expr_extra.html#VALfold_over_mix">fold_over_mix</a> [<a href="Alg_expr_extra.html">Alg_expr_extra</a>]</td>
+<tr><td><a href="Alg_expr_extra.html#VALfold_over_mixtures_in_alg_exprs">fold_over_mixtures_in_alg_exprs</a> [<a href="Alg_expr_extra.html">Alg_expr_extra</a>]</td>
 <td></td></tr>
 <tr><td><a href="Tools.html#VALfold_over_permutations">fold_over_permutations</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
@@ -1532,6 +1531,12 @@ Infer agent signatures and tokens from init, rules and perturbations
 <td></td></tr>
 <tr><td><a href="LKappa_group_action.html#VALis_invariant_internal_states_permutation">is_invariant_internal_states_permutation</a> [<a href="LKappa_group_action.html">LKappa_group_action</a>]</td>
 <td></td></tr>
+<tr><td><a href="Pattern_group_action.html#VALis_pattern_invariant_binding_states_permutation">is_pattern_invariant_binding_states_permutation</a> [<a href="Pattern_group_action.html">Pattern_group_action</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern_group_action.html#VALis_pattern_invariant_full_states_permutation">is_pattern_invariant_full_states_permutation</a> [<a href="Pattern_group_action.html">Pattern_group_action</a>]</td>
+<td></td></tr>
+<tr><td><a href="Pattern_group_action.html#VALis_pattern_invariant_internal_states_permutation">is_pattern_invariant_internal_states_permutation</a> [<a href="Pattern_group_action.html">Pattern_group_action</a>]</td>
+<td></td></tr>
 <tr><td><a href="Matching.html#VALis_root_of">is_root_of</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALis_singleton">is_singleton</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
@@ -1625,10 +1630,6 @@ Fragile: the list MUST NOT be a singleton
 <tr><td><a href="Pp.html#VALlisti">listi</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALlkappa_mixture_is_reachable">lkappa_mixture_is_reachable</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
-<td></td></tr>
-<tr><td><a href="Raw_mixture_group_action.html#VALlkappa_of_raw_mixture">lkappa_of_raw_mixture</a> [<a href="Raw_mixture_group_action.html">Raw_mixture_group_action</a>]</td>
-<td></td></tr>
-<tr><td><a href="Raw_mixture_group_action.html#VALlkappa_of_rule_mixture">lkappa_of_rule_mixture</a> [<a href="Raw_mixture_group_action.html">Raw_mixture_group_action</a>]</td>
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALln">ln</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
@@ -1991,9 +1992,7 @@ Set union of 2 sorted list
 <td></td></tr>
 <tr><td><a href="Ast.html#VALno_more_site_on_right">no_more_site_on_right</a> [<a href="Ast.html">Ast</a>]</td>
 <td></td></tr>
-<tr><td><a href="Pattern_group_action.html#VALnormalize">normalize</a> [<a href="Pattern_group_action.html">Pattern_group_action</a>]</td>
-<td></td></tr>
-<tr><td><a href="Raw_mixture_group_action.html#VALnormalize">normalize</a> [<a href="Raw_mixture_group_action.html">Raw_mixture_group_action</a>]</td>
+<tr><td><a href="Pattern_group_action.html#VALnormalize_species">normalize_species</a> [<a href="Pattern_group_action.html">Pattern_group_action</a>]</td>
 <td></td></tr>
 <tr><td><a href="Tools.html#VALnot_an_id">not_an_id</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
@@ -2187,7 +2186,9 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALpath">path</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
-<tr><td><a href="Raw_mixture_extra.html#VALpattern_to_mixture">pattern_to_mixture</a> [<a href="Raw_mixture_extra.html">Raw_mixture_extra</a>]</td>
+<tr><td><a href="Patterns_extra.html#VALpattern_id_to_mixture">pattern_id_to_mixture</a> [<a href="Patterns_extra.html">Patterns_extra</a>]</td>
+<td></td></tr>
+<tr><td><a href="Patterns_extra.html#VALpattern_to_mixture">pattern_to_mixture</a> [<a href="Patterns_extra.html">Patterns_extra</a>]</td>
 <td></td></tr>
 <tr><td><a href="Snip.html#VALpatterns_of_mixture">patterns_of_mixture</a> [<a href="Snip.html">Snip</a>]</td>
 <td></td></tr>
@@ -2508,7 +2509,9 @@ proj_set f set is the set {f(a) | a\in S}
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALraw_mixture_of_fresh">raw_mixture_of_fresh</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Raw_mixture_extra.html#VALraw_mixture_to_species">raw_mixture_to_species</a> [<a href="Raw_mixture_extra.html">Raw_mixture_extra</a>]</td>
+<tr><td><a href="Patterns_extra.html#VALraw_mixture_to_lkappa_rule">raw_mixture_to_lkappa_rule</a> [<a href="Patterns_extra.html">Patterns_extra</a>]</td>
+<td></td></tr>
+<tr><td><a href="Patterns_extra.html#VALraw_mixture_to_species">raw_mixture_to_species</a> [<a href="Patterns_extra.html">Patterns_extra</a>]</td>
 <td></td></tr>
 <tr><td><a href="Tools.html#VALread_input">read_input</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
@@ -2767,9 +2770,9 @@ not tail rec but don't allocate if unecessary
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALspecies_of_initial_state">species_of_initial_state</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
-<tr><td><a href="Symmetries.html#VALspecies_to_lkappa_rule">species_to_lkappa_rule</a> [<a href="Symmetries.html">Symmetries</a>]</td>
+<tr><td><a href="Patterns_extra.html#VALspecies_to_lkappa_rule">species_to_lkappa_rule</a> [<a href="Patterns_extra.html">Patterns_extra</a>]</td>
 <td></td></tr>
-<tr><td><a href="Raw_mixture_extra.html#VALspecies_to_raw_mixture">species_to_raw_mixture</a> [<a href="Raw_mixture_extra.html">Raw_mixture_extra</a>]</td>
+<tr><td><a href="Patterns_extra.html#VALspecies_to_raw_mixture">species_to_raw_mixture</a> [<a href="Patterns_extra.html">Patterns_extra</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALsplit">split</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>

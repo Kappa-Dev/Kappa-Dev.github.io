@@ -44,7 +44,7 @@
 <link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
 <link title="Alg_expr_extra" rel="Chapter" href="Alg_expr_extra.html">
 <link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
-<link title="Raw_mixture_extra" rel="Chapter" href="Raw_mixture_extra.html">
+<link title="Patterns_extra" rel="Chapter" href="Patterns_extra.html">
 <link title="Primitives" rel="Chapter" href="Primitives.html">
 <link title="Model" rel="Chapter" href="Model.html">
 <link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
@@ -87,7 +87,6 @@
 <link title="Site_accross_bonds_domain" rel="Chapter" href="Site_accross_bonds_domain.html">
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
-<link title="Raw_mixture_group_action" rel="Chapter" href="Raw_mixture_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
@@ -109,7 +108,7 @@
    * Jérôme Feret &amp; Ly Kim Quyen, projet Antique, INRIA Paris-Rocquencourt
    *
    * Creation: 2016, the 5th of December
-   * Last modification: Time-stamp: &lt;Mar 22 2017&gt;
+   * Last modification: Time-stamp: &lt;Mar 24 2017&gt;
    *
    * Abstract domain to record relations between pair of sites in connected agents.
    *
@@ -150,7 +149,6 @@
 <pre><span id="VALapply"><span class="keyword">val</span> apply</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Matching.html#TYPEt">Matching.t</a> -> <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Edges.html#TYPEt">Edges.t</a></code></pre>
 <pre><span id="VALconnected_components_of_mixture"><span class="keyword">val</span> connected_components_of_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       (int list * (int * int) list) array array -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a> list</code></pre>
 <pre><span id="VALspecies_of_initial_state"><span class="keyword">val</span> species_of_initial_state</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       (int list * (int * int) list) array array -><br>       ('a * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * 'b) list -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a> list</code></pre>
-<pre><span id="VALspecies_to_lkappa_rule"><span class="keyword">val</span> species_to_lkappa_rule</span> : <code class="type">Remanent_parameters_sig.parameters -> <a href="Model.html#TYPEt">Model.t</a> -> <a href="Pattern.html#TYPEcc">Pattern.cc</a> -> <a href="LKappa.html#TYPErule">LKappa.rule</a></code></pre>
 <pre><span id="VALdetect_symmetries"><span class="keyword">val</span> detect_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       LKappa_auto.cache -><br>       Remanent_parameters_sig.rate_convention -><br>       <a href="Pattern.html#TYPEcc">Pattern.cc</a> list -><br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> list -><br>       (string list * (string * string) list) Mods.StringMap.t Mods.StringMap.t -><br>       LKappa_auto.cache * <a href="Symmetries.html#TYPEsymmetries">symmetries</a></code></pre>
 <pre><span id="VALprint_symmetries"><span class="keyword">val</span> print_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -> <a href="Symmetries.html#TYPEsymmetries">symmetries</a> -> unit</code></pre>
 <pre><span id="TYPEcache"><span class="keyword">type</span> <code class="type"></code>cache</span> </pre>
