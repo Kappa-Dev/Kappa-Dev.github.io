@@ -177,6 +177,12 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_obs_titles&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_tokens&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;divide_rule_rate_by&nbsp;:&nbsp;cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache&nbsp;*&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_of_initial_state_env&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Contact_map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>b&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_of_initial_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;cache&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -193,9 +199,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Symmetries</span>.symmetries&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_rule_cache&nbsp;:&nbsp;cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa_auto</span>.cache<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_rule_cache&nbsp;:&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_representant&nbsp;:<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_representative&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;cache&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.symmetries&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache&nbsp;*&nbsp;chemical_species<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.reduction&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache&nbsp;*&nbsp;chemical_species<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;bwd_interpretation&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.bwd_map&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.reduction&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Symmetries</span>.class_description&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_equiv_class&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.reduction&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.bwd_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Symmetries</span>.bwd_map<br>
 <span class="keyword">end</span></code></body></html>

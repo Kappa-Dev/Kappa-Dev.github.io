@@ -150,6 +150,10 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALadd_edge">add_edge</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Symmetries.html#VALadd_equiv_class">add_equiv_class</a> [<a href="Symmetries.html">Symmetries</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALadd_equiv_class">add_equiv_class</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
 <tr><td><a href="Edges.html#VALadd_free">add_free</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
 <code class="code">add_free agent_id site graph</code>
@@ -222,8 +226,6 @@ depend in time, depend in event number, depend in given var
 <tr><td><a href="DynamicArray.DynArray.html#VALappend">append</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
 <td></td></tr>
 <tr><td><a href="GenArray.GenArray.html#VALappend">append</a> [<a href="GenArray.GenArray.html">GenArray.GenArray</a>]</td>
-<td></td></tr>
-<tr><td><a href="Symmetries.html#VALapply">apply</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALapply">apply</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -380,6 +382,10 @@ Starts creation
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALbuild_variables_list">build_variables_list</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
 <td></td></tr>
+<tr><td><a href="Symmetries.html#VALbwd_interpretation">bwd_interpretation</a> [<a href="Symmetries.html">Symmetries</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALbwd_interpretation">bwd_interpretation</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>C</td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALcanonic_form">canonic_form</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -420,8 +426,6 @@ check_orbit_full_permutation ~agent_type ~site1 ~site2 rule
 <tr><td><a href="SetMap.Set.html#VALchoose">choose</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
 <tr><td><a href="Symmetries_sig.html#VALclean">clean</a> [<a href="Symmetries_sig.html">Symmetries_sig</a>]</td>
-<td></td></tr>
-<tr><td><a href="Odes.Make.html#VALclean_symmetries">clean_symmetries</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALclear_sites_working_list">clear_sites_working_list</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
@@ -520,8 +524,6 @@ compress a trace with the level of abstraction defined in the argument parameter
 <tr><td><a href="Instantiation.html#VALconcretize_event">concretize_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALconcretize_test">concretize_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
-<td></td></tr>
-<tr><td><a href="Symmetries.html#VALconnected_components_of_mixture">connected_components_of_mixture</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALconnected_components_of_mixture">connected_components_of_mixture</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
@@ -671,8 +673,6 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALdimension">dimension</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
-<tr><td><a href="Symmetries.html#VALdisjoint_union">disjoint_union</a> [<a href="Symmetries.html">Symmetries</a>]</td>
-<td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALdisjoint_union">disjoint_union</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALdisjoint_union">disjoint_union</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
@@ -762,6 +762,8 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALempty_association_list">empty_association_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALempty_association_list">empty_association_list</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
+<td></td></tr>
+<tr><td><a href="Symmetries.html#VALempty_bwd_map">empty_bwd_map</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="Symmetries.html#VALempty_cache">empty_cache</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
@@ -998,6 +1000,8 @@ put together the stories having the same canonic form, this has do be done expli
 <tr><td><a href="SetMap.Map.html#VALfold2z_with_logs">fold2z_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Model.html#VALfold_ast_rules">fold_ast_rules</a> [<a href="Model.html">Model</a>]</td>
+<td></td></tr>
+<tr><td><a href="Symmetries.html#VALfold_bwd_map">fold_bwd_map</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALfold_inv">fold_inv</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td></td></tr>
@@ -1286,7 +1290,7 @@ conversely, convert a trace in a list of refined steps
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_remanent_triple">get_remanent_triple</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface_sig.Interface.html#VALget_representant">get_representant</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALget_representative">get_representative</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Odes.Make.html#VALget_rule">get_rule</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
@@ -2618,7 +2622,7 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALrename_abstract_test">rename_abstract_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
-<tr><td><a href="Symmetries.html#VALrepresentant">representant</a> [<a href="Symmetries.html">Symmetries</a>]</td>
+<tr><td><a href="Symmetries.html#VALrepresentative">representative</a> [<a href="Symmetries.html">Symmetries</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALreturn">return</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
@@ -2730,6 +2734,10 @@ remove_pseudo_inverse_events removes pseudo inverse events
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALset_test_modif_map">set_test_modif_map</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Odes.Make.html#VALset_to_backward_symmetries_from_model">set_to_backward_symmetries_from_model</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
+<td></td></tr>
+<tr><td><a href="Odes.Make.html#VALset_to_forward_symmetries_from_model">set_to_forward_symmetries_from_model</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pp.html#VALset_to_string">set_to_string</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALset_views_lhs">set_views_lhs</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
@@ -2785,9 +2793,9 @@ not tail rec but don't allocate if unecessary
 <td></td></tr>
 <tr><td><a href="Pp.html#VALspace">space</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
-<tr><td><a href="Symmetries.html#VALspecies_of_initial_state">species_of_initial_state</a> [<a href="Symmetries.html">Symmetries</a>]</td>
-<td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALspecies_of_initial_state">species_of_initial_state</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
+<tr><td><a href="Ode_interface_sig.Interface.html#VALspecies_of_initial_state_env">species_of_initial_state_env</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Patterns_extra.html#VALspecies_to_lkappa_rule">species_to_lkappa_rule</a> [<a href="Patterns_extra.html">Patterns_extra</a>]</td>
 <td></td></tr>
