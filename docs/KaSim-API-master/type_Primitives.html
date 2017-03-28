@@ -133,6 +133,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;syntactic_rule&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;instantiations&nbsp;:&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.event;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_rate&nbsp;:&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_unary_rate&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;option)&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_delta_tokens&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_to_yojson&nbsp;:&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>alg_expr&nbsp;print_expr&nbsp;=<br>
