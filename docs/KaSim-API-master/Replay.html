@@ -4,7 +4,9 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="Up" href="Matching.html">
+<link rel="previous" href="State_interpreter.html">
+<link rel="next" href="Utilities.html">
+<link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -93,43 +95,70 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Matching.Agent</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Replay</title>
 </head>
 <body>
-<div class="navbar">&nbsp;<a class="up" href="Matching.html" title="Matching">Up</a>
-&nbsp;</div>
-<h1>Module <a href="type_Matching.Agent.html">Matching.Agent</a></h1>
+<div class="navbar"><a class="pre" href="State_interpreter.html" title="State_interpreter">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Utilities.html" title="Utilities">Next</a>
+</div>
+<h1>Module <a href="type_Replay.html">Replay</a></h1>
 
-<pre><span class="keyword">module</span> Agent: <code class="code"><span class="keyword">sig</span></code> <a href="Matching.Agent.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
-<br>
-An agent in a connected component<br>
+<pre><span class="keyword">module</span> Replay: <code class="code"><span class="keyword">sig</span></code> <a href="Replay.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Utilities to make mixtures from traces<br>
+</div>
+<hr width="100%">
 
-<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEstate"><span class="keyword">type</span> <code class="type"></code>state</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
+<code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.Existing"><span class="constructor">Existing</span></span> <span class="keyword">of</span> <code class="type"><a href="Agent.html#TYPEt">Agent.t</a> * int</code></code></td>
+<code><span id="TYPEELTstate.graph">graph</span>&nbsp;: <code class="type"><a href="Edges.html#TYPEt">Edges.t</a></code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
+<code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.Fresh"><span class="constructor">Fresh</span></span> <span class="keyword">of</span> <code class="type">int * int</code></code></td>
+<code><span id="TYPEELTstate.time">time</span>&nbsp;: <code class="type">float</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate.event">event</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate.connected_components">connected_components</span>&nbsp;: <code class="type">Agent.SetMap.Set.t Mods.IntMap.t option</code>;</code></td>
 
 </tr></table>
+}
 
 
 
-<pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type">int -> Renaming.t -> <a href="Matching.Agent.html#TYPEt">t</a> -> <a href="Matching.Agent.html#TYPEt">t</a></code></pre>
-<pre><span id="VALconcretize"><span class="keyword">val</span> concretize</span> : <code class="type"><a href="Matching.html#TYPEmatching">Matching.matching</a> * int Mods.IntMap.t -> <a href="Matching.Agent.html#TYPEt">t</a> -> int * int</code></pre>
-<pre><span id="VALget_type"><span class="keyword">val</span> get_type</span> : <code class="type"><a href="Matching.Agent.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALget_id"><span class="keyword">val</span> get_id</span> : <code class="type"><a href="Matching.Agent.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALsame_connected_component"><span class="keyword">val</span> same_connected_component</span> : <code class="type"><a href="Matching.Agent.html#TYPEt">t</a> -> <a href="Matching.Agent.html#TYPEt">t</a> -> bool</code></pre>
-<pre><span id="VALis_fresh"><span class="keyword">val</span> is_fresh</span> : <code class="type"><a href="Matching.Agent.html#TYPEt">t</a> -> bool</code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Matching.Agent.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALprint_site"><span class="keyword">val</span> print_site</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Matching.Agent.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
-<pre><span id="VALprint_internal"><span class="keyword">val</span> print_internal</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Matching.Agent.html#TYPEt">t</a> -> int -> Format.formatter -> int -> unit</code></pre>
-<pre><span id="VALto_yojson"><span class="keyword">val</span> to_yojson</span> : <code class="type"><a href="Matching.Agent.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALof_yojson"><span class="keyword">val</span> of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Matching.Agent.html#TYPEt">t</a></code></pre></body></html>
+<pre><code><span id="TYPEsummary"><span class="keyword">type</span> <code class="type"></code>summary</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsummary.unary_distances">unary_distances</span>&nbsp;: <code class="type">(int * int) option</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALinit_state"><span class="keyword">val</span> init_state</span> : <code class="type">with_connected_components:bool -> <a href="Replay.html#TYPEstate">state</a></code></pre>
+<pre><span id="VALdo_step"><span class="keyword">val</span> do_step</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Replay.html#TYPEstate">state</a> -> <a href="Trace.html#TYPEstep">Trace.step</a> -> <a href="Replay.html#TYPEstate">state</a> * <a href="Replay.html#TYPEsummary">summary</a></code></pre><div class="info ">
+<b>Returns</b> the new state and, if the step was an unary instance of a
+    binary rule, the id of the rule and the distance between its 2
+    connected patterns.<br>
+</div>
+
+<pre><span id="VALcc_of_state"><span class="keyword">val</span> cc_of_state</span> : <code class="type"><a href="Replay.html#TYPEstate">state</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       (<a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * Renaming.t * <a href="Pattern.html#TYPEcc">Pattern.cc</a> * <a href="Pattern.html#TYPEid">Pattern.id</a>) list</code></pre></body></html>
