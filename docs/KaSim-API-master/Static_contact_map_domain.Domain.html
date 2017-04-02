@@ -168,6 +168,7 @@
 <pre><span id="VALapply_event_list"><span class="keyword">val</span> apply_event_list</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'c * 'b * 'e list</code></pre>
 <pre><span id="VALstabilize"><span class="keyword">val</span> stabilize</span> : <code class="type">'a -> 'b -> 'c -> 'c * 'b * unit</code></pre>
 <pre><span id="VALexport"><span class="keyword">val</span> export</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'c * 'b * 'd</code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'c * 'b * unit</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?dead_rules:'a -> 'b -> 'c -> 'd -> 'e -> 'd * 'c * unit</code></pre>
 <pre><span id="VALlkappa_mixture_is_reachable"><span class="keyword">val</span> lkappa_mixture_is_reachable</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'c * 'b * <a href="Usual_domains.html#TYPEmaybe_bool">Usual_domains.maybe_bool</a></code></pre>
-<pre><span id="VALcc_mixture_is_reachable"><span class="keyword">val</span> cc_mixture_is_reachable</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'c * 'b * <a href="Usual_domains.html#TYPEmaybe_bool">Usual_domains.maybe_bool</a></code></pre></body></html>
+<pre><span id="VALcc_mixture_is_reachable"><span class="keyword">val</span> cc_mixture_is_reachable</span> : <code class="type">'a -> 'b -> 'c -> 'd -> 'c * 'b * <a href="Usual_domains.html#TYPEmaybe_bool">Usual_domains.maybe_bool</a></code></pre>
+<pre><span id="VALget_dead_rules"><span class="keyword">val</span> get_dead_rules</span> : <code class="type">'a -><br>       'b -><br>       Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       Ckappa_sig.c_rule_id -> Exception.method_handler * bool</code></pre></body></html>
