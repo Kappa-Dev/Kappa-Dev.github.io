@@ -143,8 +143,17 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;bwd_map<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_bwd_map&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Symmetries</span>.bwd_map<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_equiv_class&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;<span class="constructor">Mods</span>.<span class="constructor">DynArray</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.reduction&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.bwd_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Symmetries</span>.bwd_map<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.bwd_map&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;<span class="constructor">Mods</span>.<span class="constructor">DynArray</span>.t&nbsp;*&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.bwd_map<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;bwd_interpretation&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Symmetries</span>.bwd_map&nbsp;<span class="keywordsign">-&gt;</span><br>
