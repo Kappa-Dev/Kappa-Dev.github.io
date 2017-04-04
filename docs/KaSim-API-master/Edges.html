@@ -117,6 +117,19 @@ Concrete graph implementation<br>
 You'd better NOT use that on the state of a simulation<br>
 </div>
 
+<pre><code><span id="TYPEstats"><span class="keyword">type</span> <code class="type"></code>stats</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstats.nb_agents">nb_agents</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALstats"><span class="keyword">val</span> stats</span> : <code class="type"><a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEstats">stats</a></code></pre>
 <pre><span id="VALadd_agent"><span class="keyword">val</span> add_agent</span> : <code class="type">?id:int -> <a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> int * <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">add_agent ?id sigs agent_type graph</code><br>
 </div>

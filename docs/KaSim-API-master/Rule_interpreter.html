@@ -199,6 +199,20 @@ resynchronizing. (This is what initial state does.)<br>
 <pre><span id="VALremove_tracked"><span class="keyword">val</span> remove_tracked</span> : <code class="type"><a href="Pattern.html#TYPEid">Pattern.id</a> array -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><br>
 <h6 id="6_Debugging">Debugging</h6><br>
 
+<pre><code><span id="TYPEstats"><span class="keyword">type</span> <code class="type"></code>stats</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstats.mixture_stats">mixture_stats</span>&nbsp;: <code class="type"><a href="Edges.html#TYPEstats">Edges.stats</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALstats"><span class="keyword">val</span> stats</span> : <code class="type"><a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEstats">stats</a></code></pre>
+<pre><span id="VALprint_stats"><span class="keyword">val</span> print_stats</span> : <code class="type">Format.formatter -> <a href="Rule_interpreter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALprint_injections"><span class="keyword">val</span> print_injections</span> : <code class="type">?domain:<a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       Format.formatter -> <a href="IntCollection.html#TYPEt">IntCollection.t</a> <a href="Pattern.ObsMap.html#TYPEt">Pattern.ObsMap.t</a> -> unit</code></pre>
 <pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">Format.formatter -> <a href="Rule_interpreter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALapply_negative_transformation"><span class="keyword">val</span> apply_negative_transformation</span> : <code class="type">(int, unit) Hashtbl.t -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a> list *<br>       Mods.IntSet.t Mods.IntMap.t <a href="Pattern.ObsMap.html#TYPEt">Pattern.ObsMap.t</a> * <a href="Edges.html#TYPEt">Edges.t</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Primitives.Transformation.html#TYPEt">Primitives.Transformation.t</a> -><br>       <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEsite">Instantiation.site</a> list *<br>       Mods.IntSet.t Mods.IntMap.t <a href="Pattern.ObsMap.html#TYPEt">Pattern.ObsMap.t</a> * <a href="Edges.html#TYPEt">Edges.t</a></code></pre><div class="info ">
