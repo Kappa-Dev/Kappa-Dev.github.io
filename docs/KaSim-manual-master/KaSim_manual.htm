@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim &#x0026; KaSa reference manual
-(release 629f81d)</title> 
+(release ef9007f)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim &#x0026; KaSa reference manual<br />
-(release 629f81d)</h2>
+(release ef9007f)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -6654,15 +6654,17 @@ General options
  <br />  --(no-)sites-accross-bonds-domain    (default: enabled)
  <br />      enable the analysis of the relation amond the states of sites in
  <br />      connected agents
+ <br />  --(no-)compute-symmetries    (default: disabled)
+ <br />      Look up for pairs of symmetric sites
  <br />  --(no-)compute-local-traces    (default: disabled)
  <br />      Compute the local traces of interesting parts of agent interfaces
  <br />  --(no-)compute-separating-transitions    (default: disabled)
  <br />      Compute the transitions that separates strongly connected set of
- <br />      configurations
- <br />
                                                                                   
 
                                                                                   
+ <br />      configurations
+ <br />
  <br />1_Output
  <br />  --output-directory &#x003C;value&#x003E;
  <br />      Default repository for outputs
@@ -6702,11 +6704,11 @@ General options
  <br />      enable the analysis of the relation amond the states of sites in
  <br />      connected agents
  <br />  --verbosity-level-for-reachability-analysis Mute | Low | Medium | High |
- <br />                                              Full    (default: Low)
- <br />      Tune the verbosity level for the reachability analysis
                                                                                   
 
                                                                                   
+ <br />                                              Full    (default: Low)
+ <br />      Tune the verbosity level for the reachability analysis
  <br />  --output-mode-for-reachability-analysis raw | kappa | english    (default: kappa)
  <br />      post-process relation and output the result in the chosen format
  <br />
@@ -6746,11 +6748,11 @@ General options
  <br />5_Influence_map
  <br />  --(no-)compute-influence-map    (default: enabled)
  <br />      compute the influence map
- <br />  --influence-map-accuracy-level Low | Medium | High    (default: Medium)
- <br />      Tune the accuracy level of the influence map
                                                                                   
 
                                                                                   
+ <br />  --influence-map-accuracy-level Indirect | Direct | Realisable    (default: Medium)
+ <br />      Tune the accuracy level of the influence map
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the influence map file in this directory
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
@@ -6775,8 +6777,8 @@ General options
  <br />      Exceptions are gathered at the end of the computation, instead of
  <br />      halting it
  <br />
- <br />(59 options)</div>
-<!--l. 147--><p class="nopar" >
+ <br />(60 options)</div>
+<!--l. 149--><p class="nopar" >
 <!--l. 1390--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -7285,9 +7287,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (629f81d) (without Tk interface)
- <br />Analysis launched at 2017/04/04 15:37:09 (GMT+0) on
- <br />testing-gce-23642fd2-4794-450b-9a23-1cc7ed42ab51
+Kappa Static Analyzer (ef9007f) (without Tk interface)
+ <br />Analysis launched at 2017/04/04 21:08:11 (GMT+0) on
+ <br />testing-gce-68479dee-3dd6-4643-bb3a-ec05cd4bc5cf
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7467,9 +7469,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (629f81d) (without Tk interface)
- <br />Analysis launched at 2017/04/04 15:37:09 (GMT+0) on
- <br />testing-gce-23642fd2-4794-450b-9a23-1cc7ed42ab51
+Kappa Static Analyzer (ef9007f) (without Tk interface)
+ <br />Analysis launched at 2017/04/04 21:08:11 (GMT+0) on
+ <br />testing-gce-68479dee-3dd6-4643-bb3a-ec05cd4bc5cf
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -9244,9 +9246,9 @@ class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1
 
                                                                                   
 <div class="verbatim" id="verbatim-14">
-Kappa Static Analyzer (629f81d) (without Tk interface)
- <br />Analysis launched at 2017/04/04 15:37:09 (GMT+0) on
- <br />testing-gce-23642fd2-4794-450b-9a23-1cc7ed42ab51
+Kappa Static Analyzer (ef9007f) (without Tk interface)
+ <br />Analysis launched at 2017/04/04 21:08:11 (GMT+0) on
+ <br />testing-gce-68479dee-3dd6-4643-bb3a-ec05cd4bc5cf
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
