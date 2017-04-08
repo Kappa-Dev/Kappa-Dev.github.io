@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim &#x0026; KaSa reference manual
-(release 5349933)</title> 
+(release 89fbc9d)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim &#x0026; KaSa reference manual<br />
-(release 5349933)</h2>
+(release 89fbc9d)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -6647,22 +6647,12 @@ General options
  <br />      semantics
  <br />  --(no-)compute-reachability-analysis    (default: enabled)
  <br />      Compute an approximation of the states of agent sites
- <br />  --(no-)views-domain    (default: enabled)
- <br />      enable local views analysis
- <br />  --(no-)double-bonds-domain    (default: enabled)
- <br />      enable double bonds analysis
- <br />  --(no-)sites-accross-bonds-domain    (default: enabled)
- <br />      enable the analysis of the relation amond the states of sites in
- <br />      connected agents
  <br />  --(no-)compute-symmetries    (default: disabled)
  <br />      Look up for pairs of symmetric sites
  <br />  --(no-)compute-local-traces    (default: disabled)
  <br />      Compute the local traces of interesting parts of agent interfaces
  <br />  --(no-)compute-separating-transitions    (default: disabled)
  <br />      Compute the transitions that separates strongly connected set of
-                                                                                  
-
-                                                                                  
  <br />      configurations
  <br />
  <br />1_Output
@@ -6670,6 +6660,9 @@ General options
  <br />      Default repository for outputs
  <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the contact map file in this directory
+                                                                                  
+
+                                                                                  
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
  <br />      file name for the contact map output
  <br />  --contact-map-format DOT    (default: DOT)
@@ -6700,13 +6693,10 @@ General options
  <br />      enable local views analysis
  <br />  --(no-)double-bonds-domain    (default: enabled)
  <br />      enable double bonds analysis
- <br />  --(no-)sites-accross-bonds-domain    (default: enabled)
- <br />      enable the analysis of the relation amond the states of sites in
+ <br />  --(no-)sites-across-bonds-domain    (default: enabled)
+ <br />      enable the analysis of the relation among the states of sites in
  <br />      connected agents
  <br />  --verbosity-level-for-reachability-analysis Mute | Low | Medium | High |
-                                                                                  
-
-                                                                                  
  <br />                                              Full    (default: Low)
  <br />      Tune the verbosity level for the reachability analysis
  <br />  --output-mode-for-reachability-analysis raw | kappa | english    (default: kappa)
@@ -6714,6 +6704,9 @@ General options
  <br />
  <br />3_Trace_analysis
  <br />  --(no-)compute-local-traces    (default: disabled)
+                                                                                  
+
+                                                                                  
  <br />      Compute the local traces of interesting parts of agent interfaces
  <br />  --(no-)show-rule-names-in-local-traces    (default: enabled)
  <br />      Annotate each transition with the name of the rules in trace
@@ -6748,9 +6741,6 @@ General options
  <br />5_Influence_map
  <br />  --(no-)compute-influence-map    (default: enabled)
  <br />      compute the influence map
-                                                                                  
-
-                                                                                  
  <br />  --influence-map-accuracy-level Indirect | Direct | Realisable    (default: Medium)
  <br />      Tune the accuracy level of the influence map
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
@@ -6758,6 +6748,9 @@ General options
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
  <br />      file name for the influence map
  <br />  --influence-map-format DOT | DIM | HTML    (default: DOT)
+                                                                                  
+
+                                                                                  
  <br />      Tune the output format for the influence map
  <br />
  <br />6_FLow_of_information
@@ -6777,8 +6770,8 @@ General options
  <br />      Exceptions are gathered at the end of the computation, instead of
  <br />      halting it
  <br />
- <br />(60 options)</div>
-<!--l. 149--><p class="nopar" >
+ <br />(57 options)</div>
+<!--l. 142--><p class="nopar" >
 <!--l. 1390--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -6788,13 +6781,13 @@ before compilation.
 <!--l. 1395--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">7.2   </span> <a 
  id="x1-600007.2"></a>Graphical interface</h3>
-                                                                                  
-
-                                                                                  
 <!--l. 1397--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
  id="x1-610007.2.1"></a>Launching the interface</h4>
 <!--l. 1399--><p class="noindent" >The graphical interface can be launched by typing
+                                                                                  
+
+                                                                                  
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ectt-1095">KaSa</span></li></ul>
@@ -7287,9 +7280,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (5349933) (without Tk interface)
- <br />Analysis launched at 2017/04/07 15:56:38 (GMT+0) on
- <br />testing-gce-ec4fc635-a83c-496c-b993-baa62e0d513b
+Kappa Static Analyzer (89fbc9d) (without Tk interface)
+ <br />Analysis launched at 2017/04/08 16:03:34 (GMT+0) on
+ <br />testing-gce-c679112c-d7de-45c1-a096-9d17df66c916
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7469,9 +7462,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (5349933) (without Tk interface)
- <br />Analysis launched at 2017/04/07 15:56:38 (GMT+0) on
- <br />testing-gce-ec4fc635-a83c-496c-b993-baa62e0d513b
+Kappa Static Analyzer (89fbc9d) (without Tk interface)
+ <br />Analysis launched at 2017/04/08 16:03:34 (GMT+0) on
+ <br />testing-gce-c679112c-d7de-45c1-a096-9d17df66c916
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7618,7 +7611,7 @@ Applying rule 0: E.R:
  <br />
  <br />R(x!E@x,c!free,cr!free,n!free)
  <br />
- <br />Update information about potential sites accross domain
+ <br />Update information about potential sites across domain
  <br />
  <br />R(c!1,x!E.x),R(c!1,x!E.x)
  <br />
@@ -7656,7 +7649,7 @@ non-relational analysis and the relational analysis.
 class="ectt-1095">--double-bonds-domain</span></span></span> can be used to switch on/oﬀ the analysis of potential double
 bonds between between proteins.
 <!--l. 1624--><p class="noindent" >The option <span class="obeylines-h"><span class="verb"><span 
-class="ectt-1095">--site-accross-bonds-domain</span></span></span> can be used to switch on/oﬀ the analysis of the
+class="ectt-1095">--site-across-bonds-domain</span></span></span> can be used to switch on/oﬀ the analysis of the
 relations among the states of the sites in connected proteins.
 <!--l. 1627--><p class="noindent" >It is possible to get more details about the computation of the analysis by tuning the verbosity
 level of the view analysis:
@@ -9246,9 +9239,9 @@ class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1
 
                                                                                   
 <div class="verbatim" id="verbatim-14">
-Kappa Static Analyzer (5349933) (without Tk interface)
- <br />Analysis launched at 2017/04/07 15:56:38 (GMT+0) on
- <br />testing-gce-ec4fc635-a83c-496c-b993-baa62e0d513b
+Kappa Static Analyzer (89fbc9d) (without Tk interface)
+ <br />Analysis launched at 2017/04/08 16:03:34 (GMT+0) on
+ <br />testing-gce-c679112c-d7de-45c1-a096-9d17df66c916
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
