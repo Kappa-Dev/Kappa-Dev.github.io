@@ -181,27 +181,21 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_token_jac&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?time_var:<span class="constructor">Ode_loggers_sig</span>.ode_var_id&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_lhs:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Network_handler</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;dep_mixture:<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;dep_token:<span class="constructor">Mods</span>.<span class="constructor">IntSet</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_token&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;nauto_in_lhs:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Network_handler</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_loggers_sig</span>.variable&nbsp;*&nbsp;<span class="constructor">Ode_loggers</span>.correct)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_newline&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_comment&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?breakline:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
