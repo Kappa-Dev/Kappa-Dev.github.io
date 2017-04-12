@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim &#x0026; KaSa reference manual
-(release 50383df)</title> 
+(release d7f5416)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim &#x0026; KaSa reference manual<br />
-(release 50383df)</h2>
+(release d7f5416)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -7280,9 +7280,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (50383df) (without Tk interface)
- <br />Analysis launched at 2017/04/12 01:28:53 (GMT+0) on
- <br />testing-gce-0813f658-6ff0-41fd-bd10-ec12b3e21997
+Kappa Static Analyzer (d7f5416) (without Tk interface)
+ <br />Analysis launched at 2017/04/12 12:59:47 (GMT+0) on
+ <br />testing-gce-cab1c484-50be-401a-ace1-3d66251a29b6
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7291,7 +7291,8 @@ Kappa Static Analyzer (50383df) (without Tk interface)
  <br />------------------------------------------------------------
  <br />* There are some non applyable rules
  <br />------------------------------------------------------------
- <br />rule 6: obs will never be applied.
+ <br />rule obs (File &#x0022;../kappa/reachability.ka&#x0022;, line 13,
+ <br />characters 5-39:) will never be applied.
  <br />------------------------------------------------------------
  <br />every agent may occur in the model
  <br />
@@ -7316,10 +7317,10 @@ Kappa Static Analyzer (50383df) (without Tk interface)
  <br />v R(c,cr,n,x)
  <br />   ]
  <br />------------------------------------------------------------
- <br />* Properties in connected agents
                                                                                   
 
                                                                                   
+ <br />* Properties in connected agents
  <br />------------------------------------------------------------
  <br />R(c!1),R(c!1) =&#x003E;
  <br />[
@@ -7344,7 +7345,7 @@ Kappa Static Analyzer (50383df) (without Tk interface)
  <br />R(c!R.c,cr!R.n) =&#x003E; R(c!1,cr!2),R(c!1,n!2)
  <br />R(c!R.c,n!R.cr) =&#x003E; R(c!1,n!2),R(c!1,cr!2)
  <br />execution finished without any exception</div>
-<!--l. 63--><p class="nopar" >
+<!--l. 64--><p class="nopar" >
 <!--l. 1525--><p class="noindent" >This result is displayed in the standard output, and it is made of six parts.
 <!--l. 1527--><p class="noindent" >The ﬁrst two parts provide an enumeration of dead rules and dead agents. The next parts display
 what we call reﬁnement lemmas. A reﬁnement lemma is made of a precondition (on
@@ -7364,10 +7365,10 @@ agents than the site graph in the corresponding precondition). The meaning of a 
 lemma is that every embedding between its precondition into a reachable state can be
 reﬁned/extended into an embedding from one site graph in its postcondition into the same
 reachable state. This way, a reﬁnement lemma provides an enumeration of all the potential
-contexts for the precondition.
                                                                                   
 
                                                                                   
+contexts for the precondition.
 <!--l. 1533--><p class="noindent" >We now detail the six diﬀerent parts:
      <ul class="itemize1">
      <li class="itemize"><span 
@@ -7426,10 +7427,10 @@ class="ecbx-1095">Properties in connected agent. </span>When two agents are conn
 href="#XFeret:SASB2016">13</a>]</span> collects for
      each kind of bonds, the relation between the state of one site in the ﬁrst agent and
      the state of one site in the second agent. Due to the over-approximation, the analysis
-     reports a super-set of the set of the potential pairs of states.
                                                                                   
 
                                                                                   
+     reports a super-set of the set of the potential pairs of states.
      <!--l. 1558--><p class="noindent" >This abstraction aimed at capturing information about protein transportation. It is
      quite common to model the location of a protein as the internal state of a ﬁctitious
      site. With such an encoding, it might be important to ensure that two connected
@@ -7462,9 +7463,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (50383df) (without Tk interface)
- <br />Analysis launched at 2017/04/12 01:28:53 (GMT+0) on
- <br />testing-gce-0813f658-6ff0-41fd-bd10-ec12b3e21997
+Kappa Static Analyzer (d7f5416) (without Tk interface)
+ <br />Analysis launched at 2017/04/12 12:59:47 (GMT+0) on
+ <br />testing-gce-cab1c484-50be-401a-ace1-3d66251a29b6
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7490,9 +7491,10 @@ class="ectt-1095">reachbility.ka </span>with verbosity level “Mute”.</span><
 
                                                                                   
 <div class="verbatim" id="verbatim-7">
-Applying rule 6: obs:
+Applying rule obs (File &#x0022;../kappa/reachability.ka&#x0022;, line 13, characters
+ <br />5-39:):
  <br />the precondition is not satisfied yet</div>
-<!--l. 4--><p class="nopar" >
+<!--l. 5--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.5: </span><span  
 class="content">Reachability analysis: one rule that cannot be applied yet, according to the
@@ -7512,9 +7514,10 @@ bio-molecular species already constructed.</span></div><!--tex4ht:label?: x1-650
 
                                                                                   
 <div class="verbatim" id="verbatim-8">
-Applying rule 0: E.R:
+Applying rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7, characters
+ <br />5-35:):
  <br />the precondition is satisfied</div>
-<!--l. 4--><p class="nopar" >
+<!--l. 5--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.6: </span><span  
 class="content">Reachability analysis: one rule successfully applied</span></div><!--tex4ht:label?: x1-650216 -->
@@ -7559,10 +7562,12 @@ class="content">Reachability analysis: extensional description of initial states
 
                                                                                   
 <div class="verbatim" id="verbatim-10">
-Applying rule 0: E.R:
+Applying rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7, characters
+ <br />5-35:):
  <br />the precondition is satisfied
  <br />
- <br />rule 0: E.R is applied for the first time
+ <br />rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7, characters
+ <br />5-35:) is applied for the first time
  <br />
  <br />Updating the views for E(x!)
  <br />
@@ -7573,7 +7578,7 @@ Applying rule 0: E.R:
  <br />
  <br />R(x!E@x,c!free,cr!free,n!free)
  <br /></div>
-<!--l. 17--><p class="nopar" >
+<!--l. 19--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.8: </span><span  
 class="content">Reachability analysis: extensional description of the new patterns created when
@@ -7593,13 +7598,17 @@ applying a rule.</span></div><!--tex4ht:label?: x1-650238 -->
 
                                                                                   
 <div class="verbatim" id="verbatim-11">
-Applying rule 0: E.R:
+Applying rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7, characters
+ <br />5-35:):
  <br />the precondition is satisfied
  <br />
- <br />rule 0: E.R is applied for the first time
- <br />(rule 1: E/R) should be investigated
+ <br />rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7, characters
+ <br />5-35:) is applied for the first time
+ <br />(rule E/R (File &#x0022;../kappa/reachability.ka&#x0022;, line
+ <br />8, characters 5-39:)) should be investigated
  <br />
- <br />(rule 1: E/R) should be investigated
+ <br />(rule E/R (File &#x0022;../kappa/reachability.ka&#x0022;, line
+ <br />8, characters 5-39:)) should be investigated
  <br />
  <br />
  <br />Updating the views for E(x!)
@@ -7615,8 +7624,9 @@ Applying rule 0: E.R:
  <br />
  <br />R(c!1,x!E.x),R(c!1,x!E.x)
  <br />
- <br />(rule 0: E.R) should be investigated</div>
-<!--l. 25--><p class="nopar" >
+ <br />(rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7,
+ <br />characters 5-35:)) should be investigated</div>
+<!--l. 30--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.9: </span><span  
 class="content">Reachability analysis: discovering new patterns force the analysis to apply
@@ -9239,9 +9249,9 @@ class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1
 
                                                                                   
 <div class="verbatim" id="verbatim-14">
-Kappa Static Analyzer (50383df) (without Tk interface)
- <br />Analysis launched at 2017/04/12 01:28:53 (GMT+0) on
- <br />testing-gce-0813f658-6ff0-41fd-bd10-ec12b3e21997
+Kappa Static Analyzer (d7f5416) (without Tk interface)
+ <br />Analysis launched at 2017/04/12 12:59:47 (GMT+0) on
+ <br />testing-gce-cab1c484-50be-401a-ace1-3d66251a29b6
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -9632,7 +9642,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">chemical notation, 19 <br /></span>
 <span class="index-item">comments, 15 <br /></span>
 </p><p class="theindex">
-<span class="index-item">data ﬁle, 26, 28, 78 <br /></span>
+<span class="index-item">data ﬁle, 26, 28, 80 <br /></span>
 <span class="index-item">declaration, 15, 19, 22, 26, 28, 34, 37, 40, 41, 43, 46 <br /></span>
 <span class="index-item">default state, 20 <br /></span>
 <span class="index-item">don&#x2019;t care don&#x2019;t write, 20 <br /></span>
@@ -9640,7 +9650,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 </p><p class="theindex">
 <span class="index-item">edit rules, 21 <br /></span>
 <span class="index-item">eﬀect, 37, 39 <br /></span>
-<span class="index-item">embedding, 78 <br /></span>
+<span class="index-item">embedding, 80 <br /></span>
 <span class="index-item">event, 8, 27 <br /></span>
                                                                                   
 
@@ -9655,7 +9665,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">initial condition, 15, 28 <br /></span>
 <span class="index-item">internal state, 16 <br /></span>
 </p><p class="theindex">
-<span class="index-item">kappa ﬁle, 15, 16, 18, 26, 28, 34, 37, 46, 47, 78 <br /></span>
+<span class="index-item">kappa ﬁle, 15, 16, 18, 26, 28, 34, 37, 46, 47, 80 <br /></span>
 <span class="index-item">kinetic rate, 23, 26 <br /></span>
 <span class="index-subitem">    deterministic rate constant, 23 <br /></span>
 <span class="index-subitem">    stochastic rate constant, 23 <br /></span>
@@ -9664,9 +9674,9 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">link type, 18 <br /></span>
 <span class="index-item">longest preﬁx convention, 20 <br /></span>
 </p><p class="theindex">
-<span class="index-item">mixture, 8, 20, 25, 28, 39–41, 46, 78 <br /></span>
+<span class="index-item">mixture, 8, 20, 25, 28, 39–41, 46, 80 <br /></span>
 </p><p class="theindex">
-<span class="index-item">null event, 27, 77 <br /></span>
+<span class="index-item">null event, 27, 79 <br /></span>
 </p><p class="theindex">
 <span class="index-item">perturbation, 15, 37 <br /></span>
 <span class="index-subitem">    one shot, 37 <br /></span>
