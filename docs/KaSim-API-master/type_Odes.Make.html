@@ -109,6 +109,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">I</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.network<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;network_from_compil&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smash_reactions:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ignore_obs:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">I</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -116,8 +117,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.network<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_reactions&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.network&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id&nbsp;list&nbsp;*&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id&nbsp;<span class="constructor">Locality</span>.annot&nbsp;list&nbsp;*&nbsp;<span class="constructor">I</span>.rule)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id&nbsp;list&nbsp;*&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id&nbsp;<span class="constructor">Locality</span>.annot&nbsp;list&nbsp;*&nbsp;<span class="constructor">I</span>.rule)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export_network&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;command_line:string&nbsp;<span class="keywordsign">-&gt;</span><br>
