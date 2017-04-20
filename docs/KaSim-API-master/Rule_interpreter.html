@@ -167,7 +167,7 @@ Returns the graph obtained by applying the rule.
     <code class="code">rule_id</code> is mandatory if the rule has an unary rate.<br>
 </div>
 
-<pre><span id="VALforce_rule"><span class="keyword">val</span> force_rule</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       Pattern.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALforce_rule"><span class="keyword">val</span> force_rule</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       Pattern.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> option</code></pre><div class="info ">
 Apply the rule for sure if it is possible. Try <code class="code">apply_rule</code> but in
 case of null_event, it computes the exact injections of the left hand
 side to do apply the rule and returns the remaining exact injections.<br>

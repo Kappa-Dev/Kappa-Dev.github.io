@@ -165,8 +165,14 @@ Prints nothing in case of infinity or Not a Number<br>
 </div>
 
 <pre><span id="VALiteri"><span class="keyword">val</span> iteri</span> : <code class="type">(<a href="Nbr.html#TYPEt">t</a> -> 'a -> 'a) -> 'a -> <a href="Nbr.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
-<code class="code">iter f x n</code><br>
+<code class="code">iteri f x n</code><br>
 <b>Returns</b> f (n - k) (... (f (n - 1) (f n x))) where k &lt; n &lt;= k+1<br>
+</div>
+
+<pre><span id="VALmaybe_iteri"><span class="keyword">val</span> maybe_iteri</span> : <code class="type">(<a href="Nbr.html#TYPEt">t</a> -> 'a -> 'a option) -> 'a -> <a href="Nbr.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
+<code class="code">maybe_iteri f x n</code><br>
+<b>Returns</b> f (n - k) (... (f (n - 1) (f n x))) up to k &lt; n &lt;= k+1
+or <code class="code">f</code> returns <code class="code"><span class="constructor">None</span></code><br>
 </div>
 
 <pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> string</code></pre>
