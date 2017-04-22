@@ -147,6 +147,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;formatter_of_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;channel_of_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pervasives</span>.out_channel&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flush_buffer&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flush_and_clean&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;int_of_string_id&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;graph_of_logger&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Graph_loggers_sig</span>.graph<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_node&nbsp;:<br>
