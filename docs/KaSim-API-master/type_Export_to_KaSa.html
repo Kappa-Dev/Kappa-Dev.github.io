@@ -175,6 +175,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_data&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler&nbsp;option&nbsp;*&nbsp;<span class="constructor">Remanent_state</span>.dead_rules&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.separating_transitions&nbsp;option<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Export</span>&nbsp;:&nbsp;<span class="keyword">functor</span>&nbsp;(<span class="constructor">Reachability</span>&nbsp;:&nbsp;<span class="constructor">Analyzer</span>.<span class="constructor">Analyzer</span>)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Type</span><br>
 <span class="keyword">end</span></code></body></html>
