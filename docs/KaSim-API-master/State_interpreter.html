@@ -115,8 +115,8 @@ Abstract state<br>
 </div>
 
 
-<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="Model.html#TYPEt">Model.t</a> -> (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">empty env stopping_times</code><br>
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">with_delta_activities:bool -><br>       <a href="Model.html#TYPEt">Model.t</a> -> (<a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">empty ~with_delta_activities env stopping_times</code><br>
 </div>
 
 <pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type">bind:('a -> (bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -> 'a) -><br>       return:(bool * <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">Rule_interpreter.t</a> -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       (<a href="Alg_expr.html#TYPEt">Alg_expr.t</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> * <a href="Locality.html#TYPEt">Locality.t</a>) list -> 'a</code></pre><div class="info ">
