@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim &#x0026; KaSa reference manual
-(release 7e91e83)</title> 
+(release d27c4d9)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim &#x0026; KaSa reference manual<br />
-(release 7e91e83)</h2>
+(release d27c4d9)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -7287,9 +7287,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (7e91e83) (without Tk interface)
- <br />Analysis launched at 2017/04/27 09:07:46 (GMT+0) on
- <br />testing-gce-1ac60ef1-b235-4c16-8b24-0a166352ffd6
+Kappa Static Analyzer (d27c4d9) (without Tk interface)
+ <br />Analysis launched at 2017/04/27 10:46:31 (GMT+0) on
+ <br />testing-gce-4b08156f-8e1e-4e4a-8a81-aa6361dc857d
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7337,11 +7337,6 @@ Kappa Static Analyzer (7e91e83) (without Tk interface)
  <br />]
  <br />R(c!1),R(c!1) =&#x003E;
  <br />[
- <br />  R(c!1,cr!R.n),R(c!1,n!R.cr)
- <br />v R(c!1,cr),R(c!1,n)
- <br />]
- <br />R(c!1),R(c!1) =&#x003E;
- <br />[
  <br />  R(c!1,n!R.cr),R(c!1,n)
  <br />v R(c!1,n),R(c!1,n)
  <br />v R(c!1,n),R(c!1,n!R.cr)
@@ -7352,7 +7347,7 @@ Kappa Static Analyzer (7e91e83) (without Tk interface)
  <br />R(c!R.c,cr!R.n) =&#x003E; R(c!1,cr!2),R(c!1,n!2)
  <br />R(c!R.c,n!R.cr) =&#x003E; R(c!1,n!2),R(c!1,cr!2)
  <br />execution finished without any exception</div>
-<!--l. 64--><p class="nopar" >
+<!--l. 59--><p class="nopar" >
 <!--l. 1525--><p class="noindent" >This result is displayed in the standard output, and it is made of six parts.
 <!--l. 1527--><p class="noindent" >The ﬁrst two parts provide an enumeration of dead rules and dead agents. The next parts display
 what we call reﬁnement lemmas. A reﬁnement lemma is made of a precondition (on
@@ -7372,14 +7367,14 @@ agents than the site graph in the corresponding precondition). The meaning of a 
 lemma is that every embedding between its precondition into a reachable state can be
 reﬁned/extended into an embedding from one site graph in its postcondition into the same
 reachable state. This way, a reﬁnement lemma provides an enumeration of all the potential
-                                                                                  
-
-                                                                                  
 contexts for the precondition.
 <!--l. 1533--><p class="noindent" >We now detail the six diﬀerent parts:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ecbx-1095">Detection of dead rules. </span>A rule is called dead, if there is no trace starting from the
+                                                                                  
+
+                                                                                  
      initial state in which this rule is applied. The analysis reports the list of the rules it
      has detected to be dead. Due to the over-approximation, it may happen that a dead
      rule is not discovered by the analysis. Yet, every rule that is reported as dead, is dead
@@ -7434,13 +7429,13 @@ class="ecbx-1095">Properties in connected agent. </span>When two agents are conn
 href="#XFeret:SASB2016">13</a>]</span> collects for
      each kind of bonds, the relation between the state of one site in the ﬁrst agent and
      the state of one site in the second agent. Due to the over-approximation, the analysis
-                                                                                  
-
-                                                                                  
      reports a super-set of the set of the potential pairs of states.
      <!--l. 1558--><p class="noindent" >This abstraction aimed at capturing information about protein transportation. It is
      quite common to model the location of a protein as the internal state of a ﬁctitious
      site. With such an encoding, it might be important to ensure that two connected
+                                                                                  
+
+                                                                                  
      proteins, are always located in the same location. This abstraction focuses on this
      kind of properties.
      </li>
@@ -7470,9 +7465,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (7e91e83) (without Tk interface)
- <br />Analysis launched at 2017/04/27 09:07:46 (GMT+0) on
- <br />testing-gce-1ac60ef1-b235-4c16-8b24-0a166352ffd6
+Kappa Static Analyzer (d27c4d9) (without Tk interface)
+ <br />Analysis launched at 2017/04/27 10:46:31 (GMT+0) on
+ <br />testing-gce-4b08156f-8e1e-4e4a-8a81-aa6361dc857d
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7627,13 +7622,10 @@ Applying rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7,�
  <br />
  <br />R(x!E@x,c!free,cr!free,n!free)
  <br />
- <br />Update information about potential sites across domain
- <br />
- <br />R(c!1,x!E.x),R(c!1,x!E.x)
- <br />
  <br />(rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7,
- <br />characters 5-35:)) should be investigated</div>
-<!--l. 30--><p class="nopar" >
+ <br />characters 5-35:)) should be investigated
+ <br /></div>
+<!--l. 27--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 7.9: </span><span  
 class="content">Reachability analysis: discovering new patterns force the analysis to apply
@@ -9256,9 +9248,9 @@ class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1
 
                                                                                   
 <div class="verbatim" id="verbatim-14">
-Kappa Static Analyzer (7e91e83) (without Tk interface)
- <br />Analysis launched at 2017/04/27 09:07:46 (GMT+0) on
- <br />testing-gce-1ac60ef1-b235-4c16-8b24-0a166352ffd6
+Kappa Static Analyzer (d27c4d9) (without Tk interface)
+ <br />Analysis launched at 2017/04/27 10:46:30 (GMT+0) on
+ <br />testing-gce-4b08156f-8e1e-4e4a-8a81-aa6361dc857d
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -9649,7 +9641,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">chemical notation, 19 <br /></span>
 <span class="index-item">comments, 15 <br /></span>
 </p><p class="theindex">
-<span class="index-item">data ﬁle, 26, 28, 80 <br /></span>
+<span class="index-item">data ﬁle, 26, 28, 78 <br /></span>
 <span class="index-item">declaration, 15, 19, 22, 26, 28, 34, 37, 40, 41, 43, 46 <br /></span>
 <span class="index-item">default state, 20 <br /></span>
 <span class="index-item">don&#x2019;t care don&#x2019;t write, 20 <br /></span>
@@ -9657,7 +9649,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 </p><p class="theindex">
 <span class="index-item">edit rules, 21 <br /></span>
 <span class="index-item">eﬀect, 37, 39 <br /></span>
-<span class="index-item">embedding, 80 <br /></span>
+<span class="index-item">embedding, 78 <br /></span>
 <span class="index-item">event, 8, 27 <br /></span>
                                                                                   
 
@@ -9672,7 +9664,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">initial condition, 15, 28 <br /></span>
 <span class="index-item">internal state, 16 <br /></span>
 </p><p class="theindex">
-<span class="index-item">kappa ﬁle, 15, 16, 18, 26, 28, 34, 37, 46, 47, 80 <br /></span>
+<span class="index-item">kappa ﬁle, 15, 16, 18, 26, 28, 34, 37, 46, 47, 78 <br /></span>
 <span class="index-item">kinetic rate, 23, 26 <br /></span>
 <span class="index-subitem">    deterministic rate constant, 23 <br /></span>
 <span class="index-subitem">    stochastic rate constant, 23 <br /></span>
@@ -9681,9 +9673,9 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">link type, 18 <br /></span>
 <span class="index-item">longest preﬁx convention, 20 <br /></span>
 </p><p class="theindex">
-<span class="index-item">mixture, 8, 20, 25, 28, 39–41, 46, 80 <br /></span>
+<span class="index-item">mixture, 8, 20, 25, 28, 39–41, 46, 78 <br /></span>
 </p><p class="theindex">
-<span class="index-item">null event, 27, 79 <br /></span>
+<span class="index-item">null event, 27, 77 <br /></span>
 </p><p class="theindex">
 <span class="index-item">perturbation, 15, 37 <br /></span>
 <span class="index-subitem">    one shot, 37 <br /></span>
