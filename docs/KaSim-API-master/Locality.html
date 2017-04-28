@@ -104,24 +104,11 @@
 </div>
 <h1>Module <a href="type_Locality.html">Locality</a></h1>
 
-<pre><span class="keyword">module</span> Locality: <code class="code"><span class="keyword">sig</span></code> <a href="Locality.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+<pre><span class="keyword">module</span> Locality: <code class="code"><span class="keyword">sig</span></code> <a href="Locality.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Output a JSON value of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a>.<br>
+</div>
+<hr width="100%">
 
-<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
-
-
-<pre><span id="TYPEannot"><span class="keyword">type</span> <code class="type">'a</code> annot</span> = <code class="type">'a * <a href="Locality.html#TYPEt">t</a></code> </pre>
-
-
-<pre><span id="TYPEmaybe"><span class="keyword">type</span> <code class="type">'a</code> maybe</span> = <code class="type">?pos:<a href="Locality.html#TYPEt">t</a> -> 'a</code> </pre>
-
-
-<pre><span id="VALof_pos"><span class="keyword">val</span> of_pos</span> : <code class="type">Lexing.position -> Lexing.position -> <a href="Locality.html#TYPEt">t</a></code></pre>
-<pre><span id="VALdummy"><span class="keyword">val</span> dummy</span> : <code class="type"><a href="Locality.html#TYPEt">t</a></code></pre>
-<pre><span id="VALdummy_annot"><span class="keyword">val</span> dummy_annot</span> : <code class="type">'a -> 'a <a href="Locality.html#TYPEannot">annot</a></code></pre>
-<pre><span id="VALhas_dummy_annot"><span class="keyword">val</span> has_dummy_annot</span> : <code class="type">'a <a href="Locality.html#TYPEannot">annot</a> -> bool</code></pre>
-<pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Locality.html#TYPEt">t</a> -> string</code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> <a href="Locality.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALprint_annot"><span class="keyword">val</span> print_annot</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="Locality.html#TYPEannot">annot</a> -> unit</code></pre>
 <pre><code><span id="TYPEposition"><span class="keyword">type</span> <code class="type"></code>position</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -167,8 +154,40 @@
 
 
 
-<pre><span id="VALto_range"><span class="keyword">val</span> to_range</span> : <code class="type"><a href="Locality.html#TYPEt">t</a> -> <a href="Locality.html#TYPErange">range</a></code></pre>
-<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Locality.html#TYPEt">t</a></code></pre>
-<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Locality.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type"><a href="Locality.html#TYPErange">range</a></code> </pre>
+
+
+<pre><span id="TYPEannot"><span class="keyword">type</span> <code class="type">'a</code> annot</span> = <code class="type">'a * <a href="Locality.html#TYPEt">t</a></code> </pre>
+
+
+<pre><span id="TYPEmaybe"><span class="keyword">type</span> <code class="type">'a</code> maybe</span> = <code class="type">?pos:<a href="Locality.html#TYPEt">t</a> -> 'a</code> </pre>
+
+
+<pre><span id="VALof_pos"><span class="keyword">val</span> of_pos</span> : <code class="type">Lexing.position -> Lexing.position -> <a href="Locality.html#TYPEt">t</a></code></pre>
+<pre><span id="VALdummy"><span class="keyword">val</span> dummy</span> : <code class="type"><a href="Locality.html#TYPEt">t</a></code></pre>
+<pre><span id="VALdummy_annot"><span class="keyword">val</span> dummy_annot</span> : <code class="type">'a -> 'a <a href="Locality.html#TYPEannot">annot</a></code></pre>
+<pre><span id="VALhas_dummy_annot"><span class="keyword">val</span> has_dummy_annot</span> : <code class="type">'a <a href="Locality.html#TYPEannot">annot</a> -> bool</code></pre>
+<pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Locality.html#TYPEt">t</a> -> string</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> <a href="Locality.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint_annot"><span class="keyword">val</span> print_annot</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="Locality.html#TYPEannot">annot</a> -> unit</code></pre>
 <pre><span id="VALannot_of_json"><span class="keyword">val</span> annot_of_json</span> : <code class="type">(Yojson.Basic.json -> 'a) -> Yojson.Basic.json -> 'a <a href="Locality.html#TYPEannot">annot</a></code></pre>
-<pre><span id="VALannot_to_json"><span class="keyword">val</span> annot_to_json</span> : <code class="type">('a -> Yojson.Basic.json) -> 'a <a href="Locality.html#TYPEannot">annot</a> -> Yojson.Basic.json</code></pre></body></html>
+<pre><span id="VALannot_to_json"><span class="keyword">val</span> annot_to_json</span> : <code class="type">('a -> Yojson.Basic.json) -> 'a <a href="Locality.html#TYPEannot">annot</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALwrite_range"><span class="keyword">val</span> write_range</span> : <code class="type">Bi_outbuf.t -> <a href="Locality.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+Output a JSON value of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a>.<br>
+</div>
+
+<pre><span id="VALstring_of_range"><span class="keyword">val</span> string_of_range</span> : <code class="type">?len:int -> <a href="Locality.html#TYPEt">t</a> -> string</code></pre><div class="info ">
+Serialize a value of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a> into a JSON string.<br>
+</div>
+<div class="param_info"><code class="code">len</code> : specifies the initial length
+                 of the buffer used internally.
+                 Default: 1024.</div>
+
+<pre><span id="VALread_range"><span class="keyword">val</span> read_range</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Locality.html#TYPEt">t</a></code></pre><div class="info ">
+Input JSON data of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a>.<br>
+</div>
+
+<pre><span id="VALrange_of_string"><span class="keyword">val</span> range_of_string</span> : <code class="type">string -> <a href="Locality.html#TYPEt">t</a></code></pre><div class="info ">
+Deserialize JSON data of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a>.<br>
+</div>
+</body></html>
