@@ -104,7 +104,11 @@
 </div>
 <h1>Module <a href="type_Symmetries_sig.html">Symmetries_sig</a></h1>
 
-<pre><span class="keyword">module</span> Symmetries_sig: <code class="code"><span class="keyword">sig</span></code> <a href="Symmetries_sig.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+<pre><span class="keyword">module</span> Symmetries_sig: <code class="code"><span class="keyword">sig</span></code> <a href="Symmetries_sig.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Abstract domain to record relations between pair of sites in
+    connected agents.<br>
+</div>
+<hr width="100%">
 
 <pre><code><span id="TYPEsite_partition"><span class="keyword">type</span> <code class="type">'a</code> site_partition</span> = {</code></pre><table class="typetable">
 <tr>
@@ -130,6 +134,9 @@
 </tr></table>
 }
 
+
+
+<pre><span id="TYPEbwd_bisim_info"><span class="keyword">type</span> <code class="type"></code>bwd_bisim_info</span> = <code class="type">int <a href="Symmetries_sig.html#TYPEsite_partition">site_partition</a> array * bool Mods.DynArray.t *<br>       <a href="Signature.html#TYPEs">Signature.s</a> * LKappa_auto.cache Pervasives.ref</code> </pre>
 
 
 <pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">'a <a href="Symmetries_sig.html#TYPEsite_partition">site_partition</a></code></pre>

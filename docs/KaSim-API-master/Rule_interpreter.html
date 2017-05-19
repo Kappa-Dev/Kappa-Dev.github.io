@@ -157,24 +157,35 @@ wired because perturbations can redefined alg_expr.<br>
 <pre><span id="VALvalue_bool"><span class="keyword">val</span> value_bool</span> : <code class="type"><a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -> (<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> -> bool</code></pre><br>
 <h6 id="6_Core">Core</h6><br>
 
-<pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       ?rule_id:int -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       Pattern.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
+<pre><span id="VALapply_rule"><span class="keyword">val</span> apply_rule</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       ?rule_id:int -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
 Returns the graph obtained by applying the rule.
  <code class="code">rule_id</code> is mandatory if the rule has an unary rate.<br>
 </div>
 
-<pre><span id="VALapply_unary_rule"><span class="keyword">val</span> apply_unary_rule</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       rule_id:int -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       Pattern.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
+<pre><span id="VALapply_unary_rule"><span class="keyword">val</span> apply_unary_rule</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       rule_id:int -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEresult">result</a></code></pre><div class="info ">
 Returns the graph obtained by applying the rule.
     <code class="code">rule_id</code> is mandatory if the rule has an unary rate.<br>
 </div>
 
-<pre><span id="VALforce_rule"><span class="keyword">val</span> force_rule</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       Pattern.Set.t -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> option</code></pre><div class="info ">
+<pre><span id="VALforce_rule"><span class="keyword">val</span> force_rule</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -><br>       <a href="Trace.html#TYPEevent_kind">Trace.event_kind</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> option</code></pre><div class="info ">
 Apply the rule for sure if it is possible. Try <code class="code">apply_rule</code> but in
 case of null_event, it computes the exact injections of the left hand
 side to do apply the rule and returns the remaining exact injections.<br>
 </div>
 
-<pre><span id="VALadjust_rule_instances"><span class="keyword">val</span> adjust_rule_instances</span> : <code class="type">rule_id:int -><br>       (int -> int -> float -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
-<pre><span id="VALadjust_unary_rule_instances"><span class="keyword">val</span> adjust_unary_rule_instances</span> : <code class="type">rule_id:int -><br>       (int -> int -> float -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
+<pre><span id="VALadjust_rule_instances"><span class="keyword">val</span> adjust_rule_instances</span> : <code class="type">rule_id:int -><br>       (int -> int -> float -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+Compute the exact number of instances of rule <code class="code">rule_id</code>
+<p>
+
+    Said differently: unplug rectangular approximation for <code class="code">rule_id</code>
+    (up to the next application of a rule impacting the number of
+    instances of <code class="code">rule_id</code><br>
+</div>
+
+<pre><span id="VALadjust_unary_rule_instances"><span class="keyword">val</span> adjust_unary_rule_instances</span> : <code class="type">rule_id:int -><br>       (int -> int -> float -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+Compute the exact number of unary instances of rule <code class="code">rule_id</code><br>
+</div>
+
 <pre><span id="VALincorporate_extra_pattern"><span class="keyword">val</span> incorporate_extra_pattern</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEid">Pattern.id</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
 <pre><span id="VALoverwrite_var"><span class="keyword">val</span> overwrite_var</span> : <code class="type">int -> <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
 <pre><span id="VALupdate_outdated_activities"><span class="keyword">val</span> update_outdated_activities</span> : <code class="type">(int -> int -> float -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -> <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a> * int list</code></pre><div class="info ">

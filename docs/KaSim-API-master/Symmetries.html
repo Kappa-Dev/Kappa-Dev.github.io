@@ -110,7 +110,7 @@
    * Jérôme Feret &amp; Ly Kim Quyen, projet Antique, INRIA Paris-Rocquencourt
    *
    * Creation: 2016, the 5th of December
-   * Last modification: Time-stamp: &lt;Apr 03 2017&gt;
+   * Last modification: Time-stamp: &lt;May 13 2017&gt;
    *
    * Abstract domain to record relations between pair of sites in connected agents.
    *
@@ -182,44 +182,6 @@
 
 
 <pre><span id="VALempty_cache"><span class="keyword">val</span> empty_cache</span> : <code class="type">unit -> <a href="Symmetries.html#TYPEcache">cache</a></code></pre>
-<pre><span id="VALrepresentative"><span class="keyword">val</span> representative</span> : <code class="type">?parameters:Remanent_parameters_sig.parameters -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Symmetries.html#TYPEcache">cache</a> -><br>       LKappa_auto.cache -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       <a href="Symmetries.html#TYPEreduction">reduction</a> -><br>       <a href="Pattern.html#TYPEcc">Pattern.cc</a> -><br>       <a href="Symmetries.html#TYPEcache">cache</a> * LKappa_auto.cache * <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a></code></pre>
-<pre><code><span id="TYPEclass_description"><span class="keyword">type</span> <code class="type"></code>class_description</span> = {</code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTclass_description.species_weight">species_weight</span>&nbsp;: <code class="type">int</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTclass_description.class_representative">class_representative</span>&nbsp;: <code class="type"><a href="Pattern.html#TYPEcc">Pattern.cc</a></code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTclass_description.class_cardinal">class_cardinal</span>&nbsp;: <code class="type">int</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTclass_description.class_weight">class_weight</span>&nbsp;: <code class="type">int</code>;</code></td>
-
-</tr></table>
-}
-
-
-
-<pre><span id="TYPEbwd_map"><span class="keyword">type</span> <code class="type"></code>bwd_map</span> </pre>
-
-
-<pre><span id="VALempty_bwd_map"><span class="keyword">val</span> empty_bwd_map</span> : <code class="type">unit -> <a href="Symmetries.html#TYPEbwd_map">bwd_map</a></code></pre>
-<pre><span id="VALadd_equiv_class"><span class="keyword">val</span> add_equiv_class</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       (<a href="Pattern.html#TYPEcc">Pattern.cc</a> -> int) -><br>       bool Mods.DynArray.t -><br>       LKappa_auto.cache -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       <a href="Symmetries.html#TYPEreduction">reduction</a> -><br>       <a href="Symmetries.html#TYPEbwd_map">bwd_map</a> -><br>       <a href="Pattern.html#TYPEcc">Pattern.cc</a> -><br>       bool Mods.DynArray.t * LKappa_auto.cache * <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> *<br>       <a href="Symmetries.html#TYPEbwd_map">bwd_map</a></code></pre>
-<pre><span id="VALbwd_interpretation"><span class="keyword">val</span> bwd_interpretation</span> : <code class="type">?parameters:Remanent_parameters_sig.parameters -><br>       <a href="Symmetries.html#TYPEbwd_map">bwd_map</a> -><br>       <a href="Symmetries.html#TYPEreduction">reduction</a> -> <a href="Pattern.html#TYPEcc">Pattern.cc</a> -> <a href="Symmetries.html#TYPEclass_description">class_description</a> option</code></pre>
-<pre><span id="VALfold_bwd_map"><span class="keyword">val</span> fold_bwd_map</span> : <code class="type">(<a href="Pattern.html#TYPEcc">Pattern.cc</a> -> <a href="Symmetries.html#TYPEclass_description">class_description</a> -> 'a -> 'a) -><br>       <a href="Symmetries.html#TYPEbwd_map">bwd_map</a> -> 'a -> 'a</code></pre></body></html>
+<pre><span id="VALrepresentative"><span class="keyword">val</span> representative</span> : <code class="type">?parameters:Remanent_parameters_sig.parameters -><br>       sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Symmetries.html#TYPEcache">cache</a> -><br>       LKappa_auto.cache -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       <a href="Symmetries.html#TYPEreduction">reduction</a> -><br>       <a href="Pattern.html#TYPEcc">Pattern.cc</a> -><br>       <a href="Symmetries.html#TYPEcache">cache</a> * LKappa_auto.cache * <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a></code></pre>
+<pre><span id="VALequiv_class"><span class="keyword">val</span> equiv_class</span> : <code class="type">?parameters:Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       bool Mods.DynArray.t -><br>       <a href="Symmetries.html#TYPEcache">cache</a> -><br>       LKappa_auto.cache -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       <a href="Symmetries.html#TYPEreduction">reduction</a> -><br>       <a href="Pattern.html#TYPEid">Pattern.id</a> -><br>       <a href="Symmetries.html#TYPEcache">cache</a> * LKappa_auto.cache * <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> *<br>       bool Mods.DynArray.t * (int * (<a href="Pattern.html#TYPEid">Pattern.id</a> * int) list)</code></pre>
+<pre><span id="VALsaturate_domain_with_symmetric_patterns"><span class="keyword">val</span> saturate_domain_with_symmetric_patterns</span> : <code class="type">compileModeOn:bool -><br>       ?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       <a href="Symmetries_sig.html#TYPEbwd_bisim_info">Symmetries_sig.bwd_bisim_info</a> -><br>       (('a * <a href="Pattern.html#TYPEcc">Pattern.cc</a>) array * 'b) list -> <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -> <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a></code></pre></body></html>

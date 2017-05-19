@@ -96,32 +96,47 @@
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;raw_mixture_to_species&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;?signature:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;*&nbsp;<span class="constructor">Pattern</span>.id<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mixture_to_pattern&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;*&nbsp;<span class="constructor">Pattern</span>.id<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_to_raw_mixture&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Raw_mixture</span>.t&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list)&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Raw_mixture</span>.t&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list)&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pattern_to_mixture&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">LKappa</span>.rule_mixture&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list)&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pattern_id_to_mixture&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">LKappa</span>.rule_mixture&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list)&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pattern_id_to_cc&nbsp;:&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;raw_mixture_to_lkappa_rule&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_to_lkappa_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_to_lkappa_rule_and_unspec&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pattern_to_lkappa_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pattern_to_lkappa_rule_and_unspec&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pattern_id_to_lkappa_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pattern_id_to_lkappa_rule_and_unspec&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;*&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy_agent_in_raw_mixture&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.agent<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy_agent_in_lkappa&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent<br>
 <span class="keyword">end</span></code></body></html>

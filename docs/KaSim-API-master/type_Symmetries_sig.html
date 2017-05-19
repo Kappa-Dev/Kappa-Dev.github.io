@@ -99,6 +99,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;over_internal_states&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;over_full_states&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;list;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;bwd_bisim_info&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Symmetries_sig</span>.site_partition&nbsp;array&nbsp;*&nbsp;bool&nbsp;<span class="constructor">Mods</span>.<span class="constructor">DynArray</span>.t&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;*&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="constructor">Pervasives</span>.ref<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Symmetries_sig</span>.site_partition<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;map&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span><br>

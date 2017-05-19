@@ -112,7 +112,7 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
-<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> option * <a href="LKappa.html#TYPErule">LKappa.rule</a> <a href="Locality.html#TYPEannot">Locality.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array * Pattern.Set.t -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> array -><br>       <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Contact_map.html#TYPEt">Contact_map.t</a> -> <a href="Model.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> option * <a href="LKappa.html#TYPErule">LKappa.rule</a> <a href="Locality.html#TYPEannot">Locality.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array -><br>       <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> array -><br>       <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Contact_map.html#TYPEt">Contact_map.t</a> -> <a href="Model.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code><br>
 </div>
 
@@ -121,7 +121,6 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="VALnb_rules"><span class="keyword">val</span> nb_rules</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnb_syntactic_rules"><span class="keyword">val</span> nb_syntactic_rules</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnb_perturbations"><span class="keyword">val</span> nb_perturbations</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALconnected_components_of_unary_rules"><span class="keyword">val</span> connected_components_of_unary_rules</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> Pattern.Set.t</code></pre>
 <pre><span id="VALdomain"><span class="keyword">val</span> domain</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> <a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a></code></pre>
 <pre><span id="VALget_obs"><span class="keyword">val</span> get_obs</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> <a href="Alg_expr.html#TYPEt">Alg_expr.t</a> <a href="Locality.html#TYPEannot">Locality.annot</a> array</code></pre>
 <pre><span id="VALget_rules"><span class="keyword">val</span> get_rules</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array</code></pre>
@@ -142,14 +141,19 @@ Compiled representation of a full Kappa model<br>
 <pre><span id="VALfold_perturbations"><span class="keyword">val</span> fold_perturbations</span> : <code class="type">(int -> 'a -> <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> -> 'a) -> 'a -> <a href="Model.html#TYPEt">t</a> -> 'a</code></pre>
 <pre><span id="VALget_alg_reverse_dependencies"><span class="keyword">val</span> get_alg_reverse_dependencies</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int -> Operator.DepSet.t</code></pre>
 <pre><span id="VALget_token_reverse_dependencies"><span class="keyword">val</span> get_token_reverse_dependencies</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int -> Operator.DepSet.t</code></pre>
-<pre><span id="VALget_always_outdated"><span class="keyword">val</span> get_always_outdated</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> Operator.DepSet.t</code></pre>
 <pre><span id="VALall_dependencies"><span class="keyword">val</span> all_dependencies</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array</code></pre>
 <pre><span id="VALnum_of_agent"><span class="keyword">val</span> num_of_agent</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnum_of_alg"><span class="keyword">val</span> num_of_alg</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnum_of_token"><span class="keyword">val</span> num_of_token</span> : <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Model.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnums_of_rule"><span class="keyword">val</span> nums_of_rule</span> : <code class="type">string -> <a href="Model.html#TYPEt">t</a> -> int list</code></pre>
-<pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
-<pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
+<pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre><div class="info ">
+The int is the ast_rule_id<br>
+</div>
+
+<pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre><div class="info ">
+Same as above but the int is this time the rule_id<br>
+</div>
+
 <pre><span id="VALprint_agent"><span class="keyword">val</span> print_agent</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_alg"><span class="keyword">val</span> print_alg</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_token"><span class="keyword">val</span> print_token</span> : <code class="type">?env:<a href="Model.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>

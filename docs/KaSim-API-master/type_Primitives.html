@@ -176,6 +176,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;effect&nbsp;:&nbsp;<span class="constructor">Primitives</span>.modification&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;abort&nbsp;:&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;perturbation_to_yojson&nbsp;:&nbsp;<span class="constructor">Primitives</span>.perturbation&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;perturbation_of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.perturbation<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;exists_modification&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Primitives</span>.modification&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.perturbation&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
