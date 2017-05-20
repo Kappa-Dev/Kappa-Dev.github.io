@@ -156,10 +156,11 @@ Simulation progress keeper<br>
 <pre><span id="VALcurrent_simulation_info"><span class="keyword">val</span> current_simulation_info</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit <a href="Trace.Simulation_info.html#TYPEt">Trace.Simulation_info.t</a></code></pre>
 <pre><span id="VALnext_story"><span class="keyword">val</span> next_story</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit <a href="Trace.Simulation_info.html#TYPEt">Trace.Simulation_info.t</a></code></pre>
 <pre><span id="VALfill"><span class="keyword">val</span> fill</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Counter.html#TYPEt">t</a> -> dt:float -> (<a href="Counter.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> array) -> unit</code></pre>
-<pre><span id="VALone_constructive_event"><span class="keyword">val</span> one_constructive_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
-<pre><span id="VALone_clashing_instance_event"><span class="keyword">val</span> one_clashing_instance_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
-<pre><span id="VALone_no_more_unary_event"><span class="keyword">val</span> one_no_more_unary_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
-<pre><span id="VALone_no_more_binary_event"><span class="keyword">val</span> one_no_more_binary_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> bool</code></pre>
+<pre><span id="VALone_time_advance"><span class="keyword">val</span> one_time_advance</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> unit</code></pre>
+<pre><span id="VALone_constructive_event"><span class="keyword">val</span> one_constructive_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALone_clashing_instance_event"><span class="keyword">val</span> one_clashing_instance_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALone_no_more_unary_event"><span class="keyword">val</span> one_no_more_unary_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
+<pre><span id="VALone_no_more_binary_event"><span class="keyword">val</span> one_no_more_binary_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALone_time_correction_event"><span class="keyword">val</span> one_time_correction_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> -> bool</code></pre>
 <pre><span id="VALinc_stories"><span class="keyword">val</span> inc_stories</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALinit_time"><span class="keyword">val</span> init_time</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float</code></pre>
