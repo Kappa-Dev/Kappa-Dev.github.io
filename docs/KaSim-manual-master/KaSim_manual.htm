@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim, KaSa, &#x0026; KaDE reference manual
-(release 75dﬀ4e)</title> 
+(release d97930a)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim, KaSa, &#x0026; KaDE reference manual<br />
-(release 75dﬀ4e)</h2>
+(release d97930a)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -202,13 +202,13 @@ href="#x1-730008.2.1" id="QQ2-1-112">Launching the interface</a></span>
 href="#x1-740008.2.2" id="QQ2-1-114">The areas of interests</a></span>
 <br />  <span class="subsectionToc" >8.2.3 <a 
 href="#x1-750008.2.3" id="QQ2-1-115">The sub-tab <span 
-class="ectt-1095">0_models</span></a></span>
+class="ectt-1095">0_data_set</span></a></span>
 <br />  <span class="subsectionToc" >8.2.4 <a 
 href="#x1-760008.2.4" id="QQ2-1-116">The sub-tab <span 
 class="ectt-1095">1_output</span></a></span>
 <br />  <span class="subsectionToc" >8.2.5 <a 
 href="#x1-770008.2.5" id="QQ2-1-118">The sub-tab <span 
-class="ectt-1095">2_output</span></a></span>
+class="ectt-1095">2_semantics</span></a></span>
 <br />  <span class="subsectionToc" >8.2.6 <a 
 href="#x1-780008.2.6" id="QQ2-1-120">The sub-tab <span 
 class="ectt-1095">3_integration_settings</span></a></span>
@@ -6763,9 +6763,6 @@ General options
                                                                                   
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
  <br />      file name for the contact map output
- <br />  --contact-map-format DOT
- <br /> (default: DOT)
- <br />      Tune the output format for the contact map
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the influence map file in this directory
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
@@ -6802,12 +6799,12 @@ General options
  <br />                                              Full
  <br /> (default: Low)
  <br />      Tune the verbosity level for the reachability analysis
-                                                                                  
-
-                                                                                  
  <br />  --output-mode-for-reachability-analysis raw | kappa | english
  <br /> (default: kappa)
  <br />      post-process relation and output the result in the chosen format
+                                                                                  
+
+                                                                                  
  <br />
  <br />3_Trace_analysis
  <br />  --(no-)compute-local-traces    (default: disabled)
@@ -6836,9 +6833,6 @@ General options
  <br />      put the contact map file in this directory
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
  <br />      file name for the contact map output
- <br />  --contact-map-format DOT
- <br /> (default: DOT)
- <br />      Tune the output format for the contact map
  <br />  --contact-map-accuracy-level Low | High
  <br /> (default: Low)
  <br />      Tune the accuracy level of the contact map
@@ -6846,15 +6840,15 @@ General options
  <br />      show in the contact map only the sites with a binding state
  <br />
  <br />5_Influence_map
-                                                                                  
-
-                                                                                  
  <br />  --(no-)compute-influence-map    (default: enabled)
  <br />      compute the influence map
  <br />  --influence-map-accuracy-level Indirect | Direct | Realisable
  <br /> (default: Direct)
  <br />      Tune the accuracy level of the influence map
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
+                                                                                  
+
+                                                                                  
  <br />      put the influence map file in this directory
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
  <br />      file name for the influence map
@@ -6881,20 +6875,20 @@ General options
  <br />  --(no-)print-efficiency    (default: disabled)
  <br />      prompt CPU time and various datas
  <br />
- <br />(58 options)</div>
-<!--l. 155--><p class="nopar" >
+ <br />(56 options)</div>
+<!--l. 149--><p class="nopar" >
 <!--l. 1405--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
 <!--l. 1408--><p class="noindent" >More options are available in the OCaml ﬁle <span 
 class="ectt-1095">KaSa_rep/config/config.ml </span>and can be tuned
 before compilation.
-                                                                                  
-
-                                                                                  
 <!--l. 1410--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">7.2   </span> <a 
  id="x1-610007.2"></a>Graphical interface</h3>
+                                                                                  
+
+                                                                                  
 <!--l. 1412--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
  id="x1-620007.2.1"></a>Launching the interface</h4>
@@ -7391,9 +7385,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (75dff4e) (without Tk interface)
- <br />Analysis launched at 2017/05/22 15:45:58 (GMT+0) on
- <br />testing-gce-f0549d47-892e-48af-aa65-d076cd6321e6
+Kappa Static Analyzer (d97930a) (without Tk interface)
+ <br />Analysis launched at 2017/05/22 20:32:41 (GMT+0) on
+ <br />testing-gce-db4d2c88-6f70-4dbe-81f6-5df7af70d010
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7569,9 +7563,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (75dff4e) (without Tk interface)
- <br />Analysis launched at 2017/05/22 15:45:58 (GMT+0) on
- <br />testing-gce-f0549d47-892e-48af-aa65-d076cd6321e6
+Kappa Static Analyzer (d97930a) (without Tk interface)
+ <br />Analysis launched at 2017/05/22 20:32:41 (GMT+0) on
+ <br />testing-gce-db4d2c88-6f70-4dbe-81f6-5df7af70d010
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -9352,9 +9346,9 @@ class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1
 
                                                                                   
 <div class="verbatim" id="verbatim-14">
-Kappa Static Analyzer (75dff4e) (without Tk interface)
- <br />Analysis launched at 2017/05/22 15:45:58 (GMT+0) on
- <br />testing-gce-f0549d47-892e-48af-aa65-d076cd6321e6
+Kappa Static Analyzer (d97930a) (without Tk interface)
+ <br />Analysis launched at 2017/05/22 20:32:40 (GMT+0) on
+ <br />testing-gce-db4d2c88-6f70-4dbe-81f6-5df7af70d010
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -9421,47 +9415,56 @@ General options
  <br />  --gui             GUI to select
  <br />  --(no-)expert     Expert mode (more options)
  <br />
- <br />0_model
+ <br />0_data_set
  <br />  -(no-)initial &#x003C;float&#x003E;   (default: 0.000000)
  <br />      Min time of simulation (arbitrary time unit)
  <br />  -(no-)l &#x003C;float&#x003E;   (default: 1.000000)
  <br />      Limit of the simulation
  <br />  -(no-)p &#x003C;float&#x003E;   (default: 0.010000)
  <br />      plot period: time interval between points in plot (default: 1.0)
+ <br />  -d &#x003C;name&#x003E;   (default: .)
+ <br />      Specifies directory name where output file(s) should be stored
+ <br />  --output &#x003C;value&#x003E;
+ <br />      Prefix for file name output
  <br />
  <br />1_output
  <br />  -d &#x003C;name&#x003E;   (default: .)
  <br />      Specifies directory name where output file(s) should be stored
+ <br />  -mode batch | interactive
+ <br /> (default: interactive)
+ <br />      either &#x0022;batch&#x0022; to never ask anything to the user or &#x0022;interactive&#x0022; to
+ <br />      ask something before doing anything
  <br />  --(no-)output-plot &#x003C;name&#x003E;   (default data.csv)
  <br />      file name for data output
- <br />  --ode-backend dotnet | octave | matlab | mathematica | maple | sbml
- <br /> (default: octave)
- <br />      Select the backend format
  <br />  --output &#x003C;value&#x003E;
  <br />      Prefix for file name output
- <br />  --(no-)propagate-constants    (default: disabled)
+ <br />  --ode-backend dotnet | maple | mathematica | matlab | octave | sbml
+ <br /> (default: octave)
+ <br />      Select the backend format
+ <br />  --(no-)constant-propagation    (default: disabled)
  <br />      propagate constants
- <br />  --(no-)show-reactions    (default: disabled)
- <br />      Gather identical reactions in the ODEs
- <br />  --(no-)smash-reactions    (default: enabled)
+ <br />  --(no-)show-reactions    (default: enabled)
  <br />      Annotate ODEs by the corresponding chemical reactions
- <br />
- <br />2_semantics
- <br />  --(no-)output-plot &#x003C;name&#x003E;   (default data.csv)
- <br />      file name for data output
- <br />  --rate-convention KaSim | Divide_by_nbr_of_autos_in_lhs | Biochemist
- <br /> (default: Divide_by_nbr_of_autos_in_lhs)
                                                                                   
 
                                                                                   
+ <br />  --(no-)smash-reactions    (default: disabled)
+ <br />      Gather identical reactions in the ODEs
+ <br />
+ <br />2_semantics
+ <br />  -d &#x003C;name&#x003E;   (default: .)
+ <br />      Specifies directory name where output file(s) should be stored
+ <br />  --(no-)output-plot &#x003C;name&#x003E;   (default data.csv)
+ <br />      file name for data output
+ <br />  --output &#x003C;value&#x003E;
+ <br />      Prefix for file name output
+ <br />  --rate-convention KaSim | Divide_by_nbr_of_autos_in_lhs | Biochemist
+ <br /> (default: Divide_by_nbr_of_autos_in_lhs)
  <br />      convention for dividing constant rates
  <br />  --count Embeddings | Occurrences
  <br /> (default: Embeddings)
  <br />      tune whether we cound in embeddings or in occurrences
  <br />  --(no-)truncate &#x003C;int&#x003E;   (default: disabled)
- <br />      truncate the network by discarding species with size greater than the
- <br />      argument
- <br />  --(no-)max-size-for-species &#x003C;int&#x003E;   (default: disabled)
  <br />      truncate the network by discarding species with size greater than the
  <br />      argument
  <br />  --with-symmetries None | Backward | Forward
@@ -9475,13 +9478,20 @@ General options
  <br />      Limit of the simulation
  <br />  -(no-)p &#x003C;float&#x003E;   (default: 0.010000)
  <br />      plot period: time interval between points in plot (default: 1.0)
+ <br />  -d &#x003C;name&#x003E;   (default: .)
+ <br />      Specifies directory name where output file(s) should be stored
  <br />  --(no-)output-plot &#x003C;name&#x003E;   (default data.csv)
  <br />      file name for data output
- <br />  --(no-)show-reactions    (default: disabled)
+ <br />  --output &#x003C;value&#x003E;
+ <br />      Prefix for file name output
+ <br />  --(no-)smash-reactions    (default: disabled)
  <br />      Gather identical reactions in the ODEs
  <br />  --(no-)compute-jacobian    (default: enabled)
  <br />      Enable/disable the computation of the Jacobian of the ODEs
  <br /> (not
+                                                                                  
+
+                                                                                  
  <br />      available yet)
  <br />  --(no-)nonnegative    (default: disabled)
  <br />      Enable/disable the correction of negative concentrations in stiff ODE
@@ -9495,10 +9505,11 @@ General options
  <br />  --absolute-tolerance &#x003C;float&#x003E;   (default 0.001000)
  <br />      tolerance to absolute rounding errors
  <br />
-                                                                                  
-
-                                                                                  
  <br />4_model_reduction
+ <br />  -d &#x003C;name&#x003E;   (default: .)
+ <br />      Specifies directory name where output file(s) should be stored
+ <br />  --output &#x003C;value&#x003E;
+ <br />      Prefix for file name output
  <br />  --with-symmetries None | Backward | Forward
  <br /> (default: None)
  <br />      Tune which kind of bisimulation is used to reduce the set of species
@@ -9506,6 +9517,10 @@ General options
  <br />      Display the equivalence relations over the sites
  <br />
  <br />5_static_analysis
+ <br />  -d &#x003C;name&#x003E;   (default: .)
+ <br />      Specifies directory name where output file(s) should be stored
+ <br />  --output &#x003C;value&#x003E;
+ <br />      Prefix for file name output
  <br />  --(no-)views-domain    (default: enabled)
  <br />      Enable/disable views analysis when detecting symmetric sites
  <br />  --(no-)double-bonds-domain    (default: enabled)
@@ -9516,6 +9531,13 @@ General options
  <br /> connected agents
  <br />
  <br />6_debug_mode
+ <br />  -d &#x003C;name&#x003E;   (default: .)
+ <br />      Specifies directory name where output file(s) should be stored
+                                                                                  
+
+                                                                                  
+ <br />  --output &#x003C;value&#x003E;
+ <br />      Prefix for file name output
  <br />  --(no-)show-time-advance    (default: disabled)
  <br />      Display time advance during numerical integration
  <br />  --(no-)print-efficiency    (default: disabled)
@@ -9527,17 +9549,14 @@ General options
  <br />  --(no-)gluttony    (default: disabled)
  <br />      Lower gc activity for a faster but memory intensive simulation
  <br />
- <br />(42 options)</div>
-<!--l. 111--><p class="nopar" >
+ <br />(54 options)</div>
+<!--l. 136--><p class="nopar" >
 <!--l. 1933--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
 <!--l. 1936--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">8.2   </span> <a 
  id="x1-720008.2"></a>Graphical interface</h3>
-                                                                                  
-
-                                                                                  
 <!--l. 1938--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.2.1   </span> <a 
  id="x1-730008.2.1"></a>Launching the interface</h4>
@@ -9564,7 +9583,7 @@ width="341.43306pt" height="216.61836pt" >
 ><span class="id">Figure 8.1: </span><span  
 class="content"><span 
 class="ecss-1095">KaDE</span>  graphical interface - sub-tab <span 
-class="ectt-1095">0_model</span></span></div><!--tex4ht:label?: x1-730011 -->
+class="ectt-1095">0_data_set</span></span></div><!--tex4ht:label?: x1-730011 -->
                                                                                   
 
                                                                                   
@@ -9579,9 +9598,9 @@ class="ectt-1095">0_model</span></span></div><!--tex4ht:label?: x1-730011 -->
      expert modes, more options are available in the graphical interface.
      </li>
      <li 
-  class="enumerate" id="x1-74004x2">On the top center/right, some button allows for the selection of the tab. There are
-     currently         seven         sub-tabs         available:         <span 
-class="ectt-1095">0_model</span>,         <span 
+  class="enumerate" id="x1-74004x2">On   the   top   center/right,   some   button   allows   for   the   selection   of   the
+     tab.   There   are   currently   seven   sub-tabs   available:   <span 
+class="ectt-1095">0_data_set</span>,   <span 
 class="ectt-1095">1_output</span>,
      <span 
 class="ectt-1095">2_semantics</span>, <span 
@@ -9619,22 +9638,50 @@ class="ectt-1095">Save options</span>&#x2019; can
 class="ectt-1095">Launch</span>
      <span 
 class="ectt-1095">analyze</span>&#x2019; launch <span 
-class="ecss-1095">KaSa</span> with the current options.
+class="ecss-1095">KaDE</span> with the current options.
      <!--l. 1972--><p class="noindent" >Importantly, options are saved automatically under various occasions. Thus, it is
                                                                                   
 
                                                                                   
      possible to restore the value of the options before the last reset, before the last quit,
      or before the last analysis.</li></ol>
-<!--l. 1976--><p class="noindent" >
+<!--l. 1976--><p class="noindent" >Two ﬁelds deﬁnes the repository and the name of the output:
+     <ul class="itemize1">
+     <li class="itemize">
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">-d </span>sets the repository where output ﬁle are written. <span 
+class="ecss-1095">KaDE</span> will create this
+     repository, if it does not exist.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–output </span>sets the name of the output ﬁle. The following extension will
+     be added automatically according to the choice of the backend format: &#x0022;.net&#x0022; in
+     DOTNET format, &#x0022;.mws&#x0022; in Maple, &#x0022;.nb&#x0022; in Mathematica, &#x0022;.m&#x0022; in Matlab and
+     Octave, and &#x0022;.xml&#x0022; in SBML.</li></ul>
+<!--l. 1982--><p class="noindent" >Both ﬁelds may be modiﬁed from every sub-tab.
+<!--l. 1984--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.2.3   </span> <a 
  id="x1-750008.2.3"></a>The sub-tab <span 
-class="ectt-1095">0_models</span></h4>
-<!--l. 1989--><p class="noindent" >
+class="ectt-1095">0_data_set</span></h4>
+<!--l. 1986--><p class="noindent" >The sub-tab <span 
+class="ectt-1095">0_data_set </span>(see Fig. <a 
+href="#x1-730011">8.1<!--tex4ht:ref: fig:kade:0 --></a>) contains the options to tune the time range for the
+numerical integration and the frequency of sample plots.
+     <ul class="itemize1">
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–initial </span>deﬁnes the starting date of the simulation.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">-l </span>deﬁnes the ﬁnal date of the simulation.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">-p </span>deﬁnes the time interval between two plots.</li></ul>
+<!--l. 1993--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.2.4   </span> <a 
  id="x1-760008.2.4"></a>The sub-tab <span 
 class="ectt-1095">1_output</span></h4>
-<!--l. 1991--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 1995--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -9645,7 +9692,7 @@ class="ectt-1095">1_output</span></h4>
 
                                                                                   
 
-<!--l. 1993--><p class="noindent" ><img 
+<!--l. 1997--><p class="noindent" ><img 
 src="img/kade_1.png" alt="PIC"  
 width="341.43306pt" height="216.61836pt" >
 <br /> <div class="caption" 
@@ -9656,11 +9703,36 @@ class="ectt-1095">1_output</span></span></div><!--tex4ht:label?: x1-760012 -->
                                                                                   
 
                                                                                   
-<!--l. 1996--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2000--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2003--><p class="noindent" >The sub-tab <span 
+class="ectt-1095">1_Ouput </span>(see Fig. <a 
+href="#x1-760012">8.2<!--tex4ht:ref: fig:kade:1 --></a>) contains the names of the output ﬁles and their
+format.
+     <ul class="itemize1">
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–ode-backend </span>allows for the choice among the diﬀerent backend formats:
+     DOTNET, Maple, Mathematica, Matlab, Octave and SBML.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–output-plot </span>sets the name of the ﬁle where the plots will be dumped
+     when it applies. Only the Maple, Mathematica, Matlab and Octave dump plots. The
+     option is ignored in the other backend formats.
+     </li>
+     <li class="itemize">The option <span 
+class="ectt-1095">–(no)-constant-propagation </span>switches on/oﬀ constant propagation.
+     </li>
+     <li class="itemize">The option <span 
+class="ectt-1095">–(no)-show-reactions </span>annotates each expression in the output ﬁle, with
+     the Kappa rule and the reactions that has generated this contribution.
+     </li>
+     <li class="itemize">The option <span 
+class="ectt-1095">–(no)-smash-reactions </span>identify multiple occurrences of a same reaction
+     in the reaction network, and sum up their contribution into a single reaction.</li></ul>
+<!--l. 2013--><p class="noindent" >When a ﬁle already exists,
 <h4 class="subsectionHead"><span class="titlemark">8.2.5   </span> <a 
  id="x1-770008.2.5"></a>The sub-tab <span 
-class="ectt-1095">2_output</span></h4>
-<!--l. 2018--><p class="noindent" ><hr class="figure"><div class="figure" 
+class="ectt-1095">2_semantics</span></h4>
+<!--l. 2017--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -9671,7 +9743,7 @@ class="ectt-1095">2_output</span></h4>
 
                                                                                   
 
-<!--l. 2020--><p class="noindent" ><img 
+<!--l. 2019--><p class="noindent" ><img 
 src="img/kade_2.png" alt="PIC"  
 width="341.43306pt" height="216.61836pt" >
 <br /> <div class="caption" 
@@ -9682,11 +9754,37 @@ class="ectt-1095">2_semantics</span></span></div><!--tex4ht:label?: x1-770013 --
                                                                                   
 
                                                                                   
-<!--l. 2023--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2022--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2024--><p class="noindent" >The diﬀerential semantics of a Kappa model is described in Sect. <a 
+href="#x1-820008.3">8.3<!--tex4ht:ref: sec:differential semantics --></a>. The option in the sub-tab
+<span 
+class="ectt-1095">2_semantics </span>allows for the choice among several choice for the meaning of the ODEs variables
+and for the meaning of the rate constants.
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ecss-1095">KaDE</span> corrects the rate constant of each according to a convention about the number
+     of automorphisms in this rule. <span 
+class="ecss-1095">KaDE</span>oﬀers three conventions. With the convention
+     <span 
+class="ectt-1095">KaSim</span>, there is no correction, as it is done in the simulator; with the convention
+     <span 
+class="ectt-1095">Divide_by_the_number_of_autos_in_lhs</span>,  each  rate  constant  is  divided  by  the
+     number of automorphisms in the lhs of the rule, as it was done in previous version
+     of the simulator; with the convention <span 
+class="ectt-1095">Biochemist</span>, each rate constant is divided by
+     the number of automorphisms in the lhs, that also induces an automorphism over the
+     agents that are preserved in the rhs of the rule.
+     </li>
+     <li class="itemize">
+     </li>
+     <li class="itemize">
+     </li>
+     <li class="itemize">
+     </li></ul>
 <h4 class="subsectionHead"><span class="titlemark">8.2.6   </span> <a 
  id="x1-780008.2.6"></a>The sub-tab <span 
 class="ectt-1095">3_integration_settings</span></h4>
-<!--l. 2027--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2041--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -9697,7 +9795,7 @@ class="ectt-1095">3_integration_settings</span></h4>
 
                                                                                   
 
-<!--l. 2029--><p class="noindent" ><img 
+<!--l. 2043--><p class="noindent" ><img 
 src="img/kade_3.png" alt="PIC"  
 width="341.43306pt" height="216.61836pt" >
 <br /> <div class="caption" 
@@ -9708,11 +9806,11 @@ class="ectt-1095">3_integration_settings</span></span></div><!--tex4ht:label?: x
                                                                                   
 
                                                                                   
-<!--l. 2032--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2046--><p class="noindent" ></div><hr class="endfigure">
 <h4 class="subsectionHead"><span class="titlemark">8.2.7   </span> <a 
  id="x1-790008.2.7"></a>The sub-tab <span 
 class="ectt-1095">4_model_reduction</span></h4>
-<!--l. 2036--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2050--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -9723,7 +9821,7 @@ class="ectt-1095">4_model_reduction</span></h4>
 
                                                                                   
 
-<!--l. 2038--><p class="noindent" ><img 
+<!--l. 2052--><p class="noindent" ><img 
 src="img/kade_4.png" alt="PIC"  
 width="341.43306pt" height="216.61836pt" >
 <br /> <div class="caption" 
@@ -9734,11 +9832,11 @@ class="ectt-1095">4_model_reduction</span></span></div><!--tex4ht:label?: x1-790
                                                                                   
 
                                                                                   
-<!--l. 2041--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2055--><p class="noindent" ></div><hr class="endfigure">
 <h4 class="subsectionHead"><span class="titlemark">8.2.8   </span> <a 
  id="x1-800008.2.8"></a>The sub-tab <span 
 class="ectt-1095">5_static_analysis</span></h4>
-<!--l. 2045--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2059--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -9749,7 +9847,7 @@ class="ectt-1095">5_static_analysis</span></h4>
 
                                                                                   
 
-<!--l. 2047--><p class="noindent" ><img 
+<!--l. 2061--><p class="noindent" ><img 
 src="img/kade_5.png" alt="PIC"  
 width="341.43306pt" height="216.61836pt" >
 <br /> <div class="caption" 
@@ -9760,11 +9858,11 @@ class="ectt-1095">5_static_analysis</span></span></div><!--tex4ht:label?: x1-800
                                                                                   
 
                                                                                   
-<!--l. 2050--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2064--><p class="noindent" ></div><hr class="endfigure">
 <h4 class="subsectionHead"><span class="titlemark">8.2.9   </span> <a 
  id="x1-810008.2.9"></a>The sub-tab <span 
 class="ectt-1095">6_debug_mode</span></h4>
-<!--l. 2054--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2068--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -9775,7 +9873,7 @@ class="ectt-1095">6_debug_mode</span></h4>
 
                                                                                   
 
-<!--l. 2056--><p class="noindent" ><img 
+<!--l. 2070--><p class="noindent" ><img 
 src="img/kade_5.png" alt="PIC"  
 width="341.43306pt" height="216.61836pt" >
 <br /> <div class="caption" 
@@ -9786,31 +9884,31 @@ class="ectt-1095">6_debug_mode</span></span></div><!--tex4ht:label?: x1-810017 -
                                                                                   
 
                                                                                   
-<!--l. 2059--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2073--><p class="noindent" ></div><hr class="endfigure">
 <h3 class="sectionHead"><span class="titlemark">8.3   </span> <a 
  id="x1-820008.3"></a>Diﬀerential semantics</h3>
-<!--l. 2063--><p class="noindent" >
+<!--l. 2078--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.3.1   </span> <a 
  id="x1-830008.3.1"></a>From rules to reactions</h4>
-<!--l. 2064--><p class="noindent" >
+<!--l. 2079--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.3.2   </span> <a 
  id="x1-840008.3.2"></a>Semantics convention</h4>
-<!--l. 2066--><p class="noindent" >
+<!--l. 2081--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x1-850008.3.2"></a>Rate constant conventions</h5>
-<!--l. 2067--><p class="noindent" >
+<!--l. 2082--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x1-860008.3.2"></a>Ambiguous molecularity</h5>
-<!--l. 2068--><p class="noindent" >
+<!--l. 2083--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x1-870008.3.2"></a>Embeddings VS occurrences</h5>
-<!--l. 2070--><p class="noindent" >
+<!--l. 2085--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">8.4   </span> <a 
  id="x1-880008.4"></a>Tutorial</h3>
                                                                                   
 
                                                                                   
-<!--l. 2073--><p class="noindent" >
+<!--l. 2088--><p class="noindent" >
                                                                                   
 
                                                                                   
@@ -9818,18 +9916,18 @@ class="ectt-1095">6_debug_mode</span></span></div><!--tex4ht:label?: x1-810017 -
  id="x1-890009"></a>Frequently asked questions</h2>
 <h3 class="likesectionHead"><a 
  id="x1-900009"></a>Simulation hangs after a while</h3>
-<!--l. 2075--><p class="noindent" >If the progress bar seems stalled, it does not necessarily mean that the simulation is blocked. In
+<!--l. 2090--><p class="noindent" >If the progress bar seems stalled, it does not necessarily mean that the simulation is blocked. In
 particular when a simulation is triggered with a <span 
 class="ecti-1095">time </span>limit (<span 
 class="ectt-1095">-l </span>option of the command
 line) it might only indicate that the bio clock is stalled while computation events still
 occur. Recall that the average (bio) time one has to wait in order to apply a rule is
-<!--l. 2075--><math 
+<!--l. 2090--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mn>1</mn><mo 
 class="MathClass-bin">∕</mo><mi 
 >A</mi></math>, where
-<!--l. 2075--><math 
+<!--l. 2090--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >A</mi></math> is the
@@ -9840,7 +9938,7 @@ that grows rapidly, the average time increment might tend to 0 and if it remains
 while, it will block the progress bar whose advance is proportional to the bio time
 <span 
 class="ectt-1095">[T]</span>.
-<!--l. 2077--><p class="noindent" >In order to make sure that <span 
+<!--l. 2092--><p class="noindent" >In order to make sure that <span 
 class="ecss-1095">KaSim</span> is not incorrectly blocked you may wish to plot the
 event clock against time clock using the observable <span 
 class="ectt-1095">%obs: </span><span 
@@ -9851,17 +9949,17 @@ class="ectt-1095">[E] </span>or run the
 simulation using an event limit (<span 
 class="ectt-1095">-e </span>option of the command line) instead of a time
 limit.
-<!--l. 2079--><p class="noindent" >
+<!--l. 2094--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-910009"></a>What do null events mean, why do I have any?</h3>
-<!--l. 2081--><p class="noindent" >Null events<a 
+<!--l. 2096--><p class="noindent" >Null events<a 
  id="dx1-91001"></a> is a way for <span 
 class="ecss-1095">KaSim</span> to compensate for some over approximation it is doing, in order
 deal with large simulations more eﬃciently. They usually do not impact signiﬁcantly the
 performances of the simulator, unless the model contains rules using the special notation to deal
 with ambiguous molecularity (see Section <a 
 href="#x1-310003.4.5">3.4.5<!--tex4ht:ref: sec:ambiguous --></a>). With pure Kappa rules, the ratio
-<!--l. 2081--><math 
+<!--l. 2096--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >r</mi></math> of null
@@ -9872,96 +9970,96 @@ class="ectt-1095">r</span><span
 class="tctt-1095">' </span><span 
 class="ectt-1095">[E-]/[E]</span>) should
 tend to 0 when models have a lot of agents.
-<!--l. 2083--><p class="noindent" >
+<!--l. 2098--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-920009"></a>No data points are generated</h3>
                                                                                   
 
                                                                                   
-<!--l. 2084--><p class="noindent" >Make sure you have <span 
+<!--l. 2099--><p class="noindent" >Make sure you have <span 
 class="ectt-1095">%obs </span>or <span 
 class="ectt-1095">%plot </span>instructions in your KF<a 
  id="dx1-92001"></a>. Also make sure to use a reasonable
 value for the <span 
 class="ectt-1095">-p </span>option in the command line to tell KaSim how often you wish to have points on
 your curves.
-<!--l. 2086--><p class="noindent" >
+<!--l. 2101--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-930009"></a>Too many instances of an observable</h3>
-<!--l. 2087--><p class="noindent" >The value of a kappa expression <!--l. 2087--><math 
+<!--l. 2102--><p class="noindent" >The value of a kappa expression <!--l. 2102--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
 is equal to the number of embeddings<a 
  id="dx1-93001"></a> it has in the current mixture<a 
  id="dx1-93002"></a>
-<!--l. 2087--><math 
+<!--l. 2102--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>. Embeddings are
-maps from agents in <!--l. 2087--><math 
+maps from agents in <!--l. 2102--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
-to agents in <!--l. 2087--><math 
+to agents in <!--l. 2102--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>. If
-<!--l. 2087--><math 
+<!--l. 2102--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> has symmetries then
-every permutation of <!--l. 2087--><math 
+every permutation of <!--l. 2102--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
 will be counted as a new embedding. For instance let
-<!--l. 2087--><math 
+<!--l. 2102--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi> <mo 
 class="MathClass-rel">=</mo></math><span 
 class="ectt-1095">A(x!1),A(x!1) </span>and let
-<!--l. 2087--><math 
+<!--l. 2102--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi> <mo 
 class="MathClass-rel">=</mo></math><span 
 class="ectt-1095">A(x!1,y~p),A(x!1,y~u)</span>.
 <span 
-class="ecss-1095">KaSim</span> will count two instances of <!--l. 2088--><math 
+class="ecss-1095">KaSim</span> will count two instances of <!--l. 2103--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math>
-in <!--l. 2088--><math 
+in <!--l. 2103--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>: the one mapping
 the ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 2088--><math 
+class="ectt-1095">A </span>of <!--l. 2103--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> to the
 ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 2088--><math 
+class="ectt-1095">A </span>of <!--l. 2103--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math> and the one
 mapping the ﬁrst <span 
-class="ectt-1095">A </span>of <!--l. 2088--><math 
+class="ectt-1095">A </span>of <!--l. 2103--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >E</mi></math> to
 the second <span 
-class="ectt-1095">A </span>of <!--l. 2088--><math 
+class="ectt-1095">A </span>of <!--l. 2103--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >M</mi></math>.
-<!--l. 2093--><p class="noindent" >
+<!--l. 2108--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-940009"></a>Value <span 
 class="ectt-1095">nan </span>in the data ﬁle at the end of the simulation</h3>
-<!--l. 2094--><p class="noindent" >The value <span 
+<!--l. 2109--><p class="noindent" >The value <span 
 class="ectt-1095">nan </span>means &#x0022;Not a Number&#x0022;. It is generated when a plotted variable is inﬁnite. Make
 sure this variable is not divided by zero at some point.
                                                                                   
@@ -10164,7 +10262,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">chemical notation, 19 <br /></span>
 <span class="index-item">comments, 15 <br /></span>
 </p><p class="theindex">
-<span class="index-item">data ﬁle, 26, 28, 88 <br /></span>
+<span class="index-item">data ﬁle, 26, 28, 90 <br /></span>
 <span class="index-item">declaration, 15, 19, 22, 26, 28, 34, 37, 40, 41, 43, 46 <br /></span>
 <span class="index-item">default state, 20 <br /></span>
 <span class="index-item">don&#x2019;t care don&#x2019;t write, 20 <br /></span>
@@ -10172,7 +10270,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 </p><p class="theindex">
 <span class="index-item">edit rules, 21 <br /></span>
 <span class="index-item">eﬀect, 37, 39 <br /></span>
-<span class="index-item">embedding, 88 <br /></span>
+<span class="index-item">embedding, 90 <br /></span>
 <span class="index-item">event, 8, 27 <br /></span>
                                                                                   
 
@@ -10187,7 +10285,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">initial condition, 15, 28 <br /></span>
 <span class="index-item">internal state, 16 <br /></span>
 </p><p class="theindex">
-<span class="index-item">kappa ﬁle, 15, 16, 18, 26, 28, 34, 37, 46, 47, 88 <br /></span>
+<span class="index-item">kappa ﬁle, 15, 16, 18, 26, 28, 34, 37, 46, 47, 90 <br /></span>
 <span class="index-item">kinetic rate, 23, 26 <br /></span>
 <span class="index-subitem">    deterministic rate constant, 23 <br /></span>
 <span class="index-subitem">    stochastic rate constant, 23 <br /></span>
@@ -10196,9 +10294,9 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">link type, 18 <br /></span>
 <span class="index-item">longest preﬁx convention, 20 <br /></span>
 </p><p class="theindex">
-<span class="index-item">mixture, 8, 20, 25, 28, 39–41, 46, 88 <br /></span>
+<span class="index-item">mixture, 8, 20, 25, 28, 39–41, 46, 90 <br /></span>
 </p><p class="theindex">
-<span class="index-item">null event, 27, 87 <br /></span>
+<span class="index-item">null event, 27, 89 <br /></span>
 </p><p class="theindex">
 <span class="index-item">perturbation, 15, 37 <br /></span>
 <span class="index-subitem">    one shot, 37 <br /></span>
