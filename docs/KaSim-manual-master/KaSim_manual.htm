@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim, KaSa, &#x0026; KaDE reference manual
-(release 5064be0)</title> 
+(release bd4899a)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim, KaSa, &#x0026; KaDE reference manual<br />
-(release 5064be0)</h2>
+(release bd4899a)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -208,11 +208,14 @@ href="#x1-760008.2.4" id="QQ2-1-116">The sub-tab <span
 class="ectt-1095">Output</span></a></span>
 <br />  <span class="subsectionToc" >8.2.5 <a 
 href="#x1-770008.2.5" id="QQ2-1-118">The sub-tab <span 
+class="ectt-1095">Integration settings</span></a></span>
+<br />  <span class="subsectionToc" >8.2.6 <a 
+href="#x1-780008.2.6" id="QQ2-1-120">The sub-tab <span 
 class="ectt-1095">Debug</span></a></span>
 <br /> <span class="sectionToc" >8.3 <a 
-href="#x1-780008.3" id="QQ2-1-121">Diﬀerential semantics</a></span>
+href="#x1-790008.3" id="QQ2-1-124">Diﬀerential semantics</a></span>
 <br />  <span class="subsectionToc" >8.3.1 <a 
-href="#x1-790008.3.1" id="QQ2-1-122">From rules to reactions</a></span>
+href="#x1-800008.3.1" id="QQ2-1-125">From rules to reactions</a></span>
 </div>
                                                                                   
 
@@ -7367,9 +7370,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (5064be0) (without Tk interface)
- <br />Analysis launched at 2017/05/26 09:09:05 (GMT+0) on
- <br />testing-gce-6119bb74-3eb8-46b6-8570-919db40a45a4
+Kappa Static Analyzer (bd4899a) (without Tk interface)
+ <br />Analysis launched at 2017/05/26 13:36:07 (GMT+0) on
+ <br />testing-gce-de194b21-f5f4-47cb-b96e-343939f04d4f
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7545,9 +7548,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (5064be0) (without Tk interface)
- <br />Analysis launched at 2017/05/26 09:09:05 (GMT+0) on
- <br />testing-gce-6119bb74-3eb8-46b6-8570-919db40a45a4
+Kappa Static Analyzer (bd4899a) (without Tk interface)
+ <br />Analysis launched at 2017/05/26 13:36:07 (GMT+0) on
+ <br />testing-gce-de194b21-f5f4-47cb-b96e-343939f04d4f
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -9327,9 +9330,9 @@ class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1
 
                                                                                   
 <div class="verbatim" id="verbatim-14">
-Kappa Static Analyzer (5064be0) (without Tk interface)
- <br />Analysis launched at 2017/05/26 09:09:05 (GMT+0) on
- <br />testing-gce-6119bb74-3eb8-46b6-8570-919db40a45a4
+Kappa Static Analyzer (bd4899a) (without Tk interface)
+ <br />Analysis launched at 2017/05/26 13:36:06 (GMT+0) on
+ <br />testing-gce-de194b21-f5f4-47cb-b96e-343939f04d4f
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -9633,10 +9636,8 @@ class="ecss-1095">KaDE</span> with the current options.
                                                                                   
 
                                                                                   
-<!--l. 1977--><p class="noindent" >Two ﬁelds deﬁnes the repository and the name of the output:
+<!--l. 1977--><p class="noindent" >Two ﬁelds deﬁne the repository and the name of the output:
      <ul class="itemize1">
-     <li class="itemize">
-     </li>
      <li class="itemize">The ﬁeld <span 
 class="ectt-1095">-d </span>sets the repository where output ﬁle are written. <span 
 class="ecss-1095">KaDE</span> will create this
@@ -9652,8 +9653,8 @@ class="ectt-1095">–output </span>sets the name of the output ﬁle. The follow
 class="ecss-1095">KaDE </span>will create it.
 <!--l. 1987--><p class="noindent" >When the output ﬁle already exists, <span 
 class="ecss-1095">KaDE </span>will ask for conﬁrmation before overwritting it, unless
-the tool is set in batch mode (e.g. see Sect. <span 
-class="ecbx-1095">??</span>).
+the tool is set in batch mode (e.g. see Sect. <a 
+href="#x1-780008.2.6">8.2.6<!--tex4ht:ref: kade:debug --></a>).
 <!--l. 1989--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.2.3   </span> <a 
  id="x1-750008.2.3"></a>The sub-tab <span 
@@ -9661,7 +9662,9 @@ class="ectt-1095">Data set</span></h4>
 <!--l. 1991--><p class="noindent" >The sub-tab <span 
 class="ectt-1095">Data set </span>(see Fig. <a 
 href="#x1-730011">8.1<!--tex4ht:ref: fig:kade:0 --></a>) contains the options to tune the time range for the
-numerical integration and the frequency of sample plots.
+numerical integration and the frequency of sample plots. These ﬁelds are used only in Maple,
+Mathematica, Matlab, and Octave backend formats. They are ignored in SBML and DOTNET
+backend formats.
      <ul class="itemize1">
      <li class="itemize">The ﬁeld <span 
 class="ectt-1095">–initial </span>deﬁnes the starting date of the simulation.
@@ -9671,11 +9674,11 @@ class="ectt-1095">-l </span>deﬁnes the ﬁnal date of the simulation.
      </li>
      <li class="itemize">The ﬁeld <span 
 class="ectt-1095">-p </span>deﬁnes the time interval between two plots.</li></ul>
-<!--l. 1998--><p class="noindent" >
+<!--l. 1999--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.2.4   </span> <a 
  id="x1-760008.2.4"></a>The sub-tab <span 
 class="ectt-1095">Output</span></h4>
-<!--l. 2000--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2001--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -9686,7 +9689,7 @@ class="ectt-1095">Output</span></h4>
 
                                                                                   
 
-<!--l. 2002--><p class="noindent" ><img 
+<!--l. 2003--><p class="noindent" ><img 
 src="img/kade_1.png" alt="PIC"  
 width="341.43306pt" height="216.61836pt" >
 <br /> <div class="caption" 
@@ -9697,8 +9700,8 @@ class="ectt-1095">Output</span></span></div><!--tex4ht:label?: x1-760012 -->
                                                                                   
 
                                                                                   
-<!--l. 2005--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 2008--><p class="noindent" >The sub-tab <span 
+<!--l. 2006--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2009--><p class="noindent" >The sub-tab <span 
 class="ectt-1095">Output </span>(see Fig. <a 
 href="#x1-760012">8.2<!--tex4ht:ref: fig:kade:1 --></a>) contains the names of the output ﬁles and their
 format.
@@ -9724,9 +9727,129 @@ class="ectt-1095">–(no)-smash-reactions </span>identify multiple occurrences o
      in the reaction network, and sum up their contribution into a single reaction.</li></ul>
 <h4 class="subsectionHead"><span class="titlemark">8.2.5   </span> <a 
  id="x1-770008.2.5"></a>The sub-tab <span 
+class="ectt-1095">Integration settings</span></h4>
+<!--l. 2021--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-770013"></a>
+                                                                                  
+
+                                                                                  
+
+<!--l. 2023--><p class="noindent" ><img 
+src="img/kade_3.png" alt="PIC"  
+width="341.43306pt" height="216.61836pt" >
+<br /> <div class="caption" 
+><span class="id">Figure 8.3: </span><span  
+class="content"><span 
+class="ecss-1095">KaDE</span>  graphical interface - sub-tab <span 
+class="ectt-1095">Integration settings</span></span></div><!--tex4ht:label?: x1-770013 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2026--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2028--><p class="noindent" >The sub-tab <span 
+class="ectt-1095">Integration settings </span>(see Fig. <a 
+href="#x1-770013">8.3<!--tex4ht:ref: fig:kade:3 --></a>) contains the parameters to guide the engine of
+numerical integration. Except the option <span 
+class="ectt-1095">–smashs-reaction</span>, these options are ignored in the
+SBML and in the DOTNET backend format.
+     <ul class="itemize1">
+     <li class="itemize">The option <span 
+class="ectt-1095">–compute-jacobian </span>switches on the computation of the Jacobian of the
+     system of ordinary diﬀerential equations. The Jacobian is computed symbolically. It
+     speeds up the numerical integration. The computation of the Jacobian is implemented
+     only in two backend formats: Matlab and Octave. Other formats will ignore this
+     option.
+     </li>
+     <li class="itemize">The option <span 
+class="ectt-1095">–non-negative </span>can be used to force concentration to have a non negative
+     value during numerical integration. The computation of the Jacobian is implemented
+     only in two backend formats: Matlab and Octave. Other formats will ignore this
+     option.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–initial-step </span>tunes the initial integration step. This ﬁeld is used only in
+     Maple, Mathematica, Matlab, and Octave backend formats. It is ignored in SBML
+     and DOTNET backend formats.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–max-step </span>tunes the maximal size of integration steps. This ﬁeld is used
+     only in Maple, Mathematica, Matlab, and Octave backend formats. It is ignored in
+     SBML and DOTNET backend formats.
+     </li>
+     <li class="itemize">The  ﬁeld  <span 
+class="ectt-1095">–relative-tolerance </span>deﬁnes  the  relative  numerical  error  tolerance  in
+     integration engines. This means that numerical errors cannot go beyond a bound that
+     is proportional to the concentration of the bio-molecular species. This ﬁeld sets the
+     value of the proportionality coeﬃcient. This ﬁeld is used only in Maple, Mathematica,
+     Matlab, and Octave backend formats. It is ignored in SBML and DOTNET backend
+     formats.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–absolute-tolerance </span>deﬁnes the absolute numerical error tolerance in
+     integration engines. This means that numerical errors cannot go beyond the value of
+     that ﬁeld. This ﬁeld is used only in Maple, Mathematica, Matlab, and Octave backend
+     formats. It is ignored in SBML and DOTNET backend formats.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–output-plot </span>deﬁned the csv ﬁle where the values of the sample plots
+                                                                                  
+
+                                                                                  
+     will be printed. This ﬁeld is used only in Maple, Mathematica, Matlab, and Octave
+     backend formats. It is ignored in SBML and DOTNET backend formats.
+     </li>
+     <li class="itemize">The  option  <span 
+class="ectt-1095">–smash-reaction </span>gathers  isomorphic  reactions  before  generating  the
+     network or the system of ordinary diﬀerential equations (while summing their rates).
+     This option is used in every backend format.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">–initial </span>deﬁnes the starting date of the simulation. This ﬁeld is used only
+     in Maple, Mathematica, Matlab, and Octave backend formats. It is ignored in SBML
+     and DOTNET backend formats.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">-l </span>deﬁnes the ﬁnal date of the simulation. This ﬁeld is used only in Maple,
+     Mathematica,  Matlab,  and  Octave  backend  formats.  It  is  ignored  in  SBML  and
+     DOTNET backend formats.
+     </li>
+     <li class="itemize">The ﬁeld <span 
+class="ectt-1095">-p </span>deﬁnes the time interval between two plots. This ﬁeld is used only in
+     Maple, Mathematica, Matlab, and Octave backend formats. It is ignored in SBML
+     and DOTNET backend formats.</li></ul>
+<h4 class="subsectionHead"><span class="titlemark">8.2.6   </span> <a 
+ id="x1-780008.2.6"></a>The sub-tab <span 
 class="ectt-1095">Debug</span></h4>
-<!--l. 2022--><p class="noindent" >In expert mode, the last sub-tab provides options to tune the amount of debugging information
-that is displaied.
+<!--l. 2057--><p class="noindent" >In expert mode, the last sub-tab provides options to tune the amount of debugging information
+that is displayed.
+<!--l. 2059--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-780014"></a>
+                                                                                  
+
+                                                                                  
+
+<!--l. 2061--><p class="noindent" ><img 
+src="img/kade_5.png" alt="PIC"  
+width="341.43306pt" height="216.61836pt" >
+<br /> <div class="caption" 
+><span class="id">Figure 8.4: </span><span  
+class="content"><span 
+class="ecss-1095">KaDE</span>  graphical interface - sub-tab <span 
+class="ectt-1095">6_debug_mode</span></span></div><!--tex4ht:label?: x1-780014 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2064--><p class="noindent" ></div><hr class="endfigure">
      <ul class="itemize1">
      <li class="itemize">The option <span 
 class="ectt-1095">–(no)-show-time-advance </span>includes some instruction in the output ﬁle,
@@ -9738,9 +9861,6 @@ class="ectt-1095">–(no)-show-time-advance </span>includes some instruction in 
 class="ectt-1095">–(no)-print-efficiency </span>provides some information about the CPU time
      that has been used to generate the set of reactions and about the size of the initial
      and reduced models.
-                                                                                  
-
-                                                                                  
      </li>
      <li class="itemize">The   option   <span 
 class="ectt-1095">–(no)-backtrace  </span>provides   more/less   information   about   internal
@@ -9755,65 +9875,65 @@ class="ectt-1095">-mode </span>allows for the choice among batch and interactive
 class="ecss-1095">KaDE </span>has to ask the permission before overwriting a ﬁle. In batch mode,
      <span 
 class="ecss-1095">KaDE</span>Âămay overwrite output ﬁles, without asking the permission.</li></ul>
-<!--l. 2036--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2078--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
                                                                                   
 <a 
- id="x1-770013"></a>
+ id="x1-780025"></a>
                                                                                   
 
                                                                                   
 <div class="minipage">
-<!--l. 2038--><p class="noindent" ><img 
+<!--l. 2080--><p class="noindent" ><img 
 src="Ka1x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
 name="Ka1x.png" src="img/sect1-bind.pdf"  
 --></div>
 <br /> <div class="caption" 
-><span class="id">Figure 8.3: </span><span  
+><span class="id">Figure 8.5: </span><span  
 class="content">Proteins <span 
 class="ectt-1095">K </span>and <span 
-class="ectt-1095">S </span>may bind. </span></div><!--tex4ht:label?: x1-770013 -->
+class="ectt-1095">S </span>may bind. </span></div><!--tex4ht:label?: x1-780025 -->
                                                                                   
 
                                                                                   
-<!--l. 2042--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 2043--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2084--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2085--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
                                                                                   
 <a 
- id="x1-770024"></a>
+ id="x1-780036"></a>
                                                                                   
 
                                                                                   
 <div class="minipage">
-<!--l. 2045--><p class="noindent" ><img 
+<!--l. 2087--><p class="noindent" ><img 
 src="Ka2x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
 name="Ka2x.png" src="img/sect1-phos.pdf"  
 --></div>
 <br /> <div class="caption" 
-><span class="id">Figure 8.4: </span><span  
+><span class="id">Figure 8.6: </span><span  
 class="content">The protein <span 
 class="ectt-1095">K </span>may activate the protein <span 
-class="ectt-1095">S</span>.</span></div><!--tex4ht:label?: x1-770024 -->
+class="ectt-1095">S</span>.</span></div><!--tex4ht:label?: x1-780036 -->
                                                                                   
 
                                                                                   
-<!--l. 2049--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2091--><p class="noindent" ></div><hr class="endfigure">
 <h3 class="sectionHead"><span class="titlemark">8.3   </span> <a 
- id="x1-780008.3"></a>Diﬀerential semantics</h3>
-<!--l. 2054--><p class="noindent" >
+ id="x1-790008.3"></a>Diﬀerential semantics</h3>
+<!--l. 2096--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.3.1   </span> <a 
- id="x1-790008.3.1"></a>From rules to reactions</h4>
-<!--l. 2056--><p class="noindent" >In Kappa, rules may be more and less reﬁned <span class="cite">[<span 
+ id="x1-800008.3.1"></a>From rules to reactions</h4>
+<!--l. 2098--><p class="noindent" >In Kappa, rules may be more and less reﬁned <span class="cite">[<span 
 class="ecbx-1095">?</span>, <span 
 class="ecbx-1095">?</span>]</span>, according to their preconditions.
-<!--l. 2058--><p class="noindent" >Consider the following two rules: <!--l. 2059-->
+<!--l. 2100--><p class="noindent" >Consider the following two rules: <!--l. 2101-->
 <div class="lstlisting" id="listing-32"><span class="label"><a 
- id="x1-79001r1"></a><span 
+ id="x1-80001r1"></a><span 
 class="ecrm-0600">1</span></span><span 
 class="ectt-1095">&#x2019;</span><span 
 class="ectt-1095">bind</span><span 
@@ -9842,7 +9962,7 @@ class="ectt-1095">)</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">@k</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
- id="x1-79002r2"></a><span 
+ id="x1-80002r2"></a><span 
 class="ecrm-0600">2</span></span><span 
 class="ectt-1095">&#x2019;</span><span 
 class="ectt-1095">phos</span><span 
@@ -9871,7 +9991,7 @@ class="ectt-1095">)</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">@kp</span>
 </div>
-<!--l. 2069--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2111--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
