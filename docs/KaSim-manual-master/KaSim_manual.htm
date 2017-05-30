@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim, KaSa, &#x0026; KaDE reference manual
-(release 03078c3)</title> 
+(release 840e3d2)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim, KaSa, &#x0026; KaDE reference manual<br />
-(release 03078c3)</h2>
+(release 840e3d2)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -216,10 +216,19 @@ class="ectt-1095">Debug</span></a></span>
 href="#x1-790008.3" id="QQ2-1-122">Diﬀerential semantics</a></span>
 <br />  <span class="subsectionToc" >8.3.1 <a 
 href="#x1-800008.3.1" id="QQ2-1-123">From rules to reactions</a></span>
-</div>
+<br />  <span class="subsectionToc" >8.3.2 <a 
+href="#x1-810008.3.2" id="QQ2-1-127">Semantics convention</a></span>
+<br />  <span class="subsectionToc" >8.3.3 <a 
+href="#x1-870008.3.3" id="QQ2-1-138">The sub-tab <span 
+class="ectt-1095">Model reduction</span></a></span>
+<br /> <span class="sectionToc" >8.4 <a 
+href="#x1-890008.4" id="QQ2-1-142">Tutorial</a></span>
                                                                                   
 
                                                                                   
+<br /><span class="chapterToc" >9 <a 
+href="#x1-900009" id="QQ2-1-158">Frequently asked questions</a></span>
+</div>
                                                                                   
 
                                                                                   
@@ -281,10 +290,10 @@ tutorial</a>.
  id="x1-50001.2"></a>The <span 
 class="ecss-1095">KaSim</span> engine</h3>
 <!--l. 108--><p class="noindent" ><span 
-class="ecss-1095">KaSim</span> is an open source stochastic simulator of rule-based models <span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span> written in Kappa.
+class="ecss-1095">KaSim</span> is an open source stochastic simulator of rule-based models <span class="cite">[<a 
+href="#XDanLan04">13</a>, <a 
+href="#XDan_etal07a">12</a>, <a 
+href="#XFae_etal05">14</a>]</span> written in Kappa.
 The Kappa language describes site graphs and their local transformations. <span 
 class="ecss-1095">KaSim</span> takes one or
 several <a 
@@ -294,11 +303,11 @@ href="#x1-140003">Kappa ﬁles</a> as input and generates stochastic trajectorie
                                                                                   
 <span 
 class="ecss-1095">KaSim</span> implements Danos <span 
-class="ecti-1095">et al</span>&#x2019;s implicit state simulation algorithm <span class="cite">[<span 
-class="ecbx-1095">?</span>]</span> which adapts Gillespie&#x2019;s
-algorithm <span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span> to rule-based models.
+class="ecti-1095">et al</span>&#x2019;s implicit state simulation algorithm <span class="cite">[<a 
+href="#XDan_etal07b">10</a>]</span> which adapts Gillespie&#x2019;s
+algorithm <span class="cite">[<a 
+href="#XGil76">21</a>, <a 
+href="#XGil77">22</a>]</span> to rule-based models.
 <!--l. 110--><p class="noindent" >A <span 
 class="ecti-1095">simulation event</span><a 
  id="dx1-5001"></a> corresponds to the application of a rewriting rule, contained in the Kappa
@@ -321,8 +330,8 @@ associated to a given rule is therefore proportional to the activity of the rule
 are updated at each step (see Fig. <a 
 href="#x1-50081">1.1<!--tex4ht:ref: fig:event-loop --></a>). Importantly, the cost of a simulation event
 is bounded by a constant that is independent of the size of the graph it is applied
-to <span class="cite">[<span 
-class="ecbx-1095">?</span>]</span>.
+to <span class="cite">[<a 
+href="#XDan_etal07b">10</a>]</span>.
 <!--l. 120--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
@@ -357,22 +366,22 @@ href="http://www.gnuplot.info/" >gnuplot</a>.
  id="x1-60001.3"></a>The <span 
 class="ecss-1095">KaSa</span> static analyser</h3>
 <!--l. 132--><p class="noindent" ><span 
-class="ecss-1095">KaSa</span> is an open source static analyser tool of rule-based models <span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span> written in Kappa.
+class="ecss-1095">KaSa</span> is an open source static analyser tool of rule-based models <span class="cite">[<a 
+href="#XDanLan04">13</a>, <a 
+href="#XDan_etal07a">12</a>, <a 
+href="#XFae_etal05">14</a>]</span> written in Kappa.
 <span 
 class="ecss-1095">KaSa</span> takes one or several <a 
 href="#x1-140003">Kappa ﬁles</a> as input and some command line options to toggle on/oﬀ
 some speciﬁc static analysis. Currently, <span 
 class="ecss-1095">KaSa</span> can compute the contact map and the inﬂuence
-map. It can perform reachability analysis <span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span> as well. Other analyses including model reduction
-<span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span> will come soon.
+map. It can perform reachability analysis <span class="cite">[<a 
+href="#XFeret-ICCMSE2007">16</a>, <a 
+href="#XDanosEtAl-VMCAI08">11</a>]</span> as well. Other analyses including model
+reduction <span class="cite">[<a 
+href="#XFeret-et-al-pnas2009">18</a>, <a 
+href="#XDanosEtAl-LICS2010">9</a>, <a 
+href="#XFeret-MFPSXXVII">3</a>]</span> will come soon.
 <!--l. 134--><p class="noindent" >A graphical interface is proposed to navigate through the various options and utilities of <span 
 class="ecss-1095">KaSa</span>.
 The compilation of this interface requires <a 
@@ -383,10 +392,10 @@ href="http://www.tcl.tk/" >tk-dev</a>.
  id="x1-70001.4"></a>The <span 
 class="ecss-1095">KaDE</span> ODEs generator</h3>
 <!--l. 138--><p class="noindent" ><span 
-class="ecss-1095">KaDE</span> is an open source tool to compile rule-based models <span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span> written in Kappa into
+class="ecss-1095">KaDE</span> is an open source tool to compile rule-based models <span class="cite">[<a 
+href="#XDanLan04">13</a>, <a 
+href="#XDan_etal07a">12</a>, <a 
+href="#XFae_etal05">14</a>]</span> written in Kappa into
 systems of ordinary diﬀerential equations, or equivalently into reaction networks. It also supports
 some model reduction techniques, that may reduce the dimension of the ODEs (or the number of
 diﬀerent bio-molecular species in reaction networks).
@@ -5720,8 +5729,8 @@ display="inline" ><mi
 >c</mi></math>).
 It is possible to tell <span 
 class="ecss-1095">KaSim</span> to retain only events that are more strongly related to the
-observable using two compression techniques (see Ref. <span class="cite">[<span 
-class="ecbx-1095">?</span>]</span> for formal details). Intuitively,
+observable using two compression techniques (see Ref. <span class="cite">[<a 
+href="#XDan_etal12">7</a>]</span> for formal details). Intuitively,
 in a <span 
 class="ecti-1095">weakly </span>compressed causal<a 
  id="dx1-50002"></a> ﬂow one has the additional property that if an event
@@ -7095,13 +7104,13 @@ class="ectt-1095">Reachability_analysis</span></span></div><!--tex4ht:label?: x1
 <!--l. 1498--><p class="noindent" ></div><hr class="endfigure">
 <!--l. 1500--><p class="noindent" >Reachability analysis aimed at detecting statically properties about the bio-molecular species that
 can be formed in a model. Knowing whether, or not, a given bio-molecular species, can be formed
-in a model is an undecidable problem <span class="cite">[<span 
-class="ecbx-1095">?</span>]</span>. Thus, our analysis is approximate. Indeed, it computes
+in a model is an undecidable problem <span class="cite">[<a 
+href="#XKreyssig">23</a>]</span>. Thus, our analysis is approximate. Indeed, it computes
 an over-approximation of the set of the bio-molecular species that can be reached from the initial
 state of the model, by applying an unbounded number of computation steps. As formalized in
-<span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span>, the abstraction consists in:
+<span class="cite">[<a 
+href="#XDanosEtAl-VMCAI08">11</a>, <a 
+href="#XFeret:SASB2016">20</a>]</span>, the abstraction consists in:
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x1-66003x1">ﬁrstly, ignoring the number of occurrences of bio-molecular species (we assume that
@@ -7116,8 +7125,8 @@ perturbation.
 independently enabled/disabled. The whole analysis can be understood as a mutual recursion
 between smaller analyses (one per abstract domain), that communicates information between
 each other at each step of the analysis. We took the same scheme of collaboration between
-abstract domains as in <span class="cite">[<span 
-class="ecbx-1095">?</span>]</span>.
+abstract domains as in <span class="cite">[<a 
+href="#XCousotEtAl06-ASIAN">5</a>]</span>.
 <!--l. 1512--><p class="noindent" >As an example, we consider the following model: <!--l. 1513-->
 <div class="lstlisting" id="listing-29"><span class="label"><a 
  id="x1-66006r1"></a><span 
@@ -7370,9 +7379,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-5">
-Kappa Static Analyzer (03078c3) (without Tk interface)
- <br />Analysis launched at 2017/05/28 20:53:28 (GMT+0) on
- <br />testing-gce-72eb6219-036a-4830-9e48-c1699a3d1ba2
+Kappa Static Analyzer (840e3d2) (without Tk interface)
+ <br />Analysis launched at 2017/05/30 16:50:24 (GMT+0) on
+ <br />testing-gce-e071ff27-4c5f-4fc2-993e-118a7bbcda9f
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7487,9 +7496,9 @@ class="ectt-1095">R</span>.
      <li class="itemize"><span 
 class="ecbx-1095">Relational properties. </span>The analysis detects some relationships among the states
      of packs of sites within each agent, hence capturing potential valuations for local
-     views <span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span>. Due to the over-approximation of the analysis, the analysis may fail
+     views <span class="cite">[<a 
+href="#XFeret-ICCMSE2007">16</a>, <a 
+href="#XDanosEtAl-VMCAI08">11</a>]</span>. Due to the over-approximation of the analysis, the analysis may fail
      in discovering a relationship. But each relationship that is found by the analysis, is
      satisﬁed.
      <!--l. 1568--><p class="noindent" >In our example, the states of the sites <span 
@@ -7508,8 +7517,8 @@ display="inline" ><msup><mrow
      </li>
      <li class="itemize"><span 
 class="ecbx-1095">Properties in connected agent. </span>When two agents are connected, there may be a
-     relation among the states of theirs respective sites. This abstraction <span class="cite">[<span 
-class="ecbx-1095">?</span>]</span> collects for
+     relation among the states of theirs respective sites. This abstraction <span class="cite">[<a 
+href="#XFeret:SASB2016">20</a>]</span> collects for
      each kind of bonds, the relation between the state of one site in the ﬁrst agent and
      the state of one site in the second agent. Due to the over-approximation, the analysis
      reports a super-set of the set of the potential pairs of states.
@@ -7526,8 +7535,8 @@ class="ecbx-1095">?</span>]</span> collects for
 class="ecbx-1095">Properties of pairs of bonds.</span>
      <!--l. 1579--><p class="noindent" >It might be interesting to know whether a protein can be bound to another protein
      twice simultaneously, and whether a protein can be bound to two instances of a same
-     protein simultaneously. This abstraction <span class="cite">[<span 
-class="ecbx-1095">?</span>]</span> captures this kind of constraint. It can
+     protein simultaneously. This abstraction <span class="cite">[<a 
+href="#XFeret:SASB2016">20</a>]</span> captures this kind of constraint. It can
      be used to prove that some proteins do not polymerize.
      <!--l. 1581--><p class="noindent" >In our example, when a <span 
 class="ectt-1095">R </span>has its sites <span 
@@ -7548,9 +7557,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (03078c3) (without Tk interface)
- <br />Analysis launched at 2017/05/28 20:53:28 (GMT+0) on
- <br />testing-gce-72eb6219-036a-4830-9e48-c1699a3d1ba2
+Kappa Static Analyzer (840e3d2) (without Tk interface)
+ <br />Analysis launched at 2017/05/30 16:50:24 (GMT+0) on
+ <br />testing-gce-e071ff27-4c5f-4fc2-993e-118a7bbcda9f
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -8487,8 +8496,8 @@ href="#x1-670007.4">7.4<!--tex4ht:ref: sec:local-traces --></a></span></div><!--
                                                                                   
 <!--l. 1747--><p class="noindent" ></div><hr class="endfigure">
 <!--l. 1749--><p class="noindent" >Such coarse-grained transition system can be geometrically interpreted as a simplicial complex
-<span class="cite">[<span 
-class="ecbx-1095">?</span>]</span>.
+<span class="cite">[<a 
+href="#XDBLP:conf/concur/FajstrupGR98">15</a>]</span>.
 <!--l. 1751--><p class="noindent" >As a microstate could be decomposed into several sequences of macrostates (including the trivial
 sequence containing only the microstate itself), the system may jump spontaneously (by using a
 <!--l. 1751--><math 
@@ -9330,9 +9339,9 @@ class="content">High resolution inﬂuence map</span></div><!--tex4ht:label?: x1
 
                                                                                   
 <div class="verbatim" id="verbatim-14">
-Kappa Static Analyzer (03078c3) (without Tk interface)
- <br />Analysis launched at 2017/05/28 20:53:28 (GMT+0) on
- <br />testing-gce-72eb6219-036a-4830-9e48-c1699a3d1ba2
+Kappa Static Analyzer (840e3d2) (without Tk interface)
+ <br />Analysis launched at 2017/05/30 16:50:24 (GMT+0) on
+ <br />testing-gce-e071ff27-4c5f-4fc2-993e-118a7bbcda9f
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -9869,16 +9878,16 @@ class="ectt-1095">--(no)-glutonny </span>tunes the parameters of the garbage col
 class="ectt-1095">-mode </span>allows for the choice among batch and interactive mode. In interactive
      mode, <span 
 class="ecss-1095">KaDE </span>always asks permission to overwrite ﬁles. In batch mode, <span 
-class="ecss-1095">KaDE</span>Âămay
+class="ecss-1095">KaDE </span>may
      overwrite output ﬁles, without permission.</li></ul>
 <h3 class="sectionHead"><span class="titlemark">8.3   </span> <a 
  id="x1-790008.3"></a>Diﬀerential semantics</h3>
 <!--l. 2080--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">8.3.1   </span> <a 
  id="x1-800008.3.1"></a>From rules to reactions</h4>
-<!--l. 2082--><p class="noindent" >In Kappa, rules may be more and less reﬁned <span class="cite">[<span 
-class="ecbx-1095">?</span>, <span 
-class="ecbx-1095">?</span>]</span>, according to their preconditions.
+<!--l. 2082--><p class="noindent" >In Kappa, rules may be more and less reﬁned <span class="cite">[<a 
+href="#XDanosFFHK08">6</a>, <a 
+href="#XDBLP:journals/tcsb/DanosFFHK09">8</a>]</span>, according to their preconditions.
 <!--l. 2084--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
@@ -9890,8 +9899,8 @@ class="ecbx-1095">?</span>]</span>, according to their preconditions.
 
                                                                                   
 <div class="minipage">
-<!--l. 2086--><p class="noindent" ><img 
-src="Ka1x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
+<!--l. 2087--><p class="noindent" ><img 
+src="Ka1x.png" alt="PIC" class="graphics" width="341.43306pt" height="48.28915pt" ><!--tex4ht:graphics  
 name="Ka1x.png" src="img/sect1-bind.pdf"  
 --></div>
 <br /> <div class="caption" 
@@ -9902,8 +9911,8 @@ class="ectt-1095">S </span>may bind. </span></div><!--tex4ht:label?: x1-800015 -
                                                                                   
 
                                                                                   
-<!--l. 2090--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 2091--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2091--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2092--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
@@ -9914,7 +9923,7 @@ class="ectt-1095">S </span>may bind. </span></div><!--tex4ht:label?: x1-800015 -
 
                                                                                   
 <div class="minipage">
-<!--l. 2093--><p class="noindent" ><img 
+<!--l. 2094--><p class="noindent" ><img 
 src="Ka2x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
 name="Ka2x.png" src="img/sect1-phos.pdf"  
 --></div>
@@ -9926,12 +9935,4135 @@ class="ectt-1095">S</span>.</span></div><!--tex4ht:label?: x1-800026 -->
                                                                                   
 
                                                                                   
-<!--l. 2097--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 2101--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 2098--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2102--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
 
                                                                                   
+<a 
+ id="x1-800037"></a>
+                                                                                  
+
+                                                                                  
+<br /> <div class="caption" 
+><span class="id">Figure 8.7: </span><span  
+class="content">From rules to reactions. The rule in Fig. <a 
+href="#x1-800015">8.5<!--tex4ht:ref: fig:sec1:bind --></a> is reﬁned into two reactions
+according to whether the site <span 
+class="ectt-1095">r </span>of the protein <span 
+class="ectt-1095">S </span>is phosphorylated or not.</span></div><!--tex4ht:label?: x1-800037 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2112--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2114--><p class="noindent" >Consider the following two rules: <!--l. 2115-->
+<div class="lstlisting" id="listing-32"><span class="label"><a 
+ id="x1-80004r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">bind</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">K</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">r</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,S</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">l</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">K</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">r!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,S</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">l!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@k</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-80005r2"></a><span 
+class="ecrm-0600">2</span></span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">phos</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">K</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">r!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,S</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">l!1,r~u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">K</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">r!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,S</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">l!1,r~p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@kp</span>
+</div>
+<!--l. 2123--><p class="noindent" >The ﬁrst rule (e.g. see Fig. <a 
+href="#x1-800015">8.5<!--tex4ht:ref: fig:sec1:bind --></a>) stipulates that proteins of type <span 
+class="ectt-1095">K </span>and proteins of
+type <span 
+class="ectt-1095">S </span>may bind via their respective right and left sites. The second rule (e.g. see
+Fig. <a 
+href="#x1-800026">8.6<!--tex4ht:ref: fig:sec1:phos --></a>) stipulates that a protein <span 
+class="ectt-1095">S </span>bound to a protein <span 
+class="ectt-1095">K </span>may be activated (on its right
+site).
+<!--l. 2125--><p class="noindent" >It is worth noticing that the ﬁrst rule may be applied in two diﬀerent contexts, according to
+whether or not the right site of the protein on the right is already phosphorylated, or not. It
+follows the reﬁnement that is depicted in Fig. <a 
+href="#x1-800037">8.7<!--tex4ht:ref: fig:refinement --></a>.
+<!--l. 2127--><p class="noindent" >In general, each rule may be reﬁned into a (potentially inﬁnite) multi-set of
+reactions over fully speciﬁed site-graphs. Each connected component in a reaction
+denotes an instance of a bio-molecular species. For every bio-molecular species
+<!--l. 2129--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>S</mi></math>, a reaction
+<!--l. 2129--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-op">…</mo> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+><mo 
+class="MathClass-rel">→</mo><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-op">…</mo> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></math>
+gives the following contribution to the derivative of the concentration of
+<!--l. 2129--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>S</mi></math>,
+<table class="equation-star"><tr><td>
+<!--l. 2134--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                   <mfrac><mrow 
+><mstyle mathvariant="normal"><mi 
+>d</mi></mstyle><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>S</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></mrow>
+ <mrow 
+><mstyle mathvariant="normal"><mi 
+>d</mi></mstyle><mi 
+>t</mi></mrow></mfrac> <mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">=</mo></mrow><mrow 
+><mrow><mo 
+class="MathClass-bin">+</mo></mrow></mrow></mover><munder class="msub"><mrow 
+><mo mathsize="big" 
+>∑</mo>
+    </mrow><mrow 
+><mi 
+>r</mi></mrow></munder 
+><mi 
+>γ</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>r</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">⋅</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>r</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>R</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow> <mo 
+class="MathClass-bin">⋅</mo> <mi 
+>Δ</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>R</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>S</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">⋅</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">]</mo></mrow> <mo 
+class="MathClass-bin">⋅</mo><mo>…</mo> <mo 
+class="MathClass-bin">⋅</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">]</mo></mrow>
+</math></td></tr></table>
+<!--l. 2137--><p class="noindent" >where:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-80007x1"><!--l. 2139--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>r</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>R</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>
+     is the number of diﬀerent ways to induce the reaction <!--l. 2139--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>R</mi></math>
+                                                                                  
+
+                                                                                  
+     from the rule <!--l. 2139--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>r</mi></math>;
+     </li>
+     <li 
+  class="enumerate" id="x1-80009x2"><!--l. 2140--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>γ</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>r</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     is the corrected rate of the rule <!--l. 2140--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>r</mi></math>
+     (a fraction of the rate of the rule <!--l. 2140--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>r</mi></math>
+     is taken according to a choice among three conventions deﬁning how automorphisms
+     are taken into account);
+     </li>
+     <li 
+  class="enumerate" id="x1-80011x3">and <!--l. 2141--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>Δ</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>R</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>S</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     is the diﬀerence between the number of occurrences of the species <!--l. 2141--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>S</mi></math>
+     in the sequence <!--l. 2141--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">…</mo><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></math>
+     and the one in the sequence <!--l. 2142--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">…</mo><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+></math>.</li></ol>
+<!--l. 2145--><p class="noindent" >This deﬁnes the ODE semantics of Kappa models.
+<h4 class="subsectionHead"><span class="titlemark">8.3.2   </span> <a 
+ id="x1-810008.3.2"></a>Semantics convention</h4>
+<!--l. 2149--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-810018"></a>
+                                                                                  
+
+                                                                                  
+
+<!--l. 2151--><p class="noindent" ><img 
+src="img/kade_2.png" alt="PIC"  
+width="341.43306pt" height="216.61836pt" >
+<br /> <div class="caption" 
+><span class="id">Figure 8.8: </span><span  
+class="content"><span 
+class="ecss-1095">KaDE</span>  graphical interface - sub-tab <span 
+class="ectt-1095">2_semantics</span></span></div><!--tex4ht:label?: x1-810018 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2154--><p class="noindent" ></div><hr class="endfigure">
+<h5 class="subsubsectionHead"><a 
+ id="x1-820008.3.2"></a>Rate constant conventions</h5>
+<!--l. 2162--><p class="noindent" >The options in the sub-tab <span 
+class="ectt-1095">Semantics </span>allow for the choice among several possibilities for the
+meaning of the ODEs variables and for the meaning of the rate constants.
+<!--l. 2165--><p class="noindent" ><span 
+class="ecss-1095">KaDE</span> corrects the rate constant of each according to a convention about the number of
+automorphisms in this rule. <span 
+class="ecss-1095">KaDE </span>oﬀers the choice among three conventions:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-82002x1">with the convention <span 
+class="ectt-1095">KaSim</span>, there is no correction, as it is done in the simulator;
+     </li>
+     <li 
+  class="enumerate" id="x1-82004x2">with the convention <span 
+class="ectt-1095">Divide_by_the_number_of_autos_in_lhs</span>, each rate constant is
+     divided by the number of automorphisms in the lhs of the rule, as it was done in
+     previous version of the simulator;
+     </li>
+     <li 
+  class="enumerate" id="x1-82006x3">with the convention <span 
+class="ectt-1095">Biochemist</span>, each rate constant is divided by the number of the
+     automorphisms in the lhs, that also induces an automorphism over the agents that
+     are preserved in the rhs of the rule (more formally, an automorphism in the lhs of a
+     rule is taken into account only if its restriction to the part that is common to the lhs
+     and the rhs of the rule, can be extended to an automorphism of the rhs of the rule).
+     In particular, only automorphisms that map degraded proteins, if any, to degraded
+     proteins, are considered. Indeed this convention account for the automorphisms of the
+     left hand side of rules which identiﬁes the agents that cannot be ditinguished from a
+     mechanistic point of view.</li></ol>
+<!--l. 2173--><p class="noindent" >Consider the following rule: <!--l. 2174-->
+<div class="lstlisting" id="listing-33"><span class="label"><a 
+ id="x1-82007r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">u,r~u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">u,r~u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">u,r~u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">u,r~u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">u!1,r~u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">u!1,r~u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">u,r~u</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">u,r~p</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">&#x2019;</span>
+</div>
+<!--l. 2177--><p class="noindent" >which is depicted as follows:
+<div class="center" 
+>
+<!--l. 2178--><p class="noindent" >
+<!--l. 2179--><p class="noindent" ><img 
+src="Ka3x.png" alt="PIC" class="graphics" width="382.42874pt" height="32.12pt" ><!--tex4ht:graphics  
+name="Ka3x.png" src="img/auto.pdf"  
+--></div>
+                                                                                  
+
+                                                                                  
+<!--l. 2182--><p class="noindent" >with the ﬁrst convention (that is the one of the simulator), rates of rules are not corrected, hence the eﬀective
+rate of this rule is <!--l. 2182--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi></math>;
+with the second one, rates are divided by the number of automorphisms in the left hand side of rules
+(here <!--l. 2183--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>4</mn><mo 
+class="MathClass-punc">!</mo></math> that
+is to say <!--l. 2183--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn><mn>4</mn></math>);
+the third convention accounts only for the permutations among the agents that are undistinguishable
+from a mechanistic point of view: rates are divided by the number of automorphisms in the
+left hand side of rules that also induce automorphisms of the right hand side (here
+<!--l. 2183--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn></math>).
+<!--l. 2185--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-830008.3.2"></a>Ambiguous molecularity</h5>
+<!--l. 2187--><p class="noindent" >The diﬀerential semantics is deﬁned as the limit of the stochastic semantics when the temperature
+diverges toward the inﬁnity. Thus a rate constant stands indeed for a function mapping the
+temperature to an eﬀective rate constant the expression of which depends on the arity of the
+reaction. Even if the unary rate and the binary rate of a rule may be equal for a given
+temperature, it is never the case at all temperature. Another insight, is that rate constants for a
+unary reaction and rate constants for a binary reaction are not expressed in the same physical
+units.
+<!--l. 2189--><p class="noindent" >To account for this, <span 
+class="ecss-1095">KaDE </span>never applies a binary rule in a unary context, unless two rate
+constants have been provided explicitly.
+<!--l. 2192--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-830019"></a>
+                                                                                  
+
+                                                                                  
+<!--l. 2193--><p class="noindent" >                         <div class="minipage">
+<img 
+src="Ka4x.png" alt="PIC" class="graphics" width="222.83249pt" height="120.45pt" ><!--tex4ht:graphics  
+name="Ka4x.png" src="img/ambigus_crossed.pdf"  
+-->
+</div>                         <div class="minipage">
+<img 
+src="Ka5x.png" alt="PIC" class="graphics" width="222.83249pt" height="118.44249pt" ><!--tex4ht:graphics  
+name="Ka5x.png" src="img/ambigus.pdf"  
+--></div>
+<br /> <div class="caption" 
+><span class="id">Figure 8.9: </span><span  
+class="content">The rule <span 
+class="ectt-1095">A(x),A(x) -&#x003E; A(x!1),A(x!1) </span>may bind two agents that are already
+in the same connected component, only if a second rate constant is given explictly.</span></div><!--tex4ht:label?: x1-830019 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2199--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2200--><p class="noindent" >Let us give an example. We consider the agent type <span 
+class="ectt-1095">A </span>with two binding sites <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y</span>. We assume
+that two sites <span 
+class="ectt-1095">x </span>(in diﬀerent <span 
+class="ectt-1095">A</span>s) may be bound pair-wise and that two sites <span 
+class="ectt-1095">y </span>(in diﬀerent <span 
+class="ectt-1095">A</span>s) may
+be bound pair-wise. Both following rules: <!--l. 2201-->
+<div class="lstlisting" id="listing-34"><span class="label"><a 
+ id="x1-83002r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-83003r2"></a><span 
+class="ecrm-0600">2</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">1{0}</span>
+</div>
+<!--l. 2205--><p class="noindent" >will behave the same: they both apply to the following mixture <!--l. 2206-->
+<div class="lstlisting" id="listing-35"><span class="label"><a 
+ id="x1-83004r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span>
+</div>
+<!--l. 2209--><p class="noindent" >but not to the following one: <!--l. 2210-->
+<div class="lstlisting" id="listing-36"><span class="label"><a 
+ id="x1-83005r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y!2</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y!2</span><span 
+class="ectt-1095">)</span>
+</div>
+<!--l. 2214--><p class="noindent" >So as to allow the rule to form a bond within the two agents of the dimer, the following rule:
+<!--l. 2215-->
+<div class="lstlisting" id="listing-37"><span class="label"><a 
+ id="x1-83006r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">1{1}</span>
+</div>
+<!--l. 2218--><p class="noindent" >shall be used instead:
+<!--l. 2220--><p class="noindent" >This way, when a rule is given with one rate constant only, the connected components in its left
+hand side have to be reﬁned into pair-wisely disjoint bio-molecular species. When a rule is binary
+and when it is given with two rate constants, it may be apply in a unary context (which consists
+in embedding its left hand side into a single bio-molecular species) with the second rate constant,
+or in a binary context (which consists in embedding each connected components in its left hand
+side into two disjoint bio-molecular species (which may be two isomorphic copies of the same
+species).
+<h5 class="subsubsectionHead"><a 
+ id="x1-840008.3.2"></a>Embeddings VS occurrences</h5>
+                                                                                  
+
+                                                                                  
+<!--l. 2224--><p class="noindent" >In a Kappa ﬁle, a pattern may denote two diﬀerent quantities. At initialisation, a pattern denotes
+an occurence of a bio-molecular species. In an algebraic expressions (which includes functional
+rates, stoichiometric coeﬃcients for tokens, observables), a pattern denotes a number of
+embeddings from this pattern to a mixture.
+<!--l. 2228--><p class="noindent" >Formally, we deﬁne the number (resp. the concentration) of embeddings from a pattern to a
+mixture (resp. to a concentration function) as the sum, for each bio-molecular species, of the
+number of occurrences (resp. concentration) of that bio-molecular species and the number of
+occurrence of the pattern in that bio-molecular species. We also deﬁne the number (resp. the
+concentration) of occurrences of a pattern in a mixture (resp. in a concentration function) as the
+quotient between the number (resp. the concentration) of embeddings from this pattern to a
+mixture (resp. to a concentration function) and the number of automorphisms in this
+pattern.
+<!--l. 2232--><p class="noindent" >To illustrate this, we assume that the ﬁle <span 
+class="ectt-1095">occ.ka </span>contains the following code: <!--l. 2233--><div class="lstinputlisting">
+<a 
+ id="x1-84001"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84002r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">%agent:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84003r2"></a><span 
+class="ecrm-0600">2</span></span><span 
+class="ectt-1095">%agent:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">D</span><span 
+class="ectt-1095">()</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84004r3"></a><span 
+class="ecrm-0600">3</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84005r4"></a><span 
+class="ecrm-0600">4</span></span><span 
+class="ectt-1095">%init:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">10</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84006r5"></a><span 
+class="ecrm-0600">5</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84007r6"></a><span 
+class="ecrm-0600">6</span></span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">D</span><span 
+class="ectt-1095">()</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84008r7"></a><span 
+class="ecrm-0600">7</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84009r8"></a><span 
+class="ecrm-0600">8</span></span><span 
+class="ectt-1095">%obs:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">dimer</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">|</span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">|</span>
+</div>
+<!--l. 2234--><p class="noindent" >We use the following instruction to get the value of the observable.
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">KaSim </span>occ.ka -l 1 -p 0.5 -o occ.csv</li></ul>
+<!--l. 2237--><p class="noindent" >The ﬁle <span 
+class="ectt-1095">csv </span>contains the following data set: <!--l. 2238--><div class="lstinputlisting">
+<a 
+ id="x1-84010"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84011r1"></a></span><span 
+class="ectt-1095">#</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">Output</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">of</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">KaSim</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;-</span><span 
+class="ectt-1095">mode</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">batch</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;-</span><span 
+class="ectt-1095">i</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;../</span><span 
+class="ectt-1095">kappa</span><span 
+class="ectt-1095">/</span><span 
+class="ectt-1095">occ</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">ka</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;-</span><span 
+class="ectt-1095">l</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;1&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;-</span><span 
+class="ectt-1095">p</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;0.5&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;-</span><span 
+class="ectt-1095">d</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;../</span><span 
+class="ectt-1095">generated_img</span><span 
+class="ectt-1095">/&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;-</span><span 
+class="ectt-1095">o</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">occ</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">csv</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-</span><span 
+class="ectt-1095">seed</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">866969294</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84012r2"></a></span><span 
+class="ectt-1095">#</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x0022;</span><span 
+class="ectt-1095">uuid</span><span 
+class="ectt-1095">&#x0022;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x0022;898846699&#x0022;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84013r3"></a></span><span 
+class="ectt-1095">&#x0022;[</span><span 
+class="ectt-1095">T</span><span 
+class="ectt-1095">]&#x0022;,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x0022;</span><span 
+class="ectt-1095">dimer</span><span 
+class="ectt-1095">&#x0022;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84014r4"></a></span><span 
+class="ectt-1095">0.,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">20</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84015r5"></a></span><span 
+class="ectt-1095">0.5,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">20</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-84016r6"></a></span><span 
+class="ectt-1095">1.,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">20</span>
+</div>
+<!--l. 2241--><p class="noindent" >We notice that KaSim indicates <!--l. 2241--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn><mn>0</mn></math>
+for the quantities of dimers. This accounts for the fact that each dimer satisﬁes two
+automorphisms.
+<!--l. 2244--><p class="noindent" >The command-line option <span 
+class="ectt-1095">--count [Embeddings | Occurrences] </span>changes the meaning of the
+variables that occur in the diﬀerential equations. The choice has no impact on the quantities that
+are plot. Introduced bio-molecular species are always introduced in concentration of occurrences,
+and patterns in algebraic expressions always denote concentration of embeddings. It
+just changes the meaning of the variables that are used internally in the diﬀerential
+equations.
+                                                                                  
+
+                                                                                  
+<!--l. 2248--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-850008.3.2"></a>Polymers</h5>
+<!--l. 2250--><p class="noindent" >In case of polymerisation, the size of the bio-molecular species is potentially unbounded and there
+may be an inﬁnite amount of diﬀerential equations (this is the case even if there is no agent
+synthesis, since the initial state is given in concentration, and not in occurrence number). In such
+a case, <span 
+class="ecss-1095">KaDE </span>will not terminate. Yet it is possible to truncate the system of ordinary diﬀerential
+equations: the command-line option <span 
+class="ectt-1095">--truncate </span>speciﬁes an upper bound to the number of
+agents in the bio-molecular species. Each reaction that would involve a larger bio-molecular
+species is discarded.
+<!--l. 2252--><p class="noindent" >For instance, we can consider the model <span 
+class="ectt-1095">poly.ka </span>that is deﬁned as follows: <!--l. 2253-->
+<div class="lstlisting" id="listing-38"><span class="label"><a 
+ id="x1-85001r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%agent:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">l,r</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-85002r2"></a><span 
+class="ecrm-0600">2</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%init:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">10</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">()</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-85003r3"></a><span 
+class="ecrm-0600">3</span></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">r</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">l</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">r!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">l!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">1</span>
+</div>
+<!--l. 2259--><p class="noindent" >The instruction:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">KaDE </span>poly.ka</li></ul>
+<!--l. 2261--><p class="noindent" >will not terminate, wheareas the following one:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">KaDe </span>poly.ka –truncate 10</li></ul>
+<!--l. 2263--><p class="noindent" >will.
+<!--l. 2266--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-860008.3.2"></a>Equivalent sites</h5>
+<!--l. 2268--><p class="noindent" >In BNGL, the interface of a given agent may include several occurrence of a given site name.
+These sites have exactly the same capabilities of interaction. This feature provides a convenient
+syntactic construction to describe models even more compactly, at the cost of having to deal with
+more complex structures (detecting embeddings between such site-graphs may be very
+diﬃcult).
+                                                                                  
+
+                                                                                  
+<!--l. 2270--><p class="noindent" >In Kappa, the interface of every agent is made of pair-wisely distinct site names. Yet it may
+happen that some sites have exactly the same capabilities of interaction. <span 
+class="ecss-1095">KaDE </span>can infer
+this property and use it to derive a more compact system of diﬀerential equations
+<span class="cite">[<a 
+href="#XFeret-MFPSXXVII">3</a>, <a 
+href="#XCAMPORESI201073">4</a>, <a 
+href="#XFeret201545">17</a>]</span>.
+<!--l. 2273--><p class="noindent" >Consider the following model: <!--l. 2274-->
+<div class="lstlisting" id="listing-39"><span class="label"><a 
+ id="x1-86001r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">%agent:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-86002r2"></a><span 
+class="ecrm-0600">2</span></span><span 
+class="ectt-1095">%init:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">10</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">()</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-86003r3"></a><span 
+class="ecrm-0600">3</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-86004r4"></a><span 
+class="ecrm-0600">4</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-86005r5"></a><span 
+class="ecrm-0600">5</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-86006r6"></a><span 
+class="ecrm-0600">6</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@2</span>
+</div>
+<!--l. 2283--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-8600710"></a>
+                                                                                  
+
+                                                                                  
+<div class="minipage">
+<!--l. 2285--><p class="noindent" ><img 
+src="Ka6x.png" alt="PIC" class="graphics" width="183.68625pt" height="31.11624pt" ><!--tex4ht:graphics  
+name="Ka6x.png" src="img/symtt.pdf"  
+-->
+</div>      <div class="minipage">
+<img 
+src="Ka7x.png" alt="PIC" class="graphics" width="183.68625pt" height="31.11624pt" ><!--tex4ht:graphics  
+name="Ka7x.png" src="img/symff.pdf"  
+-->
+</div>      <div class="minipage">
+<img 
+src="Ka8x.png" alt="PIC" class="graphics" width="183.68625pt" height="31.11624pt" ><!--tex4ht:graphics  
+name="Ka8x.png" src="img/symtf.pdf"  
+-->
+</div>
+<br /> <div class="caption" 
+><span class="id">Figure 8.10: </span><span  
+class="content">Sites are equivalent, if the corrected rates of the third rule is twice the corrected
+rate of each other rule.</span></div><!--tex4ht:label?: x1-8600710 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2295--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2297--><p class="noindent" >The rules are depicted in Fig. <a 
+href="#x1-8600710">8.10<!--tex4ht:ref: fig:symetric:rules --></a>. We notice that each rule may be obtained from one another
+by swapping the sites in agents. So we say that sites are equivalent in this set of rules. Equivalent
+sites may be used to induce forward and backward bisimulations <span class="cite">[<a 
+href="#Xbuchholz_bisimulation">2</a>, <a 
+href="#XFeret_IJSI2013">19</a>, <a 
+href="#XFeret-MFPSXXVII">3</a>, <a 
+href="#XCAMPORESI201073">4</a>, <a 
+href="#XFeret201545">17</a>]</span> over the
+stochastic and the diﬀerential semantics of Kappa.
+<!--l. 2299--><p class="noindent" >Let us consider two site names <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y </span>in the signature of an agent type <span 
+class="ectt-1095">A</span>. A <span 
+class="ecti-1095">set of rules </span>is
+symmetric with respect to <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y</span>, if for every two rules that may be obtained one
+from the other one by permuting the sites <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y </span>in some agents of type <span 
+class="ectt-1095">A</span>, their
+corrected rates is inversely proportional to their number of automorphisms. In our
+example, the set of rules is symmetric with respect to <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y </span>only with the convention
+in which constant rates are kept as they are given, without any corrective factor. A
+<span 
+class="ecti-1095">valuation </span>from bio-molecular species to real numbers is symmetric with respect to <span 
+class="ectt-1095">x</span>
+and <span 
+class="ectt-1095">y</span>, if for every two bio-molecular species that can be obtained one from the other
+one by permuting the sites <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y </span>in some agents of type <span 
+class="ectt-1095">A</span>, the image of the two
+bio-molecular species by the valuation is inversely proportional to their number of
+automorphisms. Lastly an <span 
+class="ecti-1095">expression </span>over bio-molecular species is symmetric with
+respect to <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y</span>, if and only if it takes the same values for every two symmetric
+valuations.
+<!--l. 2303--><p class="noindent" >If the set of rules and the initial state of the model are symmetric with respect to two sites,
+ignoring the diﬀerence among these two sites in bio-molecular species induces a backward
+bisimulation (that is to say, the state of the system remains symmetric at every time <span class="cite">[<a 
+href="#Xbuchholz_lump">1</a>]</span>). If the
+set of rules and every algebraic expression that occurs in rates or stoichiometric coeﬃcients are
+symmetric, then ignoring the diﬀerence between these two sites in bio-molecular species induces a
+forward bisimulation (we can deﬁne the ODEs directly over the equivalence-classes of
+bio-molecular species <span class="cite">[<a 
+href="#Xbuchholz_lump">1</a>]</span>).
+     <ul class="itemize1">
+     <li class="itemize">The  command  line  option  <span 
+class="ectt-1095">--with-symmetries [ None | Backward | Forward ]</span>
+     sets which kind of bisimulation is used to reduce the system of ordinary diﬀerential
+     equations.</li></ul>
+<h4 class="subsectionHead"><span class="titlemark">8.3.3   </span> <a 
+ id="x1-870008.3.3"></a>The sub-tab <span 
+class="ectt-1095">Model reduction</span></h4>
+<!--l. 2312--><p class="noindent" >The sub-tab <span 
+class="ectt-1095">Model reduction </span>gives access to more information about potential model reduction.
+<hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-8700111"></a>
+                                                                                  
+
+                                                                                  
+
+<!--l. 2316--><p class="noindent" ><img 
+src="img/kade_4.png" alt="PIC"  
+width="341.43306pt" height="216.61836pt" >
+<br /> <div class="caption" 
+><span class="id">Figure 8.11: </span><span  
+class="content"><span 
+class="ecss-1095">KaDE</span>  graphical interface - sub-tab <span 
+class="ectt-1095">Model reduction</span></span></div><!--tex4ht:label?: x1-8700111 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2319--><p class="noindent" ></div><hr class="endfigure">
+     <ul class="itemize1">
+     <li class="itemize">The option <span 
+class="ectt-1095">--show-symmetries </span>itemizes the sites that are equivalent with respect to
+     the rules of the models, with respect to the rules of the model and the initial state
+     (backward bisimulation), and with respect to the rules of the models and the algebraic
+     expressions (forward bisimulation).
+     </li>
+     <li class="itemize">The  command  line  option  <span 
+class="ectt-1095">--with-symmetries [ None | Backward | Forward ]</span>
+     sets which kind of bisimulation is used to reduce the system of ordinary diﬀerential
+     equations.</li></ul>
+<h5 class="subsubsectionHead"><a 
+ id="x1-880008.3.3"></a>The sub-tab <span 
+class="ectt-1095">Static analysis (Expert)</span></h5>
+<!--l. 2328--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-8800112"></a>
+                                                                                  
+
+                                                                                  
+
+<!--l. 2330--><p class="noindent" ><img 
+src="img/kade_5.png" alt="PIC"  
+width="341.43306pt" height="216.61836pt" >
+<br /> <div class="caption" 
+><span class="id">Figure 8.12: </span><span  
+class="content"><span 
+class="ecss-1095">KaDE</span>  graphical interface - sub-tab <span 
+class="ectt-1095">Static analysis</span></span></div><!--tex4ht:label?: x1-8800112 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2333--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2335--><p class="noindent" >The inference of equivalent sites is more precise when dead rules are discarded. Dead rules can be
+computed thanks to <span 
+class="ecss-1095">KaSa</span>. The sub-tab <span 
+class="ectt-1095">Static analysis </span>allows the end-user to switch on/switch
+oﬀ abstract domains in order to tune the trade-oﬀ between accuracy and eﬃciency of static
+analysis.
+     <ul class="itemize1">
+     <li class="itemize">The option <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1095">--(no-)views-domain</span></span></span> can be used to switch on/oﬀ the views domains.
+     </li>
+     <li class="itemize">The option <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1095">--(no-)double-bonds-domain</span></span></span> can be used to switch on/oﬀ the analysis
+     of potential double bonds between proteins.
+     </li>
+     <li class="itemize">The option <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1095">--(no-)site-across-bonds-domain</span></span></span> can be used to switch on/oﬀ the
+     analysis of the relations among the states of the sites in connected proteins.</li></ul>
+<h3 class="sectionHead"><span class="titlemark">8.4   </span> <a 
+ id="x1-890008.4"></a>Tutorial</h3>
+<!--l. 2347--><p class="noindent" >Now we explain further how to use <span 
+class="ecss-1095">KaDE </span>to deal with the example of Sect. <a 
+href="#x1-860008.3.2">8.3.2<!--tex4ht:ref: sec:kade:ex --></a>. The model is
+described in the following Kappa ﬁle: <!--l. 2349--><div class="lstinputlisting">
+<a 
+ id="x1-89001"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89002r1"></a><span 
+class="ecrm-0600">1</span></span><span 
+class="ectt-1095">#</span><span 
+class="ectt-1095">sym</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">ka</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89003r2"></a><span 
+class="ecrm-0600">2</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89004r3"></a><span 
+class="ecrm-0600">3</span></span><span 
+class="ectt-1095">%agent:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89005r4"></a><span 
+class="ecrm-0600">4</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89006r5"></a><span 
+class="ecrm-0600">5</span></span><span 
+class="ectt-1095">%init:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">100</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">()</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89007r6"></a><span 
+class="ecrm-0600">6</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89008r7"></a><span 
+class="ecrm-0600">7</span></span><span 
+class="ectt-1095">%var:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">1</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89009r8"></a><span 
+class="ecrm-0600">8</span></span><span 
+class="ectt-1095">%obs:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">asym</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">|</span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">y!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">|</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89010r9"></a><span 
+class="ecrm-0600">9</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89011r10"></a><span 
+class="ecrm-0600">10</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89012r11"></a><span 
+class="ecrm-0600">11</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x!1,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89013r12"></a><span 
+class="ecrm-0600">12</span></span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x,y!1</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">@</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89014r13"></a><span 
+class="ecrm-0600">13</span></span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89015r14"></a><span 
+class="ecrm-0600">14</span></span><span 
+class="ectt-1095">#</span><span 
+class="ectt-1095">We</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">use</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">third</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">convention</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">consider</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">only</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">automorphisms</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">in</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">lhs</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89016r15"></a><span 
+class="ecrm-0600">15</span></span><span 
+class="ectt-1095">#</span><span 
+class="ectt-1095">that</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">are</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">preserved</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">in</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rhs</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">There</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">are</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">two</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">of</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">them</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">in</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">first</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">and</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89017r16"></a><span 
+class="ecrm-0600">16</span></span><span 
+class="ectt-1095">#</span><span 
+class="ectt-1095">in</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">third</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rule</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">Only</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">one</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">in</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">second</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">one</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">Hence</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rate</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">of</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">the</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">first</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89018r17"></a><span 
+class="ecrm-0600">17</span></span><span 
+class="ectt-1095">#</span><span 
+class="ectt-1095">and</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">third</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">are</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">divided</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">by</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">2.</span>
+</div>
+<!--l. 2351--><p class="noindent" >The rules of this models are depicted as follows:
+<div class="center" 
+>
+<!--l. 2353--><p class="noindent" >
+<div class="minipage">
+<!--l. 2355--><p class="noindent" ><img 
+src="Ka9x.png" alt="PIC" class="graphics" width="183.68625pt" height="31.11624pt" ><!--tex4ht:graphics  
+name="Ka9x.png" src="img/symtt.pdf"  
+--></div>
+<div class="minipage">
+<!--l. 2360--><p class="noindent" ><img 
+src="Ka10x.png" alt="PIC" class="graphics" width="183.68625pt" height="31.11624pt" ><!--tex4ht:graphics  
+name="Ka10x.png" src="img/symff.pdf"  
+--></div>
+                                                                                  
+
+                                                                                  
+<div class="minipage">
+<!--l. 2365--><p class="noindent" ><img 
+src="Ka11x.png" alt="PIC" class="graphics" width="183.68625pt" height="31.11624pt" ><!--tex4ht:graphics  
+name="Ka11x.png" src="img/symtf.pdf"  
+--></div>
+</div>
+<!--l. 2370--><p class="noindent" >We denote as <!--l. 2370--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>γ</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>,
+<!--l. 2370--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>γ</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>, and
+<!--l. 2370--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>γ</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></math> the
+corrected rate constants of these rules. With the third convention, which roughly speaking
+consists in dividing rates per the number of automorphisms in the left hand side of rules, that are
+preserved in the right hand side, we have:
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 2372--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>γ</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow> 
+ <mrow 
+><mn>2</mn></mrow></mfrac> </math>;
+     </li>
+     <li class="itemize"><!--l. 2373--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>γ</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow> 
+ <mrow 
+><mn>2</mn></mrow></mfrac> </math>;
+     </li>
+     <li class="itemize"><!--l. 2374--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>γ</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></math>.</li></ul>
+<!--l. 2376--><p class="noindent" >Indeed, in the third rule, the mechanism makes a diﬀerence among the two agents.
+The non trivial automorphism in the left hand side is not preserved in the right hand
+side.
+<!--l. 2379--><p class="noindent" >Rules <!--l. 2379--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn></math> and
+<!--l. 2379--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn></math> have two automorphisms,
+whereas rule <!--l. 2379--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn></math>
+has only one. As a consequence, the rules are symmetric with respect to both sites if and only
+<!--l. 2380--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn> <mo 
+class="MathClass-bin">⋅</mo><mfrac><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow> 
+ <mrow 
+><mn>2</mn></mrow></mfrac>  <mo 
+class="MathClass-rel">=</mo> <mn>2</mn> <mo 
+class="MathClass-bin">⋅</mo><mfrac><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow> 
+ <mrow 
+><mn>2</mn></mrow></mfrac>  <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></math>, that is to
+say <!--l. 2380--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></math>.
+<!--l. 2383--><p class="noindent" >We use the following command line to generate the ODE semantics in <span 
+class="eccc-1095">O<span 
+class="small-caps">C</span><span 
+class="small-caps">T</span><span 
+class="small-caps">A</span><span 
+class="small-caps">V</span><span 
+class="small-caps">E</span></span>:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">KaDe –rate-convention Biochemist sym.ka</span></li></ul>
+<!--l. 2387--><p class="noindent" >By default, equivalent sites are not analysed and the <span 
+class="eccc-1095">O<span 
+class="small-caps">C</span><span 
+class="small-caps">T</span><span 
+class="small-caps">A</span><span 
+class="small-caps">V</span><span 
+class="small-caps">E</span> </span>backend is used.
+<!--l. 2389--><p class="noindent" >The result is dumped in the ﬁle <span 
+class="ectt-1095">&#x2019;ode.m&#x2019;</span>, which is editable. Moreover, each instruction is
+annotated with some information referring to the Kappa ﬁle. Variables are annotated by the
+corresponding name in the Kappa ﬁle. Initial species are annotated by Kappa expressions
+describing the corresponding bio-molecular species.
+<!--l. 2394--><p class="noindent" >Integration parameters are deﬁned as follows:
+                                                                                  
+
+                                                                                  
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;tinit=&#x2019; ode.m –after-context 8</span></li></ul>
+<!--l. 2397--><div class="lstinputlisting">
+<a 
+ id="x1-89019"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89020r1"></a></span><span 
+class="ectt-1095">19:</span><span 
+class="ectt-1095">tinit</span><span 
+class="ectt-1095">=0;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89021r2"></a></span><span 
+class="ectt-1095">20-</span><span 
+class="ectt-1095">tend</span><span 
+class="ectt-1095">=1;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89022r3"></a></span><span 
+class="ectt-1095">21-</span><span 
+class="ectt-1095">initialstep</span><span 
+class="ectt-1095">=1</span><span 
+class="ectt-1095">e</span><span 
+class="ectt-1095">-05;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89023r4"></a></span><span 
+class="ectt-1095">22-</span><span 
+class="ectt-1095">maxstep</span><span 
+class="ectt-1095">=0.02;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89024r5"></a></span><span 
+class="ectt-1095">23-</span><span 
+class="ectt-1095">reltol</span><span 
+class="ectt-1095">=0.001;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89025r6"></a></span><span 
+class="ectt-1095">24-</span><span 
+class="ectt-1095">abstol</span><span 
+class="ectt-1095">=0.001;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89026r7"></a></span><span 
+class="ectt-1095">25-</span><span 
+class="ectt-1095">period</span><span 
+class="ectt-1095">=0.01;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89027r8"></a></span><span 
+class="ectt-1095">26-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89028r9"></a></span><span 
+class="ectt-1095">27-</span><span 
+class="ectt-1095">nonnegative</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">false</span><span 
+class="ectt-1095">;</span>
+</div>
+<!--l. 2399--><p class="noindent" >The variable <span 
+class="ectt-1095">nodevar </span>gives the number of variables:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;nodevar=&#x2019; ode.m</span></li></ul>
+<!--l. 2402--><div class="lstinputlisting">
+<a 
+ id="x1-89029"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89030r1"></a></span><span 
+class="ectt-1095">29:</span><span 
+class="ectt-1095">nodevar</span><span 
+class="ectt-1095">=5;</span>
+</div>
+<!--l. 2404--><p class="noindent" >The function <span 
+class="ectt-1095">ode_init </span>deﬁnes the list of variables and their initial concentration:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;function Init&#x2019; ode.m –after-context 11</span></li></ul>
+<!--l. 2407--><div class="lstinputlisting">
+<a 
+ id="x1-89031"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89032r1"></a></span><span 
+class="ectt-1095">176:</span><span 
+class="ectt-1095">function</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">ode_init</span><span 
+class="ectt-1095">()</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89033r2"></a></span><span 
+class="ectt-1095">177-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89034r3"></a></span><span 
+class="ectt-1095">178-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">nodevar</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89035r4"></a></span><span 
+class="ectt-1095">179-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89036r5"></a></span><span 
+class="ectt-1095">180-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">zeros</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">nodevar</span><span 
+class="ectt-1095">,1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89037r6"></a></span><span 
+class="ectt-1095">181-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89038r7"></a></span><span 
+class="ectt-1095">182-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89039r8"></a></span><span 
+class="ectt-1095">183-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89040r9"></a></span><span 
+class="ectt-1095">184-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89041r10"></a></span><span 
+class="ectt-1095">185-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">(4)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(4)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89042r11"></a></span><span 
+class="ectt-1095">186-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">(5)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(5)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">t</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89043r12"></a></span><span 
+class="ectt-1095">187-</span><span 
+class="ectt-1095">end</span>
+</div>
+<!--l. 2408--><p class="noindent" >We notice that four variables encode the concentration of bio-molecular species and a special one
+accounts for time advance.
+<!--l. 2410--><p class="noindent" >The function <span 
+class="ectt-1095">dydt </span>deﬁnes the diﬀerential equations:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;function dydt&#x2019; ode.m –after-context 38</span></li></ul>
+<!--l. 2413--><div class="lstinputlisting">
+<a 
+ id="x1-89044"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89045r1"></a></span><span 
+class="ectt-1095">190:</span><span 
+class="ectt-1095">function</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">ode_aux</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">t</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89046r2"></a></span><span 
+class="ectt-1095">191-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89047r3"></a></span><span 
+class="ectt-1095">192-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">nodevar</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89048r4"></a></span><span 
+class="ectt-1095">193-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">max_stoc_coef</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89049r5"></a></span><span 
+class="ectt-1095">194-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">var</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89050r6"></a></span><span 
+class="ectt-1095">195-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89051r7"></a></span><span 
+class="ectt-1095">196-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">kd</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89052r8"></a></span><span 
+class="ectt-1095">197-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">kun</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89053r9"></a></span><span 
+class="ectt-1095">198-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">kdun</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89054r10"></a></span><span 
+class="ectt-1095">199-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">stoc</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89055r11"></a></span><span 
+class="ectt-1095">200-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89056r12"></a></span><span 
+class="ectt-1095">201-</span><span 
+class="ectt-1095">var</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">asym</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89057r13"></a></span><span 
+class="ectt-1095">202-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89058r14"></a></span><span 
+class="ectt-1095">203-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89059r15"></a></span><span 
+class="ectt-1095">204-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">zeros</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">nodevar</span><span 
+class="ectt-1095">,1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89060r16"></a></span><span 
+class="ectt-1095">205-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89061r17"></a></span><span 
+class="ectt-1095">206-</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rule</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89062r18"></a></span><span 
+class="ectt-1095">207-</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">reaction</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">+</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89063r19"></a></span><span 
+class="ectt-1095">208-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89064r20"></a></span><span 
+class="ectt-1095">209-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">-1/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89065r21"></a></span><span 
+class="ectt-1095">210-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">-1/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89066r22"></a></span><span 
+class="ectt-1095">211-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(4)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(4)</span><span 
+class="ectt-1095">+2/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89067r23"></a></span><span 
+class="ectt-1095">212-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89068r24"></a></span><span 
+class="ectt-1095">213-</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rule</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89069r25"></a></span><span 
+class="ectt-1095">214-</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">reaction</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">+</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89070r26"></a></span><span 
+class="ectt-1095">215-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89071r27"></a></span><span 
+class="ectt-1095">216-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">-1/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89072r28"></a></span><span 
+class="ectt-1095">217-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">-1/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89073r29"></a></span><span 
+class="ectt-1095">218-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">+1/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89074r30"></a></span><span 
+class="ectt-1095">219-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89075r31"></a></span><span 
+class="ectt-1095">220-</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rule</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89076r32"></a></span><span 
+class="ectt-1095">221-</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">reaction</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">+</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89077r33"></a></span><span 
+class="ectt-1095">222-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89078r34"></a></span><span 
+class="ectt-1095">223-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">-1/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89079r35"></a></span><span 
+class="ectt-1095">224-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">-1/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89080r36"></a></span><span 
+class="ectt-1095">225-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">+2/2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89081r37"></a></span><span 
+class="ectt-1095">226-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(5)</span><span 
+class="ectt-1095">=1;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89082r38"></a></span><span 
+class="ectt-1095">227-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89083r39"></a></span><span 
+class="ectt-1095">228-</span><span 
+class="ectt-1095">end</span>
+                                                                                  
+
+                                                                                  
+</div>
+<!--l. 2415--><p class="noindent" >The function <span 
+class="ectt-1095">obs </span>deﬁnes the observables:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;function obs&#x2019; ode.m –after-context 12</span></li></ul>
+<!--l. 2418--><div class="lstinputlisting">
+<a 
+ id="x1-89084"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89085r1"></a></span><span 
+class="ectt-1095">288:</span><span 
+class="ectt-1095">function</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">obs</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">ode_obs</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89086r2"></a></span><span 
+class="ectt-1095">289-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89087r3"></a></span><span 
+class="ectt-1095">290-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">nobs</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89088r4"></a></span><span 
+class="ectt-1095">291-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">var</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89089r5"></a></span><span 
+class="ectt-1095">292-</span><span 
+class="ectt-1095">obs</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">zeros</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">nobs</span><span 
+class="ectt-1095">,1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89090r6"></a></span><span 
+class="ectt-1095">293-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89091r7"></a></span><span 
+class="ectt-1095">294-</span><span 
+class="ectt-1095">t</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(5)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89092r8"></a></span><span 
+class="ectt-1095">295-</span><span 
+class="ectt-1095">var</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">asym</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89093r9"></a></span><span 
+class="ectt-1095">296-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89094r10"></a></span><span 
+class="ectt-1095">297-</span><span 
+class="ectt-1095">obs</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">t</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[</span><span 
+class="ectt-1095">T</span><span 
+class="ectt-1095">]</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89095r11"></a></span><span 
+class="ectt-1095">298-</span><span 
+class="ectt-1095">obs</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">var</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">asym</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89096r12"></a></span><span 
+class="ectt-1095">299-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89097r13"></a></span><span 
+class="ectt-1095">300-</span><span 
+class="ectt-1095">end</span>
+</div>
+<!--l. 2420--><p class="noindent" >The function <span 
+class="ectt-1095">jac </span>provides the Jacobian (we omit it).
+<!--l. 2422--><p class="noindent" >We now wonder whether the sites are equivalent or not. We use the following command
+line:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">KaDE –rate-convention Biochemist sym.ka –show-symmetries</span></li></ul>
+<!--l. 2425--><p class="noindent" >The status of equivalent sites is described in the log: <!--l. 2426--><div class="lstinputlisting">
+<a 
+ id="x1-89098"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89099r1"></a></span><span 
+class="ectt-1095">Symmetries</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89100r2"></a></span><span 
+class="ectt-1095">In</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rules</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89101r3"></a></span><span 
+class="ectt-1095">************</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89102r4"></a></span><span 
+class="ectt-1095">Agent</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89103r5"></a></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-</span><span 
+class="ectt-1095">Equivalence</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">classes</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">of</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">sites</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">for</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">bindings</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">states</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89104r6"></a></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">{</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">}</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89105r7"></a></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-</span><span 
+class="ectt-1095">Equivalence</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">classes</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">of</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">sites</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">both</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89106r8"></a></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">{</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">}</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89107r9"></a></span><span 
+class="ectt-1095">************</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89108r10"></a></span><span 
+class="ectt-1095">In</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rules</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">and</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">initial</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">states</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89109r11"></a></span><span 
+class="ectt-1095">************</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89110r12"></a></span><span 
+class="ectt-1095">Agent</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89111r13"></a></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-</span><span 
+class="ectt-1095">Equivalence</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">classes</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">of</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">sites</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">for</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">bindings</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">states</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89112r14"></a></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">{</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">}</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89113r15"></a></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-</span><span 
+class="ectt-1095">Equivalence</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">classes</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">of</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">sites</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">both</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89114r16"></a></span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">{</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">}</span>
+</div>
+<!--l. 2428--><p class="noindent" >The set of rules and the initial state are symmetric with respect to the pair of sites.
+This is not the case of the observable. Thus, only backward bisimulation may be used
+to reduce the system. Indeed, if we ignore the diﬀerence between sites <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y</span>, we
+can no longer express the concentration of asymetric dimers. This excludes forward
+bisimulation. Backward bisimulations may still be used since the concentration of each species
+can be computed by from the overall concentration of its equivalence class, since the
+concentration of two equivalent species are always inversely proportional to their number of
+automorphisms.
+<!--l. 2430--><p class="noindent" >The command line:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">KaDe –rate-convention Biochemist sym.ka –with-symmetries Forward</span>
+     <span 
+class="ectt-1095">–output ode_with_fwd_sym –output-plot data_fwd.csv</span></li></ul>
+                                                                                  
+
+                                                                                  
+<!--l. 2433--><p class="noindent" >gives the same model, without any reduction.
+<!--l. 2435--><p class="noindent" >The command line:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">KaDe –rate-convention Biochemist sym.ka –with-symmetries Backward</span>
+     <span 
+class="ectt-1095">–output ode_with_bwd_sym –output-plot data_bwd.csv</span></li></ul>
+<!--l. 2438--><p class="noindent" >reduces the system by ignoring the diﬀerence between sites <span 
+class="ectt-1095">x </span>and <span 
+class="ectt-1095">y</span>. This is done by replacing in
+each reaction product, every species by an arbitrary representative of its equivalence
+class, and in each algebraic expression, each species concentration by the product of
+its the concentration of its representative times the relative weight of this species in
+its equivalence class (which is constant and inversely proportional to its number of
+automorphisms.)
+<!--l. 2440--><p class="noindent" >We notice that there are only <!--l. 2440--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn></math>
+variables remaining:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;%% variables&#x2019; ode_with_bwd_sym.m</span></li></ul>
+<!--l. 2443--><div class="lstinputlisting">
+<a 
+ id="x1-89115"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89116r1"></a></span><span 
+class="ectt-1095">29:</span><span 
+class="ectt-1095">nodevar</span><span 
+class="ectt-1095">=3;</span>
+</div>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;function Init&#x2019; ode_with_bwd_sym.m –after-context 9</span></li></ul>
+<!--l. 2446--><div class="lstinputlisting">
+<a 
+ id="x1-89117"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89118r1"></a></span><span 
+class="ectt-1095">176:</span><span 
+class="ectt-1095">function</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">ode_init</span><span 
+class="ectt-1095">()</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89119r2"></a></span><span 
+class="ectt-1095">177-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89120r3"></a></span><span 
+class="ectt-1095">178-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">nodevar</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89121r4"></a></span><span 
+class="ectt-1095">179-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89122r5"></a></span><span 
+class="ectt-1095">180-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">zeros</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">nodevar</span><span 
+class="ectt-1095">,1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89123r6"></a></span><span 
+class="ectt-1095">181-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89124r7"></a></span><span 
+class="ectt-1095">182-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89125r8"></a></span><span 
+class="ectt-1095">183-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89126r9"></a></span><span 
+class="ectt-1095">184-</span><span 
+class="ectt-1095">Init</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">t</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89127r10"></a></span><span 
+class="ectt-1095">185-</span><span 
+class="ectt-1095">end</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89128r11"></a></span><span 
+class="ectt-1095">186-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89129r12"></a></span><span 
+class="ectt-1095">187-</span>
+</div>
+<!--l. 2447--><p class="noindent" >one for time advance, one for free <span 
+class="ectt-1095">A</span>s, and one for dimers (no matter which sites are bound). <span 
+class="ecss-1095">KaDE</span>
+has gathered the three kinds of dimers into a single equivalence class (no matter with sites are
+bound). For instance, in the following:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep –after-context 6 -n -m 1 &#x2019;rule : A(x,y), A(x,y) -&#x003E; A(x!1,y),</span>
+     <span 
+class="ectt-1095">A(x,y!1)&#x2019; ode_with_bwd_sym.m</span></li></ul>
+                                                                                  
+
+                                                                                  
+<!--l. 2450--><div class="lstinputlisting">
+<a 
+ id="x1-89130"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89131r1"></a></span><span 
+class="ectt-1095">211:</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">rule</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">!1,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89132r2"></a></span><span 
+class="ectt-1095">212-</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">reaction</span><span 
+class="ectt-1095">:</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">+</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">-&#x003E;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">A</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">x</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">!1)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89133r3"></a></span><span 
+class="ectt-1095">213-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89134r4"></a></span><span 
+class="ectt-1095">214-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">-</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89135r5"></a></span><span 
+class="ectt-1095">215-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">-</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89136r6"></a></span><span 
+class="ectt-1095">216-</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">dydt</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">+2*</span><span 
+class="ectt-1095">k</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">*</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89137r7"></a></span><span 
+class="ectt-1095">217-</span>
+</div>
+<!--l. 2451--><p class="noindent" >the production of an asymmetric dimer, is replaced with the production of a dimer in which the
+bond is on both sites <span 
+class="ectt-1095">y</span>.
+<!--l. 2453--><p class="noindent" >Now we explain how the values of the obervavles are computed. The code for the function <span 
+class="ectt-1095">obs </span>is
+the following one:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;function obs&#x2019; ode_with_bwd_sym.m –after-context 12</span></li></ul>
+<!--l. 2457--><div class="lstinputlisting">
+<a 
+ id="x1-89138"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89139r1"></a></span><span 
+class="ectt-1095">286:</span><span 
+class="ectt-1095">function</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">obs</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">ode_obs</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89140r2"></a></span><span 
+class="ectt-1095">287-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89141r3"></a></span><span 
+class="ectt-1095">288-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">nobs</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89142r4"></a></span><span 
+class="ectt-1095">289-</span><span 
+class="ectt-1095">global</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">var</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89143r5"></a></span><span 
+class="ectt-1095">290-</span><span 
+class="ectt-1095">obs</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">zeros</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">nobs</span><span 
+class="ectt-1095">,1)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89144r6"></a></span><span 
+class="ectt-1095">291-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89145r7"></a></span><span 
+class="ectt-1095">292-</span><span 
+class="ectt-1095">t</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(3)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89146r8"></a></span><span 
+class="ectt-1095">293-</span><span 
+class="ectt-1095">var</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">/4;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">asym</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89147r9"></a></span><span 
+class="ectt-1095">294-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89148r10"></a></span><span 
+class="ectt-1095">295-</span><span 
+class="ectt-1095">obs</span><span 
+class="ectt-1095">(1)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">t</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[</span><span 
+class="ectt-1095">T</span><span 
+class="ectt-1095">]</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89149r11"></a></span><span 
+class="ectt-1095">296-</span><span 
+class="ectt-1095">obs</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">=</span><span 
+class="ectt-1095">var</span><span 
+class="ectt-1095">(2)</span><span 
+class="ectt-1095">;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">asym</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89150r12"></a></span><span 
+class="ectt-1095">297-</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89151r13"></a></span><span 
+class="ectt-1095">298-</span><span 
+class="ectt-1095">end</span>
+</div>
+<!--l. 2458--><p class="noindent" >We are interested in asymetric dimers only. We notice that their
+concentration is obtained by dividing the overall quantity of dimers by
+<!--l. 2458--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>4</mn></math>. To
+understand why, we shall have a closer look at the meaning of each variable. As indicated
+here:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">grep -n -m 1 &#x2019;%% variables&#x2019; ode_with_bwd_sym.m</span></li></ul>
+<!--l. 2461--><div class="lstinputlisting">
+<a 
+ id="x1-89152"></a>
+<span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89153r1"></a></span><span 
+class="ectt-1095">15:</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095">%</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">variables</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">init</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">i</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">y</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">i</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">denote</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">numbers</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">of</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">embeddings</span>
+</div>
+<!--l. 2462--><p class="noindent" >the convention is to count in number of embeddings. Thus the total number of dimers is
+<!--l. 2462--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mfrac><mrow 
+><mi 
+>y</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>2</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+  <mrow 
+><mn>2</mn></mrow></mfrac> </math>.
+Then half of them only is an asymetric dimer, which gives
+<!--l. 2462--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mfrac><mrow 
+><mi 
+>y</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>2</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+  <mrow 
+><mn>4</mn></mrow></mfrac> </math>.
+                                                                                  
+
+                                                                                  
+<!--l. 2464--><p class="noindent" >Let us check the soundness of our tools, by integrating our three ODEs systems.
+<!--l. 2466--><p class="noindent" >Firsly we deﬁne the ﬁle <span 
+class="ectt-1095">plot.gplot </span>as follows: <!--l. 2467-->
+<div class="lstlisting" id="listing-40"><span class="label"><a 
+ id="x1-89154r1"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">xlabel</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">Asymetric</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">dimer</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">concentration</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89155r2"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">ylabel</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">CPU</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">time</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">s</span><span 
+class="ectt-1095">.)</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89156r3"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">datafile</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">separator</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89157r4"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">title</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">Initial</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">model</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89158r5"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">term</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89159r6"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">output</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">plot</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89160r7"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">xrange</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[0:1]</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89161r8"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">yrange</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[0.0:40.]</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89162r9"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">output</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">plot</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89163r10"></a></span><span 
+class="ectt-1095">plot</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">data</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">csv</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">using</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">1:2</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">w</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">l</span>
+</div>
+<!--l. 2479--><p class="noindent" >the ﬁle <span 
+class="ectt-1095">plot_fwd.gplot </span>as follows: <!--l. 2480-->
+<div class="lstlisting" id="listing-41"><span class="label"><a 
+ id="x1-89164r1"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">xlabel</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">Asymetric</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">dimer</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">concentration</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89165r2"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">ylabel</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">CPU</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">time</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">s</span><span 
+class="ectt-1095">.)</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89166r3"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">datafile</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">separator</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89167r4"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">title</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">reduced</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">model</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">fwd</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89168r5"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">term</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89169r6"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">output</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">plot_fwd</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89170r7"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">xrange</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[0:1]</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89171r8"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">yrange</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[0.0:40.]</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89172r9"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">output</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">plot_fwd</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89173r10"></a></span><span 
+class="ectt-1095">plot</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">data_fwd</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">csv</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">using</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">1:2</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">w</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">l</span>
+</div>
+<!--l. 2492--><p class="noindent" >and the ﬁle <span 
+class="ectt-1095">plot_bwd.gplot </span>as follows: <!--l. 2493-->
+<div class="lstlisting" id="listing-42"><span class="label"><a 
+ id="x1-89174r1"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">xlabel</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">Asymetric</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">dimer</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">concentration</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89175r2"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">ylabel</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">CPU</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">time</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">s</span><span 
+class="ectt-1095">.)</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89176r3"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">datafile</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">separator</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">,</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89177r4"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">term</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89178r5"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">title</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">Reduced</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">model</span><span 
+class="ectt-1095">␣</span><span 
+class="ectt-1095">(</span><span 
+class="ectt-1095">bwd</span><span 
+class="ectt-1095">)</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89179r6"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">output</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">plot_bwd</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89180r7"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">xrange</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[0:1]</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89181r8"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">yrange</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">[0.0:40.]</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89182r9"></a></span><span 
+class="ectt-1095">set</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">output</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">plot_bwd</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">png</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><br /><span class="label"><a 
+ id="x1-89183r10"></a></span><span 
+class="ectt-1095">plot</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095">data</span><span 
+class="ectt-1095">.</span><span 
+class="ectt-1095">csv</span><span 
+class="ectt-1095">&#x2019;</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">using</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">1:2</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">w</span><span 
+class="ectt-1095"> </span><span 
+class="ectt-1095">l</span>
+</div>
+<!--l. 2506--><p class="noindent" >Then we can integrate our three diﬀerential systems and plot their respective solutions thanks to
+the following instructions:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ectt-1095">octave ode.m</span>
+     </li>
+     <li class="itemize"><span 
+class="ectt-1095">octave ode_with_fwd_sym.m</span>
+     </li>
+     <li class="itemize"><span 
+class="ectt-1095">octave ode_with_bwd_sym.m</span>
+     </li>
+     <li class="itemize"><span 
+class="ectt-1095">gnuplot plot.gplot</span>
+     </li>
+     <li class="itemize"><span 
+class="ectt-1095">gnuplot plot_fwd.gplot</span>
+     </li>
+     <li class="itemize"><span 
+class="ectt-1095">gnuplot plot_bwd.gplot</span></li></ul>
+<!--l. 2515--><p class="noindent" >We obtain the following plots: <hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-8918413"></a>
+                                                                                  
+
+                                                                                  
+<div class="minipage"><!--l. 2518--><p class="noindent" ><img 
+src="img/plot.png" alt="PIC"  
+width="481.79999pt" height="361.34999pt" >
+</div>
+<br /> <div class="caption" 
+><span class="id">Figure 8.13: </span><span  
+class="content">Initial model (without reduction).</span></div><!--tex4ht:label?: x1-8918413 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2521--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2523--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-8918514"></a>
+                                                                                  
+
+                                                                                  
+<div class="minipage"><!--l. 2525--><p class="noindent" ><img 
+src="img/plot_fwd.png" alt="PIC"  
+width="481.79999pt" height="361.34999pt" >
+</div>
+<br /> <div class="caption" 
+><span class="id">Figure 8.14: </span><span  
+class="content">Reduced model (fwd bisimulation).</span></div><!--tex4ht:label?: x1-8918514 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2528--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 2530--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                  
+
+                                                                                  
+<a 
+ id="x1-8918615"></a>
+                                                                                  
+
+                                                                                  
+<div class="minipage"><!--l. 2532--><p class="noindent" ><img 
+src="img/plot_bwd.png" alt="PIC"  
+width="481.79999pt" height="361.34999pt" >
+</div>
+<br /> <div class="caption" 
+><span class="id">Figure 8.15: </span><span  
+class="content">Reduced model (bwd bisimulation).</span></div><!--tex4ht:label?: x1-8918615 -->
+                                                                                  
+
+                                                                                  
+<!--l. 2534--><p class="noindent" ></div><hr class="endfigure">
+                                                                                  
+
+                                                                                  
+<h2 class="chapterHead"><span class="titlemark">Chapter 9</span><br /><a 
+ id="x1-900009"></a>Frequently asked questions</h2>
+<h3 class="likesectionHead"><a 
+ id="x1-910009"></a>Simulation hangs after a while</h3>
+<!--l. 2538--><p class="noindent" >If the progress bar seems stalled, it does not necessarily mean that the simulation is blocked. In
+particular when a simulation is triggered with a <span 
+class="ecti-1095">time </span>limit (<span 
+class="ectt-1095">-l </span>option of the command
+line) it might only indicate that the bio clock is stalled while computation events still
+occur. Recall that the average (bio) time one has to wait in order to apply a rule is
+<!--l. 2538--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn><mo 
+class="MathClass-bin">∕</mo><mi 
+>A</mi></math>, where
+<!--l. 2538--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math> is the
+sum of all the rule activities (which is equal to the number of instances that a rule has, times its
+kinetic rate). Whenever the number of occurrences of a rule grows too fast (if new agents are
+created during the simulation for instance), or if the kinetic rate of a rule is deﬁned by a function
+that grows rapidly, the average time increment might tend to 0 and if it remains so for a
+while, it will block the progress bar whose advance is proportional to the bio time
+<span 
+class="ectt-1095">[T]</span>.
+<!--l. 2540--><p class="noindent" >In order to make sure that <span 
+class="ecss-1095">KaSim</span> is not incorrectly blocked you may wish to plot the
+event clock against time clock using the observable <span 
+class="ectt-1095">%obs: </span><span 
+class="tctt-1095">'</span><span 
+class="ectt-1095">events</span><span 
+class="tctt-1095">' </span><span 
+class="ectt-1095">[E] </span>or run the
+simulation using an event limit (<span 
+class="ectt-1095">-e </span>option of the command line) instead of a time
+limit.
+<!--l. 2542--><p class="noindent" >
+<h3 class="likesectionHead"><a 
+ id="x1-920009"></a>What do null events mean, why do I have any?</h3>
+<!--l. 2544--><p class="noindent" >Null events<a 
+ id="dx1-92001"></a> is a way for <span 
+class="ecss-1095">KaSim</span> to compensate for some over approximation it is doing, in order
+deal with large simulations more eﬃciently. They usually do not impact signiﬁcantly the
+performances of the simulator, unless the model contains rules using the special notation to deal
+with ambiguous molecularity (see Section <a 
+href="#x1-310003.4.5">3.4.5<!--tex4ht:ref: sec:ambiguous --></a>). With pure Kappa rules, the ratio
+<!--l. 2544--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>r</mi></math> of null
+event over productive ones (that you can track using the observable <span 
+class="ectt-1095">%obs: </span><span 
+class="tctt-1095">'</span><span 
+class="ectt-1095">r</span><span 
+class="tctt-1095">' </span><span 
+class="ectt-1095">[E-]/[E]</span>) should
+tend to 0 when models have a lot of agents.
+<!--l. 2546--><p class="noindent" >
+<h3 class="likesectionHead"><a 
+ id="x1-930009"></a>No data points are generated</h3>
+                                                                                  
+
+                                                                                  
+<!--l. 2547--><p class="noindent" >Make sure you have <span 
+class="ectt-1095">%obs </span>or <span 
+class="ectt-1095">%plot </span>instructions in your KF<a 
+ id="dx1-93001"></a>. Also make sure to use a reasonable
+value for the <span 
+class="ectt-1095">-p </span>option in the command line to tell KaSim how often you wish to have points on
+your curves.
+<!--l. 2549--><p class="noindent" >
+<h3 class="likesectionHead"><a 
+ id="x1-940009"></a>Too many instances of an observable</h3>
+<!--l. 2550--><p class="noindent" >The value of a kappa expression <!--l. 2550--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>E</mi></math>
+is equal to the number of embeddings<a 
+ id="dx1-94001"></a> it has in the current mixture<a 
+ id="dx1-94002"></a>
+<!--l. 2550--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>. Embeddings are
+maps from agents in <!--l. 2550--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>E</mi></math>
+to agents in <!--l. 2550--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>. If
+<!--l. 2550--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>E</mi></math> has symmetries then
+every permutation of <!--l. 2550--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>E</mi></math>
+will be counted as a new embedding. For instance let
+<!--l. 2550--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>E</mi> <mo 
+class="MathClass-rel">=</mo></math><span 
+class="ectt-1095">A(x!1),A(x!1) </span>and let
+<!--l. 2550--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi> <mo 
+class="MathClass-rel">=</mo></math><span 
+class="ectt-1095">A(x!1,y~p),A(x!1,y~u)</span>.
+<span 
+class="ecss-1095">KaSim</span> will count two instances of <!--l. 2551--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>E</mi></math>
+in <!--l. 2551--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>: the one mapping
+the ﬁrst <span 
+class="ectt-1095">A </span>of <!--l. 2551--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>E</mi></math> to the
+ﬁrst <span 
+class="ectt-1095">A </span>of <!--l. 2551--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math> and the one
+mapping the ﬁrst <span 
+class="ectt-1095">A </span>of <!--l. 2551--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>E</mi></math> to
+the second <span 
+class="ectt-1095">A </span>of <!--l. 2551--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>.
+<!--l. 2556--><p class="noindent" >
+<h3 class="likesectionHead"><a 
+ id="x1-950009"></a>Value <span 
+class="ectt-1095">nan </span>in the data ﬁle at the end of the simulation</h3>
+<!--l. 2557--><p class="noindent" >The value <span 
+class="ectt-1095">nan </span>means &#x0022;Not a Number&#x0022;. It is generated when a plotted variable is inﬁnite. Make
+sure this variable is not divided by zero at some point.
+                                                                                  
+
+                                                                                  
+<h2 class="likechapterHead"><a 
+ id="x1-960009"></a>Bibliography</h2>
+    <div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">   </span></span><a 
+ id="Xbuchholz_lump"></a>Peter Buchholz. Exact and ordinary lumpability in ﬁnite Markov chains. <span 
+class="ecti-1095">Journal</span>
+    <span 
+class="ecti-1095">of Applied Probability</span>, 31(1):59–75, 1994.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">   </span></span><a 
+ id="Xbuchholz_bisimulation"></a>Peter  Buchholz.    Bisimulation  relations  for  weighted  automata.    <span 
+class="ecti-1095">Theoretical</span>
+    <span 
+class="ecti-1095">Computer Science</span>, 393(1-3):109–123, 2008.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">   </span></span><a 
+ id="XFeret-MFPSXXVII"></a>Ferdinanda  Camporesi  and  Jérôme  Feret.   Formal  reduction  for  rule-based
+    models.  In <span 
+class="ecti-1095">Postproceedings of the Twenty-seventh Conference on the Mathematical</span>
+    <span 
+class="ecti-1095">Foundations of Programming Semantics, MFPS XXVII</span>,  volume  276C  of  <span 
+class="ecti-1095">Electonic</span>
+    <span 
+class="ecti-1095">Notes in Theoretical Computer Science</span>, pages 31–61, Pittsburg, USA, 25–28 May 2011.
+    Elsevier Science Publishers.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">   </span></span><a 
+ id="XCAMPORESI201073"></a>Ferdinanda  Camporesi,  JÃľrÃťme  Feret,  Heinz  Koeppl,  and  Tatjana  Petrov.
+    Combining model reductions. <span 
+class="ecti-1095">Electronic Notes in Theoretical Computer Science</span>, 265:73
+    – 96, 2010.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">   </span></span><a 
+ id="XCousotEtAl06-ASIAN"></a>Patrick Cousot, Radhia Cousot, Jérôme Feret, Laurent Mauborgne, Antoine
+    Miné,  David  Monniaux,  and  Xavier  Rival.   Combination  of  abstractions  in  the
+    <span 
+class="eccc-1095">A<span 
+class="small-caps">S</span><span 
+class="small-caps">T</span><span 
+class="small-caps">R</span></span><span 
+class="eccc-1095">é</span><span 
+class="eccc-1095"><span 
+class="small-caps">E</span> </span>static analyzer. In M. Okada and I. Satoh, editors, <span 
+class="ecti-1095">Eleventh Annual Asian</span>
+                                                                                  
+
+                                                                                  
+    <span 
+class="ecti-1095">Computing Science Conference (ASIAN&#x2019;06)</span>, pages 1–24, Tokyo, Japan, LNCS 4435,
+    December 6–8 2007. Springer, Berlin.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">   </span></span><a 
+ id="XDanosFFHK08"></a>Vincent Danos, Jérôme Féret, Walter Fontana, and Russell Harmer. Rule based
+    modelling , symmetries, reﬁnements. In <span 
+class="ecti-1095">Proc. FMSB</span>, volume 5054 of <span 
+class="ecti-1095">LNCS</span>, 2008.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">   </span></span><a 
+ id="XDan_etal12"></a>Vincent  Danos,  Jérôme  Feret,  Walter  Fontana,  Russell  Harmer,  Jonathan
+    Hayman,  Jean  Krivine,  Chris  Thompson-Walsh,  and  Glynn  Winskel.    Graphs,
+    rewriting  and  pathway  reconstruction  for  rule-based  models.   In  Schloss  Dagstuhl
+    Leibniz-Zentrum fuer Informatik, editor, <span 
+class="ecti-1095">FSTTCS 2012 - IARCS Annual Conference</span>
+    <span 
+class="ecti-1095">on Foundations of Software Technology and Theoretical Computer Science</span>, volume 18
+    of <span 
+class="ecti-1095">LIPIcs</span>, pages 276–288, 2012.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">   </span></span><a 
+ id="XDBLP:journals/tcsb/DanosFFHK09"></a>Vincent  Danos,  Jérôme  Feret,  Walter  Fontana,  Russell  Harmer,  and  Jean
+    Krivine. Rule-based modelling and model perturbation. <span 
+class="ecti-1095">Trans. Computational Systems</span>
+    <span 
+class="ecti-1095">Biology</span>, 11:116–137, 2009.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">   </span></span><a 
+ id="XDanosEtAl-LICS2010"></a>Vincent  Danos,  Jérôme  Feret,  Walter  Fontana,  Russell  Harmer,  and  Jean
+    Krivine.    Abstracting  the  diﬀerential  semantics  of  rule-based  models:  exact  and
+    automated   model   reduction.      In   Jean-Pierre   Jouannaud,   editor,   <span 
+class="ecti-1095">Proceedings</span>
+    <span 
+class="ecti-1095">of  the  Twenty-Fifth  Annual  IEEE  Symposium  on  Logic  in  Computer  Science,</span>
+    <span 
+class="ecti-1095">LICS</span><!--l. 62--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mspace width="0.3em" class="thinspace"/></math><span 
+class="ecti-1095">&#x2019;2010</span>,
+    volume 0, pages 362–381, Edinburgh, UK, 11–14 July 2010. IEEE Computer Society.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">   </span></span><a 
+ id="XDan_etal07b"></a>Vincent  Danos,  Jérôme  Feret,  Walter  Fontana,  and  Jean  Krivine.   Scalable
+    simulation of cellular signaling networks. In <span 
+class="ecti-1095">Proc. APLAS&#x2019;07</span>, volume 4807 of <span 
+class="ecti-1095">LNCS</span>,
+    pages 139–157, 2007.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">   </span></span><a 
+ id="XDanosEtAl-VMCAI08"></a>Vincent   Danos,   Jérôme   Feret,   Walter   Fontana,   and   Jean   Krivine.
+                                                                                  
+
+                                                                                  
+    Abstract  interpretation  of  cellular  signalling  networks.     In  Francesco  Logozzo,
+    Doron A. Peled,    and    Lenore D. Zuck,    editors,    <span 
+class="ecti-1095">Proceedings   of   the   Ninth</span>
+    <span 
+class="ecti-1095">International Conference on Veriﬁcation, Model Checking and Abstract Interpretation,</span>
+    <span 
+class="ecti-1095">VMCAI</span><!--l. 76--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mspace width="0.3em" class="thinspace"/></math><span 
+class="ecti-1095">&#x2019;2008</span>,
+    volume 4905 of <span 
+class="ecti-1095">Lecture Notes in Computer Science</span>, pages 83–97, San Francisco, USA,
+    7–9 January 2008. Springer, Berlin, Germany.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">   </span></span><a 
+ id="XDan_etal07a"></a>Vincent Danos, Jérôme Feret, Walter Fontanta, Russ Harmer, and Jean Krivine.
+    Rule based modeling of biological signaling.  In Luís Caires and Vasco Thudichum
+    Vasconcelos,  editors,  <span 
+class="ecti-1095">Proceedings of CONCUR 2007</span>,  volume  4703  of  <span 
+class="ecti-1095">LNCS</span>,  pages
+    17–41. Springer, 2007.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">   </span></span><a 
+ id="XDanLan04"></a>Vincent  Danos  and  Cosimo  Laneve.    Formal  molecular  biology.    <span 
+class="ecti-1095">Theoretical</span>
+    <span 
+class="ecti-1095">Computer Science</span>, 325, 2004.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">   </span></span><a 
+ id="XFae_etal05"></a>James R.  Faeder,  Mickael L.  Blinov,  and  William S.  Hlavacek.    Rule  based
+    modeling of biochemical networks. <span 
+class="ecti-1095">Complexity</span>, pages 22–41, 2005.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">   </span></span><a 
+ id="XDBLP:conf/concur/FajstrupGR98"></a>Lisbeth  Fajstrup,  Eric  Goubault,  and  Martin  Raußen.   Detecting  deadlocks  in
+    concurrent systems. In <span 
+class="ecti-1095">Proc.</span><span 
+class="ecti-1095"> CONCUR &#x2019;98</span>, volume 1466 of <span 
+class="ecti-1095">LNCS</span>, 1998.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [16]<span class="bibsp">   </span></span><a 
+ id="XFeret-ICCMSE2007"></a>Jérôme   Feret.      Reachability   analysis   of   biological   signalling   pathways
+    by   abstract   interpretation.        In   T.E. Simos,   editor,   <span 
+class="ecti-1095">Proceedings   of   the</span>
+    <span 
+class="ecti-1095">International  Conference  of  Computational  Methods  in  Sciences  and  Engineering,</span>
+    <span 
+class="ecti-1095">ICCMSE</span><!--l. 109--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mspace width="0.3em" class="thinspace"/></math><span 
+class="ecti-1095">&#x2019;2007,</span>
+    <span 
+class="ecti-1095">Corfu,  Greece</span>,   number   963.(2)   in   American   Institute   of   Physics   Conference
+    Proceedings, pages 619–622, Corfu, Greece, 25–30 September 2007. American Institute
+    of Physics.
+    </p>
+                                                                                  
+
+                                                                                  
+    <p class="bibitem" ><span class="biblabel">
+ [17]<span class="bibsp">   </span></span><a 
+ id="XFeret201545"></a>Jerome  Feret.    An  algebraic  approach  for  inferring  and  using  symmetries  in
+    rule-based models.  <span 
+class="ecti-1095">Electronic Notes in Theoretical Computer Science</span>, 316:45 – 65,
+    2015.  5th International Workshop on Static Analysis and Systems Biology (SASB
+    2014).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [18]<span class="bibsp">   </span></span><a 
+ id="XFeret-et-al-pnas2009"></a>Jérôme Feret, Vincent Danos, Jean Krivine, Russ Harmer, and Walter Fontana.
+    Internal coarse-graining of molecular systems. <span 
+class="ecti-1095">Proceedings of the National Academy of</span>
+    <span 
+class="ecti-1095">Sciences of the United States of America</span>, April 3 2009.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [19]<span class="bibsp">   </span></span><a 
+ id="XFeret_IJSI2013"></a>Jérôme  Feret,  Heinz  Koeppl,  and  Tatjana  Petrov.   Stochastic  fragments:  A
+    framework for the exact reduction of the stochastic semantics of rule-based models.
+    <span 
+class="ecti-1095">International Journal of Software and Informatics</span>, 7(4):527 – 604, 2013.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [20]<span class="bibsp">   </span></span><a 
+ id="XFeret:SASB2016"></a>Jérôme Feret and Kim Quyên Lý.  Reachability analysis via orthogonal sets
+    of patterns.  In <span 
+class="ecti-1095">Seventeenth International Workshop on Static Analysis and Systems</span>
+    <span 
+class="ecti-1095">Biology (SASB&#x2019;16)</span>, ENTCS. elsevier. to appear.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [21]<span class="bibsp">   </span></span><a 
+ id="XGil76"></a>Daniel T. Gillespie.  A general method for numerically simulating the stochastic
+    time  evolution  of  coupled  chemical  reactions.   <span 
+class="ecti-1095">Journal  of  Computational  Physics</span>,
+    22(4):403–434, 1976.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [22]<span class="bibsp">   </span></span><a 
+ id="XGil77"></a>Daniel T. Gillespie.  Exact stochastic simulation of coupled chemical reactions.
+    <span 
+class="ecti-1095">Journal of Physical Chemistry</span>, 81(25):2340–2361, 1977.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [23]<span class="bibsp">   </span></span><a 
+ id="XKreyssig"></a>Peter Kreyßig.  <span 
+class="ecti-1095">Chemical Organisation Theory Beyond Classical Models: Discrete</span>
+    <span 
+class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
+</p>
+                                                                                  
+
+                                                                                  
+    </div>
+                                                                                  
+
+                                                                                  
+<!--l. 1--><p class="noindent" >
+                                                                                  
+
+                                                                                  
+<h2 class="likechapterHead"><a 
+ id="x1-970009"></a>Index</h2>
+<div class="theindex"><span class="index-item">activity, 8, 22, 43 <br /></span>
+<span class="index-item">agent signature, 20 <br /></span>
+<span class="index-item">agent signature, 15, 16, 19, 20, 28, 34 <br /></span>
+<span class="index-item">agents, 15 <br /></span>
+<span class="index-item">algebraic expression, 18, 22 <br /></span>
+<span class="index-item">algebraic expression, 23, 26, 37, 43 <br /></span>
+<p class="theindex">
+<span class="index-item">bi-directional rule, 19 <br /></span>
+<span class="index-item">boolean expression, 38 <br /></span>
+</p><p class="theindex">
+<span class="index-item">causal ﬂow, 41, 42 <br /></span>
+<span class="index-item">causality, 41 <br /></span>
+<span class="index-item">chemical notation, 19 <br /></span>
+<span class="index-item">comments, 15 <br /></span>
+</p><p class="theindex">
+<span class="index-item">data ﬁle, 26, 28, 106 <br /></span>
+<span class="index-item">declaration, 15, 19, 22, 26, 28, 34, 37, 40, 41, 43, 46 <br /></span>
+<span class="index-item">default state, 20 <br /></span>
+<span class="index-item">don&#x2019;t care don&#x2019;t write, 20 <br /></span>
+<span class="index-item">don&#x2019;t care don&#x2019;t write, 17, 19, 28 <br /></span>
+</p><p class="theindex">
+<span class="index-item">edit rules, 21 <br /></span>
+<span class="index-item">eﬀect, 37, 39 <br /></span>
+<span class="index-item">embedding, 106 <br /></span>
+<span class="index-item">event, 8, 27 <br /></span>
+                                                                                  
+
+                                                                                  
+</p><p class="theindex">
+<span class="index-item">ﬂux map, 43 <br /></span>
+</p><p class="theindex">
+<span class="index-item">graph, 8 <br /></span>
+</p><p class="theindex">
+<span class="index-item">hybrid rules, 19, 22 <br /></span>
+</p><p class="theindex">
+<span class="index-item">initial condition, 15, 28 <br /></span>
+<span class="index-item">internal state, 16 <br /></span>
+</p><p class="theindex">
+<span class="index-item">kappa ﬁle, 15, 16, 18, 26, 28, 34, 37, 46, 47, 106 <br /></span>
+<span class="index-item">kinetic rate, 23, 26 <br /></span>
+<span class="index-subitem">    deterministic rate constant, 23 <br /></span>
+<span class="index-subitem">    stochastic rate constant, 23 <br /></span>
+</p><p class="theindex">
+<span class="index-item">left hand side, 18 <br /></span>
+<span class="index-item">link type, 18 <br /></span>
+<span class="index-item">longest preﬁx convention, 20 <br /></span>
+</p><p class="theindex">
+<span class="index-item">mixture, 8, 20, 25, 28, 39–41, 46, 106 <br /></span>
+</p><p class="theindex">
+<span class="index-item">null event, 27, 105 <br /></span>
+</p><p class="theindex">
+<span class="index-item">perturbation, 15, 37 <br /></span>
+<span class="index-subitem">    one shot, 37 <br /></span>
+<span class="index-item">precondition, 37 <br /></span>
+</p><p class="theindex">
+                                                                                  
+
+                                                                                  
+<span class="index-item">rate, 8 <br /></span>
+<span class="index-item">right hand side, 18 <br /></span>
+<span class="index-item">rule, 15, 18 <br /></span>
+</p><p class="theindex">
+<span class="index-item">semi-link, 18 <br /></span>
+<span class="index-item">side eﬀect, 21 <br /></span>
+<span class="index-item">signature, 34 <br /></span>
+<span class="index-item">simulation package, 46 <br /></span>
+<span class="index-item">strong compression, 42 <br /></span>
+</p><p class="theindex">
+<span class="index-item">tokens, 15 <br /></span>
+</p><p class="theindex">
+<span class="index-item">variable, 15, 22, 26, 37 <br /></span>
+</p><p class="theindex">
+<span class="index-item">weak compression, 42 <br /></span>
+</p></div>
+ 
+</body> 
+</html>
                                                                                   
 
 

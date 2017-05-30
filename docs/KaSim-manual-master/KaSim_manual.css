@@ -73,21 +73,21 @@
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
 .ecrm-0600{font-size:54%;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
 .tctt-1095{font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
@@ -148,6 +148,7 @@
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
+.small-caps{font-variant: small-caps; }
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
 p.nopar { text-indent: 0em; }
