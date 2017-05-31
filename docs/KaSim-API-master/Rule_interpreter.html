@@ -99,6 +99,7 @@
 <link title="algebraic expression computation" rel="Section" href="#6_algebraicexpressioncomputation">
 <link title="Core" rel="Section" href="#6_Core">
 <link title="Stories" rel="Section" href="#6_Stories">
+<link title="Species" rel="Section" href="#6_Species">
 <link title="Debugging" rel="Section" href="#6_Debugging">
 <title>KaSim API : Rule_interpreter</title>
 </head>
@@ -207,7 +208,11 @@ resynchronizing. (This is what initial state does.)<br>
 <h6 id="6_Stories">Stories</h6><br>
 
 <pre><span id="VALadd_tracked"><span class="keyword">val</span> add_tracked</span> : <code class="type"><a href="Pattern.html#TYPEid">Pattern.id</a> array -><br>       string -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list list -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
-<pre><span id="VALremove_tracked"><span class="keyword">val</span> remove_tracked</span> : <code class="type"><a href="Pattern.html#TYPEid">Pattern.id</a> array -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><br>
+<pre><span id="VALremove_tracked"><span class="keyword">val</span> remove_tracked</span> : <code class="type"><a href="Pattern.html#TYPEid">Pattern.id</a> array -> string option -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><br>
+<h6 id="6_Species">Species</h6><br>
+
+<pre><span id="VALadd_tracked_species"><span class="keyword">val</span> add_tracked_species</span> : <code class="type"><a href="Pattern.html#TYPEid">Pattern.id</a> array -><br>       string -><br>       <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list list -><br>       <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre>
+<pre><span id="VALremove_tracked_species"><span class="keyword">val</span> remove_tracked_species</span> : <code class="type">string -> <a href="Rule_interpreter.html#TYPEt">t</a> -> <a href="Rule_interpreter.html#TYPEt">t</a></code></pre><br>
 <h6 id="6_Debugging">Debugging</h6><br>
 
 <pre><code><span id="TYPEstats"><span class="keyword">type</span> <code class="type"></code>stats</span> = {</code></pre><table class="typetable">
