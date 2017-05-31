@@ -97,11 +97,11 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:&nbsp;?compil:<span class="constructor">Ast</span>.parsing_compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_json</span>.<span class="constructor">Type</span>.state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_contact_map&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Public_data</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_json</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_json</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_influence_map&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Remanent_state</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Public_data</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_json</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_json</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_dead_rules&nbsp;:<br>
@@ -115,9 +115,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_json&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception_without_parameter</span>.method_handler&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.contact_map&nbsp;<span class="constructor">Remanent_state</span>.<span class="constructor">AccuracyMap</span>.t&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.influence_map&nbsp;<span class="constructor">Remanent_state</span>.<span class="constructor">AccuracyMap</span>.t&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_rule_id&nbsp;list&nbsp;option&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.constraints_list&nbsp;option&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.separating_transitions&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Public_data</span>.contact_map&nbsp;<span class="constructor">Public_data</span>.<span class="constructor">AccuracyMap</span>.t&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_state</span>.influence_map&nbsp;<span class="constructor">Public_data</span>.<span class="constructor">AccuracyMap</span>.t&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;option&nbsp;*&nbsp;<span class="constructor">Remanent_state</span>.constraints_list&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Public_data</span>.separating_transitions&nbsp;option<br>
 <span class="keyword">end</span></code></body></html>
