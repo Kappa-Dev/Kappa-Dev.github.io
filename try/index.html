@@ -26,12 +26,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/codemirror.min.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/addon/lint/lint.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/addon/dialog/dialog.css"></link>
-    <script src="contact.js?30353"></script>
-    <script src="Kappa.js?30353"></script>
-    <script src="common.js?30353"></script>
-    <script src="flux.js?30353"></script>
-    <script src="plot.js?30353"></script>
-    <script src="JsSim.js?30353"></script>
+    <script src="class.js?18206"></script>
+    <script src="parser.js?18206"></script>
+    <script src="render.js?18206"></script>
+    <script src="Kappa.js?18206"></script>
+    <script src="common.js?18206"></script>
+    <script src="flux.js?18206"></script>
+    <script src="plot.js?18206"></script>
+    <script src="JsSim.js?18206"></script>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -214,7 +216,33 @@ rect { stroke-width: 2; }
                    border-style: solid;
                    border-width: 2px;
                    border-radius : 4px;
-                   opacity : 0.8; }   </style>
+                   opacity : 0.8; }
+
+									 .link {
+									   stroke: steelblue;
+									   stroke-opacity: 0.4;
+									   fill: none;
+									   pointer-events: none;
+									 }
+
+									 .node { cursor: pointer; }
+									 #graph {
+									     transition:transform 200ms ease;
+									     transform:translateX(100%);
+									     width:33%;
+									     height:100%;
+									     background:#fafaea;
+									     position:fixed;
+									     top:0;
+									     right:0;
+									 }
+
+									 .monthText {
+									 			fill: #6B6B6B;
+									 			font-size: 13px;
+									 			font-family: 'Courgette', sans-serif;
+									 		}
+   </style>
    <body>
    <!-- nav -->
    <nav class="navbar navbar-default navbar-static-top">
