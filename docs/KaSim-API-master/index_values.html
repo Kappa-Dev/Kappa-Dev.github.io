@@ -29,6 +29,8 @@
 <link title="Ode_loggers" rel="Chapter" href="Ode_loggers.html">
 <link title="Graph_json" rel="Chapter" href="Graph_json.html">
 <link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="Fractions" rel="Chapter" href="Fractions.html">
+<link title="Affine_combinations" rel="Chapter" href="Affine_combinations.html">
 <link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
 <link title="Locality" rel="Chapter" href="Locality.html">
 <link title="Operator" rel="Chapter" href="Operator.html">
@@ -127,6 +129,8 @@ Returns the current activity
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALadd">add</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
+<tr><td><a href="Fractions.html#VALadd">add</a> [<a href="Fractions.html">Fractions</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALadd">add</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.FormatMap.html#VALadd">add</a> [<a href="Loggers.FormatMap.html">Loggers.FormatMap</a>]</td>
@@ -181,8 +185,6 @@ depend in time, depend in event number, depend in given var
  Some (i,j) as second returned element means cc j is now merged into cc i
 </div>
 </td></tr>
-<tr><td><a href="Rule_modes.html#VALadd_map">add_map</a> [<a href="Rule_modes.html">Rule_modes</a>]</td>
-<td></td></tr>
 <tr><td><a href="Loggers.html#VALadd_node">add_node</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALadd_oriented_relation">add_oriented_relation</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
@@ -692,6 +694,10 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Alg_expr.html#VALdiv">div</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
+<tr><td><a href="Fractions.html#VALdiv">div</a> [<a href="Fractions.html">Fractions</a>]</td>
+<td></td></tr>
+<tr><td><a href="Affine_combinations.html#VALdiv_scal">div_scal</a> [<a href="Affine_combinations.html">Affine_combinations</a>]</td>
+<td></td></tr>
 <tr><td><a href="Alg_expr_extra.html#VALdivide_expr_by_int">divide_expr_by_int</a> [<a href="Alg_expr_extra.html">Alg_expr_extra</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALdivide_rule_rate_by">divide_rule_rate_by</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
@@ -1116,6 +1122,8 @@ Apply the rule for sure if it is possible.
 <tr><td><a href="Int_storage.Storage.html#VALfree_all">free_all</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>G</td></tr>
+<tr><td><a href="Tools.html#VALgcd_2">gcd_2</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
 <tr><td><a href="Matching.html#VALget">get</a> [<a href="Matching.html">Matching</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.Env.html#VALget">get</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
@@ -1578,6 +1586,8 @@ euler division when only int are involved, float div else
 <code class="code">internal_state_number agent_id site_id sigs</code>
 </div>
 </td></tr>
+<tr><td><a href="Fractions.html#VALinv">inv</a> [<a href="Fractions.html">Fractions</a>]</td>
+<td></td></tr>
 <tr><td><a href="Edges.html#VALis_agent">is_agent</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
 <code class="code">is_agent agent graph</code>
@@ -1600,6 +1610,8 @@ euler division when only int are involved, float div else
 <tr><td><a href="Composite_domain.Composite_domain.html#VALis_enabled">is_enabled</a> [<a href="Composite_domain.Composite_domain.html">Composite_domain.Composite_domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_domain_sig.Domain.html#VALis_enabled">is_enabled</a> [<a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a>]</td>
+<td></td></tr>
+<tr><td><a href="Fractions.html#VALis_equal">is_equal</a> [<a href="Fractions.html">Fractions</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALis_equal">is_equal</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -1651,6 +1663,8 @@ euler division when only int are involved, float div else
 <tr><td><a href="Communication.html#VALis_the_rule_applied_for_the_first_time">is_the_rule_applied_for_the_first_time</a> [<a href="Communication.html">Communication</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALis_time">is_time</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Fractions.html#VALis_zero">is_zero</a> [<a href="Fractions.html">Fractions</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALis_zero">is_zero</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -1707,6 +1721,8 @@ euler division when only int are involved, float div else
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALlift">lift</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALlift_embedding">lift_embedding</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
+<tr><td><a href="Affine_combinations.html#VALlinearise">linearise</a> [<a href="Affine_combinations.html">Affine_combinations</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALlink_destination">link_destination</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
@@ -1887,7 +1903,11 @@ Set union of 2 sorted list
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALmonadic_iter2_sparse">monadic_iter2_sparse</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
+<tr><td><a href="Affine_combinations.html#VALmul_scal">mul_scal</a> [<a href="Affine_combinations.html">Affine_combinations</a>]</td>
+<td></td></tr>
 <tr><td><a href="Alg_expr.html#VALmult">mult</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Fractions.html#VALmult">mult</a> [<a href="Fractions.html">Fractions</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALmult">mult</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -2074,6 +2094,8 @@ Set union of 2 sorted list
 <td></td></tr>
 <tr><td><a href="Alg_expr_extra.html#VALnecessarily_equal">necessarily_equal</a> [<a href="Alg_expr_extra.html">Alg_expr_extra</a>]</td>
 <td></td></tr>
+<tr><td><a href="Affine_combinations.html#VALnecessarily_equal">necessarily_equal</a> [<a href="Affine_combinations.html">Affine_combinations</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALneg">neg</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="Odes.Make.html#VALnetwork_from_compil">network_from_compil</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
@@ -2163,6 +2185,10 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Pattern.PreEnv.html#VALof_env">of_env</a> [<a href="Pattern.PreEnv.html">Pattern.PreEnv</a>]</td>
 <td></td></tr>
+<tr><td><a href="Affine_combinations.html#VALof_int">of_int</a> [<a href="Affine_combinations.html">Affine_combinations</a>]</td>
+<td></td></tr>
+<tr><td><a href="Fractions.html#VALof_int">of_int</a> [<a href="Fractions.html">Fractions</a>]</td>
+<td></td></tr>
 <tr><td><a href="Export_to_json.Type.html#VALof_json">of_json</a> [<a href="Export_to_json.Type.html">Export_to_json.Type</a>]</td>
 <td></td></tr>
 <tr><td><a href="Trace.Simulation_info.html#VALof_json">of_json</a> [<a href="Trace.Simulation_info.html">Trace.Simulation_info</a>]</td>
@@ -2218,6 +2244,8 @@ values of observables)
 <tr><td><a href="Utilities.html#VALon_the_fly_cut_init">on_the_fly_cut_init</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td></td></tr>
 <tr><td><a href="Utilities.html#VALon_the_fly_cut_step">on_the_fly_cut_step</a> [<a href="Utilities.html">Utilities</a>]</td>
+<td></td></tr>
+<tr><td><a href="Fractions.html#VALone">one</a> [<a href="Fractions.html">Fractions</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALone">one</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
@@ -3085,6 +3113,8 @@ compute the strong compression of a given trace,
     select which event to try to discard first.
 </div>
 </td></tr>
+<tr><td><a href="Fractions.html#VALsub">sub</a> [<a href="Fractions.html">Fractions</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALsub">sub</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALsub">sub</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
@@ -3114,6 +3144,10 @@ compute the strong compression of a given trace,
 <tr><td><a href="Instantiation.html#VALsubst_map_agent_in_concrete_test">subst_map_agent_in_concrete_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALsucc">succ</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="Affine_combinations.html#VALsum">sum</a> [<a href="Affine_combinations.html">Affine_combinations</a>]</td>
+<td></td></tr>
+<tr><td><a href="Rule_modes.html#VALsum_map">sum_map</a> [<a href="Rule_modes.html">Rule_modes</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>T</td></tr>
 <tr><td><a href="Counter.Efficiency.html#VALt_of_string">t_of_string</a> [<a href="Counter.Efficiency.html">Counter.Efficiency</a>]</td>
@@ -3320,6 +3354,8 @@ Output a JSON value of type <a href="Counter.Efficiency.html#TYPEt"><code class=
 </div>
 </td></tr>
 <tr><td align="left"><br>Z</td></tr>
+<tr><td><a href="Fractions.html#VALzero">zero</a> [<a href="Fractions.html">Fractions</a>]</td>
+<td></td></tr>
 <tr><td><a href="Nbr.html#VALzero">zero</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
 </table>
