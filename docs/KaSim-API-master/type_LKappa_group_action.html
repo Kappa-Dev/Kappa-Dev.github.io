@@ -97,7 +97,8 @@
 <body>
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_orbit_internal_state_permutation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?trace:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?fmt:<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site1:int&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -109,7 +110,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;counter:int&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;int&nbsp;array&nbsp;*&nbsp;bool&nbsp;array)&nbsp;*&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_orbit_binding_state_permutation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?trace:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?fmt:<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site1:int&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -121,7 +123,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;counter:int&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;int&nbsp;array&nbsp;*&nbsp;bool&nbsp;array)&nbsp;*&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;check_orbit_full_permutation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?trace:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?fmt:<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site1:int&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -133,21 +136,53 @@
 &nbsp;&nbsp;&nbsp;&nbsp;counter:int&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;int&nbsp;array&nbsp;*&nbsp;bool&nbsp;array)&nbsp;*&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_invariant_internal_states_permutation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?trace:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?fmt:<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site1:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site2:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_invariant_binding_states_permutation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?trace:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?fmt:<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site1:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site2:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_invariant_full_states_permutation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?parameters:<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?trace:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?fmt:<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site1:int&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;site2:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;bwd_bisim_info&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="constructor">Symmetries_sig</span>.site_partition&nbsp;array&nbsp;*&nbsp;bool&nbsp;<span class="constructor">Mods</span>.<span class="constructor">DynArray</span>.t&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;*&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="constructor">Pervasives</span>.ref<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;swap_binding_state_regular&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;swap_internal_state_regular&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;swap_full_regular&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;swap_binding_state_created&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;swap_internal_state_created&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;swap_full_created&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;equiv_class&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;<span class="constructor">Mods</span>.<span class="constructor">DynArray</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;partitions_internal_states:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;list&nbsp;list)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;partitions_binding_states:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;list&nbsp;list)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;partitions_full_states:(int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;list&nbsp;list)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;convention:<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_auto</span>.cache&nbsp;*&nbsp;bool&nbsp;<span class="constructor">Mods</span>.<span class="constructor">DynArray</span>.t&nbsp;*&nbsp;(<span class="constructor">LKappa</span>.rule&nbsp;*&nbsp;int)&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;saturate_domain_with_symmetric_patterns&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compileModeOn:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?origin:<span class="constructor">Operator</span>.rev_dep&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Contact_map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa_group_action</span>.bwd_bisim_info&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;((<span class="keywordsign">'</span>a&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc)&nbsp;array&nbsp;*&nbsp;<span class="keywordsign">'</span>b)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t<br>
 <span class="keyword">end</span></code></body></html>
