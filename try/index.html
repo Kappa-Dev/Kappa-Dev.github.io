@@ -26,15 +26,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/codemirror.min.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/addon/lint/lint.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/addon/dialog/dialog.css"></link>
-    <script src="class.js?2485"></script>
-    <script src="parser.js?2485"></script>
-    <script src="render.js?2485"></script>
+    <script src="class.js?5735"></script>
+    <script src="parser.js?5735"></script>
+    <script src="render.js?5735"></script>
     <script src="utils.js?RANDOM NUMBER"></script>
-    <script src="Kappa.js?2485"></script>
-    <script src="common.js?2485"></script>
-    <script src="flux.js?2485"></script>
-    <script src="plot.js?2485"></script>
-    <script src="JsSim.js?2485"></script>
+    <script src="tooltip.js?RANDOM NUMBER"></script>
+    <script src="Kappa.js?5735"></script>
+    <script src="common.js?5735"></script>
+    <script src="flux.js?5735"></script>
+    <script src="plot.js?5735"></script>
+    <script src="JsSim.js?5735"></script>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -219,31 +220,37 @@ rect { stroke-width: 2; }
                    border-radius : 4px;
                    opacity : 0.8; }
 
-									 .link {
-									   stroke: steelblue;
-									   stroke-opacity: 0.4;
-									   fill: none;
-									   pointer-events: none;
-									 }
+.link {
+stroke: steelblue;
+stroke-opacity: 0.4;
+fill: none;
+pointer-events: none;
+}
 
-									 .node { cursor: pointer; }
-									 #graph {
-									     transition:transform 200ms ease;
-									     transform:translateX(100%);
-									     width:33%;
-									     height:100%;
-									     background:#fafaea;
-									     position:fixed;
-									     top:0;
-									     right:0;
-									 }
+.node { cursor: pointer; }
 
-									 .monthText {
-									 			fill: #6B6B6B;
-									 			font-size: 13px;
-									 			font-family: 'Courgette', sans-serif;
-									 		}
-   </style>
+.tooltip {
+  position: absolute;
+  text-align: center;
+  border: 0px;
+  border-radius: 8px;
+}
+
+.stateButtonDiv {
+    position: absolute;
+    text-align: center;   
+}
+
+.stateButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}   </style>
    <body>
    <!-- nav -->
    <nav class="navbar navbar-default navbar-static-top">
