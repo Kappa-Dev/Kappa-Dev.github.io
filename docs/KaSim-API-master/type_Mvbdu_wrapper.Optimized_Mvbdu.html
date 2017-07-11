@@ -133,6 +133,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_init&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_handler&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;reset&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;handler<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;equal&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;equal_with_logs&nbsp;:&nbsp;(mvbdu,&nbsp;mvbdu,&nbsp;bool)&nbsp;binary<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_false&nbsp;:&nbsp;mvbdu&nbsp;constant<br>
