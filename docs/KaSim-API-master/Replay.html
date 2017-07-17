@@ -163,4 +163,17 @@ Utilities to make mixtures from traces<br>
     connected patterns.<br>
 </div>
 
+<pre><span id="VALis_step_triggerable"><span class="keyword">val</span> is_step_triggerable</span> : <code class="type"><a href="Replay.html#TYPEstate">state</a> -> <a href="Trace.html#TYPEstep">Trace.step</a> -> bool</code></pre><div class="info ">
+determines whether or not a step can be applied
+    from a given state.<br>
+</div>
+
+<pre><span id="VALis_step_triggerable_on_edges"><span class="keyword">val</span> is_step_triggerable_on_edges</span> : <code class="type"><a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Trace.html#TYPEstep">Trace.step</a> -> bool</code></pre><div class="info ">
+same function but takes a graph of type Edges.t directly.<br>
+</div>
+
+<pre><span id="VALtests_pass_on"><span class="keyword">val</span> tests_pass_on</span> : <code class="type"><a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Instantiation.html#TYPEconcrete">Instantiation.concrete</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list list -> bool</code></pre><div class="info ">
+exported for convenience.<br>
+</div>
+
 <pre><span id="VALcc_of_state"><span class="keyword">val</span> cc_of_state</span> : <code class="type"><a href="Replay.html#TYPEstate">state</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * ((int * int) list * <a href="Pattern.html#TYPEcc">Pattern.cc</a> * <a href="Pattern.html#TYPEid">Pattern.id</a>) list</code></pre></body></html>

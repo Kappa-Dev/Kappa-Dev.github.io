@@ -107,6 +107,10 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_step&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Replay</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Replay</span>.state&nbsp;*&nbsp;<span class="constructor">Replay</span>.summary<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_step_triggerable&nbsp;:&nbsp;<span class="constructor">Replay</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_step_triggerable_on_edges&nbsp;:&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;tests_pass_on&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;cc_of_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Replay</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
