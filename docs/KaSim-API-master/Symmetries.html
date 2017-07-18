@@ -112,7 +112,7 @@
    * Jérôme Feret &amp; Ly Kim Quyen, projet Antique, INRIA Paris-Rocquencourt
    *
    * Creation: 2016, the 5th of December
-   * Last modification: Time-stamp: &lt;May 13 2017&gt;
+   * Last modification: Time-stamp: &lt;Jul 18 2017&gt;
    *
    * Abstract domain to record relations between pair of sites in connected agents.
    *
@@ -178,7 +178,7 @@
 
 
 <pre><span id="VALrefine_partitioned_contact_map_in_lkappa_representation"><span class="keyword">val</span> refine_partitioned_contact_map_in_lkappa_representation</span> : <code class="type">'a -><br>       ('a -> int -> 'b -> 'b -> 'a * bool) -><br>       ('a -> int -> 'b -> 'b -> 'a * bool) -><br>       ('a -> int -> 'b -> 'b -> 'a * bool) -><br>       'b <a href="Symmetries_sig.html#TYPEsite_partition">Symmetries_sig.site_partition</a> array -><br>       'a * 'b <a href="Symmetries_sig.html#TYPEsite_partition">Symmetries_sig.site_partition</a> array</code></pre>
-<pre><span id="VALdetect_symmetries"><span class="keyword">val</span> detect_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       LKappa_auto.cache -><br>       Remanent_parameters_sig.rate_convention -><br>       <a href="Pattern.html#TYPEcc">Pattern.cc</a> list -><br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> list -><br>       (string list * (string * string) list) Mods.StringMap.t Mods.StringMap.t -><br>       LKappa_auto.cache * <a href="Symmetries.html#TYPEsymmetries">symmetries</a></code></pre>
+<pre><span id="VALdetect_symmetries"><span class="keyword">val</span> detect_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       LKappa_auto.cache -><br>       Remanent_parameters_sig.rate_convention -><br>       <a href="Pattern.html#TYPEcc">Pattern.cc</a> list -><br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> list -><br>       Public_data.contact_map -> LKappa_auto.cache * <a href="Symmetries.html#TYPEsymmetries">symmetries</a></code></pre>
 <pre><span id="VALprint_symmetries"><span class="keyword">val</span> print_symmetries</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       <a href="Model.html#TYPEt">Model.t</a> -> <a href="Symmetries.html#TYPEsymmetries">symmetries</a> -> unit</code></pre>
 <pre><span id="TYPEcache"><span class="keyword">type</span> <code class="type"></code>cache</span> </pre>
 
