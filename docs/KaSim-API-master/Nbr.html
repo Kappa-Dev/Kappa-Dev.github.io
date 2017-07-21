@@ -188,9 +188,28 @@ or <code class="code">f</code> returns <code class="code"><span class="construct
 <b>Raises</b> <code>Failure</code> "float_of_string"<br>
 </div>
 
-<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Nbr.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALto_yojson"><span class="keyword">val</span> to_yojson</span> : <code class="type"><a href="Nbr.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALof_yojson"><span class="keyword">val</span> of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Nbr.html#TYPEt">t</a></code></pre><div class="info ">
 <b>Raises</b> <code>Yojson.Basic.Util.Type_error</code> if incorrect<br>
+</div>
+
+<pre><span id="VALwrite_t"><span class="keyword">val</span> write_t</span> : <code class="type">Bi_outbuf.t -> <a href="Nbr.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+Output a JSON value of type <a href="Nbr.html#TYPEt"><code class="code"><span class="constructor">Nbr</span>.t</code></a>.<br>
+</div>
+
+<pre><span id="VALstring_of_t"><span class="keyword">val</span> string_of_t</span> : <code class="type">?len:int -> <a href="Nbr.html#TYPEt">t</a> -> string</code></pre><div class="info ">
+Serialize a value of type <a href="Nbr.html#TYPEt"><code class="code"><span class="constructor">Nbr</span>.t</code></a> into a JSON string.<br>
+</div>
+<div class="param_info"><code class="code">len</code> : specifies the initial length
+               of the buffer used internally.
+               Default: 1024.</div>
+
+<pre><span id="VALread_t"><span class="keyword">val</span> read_t</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Nbr.html#TYPEt">t</a></code></pre><div class="info ">
+Input JSON data of type <a href="Nbr.html#TYPEt"><code class="code"><span class="constructor">Nbr</span>.t</code></a>.<br>
+</div>
+
+<pre><span id="VALt_of_string"><span class="keyword">val</span> t_of_string</span> : <code class="type">string -> <a href="Nbr.html#TYPEt">t</a></code></pre><div class="info ">
+Deserialize JSON data of type <a href="Nbr.html#TYPEt"><code class="code"><span class="constructor">Nbr</span>.t</code></a>.<br>
 </div>
 
 <pre><span id="VALof_un_alg_op"><span class="keyword">val</span> of_un_alg_op</span> : <code class="type"><a href="Operator.html#TYPEun_alg_op">Operator.un_alg_op</a> -> <a href="Nbr.html#TYPEt">t</a> -> <a href="Nbr.html#TYPEt">t</a></code></pre>
