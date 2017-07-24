@@ -141,6 +141,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lift_embedding&nbsp;:&nbsp;embedding&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;find_embeddings&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;find_all_embeddings&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(connected_component&nbsp;*&nbsp;embedding)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;find_embeddings_unary_binary&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest&nbsp;list&nbsp;*&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;disjoint_union&nbsp;:<br>

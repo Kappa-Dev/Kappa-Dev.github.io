@@ -120,8 +120,12 @@ Injection from a pattern in the mixture<br>
 <pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="Matching.html#TYPEt">t</a></code></pre>
 <pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">Format.formatter -> <a href="Matching.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Agent.html#TYPEt">Agent.t</a> * int -> <a href="Matching.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALreconstruct_renaming"><span class="keyword">val</span> reconstruct_renaming</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -> <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Pattern.html#TYPEid">Pattern.id</a> -> int -> Renaming.t</code></pre><div class="info ">
+<code class="code">reconstruct_renaming domain graph cc root</code><br>
+</div>
+
 <pre><span id="VALreconstruct"><span class="keyword">val</span> reconstruct</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Matching.html#TYPEt">t</a> -> int -> <a href="Pattern.html#TYPEid">Pattern.id</a> -> int -> <a href="Matching.html#TYPEt">t</a> option</code></pre><div class="info ">
-<code class="code">reconstruct graph matching_of_previous_cc cc_id_in_rule cc root </code><br>
+<code class="code">reconstruct domain graph matching_of_previous_cc cc_id_in_rule cc root</code><br>
 </div>
 
 <pre><span id="VALadd_cc"><span class="keyword">val</span> add_cc</span> : <code class="type"><a href="Matching.html#TYPEt">t</a> -> int -> Renaming.t -> <a href="Matching.html#TYPEt">t</a> option</code></pre>
