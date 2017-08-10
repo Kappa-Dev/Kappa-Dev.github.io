@@ -115,8 +115,10 @@
 &nbsp;&nbsp;<span class="keyword">and</span>&nbsp;(<span class="keywordsign">'</span>mix,&nbsp;<span class="keywordsign">'</span>id)&nbsp;bool&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">TRUE</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FALSE</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">BOOL_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.bool_op&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">BIN_BOOL_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.bin_bool_op&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mix,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mix,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UN_BOOL_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.un_bool_op&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mix,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">COMPARE_OP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Operator</span>.compare_op&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>mix,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>

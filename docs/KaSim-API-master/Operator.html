@@ -280,19 +280,30 @@ Compiled algebraic expression<br>
 
 
 
-<pre><code><span id="TYPEbool_op"><span class="keyword">type</span> <code class="type"></code>bool_op</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEbin_bool_op"><span class="keyword">type</span> <code class="type"></code>bin_bool_op</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTbool_op.AND"><span class="constructor">AND</span></span></code></td>
+<code><span id="TYPEELTbin_bool_op.AND"><span class="constructor">AND</span></span></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTbool_op.OR"><span class="constructor">OR</span></span></code></td>
+<code><span id="TYPEELTbin_bool_op.OR"><span class="constructor">OR</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEun_bool_op"><span class="keyword">type</span> <code class="type"></code>un_bool_op</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTun_bool_op.NOT"><span class="constructor">NOT</span></span></code></td>
 
 </tr></table>
 
@@ -335,7 +346,8 @@ Compiled algebraic expression<br>
 <pre><span id="VALprint_bin_alg_op"><span class="keyword">val</span> print_bin_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> unit</code></pre>
 <pre><span id="VALprint_un_alg_op"><span class="keyword">val</span> print_un_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEun_alg_op">un_alg_op</a> -> unit</code></pre>
 <pre><span id="VALprint_state_alg_op"><span class="keyword">val</span> print_state_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> unit</code></pre>
-<pre><span id="VALprint_bool_op"><span class="keyword">val</span> print_bool_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbool_op">bool_op</a> -> unit</code></pre>
+<pre><span id="VALprint_bin_bool_op"><span class="keyword">val</span> print_bin_bool_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbin_bool_op">bin_bool_op</a> -> unit</code></pre>
+<pre><span id="VALprint_un_bool_op"><span class="keyword">val</span> print_un_bool_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEun_bool_op">un_bool_op</a> -> unit</code></pre>
 <pre><span id="VALprint_compare_op"><span class="keyword">val</span> print_compare_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEcompare_op">compare_op</a> -> unit</code></pre><br>
 <h6 id="6_Json">Json </h6><br>
 
@@ -345,8 +357,10 @@ Compiled algebraic expression<br>
 <pre><span id="VALun_alg_op_of_json"><span class="keyword">val</span> un_alg_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEun_alg_op">un_alg_op</a></code></pre>
 <pre><span id="VALstate_alg_op_to_json"><span class="keyword">val</span> state_alg_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALstate_alg_op_of_json"><span class="keyword">val</span> state_alg_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a></code></pre>
-<pre><span id="VALbool_op_to_json"><span class="keyword">val</span> bool_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEbool_op">bool_op</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALbool_op_of_json"><span class="keyword">val</span> bool_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEbool_op">bool_op</a></code></pre>
+<pre><span id="VALbin_bool_op_to_json"><span class="keyword">val</span> bin_bool_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEbin_bool_op">bin_bool_op</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALbin_bool_op_of_json"><span class="keyword">val</span> bin_bool_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEbin_bool_op">bin_bool_op</a></code></pre>
+<pre><span id="VALun_bool_op_to_json"><span class="keyword">val</span> un_bool_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEun_bool_op">un_bool_op</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALun_bool_op_of_json"><span class="keyword">val</span> un_bool_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEun_bool_op">un_bool_op</a></code></pre>
 <pre><span id="VALcompare_op_to_json"><span class="keyword">val</span> compare_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEcompare_op">compare_op</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALcompare_op_of_json"><span class="keyword">val</span> compare_op_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Operator.html#TYPEcompare_op">compare_op</a></code></pre><br>
 <h6 id="6_Dependenciesmanagement">Dependencies management</h6><br>
