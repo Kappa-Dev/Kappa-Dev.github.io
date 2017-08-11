@@ -104,6 +104,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Quark_type</span>.<span class="constructor">Labels</span>.label_set_couple&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">PairRule_setmap</span>.<span class="constructor">Map</span>.t&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Quark_type</span>.<span class="constructor">Labels</span>.label_set_couple&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">PairRule_setmap</span>.<span class="constructor">Map</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;internal_constraints_list<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;bidirectional_influence_map<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_constraints_list&nbsp;:&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.internal_constraints_list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;handler&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.kappa_handler<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;c_compilation&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.compil<br>
@@ -136,6 +137,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Public_data</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.internal_influence_map<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_bidirectional_influence_map&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Public_data</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.bidirectional_influence_map<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_reachability_analysis&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.reachability_analysis<br>
