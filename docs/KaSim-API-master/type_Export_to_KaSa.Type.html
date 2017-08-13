@@ -137,11 +137,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Public_data</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.internal_influence_map<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_bidirectional_influence_map&nbsp;:<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_local_influence_map&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Public_data</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?fwd:int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?bwd:int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;total:int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_rule_id&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.bidirectional_influence_map<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.internal_influence_map<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_reachability_analysis&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;*&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.reachability_analysis<br>
@@ -168,6 +171,14 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_influence_map&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Public_data</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_local_influence_map&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?accuracy_level:<span class="constructor">Public_data</span>.accuracy_level&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?fwd:int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?bwd:int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;total:int&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_rule_id&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Export_to_KaSa</span>.<span class="constructor">Type</span>.state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_constraints_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?logger:<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
