@@ -26,18 +26,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/codemirror.min.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/addon/lint/lint.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/addon/dialog/dialog.css"></link>
-    <script src="class.js?26095"></script>
-    <script src="parser.js?26095"></script>
-    <script src="render-contactmap.js?26095"></script>
-    <script src="render-snapshot.js?26095"></script>
+    <script src="class.js?31655"></script>
+    <script src="parser.js?31655"></script>
+    <script src="render-contactmap.js?31655"></script>
+    <script src="render-snapshot.js?31655"></script>
     <script src="utils.js?RANDOM NUMBER"></script>
     <script src="tooltip-contactmap.js?RANDOM NUMBER"></script>
     <script src="tooltip-snapshot.js?RANDOM NUMBER"></script>
-    <script src="Kappa.js?26095"></script>
-    <script src="common.js?26095"></script>
-    <script src="flux.js?26095"></script>
-    <script src="plot.js?26095"></script>
-    <script src="JsSim.js?26095"></script>
+    <script src="Kappa.js?31655"></script>
+    <script src="common.js?31655"></script>
+    <script src="flux.js?31655"></script>
+    <script src="plot.js?31655"></script>
+    <script src="JsSim.js?31655"></script>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -253,7 +253,7 @@ rect { stroke-width: 2; }
 
 .tooltip {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   white-space: pre;
   text-align: right;
@@ -313,16 +313,6 @@ rect { stroke-width: 2; }
     overflow: hidden;
 }
 
-.legend-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: right;
-    background-color:  rgba(255, 255, 255, 0.8);
-    display: inline-block;
-    pointer-events: none;	
-}
-
 #resetButton {
     margin-left: 30px;
 }
@@ -364,7 +354,31 @@ form {
 #snap-form {
     margin-bottom: 0.5em;
 }
-   </style>
+
+.render-container {
+    display: flex;
+    flex-direction: row;
+}
+.snapshot-container {
+    flex: 4
+}
+
+.snapshot-legend {
+    flex: 1
+}
+
+.treeSpecies {
+    fill-opacity: 1;
+}
+
+.treeSpecies-hidden {
+    fill-opacity: 0;
+}
+
+.snapshot-links line {
+    stroke:white;
+    stroke-opacity: 0.6;
+}   </style>
    <body class="flex-content">
    <!-- nav -->
    <nav class="navbar navbar-default navbar-static-top">
