@@ -114,8 +114,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;port_lnk&nbsp;:&nbsp;(string&nbsp;<span class="constructor">Locality</span>.annot,&nbsp;unit)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="constructor">Locality</span>.annot&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;port_lnk_mod&nbsp;:&nbsp;int&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;counter_test&nbsp;=&nbsp;<span class="constructor">CEQ</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CGTE</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CVAR</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;counter&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;count_nme&nbsp;:&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;count_test&nbsp;:&nbsp;<span class="constructor">Ast</span>.counter_test&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;count_delta&nbsp;:&nbsp;int&nbsp;<span class="constructor">Locality</span>.annot;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;site&nbsp;=&nbsp;<span class="constructor">Port</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ast</span>.port&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Counter</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ast</span>.counter<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent_mod&nbsp;=&nbsp;<span class="constructor">Erase</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Create</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent&nbsp;=&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.port&nbsp;list&nbsp;*&nbsp;<span class="constructor">Ast</span>.agent_mod&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent&nbsp;=&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.site&nbsp;list&nbsp;*&nbsp;<span class="constructor">Ast</span>.agent_mod&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mixture&nbsp;=&nbsp;<span class="constructor">Ast</span>.agent&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;edit_rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;mix&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
@@ -217,7 +224,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;parsing_compil&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule,&nbsp;<span class="constructor">Ast</span>.edit_rule)&nbsp;<span class="constructor">Ast</span>.compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_compil&nbsp;:&nbsp;<span class="constructor">Ast</span>.parsing_compil<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;no_more_site_on_right&nbsp;:&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.port&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.port&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;no_more_site_on_right&nbsp;:&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.site&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.site&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;split_mixture&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;*&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;*&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;*&nbsp;<span class="constructor">Ast</span>.mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;implicit_signature&nbsp;:&nbsp;<span class="constructor">Ast</span>.parsing_compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.parsing_compil<br>
@@ -242,4 +249,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Ast</span>.link<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compil_of_json&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.parsing_compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compil_to_json&nbsp;:&nbsp;<span class="constructor">Ast</span>.parsing_compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compile_counters&nbsp;:&nbsp;<span class="constructor">Ast</span>.parsing_compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.parsing_compil&nbsp;*&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_counter&nbsp;:&nbsp;<span class="constructor">Ast</span>.counter<br>
 <span class="keyword">end</span></code></body></html>

@@ -223,6 +223,75 @@ port * agent_type<br>
 
 
 
+<pre><code><span id="TYPEcounter_test"><span class="keyword">type</span> <code class="type"></code>counter_test</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter_test.CEQ"><span class="constructor">CEQ</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter_test.CGTE"><span class="constructor">CGTE</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter_test.CVAR"><span class="constructor">CVAR</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEcounter"><span class="keyword">type</span> <code class="type"></code>counter</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter.count_nme">count_nme</span>&nbsp;: <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter.count_test">count_test</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEcounter_test">counter_test</a> <a href="Locality.html#TYPEannot">Locality.annot</a> option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter.count_delta">count_delta</span>&nbsp;: <code class="type">int <a href="Locality.html#TYPEannot">Locality.annot</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEsite"><span class="keyword">type</span> <code class="type"></code>site</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite.Port"><span class="constructor">Port</span></span> <span class="keyword">of</span> <code class="type"><a href="Ast.html#TYPEport">port</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite.Counter"><span class="constructor">Counter</span></span> <span class="keyword">of</span> <code class="type"><a href="Ast.html#TYPEcounter">counter</a></code></code></td>
+
+</tr></table>
+
+
+
 <pre><code><span id="TYPEagent_mod"><span class="keyword">type</span> <code class="type"></code>agent_mod</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -241,7 +310,7 @@ port * agent_type<br>
 
 
 
-<pre><span id="TYPEagent"><span class="keyword">type</span> <code class="type"></code>agent</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> * <a href="Ast.html#TYPEport">port</a> list * <a href="Ast.html#TYPEagent_mod">agent_mod</a> option</code> </pre>
+<pre><span id="TYPEagent"><span class="keyword">type</span> <code class="type"></code>agent</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> * <a href="Ast.html#TYPEsite">site</a> list * <a href="Ast.html#TYPEagent_mod">agent_mod</a> option</code> </pre>
 
 
 <pre><span id="TYPEmixture"><span class="keyword">type</span> <code class="type"></code>mixture</span> = <code class="type"><a href="Ast.html#TYPEagent">agent</a> list</code> </pre>
@@ -654,7 +723,7 @@ rules with explicit modifications<br>
 
 
 <pre><span id="VALempty_compil"><span class="keyword">val</span> empty_compil</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a></code></pre>
-<pre><span id="VALno_more_site_on_right"><span class="keyword">val</span> no_more_site_on_right</span> : <code class="type">bool -> <a href="Ast.html#TYPEport">port</a> list -> <a href="Ast.html#TYPEport">port</a> list -> bool</code></pre>
+<pre><span id="VALno_more_site_on_right"><span class="keyword">val</span> no_more_site_on_right</span> : <code class="type">bool -> <a href="Ast.html#TYPEsite">site</a> list -> <a href="Ast.html#TYPEsite">site</a> list -> bool</code></pre>
 <pre><span id="VALsplit_mixture"><span class="keyword">val</span> split_mixture</span> : <code class="type"><a href="Ast.html#TYPEmixture">mixture</a> -> <a href="Ast.html#TYPEmixture">mixture</a> * <a href="Ast.html#TYPEmixture">mixture</a> * <a href="Ast.html#TYPEmixture">mixture</a> * <a href="Ast.html#TYPEmixture">mixture</a></code></pre><div class="info ">
 <b>Returns</b> <code class="code">lhs,rhs,add,del</code><br>
 </div>
@@ -676,4 +745,6 @@ Fragile: the list MUST NOT be a singleton<br>
 
 <pre><span id="VALlink_of_json"><span class="keyword">val</span> link_of_json</span> : <code class="type">('a -> Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json list -> 'b) -> Yojson.Basic.json -> ('a, 'b) <a href="Ast.html#TYPElink">link</a></code></pre>
 <pre><span id="VALcompil_of_json"><span class="keyword">val</span> compil_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Ast.html#TYPEparsing_compil">parsing_compil</a></code></pre>
-<pre><span id="VALcompil_to_json"><span class="keyword">val</span> compil_to_json</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a> -> Yojson.Basic.json</code></pre></body></html>
+<pre><span id="VALcompil_to_json"><span class="keyword">val</span> compil_to_json</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALcompile_counters"><span class="keyword">val</span> compile_counters</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a> -> <a href="Ast.html#TYPEparsing_compil">parsing_compil</a> * bool</code></pre>
+<pre><span id="VALempty_counter"><span class="keyword">val</span> empty_counter</span> : <code class="type"><a href="Ast.html#TYPEcounter">counter</a></code></pre></body></html>
