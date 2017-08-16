@@ -183,6 +183,20 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.chemical_species&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.embedding_forest&nbsp;list&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.mixture<br>
+&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="keyword">type</span>&nbsp;<span class="constructor">ObsMap</span>&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
+&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">ObsMap</span>&nbsp;:&nbsp;<span class="constructor">ObsMap</span><br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;disjoint_union&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.connected_component&nbsp;*<br>
