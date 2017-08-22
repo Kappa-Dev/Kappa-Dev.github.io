@@ -68,38 +68,90 @@
 	  Krivine teaching page</a> provides matierial to start with
 	  KaSim.</p>
       <h2 class="page-header">Use it</h2>
-      <h3>Compiling the simulator & analyzer</h3>
-      <p>Maybe the most valuable place to see how to compile KaSim is
-	our <a href="https://raw.githubusercontent.com/Kappa-Dev/KaSim/master/.travis.yml">continious
-	  integration script</a>.</p>
-      <p>Installing the packages listed in the <i>apt</i> section allows you
-	to go from a fresh ubuntu installation to somewhere where
-	KaSim compiles. The build section shows that <i>make</i> should
-	be enough to get the binaries when the dependencies are
-	there.</p>
+      <h3>Installation</h3>
+      To obtain KaSim/KaSa you can either use pre-compiled binaries or compile the sources for your architecture by yourself.
+
+      <h4>Use the precompiled binaries</h4>
+      <p>The easiest way to use KaSim is to use pre-compiled versions available in the release section on <a href="https://github.com/Kappa-Dev/KaSim/releases"> the github repository</a>. Download the version that corresponds to your operating system (Windows, Linux or Mac OSX) and rename the downloaded file into KaSim (or KaSa). Note that on Mac OSX or Linux, it might be necessary to give executable permissions to KaSim (and KaSa). This can be done using the shell commands:
+<code>chmod u+x KaSim </code> (and <code>chmod u+x KaSa</code>). </p>
+
+      <p>To test whether your program does work, simply type <code>./KaSim \dd version</code> on a terminal, from the directory that contains the binaries. If the version is displayed it means that the binaries are indeed compatible with your OS. Otherwise you may need to compile KaSim from the sources (see below). </p>
+
+      <h4>Compile from the sources</h4>
+      <div class="row">
+	<ul>
+	  <li><i>Obtaining the sources.</i></li>
+	  <p style="text-align:justify;">Download the source code from <a href="https://github.com/Kappa-Dev/KaSim">https://github.com/Kappa-Dev/KaSim</a>. Make sure you have a recent OCaml compiler (KaSim/KaSa~currently requires Ocaml 4.02.3 to compile) as well as <code>ocamlbuild</code>, <code>findlib</code> and the <code>yojson</code> library installed.
+
+	    <br>You can check if it is the case from a terminal window by typing <code>ocamlfind ocamlopt -v</code>. If it fails or prints an outdated version number, then you need to install <a href="http://caml.inria.fr/download.en.html">OCaml Native compiler</a> and/or <a href="http://projects.camlcity.org/projects/findlib.html"> findlib </a>.
+
+	    <br>Then, type <code>ocamlfind query yojson</code>. The answer should be a path. If it is not, install yojson using a package manager.
+
+	    <br>OCamlbuild is hosted on <a href="https://github.com/ocaml/ocamlbuild">https://github.com/ocaml/ocamlbuild</a>.
+	    <li><i>Compiling.</i></li>
+
+	  <p style="text-align:justify;">Once OCaml is safely installed, decompress the KaSim archive and compile it following these few steps:
+<pre><code>tar xzvf kasim.tar.gz -d Kappa
+cd Kappa
+make bin/KaSim
+make bin/KaSa</pre></code>
+At the end of these steps, there should be an executable file named KaSim in the <code>bin</code> directory of the <code>Kappa</code> directory. In order to check the compilation went fine, simply type <code> bin/KaSim -\,-version</code>.
+
+<br>If the tool <code>ocamlbuild</code> is not in your path, you may set the variable <code>OCAMLBINPATH</code> to point to the location of the compiler by doing <code>make OCAMLBINPATH='the\_correct\_dir' bin/KaSim</code>.</p>
+
+	  <li><i>The continuous integration script.</li></i>
+	  <p style="text-align:justify;">Maybe the most valuable place to see how to compile KaSim is our <a href="https://raw.githubusercontent.com/Kappa-Dev/KaSim/master/.travis.yml">continuous integration script</a>.
+
+	    <br>Installing the packages listed in the <i>apt</i> section allows you to go from a fresh ubuntu installation to somewhere where KaSim compiles. The build section shows that <i>make</i> should be enough to get the binaries when the dependencies are there. </p>
+
+	  <li><i>Compiling the graphical interface of KaSa and KaDE.</i></li>
+	  <p style="text-align:justify;">
+	    The graphical interface of KaSa and KaDE requires <a href="http://www.tcl.tk/}\">tk-dev</a> and <a href="https://forge.ocamlcore.org/projects/labltk/">labltk</a>. By default, the graphical interface is not compiled. The compilation of this interface can be toggled on by using the following command: <code>make USE\_TK=1 bin/KaSa</code> (or <code>make USE\_TK=1 bin/KaDE</code>).
+
+	    <br>Common compilation errors are the following:
+	    <ol>
+	      <li>The following error:
+<pre><code>/usr/bin/ld: cannot find -ltk
+collect2: error: ld returned 1 exit status
+File "caml_startup", line 1:
+Error: Error during linking
+Command exited with code 2.</pre></code>
+occurs when the module <a href="http://www.tcl.tk/">tk-dev</a> is not installed.</li>
+	      <li> The following error:
+<pre><code>File "_none_", line 1:
+Error: Cannot find file jpflib.cmxa
+Command exited with code 2.</pre></code>
+occurs when OCaml cannot link the labltk library.
+Please document the variable <code>LABLTKLIBREP</code> in the Makefile.
+	      </li>
+	    </ol>
+	  </p>
+	</ul>
+      </div>
+
       <h3 id="ruleKraft">Building a kappa model</h3>
       <p>Under Linux, we recommend using the <a href="https://www.gnu.org/software/emacs/">GNU
 	Emacs</a> text editor because it has
 	a <a href="https://github.com/sstucki/kappa-emacs">Kappa
 	mode</a> that you can install.</p>
-	
+
 	<p>Under Windows, there is a simple <a href="resources/Kappa_NotepadPP_Lang.xml">syntax highlighter</a>
 	for the <a href="https://notepad-plus-plus.org/">Notepad++</a> text editor. It looks like this:</p>
 	<img alt="Sample of Notepad++ highlighter." src="img/Kappa_NotepadPP_Sample.png"/>
 	<p>To install, just download the highlighter .xml file, then go to Notepad++'s Language Menu ->
 	DefineYourLanguage -> Import, and select the file you just downloaded.</p>
-	
+
 	<p>In any case, you will
 	need <a href="http://www.graphviz.org/">Graphviz</a> or any
 	graph vizualizator that understands the <i>dot</i> format to
 	draw generated graphs.</p>
-	
+
 	<h3>Pretty printing Kappa code in LaTeX</h3>
 	<p>For pretty LaTeX printing, there is a language definition for the
 	<a href="http://ctan.org/pkg/listings">listings</a> package available
 	<a href="resources/Kappa_LaTeX_Lang.tex">here</a>, with a demo texfile
 	<a href="resources/Kappa_LaTeX_sample.tex">here</a>.</p>
-	
+
       <h3>Joining the discussion</h3>
       <p>A google group
 	of <a href="https://groups.google.com/forum/#!forum/kappa-users">Kappa
