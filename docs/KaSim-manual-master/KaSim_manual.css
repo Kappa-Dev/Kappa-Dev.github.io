@@ -133,7 +133,6 @@
 .ecss-0900{ font-family: sans-serif;}
 .ecss-0900{ font-family: sans-serif;}
 .ecss-0900{ font-family: sans-serif;}
-.cmtt-10x-x-109{font-family: monospace;}
 .ecti-0900{font-size:81%; font-style: italic;}
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
@@ -313,24 +312,24 @@ span.Xy span.Y{ position:relative; top:0.35ex;left:-0.25em;}
 #textcolor17{color:#0000FF}
 #textcolor18{color:#0000FF}
 #textcolor19{color:#0000FF}
-tr#TBL-5-1- td{border-top:0.12193em solid} 
-tr#TBL-5-1- td{border-bottom:0.07622em solid}
-tr#TBL-5-7- td{border-bottom:0.12193em solid}
 #textcolor20{color:#0000FF}
 #textcolor21{color:#0000FF}
 #textcolor22{color:#0000FF}
 #textcolor23{color:#0000FF}
+tr#TBL-5-1- td{border-top:0.12193em solid} 
 #textcolor24{color:#0000FF}
+tr#TBL-5-1- td{border-bottom:0.07622em solid}
+tr#TBL-5-12- td{border-bottom:0.12193em solid} 
 #textcolor25{color:#0000FF}
+tr#TBL-5-13- td{border-bottom:0.07622em solid}
+tr#TBL-5-20- td{border-bottom:0.12193em solid}
 #textcolor26{color:#0000FF}
 #textcolor27{color:#0000FF}
-tr#TBL-8-1- td{border-top:0.12193em solid} 
+tr#TBL-7-1- td{border-top:0.12193em solid} 
+tr#TBL-7-1- td{border-bottom:0.07622em solid}
+tr#TBL-7-7- td{border-bottom:0.12193em solid}
 #textcolor28{color:#0000FF}
-tr#TBL-8-1- td{border-bottom:0.07622em solid}
-tr#TBL-8-16- td{border-bottom:0.12193em solid} 
 #textcolor29{color:#0000FF}
-tr#TBL-8-17- td{border-bottom:0.07622em solid}
-tr#TBL-8-24- td{border-bottom:0.12193em solid}
 #textcolor30{color:#0000FF}
 #textcolor31{color:#0000FF}
 #textcolor32{color:#0000FF}
@@ -368,15 +367,5 @@ tr#TBL-8-24- td{border-bottom:0.12193em solid}
 #textcolor64{color:#0000FF}
 #textcolor65{color:#0000FF}
 #textcolor66{color:#0000FF}
-#textcolor67{color:#0000FF}
-#textcolor68{color:#0000FF}
-#textcolor69{color:#0000FF}
-#textcolor70{color:#0000FF}
-#textcolor71{color:#0000FF}
-#textcolor72{color:#0000FF}
-#textcolor73{color:#0000FF}
-#textcolor74{color:#0000FF}
-#textcolor75{color:#0000FF}
-#textcolor76{color:#0000FF}
 /* end css.sty */
 
