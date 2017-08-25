@@ -418,54 +418,54 @@ port * agent_type<br>
 
 
 <pre><span id="VALflip_label"><span class="keyword">val</span> flip_label</span> : <code class="type">string -> string</code></pre>
-<pre><code><span id="TYPEmodif_expr"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> modif_expr</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEmodif_expr"><span class="keyword">type</span> <code class="type">('pattern, 'mixture, 'id)</code> modif_expr</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.INTRO"><span class="constructor">INTRO</span></span> <span class="keyword">of</span> <code class="type">(('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * 'mixture <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
+<code><span id="TYPEELTmodif_expr.INTRO"><span class="constructor">INTRO</span></span> <span class="keyword">of</span> <code class="type">(('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * 'mixture <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.DELETE"><span class="constructor">DELETE</span></span> <span class="keyword">of</span> <code class="type">(('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * 'mixture <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
+<code><span id="TYPEELTmodif_expr.DELETE"><span class="constructor">DELETE</span></span> <span class="keyword">of</span> <code class="type">(('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * 'pattern <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.UPDATE"><span class="constructor">UPDATE</span></span> <span class="keyword">of</span> <code class="type">('id <a href="Locality.html#TYPEannot">Locality.annot</a> * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
+<code><span id="TYPEELTmodif_expr.UPDATE"><span class="constructor">UPDATE</span></span> <span class="keyword">of</span> <code class="type">('id <a href="Locality.html#TYPEannot">Locality.annot</a> * ('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.UPDATE_TOK"><span class="constructor">UPDATE_TOK</span></span> <span class="keyword">of</span> <code class="type">('id <a href="Locality.html#TYPEannot">Locality.annot</a> * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
+<code><span id="TYPEELTmodif_expr.UPDATE_TOK"><span class="constructor">UPDATE_TOK</span></span> <span class="keyword">of</span> <code class="type">('id <a href="Locality.html#TYPEannot">Locality.annot</a> * ('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list<br>        * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.PRINT"><span class="constructor">PRINT</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list<br>        * ('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
@@ -486,40 +486,40 @@ port * agent_type<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.CFLOWMIX"><span class="constructor">CFLOWMIX</span></span> <span class="keyword">of</span> <code class="type">(bool * 'mixture <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
+<code><span id="TYPEELTmodif_expr.CFLOWMIX"><span class="constructor">CFLOWMIX</span></span> <span class="keyword">of</span> <code class="type">(bool * 'pattern <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type"><a href="Primitives.html#TYPEflux_kind">Primitives.flux_kind</a> * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.FLUX"><span class="constructor">FLUX</span></span> <span class="keyword">of</span> <code class="type"><a href="Primitives.html#TYPEflux_kind">Primitives.flux_kind</a> * ('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
+<code><span id="TYPEELTmodif_expr.FLUXOFF"><span class="constructor">FLUXOFF</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list</code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.SPECIES_OF"><span class="constructor">SPECIES_OF</span></span> <span class="keyword">of</span> <code class="type">(bool * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list *<br>      'mixture <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
+<code><span id="TYPEELTmodif_expr.SPECIES_OF"><span class="constructor">SPECIES_OF</span></span> <span class="keyword">of</span> <code class="type">(bool * ('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">Primitives.print_expr</a> list *<br>      'pattern <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
 
 </tr></table>
 
 
 
-<pre><span id="TYPEperturbation"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> perturbation</span> = <code class="type">(<a href="Nbr.html#TYPEt">Nbr.t</a> option * ('mixture, 'id) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> option *<br>        ('mixture, 'id) <a href="Ast.html#TYPEmodif_expr">modif_expr</a> list *<br>        ('mixture, 'id) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> option)<br>       <a href="Locality.html#TYPEannot">Locality.annot</a></code> </pre>
+<pre><span id="TYPEperturbation"><span class="keyword">type</span> <code class="type">('pattern, 'mixture, 'id)</code> perturbation</span> = <code class="type">(<a href="Nbr.html#TYPEt">Nbr.t</a> option * ('pattern, 'id) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> option *<br>        ('pattern, 'mixture, 'id) <a href="Ast.html#TYPEmodif_expr">modif_expr</a> list *<br>        ('pattern, 'id) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> option)<br>       <a href="Locality.html#TYPEannot">Locality.annot</a></code> </pre>
 
 
 <pre><span id="TYPEconfiguration"><span class="keyword">type</span> <code class="type"></code>configuration</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a> list</code> </pre>
 
 
-<pre><span id="TYPEvariable_def"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> variable_def</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code> </pre>
+<pre><span id="TYPEvariable_def"><span class="keyword">type</span> <code class="type">('pattern, 'id)</code> variable_def</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> * ('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code> </pre>
 
 
 <pre><code><span id="TYPEinit_t"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> init_t</span> = </code></pre><table class="typetable">
@@ -540,10 +540,10 @@ port * agent_type<br>
 
 
 
-<pre><span id="TYPEinit_statment"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> init_statment</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> option * ('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>       ('mixture, 'id) <a href="Ast.html#TYPEinit_t">init_t</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code> </pre>
+<pre><span id="TYPEinit_statment"><span class="keyword">type</span> <code class="type">('pattern, 'mixture, 'id)</code> init_statment</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> option * ('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>       ('mixture, 'id) <a href="Ast.html#TYPEinit_t">init_t</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code> </pre>
 
 
-<pre><code><span id="TYPEinstruction"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> instruction</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEinstruction"><span class="keyword">type</span> <code class="type">('pattern, 'mixture, 'id)</code> instruction</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
@@ -569,35 +569,35 @@ port * agent_type<br>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTinstruction.INIT"><span class="constructor">INIT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEinit_statment">init_statment</a></code></code></td>
+<code><span id="TYPEELTinstruction.INIT"><span class="constructor">INIT</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'mixture, 'id) <a href="Ast.html#TYPEinit_statment">init_statment</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTinstruction.DECLARE"><span class="constructor">DECLARE</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a></code></code></td>
+<code><span id="TYPEELTinstruction.DECLARE"><span class="constructor">DECLARE</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTinstruction.OBS"><span class="constructor">OBS</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a></code></code></td>
+<code><span id="TYPEELTinstruction.OBS"><span class="constructor">OBS</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTinstruction.PLOT"><span class="constructor">PLOT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
+<code><span id="TYPEELTinstruction.PLOT"><span class="constructor">PLOT</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTinstruction.PERT"><span class="constructor">PERT</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEperturbation">perturbation</a></code></code></td>
+<code><span id="TYPEELTinstruction.PERT"><span class="constructor">PERT</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'mixture, 'id) <a href="Ast.html#TYPEperturbation">perturbation</a></code></code></td>
 
 </tr>
 <tr>
@@ -610,19 +610,19 @@ port * agent_type<br>
 
 
 
-<pre><code><span id="TYPEcommand"><span class="keyword">type</span> <code class="type">('mixture, 'id)</code> command</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEcommand"><span class="keyword">type</span> <code class="type">('pattern, 'mixture, 'id)</code> command</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTcommand.RUN"><span class="constructor">RUN</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
+<code><span id="TYPEELTcommand.RUN"><span class="constructor">RUN</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'id) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTcommand.MODIFY"><span class="constructor">MODIFY</span></span> <span class="keyword">of</span> <code class="type">('mixture, 'id) <a href="Ast.html#TYPEmodif_expr">modif_expr</a> list</code></code></td>
+<code><span id="TYPEELTcommand.MODIFY"><span class="constructor">MODIFY</span></span> <span class="keyword">of</span> <code class="type">('pattern, 'mixture, 'id) <a href="Ast.html#TYPEmodif_expr">modif_expr</a> list</code></code></td>
 
 </tr>
 <tr>
@@ -635,12 +635,12 @@ port * agent_type<br>
 
 
 
-<pre><code><span id="TYPEcompil"><span class="keyword">type</span> <code class="type">('agent, 'mixture, 'id, 'rule, 'edit_rule)</code> compil</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEcompil"><span class="keyword">type</span> <code class="type">('agent, 'pattern, 'mixture, 'id, 'rule, 'edit_rule)</code> compil</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTcompil.variables">variables</span>&nbsp;: <code class="type">('mixture, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a> list</code>;</code></td>
+<code><span id="TYPEELTcompil.variables">variables</span>&nbsp;: <code class="type">('pattern, 'id) <a href="Ast.html#TYPEvariable_def">variable_def</a> list</code>;</code></td>
 
 </tr>
 <tr>
@@ -677,21 +677,21 @@ rules with explicit modifications<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTcompil.observables">observables</span>&nbsp;: <code class="type">('mixture, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> list</code>;</code></td>
+<code><span id="TYPEELTcompil.observables">observables</span>&nbsp;: <code class="type">('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> list</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTcompil.init">init</span>&nbsp;: <code class="type">('mixture, 'id) <a href="Ast.html#TYPEinit_statment">init_statment</a> list</code>;</code></td>
+<code><span id="TYPEELTcompil.init">init</span>&nbsp;: <code class="type">('pattern, 'mixture, 'id) <a href="Ast.html#TYPEinit_statment">init_statment</a> list</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTcompil.perturbations">perturbations</span>&nbsp;: <code class="type">('mixture, 'id) <a href="Ast.html#TYPEperturbation">perturbation</a> list</code>;</code></td>
+<code><span id="TYPEELTcompil.perturbations">perturbations</span>&nbsp;: <code class="type">('pattern, 'mixture, 'id) <a href="Ast.html#TYPEperturbation">perturbation</a> list</code>;</code></td>
 
 </tr>
 <tr>
@@ -719,7 +719,7 @@ rules with explicit modifications<br>
 
 
 
-<pre><span id="TYPEparsing_compil"><span class="keyword">type</span> <code class="type"></code>parsing_compil</span> = <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>, <a href="Ast.html#TYPEedit_rule">edit_rule</a>) <a href="Ast.html#TYPEcompil">compil</a></code> </pre>
+<pre><span id="TYPEparsing_compil"><span class="keyword">type</span> <code class="type"></code>parsing_compil</span> = <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>, <a href="Ast.html#TYPEedit_rule">edit_rule</a>)<br>       <a href="Ast.html#TYPEcompil">compil</a></code> </pre>
 
 
 <pre><span id="VALempty_compil"><span class="keyword">val</span> empty_compil</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a></code></pre>

@@ -125,13 +125,15 @@ Store of one agent<br>
 </div>
 
 <pre><span id="VALinternal_state_of_num"><span class="keyword">val</span> internal_state_of_num</span> : <code class="type">int -> int -> <a href="Signature.html#TYPEt">t</a> -> string</code></pre>
+<pre><span id="VALcounter_of_site"><span class="keyword">val</span> counter_of_site</span> : <code class="type">int -> <a href="Signature.html#TYPEt">t</a> -> (int * int) option</code></pre>
+<pre><span id="VALhas_counter"><span class="keyword">val</span> has_counter</span> : <code class="type"><a href="Signature.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="TYPEs"><span class="keyword">type</span> <code class="type"></code>s</span> </pre>
 <div class="info ">
 Store of all the agents<br>
 </div>
 
 
-<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">bool -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>        (unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * (string <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>) list)<br>        <a href="NamedDecls.html#TYPEt">NamedDecls.t</a>)<br>       array -> <a href="Signature.html#TYPEs">s</a></code></pre>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">bool -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>        (unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * (string <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>) list *<br>         (int * int) option)<br>        <a href="NamedDecls.html#TYPEt">NamedDecls.t</a>)<br>       array -> <a href="Signature.html#TYPEs">s</a></code></pre>
 <pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> <a href="Signature.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">get sigs agent_id</code><br>
