@@ -172,7 +172,7 @@ Pathes to explore a mixture<br>
 <pre><span id="VALto_yojson"><span class="keyword">val</span> to_yojson</span> : <code class="type"><a href="Navigation.html#TYPEabstract">abstract</a> <a href="Navigation.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALof_yojson"><span class="keyword">val</span> of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Navigation.html#TYPEabstract">abstract</a> <a href="Navigation.html#TYPEt">t</a></code></pre>
 <pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type">Renaming.t -><br>       <a href="Navigation.html#TYPEabstract">abstract</a> <a href="Navigation.html#TYPEt">t</a> -><br>       Renaming.t * <a href="Navigation.html#TYPEabstract">abstract</a> <a href="Navigation.html#TYPEt">t</a></code></pre>
-<pre><span id="VALcompatible_point"><span class="keyword">val</span> compatible_point</span> : <code class="type">Renaming.t -><br>       <a href="Navigation.html#TYPEabstract">abstract</a> <a href="Navigation.html#TYPEstep">step</a> -><br>       <a href="Navigation.html#TYPEabstract">abstract</a> <a href="Navigation.html#TYPEstep">step</a> -> Renaming.t option</code></pre><div class="info ">
+<pre><span id="VALcompatible_fresh_point"><span class="keyword">val</span> compatible_fresh_point</span> : <code class="type"><a href="Navigation.html#TYPEabstract">abstract</a> <a href="Navigation.html#TYPEstep">step</a> -><br>       <a href="Agent.html#TYPEt">Agent.t</a> -> int -> <a href="Navigation.html#TYPEabstract">abstract</a> <a href="Navigation.html#TYPEarrow">arrow</a> -> Renaming.t option</code></pre><div class="info ">
 Retuns the extension of the given injections so that the second edge
     is the image of the first<br>
 </div>
