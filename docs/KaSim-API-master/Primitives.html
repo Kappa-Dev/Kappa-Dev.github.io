@@ -189,8 +189,8 @@ If <code class="code">unary_rate</code> is <code class="code"><span class="const
 
 <pre><span id="VALextract_cc_ids"><span class="keyword">val</span> extract_cc_ids</span> : <code class="type"><a href="Primitives.html#TYPEelementary_rule">elementary_rule</a> -> <a href="Pattern.html#TYPEid">Pattern.id</a> array</code></pre>
 <pre><span id="VALextract_abstract_event"><span class="keyword">val</span> extract_abstract_event</span> : <code class="type"><a href="Primitives.html#TYPEelementary_rule">elementary_rule</a> -> <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a></code></pre>
-<pre><span id="VALrule_to_yojson"><span class="keyword">val</span> rule_to_yojson</span> : <code class="type"><a href="Primitives.html#TYPEelementary_rule">elementary_rule</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALrule_of_yojson"><span class="keyword">val</span> rule_of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Primitives.html#TYPEelementary_rule">elementary_rule</a></code></pre>
+<pre><span id="VALrule_to_yojson"><span class="keyword">val</span> rule_to_yojson</span> : <code class="type">filenames:int Mods.StringMap.t -><br>       <a href="Primitives.html#TYPEelementary_rule">elementary_rule</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALrule_of_yojson"><span class="keyword">val</span> rule_of_yojson</span> : <code class="type">filenames:string array -> Yojson.Basic.json -> <a href="Primitives.html#TYPEelementary_rule">elementary_rule</a></code></pre>
 <pre><code><span id="TYPEprint_expr"><span class="keyword">type</span> <code class="type">'alg_expr</code> print_expr</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -209,8 +209,8 @@ If <code class="code">unary_rate</code> is <code class="code"><span class="const
 
 
 
-<pre><span id="VALprint_expr_to_yojson"><span class="keyword">val</span> print_expr_to_yojson</span> : <code class="type">('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json) -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALprint_expr_of_yojson"><span class="keyword">val</span> print_expr_of_yojson</span> : <code class="type">(Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'b) -><br>       Yojson.Basic.json -> ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a></code></pre>
+<pre><span id="VALprint_expr_to_yojson"><span class="keyword">val</span> print_expr_to_yojson</span> : <code class="type">filenames:int Mods.StringMap.t -><br>       ('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json) -><br>       ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALprint_expr_of_yojson"><span class="keyword">val</span> print_expr_of_yojson</span> : <code class="type">filenames:string array -><br>       (Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'b) -><br>       Yojson.Basic.json -> ('a, 'b) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Primitives.html#TYPEprint_expr">print_expr</a></code></pre>
 <pre><code><span id="TYPEflux_kind"><span class="keyword">type</span> <code class="type"></code>flux_kind</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -382,8 +382,8 @@ First string is the named used by the user<br>
 
 
 
-<pre><span id="VALperturbation_to_yojson"><span class="keyword">val</span> perturbation_to_yojson</span> : <code class="type"><a href="Primitives.html#TYPEperturbation">perturbation</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALperturbation_of_yojson"><span class="keyword">val</span> perturbation_of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Primitives.html#TYPEperturbation">perturbation</a></code></pre>
+<pre><span id="VALperturbation_to_yojson"><span class="keyword">val</span> perturbation_to_yojson</span> : <code class="type">filenames:int Mods.StringMap.t -><br>       <a href="Primitives.html#TYPEperturbation">perturbation</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALperturbation_of_yojson"><span class="keyword">val</span> perturbation_of_yojson</span> : <code class="type">filenames:string array -> Yojson.Basic.json -> <a href="Primitives.html#TYPEperturbation">perturbation</a></code></pre>
 <pre><span id="VALexists_modification"><span class="keyword">val</span> exists_modification</span> : <code class="type">(<a href="Primitives.html#TYPEmodification">modification</a> -> bool) -> <a href="Primitives.html#TYPEperturbation">perturbation</a> array -> bool</code></pre>
 <pre><span id="VALextract_connected_components_modifications"><span class="keyword">val</span> extract_connected_components_modifications</span> : <code class="type"><a href="Primitives.html#TYPEmodification">modification</a> list -> <a href="Pattern.html#TYPEid">Pattern.id</a> list</code></pre>
 <pre><span id="VALextract_connected_components_bool"><span class="keyword">val</span> extract_connected_components_bool</span> : <code class="type">(<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -> <a href="Pattern.html#TYPEid">Pattern.id</a> list</code></pre>

@@ -149,16 +149,21 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extract_cc_ids&nbsp;:&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extract_abstract_event&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.event<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_to_yojson&nbsp;:&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_to_yojson&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filenames:int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_of_yojson&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filenames:string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>alg_expr&nbsp;print_expr&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Str_pexpr</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Alg_pexpr</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="keywordsign">'</span>alg_expr&nbsp;<span class="constructor">Locality</span>.annot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_expr_to_yojson&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filenames:int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_expr_of_yojson&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filenames:string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Primitives</span>.print_expr<br>
@@ -192,8 +197,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;effect&nbsp;:&nbsp;<span class="constructor">Primitives</span>.modification&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;repeat&nbsp;:&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;perturbation_to_yojson&nbsp;:&nbsp;<span class="constructor">Primitives</span>.perturbation&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;perturbation_of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.perturbation<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;perturbation_to_yojson&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filenames:int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.perturbation&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;perturbation_of_yojson&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filenames:string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.perturbation<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;exists_modification&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Primitives</span>.modification&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.perturbation&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>

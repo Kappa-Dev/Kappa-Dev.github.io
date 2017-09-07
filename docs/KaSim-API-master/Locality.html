@@ -172,8 +172,8 @@ Output a JSON value of type <a href="Locality.html#TYPEt"><code class="code"><sp
 <pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Locality.html#TYPEt">t</a> -> string</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> <a href="Locality.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALprint_annot"><span class="keyword">val</span> print_annot</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       Format.formatter -> 'a <a href="Locality.html#TYPEannot">annot</a> -> unit</code></pre>
-<pre><span id="VALannot_of_json"><span class="keyword">val</span> annot_of_json</span> : <code class="type">(Yojson.Basic.json -> 'a) -> Yojson.Basic.json -> 'a <a href="Locality.html#TYPEannot">annot</a></code></pre>
-<pre><span id="VALannot_to_json"><span class="keyword">val</span> annot_to_json</span> : <code class="type">('a -> Yojson.Basic.json) -> 'a <a href="Locality.html#TYPEannot">annot</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALannot_of_yojson"><span class="keyword">val</span> annot_of_yojson</span> : <code class="type">?filenames:string array -><br>       (Yojson.Basic.json -> 'a) -> Yojson.Basic.json -> 'a <a href="Locality.html#TYPEannot">annot</a></code></pre>
+<pre><span id="VALannot_to_yojson"><span class="keyword">val</span> annot_to_yojson</span> : <code class="type">?filenames:int Mods.StringMap.t -><br>       ('a -> Yojson.Basic.json) -> 'a <a href="Locality.html#TYPEannot">annot</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALwrite_range"><span class="keyword">val</span> write_range</span> : <code class="type">Bi_outbuf.t -> <a href="Locality.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
 Output a JSON value of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a>.<br>
 </div>
