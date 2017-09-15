@@ -236,4 +236,5 @@ Deserialize JSON data of type <a href="Trace.html#TYPEstep"><code class="code"><
 
 <pre><span id="VALto_yojson"><span class="keyword">val</span> to_yojson</span> : <code class="type"><a href="Trace.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALof_yojson"><span class="keyword">val</span> of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Trace.html#TYPEt">t</a></code></pre>
+<pre><span id="VALinit_trace_file"><span class="keyword">val</span> init_trace_file</span> : <code class="type">uuid:int -> <a href="Model.html#TYPEt">Model.t</a> -> string -> Pervasives.out_channel</code></pre>
 <pre><span id="VALfold_trace_file"><span class="keyword">val</span> fold_trace_file</span> : <code class="type">(<a href="Model.html#TYPEt">Model.t</a> -> 'a -> <a href="Trace.html#TYPEstep">step</a> -> 'a) -><br>       (<a href="Model.html#TYPEt">Model.t</a> -> 'a) -> string -> <a href="Model.html#TYPEt">Model.t</a> * 'a</code></pre></body></html>
