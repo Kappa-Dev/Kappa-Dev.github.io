@@ -136,13 +136,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Instantiation</span>.action&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.concrete&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;alg_expr&nbsp;=&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;elementary_rule&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;rate&nbsp;:&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;unary_rate&nbsp;:&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;option)&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rate&nbsp;:&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unary_rate&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;option)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;connected_components&nbsp;:&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;removed&nbsp;:&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;inserted&nbsp;:&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;delta_tokens&nbsp;:&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;delta_tokens&nbsp;:&nbsp;(<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;syntactic_rule&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;instantiations&nbsp;:&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.event;<br>
 &nbsp;&nbsp;}<br>
@@ -176,21 +179,24 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.flux_kind<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flux_kind_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.flux_kind<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;modification&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">ITER_RULE</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UPDATE</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">SNAPSHOT</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">STOP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">ITER_RULE</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UPDATE</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">SNAPSHOT</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">STOP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CFLOW</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;option&nbsp;*&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list&nbsp;list<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FLUX</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.flux_kind&nbsp;*&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FLUXOFF</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FLUX</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.flux_kind&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FLUXOFF</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CFLOWOFF</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;option&nbsp;*&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PLOTENTRY</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PRINT</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">SPECIES</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list&nbsp;*&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PRINT</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">SPECIES</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Instantiation</span>.test&nbsp;list&nbsp;list<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">SPECIES_OFF</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">SPECIES_OFF</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Primitives</span>.print_expr&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;perturbation&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;alarm&nbsp;:&nbsp;<span class="constructor">Nbr</span>.t&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;precondition&nbsp;:&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot;<br>
@@ -211,10 +217,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.id&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;map_expr_rule&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.elementary_rule<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;map_expr_perturbation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.t&nbsp;<span class="constructor">Locality</span>.annot)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.perturbation&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Primitives</span>.perturbation<br>

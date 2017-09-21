@@ -227,9 +227,6 @@
 
 
 
-<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type">(<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Alg_expr.html#TYPEe">e</a></code> </pre>
-
-
 <pre><span id="VALe_to_yojson"><span class="keyword">val</span> e_to_yojson</span> : <code class="type">filenames:int Mods.StringMap.t -><br>       ('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json) -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALe_of_yojson"><span class="keyword">val</span> e_of_yojson</span> : <code class="type">filenames:string array -><br>       (Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'b) -> Yojson.Basic.json -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a></code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Alg_expr.html#TYPEe">e</a> -> unit</code></pre>

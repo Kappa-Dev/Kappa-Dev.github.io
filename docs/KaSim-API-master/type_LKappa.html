@@ -123,8 +123,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_mixture&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;ltypes:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>agent&nbsp;rule&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;r_mix&nbsp;:&nbsp;<span class="keywordsign">'</span>agent&nbsp;list;<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;r_mix&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_created&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_delta_tokens&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">LKappa</span>.rule_mixture,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;int)&nbsp;list;<br>
@@ -139,19 +139,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;full:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_to_json&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;filenames:int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filenames:int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_of_json&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;filenames:string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="constructor">LKappa</span>.rule<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filenames:string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;bool_expr_of_ast&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;syntax_version:<span class="constructor">Ast</span>.syntax_version&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -186,7 +184,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.parsing_compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;*&nbsp;<span class="constructor">Contact_map</span>.t&nbsp;*&nbsp;unit&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;*&nbsp;int&nbsp;<span class="constructor">Mods</span>.<span class="constructor">StringMap</span>.t&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list,&nbsp;<span class="constructor">Raw_mixture</span>.t,&nbsp;int,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="constructor">LKappa</span>.rule,&nbsp;unit)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list,&nbsp;<span class="constructor">Raw_mixture</span>.t,&nbsp;int,&nbsp;unit,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LKappa</span>.rule)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.compil<br>
 <span class="keyword">end</span></code></body></html>
