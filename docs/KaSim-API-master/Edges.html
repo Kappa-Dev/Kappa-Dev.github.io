@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Navigation.html">
+<link rel="previous" href="User_graph.html">
 <link rel="next" href="Progress_report.html">
 <link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
@@ -57,6 +57,7 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
@@ -100,7 +101,7 @@
 <link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Edges</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Navigation.html" title="Navigation">Previous</a>
+<div class="navbar"><a class="pre" href="User_graph.html" title="User_graph">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
 &nbsp;<a class="post" href="Progress_report.html" title="Progress_report">Next</a>
 </div>
@@ -200,6 +201,6 @@ Some (i,j) as second returned element means separate "new" cc j from cc i<br>
 <code class="code">are_connected ?max_distance graph nodes_x nodes_y</code><br>
 </div>
 
-<pre><span id="VALspecies"><span class="keyword">val</span> species</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></pre>
-<pre><span id="VALbuild_snapshot"><span class="keyword">val</span> build_snapshot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">t</a> -> (int * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>) list</code></pre>
+<pre><span id="VALspecies"><span class="keyword">val</span> species</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a></code></pre>
+<pre><span id="VALbuild_snapshot"><span class="keyword">val</span> build_snapshot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">t</a> -> (int * <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a>) list</code></pre>
 <pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">Format.formatter -> <a href="Edges.html#TYPEt">t</a> -> unit</code></pre></body></html>

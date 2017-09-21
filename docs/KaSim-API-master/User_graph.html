@@ -4,9 +4,9 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Mods.CharSetMap.html">
-<link rel="next" href="Mods.CharMap.html">
-<link rel="Up" href="Mods.html">
+<link rel="previous" href="Navigation.html">
+<link rel="next" href="Edges.html">
+<link rel="Up" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -98,14 +98,87 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Mods.CharSet</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : User_graph</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Mods.CharSetMap.html" title="Mods.CharSetMap">Previous</a>
-&nbsp;<a class="up" href="Mods.html" title="Mods">Up</a>
-&nbsp;<a class="post" href="Mods.CharMap.html" title="Mods.CharMap">Next</a>
+<div class="navbar"><a class="pre" href="Navigation.html" title="Navigation">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Edges.html" title="Edges">Next</a>
 </div>
-<h1>Module <a href="type_Mods.CharSet.html">Mods.CharSet</a></h1>
+<h1>Module <a href="type_User_graph.html">User_graph</a></h1>
 
-<pre><span class="keyword">module</span> CharSet: <code class="type">CharSetMap.Set</code></pre><hr width="100%">
+<pre><span class="keyword">module</span> User_graph: <code class="code"><span class="keyword">sig</span></code> <a href="User_graph.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Output a JSON value of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>.<br>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPEcc_site"><span class="keyword">type</span> <code class="type"></code>cc_site</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcc_site.site_name">site_name</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcc_site.site_links">site_links</span>&nbsp;: <code class="type">(int * int) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcc_site.site_states">site_states</span>&nbsp;: <code class="type">string list</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEcc_node"><span class="keyword">type</span> <code class="type"></code>cc_node</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcc_node.node_type">node_type</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcc_node.node_sites">node_sites</span>&nbsp;: <code class="type"><a href="User_graph.html#TYPEcc_site">cc_site</a> array</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="TYPEconnected_component"><span class="keyword">type</span> <code class="type"></code>connected_component</span> = <code class="type"><a href="User_graph.html#TYPEcc_node">cc_node</a> array</code> </pre>
+
+
+<pre><span id="VALprint_cc"><span class="keyword">val</span> print_cc</span> : <code class="type">explicit_free:bool -><br>       compact:bool -> Format.formatter -> <a href="User_graph.html#TYPEconnected_component">connected_component</a> -> unit</code></pre>
+<pre><span id="VALprint_dot_cc"><span class="keyword">val</span> print_dot_cc</span> : <code class="type">int -> Format.formatter -> <a href="User_graph.html#TYPEconnected_component">connected_component</a> -> unit</code></pre>
+<pre><span id="VALwrite_connected_component"><span class="keyword">val</span> write_connected_component</span> : <code class="type">Bi_outbuf.t -> <a href="User_graph.html#TYPEconnected_component">connected_component</a> -> unit</code></pre><div class="info ">
+Output a JSON value of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>.<br>
+</div>
+
+<pre><span id="VALstring_of_connected_component"><span class="keyword">val</span> string_of_connected_component</span> : <code class="type">?len:int -> <a href="User_graph.html#TYPEconnected_component">connected_component</a> -> string</code></pre><div class="info ">
+Serialize a value of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>
+      into a JSON string.<br>
+</div>
+<div class="param_info"><code class="code">len</code> : specifies the initial length
+                 of the buffer used internally.
+                 Default: 1024.</div>
+
+<pre><span id="VALread_connected_component"><span class="keyword">val</span> read_connected_component</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="User_graph.html#TYPEconnected_component">connected_component</a></code></pre><div class="info ">
+Input JSON data of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>.<br>
+</div>
+
+<pre><span id="VALconnected_component_of_string"><span class="keyword">val</span> connected_component_of_string</span> : <code class="type">string -> <a href="User_graph.html#TYPEconnected_component">connected_component</a></code></pre><div class="info ">
+Deserialize JSON data of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>.<br>
+</div>
 </body></html>

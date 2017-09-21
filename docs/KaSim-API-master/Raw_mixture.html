@@ -57,6 +57,7 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
@@ -158,13 +159,6 @@
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type"><a href="Raw_mixture.html#TYPEagent">agent</a> list</code> </pre>
 
 
-<pre><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> </pre>
-
-
-<pre><span id="VALempty_snapshot"><span class="keyword">val</span> empty_snapshot</span> : <code class="type"><a href="Raw_mixture.html#TYPEsnapshot">snapshot</a></code></pre>
-<pre><span id="VALincrement_in_snapshot"><span class="keyword">val</span> increment_in_snapshot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Raw_mixture.html#TYPEt">t</a> -> <a href="Raw_mixture.html#TYPEsnapshot">snapshot</a> -> <a href="Raw_mixture.html#TYPEsnapshot">snapshot</a></code></pre>
-<pre><span id="VALoutput_snapshot"><span class="keyword">val</span> output_snapshot</span> : <code class="type"><a href="Raw_mixture.html#TYPEsnapshot">snapshot</a> -> (int * <a href="Raw_mixture.html#TYPEt">t</a>) list</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">explicit_free:bool -><br>       compact:bool -><br>       created:bool -><br>       ?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Raw_mixture.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALprint_dot"><span class="keyword">val</span> print_dot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> int -> Format.formatter -> <a href="Raw_mixture.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Raw_mixture.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Raw_mixture.html#TYPEt">t</a></code></pre></body></html>

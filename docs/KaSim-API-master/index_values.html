@@ -53,6 +53,7 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
@@ -268,6 +269,8 @@ depend in time, depend in event number, depend in given var
 <tr><td><a href="Tools.html#VALarray_map_of_list">array_map_of_list</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
 <tr><td><a href="Tools.html#VALarray_min_equal_not_null">array_min_equal_not_null</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Tools.html#VALarray_rev_map_of_list">array_rev_map_of_list</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
 <tr><td><a href="Tools.html#VALarray_rev_of_list">array_rev_of_list</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
@@ -510,6 +513,11 @@ compress a trace with the level of abstraction defined in the argument parameter
 <td></td></tr>
 <tr><td><a href="Instantiation.html#VALconcretize_test">concretize_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
 <td></td></tr>
+<tr><td><a href="User_graph.html#VALconnected_component_of_string">connected_component_of_string</a> [<a href="User_graph.html">User_graph</a>]</td>
+<td><div class="info">
+Deserialize JSON data of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALconnected_components_of_mixture">connected_components_of_mixture</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALconnected_components_of_patterns">connected_components_of_patterns</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
@@ -801,8 +809,6 @@ cut performs partial order reduction and remove orthogonal events
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALempty_renaming_list">empty_renaming_list</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pp.html#VALempty_set">empty_set</a> [<a href="Pp.html">Pp</a>]</td>
-<td></td></tr>
-<tr><td><a href="Raw_mixture.html#VALempty_snapshot">empty_snapshot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="Mvbdu_wrapper.Mvbdu.html#VALempty_variables_list">empty_variables_list</a> [<a href="Mvbdu_wrapper.Mvbdu.html">Mvbdu_wrapper.Mvbdu</a>]</td>
 <td></td></tr>
@@ -1496,8 +1502,6 @@ Infer agent signatures and tokens from init, rules and perturbations
 <tr><td><a href="Counter.html#VALinc_stories">inc_stories</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALincrement">increment</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
-<td></td></tr>
-<tr><td><a href="Raw_mixture.html#VALincrement_in_snapshot">increment_in_snapshot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.html#VALinfs">infs</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
@@ -2239,13 +2243,13 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Locality.html#VALof_pos">of_pos</a> [<a href="Locality.html">Locality</a>]</td>
 <td></td></tr>
-<tr><td><a href="LKappa.html#VALof_raw_mixture">of_raw_mixture</a> [<a href="LKappa.html">LKappa</a>]</td>
-<td></td></tr>
 <tr><td><a href="Nbr.html#VALof_string">of_string</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td><div class="info">
 </div>
 </td></tr>
 <tr><td><a href="Nbr.html#VALof_un_alg_op">of_un_alg_op</a> [<a href="Nbr.html">Nbr</a>]</td>
+<td></td></tr>
+<tr><td><a href="LKappa.html#VALof_user_graph">of_user_graph</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Trace.html#VALof_yojson">of_yojson</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
@@ -2323,8 +2327,6 @@ values of observables)
 <tr><td><a href="Export_to_KaSa.Type.html#VALoutput_internal_contact_map">output_internal_contact_map</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALoutput_local_influence_map">output_local_influence_map</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
-<td></td></tr>
-<tr><td><a href="Raw_mixture.html#VALoutput_snapshot">output_snapshot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALoutput_symmetries">output_symmetries</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
@@ -2522,6 +2524,8 @@ The int is the ast_rule_id
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALprint_canonic_species">print_canonic_species</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
+<tr><td><a href="User_graph.html#VALprint_cc">print_cc</a> [<a href="User_graph.html">User_graph</a>]</td>
+<td></td></tr>
 <tr><td><a href="Pattern.html#VALprint_cc">print_cc</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALprint_cell">print_cell</a> [<a href="Loggers.html">Loggers</a>]</td>
@@ -2544,7 +2548,9 @@ The int is the ast_rule_id
 <td></td></tr>
 <tr><td><a href="Contact_map.html#VALprint_cycles">print_cycles</a> [<a href="Contact_map.html">Contact_map</a>]</td>
 <td></td></tr>
-<tr><td><a href="Raw_mixture.html#VALprint_dot">print_dot</a> [<a href="Raw_mixture.html">Raw_mixture</a>]</td>
+<tr><td><a href="User_graph.html#VALprint_dot_cc">print_dot_cc</a> [<a href="User_graph.html">User_graph</a>]</td>
+<td></td></tr>
+<tr><td><a href="Data.html#VALprint_dot_snapshot">print_dot_snapshot</a> [<a href="Data.html">Data</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_dump_plots">print_dump_plots</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
@@ -2638,6 +2644,8 @@ Same as above but the int is this time the rule_id
 prints both the site and its internal state if it is not <code class="code"><span class="constructor">None</span></code>.
 </div>
 </td></tr>
+<tr><td><a href="Data.html#VALprint_snapshot">print_snapshot</a> [<a href="Data.html">Data</a>]</td>
+<td></td></tr>
 <tr><td><a href="Operator.html#VALprint_state_alg_op">print_state_alg_op</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Trace.html#VALprint_step">print_step</a> [<a href="Trace.html">Trace</a>]</td>
@@ -2722,6 +2730,11 @@ Deserialize JSON data of type <a href="Locality.html#TYPEt"><code class="code"><
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALreaction_rate_convention">reaction_rate_convention</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
+<tr><td><a href="User_graph.html#VALread_connected_component">read_connected_component</a> [<a href="User_graph.html">User_graph</a>]</td>
+<td><div class="info">
+Input JSON data of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Primitives.html#VALread_flux_kind">read_flux_kind</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td><div class="info">
 Input JSON data of type <a href="Primitives.html#TYPEflux_kind"><code class="code"><span class="constructor">Primitives</span>.flux_kind</code></a>.
@@ -3110,6 +3123,12 @@ Store trace in story table
 </td></tr>
 <tr><td><a href="Trace.Simulation_info.html#VALstory_id">story_id</a> [<a href="Trace.Simulation_info.html">Trace.Simulation_info</a>]</td>
 <td></td></tr>
+<tr><td><a href="User_graph.html#VALstring_of_connected_component">string_of_connected_component</a> [<a href="User_graph.html">User_graph</a>]</td>
+<td><div class="info">
+Serialize a value of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>
+      into a JSON string.
+</div>
+</td></tr>
 <tr><td><a href="Primitives.html#VALstring_of_flux_kind">string_of_flux_kind</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td><div class="info">
 Serialize a value of type <a href="Primitives.html#TYPEflux_kind"><code class="code"><span class="constructor">Primitives</span>.flux_kind</code></a>
@@ -3401,6 +3420,11 @@ compute the weak compression of a given trace,
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_snapshot">with_snapshot</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
+<tr><td><a href="User_graph.html#VALwrite_connected_component">write_connected_component</a> [<a href="User_graph.html">User_graph</a>]</td>
+<td><div class="info">
+Output a JSON value of type <a href="User_graph.html#TYPEconnected_component"><code class="code"><span class="constructor">User_graph</span>.connected_component</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Primitives.html#VALwrite_flux_kind">write_flux_kind</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td><div class="info">
 Output a JSON value of type <a href="Primitives.html#TYPEflux_kind"><code class="code"><span class="constructor">Primitives</span>.flux_kind</code></a>.

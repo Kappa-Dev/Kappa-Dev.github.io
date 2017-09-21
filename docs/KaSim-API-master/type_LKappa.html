@@ -52,6 +52,7 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
@@ -118,7 +119,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_erased&nbsp;:&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_maintained&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_raw_mixture&nbsp;:&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_raw_mixture&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_user_graph&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy_rule_agent&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_mixture&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>

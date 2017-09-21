@@ -57,6 +57,7 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
@@ -110,6 +111,49 @@
 Must have length &gt;= 1 (at least <code class="code"><span class="constructor">T</span></code> or <code class="code"><span class="constructor">E</span></code>)<br>
 </div>
 <hr width="100%">
+
+<pre><code><span id="TYPEgeneric_snapshot"><span class="keyword">type</span> <code class="type">('agent, 'token)</code> generic_snapshot</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgeneric_snapshot.snapshot_file">snapshot_file</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgeneric_snapshot.snapshot_event">snapshot_event</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgeneric_snapshot.snapshot_time">snapshot_time</span>&nbsp;: <code class="type">float</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgeneric_snapshot.snapshot_agents">snapshot_agents</span>&nbsp;: <code class="type">'agent list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgeneric_snapshot.snapshot_tokens">snapshot_tokens</span>&nbsp;: <code class="type">'token array</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> = <code class="type">(int * <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a>, string * <a href="Nbr.html#TYPEt">Nbr.t</a>) <a href="Data.html#TYPEgeneric_snapshot">generic_snapshot</a></code> </pre>
+
 
 <pre><code><span id="TYPEflux_data"><span class="keyword">type</span> <code class="type"></code>flux_data</span> = {</code></pre><table class="typetable">
 <tr>
@@ -196,49 +240,6 @@ Must have length &gt;= 1 (at least <code class="code"><span class="constructor">
 
 
 
-<pre><code><span id="TYPEgeneric_snapshot"><span class="keyword">type</span> <code class="type">('agent, 'token)</code> generic_snapshot</span> = {</code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_file">snapshot_file</span>&nbsp;: <code class="type">string</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_event">snapshot_event</span>&nbsp;: <code class="type">int</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_time">snapshot_time</span>&nbsp;: <code class="type">float</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_agents">snapshot_agents</span>&nbsp;: <code class="type">'agent list</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_tokens">snapshot_tokens</span>&nbsp;: <code class="type">'token array</code>;</code></td>
-
-</tr></table>
-}
-
-
-
-<pre><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> = <code class="type">(int * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>, string * <a href="Nbr.html#TYPEt">Nbr.t</a>) <a href="Data.html#TYPEgeneric_snapshot">generic_snapshot</a></code> </pre>
-
-
 <pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -296,9 +297,11 @@ Must have length &gt;= 1 (at least <code class="code"><span class="constructor">
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.Species"><span class="constructor">Species</span></span> <span class="keyword">of</span> <code class="type">string * float * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></code></td>
+<code><span id="TYPEELTt.Species"><span class="constructor">Species</span></span> <span class="keyword">of</span> <code class="type">string * float * <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a></code></code></td>
 
 </tr></table>
 
 
-</body></html>
+
+<pre><span id="VALprint_snapshot"><span class="keyword">val</span> print_snapshot</span> : <code class="type">?uuid:int -> Format.formatter -> <a href="Data.html#TYPEsnapshot">snapshot</a> -> unit</code></pre>
+<pre><span id="VALprint_dot_snapshot"><span class="keyword">val</span> print_dot_snapshot</span> : <code class="type">?uuid:int -> Format.formatter -> <a href="Data.html#TYPEsnapshot">snapshot</a> -> unit</code></pre></body></html>

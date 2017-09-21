@@ -52,6 +52,7 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
@@ -168,8 +169,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;step_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_yojson&nbsp;:&nbsp;<span class="constructor">Trace</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_yojson&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init_trace_file&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pervasives</span>.out_channel<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init_trace_file&nbsp;:&nbsp;uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pervasives</span>.out_channel&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_trace_file&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Trace</span>.step&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Model</span>.t&nbsp;*&nbsp;<span class="keywordsign">'</span>a<br>

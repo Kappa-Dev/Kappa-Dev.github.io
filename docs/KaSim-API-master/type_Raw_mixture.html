@@ -52,6 +52,7 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
@@ -104,19 +105,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;a_ints&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.internal&nbsp;array;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;<span class="constructor">Raw_mixture</span>.agent&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_snapshot&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.snapshot<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;increment_in_snapshot&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.snapshot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.snapshot<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;output_snapshot&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.snapshot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Raw_mixture</span>.t)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;explicit_free:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;compact:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;created:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?sigs:<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_json&nbsp;:&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_json&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Raw_mixture</span>.t<br>
 <span class="keyword">end</span></code></body></html>

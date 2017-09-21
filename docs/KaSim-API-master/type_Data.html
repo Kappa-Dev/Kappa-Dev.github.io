@@ -52,6 +52,7 @@
 <link title="Snip" rel="Chapter" href="Snip.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
 <link title="Edges" rel="Chapter" href="Edges.html">
 <link title="Progress_report" rel="Chapter" href="Progress_report.html">
 <link title="Counter" rel="Chapter" href="Counter.html">
@@ -96,6 +97,16 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>token)&nbsp;generic_snapshot&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_file&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_event&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_time&nbsp;:&nbsp;float;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_agents&nbsp;:&nbsp;<span class="keywordsign">'</span>agent&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_tokens&nbsp;:&nbsp;<span class="keywordsign">'</span>token&nbsp;array;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;<span class="constructor">User_graph</span>.connected_component,&nbsp;string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Data</span>.generic_snapshot<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;flux_data&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;flux_name&nbsp;:&nbsp;string;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;flux_kind&nbsp;:&nbsp;<span class="constructor">Primitives</span>.flux_kind;<br>
@@ -112,14 +123,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;file_line_name&nbsp;:&nbsp;string&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;file_line_text&nbsp;:&nbsp;string;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>token)&nbsp;generic_snapshot&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snapshot_file&nbsp;:&nbsp;string;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snapshot_event&nbsp;:&nbsp;int;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snapshot_time&nbsp;:&nbsp;float;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snapshot_agents&nbsp;:&nbsp;<span class="keywordsign">'</span>agent&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snapshot_tokens&nbsp;:&nbsp;<span class="keywordsign">'</span>token&nbsp;array;<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot&nbsp;=&nbsp;(int&nbsp;*&nbsp;<span class="constructor">Raw_mixture</span>.t,&nbsp;string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;<span class="constructor">Data</span>.generic_snapshot<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Flux</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">DeltaActivities</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;(int&nbsp;*&nbsp;(float&nbsp;*&nbsp;float))&nbsp;list<br>
@@ -128,5 +131,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">TraceStep</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Trace</span>.step<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Snapshot</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Log</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Species</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;*&nbsp;float&nbsp;*&nbsp;<span class="constructor">Raw_mixture</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Species</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;*&nbsp;float&nbsp;*&nbsp;<span class="constructor">User_graph</span>.connected_component<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_snapshot&nbsp;:&nbsp;?uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot_snapshot&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 <span class="keyword">end</span></code></body></html>

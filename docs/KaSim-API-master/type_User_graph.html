@@ -1,12 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
+<html><head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Mods.CharSetMap.html">
-<link rel="next" href="Mods.CharMap.html">
-<link rel="Up" href="Mods.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -98,14 +93,33 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Mods.CharSet</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : User_graph</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Mods.CharSetMap.html" title="Mods.CharSetMap">Previous</a>
-&nbsp;<a class="up" href="Mods.html" title="Mods">Up</a>
-&nbsp;<a class="post" href="Mods.CharMap.html" title="Mods.CharMap">Next</a>
-</div>
-<h1>Module <a href="type_Mods.CharSet.html">Mods.CharSet</a></h1>
-
-<pre><span class="keyword">module</span> CharSet: <code class="type">CharSetMap.Set</code></pre><hr width="100%">
-</body></html>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cc_site&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;site_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;site_links&nbsp;:&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;site_states&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cc_node&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;node_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;node_sites&nbsp;:&nbsp;<span class="constructor">User_graph</span>.cc_site&nbsp;array;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;connected_component&nbsp;=&nbsp;<span class="constructor">User_graph</span>.cc_node&nbsp;array<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_cc&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;explicit_free:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;compact:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot_cc&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;write_connected_component&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Bi_outbuf</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_connected_component&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?len:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;read_connected_component&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;connected_component_of_string&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component<br>
+<span class="keyword">end</span></code></body></html>
