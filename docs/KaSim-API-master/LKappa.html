@@ -238,12 +238,36 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 <pre><span id="TYPErule_mixture"><span class="keyword">type</span> <code class="type"></code>rule_mixture</span> = <code class="type"><a href="LKappa.html#TYPErule_agent">rule_agent</a> list</code> </pre>
 
 
+<pre><span id="VALforbid_modification"><span class="keyword">val</span> forbid_modification</span> : <code class="type"><a href="Locality.html#TYPEt">Locality.t</a> -> 'a option -> unit</code></pre>
+<pre><span id="VALseveral_internal_states"><span class="keyword">val</span> several_internal_states</span> : <code class="type"><a href="Locality.html#TYPEt">Locality.t</a> -> 'a</code></pre>
+<pre><span id="VALnot_enough_specified"><span class="keyword">val</span> not_enough_specified</span> : <code class="type">string -> string * <a href="Locality.html#TYPEt">Locality.t</a> -> 'a</code></pre>
+<pre><span id="VALseveral_occurence_of_site"><span class="keyword">val</span> several_occurence_of_site</span> : <code class="type">string -> string * <a href="Locality.html#TYPEt">Locality.t</a> -> 'a</code></pre>
+<pre><span id="VALlink_only_one_occurence"><span class="keyword">val</span> link_only_one_occurence</span> : <code class="type">int -> <a href="Locality.html#TYPEt">Locality.t</a> -> 'a</code></pre>
 <pre><span id="VALto_erased"><span class="keyword">val</span> to_erased</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
 <pre><span id="VALto_maintained"><span class="keyword">val</span> to_maintained</span> : <code class="type"><a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
 <pre><span id="VALto_raw_mixture"><span class="keyword">val</span> to_raw_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a> -> <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></pre>
 <pre><span id="VALof_user_graph"><span class="keyword">val</span> of_user_graph</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a> -> <a href="LKappa.html#TYPErule_mixture">rule_mixture</a></code></pre>
 <pre><span id="VALcopy_rule_agent"><span class="keyword">val</span> copy_rule_agent</span> : <code class="type"><a href="LKappa.html#TYPErule_agent">rule_agent</a> -> <a href="LKappa.html#TYPErule_agent">rule_agent</a></code></pre>
 <pre><span id="VALprint_rule_mixture"><span class="keyword">val</span> print_rule_mixture</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       ltypes:bool -> Format.formatter -> <a href="LKappa.html#TYPErule_agent">rule_agent</a> list -> unit</code></pre>
+<pre><code><span id="TYPErule_agent_counters"><span class="keyword">type</span> <code class="type">'a</code> rule_agent_counters</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_agent_counters.ra">ra</span>&nbsp;: <code class="type">'a</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_agent_counters.ra_counters">ra_counters</span>&nbsp;: <code class="type">(<a href="Ast.html#TYPEcounter">Ast.counter</a> * <a href="LKappa.html#TYPEswitching">switching</a>) array</code>;</code></td>
+
+</tr></table>
+}
+
+
+
 <pre><code><span id="TYPErule"><span class="keyword">type</span> <code class="type"></code>rule</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -294,37 +318,4 @@ generates rule_agent where ra_syntax is <code class="code"><span class="construc
 <pre><span id="VALprint_rates"><span class="keyword">val</span> print_rates</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALprint_rule"><span class="keyword">val</span> print_rule</span> : <code class="type">full:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       (Format.formatter -> int -> unit) -><br>       (Format.formatter -> int -> unit) -> Format.formatter -> <a href="LKappa.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALrule_to_json"><span class="keyword">val</span> rule_to_json</span> : <code class="type">filenames:int Mods.StringMap.t -> <a href="LKappa.html#TYPErule">rule</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALrule_of_json"><span class="keyword">val</span> rule_of_json</span> : <code class="type">filenames:string array -> Yojson.Basic.json -> <a href="LKappa.html#TYPErule">rule</a></code></pre>
-<pre><span id="VALbool_expr_of_ast"><span class="keyword">val</span> bool_expr_of_ast</span> : <code class="type">syntax_version:<a href="Ast.html#TYPEsyntax_version">Ast.syntax_version</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       ?max_allowed_var:int -><br>       with_counters:bool -><br>       (<a href="Ast.html#TYPEmixture">Ast.mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, int) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
-<pre><span id="VALmodif_expr_of_ast"><span class="keyword">val</span> modif_expr_of_ast</span> : <code class="type">syntax_version:<a href="Ast.html#TYPEsyntax_version">Ast.syntax_version</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       with_counters:bool -><br>       (<a href="Ast.html#TYPEmixture">Ast.mixture</a>, <a href="Ast.html#TYPEmixture">Ast.mixture</a>, string) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> -><br>       int list -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>, int) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a> * int list</code></pre>
-<pre><span id="VALinit_of_ast"><span class="keyword">val</span> init_of_ast</span> : <code class="type">syntax_version:<a href="Ast.html#TYPEsyntax_version">Ast.syntax_version</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       with_counters:bool -><br>       int Mods.StringMap.t -><br>       int Mods.StringMap.t -><br>       (<a href="Ast.html#TYPEmixture">Ast.mixture</a>, <a href="Ast.html#TYPEmixture">Ast.mixture</a>, string) <a href="Ast.html#TYPEinit_statment">Ast.init_statment</a> list -><br>       (<a href="LKappa.html#TYPErule_agent">rule_agent</a> list, <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>, int) <a href="Ast.html#TYPEinit_statment">Ast.init_statment</a> list</code></pre>
-<pre><span id="VALcompil_of_ast"><span class="keyword">val</span> compil_of_ast</span> : <code class="type">syntax_version:<a href="Ast.html#TYPEsyntax_version">Ast.syntax_version</a> -><br>       (string * <a href="Nbr.html#TYPEt">Nbr.t</a>) list -><br>       <a href="Ast.html#TYPEparsing_compil">Ast.parsing_compil</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> * <a href="Contact_map.html#TYPEt">Contact_map.t</a> * unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * int Mods.StringMap.t *<br>       int list *<br>       (<a href="Ast.html#TYPEagent">Ast.agent</a>, <a href="LKappa.html#TYPErule_agent">rule_agent</a> list, <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a>, int, unit, <a href="LKappa.html#TYPErule">rule</a>)<br>       <a href="Ast.html#TYPEcompil">Ast.compil</a></code></pre><div class="info ">
-<code class="code">compil_of_ast variable_overwrite ast</code><br>
-<b>Returns</b> the signature of agent, the contact map, the signature of
-    tokens, an algebraic variable finder, algebraic variable on which
-    constant propagation is forbidden, and an Ast.compil where identifiers
-    are integers and not string, syntactic sugar on rules are expansed
-    (syntactic sugar on mixture are not)
-<p>
-
-    This function sorts out longest prefix convention as well as ensure a
-    lot of sanity on mixtures:<ul>
-<li>agent exists</li>
-<li>sites exist</li>
-<li>unique site occurence / agent</li>
-<li>internal_states exist</li>
-<li>unique internal_state / site</li>
-<li>links appear exactly twice</li>
-</ul>
-
-    The sanity checks on rates consists in ensuring that<ul>
-<li>either absolute or unary rates are provided;</li>
-<li>if the algebraic expression of the rate contains a mixture then
-    a new variable is declared called rulelabel_un_rate; it is
-    necessary in the update phase.</li>
-</ul>
-
-    After this step, <code class="code"><span class="constructor">Ast</span>.<span class="constructor">ANY_FREE</span></code> is a synonym of "an <code class="code"><span class="constructor">Ast</span>.<span class="constructor">LNK_ANY</span></code>
-    explicitely given by the user".<br>
-</div>
-</body></html>
+<pre><span id="VALrule_of_json"><span class="keyword">val</span> rule_of_json</span> : <code class="type">filenames:string array -> Yojson.Basic.json -> <a href="LKappa.html#TYPErule">rule</a></code></pre></body></html>
