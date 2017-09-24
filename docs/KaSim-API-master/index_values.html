@@ -1008,6 +1008,11 @@ Deserialize JSON data of type <a href="Primitives.html#TYPEflux_kind"><code clas
 <td></td></tr>
 <tr><td><a href="Primitives.html#VALflux_kind_to_yojson">flux_kind_to_yojson</a> [<a href="Primitives.html">Primitives</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALflux_map_of_string">flux_map_of_string</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Deserialize JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Pattern.html#VALfold">fold</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="Signature.html#VALfold">fold</a> [<a href="Signature.html">Signature</a>]</td>
@@ -2541,6 +2546,8 @@ The int is the ast_rule_id
 <td></td></tr>
 <tr><td><a href="User_graph.html#VALprint_dot_cc">print_dot_cc</a> [<a href="User_graph.html">User_graph</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALprint_dot_flux_map">print_dot_flux_map</a> [<a href="Data.html">Data</a>]</td>
+<td></td></tr>
 <tr><td><a href="Data.html#VALprint_dot_snapshot">print_dot_snapshot</a> [<a href="Data.html">Data</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_dump_plots">print_dump_plots</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
@@ -2562,6 +2569,8 @@ The int is the ast_rule_id
 <tr><td><a href="Graph_loggers.html#VALprint_graph_foot">print_graph_foot</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
 <td></td></tr>
 <tr><td><a href="Graph_loggers.html#VALprint_graph_preamble">print_graph_preamble</a> [<a href="Graph_loggers.html">Graph_loggers</a>]</td>
+<td></td></tr>
+<tr><td><a href="Data.html#VALprint_html_flux_map">print_html_flux_map</a> [<a href="Data.html">Data</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALprint_integrate">print_integrate</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
@@ -2731,11 +2740,21 @@ Input JSON data of type <a href="User_graph.html#TYPEconnected_component"><code 
 Input JSON data of type <a href="Primitives.html#TYPEflux_kind"><code class="code"><span class="constructor">Primitives</span>.flux_kind</code></a>.
 </div>
 </td></tr>
+<tr><td><a href="Data.html#VALread_flux_map">read_flux_map</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Input JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Tools.html#VALread_input">read_input</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
 <tr><td><a href="Locality.html#VALread_range">read_range</a> [<a href="Locality.html">Locality</a>]</td>
 <td><div class="info">
 Input JSON data of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a>.
+</div>
+</td></tr>
+<tr><td><a href="Data.html#VALread_snapshot">read_snapshot</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Input JSON data of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>.
 </div>
 </td></tr>
 <tr><td><a href="Trace.html#VALread_step">read_step</a> [<a href="Trace.html">Trace</a>]</td>
@@ -3035,6 +3054,11 @@ not tail rec but don't allocate if unecessary
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALsmash_reactions">smash_reactions</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALsnapshot_of_string">snapshot_of_string</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Deserialize JSON data of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Pattern.Env.html#VALsons">sons</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
 <td></td></tr>
 <tr><td><a href="Agent.html#VALsort">sort</a> [<a href="Agent.html">Agent</a>]</td>
@@ -3130,11 +3154,23 @@ Serialize a value of type <a href="Primitives.html#TYPEflux_kind"><code class="c
       into a JSON string.
 </div>
 </td></tr>
+<tr><td><a href="Data.html#VALstring_of_flux_map">string_of_flux_map</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Serialize a value of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>
+      into a JSON string.
+</div>
+</td></tr>
 <tr><td><a href="Priority.html#VALstring_of_level">string_of_level</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
 <tr><td><a href="Locality.html#VALstring_of_range">string_of_range</a> [<a href="Locality.html">Locality</a>]</td>
 <td><div class="info">
 Serialize a value of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a> into a JSON string.
+</div>
+</td></tr>
+<tr><td><a href="Data.html#VALstring_of_snapshot">string_of_snapshot</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Serialize a value of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>
+      into a JSON string.
 </div>
 </td></tr>
 <tr><td><a href="Trace.html#VALstring_of_step">string_of_step</a> [<a href="Trace.html">Trace</a>]</td>
@@ -3409,11 +3445,11 @@ compute the weak compression of a given trace,
 </td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_flux">with_flux</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
-<tr><td><a href="Kappa_files.html#VALwith_json_cflow">with_json_cflow</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
-<td></td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_marshalized">with_marshalized</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_snapshot">with_snapshot</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
+<td></td></tr>
+<tr><td><a href="Kappa_files.html#VALwrap_formatter">wrap_formatter</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
 <tr><td><a href="User_graph.html#VALwrite_connected_component">write_connected_component</a> [<a href="User_graph.html">User_graph</a>]</td>
 <td><div class="info">
@@ -3425,9 +3461,19 @@ Output a JSON value of type <a href="User_graph.html#TYPEconnected_component"><c
 Output a JSON value of type <a href="Primitives.html#TYPEflux_kind"><code class="code"><span class="constructor">Primitives</span>.flux_kind</code></a>.
 </div>
 </td></tr>
+<tr><td><a href="Data.html#VALwrite_flux_map">write_flux_map</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Output a JSON value of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Locality.html#VALwrite_range">write_range</a> [<a href="Locality.html">Locality</a>]</td>
 <td><div class="info">
 Output a JSON value of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a>.
+</div>
+</td></tr>
+<tr><td><a href="Data.html#VALwrite_snapshot">write_snapshot</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Output a JSON value of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>.
 </div>
 </td></tr>
 <tr><td><a href="Trace.html#VALwrite_step">write_step</a> [<a href="Trace.html">Trace</a>]</td>

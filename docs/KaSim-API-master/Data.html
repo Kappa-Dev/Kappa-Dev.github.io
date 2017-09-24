@@ -112,47 +112,44 @@ Must have length &gt;= 1 (at least <code class="code"><span class="constructor">
 </div>
 <hr width="100%">
 
-<pre><code><span id="TYPEgeneric_snapshot"><span class="keyword">type</span> <code class="type">('agent, 'token)</code> generic_snapshot</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_file">snapshot_file</span>&nbsp;: <code class="type">string</code>;</code></td>
+<code><span id="TYPEELTsnapshot.snapshot_file">snapshot_file</span>&nbsp;: <code class="type">string</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_event">snapshot_event</span>&nbsp;: <code class="type">int</code>;</code></td>
+<code><span id="TYPEELTsnapshot.snapshot_event">snapshot_event</span>&nbsp;: <code class="type">int</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_time">snapshot_time</span>&nbsp;: <code class="type">float</code>;</code></td>
+<code><span id="TYPEELTsnapshot.snapshot_time">snapshot_time</span>&nbsp;: <code class="type">float</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_agents">snapshot_agents</span>&nbsp;: <code class="type">'agent list</code>;</code></td>
+<code><span id="TYPEELTsnapshot.snapshot_agents">snapshot_agents</span>&nbsp;: <code class="type">(int * <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a>) list</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTgeneric_snapshot.snapshot_tokens">snapshot_tokens</span>&nbsp;: <code class="type">'token array</code>;</code></td>
+<code><span id="TYPEELTsnapshot.snapshot_tokens">snapshot_tokens</span>&nbsp;: <code class="type">(string * <a href="Nbr.html#TYPEt">Nbr.t</a>) array</code>;</code></td>
 
 </tr></table>
 }
 
-
-
-<pre><span id="TYPEsnapshot"><span class="keyword">type</span> <code class="type"></code>snapshot</span> = <code class="type">(int * <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a>, string * <a href="Nbr.html#TYPEt">Nbr.t</a>) <a href="Data.html#TYPEgeneric_snapshot">generic_snapshot</a></code> </pre>
 
 
 <pre><code><span id="TYPEflux_data"><span class="keyword">type</span> <code class="type"></code>flux_data</span> = {</code></pre><table class="typetable">
@@ -304,4 +301,46 @@ Must have length &gt;= 1 (at least <code class="code"><span class="constructor">
 
 
 <pre><span id="VALprint_snapshot"><span class="keyword">val</span> print_snapshot</span> : <code class="type">?uuid:int -> Format.formatter -> <a href="Data.html#TYPEsnapshot">snapshot</a> -> unit</code></pre>
-<pre><span id="VALprint_dot_snapshot"><span class="keyword">val</span> print_dot_snapshot</span> : <code class="type">?uuid:int -> Format.formatter -> <a href="Data.html#TYPEsnapshot">snapshot</a> -> unit</code></pre></body></html>
+<pre><span id="VALprint_dot_snapshot"><span class="keyword">val</span> print_dot_snapshot</span> : <code class="type">?uuid:int -> Format.formatter -> <a href="Data.html#TYPEsnapshot">snapshot</a> -> unit</code></pre>
+<pre><span id="VALwrite_snapshot"><span class="keyword">val</span> write_snapshot</span> : <code class="type">Bi_outbuf.t -> <a href="Data.html#TYPEsnapshot">snapshot</a> -> unit</code></pre><div class="info ">
+Output a JSON value of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>.<br>
+</div>
+
+<pre><span id="VALstring_of_snapshot"><span class="keyword">val</span> string_of_snapshot</span> : <code class="type">?len:int -> <a href="Data.html#TYPEsnapshot">snapshot</a> -> string</code></pre><div class="info ">
+Serialize a value of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>
+      into a JSON string.<br>
+</div>
+<div class="param_info"><code class="code">len</code> : specifies the initial length
+                 of the buffer used internally.
+                 Default: 1024.</div>
+
+<pre><span id="VALread_snapshot"><span class="keyword">val</span> read_snapshot</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Data.html#TYPEsnapshot">snapshot</a></code></pre><div class="info ">
+Input JSON data of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>.<br>
+</div>
+
+<pre><span id="VALsnapshot_of_string"><span class="keyword">val</span> snapshot_of_string</span> : <code class="type">string -> <a href="Data.html#TYPEsnapshot">snapshot</a></code></pre><div class="info ">
+Deserialize JSON data of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>.<br>
+</div>
+
+<pre><span id="VALprint_dot_flux_map"><span class="keyword">val</span> print_dot_flux_map</span> : <code class="type">?uuid:int -> Format.formatter -> <a href="Data.html#TYPEflux_map">flux_map</a> -> unit</code></pre>
+<pre><span id="VALprint_html_flux_map"><span class="keyword">val</span> print_html_flux_map</span> : <code class="type">Format.formatter -> <a href="Data.html#TYPEflux_map">flux_map</a> -> unit</code></pre>
+<pre><span id="VALwrite_flux_map"><span class="keyword">val</span> write_flux_map</span> : <code class="type">Bi_outbuf.t -> <a href="Data.html#TYPEflux_map">flux_map</a> -> unit</code></pre><div class="info ">
+Output a JSON value of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.<br>
+</div>
+
+<pre><span id="VALstring_of_flux_map"><span class="keyword">val</span> string_of_flux_map</span> : <code class="type">?len:int -> <a href="Data.html#TYPEflux_map">flux_map</a> -> string</code></pre><div class="info ">
+Serialize a value of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>
+      into a JSON string.<br>
+</div>
+<div class="param_info"><code class="code">len</code> : specifies the initial length
+                 of the buffer used internally.
+                 Default: 1024.</div>
+
+<pre><span id="VALread_flux_map"><span class="keyword">val</span> read_flux_map</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Data.html#TYPEflux_map">flux_map</a></code></pre><div class="info ">
+Input JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.<br>
+</div>
+
+<pre><span id="VALflux_map_of_string"><span class="keyword">val</span> flux_map_of_string</span> : <code class="type">string -> <a href="Data.html#TYPEflux_map">flux_map</a></code></pre><div class="info ">
+Deserialize JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.<br>
+</div>
+</body></html>

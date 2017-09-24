@@ -97,16 +97,13 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>token)&nbsp;generic_snapshot&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;snapshot_file&nbsp;:&nbsp;string;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;snapshot_event&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;snapshot_time&nbsp;:&nbsp;float;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snapshot_agents&nbsp;:&nbsp;<span class="keywordsign">'</span>agent&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;snapshot_tokens&nbsp;:&nbsp;<span class="keywordsign">'</span>token&nbsp;array;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_agents&nbsp;:&nbsp;(int&nbsp;*&nbsp;<span class="constructor">User_graph</span>.connected_component)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;snapshot_tokens&nbsp;:&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;array;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;snapshot&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(int&nbsp;*&nbsp;<span class="constructor">User_graph</span>.connected_component,&nbsp;string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Data</span>.generic_snapshot<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;flux_data&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;flux_name&nbsp;:&nbsp;string;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;flux_kind&nbsp;:&nbsp;<span class="constructor">Primitives</span>.flux_kind;<br>
@@ -135,4 +132,17 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_snapshot&nbsp;:&nbsp;?uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot_snapshot&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;write_snapshot&nbsp;:&nbsp;<span class="constructor">Bi_outbuf</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_snapshot&nbsp;:&nbsp;?len:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;read_snapshot&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;snapshot_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot_flux_map&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_html_flux_map&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;write_flux_map&nbsp;:&nbsp;<span class="constructor">Bi_outbuf</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_flux_map&nbsp;:&nbsp;?len:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;read_flux_map&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flux_map_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
 <span class="keyword">end</span></code></body></html>
