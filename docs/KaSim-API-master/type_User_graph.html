@@ -97,11 +97,12 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cc_site&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;site_name&nbsp;:&nbsp;string;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;site_links&nbsp;:&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;site_states&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cc_port&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port_links&nbsp;:&nbsp;(int&nbsp;*&nbsp;int)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;port_states&nbsp;:&nbsp;string&nbsp;list;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;site&nbsp;=&nbsp;<span class="constructor">Port</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">User_graph</span>.cc_port&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Counter</span>&nbsp;<span class="keyword">of</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cc_site&nbsp;=&nbsp;{&nbsp;site_name&nbsp;:&nbsp;string;&nbsp;site_type&nbsp;:&nbsp;<span class="constructor">User_graph</span>.site;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;cc_node&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;node_type&nbsp;:&nbsp;string;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;node_sites&nbsp;:&nbsp;<span class="constructor">User_graph</span>.cc_site&nbsp;array;<br>
