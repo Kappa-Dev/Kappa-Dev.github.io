@@ -187,6 +187,8 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALadd_oriented_relation">add_oriented_relation</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALadd_plot_line">add_plot_line</a> [<a href="Data.html">Data</a>]</td>
+<td></td></tr>
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALadd_relation">add_relation</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
 <td></td></tr>
 <tr><td><a href="Communication.html#VALadd_rule">add_rule</a> [<a href="Communication.html">Communication</a>]</td>
@@ -892,6 +894,8 @@ Show the current status of the branch and cut assumptions in a libreoffice macro
 </td></tr>
 <tr><td><a href="Odes.Make.html#VALexport_network">export_network</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALexport_plot">export_plot</a> [<a href="Data.html">Data</a>]</td>
+<td></td></tr>
 <tr><td><a href="Utilities.html#VALexport_story_table">export_story_table</a> [<a href="Utilities.html">Utilities</a>]</td>
 <td><div class="info">
 convert a table into a list of grid (with runtime information)
@@ -1529,6 +1533,8 @@ Infer agent signatures and tokens from init, rules and perturbations
 <tr><td><a href="Odes.Make.html#VALinit_bwd_bisim_info">init_bwd_bisim_info</a> [<a href="Odes.Make.html">Odes.Make</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALinit_bwd_bisim_info">init_bwd_bisim_info</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<td></td></tr>
+<tr><td><a href="Data.html#VALinit_plot">init_plot</a> [<a href="Data.html">Data</a>]</td>
 <td></td></tr>
 <tr><td><a href="Compression_main.html#VALinit_secret_log_info">init_secret_log_info</a> [<a href="Compression_main.html">Compression_main</a>]</td>
 <td></td></tr>
@@ -2373,6 +2379,11 @@ partition_set f set is the map mapping any element b with an antecedent for f in
 <td></td></tr>
 <tr><td><a href="Pp.html#VALplain_array">plain_array</a> [<a href="Pp.html">Pp</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALplot_of_string">plot_of_string</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Deserialize JSON data of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Counter.html#VALplot_period">plot_period</a> [<a href="Counter.html">Counter</a>]</td>
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALpop">pop</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
@@ -2611,6 +2622,10 @@ Prints nothing in case of infinity or Not a Number
 <td></td></tr>
 <tr><td><a href="Edges.html#VALprint_path">print_path</a> [<a href="Edges.html">Edges</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALprint_plot_legend">print_plot_legend</a> [<a href="Data.html">Data</a>]</td>
+<td></td></tr>
+<tr><td><a href="Data.html#VALprint_plot_line">print_plot_line</a> [<a href="Data.html">Data</a>]</td>
+<td></td></tr>
 <tr><td><a href="LKappa.html#VALprint_rates">print_rates</a> [<a href="LKappa.html">LKappa</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#VALprint_rev_dep">print_rev_dep</a> [<a href="Operator.html">Operator</a>]</td>
@@ -2745,6 +2760,11 @@ Input JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><spa
 </td></tr>
 <tr><td><a href="Tools.html#VALread_input">read_input</a> [<a href="Tools.html">Tools</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALread_plot">read_plot</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Input JSON data of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>.
+</div>
+</td></tr>
 <tr><td><a href="Locality.html#VALread_range">read_range</a> [<a href="Locality.html">Locality</a>]</td>
 <td><div class="info">
 Input JSON data of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a>.
@@ -3160,6 +3180,12 @@ Serialize a value of type <a href="Data.html#TYPEflux_map"><code class="code"><s
 </td></tr>
 <tr><td><a href="Priority.html#VALstring_of_level">string_of_level</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
+<tr><td><a href="Data.html#VALstring_of_plot">string_of_plot</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Serialize a value of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>
+      into a JSON string.
+</div>
+</td></tr>
 <tr><td><a href="Locality.html#VALstring_of_range">string_of_range</a> [<a href="Locality.html">Locality</a>]</td>
 <td><div class="info">
 Serialize a value of type <a href="Locality.html#TYPEt"><code class="code"><span class="constructor">Locality</span>.t</code></a> into a JSON string.
@@ -3462,6 +3488,11 @@ Output a JSON value of type <a href="Primitives.html#TYPEflux_kind"><code class=
 <tr><td><a href="Data.html#VALwrite_flux_map">write_flux_map</a> [<a href="Data.html">Data</a>]</td>
 <td><div class="info">
 Output a JSON value of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.
+</div>
+</td></tr>
+<tr><td><a href="Data.html#VALwrite_plot">write_plot</a> [<a href="Data.html">Data</a>]</td>
+<td><div class="info">
+Output a JSON value of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>.
 </div>
 </td></tr>
 <tr><td><a href="Locality.html#VALwrite_range">write_range</a> [<a href="Locality.html">Locality</a>]</td>

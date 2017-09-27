@@ -343,4 +343,48 @@ Input JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><spa
 <pre><span id="VALflux_map_of_string"><span class="keyword">val</span> flux_map_of_string</span> : <code class="type">string -> <a href="Data.html#TYPEflux_map">flux_map</a></code></pre><div class="info ">
 Deserialize JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.<br>
 </div>
-</body></html>
+
+<pre><code><span id="TYPEplot"><span class="keyword">type</span> <code class="type"></code>plot</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTplot.plot_legend">plot_legend</span>&nbsp;: <code class="type">string array</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTplot.plot_series">plot_series</span>&nbsp;: <code class="type">float option array list</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALadd_plot_line"><span class="keyword">val</span> add_plot_line</span> : <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a> array -> <a href="Data.html#TYPEplot">plot</a> -> <a href="Data.html#TYPEplot">plot</a></code></pre>
+<pre><span id="VALinit_plot"><span class="keyword">val</span> init_plot</span> : <code class="type"><a href="Model.html#TYPEt">Model.t</a> -> <a href="Data.html#TYPEplot">plot</a></code></pre>
+<pre><span id="VALwrite_plot"><span class="keyword">val</span> write_plot</span> : <code class="type">Bi_outbuf.t -> <a href="Data.html#TYPEplot">plot</a> -> unit</code></pre><div class="info ">
+Output a JSON value of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>.<br>
+</div>
+
+<pre><span id="VALstring_of_plot"><span class="keyword">val</span> string_of_plot</span> : <code class="type">?len:int -> <a href="Data.html#TYPEplot">plot</a> -> string</code></pre><div class="info ">
+Serialize a value of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>
+      into a JSON string.<br>
+</div>
+<div class="param_info"><code class="code">len</code> : specifies the initial length
+                 of the buffer used internally.
+                 Default: 1024.</div>
+
+<pre><span id="VALread_plot"><span class="keyword">val</span> read_plot</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Data.html#TYPEplot">plot</a></code></pre><div class="info ">
+Input JSON data of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>.<br>
+</div>
+
+<pre><span id="VALplot_of_string"><span class="keyword">val</span> plot_of_string</span> : <code class="type">string -> <a href="Data.html#TYPEplot">plot</a></code></pre><div class="info ">
+Deserialize JSON data of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>.<br>
+</div>
+
+<pre><span id="VALprint_plot_legend"><span class="keyword">val</span> print_plot_legend</span> : <code class="type">is_tsv:bool -> Format.formatter -> string array -> unit</code></pre>
+<pre><span id="VALprint_plot_line"><span class="keyword">val</span> print_plot_line</span> : <code class="type">is_tsv:bool -><br>       (Format.formatter -> 'a -> unit) -> Format.formatter -> 'a array -> unit</code></pre>
+<pre><span id="VALexport_plot"><span class="keyword">val</span> export_plot</span> : <code class="type">is_tsv:bool -> <a href="Data.html#TYPEplot">plot</a> -> string</code></pre></body></html>

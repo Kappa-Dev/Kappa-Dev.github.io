@@ -145,4 +145,20 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;read_flux_map&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flux_map_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;plot&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;plot_legend&nbsp;:&nbsp;string&nbsp;array;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;plot_series&nbsp;:&nbsp;float&nbsp;option&nbsp;array&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_plot_line&nbsp;:&nbsp;<span class="constructor">Nbr</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.plot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.plot<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init_plot&nbsp;:&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.plot<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;write_plot&nbsp;:&nbsp;<span class="constructor">Bi_outbuf</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.plot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_plot&nbsp;:&nbsp;?len:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.plot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;read_plot&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.plot<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;plot_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.plot<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_plot_legend&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is_tsv:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_plot_line&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is_tsv:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;export_plot&nbsp;:&nbsp;is_tsv:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.plot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
 <span class="keyword">end</span></code></body></html>
