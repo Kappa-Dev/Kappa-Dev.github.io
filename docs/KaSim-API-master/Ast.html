@@ -746,7 +746,9 @@ Infer agent signatures and tokens from init, rules and perturbations<br>
 <pre><span id="VALprint_ast_mix"><span class="keyword">val</span> print_ast_mix</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEmixture">mixture</a> -> unit</code></pre>
 <pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALprint_ast_edit_rule"><span class="keyword">val</span> print_ast_edit_rule</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEedit_rule">edit_rule</a> -> unit</code></pre>
+<pre><span id="VALprint_ast_edit_rule_no_rate"><span class="keyword">val</span> print_ast_edit_rule_no_rate</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEedit_rule">edit_rule</a> -> unit</code></pre>
 <pre><span id="VALprint_ast_rule_no_rate"><span class="keyword">val</span> print_ast_rule_no_rate</span> : <code class="type">reverse:bool -> Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
+<pre><span id="VALprint_ast_rule_no_rate_kasa"><span class="keyword">val</span> print_ast_rule_no_rate_kasa</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALlink_to_json"><span class="keyword">val</span> link_to_json</span> : <code class="type">('a -> 'a -> Yojson.Basic.json) -><br>       ('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json list) -> ('a, 'b) <a href="Ast.html#TYPElink">link</a> -> Yojson.Basic.json</code></pre><div class="info ">
 Fragile: the list MUST NOT be a singleton<br>
 </div>
