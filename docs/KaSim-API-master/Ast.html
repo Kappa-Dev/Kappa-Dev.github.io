@@ -317,36 +317,73 @@ port * agent_type<br>
 <pre><span id="TYPEmixture"><span class="keyword">type</span> <code class="type"></code>mixture</span> = <code class="type"><a href="Ast.html#TYPEagent">agent</a> list</code> </pre>
 
 
-<pre><code><span id="TYPEedit_rule"><span class="keyword">type</span> <code class="type"></code>edit_rule</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEedit_notation"><span class="keyword">type</span> <code class="type"></code>edit_notation</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTedit_rule.mix">mix</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEmixture">mixture</a></code>;</code></td>
+<code><span id="TYPEELTedit_notation.mix">mix</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEmixture">mixture</a></code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTedit_rule.delta_token">delta_token</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>)<br>       list</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTedit_rule.act">act</span>&nbsp;: <code class="type">(<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTedit_rule.un_act">un_act</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>        (<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> option)<br>       option</code>;</code></td>
+<code><span id="TYPEELTedit_notation.delta_token">delta_token</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>)<br>       list</code>;</code></td>
 
 </tr></table>
 }
+
+
+
+<pre><code><span id="TYPEarrow_notation"><span class="keyword">type</span> <code class="type"></code>arrow_notation</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarrow_notation.lhs">lhs</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEmixture">mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarrow_notation.rm_token">rm_token</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>)<br>       list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarrow_notation.rhs">rhs</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEmixture">mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarrow_notation.add_token">add_token</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>)<br>       list</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPErule_content"><span class="keyword">type</span> <code class="type"></code>rule_content</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_content.Edit"><span class="constructor">Edit</span></span> <span class="keyword">of</span> <code class="type"><a href="Ast.html#TYPEedit_notation">edit_notation</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule_content.Arrow"><span class="constructor">Arrow</span></span> <span class="keyword">of</span> <code class="type"><a href="Ast.html#TYPEarrow_notation">arrow_notation</a></code></code></td>
+
+</tr></table>
 
 
 
@@ -355,14 +392,7 @@ port * agent_type<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTrule.lhs">lhs</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEmixture">mixture</a></code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.rm_token">rm_token</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>)<br>       list</code>;</code></td>
+<code><span id="TYPEELTrule.rewrite">rewrite</span>&nbsp;: <code class="type"><a href="Ast.html#TYPErule_content">rule_content</a></code>;</code></td>
 
 </tr>
 <tr>
@@ -370,20 +400,6 @@ port * agent_type<br>
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
 <code><span id="TYPEELTrule.bidirectional">bidirectional</span>&nbsp;: <code class="type">bool</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.rhs">rhs</span>&nbsp;: <code class="type"><a href="Ast.html#TYPEmixture">mixture</a></code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTrule.add_token">add_token</span>&nbsp;: <code class="type">((<a href="Ast.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>)<br>       list</code>;</code></td>
 
 </tr>
 <tr>
@@ -636,7 +652,7 @@ port * agent_type<br>
 
 
 
-<pre><code><span id="TYPEcompil"><span class="keyword">type</span> <code class="type">('agent, 'pattern, 'mixture, 'id, 'rule, 'edit_rule)</code> compil</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEcompil"><span class="keyword">type</span> <code class="type">('agent, 'pattern, 'mixture, 'id, 'rule)</code> compil</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
@@ -668,16 +684,6 @@ agent signature declaration<br>
 <code><span id="TYPEELTcompil.rules">rules</span>&nbsp;: <code class="type">(string <a href="Locality.html#TYPEannot">Locality.annot</a> option * 'rule <a href="Locality.html#TYPEannot">Locality.annot</a>) list</code>;</code></td>
 <td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
 rules (possibly named)<br>
-</div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTcompil.edit_rules">edit_rules</span>&nbsp;: <code class="type">(string <a href="Locality.html#TYPEannot">Locality.annot</a> option * 'edit_rule <a href="Locality.html#TYPEannot">Locality.annot</a>) list</code>;</code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-rules with explicit modifications<br>
 </div>
 </td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
 </tr>
@@ -727,7 +733,7 @@ rules with explicit modifications<br>
 
 
 
-<pre><span id="TYPEparsing_compil"><span class="keyword">type</span> <code class="type"></code>parsing_compil</span> = <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>, <a href="Ast.html#TYPEedit_rule">edit_rule</a>)<br>       <a href="Ast.html#TYPEcompil">compil</a></code> </pre>
+<pre><span id="TYPEparsing_compil"><span class="keyword">type</span> <code class="type"></code>parsing_compil</span> = <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">compil</a></code> </pre>
 
 
 <pre><span id="VALempty_compil"><span class="keyword">val</span> empty_compil</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a></code></pre>
@@ -745,10 +751,7 @@ Infer agent signatures and tokens from init, rules and perturbations<br>
 <pre><span id="VALprint_link"><span class="keyword">val</span> print_link</span> : <code class="type">syntax_version:<a href="Ast.html#TYPEsyntax_version">syntax_version</a> -><br>       ('a -> Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Ast.html#TYPElink">link</a> -> unit</code></pre>
 <pre><span id="VALprint_ast_mix"><span class="keyword">val</span> print_ast_mix</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEmixture">mixture</a> -> unit</code></pre>
 <pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
-<pre><span id="VALprint_ast_edit_rule"><span class="keyword">val</span> print_ast_edit_rule</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEedit_rule">edit_rule</a> -> unit</code></pre>
-<pre><span id="VALprint_ast_edit_rule_no_rate"><span class="keyword">val</span> print_ast_edit_rule_no_rate</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEedit_rule">edit_rule</a> -> unit</code></pre>
-<pre><span id="VALprint_ast_rule_no_rate"><span class="keyword">val</span> print_ast_rule_no_rate</span> : <code class="type">reverse:bool -> Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
-<pre><span id="VALprint_ast_rule_no_rate_kasa"><span class="keyword">val</span> print_ast_rule_no_rate_kasa</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
+<pre><span id="VALprint_rule_content"><span class="keyword">val</span> print_rule_content</span> : <code class="type">bidirectional:bool -> Format.formatter -> <a href="Ast.html#TYPErule_content">rule_content</a> -> unit</code></pre>
 <pre><span id="VALlink_to_json"><span class="keyword">val</span> link_to_json</span> : <code class="type">('a -> 'a -> Yojson.Basic.json) -><br>       ('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json list) -> ('a, 'b) <a href="Ast.html#TYPElink">link</a> -> Yojson.Basic.json</code></pre><div class="info ">
 Fragile: the list MUST NOT be a singleton<br>
 </div>

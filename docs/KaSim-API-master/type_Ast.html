@@ -125,30 +125,29 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent_mod&nbsp;=&nbsp;<span class="constructor">Erase</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Create</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent&nbsp;=&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.site&nbsp;list&nbsp;*&nbsp;<span class="constructor">Ast</span>.agent_mod&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mixture&nbsp;=&nbsp;<span class="constructor">Ast</span>.agent&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;edit_rule&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;edit_notation&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;mix&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;delta_token&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;act&nbsp;:&nbsp;(<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;un_act&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;arrow_notation&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;lhs&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rm_token&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;bidirectional&nbsp;:&nbsp;bool;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rhs&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;add_token&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule_content&nbsp;=&nbsp;<span class="constructor">Edit</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ast</span>.edit_notation&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Arrow</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ast</span>.arrow_notation<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rewrite&nbsp;:&nbsp;<span class="constructor">Ast</span>.rule_content;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bidirectional&nbsp;:&nbsp;bool;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;k_def&nbsp;:&nbsp;(<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;k_un&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ast</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*<br>
@@ -210,13 +209,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">RUN</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;<span class="constructor">Locality</span>.annot<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">MODIFY</span>&nbsp;<span class="keyword">of</span>&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.modif_expr&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">QUIT</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id,&nbsp;<span class="keywordsign">'</span>rule,&nbsp;<span class="keywordsign">'</span>edit_rule)&nbsp;compil&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id,&nbsp;<span class="keywordsign">'</span>rule)&nbsp;compil&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;filenames&nbsp;:&nbsp;string&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;variables&nbsp;:&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.variable_def&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;signatures&nbsp;:&nbsp;<span class="keywordsign">'</span>agent&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rules&nbsp;:&nbsp;(string&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option&nbsp;*&nbsp;<span class="keywordsign">'</span>rule&nbsp;<span class="constructor">Locality</span>.annot)&nbsp;list;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;edit_rules&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option&nbsp;*&nbsp;<span class="keywordsign">'</span>edit_rule&nbsp;<span class="constructor">Locality</span>.annot)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;observables&nbsp;:&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;init&nbsp;:&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.init_statment&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;perturbations&nbsp;:&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>id)&nbsp;<span class="constructor">Ast</span>.perturbation&nbsp;list;<br>
@@ -225,8 +222,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;volumes&nbsp;:&nbsp;(string&nbsp;*&nbsp;float&nbsp;*&nbsp;string)&nbsp;list;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;parsing_compil&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule,&nbsp;<span class="constructor">Ast</span>.edit_rule)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ast</span>.compil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ast</span>.agent,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;<span class="constructor">Ast</span>.mixture,&nbsp;string,&nbsp;<span class="constructor">Ast</span>.rule)&nbsp;<span class="constructor">Ast</span>.compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_compil&nbsp;:&nbsp;<span class="constructor">Ast</span>.parsing_compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;no_more_site_on_right&nbsp;:&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.site&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.site&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;split_mixture&nbsp;:<br>
@@ -240,11 +236,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Ast</span>.link&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_mix&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_rule&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_edit_rule&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.edit_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_edit_rule_no_rate&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.edit_rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_rule_no_rate&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;reverse:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_ast_rule_no_rate_kasa&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_content&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bidirectional:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.rule_content&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;link_to_json&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json)&nbsp;<span class="keywordsign">-&gt;</span><br>
