@@ -311,7 +311,22 @@ port * agent_type<br>
 
 
 
-<pre><span id="TYPEagent"><span class="keyword">type</span> <code class="type"></code>agent</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> * <a href="Ast.html#TYPEsite">site</a> list * <a href="Ast.html#TYPEagent_mod">agent_mod</a> option</code> </pre>
+<pre><code><span id="TYPEagent"><span class="keyword">type</span> <code class="type"></code>agent</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTagent.Present"><span class="constructor">Present</span></span> <span class="keyword">of</span> <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> * <a href="Ast.html#TYPEsite">site</a> list * <a href="Ast.html#TYPEagent_mod">agent_mod</a> option</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTagent.Absent"><span class="constructor">Absent</span></span> <span class="keyword">of</span> <code class="type"><a href="Locality.html#TYPEt">Locality.t</a></code></code></td>
+
+</tr></table>
+
 
 
 <pre><span id="TYPEmixture"><span class="keyword">type</span> <code class="type"></code>mixture</span> = <code class="type"><a href="Ast.html#TYPEagent">agent</a> list</code> </pre>

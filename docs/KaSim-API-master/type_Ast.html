@@ -123,7 +123,9 @@
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;site&nbsp;=&nbsp;<span class="constructor">Port</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ast</span>.port&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Counter</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ast</span>.counter<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent_mod&nbsp;=&nbsp;<span class="constructor">Erase</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Create</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent&nbsp;=&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.site&nbsp;list&nbsp;*&nbsp;<span class="constructor">Ast</span>.agent_mod&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Present</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="constructor">Locality</span>.annot&nbsp;*&nbsp;<span class="constructor">Ast</span>.site&nbsp;list&nbsp;*&nbsp;<span class="constructor">Ast</span>.agent_mod&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Absent</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Locality</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mixture&nbsp;=&nbsp;<span class="constructor">Ast</span>.agent&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;edit_notation&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;mix&nbsp;:&nbsp;<span class="constructor">Ast</span>.mixture;<br>
