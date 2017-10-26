@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim, KaSa, &#x0026; KaDE reference manual
-(release bc15886)</title> 
+(release 8b956fc)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim, KaSa, &#x0026; KaDE reference manual<br />
-(release bc15886)</h2>
+(release 8b956fc)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -6798,6 +6798,8 @@ General options
  <br />  --(no-)compute-ODE-flow-of-information    (default: disabled)
  <br />      Compute an approximation of the flow of information in the ODE
  <br />      semantics
+ <br />  --(no-)compute-potential-cycles    (default: disabled)
+ <br />      Compute the bonds that may be involved in polymerisation
  <br />  --(no-)compute-stochastic-flow-of-information    (default: disabled)
  <br />      Compute an approximation of the flow of information in the stochastic
  <br />      semantics
@@ -6814,11 +6816,11 @@ General options
  <br />Output
  <br />  --output-directory &#x003C;value&#x003E;
  <br />      Default repository for outputs
- <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
- <br />      put the contact map file in this directory
                                                                                   
 
                                                                                   
+ <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
+ <br />      put the contact map file in this directory
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
  <br />      file name for the contact map output
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
@@ -6858,11 +6860,11 @@ General options
  <br /> (default: Low)
  <br />      Tune the verbosity level for the reachability analysis
  <br />  --output-mode-for-reachability-analysis raw | kappa | english
- <br /> (default: kappa)
- <br />      post-process relation and output the result in the chosen format
                                                                                   
 
                                                                                   
+ <br /> (default: kappa)
+ <br />      post-process relation and output the result in the chosen format
  <br />
  <br />Trace analysis
  <br />  --(no-)compute-local-traces    (default: disabled)
@@ -6887,6 +6889,8 @@ General options
  <br />Contact map
  <br />  --(no-)compute-contact-map    (default: enabled)
  <br />      compute the contact map
+ <br />  --(no-)compute-potential-cycles    (default: disabled)
+ <br />      Compute the bonds that may be involved in polymerisation
  <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the contact map file in this directory
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
@@ -6900,13 +6904,13 @@ General options
  <br />Influence map
  <br />  --(no-)compute-influence-map    (default: enabled)
  <br />      compute the influence map
+                                                                                  
+
+                                                                                  
  <br />  --influence-map-accuracy-level Indirect | Direct | Realisable
  <br /> (default: Direct)
  <br />      Tune the accuracy level of the influence map
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
-                                                                                  
-
-                                                                                  
  <br />      put the influence map file in this directory
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
  <br />      file name for the influence map
@@ -6933,20 +6937,20 @@ General options
  <br />  --(no-)print-efficiency    (default: disabled)
  <br />      prompt CPU time and various datas
  <br />
- <br />(57 options)</div>
-<!--l. 149--><p class="nopar" >
+ <br />(59 options)</div>
+<!--l. 153--><p class="nopar" >
 <!--l. 1472--><p class="noindent" >Order in options matters, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
 <!--l. 1475--><p class="noindent" >More options are available in the OCaml ﬁle <span 
 class="ectt-1095">KaSa_rep/config/config.ml </span>and can be tuned
 before compilation.
-<!--l. 1477--><p class="noindent" >
-<h3 class="sectionHead"><span class="titlemark">5.2   </span> <a 
- id="x1-610005.2"></a>Graphical interface</h3>
                                                                                   
 
                                                                                   
+<!--l. 1477--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">5.2   </span> <a 
+ id="x1-610005.2"></a>Graphical interface</h3>
 <!--l. 1479--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">5.2.1   </span> <a 
  id="x1-620005.2.1"></a>Launching the interface</h4>
@@ -7445,9 +7449,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (bc15886) (without Tk interface)
- <br />Analysis launched at 2017/10/25 22:33:28 (GMT+0) on
- <br />testing-gce-e1cf8312-1616-4efd-a9ad-efcb0b55db01
+Kappa Static Analyzer (8b956fc) (without Tk interface)
+ <br />Analysis launched at 2017/10/26 15:45:15 (GMT+0) on
+ <br />testing-gce-df231e51-5206-464d-8fbc-780d4329bd08
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7623,9 +7627,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
-Kappa Static Analyzer (bc15886) (without Tk interface)
- <br />Analysis launched at 2017/10/25 22:33:28 (GMT+0) on
- <br />testing-gce-e1cf8312-1616-4efd-a9ad-efcb0b55db01
+Kappa Static Analyzer (8b956fc) (without Tk interface)
+ <br />Analysis launched at 2017/10/26 15:45:15 (GMT+0) on
+ <br />testing-gce-df231e51-5206-464d-8fbc-780d4329bd08
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -9405,9 +9409,9 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-12">
-Kappa Static Analyzer (bc15886) (without Tk interface)
- <br />Analysis launched at 2017/10/25 22:33:27 (GMT+0) on
- <br />testing-gce-e1cf8312-1616-4efd-a9ad-efcb0b55db01
+Kappa Static Analyzer (8b956fc) (without Tk interface)
+ <br />Analysis launched at 2017/10/26 15:45:14 (GMT+0) on
+ <br />testing-gce-df231e51-5206-464d-8fbc-780d4329bd08
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -10751,7 +10755,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">272088794</span><span 
+class="ectt-1095">917282538</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-84012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -10762,7 +10766,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;623524949&#x0022;</span><span 
+class="ectt-1095">&#x0022;565788236&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-84013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
