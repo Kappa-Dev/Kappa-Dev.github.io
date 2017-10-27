@@ -575,12 +575,12 @@ port * agent_type<br>
 <pre><span id="TYPEinit_statment"><span class="keyword">type</span> <code class="type">('pattern, 'mixture, 'id)</code> init_statment</span> = <code class="type">string <a href="Locality.html#TYPEannot">Locality.annot</a> option * ('pattern, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>       ('mixture, 'id) <a href="Ast.html#TYPEinit_t">init_t</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code> </pre>
 
 
-<pre><code><span id="TYPEinstruction"><span class="keyword">type</span> <code class="type">('pattern, 'mixture, 'id)</code> instruction</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEinstruction"><span class="keyword">type</span> <code class="type">('agent, 'pattern, 'mixture, 'id, 'rule)</code> instruction</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTinstruction.SIG"><span class="constructor">SIG</span></span> <span class="keyword">of</span> <code class="type"><a href="Ast.html#TYPEagent">agent</a></code></code></td>
+<code><span id="TYPEELTinstruction.SIG"><span class="constructor">SIG</span></span> <span class="keyword">of</span> <code class="type">'agent</code></code></td>
 
 </tr>
 <tr>
@@ -637,6 +637,13 @@ port * agent_type<br>
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
 <code><span id="TYPEELTinstruction.CONFIG"><span class="constructor">CONFIG</span></span> <span class="keyword">of</span> <code class="type"><a href="Ast.html#TYPEconfiguration">configuration</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinstruction.RULE"><span class="constructor">RULE</span></span> <span class="keyword">of</span> <code class="type">(string <a href="Locality.html#TYPEannot">Locality.annot</a> option * 'rule <a href="Locality.html#TYPEannot">Locality.annot</a>)</code></code></td>
 
 </tr></table>
 
@@ -749,6 +756,9 @@ rules (possibly named)<br>
 
 
 <pre><span id="TYPEparsing_compil"><span class="keyword">type</span> <code class="type"></code>parsing_compil</span> = <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>) <a href="Ast.html#TYPEcompil">compil</a></code> </pre>
+
+
+<pre><span id="TYPEparsing_instruction"><span class="keyword">type</span> <code class="type"></code>parsing_instruction</span> = <code class="type">(<a href="Ast.html#TYPEagent">agent</a>, <a href="Ast.html#TYPEmixture">mixture</a>, <a href="Ast.html#TYPEmixture">mixture</a>, string, <a href="Ast.html#TYPErule">rule</a>) <a href="Ast.html#TYPEinstruction">instruction</a></code> </pre>
 
 
 <pre><span id="VALempty_compil"><span class="keyword">val</span> empty_compil</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a></code></pre>
