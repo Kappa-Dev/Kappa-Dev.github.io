@@ -132,7 +132,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Raw_mixture</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">LKappa</span>.rule_agent&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;rule_agent_counters&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;ra&nbsp;:&nbsp;<span class="keywordsign">'</span>a;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;ra_counters&nbsp;:&nbsp;(<span class="constructor">Ast</span>.counter&nbsp;*&nbsp;<span class="constructor">LKappa</span>.switching)&nbsp;array;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ra_counters&nbsp;:&nbsp;(<span class="constructor">Ast</span>.counter&nbsp;*&nbsp;<span class="constructor">LKappa</span>.switching)&nbsp;option&nbsp;array;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;r_mix&nbsp;:&nbsp;<span class="constructor">LKappa</span>.rule_mixture;<br>
