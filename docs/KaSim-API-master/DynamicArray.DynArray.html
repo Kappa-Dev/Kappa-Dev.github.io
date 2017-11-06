@@ -138,7 +138,7 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.default">default</span>&nbsp;: <code class="type">'a</code>;</code></td>
+<code><span id="TYPEELTt.default">default</span>&nbsp;: <code class="type">int -> 'a</code>;</code></td>
 
 </tr></table>
 }
@@ -148,10 +148,8 @@
 <pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">int -> 'a -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
 <pre><span id="VALlength"><span class="keyword">val</span> length</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALexpand"><span class="keyword">val</span> expand</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALexpand_map"><span class="keyword">val</span> expand_map</span> : <code class="type">(int -> 'a) -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> int -> 'a</code></pre>
 <pre><span id="VALset"><span class="keyword">val</span> set</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> int -> 'a -> unit</code></pre>
-<pre><span id="VALset_with_map"><span class="keyword">val</span> set_with_map</span> : <code class="type">(int -> 'a) -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> int -> 'a -> unit</code></pre>
 <pre><span id="VALmake"><span class="keyword">val</span> make</span> : <code class="type">int -> 'a -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
 <pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">int -> (int -> 'a) -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
 <pre><span id="VALappend"><span class="keyword">val</span> append</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -><br>       'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
@@ -159,7 +157,7 @@
 <pre><span id="VALsub"><span class="keyword">val</span> sub</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> int -> int -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
 <pre><span id="VALcopy"><span class="keyword">val</span> copy</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
 <pre><span id="VALfill"><span class="keyword">val</span> fill</span> : <code class="type">'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> int -> int -> 'a -> unit</code></pre>
-<pre><span id="VALof_list"><span class="keyword">val</span> of_list</span> : <code class="type">'a list -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
+<pre><span id="VALof_list"><span class="keyword">val</span> of_list</span> : <code class="type">default:'a -> 'a list -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a></code></pre>
 <pre><span id="VALiter"><span class="keyword">val</span> iter</span> : <code class="type">('a -> unit) -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALiteri"><span class="keyword">val</span> iteri</span> : <code class="type">(int -> 'a -> unit) -> 'a <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALfold_lefti"><span class="keyword">val</span> fold_lefti</span> : <code class="type">(int -> 'a -> 'b -> 'a) -> 'a -> 'b <a href="DynamicArray.DynArray.html#TYPEt">t</a> -> 'a</code></pre>

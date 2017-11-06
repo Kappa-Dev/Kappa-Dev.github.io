@@ -134,7 +134,7 @@ Store of all the agents<br>
 </div>
 
 
-<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">bool -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>        (unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * (string <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>) list *<br>         (int * int) option)<br>        <a href="NamedDecls.html#TYPEt">NamedDecls.t</a>)<br>       array -> <a href="Signature.html#TYPEs">s</a></code></pre>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">counters:(string <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a> list) list -><br>       bool -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> *<br>        (unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> * (string <a href="Locality.html#TYPEannot">Locality.annot</a> * string <a href="Locality.html#TYPEannot">Locality.annot</a>) list *<br>         (int * int) option)<br>        <a href="NamedDecls.html#TYPEt">NamedDecls.t</a>)<br>       list -> <a href="Signature.html#TYPEs">s</a></code></pre>
 <pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int</code></pre>
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> <a href="Signature.html#TYPEt">t</a></code></pre><div class="info ">
 <code class="code">get sigs agent_id</code><br>
@@ -179,5 +179,10 @@ prints both the site and its internal state if it is not <code class="code"><spa
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> <a href="Signature.html#TYPEs">s</a> -> unit</code></pre>
 <pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Signature.html#TYPEs">s</a></code></pre>
-<pre><span id="VALis_counter"><span class="keyword">val</span> is_counter</span> : <code class="type">int -> <a href="Signature.html#TYPEs">s</a> option -> bool</code></pre>
-<pre><span id="VALsite_is_counter"><span class="keyword">val</span> site_is_counter</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> int -> bool</code></pre></body></html>
+<pre><span id="VALis_counter_agent"><span class="keyword">val</span> is_counter_agent</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> option -> int -> bool</code></pre>
+<pre><span id="VALports_if_counter_agent"><span class="keyword">val</span> ports_if_counter_agent</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> (int * int) option</code></pre>
+<pre><span id="VALsite_is_counter"><span class="keyword">val</span> site_is_counter</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int -> int -> bool</code></pre>
+<pre><span id="VALincr_agent"><span class="keyword">val</span> incr_agent</span> : <code class="type"><a href="Signature.html#TYPEs">s</a> -> int * int * int * int</code></pre><div class="info ">
+id, arity, before, after<br>
+</div>
+</body></html>
