@@ -108,10 +108,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;node_sites&nbsp;:&nbsp;<span class="constructor">User_graph</span>.cc_site&nbsp;array;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;connected_component&nbsp;=&nbsp;<span class="constructor">User_graph</span>.cc_node&nbsp;array<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_cc&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;explicit_free:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;compact:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_cc&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot_cc&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;write_connected_component&nbsp;:<br>
