@@ -109,7 +109,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;init&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.connected_component&nbsp;array&nbsp;list,&nbsp;int)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.rule&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.rule)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_cache&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.cache<br>
@@ -307,12 +307,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Contact_map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>b&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>b&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_of_initial_state&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.cache&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>b&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>b&nbsp;*&nbsp;<span class="constructor">Primitives</span>.elementary_rule)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.cache&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;detect_symmetries&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
