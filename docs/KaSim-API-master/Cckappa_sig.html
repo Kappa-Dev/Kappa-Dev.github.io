@@ -1,0 +1,696 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Ckappa_sig.html">
+<link rel="next" href="Build_graph.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Pp" rel="Chapter" href="Pp.html">
+<link title="Pp_svg" rel="Chapter" href="Pp_svg.html">
+<link title="Pp_html" rel="Chapter" href="Pp_html.html">
+<link title="GenArray" rel="Chapter" href="GenArray.html">
+<link title="LargeArray" rel="Chapter" href="LargeArray.html">
+<link title="DynamicArray" rel="Chapter" href="DynamicArray.html">
+<link title="SetMap" rel="Chapter" href="SetMap.html">
+<link title="Mods" rel="Chapter" href="Mods.html">
+<link title="List_util" rel="Chapter" href="List_util.html">
+<link title="Option_util" rel="Chapter" href="Option_util.html">
+<link title="Tools" rel="Chapter" href="Tools.html">
+<link title="IntCollection" rel="Chapter" href="IntCollection.html">
+<link title="Int_storage" rel="Chapter" href="Int_storage.html">
+<link title="ValMap" rel="Chapter" href="ValMap.html">
+<link title="Buffers" rel="Chapter" href="Buffers.html">
+<link title="Infinite_buffers" rel="Chapter" href="Infinite_buffers.html">
+<link title="Circular_buffers" rel="Chapter" href="Circular_buffers.html">
+<link title="Loggers" rel="Chapter" href="Loggers.html">
+<link title="Graph_loggers" rel="Chapter" href="Graph_loggers.html">
+<link title="Ode_loggers" rel="Chapter" href="Ode_loggers.html">
+<link title="Graph_json" rel="Chapter" href="Graph_json.html">
+<link title="Nbr" rel="Chapter" href="Nbr.html">
+<link title="Fractions" rel="Chapter" href="Fractions.html">
+<link title="Affine_combinations" rel="Chapter" href="Affine_combinations.html">
+<link title="NamedDecls" rel="Chapter" href="NamedDecls.html">
+<link title="Locality" rel="Chapter" href="Locality.html">
+<link title="Operator" rel="Chapter" href="Operator.html">
+<link title="Agent" rel="Chapter" href="Agent.html">
+<link title="Signature" rel="Chapter" href="Signature.html">
+<link title="Contact_map" rel="Chapter" href="Contact_map.html">
+<link title="Pattern" rel="Chapter" href="Pattern.html">
+<link title="Matching" rel="Chapter" href="Matching.html">
+<link title="Instantiation" rel="Chapter" href="Instantiation.html">
+<link title="Alg_expr" rel="Chapter" href="Alg_expr.html">
+<link title="Alg_expr_extra" rel="Chapter" href="Alg_expr_extra.html">
+<link title="Raw_mixture" rel="Chapter" href="Raw_mixture.html">
+<link title="Patterns_extra" rel="Chapter" href="Patterns_extra.html">
+<link title="Primitives" rel="Chapter" href="Primitives.html">
+<link title="Model" rel="Chapter" href="Model.html">
+<link title="Kappa_printer" rel="Chapter" href="Kappa_printer.html">
+<link title="Configuration" rel="Chapter" href="Configuration.html">
+<link title="Ast" rel="Chapter" href="Ast.html">
+<link title="LKappa" rel="Chapter" href="LKappa.html">
+<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Eval" rel="Chapter" href="Eval.html">
+<link title="Navigation" rel="Chapter" href="Navigation.html">
+<link title="User_graph" rel="Chapter" href="User_graph.html">
+<link title="Edges" rel="Chapter" href="Edges.html">
+<link title="Progress_report" rel="Chapter" href="Progress_report.html">
+<link title="Counter" rel="Chapter" href="Counter.html">
+<link title="Data" rel="Chapter" href="Data.html">
+<link title="Trace" rel="Chapter" href="Trace.html">
+<link title="Expr_interpreter" rel="Chapter" href="Expr_interpreter.html">
+<link title="Rule_interpreter" rel="Chapter" href="Rule_interpreter.html">
+<link title="State_interpreter" rel="Chapter" href="State_interpreter.html">
+<link title="Replay" rel="Chapter" href="Replay.html">
+<link title="Utilities" rel="Chapter" href="Utilities.html">
+<link title="Compression_main" rel="Chapter" href="Compression_main.html">
+<link title="Priority" rel="Chapter" href="Priority.html">
+<link title="Outputs" rel="Chapter" href="Outputs.html">
+<link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
+<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
+<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
+<link title="Odes" rel="Chapter" href="Odes.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
+<link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
+<link title="Build_graph" rel="Chapter" href="Build_graph.html">
+<link title="Analyzer" rel="Chapter" href="Analyzer.html">
+<link title="Analyzer_headers" rel="Chapter" href="Analyzer_headers.html">
+<link title="Analyzer_domain_sig" rel="Chapter" href="Analyzer_domain_sig.html">
+<link title="Communication" rel="Chapter" href="Communication.html">
+<link title="Composite_domain" rel="Chapter" href="Composite_domain.html">
+<link title="Product" rel="Chapter" href="Product.html">
+<link title="Usual_domains" rel="Chapter" href="Usual_domains.html">
+<link title="Rules_domain" rel="Chapter" href="Rules_domain.html">
+<link title="Views_domain" rel="Chapter" href="Views_domain.html">
+<link title="Agents_domain" rel="Chapter" href="Agents_domain.html">
+<link title="Static_contact_map_domain" rel="Chapter" href="Static_contact_map_domain.html">
+<link title="Dynamic_contact_map_domain" rel="Chapter" href="Dynamic_contact_map_domain.html">
+<link title="Parallel_bonds" rel="Chapter" href="Parallel_bonds.html">
+<link title="Site_across_bonds_domain" rel="Chapter" href="Site_across_bonds_domain.html">
+<link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
+<link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
+<link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
+<link title="Symmetries" rel="Chapter" href="Symmetries.html">
+<link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
+<link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
+<link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Cckappa_sig</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Ckappa_sig.html" title="Ckappa_sig">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Build_graph.html" title="Build_graph">Next</a>
+</div>
+<h1>Module <a href="type_Cckappa_sig.html">Cckappa_sig</a></h1>
+
+<pre><span class="keyword">module</span> Cckappa_sig: <code class="code"><span class="keyword">sig</span></code> <a href="Cckappa_sig.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+* cckappa_sig.mli
+  * openkappa
+  * Jérôme Feret, projet Abstraction/Antique, INRIA Paris-Rocquencourt
+  *
+  * Creation: January, the 17th of 2011
+  * Last modification: Time-stamp: &lt;Nov 11 2017&gt;
+  * *
+  * Signature for prepreprocessing language ckappa
+  *
+  * Copyright 2010,2011,2012,2013,2014 Institut National de Recherche en Informatique et
+  * en Automatique.  All rights reserved.  This file is distributed
+  * under the terms of the GNU Library General Public License<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEsite"><span class="keyword">type</span> <code class="type"></code>site</span> = <code class="type">(<a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a>, <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a>) <a href="Ckappa_sig.html#TYPEsite_type">Ckappa_sig.site_type</a></code> </pre>
+
+
+<pre><span id="TYPEstate_dic"><span class="keyword">type</span> <code class="type"></code>state_dic</span> = <code class="type">(unit, unit) Ckappa_sig.Dictionary_of_States.dictionary</code> </pre>
+
+
+<pre><code><span id="TYPEkappa_handler"><span class="keyword">type</span> <code class="type"></code>kappa_handler</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkappa_handler.nrules">nrules</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkappa_handler.nvars">nvars</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkappa_handler.nagents">nagents</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_name">Ckappa_sig.c_agent_name</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkappa_handler.agents_dic">agents_dic</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEagent_dic">Ckappa_sig.agent_dic</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkappa_handler.interface_constraints">interface_constraints</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEagent_specification">Ckappa_sig.agent_specification</a><br>       Ckappa_sig.Agent_type_nearly_Inf_Int_storage_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkappa_handler.sites">sites</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEsite_dic">Ckappa_sig.site_dic</a> Ckappa_sig.Agent_type_nearly_Inf_Int_storage_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkappa_handler.states_dic">states_dic</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEstate_dic">state_dic</a><br>       Ckappa_sig.Agent_type_site_nearly_Inf_Int_Int_storage_Imperatif_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTkappa_handler.dual">dual</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEc_agent_name">Ckappa_sig.c_agent_name</a> * <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a> * <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a>)<br>       Ckappa_sig.Agent_type_site_state_nearly_Inf_Int_Int_Int_storage_Imperatif_Imperatif_Imperatif.t</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEinterval"><span class="keyword">type</span> <code class="type">'a</code> interval</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinterval.min">min</span>&nbsp;: <code class="type">'a</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinterval.max">max</span>&nbsp;: <code class="type">'a</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEport"><span class="keyword">type</span> <code class="type">'state</code> port</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTport.site_name">site_name</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTport.site_position">site_position</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTport.site_free">site_free</span>&nbsp;: <code class="type">bool option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTport.site_state">site_state</span>&nbsp;: <code class="type">'state</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="TYPEinterface"><span class="keyword">type</span> <code class="type">'state</code> interface</span> = <code class="type">'state <a href="Cckappa_sig.html#TYPEport">port</a> Ckappa_sig.Site_map_and_set.Map.t</code> </pre>
+
+
+<pre><code><span id="TYPEproper_agent"><span class="keyword">type</span> <code class="type">'interface</code> proper_agent</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTproper_agent.agent_kasim_id">agent_kasim_id</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTproper_agent.agent_name">agent_name</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_name">Ckappa_sig.c_agent_name</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTproper_agent.agent_interface">agent_interface</span>&nbsp;: <code class="type">'interface</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTproper_agent.agent_position">agent_position</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEsite_address"><span class="keyword">type</span> <code class="type"></code>site_address</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite_address.agent_index">agent_index</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite_address.site">site</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite_address.agent_type">agent_type</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_name">Ckappa_sig.c_agent_name</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="TYPEbond"><span class="keyword">type</span> <code class="type"></code>bond</span> = <code class="type"><a href="Cckappa_sig.html#TYPEsite_address">site_address</a> * <a href="Cckappa_sig.html#TYPEsite_address">site_address</a></code> </pre>
+
+
+<pre><span class="keyword">module</span> <a href="Cckappa_sig.Address_map_and_set.html">Address_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
+  with type elt = site_address</code></pre>
+<pre><span class="keyword">module</span> <a href="Cckappa_sig.KaSim_Site_map_and_set.html">KaSim_Site_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
+  with type elt = (string, string) <a href="Ckappa_sig.html">Ckappa_sig</a>.site_type</code></pre>
+<pre><code><span id="TYPEagent"><span class="keyword">type</span> <code class="type"></code>agent</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTagent.Ghost"><span class="constructor">Ghost</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTagent.Agent"><span class="constructor">Agent</span></span> <span class="keyword">of</span> <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEinterface">interface</a><br>     <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTagent.Dead_agent"><span class="constructor">Dead_agent</span></span> <span class="keyword">of</span> <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEinterface">interface</a><br>     <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> * KaSim_Site_map_and_set.Set.t<br>        * (string, unit) <a href="Ckappa_sig.html#TYPEsite_type">Ckappa_sig.site_type</a> Ckappa_sig.Site_map_and_set.Map.t<br>        * <a href="Ckappa_sig.html#TYPElink">Ckappa_sig.link</a> Ckappa_sig.Site_map_and_set.Map.t</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTagent.Unknown_agent"><span class="constructor">Unknown_agent</span></span> <span class="keyword">of</span> <code class="type">(string * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>)</code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="TYPEagent_sig"><span class="keyword">type</span> <code class="type"></code>agent_sig</span> = <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> list <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code> </pre>
+
+
+<pre><span id="TYPEviews"><span class="keyword">type</span> <code class="type"></code>views</span> = <code class="type"><a href="Cckappa_sig.html#TYPEagent">agent</a><br>       Ckappa_sig.Agent_id_quick_nearly_Inf_Int_storage_Imperatif.t</code> </pre>
+
+
+<pre><span id="TYPEdiff_views"><span class="keyword">type</span> <code class="type"></code>diff_views</span> = <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEport">port</a><br>       Ckappa_sig.Site_map_and_set.Map.t <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a><br>       Ckappa_sig.Agent_id_quick_nearly_Inf_Int_storage_Imperatif.t</code> </pre>
+
+
+<pre><code><span id="TYPEmixture"><span class="keyword">type</span> <code class="type"></code>mixture</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmixture.c_mixture">c_mixture</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEmixture">Ckappa_sig.mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmixture.views">views</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEviews">views</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmixture.bonds">bonds</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEsite_address">site_address</a> Ckappa_sig.Site_map_and_set.Map.t<br>       Ckappa_sig.Agent_id_quick_nearly_Inf_Int_storage_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmixture.plus">plus</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmixture.dot">dot</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) list</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEenriched_variable"><span class="keyword">type</span> <code class="type"></code>enriched_variable</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_variable.e_id">e_id</span>&nbsp;: <code class="type">string * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_variable.e_id_dot">e_id_dot</span>&nbsp;: <code class="type">string * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_variable.c_variable">c_variable</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEmixture">Ckappa_sig.mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_variable.e_variable">e_variable</span>&nbsp;: <code class="type">(<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Ast.html#TYPEvariable_def">Ast.variable_def</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEactions"><span class="keyword">type</span> <code class="type"></code>actions</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTactions.creation">creation</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> * <a href="Ckappa_sig.html#TYPEc_agent_name">Ckappa_sig.c_agent_name</a>) list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTactions.remove">remove</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> *<br>        unit <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> *<br>        <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a> list)<br>       list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTactions.release">release</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEbond">bond</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTactions.bind">bind</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEbond">bond</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTactions.half_break">half_break</span>&nbsp;: <code class="type">(<a href="Cckappa_sig.html#TYPEsite_address">site_address</a> * <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> option)<br>       list</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPErule"><span class="keyword">type</span> <code class="type"></code>rule</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.prefix">prefix</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.delta">delta</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.rule_lhs">rule_lhs</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEmixture">mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.rule_rhs">rule_rhs</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEmixture">mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.diff_direct">diff_direct</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEdiff_views">diff_views</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.diff_reverse">diff_reverse</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEdiff_views">diff_views</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrule.actions">actions</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEactions">actions</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="TYPEperturbation"><span class="keyword">type</span> <code class="type"></code>perturbation</span> = <code class="type">(((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>) *<br>        <a href="Cckappa_sig.html#TYPEmodif_expr">modif_expr</a> list *<br>        ((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>) option) *<br>       <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code> </pre>
+
+
+<pre><code><span id="TYPEmodif_expr"><span class="keyword">type</span> <code class="type"></code>modif_expr</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.INTRO"><span class="constructor">INTRO</span></span> <span class="keyword">of</span> <code class="type">((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> * <a href="Cckappa_sig.html#TYPEmixture">mixture</a> *<br>      <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.DELETE"><span class="constructor">DELETE</span></span> <span class="keyword">of</span> <code class="type">((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> * <a href="Cckappa_sig.html#TYPEmixture">mixture</a> *<br>      <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.UPDATE"><span class="constructor">UPDATE</span></span> <span class="keyword">of</span> <code class="type">(string * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a> * (<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> *<br>      <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.STOP"><span class="constructor">STOP</span></span> <span class="keyword">of</span> <code class="type"><a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmodif_expr.SNAPSHOT"><span class="constructor">SNAPSHOT</span></span> <span class="keyword">of</span> <code class="type"><a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEenriched_rule"><span class="keyword">type</span> <code class="type"></code>enriched_rule</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_rule.e_rule_label">e_rule_label</span>&nbsp;: <code class="type">(string * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>) option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_rule.e_rule_label_dot">e_rule_label_dot</span>&nbsp;: <code class="type">(string * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>) option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_rule.e_rule_initial_direction">e_rule_initial_direction</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEdirection">Ckappa_sig.direction</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_rule.e_rule_rule">e_rule_rule</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEmixture">Ckappa_sig.mixture</a> <a href="Ckappa_sig.html#TYPErule">Ckappa_sig.rule</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_rule.e_rule_c_rule">e_rule_c_rule</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPErule">rule</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEenriched_init"><span class="keyword">type</span> <code class="type"></code>enriched_init</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_init.e_init_factor">e_init_factor</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEmixture">Ckappa_sig.mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_init.e_init_c_factor">e_init_c_factor</span>&nbsp;: <code class="type">(<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_init.e_init_mixture">e_init_mixture</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEmixture">Ckappa_sig.mixture</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenriched_init.e_init_c_mixture">e_init_c_mixture</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEmixture">mixture</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEcompil"><span class="keyword">type</span> <code class="type"></code>compil</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.variables">variables</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEenriched_variable">enriched_variable</a><br>       Ckappa_sig.Rule_nearly_Inf_Int_storage_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.signatures">signatures</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEagent_sig">agent_sig</a> Int_storage.Nearly_inf_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.rules">rules</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEenriched_rule">enriched_rule</a> Ckappa_sig.Rule_nearly_Inf_Int_storage_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.observables">observables</span>&nbsp;: <code class="type">(<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a><br>       Int_storage.Nearly_inf_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.init">init</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEenriched_init">enriched_init</a> Int_storage.Nearly_inf_Imperatif.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcompil.perturbations">perturbations</span>&nbsp;: <code class="type"><a href="Cckappa_sig.html#TYPEmixture">mixture</a> <a href="Ckappa_sig.html#TYPEperturbation">Ckappa_sig.perturbation</a><br>       Int_storage.Nearly_inf_Imperatif.t</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALempty_actions"><span class="keyword">val</span> empty_actions</span> : <code class="type"><a href="Cckappa_sig.html#TYPEactions">actions</a></code></pre>
+<pre><span id="VALdummy_init"><span class="keyword">val</span> dummy_init</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       Exception.method_handler * <a href="Cckappa_sig.html#TYPEenriched_init">enriched_init</a></code></pre>
+<pre><span id="VALupgrade_interface"><span class="keyword">val</span> upgrade_interface</span> : <code class="type">'a <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> -><br>       'b <a href="Cckappa_sig.html#TYPEinterface">interface</a> -> 'b <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></pre>
+<pre><span id="VALmap_agent"><span class="keyword">val</span> map_agent</span> : <code class="type">('a -> 'b) -><br>       'a <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> -><br>       'b <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></pre>
+<pre><span id="VALupgrade_some_interface"><span class="keyword">val</span> upgrade_some_interface</span> : <code class="type">'a Ckappa_sig.Site_map_and_set.Map.t <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> -><br>       'a option Ckappa_sig.Site_map_and_set.Map.t <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></pre>
+<pre><span id="VALbuild_address"><span class="keyword">val</span> build_address</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -><br>       <a href="Ckappa_sig.html#TYPEc_agent_name">Ckappa_sig.c_agent_name</a> -> <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a> -> <a href="Cckappa_sig.html#TYPEsite_address">site_address</a></code></pre>
+<pre><span id="VALmax_state_index"><span class="keyword">val</span> max_state_index</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a></code></pre>
+<pre><span id="VALmin_state_index"><span class="keyword">val</span> min_state_index</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a></code></pre>
+<pre><span id="VALrename_mixture"><span class="keyword">val</span> rename_mixture</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       (Remanent_parameters_sig.parameters -><br>        Exception.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Cckappa_sig.html#TYPEmixture">mixture</a></code></pre>
+<pre><span id="VALjoin_mixture"><span class="keyword">val</span> join_mixture</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       (Remanent_parameters_sig.parameters -><br>        Exception.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       (Remanent_parameters_sig.parameters -><br>        Exception.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Cckappa_sig.html#TYPEmixture">mixture</a></code></pre></body></html>
