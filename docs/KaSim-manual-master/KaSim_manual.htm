@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>KaSim, KaSa, &#x0026; KaDE reference manual
-(release bee2e7f)</title> 
+(release f6bde8e)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">KaSim, KaSa, &#x0026; KaDE reference manual<br />
-(release bee2e7f)</h2>
+(release f6bde8e)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -6915,6 +6915,9 @@ General options
                                                                                   
  <br /> (default: Low)
  <br />      Tune the accuracy level of the contact map
+ <br />  --polymer-detection-accuracy-level Low | High
+ <br /> (default: High)
+ <br />      Tune the accuracy level of the detection of polymers
  <br />  --(no-)pure-contact    (default: disabled)
  <br />      show in the contact map only the sites with a binding state
  <br />
@@ -6951,11 +6954,11 @@ General options
  <br />  --(no-)print-efficiency    (default: disabled)
  <br />      prompt CPU time and various datas
  <br />
- <br />(61 options)</div>
-<!--l. 161--><p class="nopar" >
                                                                                   
 
                                                                                   
+ <br />(62 options)</div>
+<!--l. 164--><p class="nopar" >
 <!--l. 1472--><p class="noindent" >Order in options matters, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -7463,9 +7466,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (bee2e7f) (without Tk interface)
- <br />Analysis launched at 2017/11/12 10:05:03 (GMT+0) on
- <br />travis-job-cd52608b-9a3c-4b6d-815f-3bc4fd96d7cb
+Kappa Static Analyzer (f6bde8e) (without Tk interface)
+ <br />Analysis launched at 2017/11/12 19:30:34 (GMT+0) on
+ <br />travis-job-089abf37-e7ad-4ae2-a295-267bc9e525c9
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7641,9 +7644,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
-Kappa Static Analyzer (bee2e7f) (without Tk interface)
- <br />Analysis launched at 2017/11/12 10:05:03 (GMT+0) on
- <br />travis-job-cd52608b-9a3c-4b6d-815f-3bc4fd96d7cb
+Kappa Static Analyzer (f6bde8e) (without Tk interface)
+ <br />Analysis launched at 2017/11/12 19:30:34 (GMT+0) on
+ <br />travis-job-089abf37-e7ad-4ae2-a295-267bc9e525c9
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -9423,9 +9426,9 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-12">
-Kappa Static Analyzer (bee2e7f) (without Tk interface)
- <br />Analysis launched at 2017/11/12 10:05:02 (GMT+0) on
- <br />travis-job-cd52608b-9a3c-4b6d-815f-3bc4fd96d7cb
+Kappa Static Analyzer (f6bde8e) (without Tk interface)
+ <br />Analysis launched at 2017/11/12 19:30:34 (GMT+0) on
+ <br />travis-job-089abf37-e7ad-4ae2-a295-267bc9e525c9
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -9548,6 +9551,9 @@ General options
  <br />  --with-symmetries None | Backward | Forward
  <br /> (default: None)
  <br />      Tune which kind of bisimulation is used to reduce the set of species
+ <br />  -syntax 3 | v3 | V3 | 4 | v4 | V4
+ <br /> (default: 4)
+ <br />      Use explicit notation for free site
  <br />  -d &#x003C;name&#x003E;   (default: .)
  <br />      Specifies directory name where output file(s) should be stored
  <br />  --output &#x003C;value&#x003E;
@@ -9564,12 +9570,12 @@ General options
  <br />      Gather identical reactions in the ODEs
  <br />  -(no-)p &#x003C;float&#x003E;   (default: 0.010000)
  <br />      plot period: time interval between points in plot (default: 1.0)
- <br />  --(no-)compute-jacobian    (default: enabled)
- <br />      Enable/disable the computation of the Jacobian of the ODEs
- <br /> (not
                                                                                   
 
                                                                                   
+ <br />  --(no-)compute-jacobian    (default: enabled)
+ <br />      Enable/disable the computation of the Jacobian of the ODEs
+ <br /> (not
  <br />      available yet)
  <br />  --(no-)nonnegative    (default: disabled)
  <br />      Enable/disable the correction of negative concentrations in stiff ODE
@@ -9608,12 +9614,12 @@ General options
  <br />      in
  <br /> connected agents
  <br />  -d &#x003C;name&#x003E;   (default: .)
- <br />      Specifies directory name where output file(s) should be stored
- <br />  --output &#x003C;value&#x003E;
- <br />      Prefix for file name output
                                                                                   
 
                                                                                   
+ <br />      Specifies directory name where output file(s) should be stored
+ <br />  --output &#x003C;value&#x003E;
+ <br />      Prefix for file name output
  <br />
  <br />Debug mode
  <br />  --(no-)show-time-advance    (default: disabled)
@@ -9635,8 +9641,8 @@ General options
  <br />  --output &#x003C;value&#x003E;
  <br />      Prefix for file name output
  <br />
- <br />(77 options)</div>
-<!--l. 144--><p class="nopar" >
+ <br />(78 options)</div>
+<!--l. 147--><p class="nopar" >
 <!--l. 2001--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -9644,12 +9650,12 @@ right.
 <h3 class="sectionHead"><span class="titlemark">6.2   </span> <a 
  id="x1-720006.2"></a>Graphical interface</h3>
 <!--l. 2006--><p class="noindent" >
-<h4 class="subsectionHead"><span class="titlemark">6.2.1   </span> <a 
- id="x1-730006.2.1"></a>Launching the interface</h4>
-<!--l. 2008--><p class="noindent" >The graphical interface can be launched by typing the following command line:
                                                                                   
 
                                                                                   
+<h4 class="subsectionHead"><span class="titlemark">6.2.1   </span> <a 
+ id="x1-730006.2.1"></a>Launching the interface</h4>
+<!--l. 2008--><p class="noindent" >The graphical interface can be launched by typing the following command line:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ectt-1095">KaDE</span></li></ul>
@@ -10775,7 +10781,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">158752110</span><span 
+class="ectt-1095">293729760</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-84012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -10786,7 +10792,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;481600949&#x0022;</span><span 
+class="ectt-1095">&#x0022;728004655&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-84013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
@@ -13925,7 +13931,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">comments, 13 <br /></span>
 </p><p class="theindex">
 <span class="index-item">data ﬁle, 18 <br /></span>
-<span class="index-item">data ﬁle, 18, 102 <br /></span>
+<span class="index-item">data ﬁle, 18, 104 <br /></span>
 <span class="index-item">declaration, 10, 13, 17, 19, 22, 26, 29–31, 38, 39, 41 <br /></span>
 <span class="index-item">default state, 20 <br /></span>
 <span class="index-item">don&#x2019;t care don&#x2019;t write, 20, 26 <br /></span>
@@ -13933,7 +13939,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 </p><p class="theindex">
 <span class="index-item">edit rules, 21 <br /></span>
 <span class="index-item">eﬀect, 27, 29 <br /></span>
-<span class="index-item">embedding, 102 <br /></span>
+<span class="index-item">embedding, 104 <br /></span>
                                                                                   
 
                                                                                   
@@ -13949,7 +13955,7 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">internal state, 14 <br /></span>
 </p><p class="theindex">
 <span class="index-item">Kappa ﬁle, 27 <br /></span>
-<span class="index-item">Kappa ﬁle, 10, 13, 14, 16, 18, 26, 34, 41, 42, 102 <br /></span>
+<span class="index-item">Kappa ﬁle, 10, 13, 14, 16, 18, 26, 34, 41, 42, 104 <br /></span>
 <span class="index-item">kinetic rate, 18 <br /></span>
 <span class="index-item">kinetic rate, 23 <br /></span>
 <span class="index-subitem">    deterministic rate constant, 23 <br /></span>
@@ -13959,9 +13965,9 @@ class="ecti-1095">Dynamics and Rule-based Models</span>. PhD thesis, 2015.
 <span class="index-item">link type, 16 <br /></span>
 <span class="index-item">longest preﬁx convention, 20 <br /></span>
 </p><p class="theindex">
-<span class="index-item">mixture, 8, 20, 25, 26, 29–31, 41, 102 <br /></span>
+<span class="index-item">mixture, 8, 20, 25, 26, 29–31, 41, 104 <br /></span>
 </p><p class="theindex">
-<span class="index-item">null event, 17, 101 <br /></span>
+<span class="index-item">null event, 17, 103 <br /></span>
 </p><p class="theindex">
 <span class="index-item">perturbation, 13 <br /></span>
                                                                                   
