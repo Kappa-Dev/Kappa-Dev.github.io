@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Contact_map.html">
 <link rel="next" href="Matching.html">
@@ -171,16 +172,16 @@ Starts creation<br>
 </div>
 
 <pre><span id="VALnew_node"><span class="keyword">val</span> new_node</span> : <code class="type"><a href="Pattern.html#TYPEwork">work</a> -> int -> <a href="Agent.html#TYPEt">Agent.t</a> * <a href="Pattern.html#TYPEwork">work</a></code></pre><div class="info ">
-<code class="code">new_node wk node_type</code><br>
+<code class="code">new_node&nbsp;wk&nbsp;node_type</code><br>
 </div>
 
 <pre><span id="VALnew_link"><span class="keyword">val</span> new_link</span> : <code class="type"><a href="Pattern.html#TYPEwork">work</a> -> <a href="Agent.html#TYPEt">Agent.t</a> * int -> <a href="Agent.html#TYPEt">Agent.t</a> * int -> <a href="Pattern.html#TYPEwork">work</a></code></pre><div class="info ">
-<code class="code">new_link wk (node, site_id) (node', site_id')</code><br>
+<code class="code">new_link&nbsp;wk&nbsp;(node,&nbsp;site_id)&nbsp;(node',&nbsp;site_id')</code><br>
 </div>
 
 <pre><span id="VALnew_free"><span class="keyword">val</span> new_free</span> : <code class="type"><a href="Pattern.html#TYPEwork">work</a> -> <a href="Agent.html#TYPEt">Agent.t</a> * int -> <a href="Pattern.html#TYPEwork">work</a></code></pre>
 <pre><span id="VALnew_internal_state"><span class="keyword">val</span> new_internal_state</span> : <code class="type"><a href="Pattern.html#TYPEwork">work</a> -> <a href="Agent.html#TYPEt">Agent.t</a> * int -> int -> <a href="Pattern.html#TYPEwork">work</a></code></pre><div class="info ">
-<code class="code">new_link_type work (node,site) <span class="keyword">type</span></code><br>
+<code class="code">new_link_type&nbsp;work&nbsp;(node,site)&nbsp;<span class="keyword">type</span></code><br>
 </div>
 
 <pre><span id="VALfinish_new"><span class="keyword">val</span> finish_new</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Pattern.html#TYPEwork">work</a> -> <a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> * Renaming.t * <a href="Pattern.html#TYPEcc">cc</a> * <a href="Pattern.html#TYPEid">id</a></code></pre><br>
@@ -190,7 +191,7 @@ Starts creation<br>
 <pre><span id="VALis_equal_canonicals"><span class="keyword">val</span> is_equal_canonicals</span> : <code class="type"><a href="Pattern.html#TYPEid">id</a> -> <a href="Pattern.html#TYPEid">id</a> -> bool</code></pre>
 <pre><span id="VALprint_cc"><span class="keyword">val</span> print_cc</span> : <code class="type">?dotnet:bool -><br>       ?full_species:bool -><br>       ?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       ?cc_id:<a href="Pattern.html#TYPEid">id</a> -> with_id:bool -> Format.formatter -> <a href="Pattern.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?domain:<a href="Pattern.Env.html#TYPEt">Env.t</a> -><br>       with_id:bool -> Format.formatter -> <a href="Pattern.html#TYPEid">id</a> -> unit</code></pre><div class="info ">
-<code class="code">print ~domain ?with_id:<span class="constructor">None</span> form cc</code><br>
+<code class="code">print&nbsp;~domain&nbsp;?with_id:<span class="constructor">None</span>&nbsp;form&nbsp;cc</code><br>
 </div>
 
 <pre><span id="VALid_to_yojson"><span class="keyword">val</span> id_to_yojson</span> : <code class="type"><a href="Pattern.html#TYPEid">id</a> -> Yojson.Basic.json</code></pre>

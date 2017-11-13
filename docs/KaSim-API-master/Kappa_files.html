@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Outputs.html">
 <link rel="next" href="Ode_interface_sig.html">
@@ -117,7 +118,7 @@ Utilities on files<br>
 
 <pre><span id="VALopen_out"><span class="keyword">val</span> open_out</span> : <code class="type">string -> Pervasives.out_channel</code></pre>
 <pre><span id="VALopen_out_fresh"><span class="keyword">val</span> open_out_fresh</span> : <code class="type">string -> string -> string -> Pervasives.out_channel</code></pre><div class="info ">
-<code class="code">open_out_fresh base facultative ext</code><br>
+<code class="code">open_out_fresh&nbsp;base&nbsp;facultative&nbsp;ext</code><br>
 </div>
 
 <pre><span id="VALpath"><span class="keyword">val</span> path</span> : <code class="type">string -> string</code></pre>
@@ -139,7 +140,7 @@ Utilities on files<br>
 <pre><span id="VALwith_flux"><span class="keyword">val</span> with_flux</span> : <code class="type">string -> (Pervasives.out_channel -> unit) -> unit</code></pre>
 <pre><span id="VALwith_snapshot"><span class="keyword">val</span> with_snapshot</span> : <code class="type">string -> string -> int -> (Pervasives.out_channel -> unit) -> unit</code></pre>
 <pre><span id="VALwith_channel"><span class="keyword">val</span> with_channel</span> : <code class="type">string -> (Pervasives.out_channel -> unit) -> unit</code></pre><div class="info ">
-<code class="code">with_channel path f</code><br>
+<code class="code">with_channel&nbsp;path&nbsp;f</code><br>
 </div>
 
 <pre><span id="VALwrap_formatter"><span class="keyword">val</span> wrap_formatter</span> : <code class="type">(Format.formatter -> unit) -> Pervasives.out_channel -> unit</code></pre></body></html>

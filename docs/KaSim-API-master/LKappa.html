@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Ast.html">
 <link rel="next" href="Snip.html">
@@ -227,14 +228,14 @@ Intermediate representation of model on wich sanity has been checked<br>
 <div class="info ">
 A representation of 'left-hand-side' agent that stores how
  everything is transformed. In an observable (a mixture in an alg_expr),
- everything is <code class="code"><span class="constructor">Maintained</span></code> (represented by <code class="code"><span class="constructor">I_VAL_CHANGED</span> (i,i)</code> for
+ everything is <code class="code"><span class="constructor">Maintained</span></code> (represented by <code class="code"><span class="constructor">I_VAL_CHANGED</span>&nbsp;(i,i)</code> for
  internal states).
 <p>
 
 The field ra_syntax represents how the user describe the agent
 before compilation. Therefore, <code class="code">compil_of_ast</code> in this module
-generates rule_agent where ra_syntax is <code class="code"><span class="constructor">Some</span> (<span class="constructor">Array</span>.copy ra_ports,
-<span class="constructor">Array</span>.copy ra_ints)</code>.<br>
+generates rule_agent where ra_syntax is <code class="code"><span class="constructor">Some</span>&nbsp;(<span class="constructor">Array</span>.copy&nbsp;ra_ports,<br>
+<span class="constructor">Array</span>.copy&nbsp;ra_ints)</code>.<br>
 </div>
 
 
