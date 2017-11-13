@@ -2,7 +2,6 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -155,7 +154,7 @@ One event loop
 <td></td></tr>
 <tr><td><a href="Edges.html#VALadd_agent">add_agent</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">add_agent&nbsp;?id&nbsp;sigs&nbsp;agent_type&nbsp;graph</code>
+<code class="code">add_agent ?id sigs agent_type graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Ckappa_sig.html#VALadd_agent_id">add_agent_id</a> [<a href="Ckappa_sig.html">Ckappa_sig</a>]</td>
@@ -179,7 +178,7 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Edges.html#VALadd_free">add_free</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">add_free&nbsp;agent_id&nbsp;site&nbsp;graph</code>
+<code class="code">add_free agent_id site graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALadd_initial_state">add_initial_state</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
@@ -190,7 +189,7 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Edges.html#VALadd_internal">add_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">add_internal&nbsp;agent_id&nbsp;site&nbsp;internal_state&nbsp;graph</code>
+<code class="code">add_internal agent_id site internal_state graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Ckappa_sig.html#VALadd_internal_state">add_internal_state</a> [<a href="Ckappa_sig.html">Ckappa_sig</a>]</td>
@@ -201,7 +200,7 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Edges.html#VALadd_link">add_link</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">add_link&nbsp;ag1&nbsp;s1&nbsp;ag2&nbsp;s2&nbsp;t</code>
+<code class="code">add_link ag1 s1 ag2 s2 t</code>
  Some (i,j) as second returned element means cc j is now merged into cc i
 </div>
 </td></tr>
@@ -253,7 +252,7 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Signature.html#VALallowed_link">allowed_link</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">allowed_link&nbsp;ag1&nbsp;s1&nbsp;ag2&nbsp;s2&nbsp;sigs</code>
+<code class="code">allowed_link ag1 s1 ag2 s2 sigs</code>
 </div>
 </td></tr>
 <tr><td><a href="Locality.html#VALannot_of_yojson">annot_of_yojson</a> [<a href="Locality.html">Locality</a>]</td>
@@ -278,12 +277,12 @@ depend in time, depend in event number, depend in given var
 <td></td></tr>
 <tr><td><a href="Edges.html#VALare_connected">are_connected</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">are_connected&nbsp;?max_distance&nbsp;graph&nbsp;nodes_x&nbsp;nodes_y</code>
+<code class="code">are_connected ?max_distance graph nodes_x nodes_y</code>
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALarity">arity</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">arity&nbsp;sigs&nbsp;agent_id</code>
+<code class="code">arity sigs agent_id</code>
 </div>
 </td></tr>
 <tr><td><a href="Pp.html#VALarray">array</a> [<a href="Pp.html">Pp</a>]</td>
@@ -640,7 +639,7 @@ Give the number of stories (up to isomorphism classes) stored in a table
 <td></td></tr>
 <tr><td><a href="IntCollection.html#VALcreate">create</a> [<a href="IntCollection.html">IntCollection</a>]</td>
 <td><div class="info">
-<code class="code">create&nbsp;initial_guess_size</code>
+<code class="code">create initial_guess_size</code>
 </div>
 </td></tr>
 <tr><td><a href="DynamicArray.DynArray.html#VALcreate">create</a> [<a href="DynamicArray.DynArray.html">DynamicArray.DynArray</a>]</td>
@@ -714,7 +713,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALdiff">diff</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td><div class="info">
-<code class="code">diff&nbsp;a&nbsp;b</code> = <code class="code">minus&nbsp;(union&nbsp;a&nbsp;b)&nbsp;(inter&nbsp;a&nbsp;b)</code>
+<code class="code">diff a b</code> = <code class="code">minus (union a b) (inter a b)</code>
 </div>
 </td></tr>
 <tr><td><a href="Alg_expr_extra.html#VALdiff_mixture">diff_mixture</a> [<a href="Alg_expr_extra.html">Alg_expr_extra</a>]</td>
@@ -807,8 +806,6 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALdump_json">dump_json</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
-<tr><td><a href="Export_to_KaSa.Type.html#VALdump_scc_decomposition">dump_scc_decomposition</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
-<td></td></tr>
 <tr><td align="left"><br>E</td></tr>
 <tr><td><a href="Alg_expr.html#VALe_of_yojson">e_of_yojson</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
 <td></td></tr>
@@ -834,7 +831,7 @@ cut performs partial order reduction and remove orthogonal events
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALempty">empty</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
-<code class="code">empty&nbsp;~with_delta_activities&nbsp;env&nbsp;stopping_times</code>
+<code class="code">empty ~with_delta_activities env stopping_times</code>
 </div>
 </td></tr>
 <tr><td><a href="Edges.html#VALempty">empty</a> [<a href="Edges.html">Edges</a>]</td>
@@ -950,7 +947,7 @@ error_init is an empty log of errors
 <td></td></tr>
 <tr><td><a href="Edges.html#VALexists_fresh">exists_fresh</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">exists_fresh&nbsp;ag1&nbsp;site1&nbsp;type_of_ag2&nbsp;site2&nbsp;graph</code>
+<code class="code">exists_fresh ag1 site1 type_of_ag2 site2 graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Primitives.html#VALexists_modification">exists_modification</a> [<a href="Primitives.html">Primitives</a>]</td>
@@ -1215,7 +1212,7 @@ Apply a function on each trace (and each list of runtime information associated 
 <td></td></tr>
 <tr><td><a href="Signature.html#VALget">get</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">get&nbsp;sigs&nbsp;agent_id</code>
+<code class="code">get sigs agent_id</code>
 </div>
 </td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALget">get</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
@@ -1376,7 +1373,7 @@ get the id of an event in the simulation
 <td></td></tr>
 <tr><td><a href="Edges.html#VALget_internal">get_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">get_internal&nbsp;ag&nbsp;site&nbsp;graph</code>
+<code class="code">get_internal ag site graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALget_internal_contact_map">get_internal_contact_map</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
@@ -1480,6 +1477,8 @@ conversely, convert a trace in a list of refined steps
 Musical processing
 </div>
 </td></tr>
+<tr><td><a href="Export_to_json.Type.html#VALget_scc_decomposition">get_scc_decomposition</a> [<a href="Export_to_json.Type.html">Export_to_json.Type</a>]</td>
+<td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALget_scc_decomposition">get_scc_decomposition</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
 <tr><td><a href="Analyzer_headers.html#VALget_side_effects">get_side_effects</a> [<a href="Analyzer_headers.html">Analyzer_headers</a>]</td>
@@ -1530,7 +1529,7 @@ get the date of an event in the simulation
 <td></td></tr>
 <tr><td><a href="Pp_html.html#VALgraph_page">graph_page</a> [<a href="Pp_html.html">Pp_html</a>]</td>
 <td><div class="info">
-<code class="code">graph_page&nbsp;title&nbsp;deps&nbsp;header&nbsp;core&nbsp;f</code>
+<code class="code">graph_page title deps header core f</code>
 </div>
 </td></tr>
 <tr><td align="left"><br>H</td></tr>
@@ -1572,12 +1571,12 @@ check wether there is an observable in a trace
 <td></td></tr>
 <tr><td><a href="Signature.html#VALid_of_internal_state">id_of_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">id_of_internal_state&nbsp;agent_type&nbsp;site_name&nbsp;state_name&nbsp;sigs</code>
+<code class="code">id_of_internal_state agent_type site_name state_name sigs</code>
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALid_of_site">id_of_site</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">id_of_site&nbsp;agent_type&nbsp;site_name&nbsp;sigs</code>
+<code class="code">id_of_site agent_type site_name sigs</code>
 </div>
 </td></tr>
 <tr><td><a href="Pattern.html#VALid_of_yojson">id_of_yojson</a> [<a href="Pattern.html">Pattern</a>]</td>
@@ -1624,7 +1623,7 @@ id, arity, before, after
 <td></td></tr>
 <tr><td><a href="Model.html#VALinit">init</a> [<a href="Model.html">Model</a>]</td>
 <td><div class="info">
-<code class="code">init&nbsp;sigs&nbsp;tokens&nbsp;algs&nbsp;dependencies&nbsp;(ast_rules,rules)&nbsp;obs&nbsp;perts</code>
+<code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code>
 </div>
 </td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALinit">init</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
@@ -1663,7 +1662,7 @@ id, arity, before, after
 <td></td></tr>
 <tr><td><a href="State_interpreter.html#VALinitialize">initialize</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
 <td><div class="info">
-<code class="code">initial&nbsp;env&nbsp;counter&nbsp;graph&nbsp;state</code> builds up the initial state
+<code class="code">initial env counter graph state</code> builds up the initial state
 </div>
 </td></tr>
 <tr><td><a href="Ode_loggers.html#VALinitialize">initialize</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
@@ -1705,7 +1704,7 @@ euler division when only int are involved, float div else
 <td></td></tr>
 <tr><td><a href="Signature.html#VALinternal_states_number">internal_states_number</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">internal_state_number&nbsp;agent_id&nbsp;site_id&nbsp;sigs</code>
+<code class="code">internal_state_number agent_id site_id sigs</code>
 </div>
 </td></tr>
 <tr><td><a href="Ckappa_sig.html#VALintroduceable_species_in_pertubation">introduceable_species_in_pertubation</a> [<a href="Ckappa_sig.html">Ckappa_sig</a>]</td>
@@ -1714,7 +1713,7 @@ euler division when only int are involved, float div else
 <td></td></tr>
 <tr><td><a href="Edges.html#VALis_agent">is_agent</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">is_agent&nbsp;agent&nbsp;graph</code>
+<code class="code">is_agent agent graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Loggers.html#VALis_const">is_const</a> [<a href="Loggers.html">Loggers</a>]</td>
@@ -1747,7 +1746,7 @@ euler division when only int are involved, float div else
 <td></td></tr>
 <tr><td><a href="Edges.html#VALis_free">is_free</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">is_free&nbsp;agent_id&nbsp;site&nbsp;graph</code>
+<code class="code">is_free agent_id site graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Matching.Agent.html#VALis_fresh">is_fresh</a> [<a href="Matching.Agent.html">Matching.Agent</a>]</td>
@@ -1760,7 +1759,7 @@ euler division when only int are involved, float div else
 <td></td></tr>
 <tr><td><a href="Edges.html#VALis_internal">is_internal</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">is_internal&nbsp;internal_state&nbsp;agent_id&nbsp;site&nbsp;graph</code>
+<code class="code">is_internal internal_state agent_id site graph</code>
 </div>
 </td></tr>
 <tr><td><a href="LKappa_group_action.html#VALis_invariant_binding_states_permutation">is_invariant_binding_states_permutation</a> [<a href="LKappa_group_action.html">LKappa_group_action</a>]</td>
@@ -1796,7 +1795,7 @@ same function but takes a graph of type Edges.t directly.
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALis_subnavigation">is_subnavigation</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td><div class="info">
-<code class="code">is_subnavigation&nbsp;inj_nav2sub&nbsp;nav&nbsp;subpart</code>
+<code class="code">is_subnavigation inj_nav2sub nav subpart</code>
 </div>
 </td></tr>
 <tr><td><a href="Communication.html#VALis_the_rule_applied_for_the_first_time">is_the_rule_applied_for_the_first_time</a> [<a href="Communication.html">Communication</a>]</td>
@@ -1823,7 +1822,7 @@ same function but takes a graph of type Edges.t directly.
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALiteri">iteri</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td><div class="info">
-<code class="code">iteri&nbsp;f&nbsp;x&nbsp;n</code>
+<code class="code">iteri f x n</code>
 </div>
 </td></tr>
 <tr><td><a href="Tools.html#VALiteri">iteri</a> [<a href="Tools.html">Tools</a>]</td>
@@ -1871,12 +1870,12 @@ same function but takes a graph of type Edges.t directly.
 <td></td></tr>
 <tr><td><a href="Edges.html#VALlink_destination">link_destination</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">link_destination&nbsp;ag&nbsp;site&nbsp;graph</code>
+<code class="code">link_destination ag site graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Edges.html#VALlink_exists">link_exists</a> [<a href="Edges.html">Edges</a>]</td>
 <td><div class="info">
-<code class="code">link_exists&nbsp;ag1_id&nbsp;site1&nbsp;ag2_id&nbsp;site2&nbsp;graph</code>
+<code class="code">link_exists ag1_id site1 ag2_id site2 graph</code>
 </div>
 </td></tr>
 <tr><td><a href="Ast.html#VALlink_of_json">link_of_json</a> [<a href="Ast.html">Ast</a>]</td>
@@ -1968,7 +1967,7 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Signature.html#VALmax_arity">max_arity</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">max_arity&nbsp;sigs</code> returns max 
+<code class="code">max_arity sigs</code> returns max 
 </div>
 </td></tr>
 <tr><td><a href="SetMap.Set.html#VALmax_elt">max_elt</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
@@ -1985,7 +1984,7 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALmaybe_iteri">maybe_iteri</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td><div class="info">
-<code class="code">maybe_iteri&nbsp;f&nbsp;x&nbsp;n</code>
+<code class="code">maybe_iteri f x n</code>
 </div>
 </td></tr>
 <tr><td><a href="Static_contact_map_domain.Domain.html#VALmaybe_reachable">maybe_reachable</a> [<a href="Static_contact_map_domain.Domain.html">Static_contact_map_domain.Domain</a>]</td>
@@ -2010,7 +2009,7 @@ reallocate agent id to avoid conflict (implicitly called by cut and fill_siphon)
 <td><div class="info">
 Set union of 2 sorted list
   When l1 is included in l2:
-  <code class="code">merge_uniq&nbsp;l1&nbsp;l2&nbsp;==&nbsp;merge_uniq&nbsp;l2&nbsp;l1&nbsp;==&nbsp;l2</code>
+  <code class="code">merge_uniq l1 l2 == merge_uniq l2 l1 == l2</code>
 </div>
 </td></tr>
 <tr><td><a href="Mvbdu_wrapper.Internalized_mvbdu.html#VALmerge_variables_lists">merge_variables_lists</a> [<a href="Mvbdu_wrapper.Internalized_mvbdu.html">Mvbdu_wrapper.Internalized_mvbdu</a>]</td>
@@ -2037,7 +2036,7 @@ Set union of 2 sorted list
 <td></td></tr>
 <tr><td><a href="SetMap.Set.html#VALminus">minus</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
 <td><div class="info">
-<code class="code">minus&nbsp;a&nbsp;b</code> contains elements of <code class="code">a</code> that are not in <code class="code">b</code>
+<code class="code">minus a b</code> contains elements of <code class="code">a</code> that are not in <code class="code">b</code>
 </div>
 </td></tr>
 <tr><td><a href="SetMap.Set.html#VALminus_with_logs">minus_with_logs</a> [<a href="SetMap.Set.html">SetMap.Set</a>]</td>
@@ -2263,17 +2262,17 @@ Set union of 2 sorted list
 <td></td></tr>
 <tr><td><a href="Pattern.html#VALnew_internal_state">new_internal_state</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td><div class="info">
-<code class="code">new_link_type&nbsp;work&nbsp;(node,site)&nbsp;<span class="keyword">type</span></code>
+<code class="code">new_link_type work (node,site) <span class="keyword">type</span></code>
 </div>
 </td></tr>
 <tr><td><a href="Pattern.html#VALnew_link">new_link</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td><div class="info">
-<code class="code">new_link&nbsp;wk&nbsp;(node,&nbsp;site_id)&nbsp;(node',&nbsp;site_id')</code>
+<code class="code">new_link wk (node, site_id) (node', site_id')</code>
 </div>
 </td></tr>
 <tr><td><a href="Pattern.html#VALnew_node">new_node</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td><div class="info">
-<code class="code">new_node&nbsp;wk&nbsp;node_type</code>
+<code class="code">new_node wk node_type</code>
 </div>
 </td></tr>
 <tr><td><a href="Pattern.Env.html#VALnew_obs_map">new_obs_map</a> [<a href="Pattern.Env.html">Pattern.Env</a>]</td>
@@ -2314,7 +2313,7 @@ Set union of 2 sorted list
 <td></td></tr>
 <tr><td><a href="Signature.html#VALnum_of_internal_state">num_of_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">num_of_internal_state&nbsp;site_id&nbsp;state_name&nbsp;sign</code>
+<code class="code">num_of_internal_state site_id state_name sign</code>
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALnum_of_site">num_of_site</a> [<a href="Signature.html">Signature</a>]</td>
@@ -2326,24 +2325,24 @@ Set union of 2 sorted list
 <tr><td align="left"><br>O</td></tr>
 <tr><td><a href="Matching.html#VALobservables_from_agent">observables_from_agent</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
-<code class="code">observables_from_free&nbsp;domain&nbsp;graph&nbsp;sort&nbsp;agent</code>
+<code class="code">observables_from_free domain graph sort agent</code>
     the int * int in the return list and the following ones
     is a Instantiation.concrete
 </div>
 </td></tr>
 <tr><td><a href="Matching.html#VALobservables_from_free">observables_from_free</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
-<code class="code">observables_from_free&nbsp;domain&nbsp;graph&nbsp;sort&nbsp;agent&nbsp;site</code>
+<code class="code">observables_from_free domain graph sort agent site</code>
 </div>
 </td></tr>
 <tr><td><a href="Matching.html#VALobservables_from_internal">observables_from_internal</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
-<code class="code">observables_from_internal&nbsp;domain&nbsp;graph&nbsp;sort&nbsp;agent&nbsp;site&nbsp;internal_state</code>
+<code class="code">observables_from_internal domain graph sort agent site internal_state</code>
 </div>
 </td></tr>
 <tr><td><a href="Matching.html#VALobservables_from_link">observables_from_link</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
-<code class="code">observables_from_link&nbsp;domain&nbsp;graph&nbsp;sort&nbsp;ag&nbsp;site&nbsp;sort'&nbsp;ag'&nbsp;site'</code>
+<code class="code">observables_from_link domain graph sort ag site sort' ag' site'</code>
 </div>
 </td></tr>
 <tr><td><a href="State_interpreter.html#VALobservables_values">observables_values</a> [<a href="State_interpreter.html">State_interpreter</a>]</td>
@@ -2448,7 +2447,7 @@ values of observables)
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALopen_out_fresh">open_out_fresh</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td><div class="info">
-<code class="code">open_out_fresh&nbsp;base&nbsp;facultative&nbsp;ext</code>
+<code class="code">open_out_fresh base facultative ext</code>
 </div>
 </td></tr>
 <tr><td><a href="Ode_loggers.html#VALopen_procedure">open_procedure</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
@@ -2468,6 +2467,8 @@ values of observables)
 <tr><td><a href="Export_to_KaSa.Type.html#VALoutput_internal_contact_map">output_internal_contact_map</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALoutput_local_influence_map">output_local_influence_map</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
+<td></td></tr>
+<tr><td><a href="Export_to_KaSa.Type.html#VALoutput_scc_decomposition">output_scc_decomposition</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
 <tr><td><a href="Export_to_KaSa.Type.html#VALoutput_symmetries">output_symmetries</a> [<a href="Export_to_KaSa.Type.html">Export_to_KaSa.Type</a>]</td>
 <td></td></tr>
@@ -2537,7 +2538,7 @@ Deserialize JSON data of type <a href="Data.html#TYPEplot"><code class="code"><s
 <td></td></tr>
 <tr><td><a href="Primitives.Transformation.html#VALpositive_transformations_of_actions">positive_transformations_of_actions</a> [<a href="Primitives.Transformation.html">Primitives.Transformation</a>]</td>
 <td><div class="info">
-<code class="code">positive_transformations_of_actions&nbsp;signature&nbsp;side_effect_dsts&nbsp;actions</code>
+<code class="code">positive_transformations_of_actions signature side_effect_dsts actions</code>
 </div>
 </td></tr>
 <tr><td><a href="Alg_expr.html#VALpow">pow</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -2583,7 +2584,7 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="Navigation.html#VALprint">print</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td><div class="info">
-<code class="code">print&nbsp;signatures&nbsp;find_existing_type&nbsp;nav</code>
+<code class="code">print signatures find_existing_type nav</code>
 </div>
 </td></tr>
 <tr><td><a href="Configuration.html#VALprint">print</a> [<a href="Configuration.html">Configuration</a>]</td>
@@ -2606,7 +2607,7 @@ Floats are compactly printed
 <td></td></tr>
 <tr><td><a href="Pattern.html#VALprint">print</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td><div class="info">
-<code class="code">print&nbsp;~domain&nbsp;?with_id:<span class="constructor">None</span>&nbsp;form&nbsp;cc</code>
+<code class="code">print ~domain ?with_id:<span class="constructor">None</span> form cc</code>
 </div>
 </td></tr>
 <tr><td><a href="Signature.html#VALprint">print</a> [<a href="Signature.html">Signature</a>]</td>
@@ -2804,7 +2805,7 @@ Same as above but the int is this time the rule_id
 <td></td></tr>
 <tr><td><a href="Signature.html#VALprint_site_internal_state">print_site_internal_state</a> [<a href="Signature.html">Signature</a>]</td>
 <td><div class="info">
-<code class="code">print_site_internal_state&nbsp;sigs&nbsp;agent_type&nbsp;site_id&nbsp;f&nbsp;state_id</code>
+<code class="code">print_site_internal_state sigs agent_type site_id f state_id</code>
 prints both the site and its internal state if it is not <code class="code"><span class="constructor">None</span></code>.
 </div>
 </td></tr>
@@ -2861,7 +2862,7 @@ proj_set f set is the set {f(a) | a\in S}
 <td></td></tr>
 <tr><td><a href="Model.html#VALpropagate_constant">propagate_constant</a> [<a href="Model.html">Model</a>]</td>
 <td><div class="info">
-<code class="code">propagate_constant&nbsp;updated_vars&nbsp;overwrite_vars&nbsp;env</code>
+<code class="code">propagate_constant updated_vars overwrite_vars env</code>
 </div>
 </td></tr>
 <tr><td><a href="Alg_expr.html#VALpropagate_constant">propagate_constant</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
@@ -2945,19 +2946,19 @@ Input JSON data of type <a href="Nbr.html#TYPEt"><code class="code"><span class=
 </td></tr>
 <tr><td><a href="Matching.html#VALreconstruct">reconstruct</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
-<code class="code">reconstruct&nbsp;domain&nbsp;graph&nbsp;matching_of_previous_cc&nbsp;cc_id_in_rule&nbsp;cc&nbsp;root</code>
+<code class="code">reconstruct domain graph matching_of_previous_cc cc_id_in_rule cc root</code>
 </div>
 </td></tr>
 <tr><td><a href="Matching.html#VALreconstruct_renaming">reconstruct_renaming</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
-<code class="code">reconstruct_renaming&nbsp;domain&nbsp;graph&nbsp;cc&nbsp;root</code>
+<code class="code">reconstruct_renaming domain graph cc root</code>
 </div>
 </td></tr>
 <tr><td><a href="Pattern.html#VALreconstruction_navigation">reconstruction_navigation</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
 <tr><td><a href="Tools.html#VALrecti">recti</a> [<a href="Tools.html">Tools</a>]</td>
 <td><div class="info">
-<code class="code">recti&nbsp;f&nbsp;x&nbsp;n</code> = f (f (f ..
+<code class="code">recti f x n</code> = f (f (f ..
 </div>
 </td></tr>
 <tr><td><a href="Loggers.html#VALredirect">redirect</a> [<a href="Loggers.html">Loggers</a>]</td>
@@ -3632,7 +3633,7 @@ Same than <code class="code">concretize_action</code>, except that it returns <c
 <td></td></tr>
 <tr><td><a href="Expr_interpreter.html#VALvalue_alg">value_alg</a> [<a href="Expr_interpreter.html">Expr_interpreter</a>]</td>
 <td><div class="info">
-<code class="code">value_alg&nbsp;c&nbsp;?t&nbsp;get_alg&nbsp;get_mix&nbsp;get_tok&nbsp;expr_alg</code> with <code class="code">get_mix&nbsp;[interp1;...;interpn]</code>
+<code class="code">value_alg c ?t get_alg get_mix get_tok expr_alg</code> with <code class="code">get_mix [interp1;...;interpn]</code>
 </div>
 </td></tr>
 <tr><td><a href="Expr_interpreter.html#VALvalue_bool">value_bool</a> [<a href="Expr_interpreter.html">Expr_interpreter</a>]</td>
@@ -3661,7 +3662,7 @@ compute the weak compression of a given trace,
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_channel">with_channel</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td><div class="info">
-<code class="code">with_channel&nbsp;path&nbsp;f</code>
+<code class="code">with_channel path f</code>
 </div>
 </td></tr>
 <tr><td><a href="Kappa_files.html#VALwith_flux">with_flux</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>

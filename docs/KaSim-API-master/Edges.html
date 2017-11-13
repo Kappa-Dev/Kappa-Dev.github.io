@@ -3,7 +3,6 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="User_graph.html">
 <link rel="next" href="Progress_report.html">
@@ -138,19 +137,19 @@ You'd better NOT use that on the state of a simulation<br>
 
 <pre><span id="VALstats"><span class="keyword">val</span> stats</span> : <code class="type"><a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEstats">stats</a></code></pre>
 <pre><span id="VALadd_agent"><span class="keyword">val</span> add_agent</span> : <code class="type">?id:int -> <a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> int * <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">add_agent&nbsp;?id&nbsp;sigs&nbsp;agent_type&nbsp;graph</code><br>
+<code class="code">add_agent ?id sigs agent_type graph</code><br>
 </div>
 
 <pre><span id="VALadd_free"><span class="keyword">val</span> add_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">add_free&nbsp;agent_id&nbsp;site&nbsp;graph</code><br>
+<code class="code">add_free agent_id site graph</code><br>
 </div>
 
 <pre><span id="VALadd_internal"><span class="keyword">val</span> add_internal</span> : <code class="type">int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">add_internal&nbsp;agent_id&nbsp;site&nbsp;internal_state&nbsp;graph</code><br>
+<code class="code">add_internal agent_id site internal_state graph</code><br>
 </div>
 
 <pre><span id="VALadd_link"><span class="keyword">val</span> add_link</span> : <code class="type"><a href="Agent.html#TYPEt">Agent.t</a> -> int -> <a href="Agent.html#TYPEt">Agent.t</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="Edges.html#TYPEt">t</a> * (int * int) option</code></pre><div class="info ">
-<code class="code">add_link&nbsp;ag1&nbsp;s1&nbsp;ag2&nbsp;s2&nbsp;t</code>
+<code class="code">add_link ag1 s1 ag2 s2 t</code>
  Some (i,j) as second returned element means cc j is now merged into cc i<br>
 </div>
 
@@ -162,31 +161,31 @@ Some (i,j) as second returned element means separate "new" cc j from cc i<br>
 </div>
 
 <pre><span id="VALis_agent"><span class="keyword">val</span> is_agent</span> : <code class="type"><a href="Agent.html#TYPEt">Agent.t</a> -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
-<code class="code">is_agent&nbsp;agent&nbsp;graph</code><br>
+<code class="code">is_agent agent graph</code><br>
 </div>
 
 <pre><span id="VALis_free"><span class="keyword">val</span> is_free</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
-<code class="code">is_free&nbsp;agent_id&nbsp;site&nbsp;graph</code><br>
+<code class="code">is_free agent_id site graph</code><br>
 </div>
 
 <pre><span id="VALis_internal"><span class="keyword">val</span> is_internal</span> : <code class="type">int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
-<code class="code">is_internal&nbsp;internal_state&nbsp;agent_id&nbsp;site&nbsp;graph</code><br>
+<code class="code">is_internal internal_state agent_id site graph</code><br>
 </div>
 
 <pre><span id="VALlink_exists"><span class="keyword">val</span> link_exists</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
-<code class="code">link_exists&nbsp;ag1_id&nbsp;site1&nbsp;ag2_id&nbsp;site2&nbsp;graph</code><br>
+<code class="code">link_exists ag1_id site1 ag2_id site2 graph</code><br>
 </div>
 
 <pre><span id="VALexists_fresh"><span class="keyword">val</span> exists_fresh</span> : <code class="type">int -> int -> int -> int -> <a href="Edges.html#TYPEt">t</a> -> int option</code></pre><div class="info ">
-<code class="code">exists_fresh&nbsp;ag1&nbsp;site1&nbsp;type_of_ag2&nbsp;site2&nbsp;graph</code><br>
+<code class="code">exists_fresh ag1 site1 type_of_ag2 site2 graph</code><br>
 </div>
 
 <pre><span id="VALlink_destination"><span class="keyword">val</span> link_destination</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> (<a href="Agent.html#TYPEt">Agent.t</a> * int) option</code></pre><div class="info ">
-<code class="code">link_destination&nbsp;ag&nbsp;site&nbsp;graph</code><br>
+<code class="code">link_destination ag site graph</code><br>
 </div>
 
 <pre><span id="VALget_internal"><span class="keyword">val</span> get_internal</span> : <code class="type">int -> int -> <a href="Edges.html#TYPEt">t</a> -> int</code></pre><div class="info ">
-<code class="code">get_internal&nbsp;ag&nbsp;site&nbsp;graph</code><br>
+<code class="code">get_internal ag site graph</code><br>
 </div>
 
 <pre><span id="VALget_sites"><span class="keyword">val</span> get_sites</span> : <code class="type">int -> <a href="Edges.html#TYPEt">t</a> -> int</code></pre>
@@ -202,7 +201,7 @@ Some (i,j) as second returned element means separate "new" cc j from cc i<br>
 <pre><span id="VALrev_path"><span class="keyword">val</span> rev_path</span> : <code class="type"><a href="Edges.html#TYPEpath">path</a> -> <a href="Edges.html#TYPEpath">path</a></code></pre>
 <pre><span id="VALprint_path"><span class="keyword">val</span> print_path</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Edges.html#TYPEpath">path</a> -> unit</code></pre>
 <pre><span id="VALare_connected"><span class="keyword">val</span> are_connected</span> : <code class="type">?max_distance:int -><br>       <a href="Edges.html#TYPEt">t</a> -> <a href="Agent.html#TYPEt">Agent.t</a> list -> <a href="Agent.html#TYPEt">Agent.t</a> list -> <a href="Edges.html#TYPEpath">path</a> option</code></pre><div class="info ">
-<code class="code">are_connected&nbsp;?max_distance&nbsp;graph&nbsp;nodes_x&nbsp;nodes_y</code><br>
+<code class="code">are_connected ?max_distance graph nodes_x nodes_y</code><br>
 </div>
 
 <pre><span id="VALspecies"><span class="keyword">val</span> species</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a></code></pre>

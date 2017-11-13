@@ -3,7 +3,6 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Primitives.html">
 <link rel="next" href="Kappa_printer.html">
@@ -120,7 +119,7 @@ Compiled representation of a full Kappa model<br>
 
 
 <pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">filenames:string list -><br>       <a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       unit <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       <a href="Primitives.html#TYPEalg_expr">Primitives.alg_expr</a> <a href="Locality.html#TYPEannot">Locality.annot</a> <a href="NamedDecls.html#TYPEt">NamedDecls.t</a> -><br>       Operator.DepSet.t * Operator.DepSet.t * Operator.DepSet.t array *<br>       Operator.DepSet.t array -><br>       (string <a href="Locality.html#TYPEannot">Locality.annot</a> option * <a href="LKappa.html#TYPErule">LKappa.rule</a> <a href="Locality.html#TYPEannot">Locality.annot</a>) array *<br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> array -><br>       <a href="Primitives.html#TYPEalg_expr">Primitives.alg_expr</a> <a href="Locality.html#TYPEannot">Locality.annot</a> array -><br>       <a href="Primitives.html#TYPEperturbation">Primitives.perturbation</a> array -> <a href="Contact_map.html#TYPEt">Contact_map.t</a> -> <a href="Model.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">init&nbsp;sigs&nbsp;tokens&nbsp;algs&nbsp;dependencies&nbsp;(ast_rules,rules)&nbsp;obs&nbsp;perts</code><br>
+<code class="code">init sigs tokens algs dependencies (ast_rules,rules) obs perts</code><br>
 </div>
 
 <pre><span id="VALnb_tokens"><span class="keyword">val</span> nb_tokens</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> int</code></pre>
@@ -171,7 +170,7 @@ Same as above but the int is this time the rule_id<br>
 <pre><span id="VALcheck_if_counter_is_filled_enough"><span class="keyword">val</span> check_if_counter_is_filled_enough</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALoverwrite_vars"><span class="keyword">val</span> overwrite_vars</span> : <code class="type">(int * <a href="Primitives.html#TYPEalg_expr">Primitives.alg_expr</a>) list -> <a href="Model.html#TYPEt">t</a> -> <a href="Model.html#TYPEt">t</a></code></pre>
 <pre><span id="VALpropagate_constant"><span class="keyword">val</span> propagate_constant</span> : <code class="type">?max_time:float -><br>       ?max_events:int -><br>       int list -> (int * <a href="Primitives.html#TYPEalg_expr">Primitives.alg_expr</a>) list -> <a href="Model.html#TYPEt">t</a> -> <a href="Model.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">propagate_constant&nbsp;updated_vars&nbsp;overwrite_vars&nbsp;env</code><br>
+<code class="code">propagate_constant updated_vars overwrite_vars env</code><br>
 </div>
 
 <pre><span id="VALunary_patterns"><span class="keyword">val</span> unary_patterns</span> : <code class="type"><a href="Model.html#TYPEt">t</a> -> Pattern.Set.t</code></pre></body></html>

@@ -3,7 +3,6 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="IntCollection.html">
 <link rel="next" href="ValMap.html">
@@ -149,13 +148,13 @@
 
 
 <pre><span class="keyword">module type</span> <a href="Int_storage.Storage.html">Storage</a> = <code class="code"><span class="keyword">sig</span></code> <a href="Int_storage.Storage.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><span class="keyword">module</span> <a href="Int_storage.Extend.html">Extend</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span>&nbsp;(</code><code class="code"><span class="constructor">Extension</span></code><code class="code">&nbsp;:&nbsp;</code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="code">)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;</code><div class="sig_block"><code class="code"><span class="keyword">functor</span>&nbsp;(</code><code class="code"><span class="constructor">Underlying</span></code><code class="code">&nbsp;:&nbsp;</code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="code">)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;</code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="type"> 
+<pre><span class="keyword">module</span> <a href="Int_storage.Extend.html">Extend</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">Extension</span></code><code class="code"> : </code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">Underlying</span></code><code class="code"> : </code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="type"> 
   with type key = Extension.key * Underlying.key
   and type dimension = Extension.dimension * Underlying.dimension</code></div></div></pre><div class="info">
 Cartesian product
 </div>
 
-<pre><span class="keyword">module</span> <a href="Int_storage.Quick_key_list.html">Quick_key_list</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span>&nbsp;(</code><code class="code"><span class="constructor">Basic</span></code><code class="code">&nbsp;:&nbsp;</code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="code">)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;</code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="type"> 
+<pre><span class="keyword">module</span> <a href="Int_storage.Quick_key_list.html">Quick_key_list</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">Basic</span></code><code class="code"> : </code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="type"> 
   with type key = Basic.key
    and type dimension = Basic.dimension</code></div></pre><div class="info">
 also record the list of key, for more efficient fold/iter
@@ -165,9 +164,9 @@ also record the list of key, for more efficient fold/iter
 simple array implementation
 </div>
 
-<pre><span class="keyword">module</span> <a href="Int_storage.Nearly_infinite_arrays.html">Nearly_infinite_arrays</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span>&nbsp;(</code><code class="code"><span class="constructor">Basic</span></code><code class="code">&nbsp;:&nbsp;</code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="type"> 
+<pre><span class="keyword">module</span> <a href="Int_storage.Nearly_infinite_arrays.html">Nearly_infinite_arrays</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">Basic</span></code><code class="code"> : </code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="type"> 
    with type dimension = int
-   and type key = int</code><code class="code">)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;</code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="type">  with type key = int and type dimension = int</code></div></pre><div class="info">
+   and type key = int</code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="Int_storage.Storage.html">Storage</a></code><code class="type">  with type key = int and type dimension = int</code></div></pre><div class="info">
 expandable arrays (the size is still limited by max_int
 </div>
 

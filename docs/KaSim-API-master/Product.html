@@ -3,7 +3,6 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Composite_domain.html">
 <link rel="next" href="Usual_domains.html">
@@ -116,7 +115,7 @@ Functor to combine several abstract domains (with explicit communiaction among t
 </div>
 <hr width="100%">
 
-<pre><span class="keyword">module</span> <a href="Product.Product.html">Product</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span>&nbsp;(</code><code class="code"><span class="constructor">New_domain</span></code><code class="code">&nbsp;:&nbsp;</code><code class="type"><a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a></code><code class="code">)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;</code><div class="sig_block"><code class="code"><span class="keyword">functor</span>&nbsp;(</code><code class="code"><span class="constructor">Underlying_domain</span></code><code class="code">&nbsp;:&nbsp;</code><code class="type"><a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a></code><code class="code">)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;</code><code class="type"><a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a></code><code class="type"> </code></div></div></pre><br>
+<pre><span class="keyword">module</span> <a href="Product.Product.html">Product</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">New_domain</span></code><code class="code"> : </code><code class="type"><a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">Underlying_domain</span></code><code class="code"> : </code><code class="type"><a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="Analyzer_domain_sig.Domain.html">Analyzer_domain_sig.Domain</a></code><code class="type"> </code></div></div></pre><br>
 The functor is almost symmetric, but better time performances will be
     obtained by using New_domain as a single domain and UNderlying_domain as a
     list of domains (obtained as the result of the product domain.

@@ -3,7 +3,6 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Graph_json.html">
 <link rel="next" href="Fractions.html">
@@ -178,12 +177,12 @@ Prints nothing in case of infinity or Not a Number<br>
 </div>
 
 <pre><span id="VALiteri"><span class="keyword">val</span> iteri</span> : <code class="type">(<a href="Nbr.html#TYPEt">t</a> -> 'a -> 'a) -> 'a -> <a href="Nbr.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
-<code class="code">iteri&nbsp;f&nbsp;x&nbsp;n</code><br>
+<code class="code">iteri f x n</code><br>
 <b>Returns</b> f (n - k) (... (f (n - 1) (f n x))) where k &lt; n &lt;= k+1<br>
 </div>
 
 <pre><span id="VALmaybe_iteri"><span class="keyword">val</span> maybe_iteri</span> : <code class="type">(<a href="Nbr.html#TYPEt">t</a> -> 'a -> 'a option) -> 'a -> <a href="Nbr.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
-<code class="code">maybe_iteri&nbsp;f&nbsp;x&nbsp;n</code><br>
+<code class="code">maybe_iteri f x n</code><br>
 <b>Returns</b> f (n - k) (... (f (n - 1) (f n x))) up to k &lt; n &lt;= k+1
 or <code class="code">f</code> returns <code class="code"><span class="constructor">None</span></code><br>
 </div>

@@ -3,7 +3,6 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Rule_interpreter.html">
 <link rel="next" href="Replay.html">
@@ -123,11 +122,11 @@ Abstract state<br>
 
 
 <pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">with_delta_activities:bool -><br>       <a href="Model.html#TYPEt">Model.t</a> -> (<a href="Nbr.html#TYPEt">Nbr.t</a> option * <a href="Nbr.html#TYPEt">Nbr.t</a> * int) list -> <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">empty&nbsp;~with_delta_activities&nbsp;env&nbsp;stopping_times</code><br>
+<code class="code">empty ~with_delta_activities env stopping_times</code><br>
 </div>
 
 <pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type">bind:('a -> (bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -> 'a) -><br>       return:(bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       Rule_interpreter.t -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       (<a href="Primitives.html#TYPEalg_expr">Primitives.alg_expr</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a>) list -> 'a</code></pre><div class="info ">
-<code class="code">initial&nbsp;env&nbsp;counter&nbsp;graph&nbsp;state</code> builds up the initial state<br>
+<code class="code">initial env counter graph state</code> builds up the initial state<br>
 </div>
 
 <pre><span id="VALobservables_values"><span class="keyword">val</span> observables_values</span> : <code class="type"><a href="Model.html#TYPEt">Model.t</a> -> Rule_interpreter.t -> <a href="Counter.html#TYPEt">Counter.t</a> -> <a href="Nbr.html#TYPEt">Nbr.t</a> array</code></pre><div class="info ">
