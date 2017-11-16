@@ -44,7 +44,6 @@
 .ectt-1095{ font-family: monospace;}
 .ectt-1095{ font-family: monospace;}
 .ectt-1095{ font-family: monospace;}
-.ectt-1095{ font-family: monospace;}
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
@@ -58,7 +57,19 @@
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
 .ecss-1095{ font-family: sans-serif;}
-.ecss-1095{ font-family: sans-serif;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
+.ecbx-1095{ font-weight: bold;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
@@ -72,53 +83,8 @@
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
-.ecti-1095{ font-style: italic;}
-.ecrm-0900{font-size:81%;}
-.ecss-0900{font-size:81%; font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ecss-0900{ font-family: sans-serif;}
-.ectt-0900{font-size:81%; font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
-.ectt-0900{ font-family: monospace;}
 .ecrm-0600{font-size:54%;}
 .tctt-1095{font-family: monospace;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecbx-1095{ font-weight: bold;}
-.ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
@@ -133,8 +99,21 @@
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .ecit-1095{ font-style: italic; font-family: monospace;}
 .cmti-10x-x-109{ font-style: italic;}
+.ecrm-0900{font-size:81%;}
+.ectt-0900{font-size:81%; font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
+.ectt-0900{ font-family: monospace;}
 .ecti-0900{font-size:81%; font-style: italic;}
-.ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
 .ecti-0900{ font-style: italic;}
@@ -311,23 +290,23 @@ span.Xy span.Y{ position:relative; top:0.35ex;left:-0.25em;}
 #textcolor16{color:#0000FF}
 #textcolor17{color:#0000FF}
 #textcolor18{color:#0000FF}
+tr#TBL-4-1- td{border-top:0.12193em solid} 
 #textcolor19{color:#0000FF}
+tr#TBL-4-1- td{border-bottom:0.07622em solid}
+tr#TBL-4-11- td{border-bottom:0.12193em solid} 
 #textcolor20{color:#0000FF}
+tr#TBL-4-12- td{border-bottom:0.07622em solid}
+tr#TBL-4-19- td{border-bottom:0.12193em solid}
+tr#TBL-5-1- td{border-top:0.12193em solid} 
+tr#TBL-5-1- td{border-bottom:0.07622em solid}
+tr#TBL-5-7- td{border-bottom:0.12193em solid}
 #textcolor21{color:#0000FF}
 #textcolor22{color:#0000FF}
 #textcolor23{color:#0000FF}
-tr#TBL-5-1- td{border-top:0.12193em solid} 
 #textcolor24{color:#0000FF}
-tr#TBL-5-1- td{border-bottom:0.07622em solid}
-tr#TBL-5-12- td{border-bottom:0.12193em solid} 
 #textcolor25{color:#0000FF}
-tr#TBL-5-13- td{border-bottom:0.07622em solid}
-tr#TBL-5-20- td{border-bottom:0.12193em solid}
 #textcolor26{color:#0000FF}
 #textcolor27{color:#0000FF}
-tr#TBL-7-1- td{border-top:0.12193em solid} 
-tr#TBL-7-1- td{border-bottom:0.07622em solid}
-tr#TBL-7-7- td{border-bottom:0.12193em solid}
 #textcolor28{color:#0000FF}
 #textcolor29{color:#0000FF}
 #textcolor30{color:#0000FF}
@@ -362,10 +341,5 @@ tr#TBL-7-7- td{border-bottom:0.12193em solid}
 #textcolor59{color:#0000FF}
 #textcolor60{color:#0000FF}
 #textcolor61{color:#0000FF}
-#textcolor62{color:#0000FF}
-#textcolor63{color:#0000FF}
-#textcolor64{color:#0000FF}
-#textcolor65{color:#0000FF}
-#textcolor66{color:#0000FF}
 /* end css.sty */
 
