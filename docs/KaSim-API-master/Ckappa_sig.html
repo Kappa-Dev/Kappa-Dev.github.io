@@ -1138,7 +1138,9 @@
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.Rule_setmap.html">Rule_setmap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = c_rule_id</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.Agent_id_setmap.html">Agent_id_setmap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = c_agent_id</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.PairRule_setmap.html">PairRule_setmap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = c_rule_id * c_rule_id</code></pre>
-<pre><span class="keyword">module</span> <a href="Ckappa_sig.PairAgentSite_map_and_set.html">PairAgentSite_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type">   with type elt = (c_agent_name * c_site_name) * (c_agent_name * c_site_name)</code></pre>
+<pre><span class="keyword">module</span> <a href="Ckappa_sig.PairAgentSite_map_and_set.html">PairAgentSite_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
+  with type elt = (c_agent_name * c_site_name) *
+                  (c_agent_name * c_site_name)</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.AgentSite_map_and_set.html">AgentSite_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
   with type elt = c_agent_name * c_site_name</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.Agents_map_and_set.html">Agents_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
@@ -1157,10 +1159,12 @@
   with type key = c_site_name and type value = c_state  and type mvbdu = Views_bdu.mvbdu</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.PairAgentsSiteState_map_and_set.html">PairAgentsSiteState_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
   with type elt =
-         (c_agent_id * c_agent_name * c_site_name * c_state) * (c_agent_id * c_agent_name * c_site_name * c_state)</code></pre>
+         (c_agent_id * c_agent_name * c_site_name * c_state) *
+         (c_agent_id * c_agent_name * c_site_name * c_state)</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.PairAgentSiteState_map_and_set.html">PairAgentSiteState_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
   with type elt =
-         (c_agent_name * c_site_name * c_state) * (c_agent_name * c_site_name * c_state)</code></pre>
+         (c_agent_name * c_site_name * c_state) *
+         (c_agent_name * c_site_name * c_state)</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.PairAgentSitesState_map_and_set.html">PairAgentSitesState_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
   with type elt =
          (c_agent_name * c_site_name * c_site_name * c_state) *
