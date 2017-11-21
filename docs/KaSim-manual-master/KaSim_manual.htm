@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release 882a268)</title> 
+(release efd88b0)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release 882a268)</h2>
+(release efd88b0)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -7474,9 +7474,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (882a268) (without Tk interface)
- <br />Analysis launched at 2017/11/21 04:55:23 (GMT+0) on
- <br />travis-job-de169c4b-01f8-452b-a115-d4ffd57d3678
+Kappa Static Analyzer (efd88b0) (without Tk interface)
+ <br />Analysis launched at 2017/11/21 10:57:41 (GMT+0) on
+ <br />travis-job-fec97aec-0ee4-4d2a-b609-7ab44f0b2935
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7533,8 +7533,12 @@ Kappa Static Analyzer (882a268) (without Tk interface)
  <br />------------------------------------------------------------
  <br />R(c!R.c,cr!R.n) =&#x003E; R(c!1,cr!2),R(c!1,n!2)
  <br />R(c!R.c,n!R.cr) =&#x003E; R(c!1,n!2),R(c!1,cr!2)
- <br />execution finished without any exception</div>
-<!--l. 59--><p class="nopar" >
+ <br />Some exceptions have been raised
+ <br />error: file_name: setMap.ml; message: line 669;
+ <br />exception:Not_found
+ <br />error: file_name: setMap.ml; message: line 669;
+ <br />exception:Not_found</div>
+<!--l. 63--><p class="nopar" >
 <!--l. 1692--><p class="noindent" >This result is displayed in the standard output, and it is made of six parts.
 <!--l. 1694--><p class="noindent" >The ﬁrst two parts provide an enumeration of dead rules and dead agents. The next parts display
 what we call reﬁnement lemmas. A reﬁnement lemma is made of a precondition (on
@@ -7555,13 +7559,13 @@ lemma is that every embedding between its precondition into a reachable state ca
 reﬁned/extended into an embedding from one site graph in its postcondition into the same
 reachable state. This way, a reﬁnement lemma provides an enumeration of all the potential
 contexts for the precondition.
+                                                                                  
+
+                                                                                  
 <!--l. 1700--><p class="noindent" >We now detail the six diﬀerent parts:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="ecbx-1095">Detection of dead rules. </span>A rule is called dead, if there is no trace starting from the
-                                                                                  
-
-                                                                                  
      initial state in which this rule is applied. The analysis reports the list of the rules it
      has detected to be dead. Due to the over-approximation, it may happen that a dead
      rule is not discovered by the analysis. Yet, every rule that is reported as dead, is dead
@@ -7617,12 +7621,12 @@ href="#XFeret:SASB2016">18</a>]</span> collects for
      each kind of bonds, the relation between the state of one site in the ﬁrst agent and
      the state of one site in the second agent. Due to the over-approximation, the analysis
      reports a super-set of the set of the potential pairs of states.
-     <!--l. 1725--><p class="noindent" >This abstraction aimed at capturing information about protein transportation. It is
-     quite common to model the location of a protein as the internal state of a ﬁctitious
-     site. With such an encoding, it might be important to ensure that two connected
                                                                                   
 
                                                                                   
+     <!--l. 1725--><p class="noindent" >This abstraction aimed at capturing information about protein transportation. It is
+     quite common to model the location of a protein as the internal state of a ﬁctitious
+     site. With such an encoding, it might be important to ensure that two connected
      proteins are always located in the same location. This abstraction focuses on this kind
      of properties.
      </li>
@@ -7652,15 +7656,19 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
-Kappa Static Analyzer (882a268) (without Tk interface)
- <br />Analysis launched at 2017/11/21 04:55:23 (GMT+0) on
- <br />travis-job-de169c4b-01f8-452b-a115-d4ffd57d3678
+Kappa Static Analyzer (efd88b0) (without Tk interface)
+ <br />Analysis launched at 2017/11/21 10:57:41 (GMT+0) on
+ <br />travis-job-fec97aec-0ee4-4d2a-b609-7ab44f0b2935
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
  <br />Reachability analysis...
- <br />execution finished without any exception</div>
-<!--l. 10--><p class="nopar" >
+ <br />Some exceptions have been raised
+ <br />error: file_name: setMap.ml; message: line 669;
+ <br />exception:Not_found
+ <br />error: file_name: setMap.ml; message: line 669;
+ <br />exception:Not_found</div>
+<!--l. 14--><p class="nopar" >
 <br /><div class="caption" 
 ><span class="id">Figure 6.4: </span><span  
 class="content">Reachability analysis of the model <span 
@@ -9434,9 +9442,9 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-12">
-Kappa Static Analyzer (882a268) (without Tk interface)
- <br />Analysis launched at 2017/11/21 04:55:22 (GMT+0) on
- <br />travis-job-de169c4b-01f8-452b-a115-d4ffd57d3678
+Kappa Static Analyzer (efd88b0) (without Tk interface)
+ <br />Analysis launched at 2017/11/21 10:57:40 (GMT+0) on
+ <br />travis-job-fec97aec-0ee4-4d2a-b609-7ab44f0b2935
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -10789,7 +10797,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">122977972</span><span 
+class="ectt-1095">817306080</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-86012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -10800,7 +10808,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;625985849&#x0022;</span><span 
+class="ectt-1095">&#x0022;2946595&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-86013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
