@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release 9b14366)</title> 
+(release 300a2ea)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release 9b14366)</h2>
+(release 300a2ea)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -7474,9 +7474,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (9b14366) (without Tk interface)
- <br />Analysis launched at 2017/11/24 05:27:49 (GMT+0) on
- <br />travis-job-0f47ff34-5f96-4c27-b816-ad94046c0542
+Kappa Static Analyzer (300a2ea) (without Tk interface)
+ <br />Analysis launched at 2017/11/24 14:40:41 (GMT+0) on
+ <br />travis-job-d797d47e-3e9b-46b7-baa5-4af132f256dd
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7493,21 +7493,21 @@ Kappa Static Analyzer (9b14366) (without Tk interface)
  <br />------------------------------------------------------------
  <br />* Non relational properties:
  <br />------------------------------------------------------------
- <br />E() =&#x003E; [ E(x) v E(x!R.x) ]
- <br />R() =&#x003E; [ R(c) v R(c!R.c) ]
- <br />R() =&#x003E; [ R(n) v R(n!R.cr) ]
- <br />R() =&#x003E; [ R(cr) v R(cr!R.n) ]
- <br />R() =&#x003E; [ R(x) v R(x!E.x) ]
+ <br />E() =&#x003E; [ E(x) v E(x!x.R) ]
+ <br />R() =&#x003E; [ R(c) v R(c!c.R) ]
+ <br />R() =&#x003E; [ R(n) v R(n!cr.R) ]
+ <br />R() =&#x003E; [ R(cr) v R(cr!n.R) ]
+ <br />R() =&#x003E; [ R(x) v R(x!x.E) ]
  <br />
  <br />------------------------------------------------------------
  <br />* Relational properties:
  <br />------------------------------------------------------------
  <br />R() =&#x003E;
  <br />   [
- <br />  R(c,cr,n,x!E.x)
- <br />v R(c!R.c,cr!R.n,n,x!E.x)
- <br />v R(c!R.c,cr,n,x!E.x)
- <br />v R(c!R.c,cr,n!R.cr,x!E.x)
+ <br />  R(c,cr,n,x!x.E)
+ <br />v R(c!c.R,cr!n.R,n,x!x.E)
+ <br />v R(c!c.R,cr,n,x!x.E)
+ <br />v R(c!c.R,cr,n!cr.R,x!x.E)
  <br />v R(c,cr,n,x)
  <br />   ]
  <br />------------------------------------------------------------
@@ -7518,21 +7518,21 @@ Kappa Static Analyzer (9b14366) (without Tk interface)
  <br />------------------------------------------------------------
  <br />R(c!1),R(c!1) =&#x003E;
  <br />[
- <br />  R(c!1,cr!R.n),R(c!1,cr)
+ <br />  R(c!1,cr!n.R),R(c!1,cr)
  <br />v R(c!1,cr),R(c!1,cr)
- <br />v R(c!1,cr),R(c!1,cr!R.n)
+ <br />v R(c!1,cr),R(c!1,cr!n.R)
  <br />]
  <br />R(c!1),R(c!1) =&#x003E;
  <br />[
- <br />  R(c!1,n!R.cr),R(c!1,n)
+ <br />  R(c!1,n!cr.R),R(c!1,n)
  <br />v R(c!1,n),R(c!1,n)
- <br />v R(c!1,n),R(c!1,n!R.cr)
+ <br />v R(c!1,n),R(c!1,n!cr.R)
  <br />]
  <br />------------------------------------------------------------
  <br />* Properties of pairs of bonds
  <br />------------------------------------------------------------
- <br />R(c!R.c,cr!R.n) =&#x003E; R(c!1,cr!2),R(c!1,n!2)
- <br />R(c!R.c,n!R.cr) =&#x003E; R(c!1,n!2),R(c!1,cr!2)
+ <br />R(c!c.R,cr!n.R) =&#x003E; R(c!1,cr!2),R(c!1,n!2)
+ <br />R(c!c.R,n!cr.R) =&#x003E; R(c!1,n!2),R(c!1,cr!2)
  <br />Some exceptions have been raised
  <br />error: file_name: setMap.ml; message: line 669;
  <br />exception:Not_found
@@ -7656,9 +7656,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
-Kappa Static Analyzer (9b14366) (without Tk interface)
- <br />Analysis launched at 2017/11/24 05:27:49 (GMT+0) on
- <br />travis-job-0f47ff34-5f96-4c27-b816-ad94046c0542
+Kappa Static Analyzer (300a2ea) (without Tk interface)
+ <br />Analysis launched at 2017/11/24 14:40:41 (GMT+0) on
+ <br />travis-job-d797d47e-3e9b-46b7-baa5-4af132f256dd
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7735,11 +7735,11 @@ class="content">Reachability analysis: one rule successfully applied.</span></di
 <div class="verbatim" id="verbatim-7">
 Views in initial state:
  <br />
- <br />E( x!free )
+ <br />E( x! )
  <br />--
  <br />Views in initial state:
  <br />
- <br />R( x!free ,c!free ,cr!free ,n!free )</div>
+ <br />R( x! ,c! ,cr! ,n! )</div>
 <!--l. 9--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 6.7: </span><span  
@@ -7768,12 +7768,12 @@ Applying rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7,�
  <br />
  <br />Updating the views for E(x!)
  <br />
- <br />E( x!R@x )
+ <br />E( x!x.R )
  <br />
  <br />
  <br />Updating the views for R(x!,c!,cr!,n!)
  <br />
- <br />R( x!E@x ,c!free ,cr!free ,n!free )
+ <br />R( x!x.E ,c! ,cr! ,n! )
  <br /></div>
 <!--l. 19--><p class="nopar" >
 <br /> <div class="caption" 
@@ -7810,12 +7810,12 @@ Applying rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7,�
  <br />
  <br />Updating the views for E(x!)
  <br />
- <br />E( x!R@x )
+ <br />E( x!x.R )
  <br />
  <br />
  <br />Updating the views for R(x!,c!,cr!,n!)
  <br />
- <br />R( x!E@x ,c!free ,cr!free ,n!free )
+ <br />R( x!x.E ,c! ,cr! ,n! )
  <br />
  <br />(rule E.R (File &#x0022;../kappa/reachability.ka&#x0022;, line 7,
  <br />characters 5-35:)) should be investigated
@@ -9442,9 +9442,9 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-12">
-Kappa Static Analyzer (9b14366) (without Tk interface)
- <br />Analysis launched at 2017/11/24 05:27:48 (GMT+0) on
- <br />travis-job-0f47ff34-5f96-4c27-b816-ad94046c0542
+Kappa Static Analyzer (300a2ea) (without Tk interface)
+ <br />Analysis launched at 2017/11/24 14:40:41 (GMT+0) on
+ <br />travis-job-d797d47e-3e9b-46b7-baa5-4af132f256dd
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -10797,7 +10797,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">706922944</span><span 
+class="ectt-1095">505225086</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-86012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -10808,7 +10808,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;563226726&#x0022;</span><span 
+class="ectt-1095">&#x0022;416623012&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-86013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
