@@ -192,6 +192,9 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;has_forbidden_char&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;allocate_fresh_name&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;allocate&nbsp;:&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_binding_type&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?binding_type_symbol:string&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;agent_name:string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;site_name:string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_binding_type&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?binding_type_symbol:string&nbsp;<span class="keywordsign">-&gt;</span><br>

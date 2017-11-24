@@ -505,10 +505,10 @@
 
 
 
-<pre><span id="TYPEperturbation"><span class="keyword">type</span> <code class="type">'pattern</code> perturbation</span> = <code class="type">('pattern, 'pattern, string) <a href="Ast.html#TYPEperturbation">Ast.perturbation</a></code> </pre>
+<pre><span id="TYPEperturbation"><span class="keyword">type</span> <code class="type">('pattern, 'rule)</code> perturbation</span> = <code class="type">('pattern, 'pattern, string, 'rule) <a href="Ast.html#TYPEperturbation">Ast.perturbation</a></code> </pre>
 
 
-<pre><span id="TYPEmodif_expr"><span class="keyword">type</span> <code class="type">'pattern</code> modif_expr</span> = <code class="type">('pattern, 'pattern, string) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a></code> </pre>
+<pre><span id="TYPEmodif_expr"><span class="keyword">type</span> <code class="type">('pattern, 'rule)</code> modif_expr</span> = <code class="type">('pattern, 'pattern, string, 'rule) <a href="Ast.html#TYPEmodif_expr">Ast.modif_expr</a></code> </pre>
 
 
 <pre><span id="TYPEvariable"><span class="keyword">type</span> <code class="type">'pattern</code> variable</span> = <code class="type">('pattern, string) <a href="Ast.html#TYPEvariable_def">Ast.variable_def</a></code> </pre>
@@ -1053,7 +1053,7 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTc_compil.c_perturbations">c_perturbations</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEc_mixture">c_mixture</a> <a href="Locality.html#TYPEannot">Locality.annot</a> <a href="Ckappa_sig.html#TYPEperturbation">perturbation</a><br>       Int_storage.Nearly_inf_Imperatif.t</code>;</code></td>
+<code><span id="TYPEELTc_compil.c_perturbations">c_perturbations</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEc_mixture">c_mixture</a> <a href="Locality.html#TYPEannot">Locality.annot</a>, <a href="Ckappa_sig.html#TYPEenriched_rule">enriched_rule</a>)<br>       <a href="Ckappa_sig.html#TYPEperturbation">perturbation</a> Int_storage.Nearly_inf_Imperatif.t</code>;</code></td>
 
 </tr></table>
 }
@@ -1064,7 +1064,6 @@
   with type key = c_rule_id
    and type dimension = int</code></pre>
 <pre><span id="VALarray_of_list_rule_id"><span class="keyword">val</span> array_of_list_rule_id</span> : <code class="type">(Rule_nearly_Inf_Int_storage_Imperatif.dimension,<br>        'a Rule_nearly_Inf_Int_storage_Imperatif.t)<br>       <a href="Int_storage.html#TYPEunary">Int_storage.unary</a> -><br>       (Rule_nearly_Inf_Int_storage_Imperatif.key, 'a,<br>        'a Rule_nearly_Inf_Int_storage_Imperatif.t,<br>        'a Rule_nearly_Inf_Int_storage_Imperatif.t)<br>       <a href="Int_storage.html#TYPEternary">Int_storage.ternary</a> -><br>       Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       'a list -><br>       Exception.method_handler *<br>       'a Rule_nearly_Inf_Int_storage_Imperatif.t</code></pre>
-<pre><span id="VALintroduceable_species_in_pertubation"><span class="keyword">val</span> introduceable_species_in_pertubation</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       (Remanent_parameters_sig.parameters -><br>        Exception.method_handler -><br>        ('a, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>        'a <a href="Locality.html#TYPEannot">Locality.annot</a> -> Exception.method_handler * 'b) -><br>       'a <a href="Ckappa_sig.html#TYPEperturbation">perturbation</a> -> Exception.method_handler * 'b list</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.Agent_type_nearly_Inf_Int_storage_Imperatif.html">Agent_type_nearly_Inf_Int_storage_Imperatif</a>: <code class="type"><a href="Int_storage.Storage.html">Int_storage.Storage</a></code><code class="type"> 
   with type key = c_agent_name
    and type dimension = int</code></pre>

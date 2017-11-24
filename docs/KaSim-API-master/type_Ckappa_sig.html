@@ -451,8 +451,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;original_ast_no_rate&nbsp;:&nbsp;string;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;from_a_biderectional_rule&nbsp;:&nbsp;bool;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>pattern&nbsp;perturbation&nbsp;=&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>pattern,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.perturbation<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>pattern&nbsp;modif_expr&nbsp;=&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>pattern,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.modif_expr<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>rule)&nbsp;perturbation&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>pattern,&nbsp;string,&nbsp;<span class="keywordsign">'</span>rule)&nbsp;<span class="constructor">Ast</span>.perturbation<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>rule)&nbsp;modif_expr&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>pattern,&nbsp;string,&nbsp;<span class="keywordsign">'</span>rule)&nbsp;<span class="constructor">Ast</span>.modif_expr<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>pattern&nbsp;variable&nbsp;=&nbsp;(<span class="keywordsign">'</span>pattern,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.variable_def<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>mixture,&nbsp;<span class="keywordsign">'</span>rule)&nbsp;compil&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>agent,&nbsp;<span class="keywordsign">'</span>pattern,&nbsp;<span class="keywordsign">'</span>mixture,&nbsp;string,&nbsp;<span class="keywordsign">'</span>rule)&nbsp;<span class="constructor">Ast</span>.compil<br>
@@ -1083,8 +1085,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Nearly_inf_Imperatif</span>.t;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;c_init&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.enriched_init&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Nearly_inf_Imperatif</span>.t;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;c_perturbations&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_mixture&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="constructor">Ckappa_sig</span>.perturbation<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Nearly_inf_Imperatif</span>.t;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_mixture&nbsp;<span class="constructor">Locality</span>.annot,&nbsp;<span class="constructor">Ckappa_sig</span>.enriched_rule)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.perturbation&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Nearly_inf_Imperatif</span>.t;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Rule_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
@@ -1131,14 +1133,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_nearly_Inf_Int_storage_Imperatif</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;introduceable_species_in_pertubation&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Ckappa_sig</span>.perturbation&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>b&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Agent_type_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t<br>
