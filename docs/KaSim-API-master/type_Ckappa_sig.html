@@ -1045,24 +1045,21 @@
 &nbsp;&nbsp;&nbsp;&nbsp;c_diff_reverse&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_mixture;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;c_side_effects&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.action&nbsp;list;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;c_perturbation&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(((<span class="constructor">Ckappa_sig</span>.c_mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.position)&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_modif_expr&nbsp;list&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ckappa_sig</span>.c_mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.position)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option)&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.position<br>
-&nbsp;&nbsp;<span class="keyword">and</span>&nbsp;c_modif_expr&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">C_INTRO</span>&nbsp;<span class="keyword">of</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ckappa_sig</span>.c_mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_mixture&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.position)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">C_DELETE</span>&nbsp;<span class="keyword">of</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ckappa_sig</span>.c_mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_mixture&nbsp;*<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;c_modif_expr&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">C_APPLY</span>&nbsp;<span class="keyword">of</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ckappa_sig</span>.c_mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_rule&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.position)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">C_UPDATE</span>&nbsp;<span class="keyword">of</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(string&nbsp;*&nbsp;(<span class="constructor">Ckappa_sig</span>.c_mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.position)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">C_STOP</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ckappa_sig</span>.position<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">C_SNAPSHOT</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Ckappa_sig</span>.position<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;c_perturbation&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(((<span class="constructor">Ckappa_sig</span>.c_mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.position)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_modif_expr&nbsp;list&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Ckappa_sig</span>.c_mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.bool&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.position)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;option)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.position<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;enriched_rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;e_rule_label&nbsp;:&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.position)&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;e_rule_direct&nbsp;:&nbsp;bool;<br>

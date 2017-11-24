@@ -522,22 +522,12 @@
 
 
 
-<pre><span id="TYPEperturbation"><span class="keyword">type</span> <code class="type"></code>perturbation</span> = <code class="type">(((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>) *<br>        <a href="Cckappa_sig.html#TYPEmodif_expr">modif_expr</a> list *<br>        ((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>) option) *<br>       <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code> </pre>
-
-
 <pre><code><span id="TYPEmodif_expr"><span class="keyword">type</span> <code class="type"></code>modif_expr</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.INTRO"><span class="constructor">INTRO</span></span> <span class="keyword">of</span> <code class="type">((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> * <a href="Cckappa_sig.html#TYPEmixture">mixture</a> *<br>      <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>)</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTmodif_expr.DELETE"><span class="constructor">DELETE</span></span> <span class="keyword">of</span> <code class="type">((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> * <a href="Cckappa_sig.html#TYPEmixture">mixture</a> *<br>      <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>)</code></code></td>
+<code><span id="TYPEELTmodif_expr.APPLY"><span class="constructor">APPLY</span></span> <span class="keyword">of</span> <code class="type">((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> * <a href="Cckappa_sig.html#TYPErule">rule</a> *<br>      <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>)</code></code></td>
 
 </tr>
 <tr>
@@ -562,6 +552,9 @@
 
 </tr></table>
 
+
+
+<pre><span id="TYPEperturbation"><span class="keyword">type</span> <code class="type"></code>perturbation</span> = <code class="type">(((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>) *<br>        <a href="Cckappa_sig.html#TYPEmodif_expr">modif_expr</a> list *<br>        ((<a href="Cckappa_sig.html#TYPEmixture">mixture</a>, string) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> * <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a>) option) *<br>       <a href="Ckappa_sig.html#TYPEposition">Ckappa_sig.position</a></code> </pre>
 
 
 <pre><code><span id="TYPEenriched_rule"><span class="keyword">type</span> <code class="type"></code>enriched_rule</span> = {</code></pre><table class="typetable">
