@@ -203,7 +203,11 @@ Abstraction leak, please do not use<br>
 <pre><span id="VALautomorphisms"><span class="keyword">val</span> automorphisms</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> Renaming.t list</code></pre>
 <pre><span id="VALembeddings_to_fully_specified"><span class="keyword">val</span> embeddings_to_fully_specified</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Env.t</a> -> <a href="Pattern.html#TYPEid">id</a> -> <a href="Pattern.html#TYPEcc">cc</a> -> Renaming.t list</code></pre>
 <pre><span id="VALsize_of_cc"><span class="keyword">val</span> size_of_cc</span> : <code class="type"><a href="Pattern.html#TYPEcc">cc</a> -> int</code></pre>
-<pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(pos:int -> agent_type:int -> 'a -> 'a * 'b) -><br>       (pos:int -> site:int -> 'b -> <a href="Pattern.html#TYPElink">link</a> * int -> 'a -> 'a) -><br>       <a href="Pattern.html#TYPEcc">cc</a> -> 'a -> 'a</code></pre>
+<pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">(pos:int -> agent_type:int -> (<a href="Pattern.html#TYPElink">link</a> * int) array -> 'a -> 'a) -><br>       <a href="Pattern.html#TYPEcc">cc</a> -> 'a -> 'a</code></pre><div class="info ">
+USE WITH CARE: Break some abstraction. The array must not be
+   modified and internal state <code class="code">-1</code> means unspecified<br>
+</div>
+
 <pre><span id="VALfinalize"><span class="keyword">val</span> finalize</span> : <code class="type">max_sharing:bool -><br>       <a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> -> <a href="Contact_map.html#TYPEt">Contact_map.t</a> -> <a href="Pattern.Env.html#TYPEt">Env.t</a> * <a href="Pattern.PreEnv.html#TYPEstat">PreEnv.stat</a></code></pre>
 <pre><span id="VALinfs"><span class="keyword">val</span> infs</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> list</code></pre>
 <pre><span id="VALmatchings"><span class="keyword">val</span> matchings</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> -> Renaming.t list</code></pre>
