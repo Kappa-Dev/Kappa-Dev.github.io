@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release 2c1f46c)</title> 
+(release 9cb5995)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release 2c1f46c)</h2>
+(release 9cb5995)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -5703,7 +5703,7 @@ class="text"><mtext class="texttt" mathvariant="monospace" >r</mtext></mstyle></
 and <!--l. 1419--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mstyle 
-class="text"><mtext class="texttt" mathvariant="monospace" >'r'</mtext></mstyle></math>
+class="text"><mtext class="texttt" mathvariant="monospace" >r'</mtext></mstyle></math>
 indicates that the ﬁrst rule application has used, in the simulation, some sites that were
 modiﬁed by the application of the former. We show in Fig. <a 
 href="#x1-520031">5.1<!--tex4ht:ref: fig:cflow --></a> an example of such causal
@@ -5749,9 +5749,9 @@ class="tctt-1095">'</span>.</span></div><!--tex4ht:label?: x1-520031 -->
                                                                                   
 <!--l. 1427--><p class="noindent" ></div><hr class="endfigure">
 <!--l. 1429--><p class="noindent" >Causality analysis of the observable <span 
-class="ectt-1095">Cpp </span>can be turned oﬀ at any time using a declaration<a 
- id="dx1-52004"></a> of the
-form: <span class="lstinline"><span 
+class="ectt-1095">Cpp </span>can be turned oﬀ at any time by using a declaration<a 
+ id="dx1-52004"></a> of
+the form: <span class="lstinline"><span 
 class="ectt-1095">%mod:</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">[</span><span 
@@ -5771,9 +5771,9 @@ class="ectt-1095">false</span><span
 class="ectt-1095">]</span></span>
 <!--l. 1432--><p class="noindent" >Each time <span 
 class="ecss-1095">KaSim</span> detects a new occurrence of the observable that is being tracked, it will dump
-it&#x2019;s causal past as a graph using the dot format (see Fig. <a 
-href="#x1-520031">5.1<!--tex4ht:ref: fig:cflow --></a> above). The name of
-the ﬁle in which the causal ﬂow is stored can be set using the <span 
+its causal past as a graph using the dot format (see Fig. <a 
+href="#x1-520031">5.1<!--tex4ht:ref: fig:cflow --></a> above). The name of the
+ﬁle in which the causal ﬂow is stored can be set by using the <span 
 class="ectt-1095">%def </span>instruction (see
 Section <a 
 href="#x1-590005.4">5.4<!--tex4ht:ref: sec:param --></a>).
@@ -5850,7 +5850,7 @@ the causal ﬂow). A <span
 class="ecti-1095">strongly </span>compressed causal ﬂow enjoys the same property with an
 additional level of compression obtained by considering diﬀerent instances of the same
 rule to be indistinguishable<a 
- id="dx1-53003"></a>. Note that causal ﬂow compressions may be memory and
+ id="dx1-53003"></a>. Note that, causal ﬂow compressions may be memory and
 computation demanding. For large systems it may be safer to start with weak compressions
 only.
 <!--l. 1438--><p class="noindent" >The type of compression can be set using the <span 
@@ -5971,8 +5971,9 @@ class="ectt-1095">]</span>
 </div>
 <!--l. 1449--><p class="noindent" >The above declaration will ask <span 
 class="ecss-1095">KaSim</span> to analyze each new occurrence of <span 
-class="tcrm-1095">'</span>Cpp<span 
-class="tcrm-1095">' </span>in that time interval.
+class="tctt-1095">'</span><span 
+class="ectt-1095">Cpp</span><span 
+class="tctt-1095">' </span>in that time interval.
 If <!--l. 1449--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
@@ -6087,7 +6088,7 @@ display="inline" ><mi
                                                                                   
 
                                                                                   
-variable that is initially set to 0. Note that the second line is a perturbation that contains two
+variable that is initially set to 0. Note that, the second line is a perturbation that contains two
 simultaneous eﬀects, the ﬁrst one triggering causality analysis and the second one updating the value
 of variable <!--l. 1455--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
@@ -6227,19 +6228,19 @@ impact on the activity<a
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >s</mi></math>.
-Note that the importance of the ﬂux between two rules can be observed by looking at the label on
-the edges that indicate the overall activity transfer (positive or negative) between the rules. The
-above declaration<a 
+Note that, the importance of the ﬂux between two rules can be observed by looking at the label
+on the edges that indicate the overall activity transfer (positive or negative) between the rules.
+The above declaration<a 
  id="dx1-55008"></a> produces a ﬂux map that is shown in Fig. <a 
-href="#x1-550012">5.2<!--tex4ht:ref: fig:flux --></a>. Note that ﬂux may vary during
-time, therefore the time or event limit of the simulation is of importance and will likely change
-the aspect of the produced map.
+href="#x1-550012">5.2<!--tex4ht:ref: fig:flux --></a>. Note that, ﬂux may vary
+during time, therefore the time or event limit of the simulation is of importance and will likely
+change the aspect of the produced map.
 <h4 class="subsectionHead"><span class="titlemark">5.1.3   </span> <a 
  id="x1-560005.1.3"></a>Print species of an observable</h4>
 <!--l. 1476--><p class="noindent" >The eﬀect <span 
 class="ectt-1095">$SPECIES_OFF </span>tracks the occurrence of an observable. Each time a new instance of the
 observable appears, the <span 
-class="ecti-1095">species </span>in which it occured is printed in a ﬁle. For example
+class="ecti-1095">species </span>in which it occured is printed in a ﬁle. For example:
 <!--l. 1477-->
 <div class="lstlisting" id="listing-24"><span class="label"><a 
  id="x1-56001r1"></a><span 
@@ -6271,10 +6272,11 @@ class="ectt-1095">]</span>
 class="ectt-1095">&#x0022;species.ka&#x0022; </span>a new line for each new occurrence of <span 
 class="ectt-1095">A(a!1), B(a!1) </span>with the
 time of occurrence and the species in which it occurred.
-<!--l. 1482--><p class="noindent" >Note that this perturbation can only be applied if the observable is a connected component.
                                                                                   
 
                                                                                   
+<!--l. 1482--><p class="noindent" >Note that, this perturbation can only be applied if the observable is a connected
+component.
 <!--l. 1484--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">5.2   </span> <a 
  id="x1-570005.2"></a>Implicit signature</h3>
@@ -6283,7 +6285,7 @@ class="ecss-1095">KaSim</span> permits users in a hurry to avoid writing agent 
 <span 
 class="ectt-1095">--implicit-signature </span>of the command line. The signature is then deduced using information
 gathered in the KF<a 
- id="dx1-57001"></a>. Note that it is not recommended to use the DCDW convention for
+ id="dx1-57001"></a>. Note that, it is not recommended to use the DCDW convention for
 introduced agents in conjunction with the <span 
 class="ectt-1095">--implicit-signature </span>option unless the default
 state of all sites is mentioned in the <span 
@@ -6327,7 +6329,8 @@ class="ectt-1095">-make-sim abc.kasim</span></li></ul>
 <!--l. 1493--><p class="noindent" >will generate a standard simulation of the <span 
 class="ectt-1095">abc.ka </span>model, but in addition, will create the
 simulation package <span 
-class="ectt-1095">abc.kasim </span>(.kasim extension is not mandatory). This package is a binary
+class="ectt-1095">abc.kasim </span>(<span 
+class="ectt-1095">.kasim </span>extension is not mandatory). This package is a binary
 ﬁle, i.e. not human readable, that can be used as input of a new simulation using the
 command:
      <ul class="itemize1">
@@ -6344,13 +6347,13 @@ time units instead of <!--l. 1497--><math
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >n</mi></math>.
+                                                                                  
+
+                                                                                  
 Importantly, simulation packages can only be given as input to the <span 
 class="ecti-1095">same </span><span 
 class="ecss-1095">KaSim</span> that produced it.
 As a consequence, recompiling the code, or obtaining diﬀerent binaries, will cause the simulation
-                                                                                  
-
-                                                                                  
 package to become useless.
 <!--l. 1499--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">5.4   </span> <a 
@@ -7631,9 +7634,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (2c1f46c) (without Tk interface)
- <br />Analysis launched at 2017/11/30 10:47:00 (GMT+0) on
- <br />travis-job-c643fc0b-e7d8-44a1-b4cc-5eb7ec3dbeda
+Kappa Static Analyzer (9cb5995) (without Tk interface)
+ <br />Analysis launched at 2017/11/30 11:37:58 (GMT+0) on
+ <br />travis-job-0b7cbc57-ff5f-45b4-8131-80c120fbe135
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7809,9 +7812,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
-Kappa Static Analyzer (2c1f46c) (without Tk interface)
- <br />Analysis launched at 2017/11/30 10:47:00 (GMT+0) on
- <br />travis-job-c643fc0b-e7d8-44a1-b4cc-5eb7ec3dbeda
+Kappa Static Analyzer (9cb5995) (without Tk interface)
+ <br />Analysis launched at 2017/11/30 11:37:58 (GMT+0) on
+ <br />travis-job-0b7cbc57-ff5f-45b4-8131-80c120fbe135
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7991,7 +7994,7 @@ domain.
 class="ectt-1095">--contact-map-domain</span></span></span> impacts the way side-eﬀects are handled with during the
 analysis. In <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">static</span></span></span> mode, we consider that every bond that occurs syntactically in the initial
-state, in the rhs of a rule, or in a introduction directive of a perturbation, may be released by
+state, in the RHS of a rule, or in a introduction directive of a perturbation, may be released by
 side-eﬀects. In <span class="obeylines-h"><span class="verb"><span 
 class="ectt-1095">dynamic</span></span></span> mode, only the bond that has been encountered so far during the analysis
 are considered.
@@ -10235,9 +10238,9 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-16">
-Kappa Static Analyzer (2c1f46c) (without Tk interface)
- <br />Analysis launched at 2017/11/30 10:47:00 (GMT+0) on
- <br />travis-job-c643fc0b-e7d8-44a1-b4cc-5eb7ec3dbeda
+Kappa Static Analyzer (9cb5995) (without Tk interface)
+ <br />Analysis launched at 2017/11/30 11:37:57 (GMT+0) on
+ <br />travis-job-0b7cbc57-ff5f-45b4-8131-80c120fbe135
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -11594,7 +11597,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">680387805</span><span 
+class="ectt-1095">161781685</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -11605,7 +11608,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;628425861&#x0022;</span><span 
+class="ectt-1095">&#x0022;787715826&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
