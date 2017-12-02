@@ -107,24 +107,24 @@
 &nbsp;&nbsp;&nbsp;&nbsp;snapshot_agents&nbsp;:&nbsp;(int&nbsp;*&nbsp;<span class="constructor">User_graph</span>.connected_component)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;snapshot_tokens&nbsp;:&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Nbr</span>.t)&nbsp;array;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;flux_data&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flux_name&nbsp;:&nbsp;string;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flux_kind&nbsp;:&nbsp;<span class="constructor">Primitives</span>.flux_kind;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flux_start&nbsp;:&nbsp;float;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flux_hits&nbsp;:&nbsp;int&nbsp;array;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flux_fluxs&nbsp;:&nbsp;float&nbsp;array&nbsp;array;<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;din_data&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;din_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;din_kind&nbsp;:&nbsp;<span class="constructor">Primitives</span>.din_kind;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;din_start&nbsp;:&nbsp;float;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;din_hits&nbsp;:&nbsp;int&nbsp;array;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;din_fluxs&nbsp;:&nbsp;float&nbsp;array&nbsp;array;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;flux_map&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flux_rules&nbsp;:&nbsp;string&nbsp;array;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flux_data&nbsp;:&nbsp;<span class="constructor">Data</span>.flux_data;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flux_end&nbsp;:&nbsp;float;<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;din&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;din_rules&nbsp;:&nbsp;string&nbsp;array;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;din_data&nbsp;:&nbsp;<span class="constructor">Data</span>.din_data;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;din_end&nbsp;:&nbsp;float;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;file_line&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;file_line_name&nbsp;:&nbsp;string&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;file_line_text&nbsp;:&nbsp;string;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Flux</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">DIN</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.din<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">DeltaActivities</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;*&nbsp;(int&nbsp;*&nbsp;(float&nbsp;*&nbsp;float))&nbsp;list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Plot</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Nbr</span>.t&nbsp;array<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Print</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Data</span>.file_line<br>
@@ -140,14 +140,12 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;read_snapshot&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;snapshot_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.snapshot<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot_flux_map&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_html_flux_map&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;write_flux_map&nbsp;:&nbsp;<span class="constructor">Bi_outbuf</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_flux_map&nbsp;:&nbsp;?len:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;read_flux_map&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;flux_map_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.flux_map<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_dot_din&nbsp;:&nbsp;?uuid:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.din&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_html_din&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.din&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;write_din&nbsp;:&nbsp;<span class="constructor">Bi_outbuf</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.din&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_din&nbsp;:&nbsp;?len:int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.din&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;read_din&nbsp;:&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Safe</span>.lexer_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.din<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;din_of_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Data</span>.din<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;plot&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;plot_legend&nbsp;:&nbsp;string&nbsp;array;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;plot_series&nbsp;:&nbsp;float&nbsp;option&nbsp;array&nbsp;list;<br>

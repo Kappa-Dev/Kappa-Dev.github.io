@@ -155,66 +155,66 @@ Must have length &gt;= 1 (at least <code class="code"><span class="constructor">
 
 
 
-<pre><code><span id="TYPEflux_data"><span class="keyword">type</span> <code class="type"></code>flux_data</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEdin_data"><span class="keyword">type</span> <code class="type"></code>din_data</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTflux_data.flux_name">flux_name</span>&nbsp;: <code class="type">string</code>;</code></td>
+<code><span id="TYPEELTdin_data.din_name">din_name</span>&nbsp;: <code class="type">string</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTflux_data.flux_kind">flux_kind</span>&nbsp;: <code class="type"><a href="Primitives.html#TYPEflux_kind">Primitives.flux_kind</a></code>;</code></td>
+<code><span id="TYPEELTdin_data.din_kind">din_kind</span>&nbsp;: <code class="type"><a href="Primitives.html#TYPEdin_kind">Primitives.din_kind</a></code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTflux_data.flux_start">flux_start</span>&nbsp;: <code class="type">float</code>;</code></td>
+<code><span id="TYPEELTdin_data.din_start">din_start</span>&nbsp;: <code class="type">float</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTflux_data.flux_hits">flux_hits</span>&nbsp;: <code class="type">int array</code>;</code></td>
+<code><span id="TYPEELTdin_data.din_hits">din_hits</span>&nbsp;: <code class="type">int array</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTflux_data.flux_fluxs">flux_fluxs</span>&nbsp;: <code class="type">float array array</code>;</code></td>
+<code><span id="TYPEELTdin_data.din_fluxs">din_fluxs</span>&nbsp;: <code class="type">float array array</code>;</code></td>
 
 </tr></table>
 }
 
 
 
-<pre><code><span id="TYPEflux_map"><span class="keyword">type</span> <code class="type"></code>flux_map</span> = {</code></pre><table class="typetable">
+<pre><code><span id="TYPEdin"><span class="keyword">type</span> <code class="type"></code>din</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTflux_map.flux_rules">flux_rules</span>&nbsp;: <code class="type">string array</code>;</code></td>
+<code><span id="TYPEELTdin.din_rules">din_rules</span>&nbsp;: <code class="type">string array</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTflux_map.flux_data">flux_data</span>&nbsp;: <code class="type"><a href="Data.html#TYPEflux_data">flux_data</a></code>;</code></td>
+<code><span id="TYPEELTdin.din_data">din_data</span>&nbsp;: <code class="type"><a href="Data.html#TYPEdin_data">din_data</a></code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTflux_map.flux_end">flux_end</span>&nbsp;: <code class="type">float</code>;</code></td>
+<code><span id="TYPEELTdin.din_end">din_end</span>&nbsp;: <code class="type">float</code>;</code></td>
 
 </tr></table>
 }
@@ -245,7 +245,7 @@ Must have length &gt;= 1 (at least <code class="code"><span class="constructor">
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.Flux"><span class="constructor">Flux</span></span> <span class="keyword">of</span> <code class="type"><a href="Data.html#TYPEflux_map">flux_map</a></code></code></td>
+<code><span id="TYPEELTt.DIN"><span class="constructor">DIN</span></span> <span class="keyword">of</span> <code class="type"><a href="Data.html#TYPEdin">din</a></code></code></td>
 
 </tr>
 <tr>
@@ -325,26 +325,26 @@ Input JSON data of type <a href="Data.html#TYPEsnapshot"><code class="code"><spa
 Deserialize JSON data of type <a href="Data.html#TYPEsnapshot"><code class="code"><span class="constructor">Data</span>.snapshot</code></a>.<br>
 </div>
 
-<pre><span id="VALprint_dot_flux_map"><span class="keyword">val</span> print_dot_flux_map</span> : <code class="type">?uuid:int -> Format.formatter -> <a href="Data.html#TYPEflux_map">flux_map</a> -> unit</code></pre>
-<pre><span id="VALprint_html_flux_map"><span class="keyword">val</span> print_html_flux_map</span> : <code class="type">Format.formatter -> <a href="Data.html#TYPEflux_map">flux_map</a> -> unit</code></pre>
-<pre><span id="VALwrite_flux_map"><span class="keyword">val</span> write_flux_map</span> : <code class="type">Bi_outbuf.t -> <a href="Data.html#TYPEflux_map">flux_map</a> -> unit</code></pre><div class="info ">
-Output a JSON value of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.<br>
+<pre><span id="VALprint_dot_din"><span class="keyword">val</span> print_dot_din</span> : <code class="type">?uuid:int -> Format.formatter -> <a href="Data.html#TYPEdin">din</a> -> unit</code></pre>
+<pre><span id="VALprint_html_din"><span class="keyword">val</span> print_html_din</span> : <code class="type">Format.formatter -> <a href="Data.html#TYPEdin">din</a> -> unit</code></pre>
+<pre><span id="VALwrite_din"><span class="keyword">val</span> write_din</span> : <code class="type">Bi_outbuf.t -> <a href="Data.html#TYPEdin">din</a> -> unit</code></pre><div class="info ">
+Output a JSON value of type <a href="Data.html#TYPEdin"><code class="code"><span class="constructor">Data</span>.din</code></a>.<br>
 </div>
 
-<pre><span id="VALstring_of_flux_map"><span class="keyword">val</span> string_of_flux_map</span> : <code class="type">?len:int -> <a href="Data.html#TYPEflux_map">flux_map</a> -> string</code></pre><div class="info ">
-Serialize a value of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>
+<pre><span id="VALstring_of_din"><span class="keyword">val</span> string_of_din</span> : <code class="type">?len:int -> <a href="Data.html#TYPEdin">din</a> -> string</code></pre><div class="info ">
+Serialize a value of type <a href="Data.html#TYPEdin"><code class="code"><span class="constructor">Data</span>.din</code></a>
       into a JSON string.<br>
 </div>
 <div class="param_info"><code class="code">len</code> : specifies the initial length
                  of the buffer used internally.
                  Default: 1024.</div>
 
-<pre><span id="VALread_flux_map"><span class="keyword">val</span> read_flux_map</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Data.html#TYPEflux_map">flux_map</a></code></pre><div class="info ">
-Input JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.<br>
+<pre><span id="VALread_din"><span class="keyword">val</span> read_din</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Data.html#TYPEdin">din</a></code></pre><div class="info ">
+Input JSON data of type <a href="Data.html#TYPEdin"><code class="code"><span class="constructor">Data</span>.din</code></a>.<br>
 </div>
 
-<pre><span id="VALflux_map_of_string"><span class="keyword">val</span> flux_map_of_string</span> : <code class="type">string -> <a href="Data.html#TYPEflux_map">flux_map</a></code></pre><div class="info ">
-Deserialize JSON data of type <a href="Data.html#TYPEflux_map"><code class="code"><span class="constructor">Data</span>.flux_map</code></a>.<br>
+<pre><span id="VALdin_of_string"><span class="keyword">val</span> din_of_string</span> : <code class="type">string -> <a href="Data.html#TYPEdin">din</a></code></pre><div class="info ">
+Deserialize JSON data of type <a href="Data.html#TYPEdin"><code class="code"><span class="constructor">Data</span>.din</code></a>.<br>
 </div>
 
 <pre><code><span id="TYPEplot"><span class="keyword">type</span> <code class="type"></code>plot</span> = {</code></pre><table class="typetable">
