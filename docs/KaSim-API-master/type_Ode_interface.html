@@ -111,6 +111,9 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;connected_component<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;init&nbsp;=&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;rule)&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_allow_empty_lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_dotnet&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dont_allow_empty_lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_cache&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;init<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mixture_of_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
@@ -121,10 +124,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_token&nbsp;:&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_chemical_species&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?dotnet:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_canonic_species&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?dotnet:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;canonic_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rule_rate_convention&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Remanent_parameters_sig</span>.rate_convention<br>
@@ -193,6 +194,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_ast&nbsp;:&nbsp;ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.parsing_compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;preprocess&nbsp;:&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;preprocessed_ast<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compil&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dotnet:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?bwd_bisim:<span class="constructor">LKappa_group_action</span>.bwd_bisim_info&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule_rate_convention:<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?reaction_rate_convention:<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
