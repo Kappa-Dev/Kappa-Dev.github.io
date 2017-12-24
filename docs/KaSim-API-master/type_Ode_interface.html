@@ -113,6 +113,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;init&nbsp;=&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;rule)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_allow_empty_lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_dotnet&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;with_dot_and_plus&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dont_allow_empty_lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_cache&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_init&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;init<br>
@@ -134,6 +135,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;what_do_we_count&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_args</span>.count<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_count_in_embeddings&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_prompt_reactions&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;symbol_table&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Symbol_table</span>.symbol_table<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_chemical_species&nbsp;:&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;canonic_form&nbsp;:&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;canonic_species<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;connected_components_of_patterns&nbsp;:&nbsp;pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;list<br>
