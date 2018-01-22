@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release v4.0rc1-48-gd1c3654)</title> 
+(release 81069b8)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release v4.0rc1-48-gd1c3654)</h2>
+(release 81069b8)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -7642,10 +7642,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
- <br />interface)
- <br />Analysis launched at 2018/01/22 09:52:24 (GMT+0) on
- <br />travis-job-1bf61cde-2161-4be4-969e-78f6fcafdbcb
+Kappa Static Analyzer (81069b8) (without Tk interface)
+ <br />Analysis launched at 2018/01/22 14:45:58 (GMT+0) on
+ <br />travis-job-b09c82fa-b94a-43e5-8c11-26bf89470413
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7679,10 +7678,10 @@ Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
  <br />v R(c[c.R],cr[.],n[cr.R],x[x.E])
  <br />v R(c[.],cr[.],n[.],x[.])
  <br />   ]
+ <br />------------------------------------------------------------
                                                                                   
 
                                                                                   
- <br />------------------------------------------------------------
  <br />* Properties in connected agents
  <br />------------------------------------------------------------
  <br />R(c[1]),R(c[1]) =&#x003E;
@@ -7703,7 +7702,7 @@ Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
  <br />R(c[c.R],cr[n.R]) =&#x003E; R(c[1],cr[2]),R(c[1],n[2])
  <br />R(c[c.R],n[cr.R]) =&#x003E; R(c[1],n[2]),R(c[1],cr[2])
  <br />execution finished without any exception</div>
-<!--l. 60--><p class="nopar" >
+<!--l. 59--><p class="nopar" >
 <!--l. 1767--><p class="noindent" >This result is displayed in the standard output, and it is made of six parts.
 <!--l. 1769--><p class="noindent" >The ﬁrst two parts provide an enumeration of dead rules and dead agents. The next parts display
 what we call reﬁnement lemmas. A reﬁnement lemma is made of a precondition (on
@@ -7726,11 +7725,11 @@ reachable state. This way, a reﬁnement lemma provides an enumeration of all th
 contexts for the precondition.
 <!--l. 1775--><p class="noindent" >We now detail the six diﬀerent parts:
      <ul class="itemize1">
+     <li class="itemize"><span 
+class="ecbx-1095">Detection of dead rules. </span>A rule is called dead, if there is no trace starting from the
                                                                                   
 
                                                                                   
-     <li class="itemize"><span 
-class="ecbx-1095">Detection of dead rules. </span>A rule is called dead, if there is no trace starting from the
      initial state in which this rule is applied. The analysis reports the list of the rules it
      has detected to be dead. Due to the over-approximation, it may happen that a dead
      rule is not discovered by the analysis. Yet, every rule that is reported as dead, is dead
@@ -7788,10 +7787,10 @@ href="#XFeret:SASB2016">18</a>]</span> collects for
      reports a super-set of the set of the potential pairs of states.
      <!--l. 1800--><p class="noindent" >This abstraction aimed at capturing information about protein transportation. It is
      quite common to model the location of a protein as the internal state of a ﬁctitious
+     site. With such an encoding, it might be important to ensure that two connected
                                                                                   
 
                                                                                   
-     site. With such an encoding, it might be important to ensure that two connected
      proteins are always located in the same location. This abstraction focuses on this kind
      of properties.
      </li>
@@ -7821,16 +7820,15 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
-Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
- <br />interface)
- <br />Analysis launched at 2018/01/22 09:52:24 (GMT+0) on
- <br />travis-job-1bf61cde-2161-4be4-969e-78f6fcafdbcb
+Kappa Static Analyzer (81069b8) (without Tk interface)
+ <br />Analysis launched at 2018/01/22 14:45:58 (GMT+0) on
+ <br />travis-job-b09c82fa-b94a-43e5-8c11-26bf89470413
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
  <br />Reachability analysis...
  <br />execution finished without any exception</div>
-<!--l. 11--><p class="nopar" >
+<!--l. 10--><p class="nopar" >
 <br /><div class="caption" 
 ><span class="id">Figure 6.5: </span><span  
 class="content">Reachability analysis of the model <span 
@@ -10896,10 +10894,9 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-21">
-Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
- <br />interface)
- <br />Analysis launched at 2018/01/22 09:52:24 (GMT+0) on
- <br />travis-job-1bf61cde-2161-4be4-969e-78f6fcafdbcb
+Kappa Static Analyzer (81069b8) (without Tk interface)
+ <br />Analysis launched at 2018/01/22 14:45:58 (GMT+0) on
+ <br />travis-job-b09c82fa-b94a-43e5-8c11-26bf89470413
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -10929,7 +10926,7 @@ Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
  <br />* Properties of pairs of bonds
  <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 35--><p class="nopar" >
+<!--l. 34--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 6.32: </span><span  
 class="content">Log of the reachability analysis.</span></div><!--tex4ht:label?: x1-7201832 -->
@@ -12277,7 +12274,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">409494571</span><span 
+class="ectt-1095">560277643</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -12288,7 +12285,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;549677041&#x0022;</span><span 
+class="ectt-1095">&#x0022;530689759&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
