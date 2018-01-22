@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release v4.0rc1-47-g6cf7fde)</title> 
+(release v4.0rc1-48-gd1c3654)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release v4.0rc1-47-g6cf7fde)</h2>
+(release v4.0rc1-48-gd1c3654)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -4565,14 +4565,16 @@ class="ectt-1095">]</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">do</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">$PLOTNOW</span><span 
+class="ectt-1095">$PLOTENTRY</span><span 
+class="ectt-1095">;</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">repeat</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">true</span><span 
-class="ectt-1095">]</span></span> will print a line in the data ﬁle every
-2.3 time unit of simulation whereas <span class="lstinline"><span 
+class="ectt-1095">]</span></span>
+will print a line in the data ﬁle every 2.3 time unit of simulation whereas
+<span class="lstinline"><span 
 class="ectt-1095">/%mod:</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">|</span><span 
@@ -4586,7 +4588,8 @@ class="ectt-1095">1000</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">do</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">$PLOTNOW</span><span 
+class="ectt-1095">$PLOTENTRY</span><span 
+class="ectt-1095">;</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">repeat</span><span 
 class="ectt-1095"> </span><span 
@@ -4606,9 +4609,9 @@ class="ectt-1095">B</span><span
 class="ectt-1095">(</span><span 
 class="ectt-1095">x</span><span 
 class="ectt-1095">[.])</span><span 
-class="ectt-1095">|</span></span>
-will do it every event where there is more than 1000 A up to the ﬁrst event where (there is
-more than 1000 A) and the number of <span class="lstinline"><span 
+class="ectt-1095">|</span></span> will do it every event
+where there is more than 1000 A up to the ﬁrst event where (there is more than 1000 A) and the
+number of <span class="lstinline"><span 
 class="ectt-1095">/</span><span 
 class="ectt-1095">|</span><span 
 class="ectt-1095">B</span><span 
@@ -4617,8 +4620,7 @@ class="ectt-1095">x</span><span
 class="ectt-1095">[</span><span 
 class="ectt-1095">_</span><span 
 class="ectt-1095">])</span><span 
-class="ectt-1095">|</span></span> becomes bigger than the number of
-<span class="lstinline"><span 
+class="ectt-1095">|</span></span> becomes bigger than the number of <span class="lstinline"><span 
 class="ectt-1095">/</span><span 
 class="ectt-1095">|</span><span 
 class="ectt-1095">B</span><span 
@@ -4748,7 +4750,8 @@ class="ectt-1095"> </span><span
 class="ectt-1095">10000</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">C</span><span 
-class="ectt-1095">()</span></span>.
+class="ectt-1095">()</span><span 
+class="ectt-1095">;</span></span>.
 <!--l. 1105--><p class="noindent" >The modiﬁed Kappa ﬁle is available in the source repository, in the <span 
 class="ectt-1095">model/ </span>directory (ﬁle
 <span 
@@ -4817,7 +4820,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">&#x2019;</span><span 
 class="ectt-1095">k_on</span><span 
 class="ectt-1095">&#x2019;</span><span 
-class="ectt-1095">0.0</span></span>
+class="ectt-1095">0.0;</span></span>
 <!--l. 1128--><p class="noindent" >This intervention will be applied whenever the observable <span 
 class="tctt-1095">'</span><span 
 class="ectt-1095">Cpp</span><span 
@@ -4846,7 +4849,8 @@ class="ectt-1095">&#x2019;</span><span
 class="ectt-1095">&#x2019;</span><span 
 class="ectt-1095">k_on</span><span 
 class="ectt-1095">&#x2019;</span><span 
-class="ectt-1095">/100</span></span>
+class="ectt-1095">/100</span><span 
+class="ectt-1095">;</span></span>
 will cause the on rate of all rules to decrease a hundred fold. Note that, it is possible
 to override the kinetic rate of a speciﬁc rule: in our ABC example, the declaration<a 
  id="dx1-34003"></a>:
@@ -4869,7 +4873,8 @@ class="ectt-1095">a</span><span
 class="ectt-1095">.</span><span 
 class="ectt-1095">b</span><span 
 class="ectt-1095">&#x2019;</span><span 
-class="ectt-1095">inf</span></span> will set the kinetic rate of rule <span 
+class="ectt-1095">inf</span><span 
+class="ectt-1095">;</span></span> will set the kinetic rate of rule <span 
 class="tctt-1095">'</span><span 
 class="ectt-1095">a.b</span><span 
 class="tctt-1095">'</span> to
@@ -4928,7 +4933,7 @@ class="ectt-1095">$SNAPSHOT</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">&#x0022;</span><span 
 class="ectt-1095">prefix</span><span 
-class="ectt-1095">&#x0022;</span></span> will ask <span 
+class="ectt-1095">&#x0022;;</span></span> will ask <span 
 class="ecss-1095">KaSim</span> to export the mixture<a 
  id="dx1-37003"></a>
 the ﬁrst time the percentage of null events reaches 90%. The exported ﬁle will be named
@@ -4962,7 +4967,8 @@ class="ectt-1095">.9</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">do</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">$SNAPSHOT</span></span>
+class="ectt-1095">$SNAPSHOT</span><span 
+class="ectt-1095">;</span></span>
 in which case the default preﬁx <span 
 class="ectt-1095">snap.ka </span>will be used for naming snapshots.
 <!--l. 1173--><p class="noindent" >If the name already exists, a counter will be appended at the end of the ﬁle to prevent
@@ -4993,7 +4999,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095">abc</span><span 
 class="ectt-1095">.</span><span 
 class="ectt-1095">ka</span><span 
-class="ectt-1095">&#x0022;</span><span 
+class="ectt-1095">&#x0022;;</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">repeat</span><span 
 class="ectt-1095"> </span><span 
@@ -5030,7 +5036,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095">snap</span><span 
 class="ectt-1095">.</span><span 
 class="ectt-1095">dot</span><span 
-class="ectt-1095">&#x0022;</span></span>).
+class="ectt-1095">&#x0022;;</span></span>).
 <!--l. 1188--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x1-380002.7.4"></a>Printing values during a simulation</h5>
@@ -5108,6 +5114,7 @@ class="ectt-1095">E</span><span
 class="ectt-1095">].&#x0022;.</span><span 
 class="ectt-1095">dat</span><span 
 class="ectt-1095">&#x0022;)</span><span 
+class="ectt-1095">;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-38003r3"></a><span 
 class="ecrm-0600">3</span></span><span 
@@ -5156,6 +5163,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">do</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">$PLOTENTRY</span><span 
+class="ectt-1095">;</span><span 
 class="ectt-1095"> </span><span 
 class="ectt-1095">until</span><span 
 class="ectt-1095"> </span><span 
@@ -5675,7 +5683,7 @@ class="ectt-1095">Cpp</span><span
 class="ectt-1095">&#x2019;</span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">true</span><span 
-class="ectt-1095">]</span></span> will
+class="ectt-1095">];</span></span> will
 ask <span 
 class="ecss-1095">KaSim</span> to turn on causality analysis<a 
  id="dx1-52001"></a> for the observable <span 
@@ -5769,7 +5777,7 @@ class="ectt-1095">Cpp</span><span
 class="ectt-1095">&#x2019;</span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">false</span><span 
-class="ectt-1095">]</span></span>
+class="ectt-1095">];</span></span>
 <!--l. 1430--><p class="noindent" >Each time <span 
 class="ecss-1095">KaSim</span> detects a new occurrence of the observable that is being tracked, it will dump
 its causal past as a graph using the dot format (see Fig. <a 
@@ -5947,7 +5955,7 @@ class="ectt-1095">&#x2019;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">true</span><span 
-class="ectt-1095">]</span><span 
+class="ectt-1095">];</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-54002r2"></a><span 
 class="ecrm-0600">2</span></span><span 
@@ -5968,7 +5976,7 @@ class="ectt-1095">&#x2019;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">false</span><span 
-class="ectt-1095">]</span>
+class="ectt-1095">];</span>
 </div>
 <!--l. 1447--><p class="noindent" >The above declaration will ask <span 
 class="ecss-1095">KaSim</span> to analyze each new occurrence of <span 
@@ -6080,7 +6088,7 @@ class="ectt-1095">&#x2019;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">false</span><span 
-class="ectt-1095">]</span>
+class="ectt-1095">];</span>
 </div>
 <!--l. 1453--><p class="noindent" >The ﬁrst line is a declaration of an <!--l. 1453--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
@@ -6168,7 +6176,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">true</span><span 
-class="ectt-1095">]</span><span 
+class="ectt-1095">];</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-55006r2"></a><span 
 class="ecrm-0600">2</span></span><span 
@@ -6191,7 +6199,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">false</span><span 
-class="ectt-1095">]</span>
+class="ectt-1095">];</span>
 </div>
 <!--l. 1480--><p class="noindent" >The result is a graph where a positive edge between rules
 <!--l. 1481--><math 
@@ -6267,7 +6275,7 @@ class="ectt-1095">!1)</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">[</span><span 
 class="ectt-1095">true</span><span 
-class="ectt-1095">]</span>
+class="ectt-1095">];</span>
 </div>
 <!--l. 1499--><p class="noindent" >prints in the ﬁle <span 
 class="ectt-1095">&#x0022;species.ka&#x0022; </span>a new line for each new occurrence of <span 
@@ -7634,10 +7642,10 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (v4.0rc1-47-g6cf7fde) (without Tk
+Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
  <br />interface)
- <br />Analysis launched at 2018/01/18 14:45:20 (GMT+0) on
- <br />travis-job-f5fdaaef-c112-4bb2-b2b2-ec6f9ef458c4
+ <br />Analysis launched at 2018/01/22 09:52:24 (GMT+0) on
+ <br />travis-job-1bf61cde-2161-4be4-969e-78f6fcafdbcb
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7813,10 +7821,10 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
-Kappa Static Analyzer (v4.0rc1-47-g6cf7fde) (without Tk
+Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
  <br />interface)
- <br />Analysis launched at 2018/01/18 14:45:20 (GMT+0) on
- <br />travis-job-f5fdaaef-c112-4bb2-b2b2-ec6f9ef458c4
+ <br />Analysis launched at 2018/01/22 09:52:24 (GMT+0) on
+ <br />travis-job-1bf61cde-2161-4be4-969e-78f6fcafdbcb
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -10888,10 +10896,10 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-21">
-Kappa Static Analyzer (v4.0rc1-47-g6cf7fde) (without Tk
+Kappa Static Analyzer (v4.0rc1-48-gd1c3654) (without Tk
  <br />interface)
- <br />Analysis launched at 2018/01/18 14:45:20 (GMT+0) on
- <br />travis-job-f5fdaaef-c112-4bb2-b2b2-ec6f9ef458c4
+ <br />Analysis launched at 2018/01/22 09:52:24 (GMT+0) on
+ <br />travis-job-1bf61cde-2161-4be4-969e-78f6fcafdbcb
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -12269,7 +12277,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">864664215</span><span 
+class="ectt-1095">409494571</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -12280,7 +12288,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;951298514&#x0022;</span><span 
+class="ectt-1095">&#x0022;549677041&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
