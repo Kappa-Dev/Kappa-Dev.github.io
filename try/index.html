@@ -28,19 +28,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/lint/lint.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/dialog/dialog.css"></link>
-    <script src="class.js?28985"></script>
-    <script src="parser.js?28985"></script>
-    <script src="render-contactmap.js?28985"></script>
-    <script src="render-snapshot.js?28985"></script>
-    <script src="graphlogger.js?28985"></script>
-    <script src="utils.js?28985"></script>
-    <script src="tooltip-contactmap.js?28985"></script>
-    <script src="tooltip-snapshot.js?28985"></script>
-    <script src="Kappa.js?28985"></script>
-    <script src="common.js?28985"></script>
-    <script src="flux.js?28985"></script>
-    <script src="plot.js?28985"></script>
-    <script src="JsSim.js?28985"></script>
+    <script src="class.js?20288"></script>
+    <script src="parser.js?20288"></script>
+    <script src="render-contactmap.js?20288"></script>
+    <script src="render-snapshot.js?20288"></script>
+    <script src="graphlogger.js?20288"></script>
+    <script src="utils.js?20288"></script>
+    <script src="tooltip-contactmap.js?20288"></script>
+    <script src="tooltip-snapshot.js?20288"></script>
+    <script src="Kappa.js?20288"></script>
+    <script src="common.js?20288"></script>
+    <script src="flux.js?20288"></script>
+    <script src="plot.js?20288"></script>
+    <script src="JsSim.js?20288"></script>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -168,8 +168,6 @@ rect { stroke-width: 2; }
     overflow: auto;
 }
 .filename {
-    overflow: hidden;
-    text-overflow: ellipsis;
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
@@ -179,6 +177,11 @@ rect { stroke-width: 2; }
     white-space: nowrap;
     vertical-align: middle;
     border : 0px;
+}
+
+.oneliner {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .node-rect { stroke-width:2;
