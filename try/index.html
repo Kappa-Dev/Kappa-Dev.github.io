@@ -28,19 +28,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/lint/lint.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/dialog/dialog.css"></link>
-    <script src="class.js?23191"></script>
-    <script src="parser.js?23191"></script>
-    <script src="render-contactmap.js?23191"></script>
-    <script src="render-snapshot.js?23191"></script>
-    <script src="graphlogger.js?23191"></script>
-    <script src="utils.js?23191"></script>
-    <script src="tooltip-contactmap.js?23191"></script>
-    <script src="tooltip-snapshot.js?23191"></script>
-    <script src="Kappa.js?23191"></script>
-    <script src="common.js?23191"></script>
-    <script src="flux.js?23191"></script>
-    <script src="plot.js?23191"></script>
-    <script src="JsSim.js?23191"></script>
+    <script src="class.js?32683"></script>
+    <script src="parser.js?32683"></script>
+    <script src="render-contactmap.js?32683"></script>
+    <script src="render-snapshot.js?32683"></script>
+    <script src="graphlogger.js?32683"></script>
+    <script src="utils.js?32683"></script>
+    <script src="tooltip-contactmap.js?32683"></script>
+    <script src="tooltip-snapshot.js?32683"></script>
+    <script src="Kappa.js?32683"></script>
+    <script src="common.js?32683"></script>
+    <script src="flux.js?32683"></script>
+    <script src="plot.js?32683"></script>
+    <script src="JsSim.js?32683"></script>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -367,8 +367,9 @@ form {
     display: flex;
     flex-direction: row;
 }
+
 .snapshot-container {
-    flex: 4;
+    flex: 3;
 }
 
 .snapshot-legend {
@@ -388,7 +389,32 @@ form {
     stroke:white;
     stroke-opacity: 0.6;
 }
-   </style>
+
+#snap-sidebar {
+    position: absolute !important;
+    display: flex;
+    padding-bottom: 10px;
+    height: 100%;
+    right: 0;
+    width: 25%;
+    background: white;
+}
+
+#sidebar-close-button {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 3px;
+}
+
+#snap-contactmap {
+    flex: 1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}   </style>
    <body class="flex-content">
     <div class="container-fluid flex-content" id="main">
     </div>
