@@ -164,6 +164,7 @@ Simulation progress keeper<br>
 <pre><span id="VALfill"><span class="keyword">val</span> fill</span> : <code class="type">outputs:(<a href="Counter.html#TYPEt">t</a> -> float -> unit) -> <a href="Counter.html#TYPEt">t</a> -> dt:float -> unit</code></pre>
 <pre><span id="VALfake_time"><span class="keyword">val</span> fake_time</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> <a href="Counter.html#TYPEt">t</a></code></pre>
 <pre><span id="VALone_time_advance"><span class="keyword">val</span> one_time_advance</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float -> unit</code></pre>
+<pre><span id="VALone_blocked_event"><span class="keyword">val</span> one_blocked_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALone_constructive_event"><span class="keyword">val</span> one_constructive_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALone_clashing_instance_event"><span class="keyword">val</span> one_clashing_instance_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALone_no_more_unary_event"><span class="keyword">val</span> one_no_more_unary_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
@@ -186,6 +187,7 @@ Simulation progress keeper<br>
 <pre><span id="VALcurrent_story"><span class="keyword">val</span> current_story</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALnb_null_event"><span class="keyword">val</span> nb_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALconsecutive_null_event"><span class="keyword">val</span> consecutive_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
+<pre><span id="VALconsecutive_blocked"><span class="keyword">val</span> consecutive_blocked</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALget_efficiency"><span class="keyword">val</span> get_efficiency</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Counter.Efficiency.html#TYPEt">Efficiency.t</a></code></pre>
 <pre><span id="VALprint_efficiency"><span class="keyword">val</span> print_efficiency</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALtick"><span class="keyword">val</span> tick</span> : <code class="type">efficiency:bool -> <a href="Counter.html#TYPEprogressBar">progressBar</a> -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
