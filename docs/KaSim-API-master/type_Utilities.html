@@ -144,7 +144,9 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold_left_with_progress_bar&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?event:<span class="constructor">StoryProfiling</span>.step_kind&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;((<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.binary,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b&nbsp;list,&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="constructor">Utilities</span>.ternary<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pop_json&nbsp;:&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pop_json&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">StoryProfiling</span>.<span class="constructor">StoryStats</span>.log_info&nbsp;<span class="constructor">Story_json</span>.message&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;profiling_state_to_json&nbsp;:&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;error_list_to_json&nbsp;:&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;computation_steps_to_json&nbsp;:&nbsp;<span class="constructor">Utilities</span>.parameter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>

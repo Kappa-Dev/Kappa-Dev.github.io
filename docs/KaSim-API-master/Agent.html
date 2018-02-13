@@ -128,6 +128,9 @@ agent_id * agent_type<br>
 <pre><span id="VALprint_site"><span class="keyword">val</span> print_site</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Agent.html#TYPEt">t</a> -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALprint_internal"><span class="keyword">val</span> print_internal</span> : <code class="type">?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Agent.html#TYPEt">t</a> -> int -> Format.formatter -> int -> unit</code></pre>
 <pre><span id="VALrename"><span class="keyword">val</span> rename</span> : <code class="type">Renaming.t -> <a href="Agent.html#TYPEt">t</a> -> <a href="Agent.html#TYPEt">t</a></code></pre>
+<pre><span id="VALjson_dictionnary"><span class="keyword">val</span> json_dictionnary</span> : <code class="type">string</code></pre>
+<pre><span id="VALwrite_json"><span class="keyword">val</span> write_json</span> : <code class="type">Bi_outbuf.t -> <a href="Agent.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALread_json"><span class="keyword">val</span> read_json</span> : <code class="type">Yojson.Basic.lexer_state -> Lexing.lexbuf -> <a href="Agent.html#TYPEt">t</a></code></pre>
 <pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Agent.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Agent.html#TYPEt">t</a></code></pre>
 <pre><span class="keyword">module</span> <a href="Agent.SetMap.html">SetMap</a>: <code class="type"><a href="SetMap.S.html">SetMap.S</a></code><code class="type">  with type elt = t</code></pre></body></html>

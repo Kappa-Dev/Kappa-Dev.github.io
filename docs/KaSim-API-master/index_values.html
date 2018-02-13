@@ -1199,6 +1199,8 @@ Apply a function on each trace (and each list of runtime information associated 
     the string contains the message to display in case of faillure of one call of the ternary function
 </div>
 </td></tr>
+<tr><td><a href="Trace.html#VALfold_trace">fold_trace</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
 <tr><td><a href="Trace.html#VALfold_trace_file">fold_trace_file</a> [<a href="Trace.html">Trace</a>]</td>
 <td></td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALfold_with_interruption">fold_with_interruption</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
@@ -1860,6 +1862,14 @@ same function but takes a graph of type Edges.t directly.
 <td></td></tr>
 <tr><td><a href="SetMap.Map.html#VALjoin_with_logs">join_with_logs</a> [<a href="SetMap.Map.html">SetMap.Map</a>]</td>
 <td></td></tr>
+<tr><td><a href="Trace.Simulation_info.html#VALjson_dictionnary">json_dictionnary</a> [<a href="Trace.Simulation_info.html">Trace.Simulation_info</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALjson_dictionnary">json_dictionnary</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Instantiation.html#VALjson_dictionnary">json_dictionnary</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALjson_dictionnary">json_dictionnary</a> [<a href="Agent.html">Agent</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>K</td></tr>
 <tr><td><a href="Int_storage.Storage.html#VALkey_list">key_list</a> [<a href="Int_storage.Storage.html">Int_storage.Storage</a>]</td>
 <td></td></tr>
@@ -2418,8 +2428,6 @@ values of observables)
 </td></tr>
 <tr><td><a href="Nbr.html#VALof_un_alg_op">of_un_alg_op</a> [<a href="Nbr.html">Nbr</a>]</td>
 <td></td></tr>
-<tr><td><a href="Trace.html#VALof_yojson">of_yojson</a> [<a href="Trace.html">Trace</a>]</td>
-<td></td></tr>
 <tr><td><a href="Navigation.html#VALof_yojson">of_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Model.html#VALof_yojson">of_yojson</a> [<a href="Model.html">Model</a>]</td>
@@ -2924,6 +2932,8 @@ Deserialize JSON data of type <a href="Locality.html#TYPEt"><code class="code"><
 <td></td></tr>
 <tr><td><a href="Ode_interface_sig.Interface.html#VALreaction_rate_convention">reaction_rate_convention</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
 <td></td></tr>
+<tr><td><a href="Instantiation.html#VALread_action">read_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ckappa_sig.html#VALread_c_rule_id">read_c_rule_id</a> [<a href="Ckappa_sig.html">Ckappa_sig</a>]</td>
 <td></td></tr>
 <tr><td><a href="User_graph.html#VALread_connected_component">read_connected_component</a> [<a href="User_graph.html">User_graph</a>]</td>
@@ -2941,7 +2951,13 @@ Input JSON data of type <a href="Data.html#TYPEdin"><code class="code"><span cla
 Input JSON data of type <a href="Primitives.html#TYPEdin_kind"><code class="code"><span class="constructor">Primitives</span>.din_kind</code></a>.
 </div>
 </td></tr>
+<tr><td><a href="Instantiation.html#VALread_event">read_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
 <tr><td><a href="Tools.html#VALread_input">read_input</a> [<a href="Tools.html">Tools</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALread_json">read_json</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALread_json">read_json</a> [<a href="Agent.html">Agent</a>]</td>
 <td></td></tr>
 <tr><td><a href="Data.html#VALread_plot">read_plot</a> [<a href="Data.html">Data</a>]</td>
 <td><div class="info">
@@ -2973,6 +2989,8 @@ Input JSON data of type <a href="Counter.Efficiency.html#TYPEt"><code class="cod
 Input JSON data of type <a href="Nbr.html#TYPEt"><code class="code"><span class="constructor">Nbr</span>.t</code></a>.
 </div>
 </td></tr>
+<tr><td><a href="Instantiation.html#VALread_test">read_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
 <tr><td><a href="Matching.html#VALreconstruct">reconstruct</a> [<a href="Matching.html">Matching</a>]</td>
 <td><div class="info">
 <code class="code">reconstruct domain graph matching_of_previous_cc cc_id_in_rule cc root</code>
@@ -3334,8 +3352,6 @@ split_init split init event agent-wise
 Deserialize JSON data of type <a href="Trace.html#TYPEstep"><code class="code"><span class="constructor">Trace</span>.step</code></a>.
 </div>
 </td></tr>
-<tr><td><a href="Trace.html#VALstep_of_yojson">step_of_yojson</a> [<a href="Trace.html">Trace</a>]</td>
-<td></td></tr>
 <tr><td><a href="Navigation.html#VALstep_of_yojson">step_of_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Trace.html#VALstep_to_yojson">step_to_yojson</a> [<a href="Trace.html">Trace</a>]</td>
@@ -3574,8 +3590,6 @@ Output on stdout
 <td></td></tr>
 <tr><td><a href="Pp_svg.html#VALto_string">to_string</a> [<a href="Pp_svg.html">Pp_svg</a>]</td>
 <td></td></tr>
-<tr><td><a href="Trace.html#VALto_yojson">to_yojson</a> [<a href="Trace.html">Trace</a>]</td>
-<td></td></tr>
 <tr><td><a href="Navigation.html#VALto_yojson">to_yojson</a> [<a href="Navigation.html">Navigation</a>]</td>
 <td></td></tr>
 <tr><td><a href="Model.html#VALto_yojson">to_yojson</a> [<a href="Model.html">Model</a>]</td>
@@ -3704,6 +3718,8 @@ compute the weak compression of a given trace,
 <td></td></tr>
 <tr><td><a href="Kappa_files.html#VALwrap_formatter">wrap_formatter</a> [<a href="Kappa_files.html">Kappa_files</a>]</td>
 <td></td></tr>
+<tr><td><a href="Instantiation.html#VALwrite_action">write_action</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ckappa_sig.html#VALwrite_c_rule_id">write_c_rule_id</a> [<a href="Ckappa_sig.html">Ckappa_sig</a>]</td>
 <td></td></tr>
 <tr><td><a href="User_graph.html#VALwrite_connected_component">write_connected_component</a> [<a href="User_graph.html">User_graph</a>]</td>
@@ -3721,6 +3737,12 @@ Output a JSON value of type <a href="Data.html#TYPEdin"><code class="code"><span
 Output a JSON value of type <a href="Primitives.html#TYPEdin_kind"><code class="code"><span class="constructor">Primitives</span>.din_kind</code></a>.
 </div>
 </td></tr>
+<tr><td><a href="Instantiation.html#VALwrite_event">write_event</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
+<tr><td><a href="Trace.html#VALwrite_json">write_json</a> [<a href="Trace.html">Trace</a>]</td>
+<td></td></tr>
+<tr><td><a href="Agent.html#VALwrite_json">write_json</a> [<a href="Agent.html">Agent</a>]</td>
+<td></td></tr>
 <tr><td><a href="Data.html#VALwrite_plot">write_plot</a> [<a href="Data.html">Data</a>]</td>
 <td><div class="info">
 Output a JSON value of type <a href="Data.html#TYPEplot"><code class="code"><span class="constructor">Data</span>.plot</code></a>.
@@ -3751,6 +3773,8 @@ Output a JSON value of type <a href="Counter.Efficiency.html#TYPEt"><code class=
 Output a JSON value of type <a href="Nbr.html#TYPEt"><code class="code"><span class="constructor">Nbr</span>.t</code></a>.
 </div>
 </td></tr>
+<tr><td><a href="Instantiation.html#VALwrite_test">write_test</a> [<a href="Instantiation.html">Instantiation</a>]</td>
+<td></td></tr>
 <tr><td align="left"><br>Z</td></tr>
 <tr><td><a href="Fractions.html#VALzero">zero</a> [<a href="Fractions.html">Fractions</a>]</td>
 <td></td></tr>

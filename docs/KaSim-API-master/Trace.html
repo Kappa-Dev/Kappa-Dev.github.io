@@ -218,7 +218,7 @@ the rule<br>
 <pre><span id="VALprint_step"><span class="keyword">val</span> print_step</span> : <code class="type">?compact:bool -> ?env:<a href="Model.html#TYPEt">Model.t</a> -> Format.formatter -> <a href="Trace.html#TYPEstep">step</a> -> unit</code></pre>
 <pre><span id="VALprint_label_of_step"><span class="keyword">val</span> print_label_of_step</span> : <code class="type">?env:<a href="Model.html#TYPEt">Model.t</a> -> Format.formatter -> <a href="Trace.html#TYPEstep">step</a> -> unit</code></pre>
 <pre><span id="VALstep_to_yojson"><span class="keyword">val</span> step_to_yojson</span> : <code class="type"><a href="Trace.html#TYPEstep">step</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALstep_of_yojson"><span class="keyword">val</span> step_of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Trace.html#TYPEstep">step</a></code></pre>
+<pre><span id="VALjson_dictionnary"><span class="keyword">val</span> json_dictionnary</span> : <code class="type">string</code></pre>
 <pre><span id="VALwrite_step"><span class="keyword">val</span> write_step</span> : <code class="type">Bi_outbuf.t -> <a href="Trace.html#TYPEstep">step</a> -> unit</code></pre><div class="info ">
 Output a JSON value of type <a href="Trace.html#TYPEstep"><code class="code"><span class="constructor">Trace</span>.step</code></a>.<br>
 </div>
@@ -238,7 +238,8 @@ Input JSON data of type <a href="Trace.html#TYPEstep"><code class="code"><span c
 Deserialize JSON data of type <a href="Trace.html#TYPEstep"><code class="code"><span class="constructor">Trace</span>.step</code></a>.<br>
 </div>
 
-<pre><span id="VALto_yojson"><span class="keyword">val</span> to_yojson</span> : <code class="type"><a href="Trace.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALof_yojson"><span class="keyword">val</span> of_yojson</span> : <code class="type">Yojson.Basic.json -> <a href="Trace.html#TYPEt">t</a></code></pre>
+<pre><span id="VALwrite_json"><span class="keyword">val</span> write_json</span> : <code class="type">Bi_outbuf.t -> <a href="Trace.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALread_json"><span class="keyword">val</span> read_json</span> : <code class="type">Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Trace.html#TYPEt">t</a></code></pre>
 <pre><span id="VALinit_trace_file"><span class="keyword">val</span> init_trace_file</span> : <code class="type">uuid:int -> <a href="Model.html#TYPEt">Model.t</a> -> Pervasives.out_channel -> unit</code></pre>
+<pre><span id="VALfold_trace"><span class="keyword">val</span> fold_trace</span> : <code class="type">(<a href="Model.html#TYPEt">Model.t</a> -> 'a -> <a href="Trace.html#TYPEstep">step</a> -> 'a) -><br>       (<a href="Model.html#TYPEt">Model.t</a> -> 'a) -> Yojson.Safe.lexer_state -> Lexing.lexbuf -> <a href="Model.html#TYPEt">Model.t</a> * 'a</code></pre>
 <pre><span id="VALfold_trace_file"><span class="keyword">val</span> fold_trace_file</span> : <code class="type">(<a href="Model.html#TYPEt">Model.t</a> -> 'a -> <a href="Trace.html#TYPEstep">step</a> -> 'a) -><br>       (<a href="Model.html#TYPEt">Model.t</a> -> 'a) -> string -> <a href="Model.html#TYPEt">Model.t</a> * 'a</code></pre></body></html>
