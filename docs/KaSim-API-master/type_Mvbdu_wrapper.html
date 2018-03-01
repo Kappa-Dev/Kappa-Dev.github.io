@@ -270,17 +270,20 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.mvbdu)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:<br>
@@ -325,17 +328,20 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_range_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_range_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list,&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_range_list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:<br>
@@ -394,7 +400,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.hconsed_range_list,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;*&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Mvbdu</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:<br>
@@ -580,18 +587,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.mvbdu&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -632,18 +639,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_association_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.key&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.value&nbsp;option))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Mvbdu_wrapper</span>.<span class="constructor">Internalized_mvbdu</span>.hconsed_range_list<br>
@@ -801,11 +808,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_range&nbsp;:&nbsp;(hconsed_range_list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_renaming_list,&nbsp;mvbdu)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;hconsed_variables_list,&nbsp;mvbdu)&nbsp;binary<br>
@@ -824,11 +831,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;hconsed_association_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;hconsed_association_list&nbsp;constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:&nbsp;hconsed_range_list&nbsp;constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;list,&nbsp;hconsed_variables_list)&nbsp;unary<br>
@@ -858,7 +871,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_association_list,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_range_list,&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_range_list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;variables_list_of_mvbdu&nbsp;:<br>
@@ -952,11 +967,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_range&nbsp;:&nbsp;hconsed_range_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_abstract_away&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
@@ -974,11 +990,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
@@ -1097,11 +1113,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_range&nbsp;:&nbsp;(hconsed_range_list,&nbsp;mvbdu)&nbsp;unary<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_renaming_list,&nbsp;mvbdu)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;hconsed_variables_list,&nbsp;mvbdu)&nbsp;binary<br>
@@ -1119,11 +1136,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;hconsed_association_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;hconsed_association_list&nbsp;constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:&nbsp;hconsed_range_list&nbsp;constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;(key&nbsp;list,&nbsp;hconsed_variables_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:<br>
@@ -1152,7 +1172,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_association_list,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_range_list,&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_range_list,&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:&nbsp;(mvbdu,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;variables_list_of_mvbdu&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_variables_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -1269,11 +1290,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_range&nbsp;:&nbsp;(hconsed_range_list,&nbsp;mvbdu)&nbsp;unary<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_renaming_list,&nbsp;mvbdu)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;hconsed_variables_list,&nbsp;mvbdu)&nbsp;binary<br>
@@ -1291,11 +1313,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;hconsed_association_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;hconsed_association_list&nbsp;constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:&nbsp;hconsed_range_list&nbsp;constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;(key&nbsp;list,&nbsp;hconsed_variables_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:<br>
@@ -1324,7 +1349,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_association_list,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_range_list,&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_range_list,&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:&nbsp;(mvbdu,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;variables_list_of_mvbdu&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_variables_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -1412,10 +1438,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_range&nbsp;:&nbsp;hconsed_range_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_abstract_away&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
@@ -1432,11 +1460,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
@@ -1549,11 +1577,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_range&nbsp;:&nbsp;(hconsed_range_list,&nbsp;mvbdu)&nbsp;unary<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;mvbdu)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_renaming_list,&nbsp;mvbdu)&nbsp;binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_keep_only&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mvbdu,&nbsp;hconsed_variables_list,&nbsp;mvbdu)&nbsp;binary<br>
@@ -1571,11 +1600,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;value)&nbsp;list,&nbsp;hconsed_association_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;hconsed_association_list&nbsp;constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list,&nbsp;hconsed_range_list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list,&nbsp;hconsed_range_list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:&nbsp;hconsed_range_list&nbsp;constant<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;(key&nbsp;list,&nbsp;hconsed_variables_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:<br>
@@ -1604,7 +1636,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_association_list,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_range_list,&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list)&nbsp;unary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hconsed_range_list,&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;extensional_of_mvbdu&nbsp;:&nbsp;(mvbdu,&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;variables_list_of_mvbdu&nbsp;:&nbsp;(mvbdu,&nbsp;hconsed_variables_list)&nbsp;unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
@@ -1692,10 +1725,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_association_list&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_hconsed_range&nbsp;:&nbsp;hconsed_range_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_sorted_range_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_of_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_rename&nbsp;:&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_renaming_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mvbdu_project_abstract_away&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mvbdu&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mvbdu<br>
@@ -1712,11 +1747,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;value)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_association_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_association_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_reverse_sorted_range_list&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;*&nbsp;value))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key&nbsp;*&nbsp;(value&nbsp;option&nbsp;*&nbsp;value&nbsp;option))&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_range_list&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_range_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_sorted_variables_list&nbsp;:&nbsp;key&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;hconsed_variables_list<br>

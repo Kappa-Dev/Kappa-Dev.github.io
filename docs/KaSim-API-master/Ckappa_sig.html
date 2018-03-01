@@ -116,7 +116,7 @@
  * Jérôme Feret, projet Abstraction/Antique, INRIA Paris-Rocquencourt
  *
  * Creation: 01/17/2011
- * Last modification: Time-stamp: &lt;Nov 11 2017&gt;
+ * Last modification: Time-stamp: &lt;Feb 20 2018&gt;
  * *
  * Signature for prepreprocessing language ckappa
  *
@@ -139,6 +139,12 @@
 <pre><span id="TYPEinternal_state"><span class="keyword">type</span> <code class="type"></code>internal_state</span> = <code class="type">string</code> </pre>
 
 
+<pre><span id="TYPEcounter_name"><span class="keyword">type</span> <code class="type"></code>counter_name</span> = <code class="type">string</code> </pre>
+
+
+<pre><span id="TYPEcounter_state"><span class="keyword">type</span> <code class="type"></code>counter_state</span> = <code class="type">int</code> </pre>
+
+
 <pre><span id="TYPEc_agent_name"><span class="keyword">type</span> <code class="type"></code>c_agent_name</span> </pre>
 
 
@@ -155,6 +161,9 @@
 
 
 <pre><span id="TYPEc_link_value"><span class="keyword">type</span> <code class="type"></code>c_link_value</span> </pre>
+
+
+<pre><span id="TYPEc_counter_name"><span class="keyword">type</span> <code class="type"></code>c_counter_name</span> </pre>
 
 
 <pre><span id="VALrule_id_to_json"><span class="keyword">val</span> rule_id_to_json</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_rule_id">c_rule_id</a> -> Yojson.Basic.json</code></pre>
@@ -186,6 +195,8 @@
 <pre><span id="VALstate_index_of_int"><span class="keyword">val</span> state_index_of_int</span> : <code class="type">int -> <a href="Ckappa_sig.html#TYPEc_state">c_state</a></code></pre>
 <pre><span id="VALint_of_state_index"><span class="keyword">val</span> int_of_state_index</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">c_state</a> -> int</code></pre>
 <pre><span id="VALstring_of_state_index"><span class="keyword">val</span> string_of_state_index</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">c_state</a> -> string</code></pre>
+<pre><span id="VALstring_of_state_index_option_min"><span class="keyword">val</span> string_of_state_index_option_min</span> : <code class="type">Remanent_parameters_sig.parameters -> <a href="Ckappa_sig.html#TYPEc_state">c_state</a> option -> string</code></pre>
+<pre><span id="VALstring_of_state_index_option_max"><span class="keyword">val</span> string_of_state_index_option_max</span> : <code class="type">Remanent_parameters_sig.parameters -> <a href="Ckappa_sig.html#TYPEc_state">c_state</a> option -> string</code></pre>
 <pre><span id="VALint_of_rule_id"><span class="keyword">val</span> int_of_rule_id</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_rule_id">c_rule_id</a> -> int</code></pre>
 <pre><span id="VALrule_id_of_int"><span class="keyword">val</span> rule_id_of_int</span> : <code class="type">int -> <a href="Ckappa_sig.html#TYPEc_rule_id">c_rule_id</a></code></pre>
 <pre><span id="VALstring_of_rule_id"><span class="keyword">val</span> string_of_rule_id</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_rule_id">c_rule_id</a> -> string</code></pre>
@@ -207,6 +218,8 @@
 <pre><span id="VALcompare_rule_id"><span class="keyword">val</span> compare_rule_id</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_rule_id">c_rule_id</a> -> <a href="Ckappa_sig.html#TYPEc_rule_id">c_rule_id</a> -> int</code></pre>
 <pre><span id="VALcompare_site_name"><span class="keyword">val</span> compare_site_name</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_site_name">c_site_name</a> -> <a href="Ckappa_sig.html#TYPEc_site_name">c_site_name</a> -> int</code></pre>
 <pre><span id="VALcompare_state_index"><span class="keyword">val</span> compare_state_index</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">c_state</a> -> int</code></pre>
+<pre><span id="VALcompare_state_index_option_min"><span class="keyword">val</span> compare_state_index_option_min</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">c_state</a> option -> <a href="Ckappa_sig.html#TYPEc_state">c_state</a> option -> int</code></pre>
+<pre><span id="VALcompare_state_index_option_max"><span class="keyword">val</span> compare_state_index_option_max</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">c_state</a> option -> <a href="Ckappa_sig.html#TYPEc_state">c_state</a> option -> int</code></pre>
 <pre><span id="VALcompare_agent_name"><span class="keyword">val</span> compare_agent_name</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_name">c_agent_name</a> -> <a href="Ckappa_sig.html#TYPEc_agent_name">c_agent_name</a> -> int</code></pre>
 <pre><span id="VALget_agent_shape"><span class="keyword">val</span> get_agent_shape</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_site_name">c_site_name</a> -> Remanent_parameters_sig.parameters -> string</code></pre>
 <pre><span id="VALget_agent_color"><span class="keyword">val</span> get_agent_color</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_site_name">c_site_name</a> -> Remanent_parameters_sig.parameters -> string</code></pre>
@@ -312,6 +325,13 @@
 <td align="left" valign="top" >
 <code><span id="TYPEELTinterface.PORT_SEP"><span class="constructor">PORT_SEP</span></span> <span class="keyword">of</span> <code class="type"><a href="Ckappa_sig.html#TYPEport">port</a> * <a href="Ckappa_sig.html#TYPEinterface">interface</a></code></code></td>
 
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTinterface.COUNTER_SEP"><span class="constructor">COUNTER_SEP</span></span> <span class="keyword">of</span> <code class="type"><a href="Ckappa_sig.html#TYPEcounter">counter</a> * <a href="Ckappa_sig.html#TYPEinterface">interface</a></code></code></td>
+
 </tr></table>
 
 
@@ -346,6 +366,64 @@
 
 </tr></table>
 }
+
+
+
+<pre><code><span id="TYPEcounter"><span class="keyword">type</span> <code class="type"></code>counter</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter.count_nme">count_nme</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter.count_test">count_test</span>&nbsp;: <code class="type"><a href="Ckappa_sig.html#TYPEcounter_test">counter_test</a> option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter.count_delta">count_delta</span>&nbsp;: <code class="type">int option</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><code><span id="TYPEcounter_test"><span class="keyword">type</span> <code class="type"></code>counter_test</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter_test.CEQ"><span class="constructor">CEQ</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter_test.CGTE"><span class="constructor">CGTE</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter_test.CVAR"><span class="constructor">CVAR</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcounter_test.UNKNOWN"><span class="constructor">UNKNOWN</span></span></code></td>
+
+</tr></table>
 
 
 
@@ -517,7 +595,7 @@
 <pre><span id="TYPEcompil"><span class="keyword">type</span> <code class="type">('agent, 'pattern, 'mixture, 'rule)</code> compil</span> = <code class="type">('agent, 'pattern, 'mixture, string, 'rule) <a href="Ast.html#TYPEcompil">Ast.compil</a></code> </pre>
 
 
-<pre><code><span id="TYPEsite_type"><span class="keyword">type</span> <code class="type">('a, 'b)</code> site_type</span> = </code></pre><table class="typetable">
+<pre><code><span id="TYPEsite_type"><span class="keyword">type</span> <code class="type">('a, 'b, 'c)</code> site_type</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
 <code><span class="keyword">|</span></code></td>
@@ -531,14 +609,21 @@
 <td align="left" valign="top" >
 <code><span id="TYPEELTsite_type.Binding"><span class="constructor">Binding</span></span> <span class="keyword">of</span> <code class="type">'b</code></code></td>
 
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsite_type.Counter"><span class="constructor">Counter</span></span> <span class="keyword">of</span> <code class="type">'c</code></code></td>
+
 </tr></table>
 
 
 
-<pre><span id="TYPEsite"><span class="keyword">type</span> <code class="type"></code>site</span> = <code class="type">(<a href="Ckappa_sig.html#TYPEsite_name">site_name</a>, <a href="Ckappa_sig.html#TYPEsite_name">site_name</a>) <a href="Ckappa_sig.html#TYPEsite_type">site_type</a></code> </pre>
+<pre><span id="TYPEsite"><span class="keyword">type</span> <code class="type"></code>site</span> = <code class="type">(<a href="Ckappa_sig.html#TYPEsite_name">site_name</a>, <a href="Ckappa_sig.html#TYPEsite_name">site_name</a>, <a href="Ckappa_sig.html#TYPEsite_name">site_name</a>)<br>       <a href="Ckappa_sig.html#TYPEsite_type">site_type</a></code> </pre>
 
 
-<pre><span id="TYPEstate"><span class="keyword">type</span> <code class="type"></code>state</span> = <code class="type">(<a href="Ckappa_sig.html#TYPEinternal_state">internal_state</a>, <a href="Ckappa_sig.html#TYPEbinding_state">binding_state</a>) <a href="Ckappa_sig.html#TYPEsite_type">site_type</a></code> </pre>
+<pre><span id="TYPEstate"><span class="keyword">type</span> <code class="type"></code>state</span> = <code class="type">(<a href="Ckappa_sig.html#TYPEinternal_state">internal_state</a>, <a href="Ckappa_sig.html#TYPEbinding_state">binding_state</a>,<br>        <a href="Ckappa_sig.html#TYPEcounter_state">counter_state</a>)<br>       <a href="Ckappa_sig.html#TYPEsite_type">site_type</a></code> </pre>
 
 
 <pre><span id="VALrename_link"><span class="keyword">val</span> rename_link</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       (Remanent_parameters_sig.parameters -><br>        Exception.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a>) -><br>       <a href="Ckappa_sig.html#TYPElink">link</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPElink">link</a></code></pre>
@@ -547,6 +632,7 @@
 <pre><span id="VALjoin_mixture"><span class="keyword">val</span> join_mixture</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Ckappa_sig.html#TYPEmixture">mixture</a> -><br>       <a href="Ckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="VALadd_agent"><span class="keyword">val</span> add_agent</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a> -><br>       <a href="Ckappa_sig.html#TYPEagent_name">agent_name</a> -><br>       <a href="Ckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="VALadd_site"><span class="keyword">val</span> add_site</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a> -><br>       <a href="Ckappa_sig.html#TYPEsite_name">site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEmixture">mixture</a></code></pre>
+<pre><span id="VALadd_counter"><span class="keyword">val</span> add_counter</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a> -><br>       <a href="Ckappa_sig.html#TYPEcounter_name">counter_name</a> -><br>       <a href="Ckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="VALadd_internal_state"><span class="keyword">val</span> add_internal_state</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a> -><br>       <a href="Ckappa_sig.html#TYPEsite_name">site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEinternal_state">internal_state</a> -><br>       <a href="Ckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="VALadd_link"><span class="keyword">val</span> add_link</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a> -><br>       ?agent_name:<a href="Ckappa_sig.html#TYPEagent_name">agent_name</a> -><br>       <a href="Ckappa_sig.html#TYPEsite_name">site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a> -><br>       ?agent_name':<a href="Ckappa_sig.html#TYPEagent_name">agent_name</a> -><br>       <a href="Ckappa_sig.html#TYPEsite_name">site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEc_link_value">c_link_value</a> -><br>       <a href="Ckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="VALadd_binding_type"><span class="keyword">val</span> add_binding_type</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_agent_id">c_agent_id</a> -><br>       <a href="Ckappa_sig.html#TYPEsite_name">site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEagent_name">agent_name</a> -><br>       <a href="Ckappa_sig.html#TYPEsite_name">site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEmixture">mixture</a></code></pre>
@@ -570,7 +656,7 @@
 
 
 
-<pre><span id="TYPEstate'"><span class="keyword">type</span> <code class="type"></code>state'</span> = <code class="type">(<a href="Ckappa_sig.html#TYPEinternal_state">internal_state</a>, <a href="Ckappa_sig.html#TYPEc_binding_state">c_binding_state</a>) <a href="Ckappa_sig.html#TYPEsite_type">site_type</a></code> </pre>
+<pre><span id="TYPEstate'"><span class="keyword">type</span> <code class="type"></code>state'</span> = <code class="type">(<a href="Ckappa_sig.html#TYPEinternal_state">internal_state</a>, <a href="Ckappa_sig.html#TYPEc_binding_state">c_binding_state</a>,<br>        <a href="Ckappa_sig.html#TYPEcounter_state">counter_state</a>)<br>       <a href="Ckappa_sig.html#TYPEsite_type">site_type</a></code> </pre>
 
 
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.Dictionary_of_States.html">Dictionary_of_States</a>: <code class="type">Dictionary.Dictionary</code><code class="type"> 
@@ -686,14 +772,14 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTinterval.min">min</span>&nbsp;: <code class="type">'a</code>;</code></td>
+<code><span id="TYPEELTinterval.min">min</span>&nbsp;: <code class="type">'a option</code>;</code></td>
 
 </tr>
 <tr>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTinterval.max">max</span>&nbsp;: <code class="type">'a</code>;</code></td>
+<code><span id="TYPEELTinterval.max">max</span>&nbsp;: <code class="type">'a option</code>;</code></td>
 
 </tr></table>
 }
@@ -1141,7 +1227,7 @@
   with type elt = c_agent_id * c_agent_name * c_site_name</code></pre>
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.AgentsSiteState_map_and_set.html">AgentsSiteState_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
   with type elt = c_agent_id * c_agent_name * c_site_name * c_state</code></pre>
-<pre><span id="TYPEpair_of_states"><span class="keyword">type</span> <code class="type"></code>pair_of_states</span> = <code class="type"><a href="Ckappa_sig.html#TYPEc_state">c_state</a> * <a href="Ckappa_sig.html#TYPEc_state">c_state</a></code> </pre>
+<pre><span id="TYPEpair_of_states"><span class="keyword">type</span> <code class="type"></code>pair_of_states</span> = <code class="type"><a href="Ckappa_sig.html#TYPEc_state">c_state</a> option * <a href="Ckappa_sig.html#TYPEc_state">c_state</a> option</code> </pre>
 
 
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.AgentsSitePState_map_and_set.html">AgentsSitePState_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 

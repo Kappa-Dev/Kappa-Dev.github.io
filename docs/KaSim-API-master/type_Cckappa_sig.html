@@ -101,7 +101,9 @@
 <body>
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;site&nbsp;=<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_site_name,&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name)&nbsp;<span class="constructor">Ckappa_sig</span>.site_type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_site_name,&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.site_type<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;state_dic&nbsp;=&nbsp;(unit,&nbsp;unit)&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Dictionary_of_States</span>.dictionary<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;kappa_handler&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;nrules&nbsp;:&nbsp;int;<br>
@@ -121,7 +123,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_agent_name&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_state)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Agent_type_site_state_nearly_Inf_Int_Int_Int_storage_Imperatif_Imperatif_Imperatif</span>.t;<br>
 &nbsp;&nbsp;}<br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;interval&nbsp;=&nbsp;{&nbsp;min&nbsp;:&nbsp;<span class="keywordsign">'</span>a;&nbsp;max&nbsp;:&nbsp;<span class="keywordsign">'</span>a;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;interval&nbsp;=&nbsp;{&nbsp;min&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;option;&nbsp;max&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;option;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>state&nbsp;port&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;site_name&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;site_position&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.position;<br>
@@ -142,6 +144,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;agent_type&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_name;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;bond&nbsp;=&nbsp;<span class="constructor">Cckappa_sig</span>.site_address&nbsp;*&nbsp;<span class="constructor">Cckappa_sig</span>.site_address<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;delta&nbsp;=&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Address_map_and_set</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;elt&nbsp;=&nbsp;site_address<br>
@@ -255,13 +258,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c&nbsp;t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;map2z&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -373,7 +376,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">KaSim_Site_map_and_set</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;elt&nbsp;=&nbsp;(string,&nbsp;string)&nbsp;<span class="constructor">Ckappa_sig</span>.site_type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;elt&nbsp;=&nbsp;(string,&nbsp;string,&nbsp;string)&nbsp;<span class="constructor">Ckappa_sig</span>.site_type<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Set</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;elt&nbsp;=&nbsp;elt<br>
@@ -484,13 +487,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c&nbsp;t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;map2z&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -608,7 +611,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Dead_agent</span>&nbsp;<span class="keyword">of</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="constructor">Cckappa_sig</span>.interval&nbsp;<span class="constructor">Cckappa_sig</span>.interface<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.proper_agent&nbsp;*&nbsp;<span class="constructor">Cckappa_sig</span>.<span class="constructor">KaSim_Site_map_and_set</span>.<span class="constructor">Set</span>.t&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;unit)&nbsp;<span class="constructor">Ckappa_sig</span>.site_type&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Site_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(string,&nbsp;unit,&nbsp;unit)&nbsp;<span class="constructor">Ckappa_sig</span>.site_type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Site_map_and_set</span>.<span class="constructor">Map</span>.t&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.link&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Site_map_and_set</span>.<span class="constructor">Map</span>.t<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Unknown_agent</span>&nbsp;<span class="keyword">of</span>&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_id)<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;agent_sig&nbsp;=<br>
@@ -635,6 +639,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;c_variable&nbsp;:&nbsp;(<span class="constructor">Ckappa_sig</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Alg_expr</span>.e;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;e_variable&nbsp;:&nbsp;(<span class="constructor">Cckappa_sig</span>.mixture,&nbsp;string)&nbsp;<span class="constructor">Ast</span>.variable_def;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;counter_action&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;precondition&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="constructor">Cckappa_sig</span>.interval;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;postcondition&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="constructor">Cckappa_sig</span>.interval;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;increment&nbsp;:&nbsp;<span class="constructor">Cckappa_sig</span>.delta;<br>
+&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;actions&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;creation&nbsp;:&nbsp;(<span class="constructor">Ckappa_sig</span>.c_agent_id&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_name)&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;remove&nbsp;:<br>
@@ -648,6 +657,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Cckappa_sig</span>.site_address&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="constructor">Cckappa_sig</span>.interval&nbsp;option)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;translate_counters&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Cckappa_sig</span>.site_address&nbsp;*&nbsp;<span class="constructor">Cckappa_sig</span>.counter_action)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;removed_counters&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Cckappa_sig</span>.site_address&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="constructor">Cckappa_sig</span>.interval)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new_counters&nbsp;:&nbsp;(<span class="constructor">Cckappa_sig</span>.site_address&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_state)&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;binder&nbsp;:&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Cckappa_sig</span>.site_address)&nbsp;list;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;prefix&nbsp;:&nbsp;int;<br>
@@ -691,6 +707,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.enriched_variable<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_nearly_Inf_Int_storage_Imperatif</span>.t;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;signatures&nbsp;:&nbsp;<span class="constructor">Cckappa_sig</span>.agent_sig&nbsp;<span class="constructor">Int_storage</span>.<span class="constructor">Nearly_inf_Imperatif</span>.t;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;counter_default&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentSite_map_and_set</span>.<span class="constructor">Map</span>.t;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;rules&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Cckappa_sig</span>.enriched_rule<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">Rule_nearly_Inf_Int_storage_Imperatif</span>.t;<br>
@@ -722,10 +740,22 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_id&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_name&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Cckappa_sig</span>.site_address<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;max_state_index&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;min_state_index&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;max_state_index&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;max_state_index_option_min&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;min_state_index_option_min&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;max_state_index_option_max&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;min_state_index_option_max&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rename_mixture&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
