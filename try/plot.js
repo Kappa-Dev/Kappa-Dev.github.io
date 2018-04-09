@@ -1,7 +1,6 @@
 "use strict"
 
-
-function observable_plot(mainDivId){
+function ObservablePlot (mainDivId) {
     var that = this;
     /* Mode to render observable.  These codes determine
      * how an observable in a plot is to be rendered.
@@ -86,12 +85,16 @@ function observable_plot(mainDivId){
 
     this.timeLabel = "Time";
 
+    this.rawData = { legend:[], values:[] }
 
-    this.setRawData = function(plot){
+    this.setRawData = function(plot_text){
+	var plot = JSON.parse(plot_text);
+	plot.legend.shift();
+	plot.series = plot.series.map(function (obs) {
+	    var tmp = obs.shift();
+	    return { time: tmp, values: obs };
+	});
         that.rawData = plot;
-    }
-    this.getRawData = function(){
-        return that.rawData;
     }
 
     /* Update the plot data of the graph.  This is called
@@ -101,7 +104,7 @@ function observable_plot(mainDivId){
      */
     this.setPlot = function(plot){
         that.setRawData(plot);
-        var legend = plot.legend;
+        var legend = that.rawData.legend;
 
         /* An update new copy over state preserving settings
          * where possible.
@@ -155,7 +158,7 @@ function observable_plot(mainDivId){
         //that.start_time = null;
         //that.end_time = null;
         // Populate timeSeries from data.
-        plot.timeSeries.forEach(function(observable){
+        that.rawData.series.forEach(function(observable){
 	    first_time = first_time || observable.time;
 	    last_time = observable.time;
             //that.start_time = that.start_time || observable.time;
@@ -187,15 +190,15 @@ function observable_plot(mainDivId){
         that.state.forEach(function(s,i){ s.color = color(i);
                                           s.tick = that.ticks.index(i);
                                         });
-        that.render();
+        that.redraw();
 
     };
-    this.setPlot = wrap(this.setPlot);
+    this.setData = wrap(this.setPlot);
     this.formatTime = d3.format(".02f");
     this.getXAxis = function(){
         return this.state.find(function(state){ state.mode = that.modes.XAXIS });
     }
-    this.setPlot = wrap(this.setPlot);
+
     this.renderPlot = function(){
         // set margin
         var margin = {top: 20, right: 80, bottom: 30, left: 80},
@@ -564,23 +567,9 @@ function observable_plot(mainDivId){
         return filename;
     }
     this.setPlotName = function(plotName){ that.plotName = plotName; }
-    this.handlePlotTSV = function(){
-        var rawData = that.getRawData();
-        var timeSeries = rawData.timeSeries;
-        var legend = rawData.legend;
-        var header = legend.join("\t");
-        var body = timeSeries.map(function(d)
-                                  { var row = [d["time"]];
-                                    row = row.concat(d["values"]);
-                                    return row.join("\t") })
-                              .join("\n");
-        var tsv = header+"\n"+body;
-        saveFile(tsv,"text/tab-separated-values",that.getPlotName(".tsv"));
-    }
-    this.handlePlotTSV = wrap(this.handlePlotTSV);
 
     /* render plot */
-    this.render = function(){
+    this.redraw = function(){
         that.renderPlot();
         that.renderLabel();
         that.renderAxisSelect();
@@ -595,20 +584,20 @@ function observable_plot(mainDivId){
 	showLegendDiv.append("input").attr("type","checkbox")
 	    .attr("checked","true").on("change",function () {
 		that.setShowLegend(d3.event.currentTarget.checked);
-		that.render();
+		that.redraw();
 	    });
 	showLegendDiv.append("span").text(" Legend");
 	var logXDiv = legendForm.append("div").attr("class","checkbox").append("label");
 	logXDiv.text("Log X ");
 	logXDiv.append("input").attr("type","checkbox").on("change",function () {
 		that.setXAxisLog(d3.event.currentTarget.checked);
-		that.render();
+		that.redraw();
 	    });;
 	var logYDiv = legendForm.append("div").attr("class","checkbox").append("label");
 	logYDiv.text("Log Y ");
 	logYDiv.append("input").attr("type","checkbox").on("change",function () {
 		that.setYAxisLog(d3.event.currentTarget.checked);
-		that.render();
+		that.redraw();
 	    });;
 	legendForm.append("div").attr("id",that.plotDivAxisSelectId).attr("class","form-group")
 	    .append("select").attr("class","form-control");
