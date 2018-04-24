@@ -114,7 +114,7 @@
 * int_storage.mli
    *
    * Creation:                      &lt;2016-03-14 feret&gt;
-   * Last modification: Time-stamp: &lt;Nov 23 2016&gt;
+   * Last modification: Time-stamp: &lt;Apr 13 2018&gt;
    *
    * openkappa
    * Jérôme Feret, projet Abstraction, INRIA Paris-Rocquencourt
@@ -139,6 +139,9 @@
 
 
 <pre><span id="TYPEquaternary"><span class="keyword">type</span> <code class="type">('a, 'b, 'c, 'd, 'e)</code> quaternary</span> = <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       'a -> 'b -> 'c -> 'd -> Exception.method_handler * 'e</code> </pre>
+
+
+<pre><span id="TYPEsexternary"><span class="keyword">type</span> <code class="type">('a, 'b, 'c, 'd, 'e, 'f, 'g)</code> sexternary</span> = <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       'a -> 'b -> 'c -> 'd -> 'e -> 'f -> Exception.method_handler * 'g</code> </pre>
 
 
 <pre><span id="TYPEunary_no_output"><span class="keyword">type</span> <code class="type">'a</code> unary_no_output</span> = <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -> 'a -> Exception.method_handler</code> </pre>

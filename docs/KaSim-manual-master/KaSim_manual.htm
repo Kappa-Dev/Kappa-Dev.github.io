@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release a202763)</title> 
+(release 3428bbd)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release a202763)</h2>
+(release 3428bbd)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -6877,11 +6877,15 @@ General options
  <br />      contact map domain is used to over-approximate side-effects
  <br />  --(no-)views-domain    (default: enabled)
  <br />      enable local views analysis
- <br />  --(no-)double-bonds-domain    (default: enabled)
- <br />      enable double bonds analysis
+ <br />  --(no-)counters-domain    (default: enabled)
+ <br />      enable counter analysis
                                                                                   
 
                                                                                   
+ <br />  --counters-accuracy &#x003C;name&#x003E;   (default: Mi)
+ <br />      Abstract domain for counter analysis
+ <br />  --(no-)double-bonds-domain    (default: enabled)
+ <br />      enable double bonds analysis
  <br />  --(no-)sites-across-bonds-domain    (default: enabled)
  <br />      enable the analysis of the relation among the states of sites in
  <br />      connected agents
@@ -6919,13 +6923,13 @@ General options
  <br />  --(no-)compute-potential-cycles    (default: disabled)
  <br />      Compute the bonds that may be involved in polymerisation
  <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
+                                                                                  
+
+                                                                                  
  <br />      put the contact map file in this directory
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
  <br />      file name for the contact map output
  <br />  --contact-map-accuracy-level Low | High
-                                                                                  
-
-                                                                                  
  <br /> (default: Low)
  <br />      Tune the accuracy level of the contact map
  <br />  --polymer-detection-accuracy-level Low | High
@@ -6963,15 +6967,15 @@ General options
  <br />      dump debugging information
  <br />  --(no-)unsafe-mode    (default: enabled)
  <br />      exceptions are gathered at the end of the computation, instead of
+                                                                                  
+
+                                                                                  
  <br />      halting it
  <br />  --(no-)print-efficiency    (default: disabled)
  <br />      prompt CPU time and various datas
  <br />
-                                                                                  
-
-                                                                                  
- <br />(62 options)</div>
-<!--l. 164--><p class="nopar" >
+ <br />(64 options)</div>
+<!--l. 168--><p class="nopar" >
 <!--l. 1614--><p class="noindent" >Order in options matters, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -7609,9 +7613,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (a202763) (without Tk interface)
- <br />Analysis launched at 2018/04/19 23:04:14 (GMT+0) on
- <br />travis-job-ba99ae70-652f-4e18-ade2-6481d574eefb
+Kappa Static Analyzer (3428bbd) (without Tk interface)
+ <br />Analysis launched at 2018/04/24 09:25:18 (GMT+0) on
+ <br />travis-job-25538605-dd75-428c-a5d8-7adbe314f66c
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7668,8 +7672,11 @@ Kappa Static Analyzer (a202763) (without Tk interface)
  <br />------------------------------------------------------------
  <br />R(c[c.R],cr[n.R]) =&#x003E; R(c[1],cr[2]),R(c[1],n[2])
  <br />R(c[c.R],n[cr.R]) =&#x003E; R(c[1],n[2]),R(c[1],cr[2])
+ <br />------------------------------------------------------------
+ <br />* Properties of counters
+ <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 59--><p class="nopar" >
+<!--l. 62--><p class="nopar" >
 <!--l. 1768--><p class="noindent" >This result is displayed in the standard output, and it is made of six parts.
 <!--l. 1770--><p class="noindent" >The ﬁrst two parts provide an enumeration of dead rules and dead agents. The next parts display
 what we call reﬁnement lemmas. A reﬁnement lemma is made of a precondition (on
@@ -7691,12 +7698,12 @@ reﬁned/extended into an embedding from one site graph in its postcondition int
 reachable state. This way, a reﬁnement lemma provides an enumeration of all the potential
 contexts for the precondition.
 <!--l. 1776--><p class="noindent" >We now detail the six diﬀerent parts:
-     <ul class="itemize1">
-     <li class="itemize"><span 
-class="ecbx-1095">Detection of dead rules. </span>A rule is called dead, if there is no trace starting from the
                                                                                   
 
                                                                                   
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ecbx-1095">Detection of dead rules. </span>A rule is called dead, if there is no trace starting from the
      initial state in which this rule is applied. The analysis reports the list of the rules it
      has detected to be dead. Due to the over-approximation, it may happen that a dead
      rule is not discovered by the analysis. Yet, every rule that is reported as dead, is dead
@@ -7753,11 +7760,11 @@ href="#XFeret:SASB2016">18</a>]</span> collects for
      the state of one site in the second agent. Due to the over-approximation, the analysis
      reports a super-set of the set of the potential pairs of states.
      <!--l. 1801--><p class="noindent" >This abstraction aimed at capturing information about protein transportation. It is
-     quite common to model the location of a protein as the internal state of a ﬁctitious
-     site. With such an encoding, it might be important to ensure that two connected
                                                                                   
 
                                                                                   
+     quite common to model the location of a protein as the internal state of a ﬁctitious
+     site. With such an encoding, it might be important to ensure that two connected
      proteins are always located in the same location. This abstraction focuses on this kind
      of properties.
      </li>
@@ -7787,9 +7794,9 @@ class="ectt-1095">n</span>.</li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-4">
-Kappa Static Analyzer (a202763) (without Tk interface)
- <br />Analysis launched at 2018/04/19 23:04:14 (GMT+0) on
- <br />travis-job-ba99ae70-652f-4e18-ade2-6481d574eefb
+Kappa Static Analyzer (3428bbd) (without Tk interface)
+ <br />Analysis launched at 2018/04/24 09:25:18 (GMT+0) on
+ <br />travis-job-25538605-dd75-428c-a5d8-7adbe314f66c
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -10865,9 +10872,9 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-21">
-Kappa Static Analyzer (a202763) (without Tk interface)
- <br />Analysis launched at 2018/04/19 23:04:13 (GMT+0) on
- <br />travis-job-ba99ae70-652f-4e18-ade2-6481d574eefb
+Kappa Static Analyzer (3428bbd) (without Tk interface)
+ <br />Analysis launched at 2018/04/24 09:25:17 (GMT+0) on
+ <br />travis-job-25538605-dd75-428c-a5d8-7adbe314f66c
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -10896,15 +10903,25 @@ Kappa Static Analyzer (a202763) (without Tk interface)
  <br />------------------------------------------------------------
  <br />* Properties of pairs of bonds
  <br />------------------------------------------------------------
+ <br />------------------------------------------------------------
+ <br />* Properties of counters
+ <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 34--><p class="nopar" >
+<!--l. 37--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 6.32: </span><span  
 class="content">Log of the reachability analysis.</span></div><!--tex4ht:label?: x1-7201832 -->
                                                                                   
 
                                                                                   
+                                                                                  
+
+                                                                                  
 <!--l. 2361--><p class="noindent" ></div><hr class="endfigure">
+                                                                                  
+
+                                                                                  
+<!--l. 2363--><p class="noindent" >
                                                                                   
 
                                                                                   
@@ -12244,7 +12261,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">314620919</span><span 
+class="ectt-1095">214435239</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -12255,7 +12272,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;1041797564&#x0022;</span><span 
+class="ectt-1095">&#x0022;193955497&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 

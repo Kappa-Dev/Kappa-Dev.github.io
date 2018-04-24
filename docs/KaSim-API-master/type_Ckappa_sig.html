@@ -1146,9 +1146,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_of_list_rule_id&nbsp;:<br>
@@ -1191,9 +1198,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Agent_type_quick_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
@@ -1223,9 +1237,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Agent_type_site_nearly_Inf_Int_Int_storage_Imperatif_Imperatif</span>&nbsp;:<br>
@@ -1255,9 +1276,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Agent_type_site_quick_nearly_Inf_Int_Int_storage_Imperatif_Imperatif</span>&nbsp;:<br>
@@ -1287,9 +1315,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Agent_type_site_state_nearly_Inf_Int_Int_Int_storage_Imperatif_Imperatif_Imperatif</span>&nbsp;:<br>
@@ -1319,9 +1354,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Site_type_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
@@ -1351,9 +1393,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Site_type_quick_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
@@ -1383,9 +1432,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">State_index_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
@@ -1415,9 +1471,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">State_index_quick_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
@@ -1447,9 +1510,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Rule_quick_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
@@ -1479,9 +1549,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Site_union_find</span>&nbsp;:<br>
@@ -1502,6 +1579,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;key&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;key&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_representent&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;t&nbsp;*&nbsp;key<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Rule_FIFO</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
@@ -1546,9 +1627,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Agent_id_quick_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
@@ -1578,9 +1666,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Rule_id_quick_nearly_Inf_Int_storage_Imperatif</span>&nbsp;:<br>
@@ -1610,9 +1705,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Int_storage</span>.ternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>b)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.ternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.ternary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.sexternary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold2_common&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="constructor">Int_storage</span>.quaternary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>b&nbsp;t,&nbsp;<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>c)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Int_storage</span>.quaternary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((key,&nbsp;<span class="keywordsign">'</span>a,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary,&nbsp;<span class="keywordsign">'</span>a&nbsp;t,&nbsp;bool)&nbsp;<span class="constructor">Int_storage</span>.binary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;free_all&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;t,&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="constructor">Int_storage</span>.unary<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Agent_map_and_set</span>&nbsp;:<br>
