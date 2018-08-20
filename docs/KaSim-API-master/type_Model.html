@@ -112,6 +112,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.perturbation&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Contact_map</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Model</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;deconstruct&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;list&nbsp;*&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Env</span>.t&nbsp;*&nbsp;unit&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="constructor">NamedDecls</span>.t&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((string&nbsp;<span class="constructor">Locality</span>.annot&nbsp;option&nbsp;*&nbsp;<span class="constructor">LKappa</span>.rule&nbsp;<span class="constructor">Locality</span>.annot)&nbsp;array&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.elementary_rule&nbsp;array)&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.alg_expr&nbsp;<span class="constructor">Locality</span>.annot&nbsp;array&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.perturbation&nbsp;array&nbsp;*&nbsp;<span class="constructor">Contact_map</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_tokens&nbsp;:&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_algs&nbsp;:&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_rules&nbsp;:&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
