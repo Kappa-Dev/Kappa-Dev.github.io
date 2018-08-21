@@ -238,7 +238,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_state_of_site_in_precondition&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>static&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>dynamic&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Analyzer_headers</span>.global_dynamic_information)&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>dynamic&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Analyzer_headers</span>.global_dynamic_information&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>dynamic&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>dynamic)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>static&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>dynamic&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -246,7 +246,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_agent_id&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>c&nbsp;*&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Exception</span>.method_handler&nbsp;*&nbsp;<span class="keywordsign">'</span>dynamic&nbsp;*&nbsp;<span class="constructor">Communication</span>.precondition&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.c_state&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_state_of_site_in_postcondition&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>static&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Analyzer_headers</span>.global_static_information)&nbsp;<span class="keywordsign">-&gt;</span><br>
