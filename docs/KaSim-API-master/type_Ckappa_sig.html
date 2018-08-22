@@ -6826,4 +6826,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>value&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>value&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Yojson</span>.<span class="constructor">Basic</span>.json<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;side_effects&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;not_seen_yet&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_agent_name&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_site_name&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.c_state)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentsSiteState_map_and_set</span>.<span class="constructor">Map</span>.t;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;seen&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.<span class="constructor">AgentSiteState_map_and_set</span>.<span class="constructor">Set</span>.t;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty_side_effects&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.side_effects<br>
 <span class="keyword">end</span></code></body></html>

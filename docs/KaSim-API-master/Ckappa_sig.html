@@ -116,7 +116,7 @@
  * Jérôme Feret, projet Abstraction/Antique, INRIA Paris-Rocquencourt
  *
  * Creation: 01/17/2011
- * Last modification: Time-stamp: &lt;May 20 2018&gt;
+ * Last modification: Time-stamp: &lt;Aug 22 2018&gt;
  * *
  * Signature for prepreprocessing language ckappa
  *
@@ -1253,4 +1253,24 @@
 <pre><span class="keyword">module</span> <a href="Ckappa_sig.PairAgentSitesState_map_and_set.html">PairAgentSitesState_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
   with type elt =
          (c_agent_name * c_site_name * c_site_name * c_state) *
-         (c_agent_name * c_site_name * c_site_name * c_state)</code></pre></body></html>
+         (c_agent_name * c_site_name * c_site_name * c_state)</code></pre>
+<pre><code><span id="TYPEside_effects"><span class="keyword">type</span> <code class="type"></code>side_effects</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTside_effects.not_seen_yet">not_seen_yet</span>&nbsp;: <code class="type">(<a href="Ckappa_sig.html#TYPEc_agent_name">c_agent_name</a> * <a href="Ckappa_sig.html#TYPEc_site_name">c_site_name</a> * <a href="Ckappa_sig.html#TYPEc_state">c_state</a>)<br>       AgentsSiteState_map_and_set.Map.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTside_effects.seen">seen</span>&nbsp;: <code class="type">AgentSiteState_map_and_set.Set.t</code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALempty_side_effects"><span class="keyword">val</span> empty_side_effects</span> : <code class="type"><a href="Ckappa_sig.html#TYPEside_effects">side_effects</a></code></pre></body></html>
