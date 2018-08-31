@@ -444,7 +444,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;count_delta&nbsp;:&nbsp;int&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">and</span>&nbsp;counter_test&nbsp;=&nbsp;<span class="constructor">CEQ</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CGTE</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CVAR</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">UNKNOWN</span><br>
-&nbsp;&nbsp;<span class="keyword">and</span>&nbsp;internal&nbsp;=&nbsp;string&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">and</span>&nbsp;internal&nbsp;=&nbsp;string&nbsp;option&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">and</span>&nbsp;link&nbsp;=<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">LNK_VALUE</span>&nbsp;<span class="keyword">of</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Ckappa_sig</span>.c_agent_id&nbsp;*&nbsp;<span class="constructor">Ckappa_sig</span>.agent_name&nbsp;*<br>
@@ -647,7 +647,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(value&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;*&nbsp;<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;key&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>c&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>c)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;dictionary&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>c&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>c<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;internal_state_specification&nbsp;=&nbsp;{&nbsp;string&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.internal_state;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;internal_state_specification&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;:&nbsp;<span class="constructor">Ckappa_sig</span>.internal_state&nbsp;option;<br>
+&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Dictionary_of_agents</span>&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;key&nbsp;=&nbsp;c_agent_name<br>
