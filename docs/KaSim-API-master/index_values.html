@@ -329,13 +329,19 @@ Starts creation
 </td></tr>
 <tr><td><a href="Priority.html#VALbellow_average">bellow_average</a> [<a href="Priority.html">Priority</a>]</td>
 <td></td></tr>
+<tr><td><a href="Operator.html#VALbin_alg_op_is_prefix">bin_alg_op_is_prefix</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
 <tr><td><a href="Operator.html#VALbin_alg_op_of_json">bin_alg_op_of_json</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#VALbin_alg_op_to_json">bin_alg_op_to_json</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
+<tr><td><a href="Operator.html#VALbin_alg_op_to_string">bin_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
 <tr><td><a href="Operator.html#VALbin_bool_op_of_json">bin_bool_op_of_json</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#VALbin_bool_op_to_json">bin_bool_op_to_json</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALbin_bool_op_to_string">bin_bool_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Option_util.html#VALbind">bind</a> [<a href="Option_util.html">Option_util</a>]</td>
 <td></td></tr>
@@ -487,6 +493,8 @@ Starts creation
 <tr><td><a href="Operator.html#VALcompare_op_of_json">compare_op_of_json</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#VALcompare_op_to_json">compare_op_to_json</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALcompare_op_to_string">compare_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ckappa_sig.html#VALcompare_rule_id">compare_rule_id</a> [<a href="Ckappa_sig.html">Ckappa_sig</a>]</td>
 <td></td></tr>
@@ -1750,6 +1758,8 @@ euler division when only int are involved, float div else
 </td></tr>
 <tr><td><a href="Loggers.html#VALis_const">is_const</a> [<a href="Loggers.html">Loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Alg_expr.html#VALis_constant">is_constant</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
+<td></td></tr>
 <tr><td><a href="Signature.html#VALis_counter_agent">is_counter_agent</a> [<a href="Signature.html">Signature</a>]</td>
 <td></td></tr>
 <tr><td><a href="Loggers.html#VALis_dangerous_ode_variable">is_dangerous_ode_variable</a> [<a href="Loggers.html">Loggers</a>]</td>
@@ -1832,6 +1842,11 @@ same function but takes a graph of type Edges.t directly.
 <td></td></tr>
 <tr><td><a href="Ode_loggers.html#VALis_time">is_time</a> [<a href="Ode_loggers.html">Ode_loggers</a>]</td>
 <td></td></tr>
+<tr><td><a href="Alg_expr.html#VALis_time_homogeneous">is_time_homogeneous</a> [<a href="Alg_expr.html">Alg_expr</a>]</td>
+<td><div class="info">
+does not take into account symbolic propagation of expression
+</div>
+</td></tr>
 <tr><td><a href="Fractions.html#VALis_zero">is_zero</a> [<a href="Fractions.html">Fractions</a>]</td>
 <td></td></tr>
 <tr><td><a href="Nbr.html#VALis_zero">is_zero</a> [<a href="Nbr.html">Nbr</a>]</td>
@@ -3352,6 +3367,8 @@ split_init split init event agent-wise
 <td></td></tr>
 <tr><td><a href="Operator.html#VALstate_alg_op_to_json">state_alg_op_to_json</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
+<tr><td><a href="Operator.html#VALstate_alg_op_to_string">state_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ckappa_sig.html#VALstate_index_of_int">state_index_of_int</a> [<a href="Ckappa_sig.html">Ckappa_sig</a>]</td>
 <td></td></tr>
 <tr><td><a href="Edges.html#VALstats">stats</a> [<a href="Edges.html">Edges</a>]</td>
@@ -3652,9 +3669,13 @@ Same than <code class="code">concretize_action</code>, except that it returns <c
 <td></td></tr>
 <tr><td><a href="Operator.html#VALun_alg_op_to_json">un_alg_op_to_json</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
+<tr><td><a href="Operator.html#VALun_alg_op_to_string">un_alg_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
 <tr><td><a href="Operator.html#VALun_bool_op_of_json">un_bool_op_of_json</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Operator.html#VALun_bool_op_to_json">un_bool_op_to_json</a> [<a href="Operator.html">Operator</a>]</td>
+<td></td></tr>
+<tr><td><a href="Operator.html#VALun_bool_op_to_string">un_bool_op_to_string</a> [<a href="Operator.html">Operator</a>]</td>
 <td></td></tr>
 <tr><td><a href="Model.html#VALunary_patterns">unary_patterns</a> [<a href="Model.html">Model</a>]</td>
 <td></td></tr>

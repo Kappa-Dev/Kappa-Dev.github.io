@@ -203,6 +203,10 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;has_mix&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;?var_decls:(<span class="keywordsign">'</span>b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="keywordsign">'</span>c,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.pervasives_bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_constant&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.pervasives_bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_time_homogeneous&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Alg_expr</span>.pervasives_bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;has_progress_dep&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;only_time:<span class="constructor">Alg_expr</span>.pervasives_bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.<span class="constructor">DepSet</span>.t&nbsp;array&nbsp;*<br>

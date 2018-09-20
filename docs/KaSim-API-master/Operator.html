@@ -347,12 +347,19 @@ Compiled algebraic expression<br>
 <br>
 <h6 id="6_Printers">Printers</h6><br>
 
-<pre><span id="VALprint_bin_alg_op"><span class="keyword">val</span> print_bin_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> unit</code></pre>
+<pre><span id="VALbin_alg_op_is_prefix"><span class="keyword">val</span> bin_alg_op_is_prefix</span> : <code class="type"><a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> bool</code></pre>
+<pre><span id="VALprint_bin_alg_op"><span class="keyword">val</span> print_bin_alg_op</span> : <code class="type">(Format.formatter -> 'a -> unit) -><br>       'a -><br>       (Format.formatter -> 'b -> unit) -><br>       'b -> Format.formatter -> <a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> unit</code></pre>
 <pre><span id="VALprint_un_alg_op"><span class="keyword">val</span> print_un_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEun_alg_op">un_alg_op</a> -> unit</code></pre>
 <pre><span id="VALprint_state_alg_op"><span class="keyword">val</span> print_state_alg_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> unit</code></pre>
 <pre><span id="VALprint_bin_bool_op"><span class="keyword">val</span> print_bin_bool_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEbin_bool_op">bin_bool_op</a> -> unit</code></pre>
 <pre><span id="VALprint_un_bool_op"><span class="keyword">val</span> print_un_bool_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEun_bool_op">un_bool_op</a> -> unit</code></pre>
-<pre><span id="VALprint_compare_op"><span class="keyword">val</span> print_compare_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEcompare_op">compare_op</a> -> unit</code></pre><br>
+<pre><span id="VALprint_compare_op"><span class="keyword">val</span> print_compare_op</span> : <code class="type">Format.formatter -> <a href="Operator.html#TYPEcompare_op">compare_op</a> -> unit</code></pre>
+<pre><span id="VALbin_alg_op_to_string"><span class="keyword">val</span> bin_alg_op_to_string</span> : <code class="type"><a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> string</code></pre>
+<pre><span id="VALun_alg_op_to_string"><span class="keyword">val</span> un_alg_op_to_string</span> : <code class="type"><a href="Operator.html#TYPEun_alg_op">un_alg_op</a> -> string</code></pre>
+<pre><span id="VALstate_alg_op_to_string"><span class="keyword">val</span> state_alg_op_to_string</span> : <code class="type"><a href="Operator.html#TYPEstate_alg_op">state_alg_op</a> -> string</code></pre>
+<pre><span id="VALbin_bool_op_to_string"><span class="keyword">val</span> bin_bool_op_to_string</span> : <code class="type"><a href="Operator.html#TYPEbin_bool_op">bin_bool_op</a> -> string</code></pre>
+<pre><span id="VALun_bool_op_to_string"><span class="keyword">val</span> un_bool_op_to_string</span> : <code class="type"><a href="Operator.html#TYPEun_bool_op">un_bool_op</a> -> string</code></pre>
+<pre><span id="VALcompare_op_to_string"><span class="keyword">val</span> compare_op_to_string</span> : <code class="type"><a href="Operator.html#TYPEcompare_op">compare_op</a> -> string</code></pre><br>
 <h6 id="6_Json">Json </h6><br>
 
 <pre><span id="VALbin_alg_op_to_json"><span class="keyword">val</span> bin_alg_op_to_json</span> : <code class="type"><a href="Operator.html#TYPEbin_alg_op">bin_alg_op</a> -> Yojson.Basic.json</code></pre>
