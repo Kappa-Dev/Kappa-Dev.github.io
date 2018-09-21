@@ -135,55 +135,6 @@ Kappa AST just after parsing<br>
 
 
 <pre><span id="VALmerge_version"><span class="keyword">val</span> merge_version</span> : <code class="type"><a href="Ast.html#TYPEsyntax_version">syntax_version</a> -> <a href="Ast.html#TYPEsyntax_version">syntax_version</a> -> <a href="Ast.html#TYPEsyntax_version">syntax_version</a></code></pre>
-<pre><code><span id="TYPElink"><span class="keyword">type</span> <code class="type">('a, 'annot)</code> link</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTlink.ANY_FREE"><span class="constructor">ANY_FREE</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTlink.LNK_VALUE"><span class="constructor">LNK_VALUE</span></span> <span class="keyword">of</span> <code class="type">int * 'annot</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTlink.LNK_FREE"><span class="constructor">LNK_FREE</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTlink.LNK_ANY"><span class="constructor">LNK_ANY</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTlink.LNK_SOME"><span class="constructor">LNK_SOME</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTlink.LNK_TYPE"><span class="constructor">LNK_TYPE</span></span> <span class="keyword">of</span> <code class="type">'a * 'a</code></code></td>
-<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
-port * agent_type<br>
-</div>
-</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
-</tr></table>
-
-
-
 <pre><span id="TYPEinternal"><span class="keyword">type</span> <code class="type"></code>internal</span> = <code class="type">string option <a href="Locality.html#TYPEannot">Locality.annot</a> list</code> </pre>
 
 
@@ -213,7 +164,7 @@ port * agent_type<br>
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTport.port_lnk">port_lnk</span>&nbsp;: <code class="type">(string <a href="Locality.html#TYPEannot">Locality.annot</a>, unit) <a href="Ast.html#TYPElink">link</a> <a href="Locality.html#TYPEannot">Locality.annot</a> list</code>;</code></td>
+<code><span id="TYPEELTport.port_lnk">port_lnk</span>&nbsp;: <code class="type">(string <a href="Locality.html#TYPEannot">Locality.annot</a>, unit) <a href="LKappa.html#TYPElink">LKappa.link</a> <a href="Locality.html#TYPEannot">Locality.annot</a> list</code>;</code></td>
 
 </tr>
 <tr>
@@ -762,17 +713,11 @@ Infer agent signatures and tokens from init, rules and perturbations<br>
 <br>
 <h6 id="6_Printers">Printers</h6><br>
 
-<pre><span id="VALprint_link"><span class="keyword">val</span> print_link</span> : <code class="type">('a -> Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'a -> unit) -><br>       (Format.formatter -> 'b -> unit) -><br>       Format.formatter -> ('a, 'b) <a href="Ast.html#TYPElink">link</a> -> unit</code></pre>
 <pre><span id="VALprint_counter"><span class="keyword">val</span> print_counter</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEcounter">counter</a> -> unit</code></pre>
 <pre><span id="VALprint_ast_mix"><span class="keyword">val</span> print_ast_mix</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPEmixture">mixture</a> -> unit</code></pre>
 <pre><span id="VALprint_ast_rule"><span class="keyword">val</span> print_ast_rule</span> : <code class="type">Format.formatter -> <a href="Ast.html#TYPErule">rule</a> -> unit</code></pre>
 <pre><span id="VALprint_rule_content"><span class="keyword">val</span> print_rule_content</span> : <code class="type">bidirectional:bool -> Format.formatter -> <a href="Ast.html#TYPErule_content">rule_content</a> -> unit</code></pre>
 <pre><span id="VALto_erased_mixture"><span class="keyword">val</span> to_erased_mixture</span> : <code class="type"><a href="Ast.html#TYPEmixture">mixture</a> -> <a href="Ast.html#TYPEmixture">mixture</a></code></pre>
 <pre><span id="VALto_created_mixture"><span class="keyword">val</span> to_created_mixture</span> : <code class="type"><a href="Ast.html#TYPEmixture">mixture</a> -> <a href="Ast.html#TYPEmixture">mixture</a></code></pre>
-<pre><span id="VALlink_to_json"><span class="keyword">val</span> link_to_json</span> : <code class="type">('a -> 'a -> Yojson.Basic.json) -><br>       ('a -> Yojson.Basic.json) -><br>       ('b -> Yojson.Basic.json list) -> ('a, 'b) <a href="Ast.html#TYPElink">link</a> -> Yojson.Basic.json</code></pre><div class="info ">
-Fragile: the list MUST NOT be a singleton<br>
-</div>
-
-<pre><span id="VALlink_of_json"><span class="keyword">val</span> link_of_json</span> : <code class="type">('a -> Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json -> 'a) -><br>       (Yojson.Basic.json list -> 'b) -> Yojson.Basic.json -> ('a, 'b) <a href="Ast.html#TYPElink">link</a></code></pre>
 <pre><span id="VALcompil_of_json"><span class="keyword">val</span> compil_of_json</span> : <code class="type">Yojson.Basic.json -> <a href="Ast.html#TYPEparsing_compil">parsing_compil</a></code></pre>
 <pre><span id="VALcompil_to_json"><span class="keyword">val</span> compil_to_json</span> : <code class="type"><a href="Ast.html#TYPEparsing_compil">parsing_compil</a> -> Yojson.Basic.json</code></pre></body></html>

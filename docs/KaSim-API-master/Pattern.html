@@ -183,14 +183,14 @@ Starts creation<br>
 <code class="code">new_link_type work (node,site) <span class="keyword">type</span></code><br>
 </div>
 
-<pre><span id="VALfinish_new"><span class="keyword">val</span> finish_new</span> : <code class="type">?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Pattern.html#TYPEwork">work</a> -> <a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> * Renaming.t * <a href="Pattern.html#TYPEcc">cc</a> * <a href="Pattern.html#TYPEid">id</a></code></pre><br>
+<pre><span id="VALfinish_new"><span class="keyword">val</span> finish_new</span> : <code class="type">debugMode:bool -><br>       ?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="Pattern.html#TYPEwork">work</a> -> <a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> * Renaming.t * <a href="Pattern.html#TYPEcc">cc</a> * <a href="Pattern.html#TYPEid">id</a></code></pre><br>
 <h6 id="6_Useaconnectedcomponent">Use a connected component </h6><br>
 
 <pre><span id="VALcompare_canonicals"><span class="keyword">val</span> compare_canonicals</span> : <code class="type"><a href="Pattern.html#TYPEid">id</a> -> <a href="Pattern.html#TYPEid">id</a> -> int</code></pre>
 <pre><span id="VALis_equal_canonicals"><span class="keyword">val</span> is_equal_canonicals</span> : <code class="type"><a href="Pattern.html#TYPEid">id</a> -> <a href="Pattern.html#TYPEid">id</a> -> bool</code></pre>
-<pre><span id="VALprint_cc"><span class="keyword">val</span> print_cc</span> : <code class="type">?dotnet:bool -><br>       ?full_species:bool -><br>       ?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       ?cc_id:<a href="Pattern.html#TYPEid">id</a> -> with_id:bool -> Format.formatter -> <a href="Pattern.html#TYPEt">t</a> -> unit</code></pre>
+<pre><span id="VALprint_cc"><span class="keyword">val</span> print_cc</span> : <code class="type">noCounters:bool -><br>       ?dotnet:bool -><br>       ?full_species:bool -><br>       ?sigs:<a href="Signature.html#TYPEs">Signature.s</a> -><br>       ?cc_id:<a href="Pattern.html#TYPEid">id</a> -> with_id:bool -> Format.formatter -> <a href="Pattern.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALprint_cc_as_id"><span class="keyword">val</span> print_cc_as_id</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> Format.formatter -> <a href="Pattern.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?domain:<a href="Pattern.Env.html#TYPEt">Env.t</a> -><br>       with_id:bool -> Format.formatter -> <a href="Pattern.html#TYPEid">id</a> -> unit</code></pre><div class="info ">
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">noCounters:bool -><br>       ?domain:<a href="Pattern.Env.html#TYPEt">Env.t</a> -><br>       with_id:bool -> Format.formatter -> <a href="Pattern.html#TYPEid">id</a> -> unit</code></pre><div class="info ">
 <code class="code">print ~domain ?with_id:<span class="constructor">None</span> form cc</code><br>
 </div>
 
@@ -201,8 +201,8 @@ Starts creation<br>
 Abstraction leak, please do not use<br>
 </div>
 
-<pre><span id="VALautomorphisms"><span class="keyword">val</span> automorphisms</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> Renaming.t list</code></pre>
-<pre><span id="VALembeddings_to_fully_specified"><span class="keyword">val</span> embeddings_to_fully_specified</span> : <code class="type"><a href="Pattern.Env.html#TYPEt">Env.t</a> -> <a href="Pattern.html#TYPEid">id</a> -> <a href="Pattern.html#TYPEcc">cc</a> -> Renaming.t list</code></pre>
+<pre><span id="VALautomorphisms"><span class="keyword">val</span> automorphisms</span> : <code class="type">debugMode:bool -> <a href="Pattern.html#TYPEt">t</a> -> Renaming.t list</code></pre>
+<pre><span id="VALembeddings_to_fully_specified"><span class="keyword">val</span> embeddings_to_fully_specified</span> : <code class="type">debugMode:bool -><br>       <a href="Pattern.Env.html#TYPEt">Env.t</a> -> <a href="Pattern.html#TYPEid">id</a> -> <a href="Pattern.html#TYPEcc">cc</a> -> Renaming.t list</code></pre>
 <pre><span id="VALsize_of_cc"><span class="keyword">val</span> size_of_cc</span> : <code class="type"><a href="Pattern.html#TYPEcc">cc</a> -> int</code></pre>
 <pre><span id="VALfold_by_type"><span class="keyword">val</span> fold_by_type</span> : <code class="type">(pos:int -> agent_type:int -> (<a href="Pattern.html#TYPElink">link</a> * int) array -> 'a -> 'a) -><br>       <a href="Pattern.html#TYPEcc">cc</a> -> 'a -> 'a</code></pre><div class="info ">
 USE WITH CARE: Break some abstraction. The array must not be
@@ -214,10 +214,10 @@ USE WITH CARE: Break some abstraction. The array must not be
     modified and internal state <code class="code">-1</code> means unspecified<br>
 </div>
 
-<pre><span id="VALfinalize"><span class="keyword">val</span> finalize</span> : <code class="type">max_sharing:bool -><br>       <a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> -> <a href="Contact_map.html#TYPEt">Contact_map.t</a> -> <a href="Pattern.Env.html#TYPEt">Env.t</a> * <a href="Pattern.PreEnv.html#TYPEstat">PreEnv.stat</a></code></pre>
-<pre><span id="VALinfs"><span class="keyword">val</span> infs</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> list</code></pre>
-<pre><span id="VALmatchings"><span class="keyword">val</span> matchings</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> -> Renaming.t list</code></pre>
-<pre><span id="VALmerge_on_inf"><span class="keyword">val</span> merge_on_inf</span> : <code class="type"><a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> -><br>       Renaming.t -><br>       <a href="Pattern.html#TYPEt">t</a> -><br>       <a href="Pattern.html#TYPEt">t</a> -><br>       <a href="Pattern.html#TYPEt">t</a> option * (<a href="Pattern.html#TYPEt">t</a> * int * <a href="Pattern.html#TYPEt">t</a> * int * int * bool) option</code></pre>
+<pre><span id="VALfinalize"><span class="keyword">val</span> finalize</span> : <code class="type">debugMode:bool -><br>       max_sharing:bool -><br>       <a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> -> <a href="Contact_map.html#TYPEt">Contact_map.t</a> -> <a href="Pattern.Env.html#TYPEt">Env.t</a> * <a href="Pattern.PreEnv.html#TYPEstat">PreEnv.stat</a></code></pre>
+<pre><span id="VALinfs"><span class="keyword">val</span> infs</span> : <code class="type">debugMode:bool -> <a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> list</code></pre>
+<pre><span id="VALmatchings"><span class="keyword">val</span> matchings</span> : <code class="type">debugMode:bool -> <a href="Pattern.html#TYPEt">t</a> -> <a href="Pattern.html#TYPEt">t</a> -> Renaming.t list</code></pre>
+<pre><span id="VALmerge_on_inf"><span class="keyword">val</span> merge_on_inf</span> : <code class="type">debugMode:bool -><br>       <a href="Pattern.PreEnv.html#TYPEt">PreEnv.t</a> -><br>       Renaming.t -><br>       <a href="Pattern.html#TYPEt">t</a> -><br>       <a href="Pattern.html#TYPEt">t</a> -><br>       <a href="Pattern.html#TYPEt">t</a> option * (<a href="Pattern.html#TYPEt">t</a> * int * <a href="Pattern.html#TYPEt">t</a> * int * int * bool) option</code></pre>
 <pre><span id="VALlength"><span class="keyword">val</span> length</span> : <code class="type"><a href="Pattern.html#TYPEt">t</a> -> int</code></pre>
 <pre><span class="keyword">module</span> <a href="Pattern.Set.html">Set</a>: <code class="type"><a href="SetMap.Set.html">SetMap.Set</a></code><code class="type">  with type elt=id</code></pre>
 <pre><span class="keyword">module</span> <a href="Pattern.Map.html">Map</a>: <code class="type"><a href="SetMap.Map.html">SetMap.Map</a></code><code class="type">  with type elt=id</code></pre>
