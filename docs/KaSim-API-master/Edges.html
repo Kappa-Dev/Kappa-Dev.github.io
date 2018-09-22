@@ -54,7 +54,7 @@
 <link title="Configuration" rel="Chapter" href="Configuration.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
-<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Pattern_compiler" rel="Chapter" href="Pattern_compiler.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="User_graph" rel="Chapter" href="User_graph.html">
@@ -205,5 +205,6 @@ Some (i,j) as second returned element means separate "new" cc j from cc i<br>
 </div>
 
 <pre><span id="VALspecies"><span class="keyword">val</span> species</span> : <code class="type">debugMode:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -> int -> <a href="Edges.html#TYPEt">t</a> -> <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a></code></pre>
-<pre><span id="VALbuild_snapshot"><span class="keyword">val</span> build_snapshot</span> : <code class="type">debugMode:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">t</a> -> (int * <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a>) list</code></pre>
+<pre><span id="VALbuild_snapshot"><span class="keyword">val</span> build_snapshot</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">t</a> -> Snapshot.t</code></pre>
+<pre><span id="VALbuild_user_snapshot"><span class="keyword">val</span> build_user_snapshot</span> : <code class="type">debugMode:bool -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -> <a href="Edges.html#TYPEt">t</a> -> (int * <a href="User_graph.html#TYPEconnected_component">User_graph.connected_component</a>) list</code></pre>
 <pre><span id="VALdebug_print"><span class="keyword">val</span> debug_print</span> : <code class="type">Format.formatter -> <a href="Edges.html#TYPEt">t</a> -> unit</code></pre></body></html>

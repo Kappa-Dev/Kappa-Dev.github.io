@@ -49,7 +49,7 @@
 <link title="Configuration" rel="Chapter" href="Configuration.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
-<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Pattern_compiler" rel="Chapter" href="Pattern_compiler.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="User_graph" rel="Chapter" href="User_graph.html">
@@ -96,7 +96,7 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Snip</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Pattern_compiler</title>
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
@@ -124,11 +124,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;list&nbsp;*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Instantiation</span>.abstract&nbsp;<span class="constructor">Primitives</span>.<span class="constructor">Transformation</span>.t&nbsp;list))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;*&nbsp;(<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*&nbsp;<span class="constructor">Operator</span>.rev_dep&nbsp;option)<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;patterns_of_mixture&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;debugMode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Contact_map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;*&nbsp;<span class="constructor">Pattern</span>.cc&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;lkappa_of_elementary_rule&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">Env</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>

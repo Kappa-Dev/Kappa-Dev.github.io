@@ -54,7 +54,7 @@
 <link title="Configuration" rel="Chapter" href="Configuration.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
-<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Pattern_compiler" rel="Chapter" href="Pattern_compiler.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="User_graph" rel="Chapter" href="User_graph.html">
@@ -101,23 +101,22 @@
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Snip</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Pattern_compiler</title>
 </head>
 <body>
 <div class="navbar"><a class="pre" href="LKappa.html" title="LKappa">Previous</a>
 &nbsp;<a class="up" href="index.html" title="Index">Up</a>
 &nbsp;<a class="post" href="Eval.html" title="Eval">Next</a>
 </div>
-<h1>Module <a href="type_Snip.html">Snip</a></h1>
+<h1>Module <a href="type_Pattern_compiler.html">Pattern_compiler</a></h1>
 
-<pre><span class="keyword">module</span> Snip: <code class="code"><span class="keyword">sig</span></code> <a href="Snip.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+<pre><span class="keyword">module</span> Pattern_compiler: <code class="code"><span class="keyword">sig</span></code> <a href="Pattern_compiler.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
 Kappa pattern compiler<br>
 </div>
 <hr width="100%">
 
 <pre><span id="VALconnected_components_sum_of_ambiguous_mixture"><span class="keyword">val</span> connected_components_sum_of_ambiguous_mixture</span> : <code class="type">debugMode:bool -><br>       compileModeOn:bool -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       ?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> *<br>       ((<a href="Pattern.html#TYPEid">Pattern.id</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a>) array *<br>        <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEtest">Instantiation.test</a> list list)<br>       list</code></pre>
 <pre><span id="VALconnected_components_sum_of_ambiguous_rule"><span class="keyword">val</span> connected_components_sum_of_ambiguous_rule</span> : <code class="type">debugMode:bool -><br>       compileModeOn:bool -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -><br>       ?origin:<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> -><br>       <a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a> -><br>       <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a> -><br>       (<a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> option * (<a href="Pattern.html#TYPEid">Pattern.id</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a>) array *<br>        <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Instantiation.html#TYPEevent">Instantiation.event</a> *<br>        (<a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">Primitives.Transformation.t</a> list *<br>         <a href="Instantiation.html#TYPEabstract">Instantiation.abstract</a> <a href="Primitives.Transformation.html#TYPEt">Primitives.Transformation.t</a> list))<br>       list * (<a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Operator.html#TYPErev_dep">Operator.rev_dep</a> option)</code></pre>
-<pre><span id="VALpatterns_of_mixture"><span class="keyword">val</span> patterns_of_mixture</span> : <code class="type">debugMode:bool -><br>       <a href="Contact_map.html#TYPEt">Contact_map.t</a> -><br>       <a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> -> <a href="Edges.html#TYPEt">Edges.t</a> -> <a href="Pattern.PreEnv.html#TYPEt">Pattern.PreEnv.t</a> * <a href="Pattern.html#TYPEcc">Pattern.cc</a> list</code></pre>
 <pre><span id="VALlkappa_of_elementary_rule"><span class="keyword">val</span> lkappa_of_elementary_rule</span> : <code class="type"><a href="Signature.html#TYPEs">Signature.s</a> -><br>       <a href="Pattern.Env.html#TYPEt">Pattern.Env.t</a> -><br>       <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a> -> <a href="LKappa.html#TYPErule_mixture">LKappa.rule_mixture</a> * <a href="Raw_mixture.html#TYPEt">Raw_mixture.t</a></code></pre><div class="info ">
 @Return: <code class="code">(r_mix,r_create)</code><br>
 </div>

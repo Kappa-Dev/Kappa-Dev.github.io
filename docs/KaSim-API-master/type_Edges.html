@@ -49,7 +49,7 @@
 <link title="Configuration" rel="Chapter" href="Configuration.html">
 <link title="Ast" rel="Chapter" href="Ast.html">
 <link title="LKappa" rel="Chapter" href="LKappa.html">
-<link title="Snip" rel="Chapter" href="Snip.html">
+<link title="Pattern_compiler" rel="Chapter" href="Pattern_compiler.html">
 <link title="Eval" rel="Chapter" href="Eval.html">
 <link title="Navigation" rel="Chapter" href="Navigation.html">
 <link title="User_graph" rel="Chapter" href="User_graph.html">
@@ -140,7 +140,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;debugMode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">User_graph</span>.connected_component<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_snapshot&nbsp;:<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_snapshot&nbsp;:&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Snapshot</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;build_user_snapshot&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;debugMode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Signature</span>.s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(int&nbsp;*&nbsp;<span class="constructor">User_graph</span>.connected_component)&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;debug_print&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Edges</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
