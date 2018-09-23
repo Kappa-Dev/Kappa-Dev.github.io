@@ -116,26 +116,6 @@ Simulation progress keeper<br>
 <hr width="100%">
 
 <pre><span class="keyword">module</span> <a href="Counter.Efficiency.html">Efficiency</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Counter.Efficiency.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><code><span id="TYPEprogressBar"><span class="keyword">type</span> <code class="type"></code>progressBar</span> = {</code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTprogressBar.progressSize">progressSize</span>&nbsp;: <code class="type">int</code>;</code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code>&nbsp;&nbsp;</code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTprogressBar.progressChar">progressChar</span>&nbsp;: <code class="type">char</code>;</code></td>
-
-</tr></table>
-}
-
-
-
-<pre><span id="VALdefault_progress"><span class="keyword">val</span> default_progress</span> : <code class="type"><a href="Counter.html#TYPEprogressBar">progressBar</a></code></pre>
 <pre><code><span id="TYPEperiod"><span class="keyword">type</span> <code class="type"></code>period</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -176,8 +156,8 @@ Simulation progress keeper<br>
 <pre><span id="VALmax_events"><span class="keyword">val</span> max_events</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int option</code></pre>
 <pre><span id="VALset_max_time"><span class="keyword">val</span> set_max_time</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float option -> unit</code></pre>
 <pre><span id="VALset_max_events"><span class="keyword">val</span> set_max_events</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int option -> unit</code></pre>
-<pre><span id="VALevent_percentage"><span class="keyword">val</span> event_percentage</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int option</code></pre>
-<pre><span id="VALtime_percentage"><span class="keyword">val</span> time_percentage</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int option</code></pre>
+<pre><span id="VALevent_ratio"><span class="keyword">val</span> event_ratio</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float option</code></pre>
+<pre><span id="VALtime_ratio"><span class="keyword">val</span> time_ratio</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float option</code></pre>
 <pre><span id="VALtracked_events"><span class="keyword">val</span> tracked_events</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int option</code></pre>
 <pre><span id="VALpositive_plot_period"><span class="keyword">val</span> positive_plot_period</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
 <pre><span id="VALplot_period"><span class="keyword">val</span> plot_period</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Counter.html#TYPEperiod">period</a></code></pre>
@@ -189,9 +169,4 @@ Simulation progress keeper<br>
 <pre><span id="VALconsecutive_null_event"><span class="keyword">val</span> consecutive_null_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALconsecutive_blocked"><span class="keyword">val</span> consecutive_blocked</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALget_efficiency"><span class="keyword">val</span> get_efficiency</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Counter.Efficiency.html#TYPEt">Efficiency.t</a></code></pre>
-<pre><span id="VALprint_efficiency"><span class="keyword">val</span> print_efficiency</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
-<pre><span id="VALtick"><span class="keyword">val</span> tick</span> : <code class="type">efficiency:bool -> <a href="Counter.html#TYPEprogressBar">progressBar</a> -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
-<h5 id="5_Outputonstdout">Output on stdout </h5><br>
-</div>
-
-<pre><span id="VALcomplete_progress_bar"><span class="keyword">val</span> complete_progress_bar</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit</code></pre></body></html>
+<pre><span id="VALprint_efficiency"><span class="keyword">val</span> print_efficiency</span> : <code class="type">Format.formatter -> <a href="Counter.html#TYPEt">t</a> -> unit</code></pre></body></html>

@@ -101,6 +101,8 @@
 <body>
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;progressSize&nbsp;:&nbsp;int;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;progressChar&nbsp;:&nbsp;char;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;dumpIfDeadlocked&nbsp;:&nbsp;bool;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;initial&nbsp;:&nbsp;float&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;maxConsecutiveClash&nbsp;:&nbsp;int;<br>
@@ -110,9 +112,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;traceFileName&nbsp;:&nbsp;string&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;deltaActivitiesFileName&nbsp;:&nbsp;string&nbsp;option;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty&nbsp;:&nbsp;<span class="constructor">Configuration</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;parse&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;((string&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)&nbsp;*&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Locality</span>.t)&nbsp;list)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Configuration</span>.t&nbsp;*&nbsp;<span class="constructor">Counter</span>.progressBar&nbsp;*&nbsp;(bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;*&nbsp;string&nbsp;*<br>
-&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Configuration</span>.t&nbsp;*&nbsp;(bool&nbsp;*&nbsp;bool&nbsp;*&nbsp;bool)&nbsp;*&nbsp;string&nbsp;*&nbsp;string&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Configuration</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 <span class="keyword">end</span></code></body></html>
