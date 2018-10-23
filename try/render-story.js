@@ -13,12 +13,11 @@ class StoryRendering {
 
 	story.nodes.forEach(function (n) {
 	    g.setNode(n.id, { label: n.directives.label,
-			      style: "fill: #fff; stroke: #333"});
+			      style: "fill: " + n.directives.color +"; stroke: #333"});
 	});
 	story.edges.forEach(function (e) {
 	    g.setEdge(e.source, e.target, { style : "stroke: #333; fill: #fff; stroke-width: 1.5px;" });
 	});
-	
 
 	// Create the renderer
 	var render = new dagreD3.render();
@@ -26,6 +25,12 @@ class StoryRendering {
 	// Set up an SVG group so that we can translate the final graph.
 	var svg = topdiv.append("svg"),
 	    inner = svg.append("g");
+
+	// Set up zoom support
+	var zoom = d3.zoom().on("zoom", function() {
+	    inner.attr("transform", d3.event.transform);
+	});
+	svg.call(zoom);
 
 	// Run the renderer. This is what draws the final graph.
 	render(inner, g);
@@ -37,7 +42,8 @@ class StoryRendering {
 	svg.attr("width",w);
 	svg.attr("height", h);
 	var xCenterOffset = (w - g.graph().width) / 2;
-	inner.attr("transform", "translate(" + xCenterOffset + ", 0)");
+
+	svg.call(zoom.transform, d3.zoomIdentity.translate(xCenterOffset, 5));
     }
     redraw() {
 
