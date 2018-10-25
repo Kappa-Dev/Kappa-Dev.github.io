@@ -100,6 +100,7 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;period&nbsp;=&nbsp;<span class="constructor">DE</span>&nbsp;<span class="keyword">of</span>&nbsp;int&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">DT</span>&nbsp;<span class="keyword">of</span>&nbsp;float<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;progressSize&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;progressChar&nbsp;:&nbsp;char;<br>
@@ -107,7 +108,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;initial&nbsp;:&nbsp;float&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;maxConsecutiveClash&nbsp;:&nbsp;int;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputFileName&nbsp;:&nbsp;string&nbsp;option;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;plotPeriod&nbsp;:&nbsp;<span class="constructor">Counter</span>.period&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;plotPeriod&nbsp;:&nbsp;<span class="constructor">Configuration</span>.period&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;seed&nbsp;:&nbsp;int&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;traceFileName&nbsp;:&nbsp;string&nbsp;option;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;deltaActivitiesFileName&nbsp;:&nbsp;string&nbsp;option;<br>

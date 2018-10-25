@@ -116,28 +116,10 @@ Simulation progress keeper<br>
 <hr width="100%">
 
 <pre><span class="keyword">module</span> <a href="Counter.Efficiency.html">Efficiency</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Counter.Efficiency.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
-<pre><code><span id="TYPEperiod"><span class="keyword">type</span> <code class="type"></code>period</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTperiod.DE"><span class="constructor">DE</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTperiod.DT"><span class="constructor">DT</span></span> <span class="keyword">of</span> <code class="type">float</code></code></td>
-
-</tr></table>
-
-
-
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
-<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">?init_t:float -><br>       ?init_e:int -><br>       ?max_time:float -> ?max_event:int -> plot_period:<a href="Counter.html#TYPEperiod">period</a> -> <a href="Counter.html#TYPEt">t</a></code></pre>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">?init_t:float -><br>       ?init_e:int -><br>       ?max_time:float -><br>       ?max_event:int -> plot_period:<a href="Configuration.html#TYPEperiod">Configuration.period</a> -> <a href="Counter.html#TYPEt">t</a></code></pre>
 <pre><span id="VALreinitialize"><span class="keyword">val</span> reinitialize</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALcurrent_simulation_info"><span class="keyword">val</span> current_simulation_info</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit <a href="Trace.Simulation_info.html#TYPEt">Trace.Simulation_info.t</a></code></pre>
 <pre><span id="VALnext_story"><span class="keyword">val</span> next_story</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> unit <a href="Trace.Simulation_info.html#TYPEt">Trace.Simulation_info.t</a></code></pre>
@@ -160,8 +142,8 @@ Simulation progress keeper<br>
 <pre><span id="VALtime_ratio"><span class="keyword">val</span> time_ratio</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float option</code></pre>
 <pre><span id="VALtracked_events"><span class="keyword">val</span> tracked_events</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int option</code></pre>
 <pre><span id="VALpositive_plot_period"><span class="keyword">val</span> positive_plot_period</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> bool</code></pre>
-<pre><span id="VALplot_period"><span class="keyword">val</span> plot_period</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Counter.html#TYPEperiod">period</a></code></pre>
-<pre><span id="VALset_plot_period"><span class="keyword">val</span> set_plot_period</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Counter.html#TYPEperiod">period</a> -> unit</code></pre>
+<pre><span id="VALplot_period"><span class="keyword">val</span> plot_period</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Configuration.html#TYPEperiod">Configuration.period</a></code></pre>
+<pre><span id="VALset_plot_period"><span class="keyword">val</span> set_plot_period</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> <a href="Configuration.html#TYPEperiod">Configuration.period</a> -> unit</code></pre>
 <pre><span id="VALcurrent_time"><span class="keyword">val</span> current_time</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> float</code></pre>
 <pre><span id="VALcurrent_event"><span class="keyword">val</span> current_event</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>
 <pre><span id="VALcurrent_story"><span class="keyword">val</span> current_story</span> : <code class="type"><a href="Counter.html#TYPEt">t</a> -> int</code></pre>

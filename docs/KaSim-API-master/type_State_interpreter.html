@@ -105,6 +105,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;bind:(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(bool&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;return:(bool&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;debugMode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Counter</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -123,6 +124,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Primitives</span>.modification&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;*&nbsp;<span class="constructor">Rule_interpreter</span>.t&nbsp;*&nbsp;<span class="constructor">State_interpreter</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;a_loop&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;debugMode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;outputs:(<span class="constructor">Data</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;dumpIfDeadlocked:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;maxConsecutiveClash:int&nbsp;<span class="keywordsign">-&gt;</span><br>

@@ -112,6 +112,24 @@
 
 <pre><span class="keyword">module</span> Configuration: <code class="code"><span class="keyword">sig</span></code> <a href="Configuration.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
 
+<pre><code><span id="TYPEperiod"><span class="keyword">type</span> <code class="type"></code>period</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTperiod.DE"><span class="constructor">DE</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTperiod.DT"><span class="constructor">DT</span></span> <span class="keyword">of</span> <code class="type">float</code></code></td>
+
+</tr></table>
+
+
+
 <pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = {</code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -159,7 +177,7 @@
 <td align="left" valign="top" >
 <code>&nbsp;&nbsp;</code></td>
 <td align="left" valign="top" >
-<code><span id="TYPEELTt.plotPeriod">plotPeriod</span>&nbsp;: <code class="type"><a href="Counter.html#TYPEperiod">Counter.period</a> option</code>;</code></td>
+<code><span id="TYPEELTt.plotPeriod">plotPeriod</span>&nbsp;: <code class="type"><a href="Configuration.html#TYPEperiod">period</a> option</code>;</code></td>
 
 </tr>
 <tr>

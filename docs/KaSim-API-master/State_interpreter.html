@@ -125,7 +125,7 @@ Abstract state<br>
 <code class="code">empty ~with_delta_activities env</code><br>
 </div>
 
-<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type">bind:('a -> (bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -> 'a) -><br>       return:(bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       Rule_interpreter.t -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       (<a href="Primitives.html#TYPEalg_expr">Primitives.alg_expr</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a>) list -> 'a</code></pre><div class="info ">
+<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type">bind:('a -> (bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -> 'a) -><br>       return:(bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a> -> 'a) -><br>       debugMode:bool -><br>       outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       Rule_interpreter.t -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       (<a href="Primitives.html#TYPEalg_expr">Primitives.alg_expr</a> * <a href="Primitives.html#TYPEelementary_rule">Primitives.elementary_rule</a>) list -> 'a</code></pre><div class="info ">
 <code class="code">initial env counter graph state</code> builds up the initial state<br>
 </div>
 
@@ -135,7 +135,7 @@ values of observables)<br>
 </div>
 
 <pre><span id="VALdo_modifications"><span class="keyword">val</span> do_modifications</span> : <code class="type">debugMode:bool -><br>       outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       Rule_interpreter.t -><br>       <a href="State_interpreter.html#TYPEt">t</a> -><br>       <a href="Primitives.html#TYPEmodification">Primitives.modification</a> list -><br>       bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a></code></pre>
-<pre><span id="VALa_loop"><span class="keyword">val</span> a_loop</span> : <code class="type">outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       dumpIfDeadlocked:bool -><br>       maxConsecutiveClash:int -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       Rule_interpreter.t -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
+<pre><span id="VALa_loop"><span class="keyword">val</span> a_loop</span> : <code class="type">debugMode:bool -><br>       outputs:(<a href="Data.html#TYPEt">Data.t</a> -> unit) -><br>       dumpIfDeadlocked:bool -><br>       maxConsecutiveClash:int -><br>       <a href="Model.html#TYPEt">Model.t</a> -><br>       <a href="Counter.html#TYPEt">Counter.t</a> -><br>       Rule_interpreter.t -><br>       <a href="State_interpreter.html#TYPEt">t</a> -> bool * Rule_interpreter.t * <a href="State_interpreter.html#TYPEt">t</a></code></pre><div class="info ">
 One event loop<br>
 </div>
 
