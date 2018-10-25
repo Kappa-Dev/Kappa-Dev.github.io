@@ -111,6 +111,7 @@
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;connected_component<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;rule<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;init&nbsp;=&nbsp;((connected_component&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;*&nbsp;rule)&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;debug_mode&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_allow_empty_lhs&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_dotnet&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;with_dot_and_plus&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
@@ -136,7 +137,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_count_in_embeddings&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_prompt_reactions&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;symbol_table&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Symbol_table</span>.symbol_table<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_chemical_species&nbsp;:&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_chemical_species&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;debugMode:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;canonic_form&nbsp;:&nbsp;chemical_species&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;canonic_species<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;connected_components_of_patterns&nbsp;:&nbsp;pattern&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;connected_component&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;connected_components_of_mixture&nbsp;:<br>
@@ -196,6 +198,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_ast&nbsp;:&nbsp;ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.parsing_compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;preprocess&nbsp;:&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;preprocessed_ast<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_compil&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;debugMode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;dotnet:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?bwd_bisim:<span class="constructor">LKappa_group_action</span>.bwd_bisim_info&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule_rate_convention:<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -214,6 +217,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nb_tokens&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;divide_rule_rate_by&nbsp;:&nbsp;cache&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;cache&nbsp;*&nbsp;int<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;species_of_initial_state_env&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;debugMode:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Model</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Contact_map</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Pattern</span>.<span class="constructor">PreEnv</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
