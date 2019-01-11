@@ -67,10 +67,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -91,6 +88,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -101,7 +101,7 @@
 <body>
 <code class="code"><span class="keyword">sig</span><br>
 &nbsp;&nbsp;<span class="keyword">module</span>&nbsp;<span class="constructor">Make</span>&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">functor</span>&nbsp;(<span class="constructor">I</span>&nbsp;:&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>)&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">functor</span>&nbsp;(<span class="constructor">I</span>&nbsp;:&nbsp;<span class="constructor">Symmetry_interface_sig</span>.<span class="constructor">Interface</span>)&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">sig</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;ode_var_id<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;(<span class="keywordsign">'</span>a,&nbsp;<span class="keywordsign">'</span>b)&nbsp;network<br>
@@ -120,6 +120,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?reaction_rate_convention:<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_reactions:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count:<span class="constructor">Ode_args</span>.count&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;internal_meaning:<span class="constructor">Ode_args</span>.count&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute_jacobian:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.preprocessed_ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">I</span>.compil<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;init&nbsp;:<br>
@@ -164,8 +165,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?abstol:float&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?reltol:float&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Remanent_parameters_sig</span>.parameters&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_loggers_sig</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">I</span>.compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Odes</span>.<span class="constructor">Make</span>.ode_var_id,&nbsp;<span class="constructor">Ode_loggers_sig</span>.ode_var_id)<br>

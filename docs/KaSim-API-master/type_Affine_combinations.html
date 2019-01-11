@@ -67,10 +67,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -91,6 +88,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -99,24 +99,4 @@
 <link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Affine_combinations</title>
 </head>
 <body>
-<code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;aff_combination<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;sum&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;mul_scal&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;div_scal&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination&nbsp;option<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;linearise&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Pattern</span>.id&nbsp;array&nbsp;list,&nbsp;int)&nbsp;<span class="constructor">Alg_expr</span>.e&nbsp;<span class="constructor">Locality</span>.annot&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_int&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;necessarily_equal&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Affine_combinations</span>.aff_combination&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
-<span class="keyword">end</span></code></body></html>
+<code class="code"><span class="keyword">sig</span>&nbsp;&nbsp;<span class="keyword">end</span></code></body></html>

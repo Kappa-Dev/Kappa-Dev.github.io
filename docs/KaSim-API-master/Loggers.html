@@ -72,10 +72,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -96,6 +93,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -281,21 +281,7 @@
 <pre><span id="VALdump_json"><span class="keyword">val</span> dump_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json -> unit</code></pre>
 <pre><span id="VALget_edge_map"><span class="keyword">val</span> get_edge_map</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Graph_loggers_sig.options list list Mods.String2Map.t</code></pre>
 <pre><span id="VALget_nodes"><span class="keyword">val</span> get_nodes</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> (string * Graph_loggers_sig.options list) list</code></pre>
-<pre><span id="VALget_expr"><span class="keyword">val</span> get_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> option</code></pre>
-<pre><span id="VALset_expr"><span class="keyword">val</span> set_expr</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -> unit</code></pre>
-<pre><span id="VALis_const"><span class="keyword">val</span> is_const</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Ode_loggers_sig.variable -> bool</code></pre>
 <pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> string list</code></pre>
 <pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
-<pre><span id="VALget_fresh_obs_id"><span class="keyword">val</span> get_fresh_obs_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALget_fresh_reaction_id"><span class="keyword">val</span> get_fresh_reaction_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALget_fresh_meta_id"><span class="keyword">val</span> get_fresh_meta_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> int</code></pre>
-<pre><span id="VALset_id_of_global_parameter"><span class="keyword">val</span> set_id_of_global_parameter</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Ode_loggers_sig.variable -> string -> unit</code></pre>
-<pre><span id="VALget_id_of_global_parameter"><span class="keyword">val</span> get_id_of_global_parameter</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Ode_loggers_sig.variable -> string</code></pre>
-<pre><span id="VALis_dangerous_ode_variable"><span class="keyword">val</span> is_dangerous_ode_variable</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Ode_loggers_sig.variable -> bool</code></pre>
-<pre><span id="VALflag_dangerous"><span class="keyword">val</span> flag_dangerous</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Ode_loggers_sig.variable -> string -> unit</code></pre>
-<pre><span id="VALhas_forbidden_char"><span class="keyword">val</span> has_forbidden_char</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> bool</code></pre>
-<pre><span id="VALallocate_fresh_name"><span class="keyword">val</span> allocate_fresh_name</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> string -> string</code></pre>
-<pre><span id="VALallocate"><span class="keyword">val</span> allocate</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> unit</code></pre>
 <pre><span id="VALprint_binding_type"><span class="keyword">val</span> print_binding_type</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       ?binding_type_symbol:string -> agent_name:string -> site_name:string -> unit</code></pre>
-<pre><span id="VALset_ode"><span class="keyword">val</span> set_ode</span> : <code class="type">mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> string -> unit</code></pre>
-<pre><span id="VALget_ode"><span class="keyword">val</span> get_ode</span> : <code class="type">mode:<a href="Loggers.html#TYPEencoding">encoding</a> -> string</code></pre></body></html>
+<pre><span id="VALget_ref"><span class="keyword">val</span> get_ref</span> : <code class="type">int Pervasives.ref -> int</code></pre></body></html>

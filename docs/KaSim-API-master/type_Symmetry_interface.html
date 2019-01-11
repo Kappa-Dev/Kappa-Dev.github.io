@@ -67,10 +67,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -91,12 +88,15 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Ode_interface</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Symmetry_interface</title>
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
@@ -135,6 +135,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;option<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;what_do_we_count&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ode_args</span>.count<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_count_in_embeddings&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;internal_meaning_is_nembeddings&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;do_we_prompt_reactions&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;symbol_table&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Symbol_table</span>.symbol_table<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;nbr_automorphisms_in_chemical_species&nbsp;:<br>
@@ -185,7 +186,8 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule&nbsp;:&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_rule_name&nbsp;:&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_var_id&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;?init_mode:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;?init_mode:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;string_of_var_id_jac&nbsp;:&nbsp;?compil:compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rate&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span><br>
@@ -194,6 +196,7 @@
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rate_name&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_id_with_mode&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule_name<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;apply&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;embedding_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;mixture<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_preprocessed_ast&nbsp;:&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;preprocessed_ast<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_preprocessed_ast&nbsp;:&nbsp;preprocessed_ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Cli_init</span>.preprocessed_ast<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_ast&nbsp;:&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;ast<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_ast&nbsp;:&nbsp;ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Ast</span>.parsing_compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;preprocess&nbsp;:&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;preprocessed_ast<br>
@@ -205,6 +208,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;?reaction_rate_convention:<span class="constructor">Remanent_parameters_sig</span>.rate_convention&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;show_reactions:bool&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;count:<span class="constructor">Ode_args</span>.count&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;internal_meaning:<span class="constructor">Ode_args</span>.count&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;compute_jacobian:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Run_cli_args</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;preprocessed_ast&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compil<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_rules&nbsp;:&nbsp;compil&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;rule&nbsp;list<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_variables&nbsp;:<br>

@@ -67,10 +67,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -91,6 +88,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -100,6 +100,8 @@
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;dot_color_encoding&nbsp;:&nbsp;<span class="constructor">Graph_loggers_sig</span>.color&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;shape_in_dot&nbsp;:&nbsp;<span class="constructor">Graph_loggers_sig</span>.shape&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_graph_preamble&nbsp;:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Loggers</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;?filter_in:<span class="constructor">Loggers</span>.encoding&nbsp;list&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span><br>

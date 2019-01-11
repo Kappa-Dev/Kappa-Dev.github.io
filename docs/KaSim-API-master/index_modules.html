@@ -68,10 +68,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -92,6 +89,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -180,6 +180,10 @@ signature of abstract domains (with explicit communication)
 type declarations and values shared among the abstract domains
 </div>
 </td></tr>
+<tr><td><a href="Affine_combinations.AnonamisedExprMap.html">AnonamisedExprMap</a> [<a href="Affine_combinations.html">Affine_combinations</a>]</td>
+<td></td></tr>
+<tr><td><a href="Affine_combinations.AnonamisedExprSetMap.html">AnonamisedExprSetMap</a> [<a href="Affine_combinations.html">Affine_combinations</a>]</td>
+<td></td></tr>
 <tr><td><a href="Ast.html">Ast</a> </td>
 <td><div class="info">
 Kappa AST just after parsing
@@ -206,12 +210,12 @@ Kappa AST just after parsing
 <tr><td align="left"><br>C</td></tr>
 <tr><td><a href="Cckappa_sig.html">Cckappa_sig</a> </td>
 <td><div class="info">
-* cckappa_sig.mli
+* cckappa_sig.ml
   * openkappa
   * Jérôme Feret, projet Abstraction/Antique, INRIA Paris-Rocquencourt
   *
   * Creation: January, the 17th of 2011
-  * Last modification: Time-stamp: &lt;Sep 27 2018&gt;
+  * Last modification: Time-stamp: &lt;Nov 05 2018&gt;
   * *
   * Signature for prepreprocessing language ckappa
   *
@@ -234,7 +238,7 @@ Kappa AST just after parsing
  * Jérôme Feret, projet Abstraction/Antique, INRIA Paris-Rocquencourt
  *
  * Creation: 01/17/2011
- * Last modification: Time-stamp: &lt;Aug 31 2018&gt;
+ * Last modification: Time-stamp: &lt;Nov 28 2018&gt;
  * *
  * Signature for prepreprocessing language ckappa
  *
@@ -661,24 +665,10 @@ expandable arrays (the size is still limited by max_int
 </div>
 </td></tr>
 <tr><td align="left"><br>O</td></tr>
-<tr><td><a href="Ode_interface_sig.Interface.ObsMap.html">ObsMap</a> [<a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a>]</td>
+<tr><td><a href="Symmetry_interface_sig.Interface.ObsMap.html">ObsMap</a> [<a href="Symmetry_interface_sig.Interface.html">Symmetry_interface_sig.Interface</a>]</td>
 <td></td></tr>
 <tr><td><a href="Pattern.ObsMap.html">ObsMap</a> [<a href="Pattern.html">Pattern</a>]</td>
 <td></td></tr>
-<tr><td><a href="Ode_interface.html">Ode_interface</a> </td>
-<td><div class="info">
-Network/ODE generation
-  * Creation: 22/07/2016
-  * Last modification: Time-stamp: &lt;Feb 08 2017&gt;
-</div>
-</td></tr>
-<tr><td><a href="Ode_interface_sig.html">Ode_interface_sig</a> </td>
-<td><div class="info">
-Network/ODE generation
-  * Creation: 22/07/2016
-  * Last modification: Time-stamp: &lt;Dec 23 2017&gt;
-</div>
-</td></tr>
 <tr><td><a href="Ode_loggers.html">Ode_loggers</a> </td>
 <td><div class="info">
 * graph_loggers.ml
@@ -701,7 +691,7 @@ Network/ODE generation
 <td><div class="info">
 Network/ODE generation
   * Creation: 15/07/2016
-  * Last modification: Time-stamp: &lt;Dec 15 2017&gt;
+  * Last modification: Time-stamp: &lt;Dec 19 2018&gt;
 </div>
 </td></tr>
 <tr><td><a href="Operator.html">Operator</a> </td>
@@ -926,6 +916,20 @@ Abstract domain to over-approximate the set of reachable views
 <td><div class="info">
 Abstract domain to record relations between pair of sites in
     connected agents.
+</div>
+</td></tr>
+<tr><td><a href="Symmetry_interface.html">Symmetry_interface</a> </td>
+<td><div class="info">
+Network/ODE generation
+  * Creation: 22/07/2016
+  * Last modification: Time-stamp: &lt;Feb 08 2017&gt;
+</div>
+</td></tr>
+<tr><td><a href="Symmetry_interface_sig.html">Symmetry_interface_sig</a> </td>
+<td><div class="info">
+Network/ODE generation
+  * Creation: 22/07/2016
+  * Last modification: Time-stamp: &lt;Nov 05 2018&gt;
 </div>
 </td></tr>
 <tr><td align="left"><br>T</td></tr>

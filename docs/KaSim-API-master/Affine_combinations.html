@@ -72,10 +72,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -96,6 +93,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -112,12 +112,45 @@
 
 <pre><span class="keyword">module</span> Affine_combinations: <code class="code"><span class="keyword">sig</span></code> <a href="Affine_combinations.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
 
-<pre><span id="TYPEaff_combination"><span class="keyword">type</span> <code class="type"></code>aff_combination</span> </pre>
+<pre><span id="TYPEanonamised_expr"><span class="keyword">type</span> <code class="type">('mix, 'id)</code> anonamised_expr</span> = <code class="type">('mix, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code> </pre>
 
 
+<pre><span id="VALanonamise"><span class="keyword">val</span> anonamise</span> : <code class="type">('mix, 'id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('mix, 'id) <a href="Affine_combinations.html#TYPEanonamised_expr">anonamised_expr</a></code></pre>
+<pre><span id="VALanonamise_bool"><span class="keyword">val</span> anonamise_bool</span> : <code class="type">('mix, 'id) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       ('mix, 'id) <a href="Alg_expr.html#TYPEbool">Alg_expr.bool</a> <a href="Locality.html#TYPEannot">Locality.annot</a></code></pre>
+<pre><span class="keyword">module</span> <a href="Affine_combinations.AnonamisedExprSetMap.html">AnonamisedExprSetMap</a>: <code class="type"><a href="SetMap.Make.html">SetMap.Make</a></code><code class="code">(</code><code class="code"><span class="keyword">sig</span></code><div class="sig_block">
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type">(<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Affine_combinations.html#TYPEanonamised_expr">Affine_combinations.anonamised_expr</a></code> </pre>
+
+
+<pre><span id="VALcompare"><span class="keyword">val</span> compare</span> : <code class="type">'a -> 'a -> int</code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">'a -> 'b -> unit</code></pre></div><code class="code"><span class="keyword">end</span></code><code class="code">)</code></pre>
+<pre><span class="keyword">module</span> <a href="Affine_combinations.AnonamisedExprMap.html">AnonamisedExprMap</a>: <code class="type">AnonamisedExprSetMap.Map</code></pre>
+<pre><code><span id="TYPEaff_combination"><span class="keyword">type</span> <code class="type"></code>aff_combination</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTaff_combination.linear">linear</span>&nbsp;: <code class="type"><a href="Fractions.html#TYPEt">Fractions.t</a> AnonamisedExprMap.t</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTaff_combination.affine">affine</span>&nbsp;: <code class="type"><a href="Fractions.html#TYPEt">Fractions.t</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+
+<pre><span id="VALof_int"><span class="keyword">val</span> of_int</span> : <code class="type">int -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
+<pre><span id="VALapply_1"><span class="keyword">val</span> apply_1</span> : <code class="type">(<a href="Fractions.html#TYPEt">Fractions.t</a> -> <a href="Fractions.html#TYPEt">Fractions.t</a>) -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
+<pre><span id="VALapply_2"><span class="keyword">val</span> apply_2</span> : <code class="type">(<a href="Fractions.html#TYPEt">Fractions.t</a> -> <a href="Fractions.html#TYPEt">Fractions.t</a> -> <a href="Fractions.html#TYPEt">Fractions.t</a>) -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
 <pre><span id="VALsum"><span class="keyword">val</span> sum</span> : <code class="type"><a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
+<pre><span id="VALminus"><span class="keyword">val</span> minus</span> : <code class="type"><a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
 <pre><span id="VALmul_scal"><span class="keyword">val</span> mul_scal</span> : <code class="type">int -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
 <pre><span id="VALdiv_scal"><span class="keyword">val</span> div_scal</span> : <code class="type"><a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -><br>       int -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> option</code></pre>
-<pre><span id="VALlinearise"><span class="keyword">val</span> linearise</span> : <code class="type">(<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
-<pre><span id="VALof_int"><span class="keyword">val</span> of_int</span> : <code class="type">int -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
-<pre><span id="VALnecessarily_equal"><span class="keyword">val</span> necessarily_equal</span> : <code class="type"><a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -> bool</code></pre></body></html>
+<pre><span id="VALnecessarily_equal"><span class="keyword">val</span> necessarily_equal</span> : <code class="type"><a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a> -> bool</code></pre>
+<pre><span id="VALis_int"><span class="keyword">val</span> is_int</span> : <code class="type"><a href="Nbr.html#TYPEt">Nbr.t</a> -> bool</code></pre>
+<pre><span id="VALatom"><span class="keyword">val</span> atom</span> : <code class="type">AnonamisedExprMap.elt -> <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre>
+<pre><span id="VALlinearise"><span class="keyword">val</span> linearise</span> : <code class="type">(<a href="Pattern.html#TYPEid">Pattern.id</a> array list, int) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a> <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       <a href="Affine_combinations.html#TYPEaff_combination">aff_combination</a></code></pre></body></html>

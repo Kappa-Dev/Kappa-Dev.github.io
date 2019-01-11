@@ -72,10 +72,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -96,6 +93,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -128,24 +128,6 @@
   * under the terms of the GNU Library General Public License<br>
 </div>
 <hr width="100%">
-
-<pre><code><span id="TYPEside"><span class="keyword">type</span> <code class="type"></code>side</span> = </code></pre><table class="typetable">
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTside.LHS"><span class="constructor">LHS</span></span></code></td>
-
-</tr>
-<tr>
-<td align="left" valign="top" >
-<code><span class="keyword">|</span></code></td>
-<td align="left" valign="top" >
-<code><span id="TYPEELTside.RHS"><span class="constructor">RHS</span></span></code></td>
-
-</tr></table>
-
-
 
 <pre><code><span id="TYPEcorrect"><span class="keyword">type</span> <code class="type"></code>correct</span> = </code></pre><table class="typetable">
 <tr>
@@ -183,37 +165,35 @@
 
 
 
-<pre><span id="VALstring_of_variable"><span class="keyword">val</span> string_of_variable</span> : <code class="type">side:<a href="Ode_loggers.html#TYPEside">side</a> -> <a href="Loggers.html#TYPEt">Loggers.t</a> -> Ode_loggers_sig.variable -> string</code></pre>
-<pre><span id="VALvariable_of_derived_variable"><span class="keyword">val</span> variable_of_derived_variable</span> : <code class="type">Ode_loggers_sig.variable -> int -> Ode_loggers_sig.variable</code></pre>
-<pre><span id="VALprint_ode_preamble"><span class="keyword">val</span> print_ode_preamble</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       (<a href="Loggers.html#TYPEt">Loggers.t</a> -> unit) -><br>       may_be_not_time_homogeneous:bool -><br>       count:Ode_args.count -><br>       rule_rate_convention:Remanent_parameters_sig.rate_convention -><br>       ?reaction_rate_convention:Remanent_parameters_sig.rate_convention -><br>       ?filter_in:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list option -><br>       ?filter_out:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list -> unit -> unit</code></pre>
-<pre><span id="VALdeclare_global"><span class="keyword">val</span> declare_global</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> Ode_loggers_sig.variable -> unit</code></pre>
-<pre><span id="VALprint_options"><span class="keyword">val</span> print_options</span> : <code class="type">compute_jacobian:bool -><br>       pos:(int -> bool) -> nodevar:int -> <a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALprint_license_check"><span class="keyword">val</span> print_license_check</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALprint_integrate"><span class="keyword">val</span> print_integrate</span> : <code class="type">nobs:int -> nodevar:int -> <a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALprint_interpolate"><span class="keyword">val</span> print_interpolate</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALprint_dump_plots"><span class="keyword">val</span> print_dump_plots</span> : <code class="type">nobs:int -><br>       data_file:string -><br>       command_line:string -> titles:string list -> <a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type">nodevar:int -> <a href="Loggers.html#TYPEt">Loggers.t</a> -> Ode_loggers_sig.variable -> unit</code></pre>
-<pre><span id="VALassociate"><span class="keyword">val</span> associate</span> : <code class="type">propagate_constants:bool -><br>       ?init_mode:bool -><br>       ?comment:string -><br>       (int -> string) -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) Network_handler.t -><br>       unit</code></pre>
-<pre><span id="VALincrement"><span class="keyword">val</span> increment</span> : <code class="type">?init_mode:bool -><br>       ?comment:string -><br>       (int -> string) -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) Network_handler.t -><br>       unit</code></pre>
-<pre><span id="VALassociate_nrows"><span class="keyword">val</span> associate_nrows</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALassociate_t"><span class="keyword">val</span> associate_t</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> int -> unit</code></pre>
-<pre><span id="VALinit_time"><span class="keyword">val</span> init_time</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> int -> unit</code></pre>
-<pre><span id="VALstart_time"><span class="keyword">val</span> start_time</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> float -> unit</code></pre>
-<pre><span id="VALdeclare_init"><span class="keyword">val</span> declare_init</span> : <code class="type">?comment:string -> <a href="Loggers.html#TYPEt">Loggers.t</a> -> int -> unit</code></pre>
-<pre><span id="VALassociate_nonnegative"><span class="keyword">val</span> associate_nonnegative</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> bool -> unit</code></pre>
-<pre><span id="VALshow_time_advance"><span class="keyword">val</span> show_time_advance</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALlaunch_main"><span class="keyword">val</span> launch_main</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALconsume"><span class="keyword">val</span> consume</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.variable * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> unit</code></pre>
-<pre><span id="VALproduce"><span class="keyword">val</span> produce</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.variable * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> unit</code></pre>
-<pre><span id="VALconsume_jac"><span class="keyword">val</span> consume_jac</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       (int * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> Mods.IntSet.t -> unit</code></pre>
-<pre><span id="VALproduce_jac"><span class="keyword">val</span> produce_jac</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       (int * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> Mods.IntSet.t -> unit</code></pre>
-<pre><span id="VALupdate_token_jac"><span class="keyword">val</span> update_token_jac</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -><br>       Mods.IntSet.t -> dep_mixture:Mods.IntSet.t -> dep_token:Mods.IntSet.t -> unit</code></pre>
-<pre><span id="VALupdate_token"><span class="keyword">val</span> update_token</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.variable * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> unit</code></pre>
-<pre><span id="VALprint_newline"><span class="keyword">val</span> print_newline</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
-<pre><span id="VALprint_comment"><span class="keyword">val</span> print_comment</span> : <code class="type">?breakline:bool -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       ?filter_in:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list option -><br>       ?filter_out:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list -> string -> unit</code></pre>
-<pre><span id="VALopen_procedure"><span class="keyword">val</span> open_procedure</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> string -> string list -> unit</code></pre>
-<pre><span id="VALreturn"><span class="keyword">val</span> return</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> string -> unit</code></pre>
-<pre><span id="VALclose_procedure"><span class="keyword">val</span> close_procedure</span> : <code class="type"><a href="Loggers.html#TYPEt">Loggers.t</a> -> unit</code></pre>
+<pre><span id="VALprint_ode_preamble"><span class="keyword">val</span> print_ode_preamble</span> : <code class="type">Ode_loggers_sig.t -><br>       (Ode_loggers_sig.t -> unit) -><br>       may_be_not_time_homogeneous:bool -><br>       count:Ode_args.count -><br>       rule_rate_convention:Remanent_parameters_sig.rate_convention -><br>       ?reaction_rate_convention:Remanent_parameters_sig.rate_convention -><br>       ?filter_in:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list option -><br>       ?filter_out:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list -> unit -> unit</code></pre>
+<pre><span id="VALdeclare_global"><span class="keyword">val</span> declare_global</span> : <code class="type">Ode_loggers_sig.t -> Ode_loggers_sig.variable -> unit</code></pre>
+<pre><span id="VALprint_options"><span class="keyword">val</span> print_options</span> : <code class="type">compute_jacobian:bool -><br>       pos:(int -> bool) -> nodevar:int -> Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALprint_license_check"><span class="keyword">val</span> print_license_check</span> : <code class="type">Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALprint_integrate"><span class="keyword">val</span> print_integrate</span> : <code class="type">nobs:int -> nodevar:int -> Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALprint_interpolate"><span class="keyword">val</span> print_interpolate</span> : <code class="type">Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALprint_dump_plots"><span class="keyword">val</span> print_dump_plots</span> : <code class="type">nobs:int -><br>       data_file:string -><br>       command_line:string -> titles:string list -> Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type">nodevar:int -> Ode_loggers_sig.t -> Ode_loggers_sig.variable -> unit</code></pre>
+<pre><span id="VALassociate"><span class="keyword">val</span> associate</span> : <code class="type">propagate_constants:bool -><br>       ?init_mode:bool -><br>       ?comment:string -><br>       (int -> string) -><br>       Ode_loggers_sig.t -><br>       Ode_loggers_sig.t -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) Network_handler.t -><br>       unit</code></pre>
+<pre><span id="VALincrement"><span class="keyword">val</span> increment</span> : <code class="type">?init_mode:bool -><br>       ?comment:string -><br>       (int -> string) -><br>       Ode_loggers_sig.t -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) Network_handler.t -><br>       unit</code></pre>
+<pre><span id="VALassociate_nrows"><span class="keyword">val</span> associate_nrows</span> : <code class="type">Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALassociate_t"><span class="keyword">val</span> associate_t</span> : <code class="type">Ode_loggers_sig.t -> int -> unit</code></pre>
+<pre><span id="VALinit_time"><span class="keyword">val</span> init_time</span> : <code class="type">Ode_loggers_sig.t -> int -> unit</code></pre>
+<pre><span id="VALstart_time"><span class="keyword">val</span> start_time</span> : <code class="type">Ode_loggers_sig.t -> float -> unit</code></pre>
+<pre><span id="VALdeclare_init"><span class="keyword">val</span> declare_init</span> : <code class="type">?comment:string -> Ode_loggers_sig.t -> int -> unit</code></pre>
+<pre><span id="VALassociate_nonnegative"><span class="keyword">val</span> associate_nonnegative</span> : <code class="type">Ode_loggers_sig.t -> bool -> unit</code></pre>
+<pre><span id="VALshow_time_advance"><span class="keyword">val</span> show_time_advance</span> : <code class="type">Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALlaunch_main"><span class="keyword">val</span> launch_main</span> : <code class="type">Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALconsume"><span class="keyword">val</span> consume</span> : <code class="type">Ode_loggers_sig.t -><br>       Ode_loggers_sig.variable -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.variable * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> unit</code></pre>
+<pre><span id="VALproduce"><span class="keyword">val</span> produce</span> : <code class="type">Ode_loggers_sig.t -><br>       Ode_loggers_sig.variable -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.variable * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> unit</code></pre>
+<pre><span id="VALconsume_jac"><span class="keyword">val</span> consume_jac</span> : <code class="type">Ode_loggers_sig.t -><br>       Ode_loggers_sig.variable -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       (int * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> Mods.IntSet.t -> unit</code></pre>
+<pre><span id="VALproduce_jac"><span class="keyword">val</span> produce_jac</span> : <code class="type">Ode_loggers_sig.t -><br>       Ode_loggers_sig.variable -><br>       nauto_in_species:int -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       (int * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> Mods.IntSet.t -> unit</code></pre>
+<pre><span id="VALupdate_token_jac"><span class="keyword">val</span> update_token_jac</span> : <code class="type">Ode_loggers_sig.t -><br>       Ode_loggers_sig.variable -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.ode_var_id * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -><br>       Mods.IntSet.t -> dep_mixture:Mods.IntSet.t -> dep_token:Mods.IntSet.t -> unit</code></pre>
+<pre><span id="VALupdate_token"><span class="keyword">val</span> update_token</span> : <code class="type">Ode_loggers_sig.t -><br>       Ode_loggers_sig.variable -><br>       nauto_in_lhs:int -><br>       nocc:int -><br>       Ode_loggers_sig.variable -><br>       Ode_loggers_sig.variable -><br>       (Ode_loggers_sig.variable * <a href="Ode_loggers.html#TYPEcorrect">correct</a>) list -> unit</code></pre>
+<pre><span id="VALprint_newline"><span class="keyword">val</span> print_newline</span> : <code class="type">Ode_loggers_sig.t -> unit</code></pre>
+<pre><span id="VALprint_comment"><span class="keyword">val</span> print_comment</span> : <code class="type">?breakline:bool -><br>       Ode_loggers_sig.t -><br>       ?filter_in:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list option -><br>       ?filter_out:<a href="Loggers.html#TYPEencoding">Loggers.encoding</a> list -> string -> unit</code></pre>
+<pre><span id="VALopen_procedure"><span class="keyword">val</span> open_procedure</span> : <code class="type">Ode_loggers_sig.t -> string -> string -> string list -> unit</code></pre>
+<pre><span id="VALreturn"><span class="keyword">val</span> return</span> : <code class="type">Ode_loggers_sig.t -> string -> unit</code></pre>
+<pre><span id="VALclose_procedure"><span class="keyword">val</span> close_procedure</span> : <code class="type">Ode_loggers_sig.t -> unit</code></pre>
 <pre><span id="VALsmash_reactions"><span class="keyword">val</span> smash_reactions</span> : <code class="type"><a href="Loggers.html#TYPEencoding">Loggers.encoding</a> -> Remanent_parameters_sig.parameters -> bool</code></pre>
-<pre><span id="VALprint_alg_expr_few_parenthesis"><span class="keyword">val</span> print_alg_expr_few_parenthesis</span> : <code class="type">?init_mode:bool -><br>       (int -> string) -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) Network_handler.t -><br>       unit</code></pre>
+<pre><span id="VALprint_alg_expr_few_parenthesis"><span class="keyword">val</span> print_alg_expr_few_parenthesis</span> : <code class="type">?init_mode:bool -><br>       (int -> string) -><br>       Ode_loggers_sig.t -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -><br>       (Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) Network_handler.t -><br>       unit</code></pre>
 <pre><span id="VALis_time"><span class="keyword">val</span> is_time</span> : <code class="type">(Ode_loggers_sig.ode_var_id, Ode_loggers_sig.ode_var_id) <a href="Alg_expr.html#TYPEe">Alg_expr.e</a><br>       <a href="Locality.html#TYPEannot">Locality.annot</a> -> bool</code></pre></body></html>

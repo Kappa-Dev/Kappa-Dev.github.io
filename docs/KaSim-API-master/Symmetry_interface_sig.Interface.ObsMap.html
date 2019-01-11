@@ -1,7 +1,10 @@
-<html><head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
+<link rel="Up" href="Symmetry_interface_sig.Interface.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
 <link title="Index of modules" rel=Appendix href="index_modules.html">
@@ -67,10 +70,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -91,27 +91,27 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
 <link title="Export_to_KaSa" rel="Chapter" href="Export_to_KaSa.html">
 <link title="Export_to_json" rel="Chapter" href="Export_to_json.html">
-<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Ode_interface_sig.Interface.ObsMap</title>
+<link title="Export_to_KaDE" rel="Chapter" href="Export_to_KaDE.html"><title>KaSim API : Symmetry_interface_sig.Interface.ObsMap</title>
 </head>
 <body>
-<code class="code"><span class="keyword">sig</span><br>
-&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;list<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;reset&nbsp;:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.connected_component&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">'</span>a&nbsp;list&nbsp;<span class="constructor">Ode_interface_sig</span>.<span class="constructor">Interface</span>.<span class="constructor">ObsMap</span>.t<br>
-<span class="keyword">end</span></code></body></html>
+<div class="navbar">&nbsp;<a class="up" href="Symmetry_interface_sig.Interface.html" title="Symmetry_interface_sig.Interface">Up</a>
+&nbsp;</div>
+<h1>Module type <a href="type_Symmetry_interface_sig.Interface.ObsMap.html">Symmetry_interface_sig.Interface.ObsMap</a></h1>
+
+<pre><span class="keyword">module type</span> ObsMap = <code class="code"><span class="keyword">sig</span></code> <a href="Symmetry_interface_sig.Interface.ObsMap.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> </pre>
+
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">'a -> 'a <a href="Symmetry_interface_sig.Interface.ObsMap.html#TYPEt">t</a></code></pre>
+<pre><span id="VALadd"><span class="keyword">val</span> add</span> : <code class="type"><a href="Symmetry_interface_sig.Interface.html#TYPEconnected_component">Symmetry_interface_sig.Interface.connected_component</a> -><br>       'a -><br>       'a list <a href="Symmetry_interface_sig.Interface.ObsMap.html#TYPEt">t</a> -><br>       'a list <a href="Symmetry_interface_sig.Interface.ObsMap.html#TYPEt">t</a></code></pre>
+<pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type"><a href="Symmetry_interface_sig.Interface.html#TYPEconnected_component">Symmetry_interface_sig.Interface.connected_component</a> -><br>       'a list <a href="Symmetry_interface_sig.Interface.ObsMap.html#TYPEt">t</a> -> 'a list</code></pre>
+<pre><span id="VALreset"><span class="keyword">val</span> reset</span> : <code class="type"><a href="Symmetry_interface_sig.Interface.html#TYPEconnected_component">Symmetry_interface_sig.Interface.connected_component</a> -><br>       'a list <a href="Symmetry_interface_sig.Interface.ObsMap.html#TYPEt">t</a> -><br>       'a list <a href="Symmetry_interface_sig.Interface.ObsMap.html#TYPEt">t</a></code></pre></body></html>

@@ -70,10 +70,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -94,6 +91,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -106,7 +106,7 @@
 &nbsp;</div>
 <h1>Functor <a href="type_Odes.Make.html">Odes.Make</a></h1>
 
-<pre><span class="keyword">module</span> Make: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">I</span></code><code class="code"> : </code><code class="type"><a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="code"><span class="keyword">sig</span></code> <a href="Odes.Make.html">..</a> <code class="code"><span class="keyword">end</span></code></div></pre><table border="0" cellpadding="3" width="100%">
+<pre><span class="keyword">module</span> Make: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">I</span></code><code class="code"> : </code><code class="type"><a href="Symmetry_interface_sig.Interface.html">Symmetry_interface_sig.Interface</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="code"><span class="keyword">sig</span></code> <a href="Odes.Make.html">..</a> <code class="code"><span class="keyword">end</span></code></div></pre><table border="0" cellpadding="3" width="100%">
 <tr>
 <td align="left" valign="top" width="1%%"><b>Parameters: </b></td>
 <td>
@@ -115,7 +115,7 @@
 <td align="center" valign="top" width="15%">
 <code>I</code></td>
 <td align="center" valign="top">:</td>
-<td><code class="type"><a href="Ode_interface_sig.Interface.html">Ode_interface_sig.Interface</a></code>
+<td><code class="type"><a href="Symmetry_interface_sig.Interface.html">Symmetry_interface_sig.Interface</a></code>
 </table>
 </td>
 </tr>
@@ -141,12 +141,12 @@
 <pre><span id="VALget_ast"><span class="keyword">val</span> get_ast</span> : <code class="type">Run_cli_args.t -> I.ast</code></pre>
 <pre><span id="VALto_ast"><span class="keyword">val</span> to_ast</span> : <code class="type">I.ast -> <a href="Ast.html#TYPEparsing_compil">Ast.parsing_compil</a></code></pre>
 <pre><span id="VALpreprocess"><span class="keyword">val</span> preprocess</span> : <code class="type">Run_cli_args.t -> I.ast -> I.preprocessed_ast</code></pre>
-<pre><span id="VALget_compil"><span class="keyword">val</span> get_compil</span> : <code class="type">debugMode:bool -><br>       dotnet:bool -><br>       ?bwd_bisim:<a href="LKappa_group_action.html#TYPEbwd_bisim_info">LKappa_group_action.bwd_bisim_info</a> -><br>       rule_rate_convention:Remanent_parameters_sig.rate_convention -><br>       ?reaction_rate_convention:Remanent_parameters_sig.rate_convention -><br>       show_reactions:bool -><br>       count:Ode_args.count -><br>       compute_jacobian:bool -> Run_cli_args.t -> I.preprocessed_ast -> I.compil</code></pre>
+<pre><span id="VALget_compil"><span class="keyword">val</span> get_compil</span> : <code class="type">debugMode:bool -><br>       dotnet:bool -><br>       ?bwd_bisim:<a href="LKappa_group_action.html#TYPEbwd_bisim_info">LKappa_group_action.bwd_bisim_info</a> -><br>       rule_rate_convention:Remanent_parameters_sig.rate_convention -><br>       ?reaction_rate_convention:Remanent_parameters_sig.rate_convention -><br>       show_reactions:bool -><br>       count:Ode_args.count -><br>       internal_meaning:Ode_args.count -><br>       compute_jacobian:bool -> Run_cli_args.t -> I.preprocessed_ast -> I.compil</code></pre>
 <pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">I.compil -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a></code></pre>
 <pre><span id="VALreset"><span class="keyword">val</span> reset</span> : <code class="type">I.compil -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a> -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a></code></pre>
 <pre><span id="VALnetwork_from_compil"><span class="keyword">val</span> network_from_compil</span> : <code class="type">?max_size:int -><br>       smash_reactions:bool -><br>       ignore_obs:bool -><br>       Remanent_parameters_sig.parameters -><br>       I.compil -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a> -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a></code></pre>
 <pre><span id="VALget_reactions"><span class="keyword">val</span> get_reactions</span> : <code class="type">('a, 'b) <a href="Odes.Make.html#TYPEnetwork">network</a> -><br>       ((<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> list * <a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> list *<br>         <a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a> <a href="Locality.html#TYPEannot">Locality.annot</a> list * I.rule) *<br>        int)<br>       list</code></pre>
-<pre><span id="VALexport_network"><span class="keyword">val</span> export_network</span> : <code class="type">command_line:string -><br>       command_line_quotes:string -><br>       ?data_file:string -><br>       ?init_t:float -><br>       max_t:float -><br>       ?plot_period:float -><br>       ?compute_jacobian:bool -><br>       ?propagate_constants:bool -><br>       ?show_time_advance:bool -><br>       ?nonnegative:bool -><br>       ?initial_step:float -><br>       ?max_step:float -><br>       ?abstol:float -><br>       ?reltol:float -><br>       Remanent_parameters_sig.parameters -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       I.compil -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a> -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a></code></pre>
+<pre><span id="VALexport_network"><span class="keyword">val</span> export_network</span> : <code class="type">command_line:string -><br>       command_line_quotes:string -><br>       ?data_file:string -><br>       ?init_t:float -><br>       max_t:float -><br>       ?plot_period:float -><br>       ?compute_jacobian:bool -><br>       ?propagate_constants:bool -><br>       ?show_time_advance:bool -><br>       ?nonnegative:bool -><br>       ?initial_step:float -><br>       ?max_step:float -><br>       ?abstol:float -><br>       ?reltol:float -><br>       Remanent_parameters_sig.parameters -><br>       Ode_loggers_sig.t -><br>       Ode_loggers_sig.t -><br>       <a href="Loggers.html#TYPEt">Loggers.t</a> -><br>       I.compil -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a> -><br>       (<a href="Odes.Make.html#TYPEode_var_id">ode_var_id</a>, Ode_loggers_sig.ode_var_id) <a href="Odes.Make.html#TYPEnetwork">network</a></code></pre>
 <pre><span id="VALget_comment"><span class="keyword">val</span> get_comment</span> : <code class="type"><a href="Odes.Make.html#TYPEenriched_rule">enriched_rule</a> -> string</code></pre>
 <pre><span id="VALget_rule_id_with_mode"><span class="keyword">val</span> get_rule_id_with_mode</span> : <code class="type"><a href="Odes.Make.html#TYPEenriched_rule">enriched_rule</a> -><br>       <a href="Odes.Make.html#TYPErule_id">rule_id</a> * <a href="Rule_modes.html#TYPEarity">Rule_modes.arity</a> * <a href="Rule_modes.html#TYPEdirection">Rule_modes.direction</a></code></pre>
 <pre><span id="VALget_rule"><span class="keyword">val</span> get_rule</span> : <code class="type"><a href="Odes.Make.html#TYPEenriched_rule">enriched_rule</a> -> I.rule</code></pre>

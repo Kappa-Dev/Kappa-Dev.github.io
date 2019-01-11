@@ -72,10 +72,7 @@
 <link title="Priority" rel="Chapter" href="Priority.html">
 <link title="Outputs" rel="Chapter" href="Outputs.html">
 <link title="Kappa_files" rel="Chapter" href="Kappa_files.html">
-<link title="Ode_interface_sig" rel="Chapter" href="Ode_interface_sig.html">
-<link title="Ode_interface" rel="Chapter" href="Ode_interface.html">
 <link title="Odes" rel="Chapter" href="Odes.html">
-<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
 <link title="Ckappa_sig" rel="Chapter" href="Ckappa_sig.html">
 <link title="Cckappa_sig" rel="Chapter" href="Cckappa_sig.html">
 <link title="Build_graph" rel="Chapter" href="Build_graph.html">
@@ -96,6 +93,9 @@
 <link title="Mvbdu_wrapper" rel="Chapter" href="Mvbdu_wrapper.html">
 <link title="LKappa_group_action" rel="Chapter" href="LKappa_group_action.html">
 <link title="Pattern_group_action" rel="Chapter" href="Pattern_group_action.html">
+<link title="Rule_modes" rel="Chapter" href="Rule_modes.html">
+<link title="Symmetry_interface_sig" rel="Chapter" href="Symmetry_interface_sig.html">
+<link title="Symmetry_interface" rel="Chapter" href="Symmetry_interface.html">
 <link title="Symmetries_sig" rel="Chapter" href="Symmetries_sig.html">
 <link title="Symmetries" rel="Chapter" href="Symmetries.html">
 <link title="Export_to_KaSim" rel="Chapter" href="Export_to_KaSim.html">
@@ -111,12 +111,12 @@
 <h1>Module <a href="type_Cckappa_sig.html">Cckappa_sig</a></h1>
 
 <pre><span class="keyword">module</span> Cckappa_sig: <code class="code"><span class="keyword">sig</span></code> <a href="Cckappa_sig.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
-* cckappa_sig.mli
+* cckappa_sig.ml
   * openkappa
   * Jérôme Feret, projet Abstraction/Antique, INRIA Paris-Rocquencourt
   *
   * Creation: January, the 17th of 2011
-  * Last modification: Time-stamp: &lt;Sep 27 2018&gt;
+  * Last modification: Time-stamp: &lt;Nov 05 2018&gt;
   * *
   * Signature for prepreprocessing language ckappa
   *
@@ -321,16 +321,14 @@
 
 
 
-<pre><span id="TYPEbond"><span class="keyword">type</span> <code class="type"></code>bond</span> = <code class="type"><a href="Cckappa_sig.html#TYPEsite_address">site_address</a> * <a href="Cckappa_sig.html#TYPEsite_address">site_address</a></code> </pre>
-
-
 <pre><span id="TYPEdelta"><span class="keyword">type</span> <code class="type"></code>delta</span> = <code class="type">int</code> </pre>
 
 
-<pre><span class="keyword">module</span> <a href="Cckappa_sig.Address_map_and_set.html">Address_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
-  with type elt = site_address</code></pre>
-<pre><span class="keyword">module</span> <a href="Cckappa_sig.KaSim_Site_map_and_set.html">KaSim_Site_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type"> 
-  with type elt = (string, string, string) <a href="Ckappa_sig.html">Ckappa_sig</a>.site_type</code></pre>
+<pre><span class="keyword">module</span> <a href="Cckappa_sig.Address_map_and_set.html">Address_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type">  with type elt = site_address</code></pre>
+<pre><span id="TYPEbond"><span class="keyword">type</span> <code class="type"></code>bond</span> = <code class="type"><a href="Cckappa_sig.html#TYPEsite_address">site_address</a> * <a href="Cckappa_sig.html#TYPEsite_address">site_address</a></code> </pre>
+
+
+<pre><span class="keyword">module</span> <a href="Cckappa_sig.KaSim_Site_map_and_set.html">KaSim_Site_map_and_set</a>: <code class="type">Map_wrapper.S_with_logs</code><code class="type">  with type elt = (string, string, string) <a href="Ckappa_sig.html">Ckappa_sig</a>.site_type</code></pre>
 <pre><code><span id="TYPEagent"><span class="keyword">type</span> <code class="type"></code>agent</span> = </code></pre><table class="typetable">
 <tr>
 <td align="left" valign="top" >
@@ -756,16 +754,14 @@
 
 
 <pre><span id="VALempty_actions"><span class="keyword">val</span> empty_actions</span> : <code class="type"><a href="Cckappa_sig.html#TYPEactions">actions</a></code></pre>
-<pre><span id="VALdummy_init"><span class="keyword">val</span> dummy_init</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       Exception.method_handler * <a href="Cckappa_sig.html#TYPEenriched_init">enriched_init</a></code></pre>
-<pre><span id="VALupgrade_interface"><span class="keyword">val</span> upgrade_interface</span> : <code class="type">'a <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> -><br>       'b <a href="Cckappa_sig.html#TYPEinterface">interface</a> -> 'b <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></pre>
-<pre><span id="VALmap_agent"><span class="keyword">val</span> map_agent</span> : <code class="type">('a -> 'b) -><br>       'a <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> -><br>       'b <a href="Cckappa_sig.html#TYPEinterface">interface</a> <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></pre>
-<pre><span id="VALupgrade_some_interface"><span class="keyword">val</span> upgrade_some_interface</span> : <code class="type">'a Ckappa_sig.Site_map_and_set.Map.t <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> -><br>       'a option Ckappa_sig.Site_map_and_set.Map.t <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></pre>
-<pre><span id="VALbuild_address"><span class="keyword">val</span> build_address</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -><br>       <a href="Ckappa_sig.html#TYPEc_agent_name">Ckappa_sig.c_agent_name</a> -> <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a> -> <a href="Cckappa_sig.html#TYPEsite_address">site_address</a></code></pre>
-<pre><span id="VALmin_state_index"><span class="keyword">val</span> min_state_index</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a></code></pre>
-<pre><span id="VALmax_state_index"><span class="keyword">val</span> max_state_index</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a></code></pre>
+<pre><span id="VALdummy_init"><span class="keyword">val</span> dummy_init</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception_without_parameter.method_handler -><br>       Exception_without_parameter.method_handler * <a href="Cckappa_sig.html#TYPEenriched_init">enriched_init</a></code></pre>
+<pre><span id="VALrename_mixture"><span class="keyword">val</span> rename_mixture</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception_without_parameter.method_handler -><br>       (Remanent_parameters_sig.parameters -><br>        Exception_without_parameter.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -><br>        Exception_without_parameter.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -><br>       Exception_without_parameter.method_handler * <a href="Cckappa_sig.html#TYPEmixture">mixture</a></code></pre>
+<pre><span id="VALjoin_mixture"><span class="keyword">val</span> join_mixture</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception_without_parameter.method_handler -><br>       (Remanent_parameters_sig.parameters -><br>        Exception_without_parameter.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -><br>        Exception_without_parameter.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       (Remanent_parameters_sig.parameters -><br>        Exception_without_parameter.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -><br>        Exception_without_parameter.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -><br>       Exception_without_parameter.method_handler * <a href="Cckappa_sig.html#TYPEmixture">mixture</a></code></pre>
+<pre><span id="VALadd_port"><span class="keyword">val</span> add_port</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception_without_parameter.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEport">port</a> -><br>       Exception_without_parameter.method_handler *<br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEport">port</a></code></pre>
+<pre><span id="VALadd_state"><span class="keyword">val</span> add_state</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception_without_parameter.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEport">port</a> -><br>       Exception_without_parameter.method_handler *<br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEport">port</a></code></pre>
+<pre><span id="VALadd_agent_interface"><span class="keyword">val</span> add_agent_interface</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception_without_parameter.method_handler -><br>       <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a> -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEport">port</a><br>       Ckappa_sig.Site_map_and_set.Map.t -><br>       Exception_without_parameter.method_handler *<br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> <a href="Cckappa_sig.html#TYPEinterval">interval</a> <a href="Cckappa_sig.html#TYPEport">port</a><br>       Ckappa_sig.Site_map_and_set.Map.t</code></pre>
 <pre><span id="VALmax_state_index_option_min"><span class="keyword">val</span> max_state_index_option_min</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option</code></pre>
-<pre><span id="VALmin_state_index_option_min"><span class="keyword">val</span> min_state_index_option_min</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option</code></pre>
-<pre><span id="VALmax_state_index_option_max"><span class="keyword">val</span> max_state_index_option_max</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option</code></pre>
 <pre><span id="VALmin_state_index_option_max"><span class="keyword">val</span> min_state_index_option_max</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -><br>       <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option -> <a href="Ckappa_sig.html#TYPEc_state">Ckappa_sig.c_state</a> option</code></pre>
-<pre><span id="VALrename_mixture"><span class="keyword">val</span> rename_mixture</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       (Remanent_parameters_sig.parameters -><br>        Exception.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Cckappa_sig.html#TYPEmixture">mixture</a></code></pre>
-<pre><span id="VALjoin_mixture"><span class="keyword">val</span> join_mixture</span> : <code class="type">Remanent_parameters_sig.parameters -><br>       Exception.method_handler -><br>       (Remanent_parameters_sig.parameters -><br>        Exception.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       (Remanent_parameters_sig.parameters -><br>        Exception.method_handler -><br>        <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -> Exception.method_handler * <a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a>) -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -><br>       <a href="Cckappa_sig.html#TYPEmixture">mixture</a> -> Exception.method_handler * <a href="Cckappa_sig.html#TYPEmixture">mixture</a></code></pre></body></html>
+<pre><span id="VALupgrade_interface"><span class="keyword">val</span> upgrade_interface</span> : <code class="type">'a <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> -> 'b -> 'b <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></pre>
+<pre><span id="VALmap_agent"><span class="keyword">val</span> map_agent</span> : <code class="type">('a -> 'b) -><br>       'a <a href="Cckappa_sig.html#TYPEport">port</a> Ckappa_sig.Site_map_and_set.Map.t<br>       <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a> -><br>       'b <a href="Cckappa_sig.html#TYPEport">port</a> Ckappa_sig.Site_map_and_set.Map.t<br>       <a href="Cckappa_sig.html#TYPEproper_agent">proper_agent</a></code></pre>
+<pre><span id="VALbuild_address"><span class="keyword">val</span> build_address</span> : <code class="type"><a href="Ckappa_sig.html#TYPEc_agent_id">Ckappa_sig.c_agent_id</a> -><br>       <a href="Ckappa_sig.html#TYPEc_agent_name">Ckappa_sig.c_agent_name</a> -> <a href="Ckappa_sig.html#TYPEc_site_name">Ckappa_sig.c_site_name</a> -> <a href="Cckappa_sig.html#TYPEsite_address">site_address</a></code></pre></body></html>

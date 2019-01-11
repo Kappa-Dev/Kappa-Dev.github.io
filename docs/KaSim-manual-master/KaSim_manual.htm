@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release 77a6533)</title> 
+(release 394752d)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release 77a6533)</h2>
+(release 394752d)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -7620,9 +7620,8 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (77a6533) (without Tk interface)
- <br />Analysis launched at 2018/12/11 16:56:46 (GMT+0) on
- <br />travis-job-f6cb38fd-fafa-4d8d-99a6-c0cbc3e82696
+Analysis launched at 2019/01/11 13:37:07 (GMT+0) on
+ <br />travis-job-08737877-551b-42d0-b2a0-d9bcc2cd7cc9
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -7657,10 +7656,10 @@ Kappa Static Analyzer (77a6533) (without Tk interface)
  <br />v R(c[.],cr[.],n[.],x[.])
  <br />   ]
  <br />------------------------------------------------------------
+ <br />* Properties in connected agents
                                                                                   
 
                                                                                   
- <br />* Properties in connected agents
  <br />------------------------------------------------------------
  <br />R(c[1]),R(c[1]) =&#x003E;
  <br />[
@@ -7683,7 +7682,7 @@ Kappa Static Analyzer (77a6533) (without Tk interface)
  <br />* Properties of counters
  <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 62--><p class="nopar" >
+<!--l. 61--><p class="nopar" >
 <!--l. 1768--><p class="noindent" >This result is displayed in the standard output, and it is made of six parts.
 <!--l. 1770--><p class="noindent" >The ﬁrst two parts provide an enumeration of dead rules and dead agents. The next parts display
 what we call reﬁnement lemmas. A reﬁnement lemma is made of a precondition (on
@@ -8255,15 +8254,14 @@ class="ectt-1095">c</span></li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (77a6533) (without Tk interface)
- <br />Analysis launched at 2018/12/11 16:56:46 (GMT+0) on
- <br />travis-job-f6cb38fd-fafa-4d8d-99a6-c0cbc3e82696
+Analysis launched at 2019/01/11 13:37:07 (GMT+0) on
+ <br />travis-job-08737877-551b-42d0-b2a0-d9bcc2cd7cc9
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
  <br />Reachability analysis...
  <br />execution finished without any exception</div>
-<!--l. 10--><p class="nopar" >
+<!--l. 9--><p class="nopar" >
 <br /><div class="caption" 
 ><span class="id">Figure 6.5: </span><span  
 class="content">Reachability analysis of the model <span 
@@ -11392,9 +11390,8 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-25">
-Kappa Static Analyzer (77a6533) (without Tk interface)
- <br />Analysis launched at 2018/12/11 16:56:46 (GMT+0) on
- <br />travis-job-f6cb38fd-fafa-4d8d-99a6-c0cbc3e82696
+Analysis launched at 2019/01/11 13:37:08 (GMT+0) on
+ <br />travis-job-08737877-551b-42d0-b2a0-d9bcc2cd7cc9
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -11427,21 +11424,14 @@ Kappa Static Analyzer (77a6533) (without Tk interface)
  <br />* Properties of counters
  <br />------------------------------------------------------------
  <br />execution finished without any exception</div>
-<!--l. 37--><p class="nopar" >
+<!--l. 36--><p class="nopar" >
 <br /> <div class="caption" 
 ><span class="id">Figure 6.34: </span><span  
 class="content">Log of the reachability analysis.</span></div><!--tex4ht:label?: x1-7201834 -->
                                                                                   
 
                                                                                   
-                                                                                  
-
-                                                                                  
 <!--l. 2422--><p class="noindent" ></div><hr class="endfigure">
-                                                                                  
-
-                                                                                  
-<!--l. 2424--><p class="noindent" >
                                                                                   
 
                                                                                   
@@ -11520,7 +11510,7 @@ General options
  <br />      convention for dividing constant rates (for reactions)
  <br />  --count Embeddings | Occurrences
  <br /> (default: Embeddings)
- <br />      tune whether we cound in embeddings or in occurrences
+ <br />      tune whether we count in embeddings or in occurrences
  <br />  --(no-)truncate &#x003C;int&#x003E;   (default: disabled)
  <br />      truncate the network by discarding species with size greater than the
  <br />      argument
@@ -11587,13 +11577,12 @@ General options
  <br />      Enable/disable double bonds analysis when detecting symmetric sites
  <br />  --(no-)site-across-bonds-domain    (default: enabled)
  <br />      Enable/disable the analysis of the relation amond the states of sites
- <br />      in
- <br /> connected agents
+ <br />      in connected agents
  <br />  -d &#x003C;name&#x003E;   (default: .)
+ <br />      Specifies directory name where output file(s) should be stored
                                                                                   
 
                                                                                   
- <br />      Specifies directory name where output file(s) should be stored
  <br />  --output &#x003C;value&#x003E;
  <br />      Prefix for file name output
  <br />
@@ -11618,7 +11607,7 @@ General options
  <br />      Prefix for file name output
  <br />
  <br />(78 options)</div>
-<!--l. 147--><p class="nopar" >
+<!--l. 146--><p class="nopar" >
 <!--l. 2437--><p class="noindent" >Orders in option matter, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -11626,11 +11615,11 @@ right.
 <h3 class="sectionHead"><span class="titlemark">7.2   </span> <a 
  id="x1-750007.2"></a>Graphical interface</h3>
 <!--l. 2442--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
+ id="x1-760007.2.1"></a>Launching the interface</h4>
                                                                                   
 
                                                                                   
-<h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
- id="x1-760007.2.1"></a>Launching the interface</h4>
 <!--l. 2444--><p class="noindent" >The graphical interface can be launched by typing the following command line:
      <ul class="itemize1">
      <li class="itemize"><span 
@@ -12781,7 +12770,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">490164901</span><span 
+class="ectt-1095">663735735</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -12792,7 +12781,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;862865945&#x0022;</span><span 
+class="ectt-1095">&#x0022;303399970&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
