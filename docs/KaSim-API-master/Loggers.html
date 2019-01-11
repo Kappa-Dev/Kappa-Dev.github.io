@@ -251,7 +251,6 @@
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
 
-<pre><span id="VALrefresh_id"><span class="keyword">val</span> refresh_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
 <pre><span id="VALget_encoding_format"><span class="keyword">val</span> get_encoding_format</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> <a href="Loggers.html#TYPEencoding">encoding</a></code></pre>
 <pre><span id="VALfprintf"><span class="keyword">val</span> fprintf</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> ('a, Format.formatter, unit) Pervasives.format -> 'a</code></pre>
 <pre><span id="VALprint_newline"><span class="keyword">val</span> print_newline</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> unit</code></pre>
@@ -274,14 +273,7 @@
 <pre><span id="VALchannel_of_logger"><span class="keyword">val</span> channel_of_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Pervasives.out_channel option</code></pre>
 <pre><span id="VALflush_buffer"><span class="keyword">val</span> flush_buffer</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> unit</code></pre>
 <pre><span id="VALflush_and_clean"><span class="keyword">val</span> flush_and_clean</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Format.formatter -> unit</code></pre>
-<pre><span id="VALint_of_string_id"><span class="keyword">val</span> int_of_string_id</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> int</code></pre>
-<pre><span id="VALgraph_of_logger"><span class="keyword">val</span> graph_of_logger</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Graph_loggers_sig.graph</code></pre>
-<pre><span id="VALadd_node"><span class="keyword">val</span> add_node</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> Graph_loggers_sig.options list -> unit</code></pre>
-<pre><span id="VALadd_edge"><span class="keyword">val</span> add_edge</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> string -> string -> Graph_loggers_sig.options list -> unit</code></pre>
-<pre><span id="VALdump_json"><span class="keyword">val</span> dump_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json -> unit</code></pre>
-<pre><span id="VALget_edge_map"><span class="keyword">val</span> get_edge_map</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Graph_loggers_sig.options list list Mods.String2Map.t</code></pre>
-<pre><span id="VALget_nodes"><span class="keyword">val</span> get_nodes</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> (string * Graph_loggers_sig.options list) list</code></pre>
-<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> string list</code></pre>
-<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
 <pre><span id="VALprint_binding_type"><span class="keyword">val</span> print_binding_type</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -><br>       ?binding_type_symbol:string -> agent_name:string -> site_name:string -> unit</code></pre>
-<pre><span id="VALget_ref"><span class="keyword">val</span> get_ref</span> : <code class="type">int Pervasives.ref -> int</code></pre></body></html>
+<pre><span id="VALdump_json"><span class="keyword">val</span> dump_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json -> unit</code></pre>
+<pre><span id="VALto_json"><span class="keyword">val</span> to_json</span> : <code class="type"><a href="Loggers.html#TYPEt">t</a> -> Yojson.Basic.json</code></pre>
+<pre><span id="VALof_json"><span class="keyword">val</span> of_json</span> : <code class="type">Yojson.Basic.json -> string list</code></pre></body></html>
