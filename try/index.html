@@ -17,33 +17,40 @@
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/codemirror.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/mode/simple.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/selection/active-line.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/lint/lint.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/addon/mode/simple.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/addon/selection/active-line.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/addon/lint/lint.js"></script>
+    <script>
+      // https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron
+      window.nodeRequire = require;
+      delete window.require;
+      delete window.exports;
+      delete window.module;
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
     <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/codemirror.min.css"></link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/lint/lint.css"></link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/dialog/dialog.css"></link>
-    <script src="class.js?25436"></script>
-    <script src="parser.js?25436"></script>
-    <script src="render-contactmap.js?25436"></script>
-    <script src="render-snapshot.js?25436"></script>
-    <script src="render-story.js?25436"></script>
-    <script src="graphlogger.js?25436"></script>
-    <script src="utils.js?25436"></script>
-    <script src="tooltip-contactmap.js?25436"></script>
-    <script src="tooltip-snapshot.js?25436"></script>
-    <script src="Kappa.js?25436"></script>
-    <script src="common.js?25436"></script>
-    <script src="flux.js?25436"></script>
-    <script src="plot.js?25436"></script>
-    <script src="JsSim.js?25436"></script>
-    <link rel="stylesheet" href="JsSim.css?25436"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/codemirror.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/addon/lint/lint.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/addon/dialog/dialog.css"></link>
+    <script src="class.js?16851"></script>
+    <script src="parser.js?16851"></script>
+    <script src="render-contactmap.js?16851"></script>
+    <script src="render-snapshot.js?16851"></script>
+    <script src="render-story.js?16851"></script>
+    <script src="graphlogger.js?16851"></script>
+    <script src="utils.js?16851"></script>
+    <script src="tooltip-contactmap.js?16851"></script>
+    <script src="tooltip-snapshot.js?16851"></script>
+    <script src="Kappa.js?16851"></script>
+    <script src="common.js?16851"></script>
+    <script src="flux.js?16851"></script>
+    <script src="plot.js?16851"></script>
+    <script src="JsSim.js?16851"></script>
+    <link rel="stylesheet" href="JsSim.css?16851"></link>
 	<!-- Piwik -->
 	<script type="text/javascript">
 	var _paq = _paq || [];
@@ -70,8 +77,8 @@
         <div class="row" id="console-div"></div>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/dialog/dialog.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/search/searchcursor.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/search/search.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/addon/dialog/dialog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/addon/search/searchcursor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.49.0/addon/search/search.js"></script>
   </body>
 </html>
