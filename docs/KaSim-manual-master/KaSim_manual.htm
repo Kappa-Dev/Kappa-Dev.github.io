@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release v4.0.94-kappy-24-g1686acf)</title> 
+(release v4.0.94-kappy-25-g0dbd7a6)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release v4.0.94-kappy-24-g1686acf)</h2>
+(release v4.0.94-kappy-25-g0dbd7a6)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -6845,6 +6845,9 @@ General options
  <br />      put the contact map file in this directory
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
  <br />      file name for the contact map output
+ <br />  --contact-map-format DOT | GEPHI
+ <br /> (default: DOT)
+ <br />      Tune the output format for the contact map
  <br />  --output-influence-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the influence map file in this directory
  <br />  --output-influence-map &#x003C;name&#x003E;   (default: influence)
@@ -6871,12 +6874,12 @@ General options
  <br /> (default: dynamic)
  <br />      contact map domain is used to over-approximate side-effects
  <br />  --(no-)views-domain    (default: enabled)
- <br />      enable local views analysis
- <br />  --(no-)counters-domain    (default: enabled)
- <br />      enable counter analysis
                                                                                   
 
                                                                                   
+ <br />      enable local views analysis
+ <br />  --(no-)counters-domain    (default: enabled)
+ <br />      enable counter analysis
  <br />  --counters-accuracy non-relational | octagons | mi
  <br /> (default: mi)
  <br />      Abstract domain for counter analysis
@@ -6915,16 +6918,19 @@ General options
  <br />
  <br />Contact map
  <br />  --(no-)compute-contact-map    (default: enabled)
- <br />      compute the contact map
- <br />  --(no-)compute-potential-cycles    (default: disabled)
- <br />      Compute the bonds that may be involved in polymerisation
                                                                                   
 
                                                                                   
+ <br />      compute the contact map
+ <br />  --(no-)compute-potential-cycles    (default: disabled)
+ <br />      Compute the bonds that may be involved in polymerisation
  <br />  --output-contact-map-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the contact map file in this directory
  <br />  --output-contact-map &#x003C;name&#x003E;   (default: contact)
  <br />      file name for the contact map output
+ <br />  --contact-map-format DOT | GEPHI
+ <br /> (default: DOT)
+ <br />      Tune the output format for the contact map
  <br />  --contact-map-accuracy-level Low | High
  <br /> (default: Low)
  <br />      Tune the accuracy level of the contact map
@@ -6956,22 +6962,22 @@ General options
  <br />      Compute an approximation of the flow of information in the stochastic
  <br />      semantics
  <br />
+                                                                                  
+
+                                                                                  
  <br />Debugging information
  <br />  --output-log-directory &#x003C;name&#x003E;   (default: output)
  <br />      put the log files in this directory
  <br />  --(no-)debug    (default: disabled)
  <br />      dump debugging information
  <br />  --(no-)unsafe-mode    (default: enabled)
-                                                                                  
-
-                                                                                  
  <br />      exceptions are gathered at the end of the computation, instead of
  <br />      halting it
  <br />  --(no-)print-efficiency    (default: disabled)
  <br />      prompt CPU time and various datas
  <br />
- <br />(64 options)</div>
-<!--l. 169--><p class="nopar" >
+ <br />(66 options)</div>
+<!--l. 175--><p class="nopar" >
 <!--l. 1614--><p class="noindent" >Order in options matters, since they can be used to toggle on/oﬀ some functionalities or to
 assign a value to some environment variables. The options are interpreted from left to
 right.
@@ -7620,10 +7626,10 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <div class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (v4.0.94-kappy-24-g1686acf) (without
+Kappa Static Analyzer (v4.0.94-kappy-25-g0dbd7a6) (without
  <br />Tk interface)
- <br />Analysis launched at 2019/12/04 14:02:26 (GMT+0) on
- <br />travis-job-86e9e1da-59ff-4c28-9baf-54dbc44d6de9
+ <br />Analysis launched at 2020/01/08 17:16:36 (GMT+0) on
+ <br />travis-job-175b968c-354a-4ac6-8870-62598ef20c52
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -8256,10 +8262,10 @@ class="ectt-1095">c</span></li></ul>
 
                                                                                   
 <div class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (v4.0.94-kappy-24-g1686acf) (without
+Kappa Static Analyzer (v4.0.94-kappy-25-g0dbd7a6) (without
  <br />Tk interface)
- <br />Analysis launched at 2019/12/04 14:02:26 (GMT+0) on
- <br />travis-job-86e9e1da-59ff-4c28-9baf-54dbc44d6de9
+ <br />Analysis launched at 2020/01/08 17:16:36 (GMT+0) on
+ <br />travis-job-175b968c-354a-4ac6-8870-62598ef20c52
  <br />Parsing ../kappa/reachability.ka...
  <br />done
  <br />Compiling...
@@ -11394,10 +11400,10 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <div class="verbatim" id="verbatim-25">
-Kappa Static Analyzer (v4.0.94-kappy-24-g1686acf) (without
+Kappa Static Analyzer (v4.0.94-kappy-25-g0dbd7a6) (without
  <br />Tk interface)
- <br />Analysis launched at 2019/12/04 14:02:27 (GMT+0) on
- <br />travis-job-86e9e1da-59ff-4c28-9baf-54dbc44d6de9
+ <br />Analysis launched at 2020/01/08 17:16:37 (GMT+0) on
+ <br />travis-job-175b968c-354a-4ac6-8870-62598ef20c52
  <br />Parsing ../kappa/influence.ka...
  <br />done
  <br />Compiling...
@@ -12783,7 +12789,7 @@ class="ectt-1095"> </span><span
 class="ectt-1095">-</span><span 
 class="ectt-1095">seed</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">515216737</span><span 
+class="ectt-1095">187401100</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87012r2"></a></span><span 
 class="ectt-1095">#</span><span 
@@ -12794,7 +12800,7 @@ class="ectt-1095">&#x0022;</span><span
 class="ectt-1095"> </span><span 
 class="ectt-1095">:</span><span 
 class="ectt-1095"> </span><span 
-class="ectt-1095">&#x0022;683544028&#x0022;</span><span 
+class="ectt-1095">&#x0022;559812468&#x0022;</span><span 
 class="ectt-1095"> </span><br /><span class="label"><a 
  id="x1-87013r3"></a></span><span 
 class="ectt-1095">&#x0022;[</span><span 
