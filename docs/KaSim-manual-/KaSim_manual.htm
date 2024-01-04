@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> <title>Kappa tools reference manual
-(release e625364)</title> 
+(release f04a65d)</title> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <link rel="stylesheet" type="text/css" href="KaSim_manual.css" /> 
@@ -19,7 +19,7 @@
                                                                                   
 
 <h2 class="titleHead">Kappa tools reference manual<br />
-(release e625364)</h2>
+(release f04a65d)</h2>
  <div class="author" ><span 
 class="ecrm-1200">Pierre Boutillier, J</span><span 
 class="ecrm-1200">é</span><span 
@@ -27,13 +27,13 @@ class="ecrm-1200">r</span><span
 class="ecrm-1200">ô</span><span 
 class="ecrm-1200">me Feret, Jean Krivine</span><span class="thank-mark"><a 
 href="#tk-1"><span 
-class="tcrm-1200">∗</span></a></span> <span 
-class="ecrm-1200">and L</span><span 
+class="tcrm-1200">∗</span></a></span><span 
+class="ecrm-1200">, Antoine Pouille and L</span><span 
 class="ecrm-1200">ý</span> <span 
 class="ecrm-1200">Kim Quy</span><span 
 class="ecrm-1200">ê</span><span 
 class="ecrm-1200">n</span>
-<br />                          <a 
+<br />                                   <a 
 href="http://www.kappalanguage.org" ><span 
 class="ecrm-1200">KappaLanguage.org</span></a></div>
 <br />
@@ -64,7 +64,7 @@ href="#x1-70002" id="QQ2-1-8">The Kappa language</a></span>
 <br /> <span class="sectionToc" >2.1 <a 
 href="#x1-80002.1" id="QQ2-1-9">General structure</a></span>
 <br /> <span class="sectionToc" >2.2 <a 
-href="#x1-90002.2" id="QQ2-1-10">Sited-graph pattern: Kappa expression</a></span>
+href="#x1-90002.2" id="QQ2-1-10">Site graph pattern: Kappa expression</a></span>
 <br />  <span class="subsectionToc" >2.2.1 <a 
 href="#x1-100002.2.1" id="QQ2-1-12">Graphs</a></span>
 <br />  <span class="subsectionToc" >2.2.2 <a 
@@ -1236,12 +1236,12 @@ class="MathClass-bin">∗</mo></mrow></msup
 ></math>.
 <!--l. 308--><p class="noindent" >
 <h3 class="sectionHead"><span class="titlemark">2.2   </span> <a 
- id="x1-90002.2"></a>Sited-graph pattern: Kappa expression</h3>
-<!--l. 310--><p class="noindent" >The state of the system is represented in Kappa as a sited graph: a graph where edges use sites in
+ id="x1-90002.2"></a>Site graph pattern: Kappa expression</h3>
+<!--l. 310--><p class="noindent" >The state of the system is represented in Kappa as a site graph: a graph where edges use sites in
 nodes. One must think sites as resources. At most one edge of the graph can use a site of a node
 (representing an agent in our case). Moreover, all the sites of an agent must have diﬀerent
 names.
-<!--l. 316--><p class="noindent" >This leads to the property that an embedding between 2 sited graphs is completely deﬁned by the
+<!--l. 316--><p class="noindent" >This leads to the property that an embedding between 2 site graphs is completely deﬁned by the
 image of one node. This is absolutely critical for the eﬃciency and we call this concept the <span 
 class="ecti-1095">rigidity</span>
 <span 
@@ -1343,17 +1343,17 @@ class="td01">                 </td></tr></table>
 </div>
 <h4 class="subsectionHead"><span class="titlemark">2.2.1   </span> <a 
  id="x1-100002.2.1"></a>Graphs</h4>
-<!--l. 335--><p class="noindent" >The ASCII syntax we use to represent sited graphs follows the skeletons (describe formally in
+<!--l. 335--><p class="noindent" >The ASCII syntax we use to represent site graphs follows the skeletons (describe formally in
 Table <a 
 href="#x1-90011">2.1<!--tex4ht:ref: tab:patterns --></a>):
      <ul class="itemize1">
      <li class="itemize">
-     <!--l. 338--><p class="noindent" >We write the type of the agent and then its interface (the space separated list its
+     <!--l. 338--><p class="noindent" >We write the type of the agent and then its interface (the space-separated list of its
      sites) between parenthesis.
      </li>
      <li class="itemize">
      <!--l. 340--><p class="noindent" >The state of a site is written after its name. Sites can have 2 kind of states: a linking
-     state and an internal states. The order in which they are speciﬁed does not matter.
+     state and an internal state. The order in which they are speciﬁed does not matter.
      </li>
      <li class="itemize">
      <!--l. 343--><p class="noindent" >The linking state of a site is written in between squared brackets: <span 
@@ -1557,7 +1557,7 @@ class="ectt-1095">%agent:  </span><span
 class="ecti-1095">signature_expression</span></li></ul>
 <!--l. 433--><p class="noindent" >according to an extention of the grammar given in Table <a 
 href="#x1-90011">2.1<!--tex4ht:ref: tab:patterns --></a>. Linking states and internal states
-are space separated lists instead of being singleton. Site binding capabilities are speciﬁed by
+are space-separated lists instead of being singleton. Site binding capabilities are speciﬁed by
 giving a list typed semi-links.
 <!--l. 439--><p class="noindent" >For instance, the line: <!--l. 440-->
 <div class="lstlisting" id="listing-2"><span class="label"><a 
@@ -7702,9 +7702,9 @@ class="ectt-1095">reachability.ka</span>.
 
                                                                                   
 <pre class="verbatim" id="verbatim-3">
-Kappa Static Analyzer (e625364) (without Tk interface)
-Analysis launched at 2023/11/30 15:04:08 (GMT+0) on
-fv-az1110-511
+Kappa Static Analyzer (f04a65d) (without Tk interface)
+Analysis launched at 2024/01/04 15:25:32 (GMT+0) on
+fv-az532-920
 Parsing ../kappa/reachability.ka...
 done
 Compiling...
@@ -8362,9 +8362,9 @@ class="ectt-1095">c</span></li></ul>
 
                                                                                   
 <pre class="verbatim" id="verbatim-6">
-Kappa Static Analyzer (e625364) (without Tk interface)
-Analysis launched at 2023/11/30 15:04:08 (GMT+0) on
-fv-az1110-511
+Kappa Static Analyzer (f04a65d) (without Tk interface)
+Analysis launched at 2024/01/04 15:25:32 (GMT+0) on
+fv-az532-920
 Parsing ../kappa/reachability.ka...
 done
 Compiling...
@@ -11550,9 +11550,9 @@ class="content">High resolution inﬂuence map.</span></div><!--tex4ht:label?: x
 
                                                                                   
 <pre class="verbatim" id="verbatim-25">
-Kappa Static Analyzer (e625364) (without Tk interface)
-Analysis launched at 2023/11/30 15:04:08 (GMT+0) on
-fv-az1110-511
+Kappa Static Analyzer (f04a65d) (without Tk interface)
+Analysis launched at 2024/01/04 15:25:31 (GMT+0) on
+fv-az532-920
 Parsing ../kappa/influence.ka...
 done
 Compiling...
@@ -12987,7 +12987,7 @@ class="ectt-1095"> </span></span><span style="color:#000000"><span
 class="ectt-1095">-</span></span><span style="color:#000000"><span 
 class="ectt-1095">seed</span></span><span style="color:#000000"><span 
 class="ectt-1095"> </span></span><span style="color:#000000"><span 
-class="ectt-1095">89809081</span></span><span 
+class="ectt-1095">919420054</span></span><span 
 class="ectt-1095"> </span><br /> 
 <span class="label"><a 
  id="x1-87012r2"></a></span><span style="color:#000000"><span 
@@ -12999,7 +12999,7 @@ class="ectt-1095">&#x0022;</span></span><span style="color:#000000"><span
 class="ectt-1095"> </span></span><span style="color:#000000"><span 
 class="ectt-1095">:</span></span><span style="color:#000000"><span 
 class="ectt-1095"> </span></span><span style="color:#000000"><span 
-class="ectt-1095">&#x0022;256762719&#x0022;</span></span><span 
+class="ectt-1095">&#x0022;598829157&#x0022;</span></span><span 
 class="ectt-1095"> </span><br /> 
 <span class="label"><a 
  id="x1-87013r3"></a></span><span style="color:#000000"><span 
