@@ -8,8 +8,12 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    },
     width: 1024,
-    height: 600
+    height: 768
   })
 
   // and load the index.html of the app.
@@ -20,7 +24,10 @@ function createWindow () {
     query: { label: 'Local' }
   })
   mainWindow.loadFile('index.html',{
-    query: { host: sim_agent }
+    query: {
+      host: sim_agent,
+      // level: "debug",
+    }
   })
 
   // Open the DevTools.
